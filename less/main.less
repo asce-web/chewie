@@ -1,5 +1,44 @@
 @import "variables.less";
 
+
+// Logo dimensions 
+.top-logos-large {
+    max-width: 360px;
+    max-height: 160px;
+}
+.top-logos-medium {
+    max-width: 250px;
+    max-height: 110px;  
+}
+.top-logos-small {
+    max-width: 120px;
+    max-height: 65px;
+}
+.mid-logos-large {
+    max-width: 270px;
+    max-height: 120px;
+}
+.mid-logos-medium {
+    max-width: 188px;
+    max-height: 82px;  
+}
+.mid-logos-small {
+    max-width: 90px;
+    max-height: 48px;
+}
+.low-logos-large {
+    max-width: 202px;
+    max-height: 90px;
+}
+.low-logos-medium {
+    max-width: 140px;
+    max-height: 62px;  
+}
+.low-logos-small {
+    max-width: 68px;
+    max-height: 36px;
+}
+
 body,html {
     height: 100%;
     width: 100%;
@@ -10,6 +49,29 @@ body {
 
 h1, h2, .navigation, .year-tabs, .button, button {
     font-family: "futura-pt", "Open Sans", "Arial", sans-serif;
+}
+
+.alternate {
+    .col-container {
+        .logo-col {
+            width: 185px;
+
+            @media (max-width: 1199px) {
+                width: 130px;
+                img {
+                    width: 115px;
+                }
+            }
+        }
+    }
+    .header {
+        .conference-logo {
+            max-width: 165px;
+            @media (max-width: 767px) {
+                max-width: 60px;
+            }
+        }
+    }
 }
 
 .year-badge {
@@ -945,18 +1007,15 @@ form {
     }
     img {
         margin: 20px;
-        max-height: 160px;
-        max-width: 360px;
+        .mid-logos-large;
         opacity: .7;
         @media (max-width: 989px) {
-            max-width: 250px;
-            max-height: 110px;
+            .mid-logos-medium;
         }
         @media (max-width: 767px) {
             margin-left: 0px;
             margin-right: 0px;
-            max-width: 120px;
-            max-height: 65px;
+            .mid-logos-small;
         }
     }
 }
@@ -976,17 +1035,17 @@ form {
             text-align: center;
             img {
                 margin: 20px;
-                max-height: 160px;
-                max-width: 360px;
+                max-height: 90px;
+                max-width: 202px;
                 @media (max-width: 989px) {
-                    max-width: 250px;
-                    max-height: 110px;
+                    max-width: 140px;
+                    max-height: 62px;
                 }
                 @media (max-width: 767px) {
                     margin-left: 0px;
                     margin-right: 0px;
-                    max-width: 120px;
-                    max-height: 65px;
+                    max-width: 68px;
+                    max-height: 36px;
                 }
             }
         }
@@ -1005,10 +1064,38 @@ form {
             .box-header, .box  {
                 border-color: #cde1ec;
             }
+            .box {
+                img {
+                    margin: 20px;
+                    .top-logos-large;
+                    @media (max-width: 989px) {
+                        .top-logos-medium;
+                    }
+                    @media (max-width: 767px) {
+                        margin-left: 0px;
+                        margin-right: 0px;
+                        .top-logos-small;
+                    }
+                }
+            }
         }
         &.gold {
             .box-header, .box  {
                 border-color: #f8cd79;
+            }
+            .box {
+                img {
+                    margin: 20px;
+                    .mid-logos-large;
+                    @media (max-width: 989px) {
+                        .mid-logos-medium;
+                    }
+                    @media (max-width: 767px) {
+                        margin-left: 0px;
+                        margin-right: 0px;
+                        .mid-logos-small;
+                    }
+                }
             }
         }
          &.silver {
