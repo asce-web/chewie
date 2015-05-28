@@ -280,9 +280,9 @@
                                 <a href="">Message from the Chairs</a>
                             </div>
                         </div>
-                        <div class="callout no-bg sponsors">
+                        <div class="callout sponsors hidden-xs">
                             <h2>Platinum Sponsors</h2>
-                            <div class="callout-body">
+                            <div class="callout-body cycle-slideshow">
                                 <img src="img/sponsor_logo_horizontal2.gif" alt="">
                                 <img src="img/sponsor_logo_horizontal1.gif" alt="">
                             </div>
@@ -494,12 +494,6 @@
             </div>
         </div>
     </div>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
-
-        <script src="/js/vendor/bootstrap.min.js"></script>
-        <script src="/js/vendor/jquery.hoverIntent.min.js"></script>
-
-        <script src="/js/main.js"></script>
+        <?php include '_scripts.php'; ?>
     </body>
 </html>
