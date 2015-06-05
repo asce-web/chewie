@@ -365,7 +365,7 @@
                     </div>
                 </div>
                 <div class="top-sponsor-block corporate">
-                    <div class="box-header">CORPORATE Sponsors</div>
+                    <div class="box-header">CORPORATE SPONSORS</div>
                     <div class="box">
                         <img src="img/sponsor_logo_horizontal3.gif" alt="">
                         <img src="img/sponsor_logo_horizontal4.gif" alt="">
