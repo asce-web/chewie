@@ -362,6 +362,9 @@
                         <img src="http://placehold.it/270x120" alt="">
                         <img src="http://placehold.it/270x120" alt="">
                         <img src="http://placehold.it/270x120" alt="">
+                        <img src="http://placehold.it/270x120" alt="">
+                        <img src="http://placehold.it/270x120" alt="">
+                        <img src="http://placehold.it/270x120" alt="">
                     </div>
                 </div>
                 <div class="top-sponsor-block corporate">
