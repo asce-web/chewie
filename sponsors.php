@@ -364,6 +364,13 @@
                         <img src="img/sponsor_logo_horizontal4.gif" alt="">
                     </div>
                 </div>
+                <div class="top-sponsor-block corporate">
+                    <div class="box-header">CORPORATE Sponsors</div>
+                    <div class="box">
+                        <img src="img/sponsor_logo_horizontal3.gif" alt="">
+                        <img src="img/sponsor_logo_horizontal4.gif" alt="">
+                    </div>
+                </div>
                 <div class="top-sponsor-block silver">
                     <div class="box-header">SILVER</div>
                     <div class="box">
@@ -389,14 +396,6 @@
                         <a href="">K Chen International</a>
                         <a href="">LeCorbusee</a>
                         <a href="">McMalley/daSilva</a>
-                    </div>
-                </div>
-
-                <div class="top-sponsor-block corporate">
-                    <div class="box-header">CORPORATE Sponsors</div>
-                    <div class="box">
-                        <img src="img/sponsor_logo_horizontal3.gif" alt="">
-                        <img src="img/sponsor_logo_horizontal4.gif" alt="">
                     </div>
                 </div>
             </div>
