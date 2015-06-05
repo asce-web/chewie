@@ -352,16 +352,16 @@
                 <div class="top-sponsor-block platinum">
                     <div class="box-header">PLATINUM</div>
                     <div class="box">
-                        <img src="img/sponsor_logo_horizontal2.gif" alt="">
-                        <img src="img/sponsor_logo_horizontal1.gif" alt="">
+                        <img src="http://placehold.it/270x120" alt="">
+                        <img src="http://placehold.it/270x120" alt="">
                     </div>
                 </div>
                 <div class="top-sponsor-block gold">
                     <div class="box-header">GOLD</div>
                     <div class="box">
-                        <img src="img/Sponsorlogo_square1.gif" alt="">
-                        <img src="img/sponsor_logo_horizontal3.gif" alt="">
-                        <img src="img/sponsor_logo_horizontal4.gif" alt="">
+                        <img src="http://placehold.it/270x120" alt="">
+                        <img src="http://placehold.it/270x120" alt="">
+                        <img src="http://placehold.it/270x120" alt="">
                     </div>
                 </div>
                 <div class="top-sponsor-block corporate">
