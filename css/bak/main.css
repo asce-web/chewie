@@ -1,39 +1,3 @@
-.top-logos-large {
-  max-width: 360px;
-  max-height: 160px;
-}
-.top-logos-medium {
-  max-width: 250px;
-  max-height: 110px;
-}
-.top-logos-small {
-  max-width: 120px;
-  max-height: 65px;
-}
-.mid-logos-large {
-  max-width: 270px;
-  max-height: 120px;
-}
-.mid-logos-medium {
-  max-width: 188px;
-  max-height: 82px;
-}
-.mid-logos-small {
-  max-width: 90px;
-  max-height: 48px;
-}
-.low-logos-large {
-  max-width: 202px;
-  max-height: 90px;
-}
-.low-logos-medium {
-  max-width: 140px;
-  max-height: 62px;
-}
-.low-logos-small {
-  max-width: 68px;
-  max-height: 36px;
-}
 body,
 html {
   height: 100%;
@@ -49,25 +13,6 @@ h2,
 .button,
 button {
   font-family: "futura-pt", "Open Sans", "Arial", sans-serif;
-}
-.alternate .col-container .logo-col {
-  width: 185px;
-}
-@media (max-width: 1199px) {
-  .alternate .col-container .logo-col {
-    width: 130px;
-  }
-  .alternate .col-container .logo-col img {
-    width: 115px;
-  }
-}
-.alternate .header .conference-logo {
-  max-width: 165px;
-}
-@media (max-width: 767px) {
-  .alternate .header .conference-logo {
-    max-width: 60px;
-  }
 }
 .year-badge {
   background: #0c5fa8;
@@ -194,8 +139,8 @@ button {
 .header .navigation,
 .footer .navigation,
 .summary-banner .navigation {
-  background-color: #7aa96c;
-  border-bottom: 6px solid #6a9556;
+  background-color: #7aa96c; /* keyColor2 */
+  border-bottom: 6px solid #6a9556; /* keyColor1 */
 }
 .header .navigation a,
 .footer .navigation a,
@@ -226,7 +171,7 @@ button {
 .header .mobile-nav,
 .footer .mobile-nav,
 .summary-banner .mobile-nav {
-  background-color: #7aa96c;
+  background-color: #7aa96c; /* keyColor2 */
   padding-left: 75px;
   text-align: right;
   border-bottom: 0px;
@@ -284,7 +229,7 @@ button {
 }
 .header {
   color: #fff;
-  background: #6a9556;
+  background: #6a9556; /* keyColor1 */
 }
 @media (max-width: 989px) {
   .header .container,
@@ -299,7 +244,7 @@ button {
   }
 }
 .header .titles {
-  background-color: #6a9556;
+  background-color: #6a9556; /* keyColor1 */
 }
 .header .titles .auto-col {
   padding-right: 50px;
@@ -509,7 +454,7 @@ button {
 @media (max-width: 767px) {
   .toggleable-nav.in {
     z-index: 10;
-    background: #6a9556;
+    background: #6a9556; /* keyColor1 */
     box-shadow: -4px 0px 0px rgba(0, 0, 0, 0.25);
     display: block;
     position: fixed;
@@ -533,11 +478,6 @@ button {
     display: block !important;
   }
 }
-.footer,
-.summary-banner {
-  background-image: url(../img/pattern-bg.png);
-  background-color: #6a9556;
-}
 .footer .year-tabs,
 .summary-banner .year-tabs {
   background-color: #fff;
@@ -552,7 +492,7 @@ button {
 }
 .footer .year-tabs .tab-button,
 .summary-banner .year-tabs .tab-button {
-  color: #6a9556;
+  color: #6a9556; /* keyColor1 */
   font-weight: 700;
   padding: 6px 20px;
   font-size: 24px;
@@ -574,7 +514,7 @@ button {
 .summary-banner .year-tabs li.active .tab-button {
   color: #fff;
   cursor: default;
-  background: #7aa96c;
+  background: #7aa96c; /* keyColor2 */
 }
 .footer .year-tabs li.active .tab-button:hover,
 .summary-banner .year-tabs li.active .tab-button:hover {
@@ -587,7 +527,7 @@ button {
   height: 0;
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
-  border-top: 15px solid #7aa96c;
+  border-top: 15px solid #7aa96c; /* keyColor2 */
   bottom: -15px;
   left: 50%;
   margin-left: -15px;
@@ -735,7 +675,7 @@ button {
   text-transform: uppercase;
   margin-top: 20px;
   font-weight: 500;
-  color: #7aa96c;
+  color: #7aa96c; /* keyColor2 */
 }
 @media (max-width: 989px) {
   .content h1 {
@@ -1108,6 +1048,17 @@ form {
 .summary-banner h4 {
   font-style: normal;
 }
+.footer,
+.summary-banner {
+  background-image: url(../img/pattern-bg.png);
+  background-color: #6a9556; /* keyColor1 for current year */
+}
+.summary-banner.past {
+  background-color: #96c93e; /* keyColor1 for past year's conference. Used in the Conference Summary Banner, on pages w/ info for past year */
+}
+.summary-banner.future {
+  background-color: #01a19f; /* keyColor1 for future year's conference. Used in the Conference Summary Banner, on pages w/ info for future year */
+}
 .coop-orgs-block {
   background-color: #e8eaeb;
   padding: 40px 15px;
@@ -1125,22 +1076,22 @@ form {
 }
 .coop-orgs-block img {
   margin: 20px;
-  max-width: 270px;
-  max-height: 120px;
+  max-height: 160px;
+  max-width: 360px;
   opacity: .7;
 }
 @media (max-width: 989px) {
   .coop-orgs-block img {
-    max-width: 188px;
-    max-height: 82px;
+    max-width: 250px;
+    max-height: 110px;
   }
 }
 @media (max-width: 767px) {
   .coop-orgs-block img {
     margin-left: 0px;
     margin-right: 0px;
-    max-width: 90px;
-    max-height: 48px;
+    max-width: 120px;
+    max-height: 65px;
   }
 }
 .sponsor-container h2 {
@@ -1161,21 +1112,21 @@ form {
 }
 .sponsor-container .top-sponsor-block .box img {
   margin: 20px;
-  max-height: 90px;
-  max-width: 202px;
+  max-height: 160px;
+  max-width: 360px;
 }
 @media (max-width: 989px) {
   .sponsor-container .top-sponsor-block .box img {
-    max-width: 140px;
-    max-height: 62px;
+    max-width: 250px;
+    max-height: 110px;
   }
 }
 @media (max-width: 767px) {
   .sponsor-container .top-sponsor-block .box img {
     margin-left: 0px;
     margin-right: 0px;
-    max-width: 68px;
-    max-height: 36px;
+    max-width: 120px;
+    max-height: 65px;
   }
 }
 .sponsor-container .top-sponsor-block .box-header {
@@ -1193,47 +1144,9 @@ form {
 .sponsor-container .top-sponsor-block.platinum .box {
   border-color: #cde1ec;
 }
-.sponsor-container .top-sponsor-block.platinum .box img {
-  margin: 20px;
-  max-width: 360px;
-  max-height: 160px;
-}
-@media (max-width: 989px) {
-  .sponsor-container .top-sponsor-block.platinum .box img {
-    max-width: 250px;
-    max-height: 110px;
-  }
-}
-@media (max-width: 767px) {
-  .sponsor-container .top-sponsor-block.platinum .box img {
-    margin-left: 0px;
-    margin-right: 0px;
-    max-width: 120px;
-    max-height: 65px;
-  }
-}
 .sponsor-container .top-sponsor-block.gold .box-header,
 .sponsor-container .top-sponsor-block.gold .box {
   border-color: #f8cd79;
-}
-.sponsor-container .top-sponsor-block.gold .box img {
-  margin: 20px;
-  max-width: 270px;
-  max-height: 120px;
-}
-@media (max-width: 989px) {
-  .sponsor-container .top-sponsor-block.gold .box img {
-    max-width: 188px;
-    max-height: 82px;
-  }
-}
-@media (max-width: 767px) {
-  .sponsor-container .top-sponsor-block.gold .box img {
-    margin-left: 0px;
-    margin-right: 0px;
-    max-width: 90px;
-    max-height: 48px;
-  }
 }
 .sponsor-container .top-sponsor-block.silver .box-header,
 .sponsor-container .top-sponsor-block.silver .box {
@@ -1265,6 +1178,23 @@ form {
 }
 .sponsor-container .top-sponsor-block.financial a:last-child,
 .sponsor-container .top-sponsor-block.bronze a:last-child {
+  border-right: 0px;
+}
+.sponsor-container .top-sponsor-block.copper .box-header,
+.sponsor-container .top-sponsor-block.copper .box {
+  border-color: rgb(173, 80, 14);
+}
+.sponsor-container .top-sponsor-block.copper a:first-child {
+  padding-left: 0px;
+}
+.sponsor-container .top-sponsor-block.copper a {
+  font-size: 16px;
+  font-weight: 700;
+  border-right: 1px solid #0c5fa8;
+  padding-right: 12px;
+  padding-left: 8px;
+}
+.sponsor-container .top-sponsor-block.copper a:last-child {
   border-right: 0px;
 }
 .logo-grid table {
@@ -1480,7 +1410,7 @@ a:hover {
   line-height: 26px;
 }
 .introduction {
-  background-color: #6a9556;
+  background-color: #6a9556; /* keyColor1 */
   color: #fff;
   margin-top: 10px;
   display: inline-block;
@@ -1527,6 +1457,7 @@ a:hover {
   position: absolute;
   margin-top: -49px;
   padding: 0px;
+  /* background uses keyColor1 */
   background: -moz-linear-gradient(top, rgba(106, 149, 86, 0) 0%, #6a9556 100%);
   /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(106, 149, 86, 0)), color-stop(100%, #6a9556));
@@ -1539,8 +1470,7 @@ a:hover {
   /* IE10+ */
   background: linear-gradient(to bottom, rgba(106, 149, 86, 0) 0%, #6a9556 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='fade(@keyColor1, 0%)', endColorstr='@keyColor1', GradientType=0);
-  /* IE6-9 */
+ 
 }
 .introduction a,
 .introduction a:hover,
