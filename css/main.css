@@ -1173,9 +1173,9 @@ form {
   }
 }
 .top-sponsor-block img {
-  margin: 20px;
-  max-height: 90px;
   max-width: 202px;
+  max-height: 90px;
+  margin: 20px;
 }
 @media (max-width: 989px) {
   .top-sponsor-block img {
@@ -1185,13 +1185,12 @@ form {
 }
 @media (max-width: 767px) {
   .top-sponsor-block img {
-    margin-left: 0px;
-    margin-right: 0px;
     max-width: 68px;
     max-height: 36px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 }
-/*.top-sponsor-block*/
 .platinum .box-header,
 .platinum .box {
   border-color: #cde1ec;
@@ -1214,7 +1213,6 @@ form {
     max-height: 65px;
   }
 }
-/*.top-sponsor-block*/
 .gold .box-header,
 .gold .box {
   border-color: #f8cd79;
@@ -1237,17 +1235,14 @@ form {
     max-height: 48px;
   }
 }
-/*.top-sponsor-block*/
 .corporate .box-header,
 .corporate .box {
   border-color: #9ed8f9;
 }
-/*.top-sponsor-block*/
 .silver .box-header,
 .silver .box {
   border-color: #dbddde;
 }
-/*.top-sponsor-block*/
 .financial a,
 .bronze a {
   font-size: 18px;
@@ -1260,12 +1255,10 @@ form {
   border-right: 1px solid currentColor;
   margin-right: 8px;
 }
-/*.top-sponsor-block*/
 .financial .box-header,
 .financial .box {
   border-color: #9ed8f9;
 }
-/*.top-sponsor-block*/
 .bronze .box-header,
 .bronze .box {
   border-color: #d9c5ac;
