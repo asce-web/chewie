@@ -1024,6 +1024,7 @@ form {
     h2 {
         margin-bottom: 30px;
     }
+}
     .top-sponsor-block {
         margin-bottom: 40px;
         .box {
@@ -1033,7 +1034,19 @@ form {
                 padding: 5px;
             }
             text-align: center;
-            img {
+        }
+        .box-header {
+            border: 2px solid orange;
+            border-bottom: none;
+            background: #fff;
+            margin-bottom: -2px;
+            display: inline-block;
+            padding: 8px 20px;
+            font-weight: 600;
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+  img {
                 // dotted border to display image size
                 // border: 1px silver dotted;
                 margin: 20px;
@@ -1049,26 +1062,12 @@ form {
                     max-width: 68px;
                     max-height: 36px;
                 }
-            }
-        }
-        .box-header {
-            border: 2px solid orange;
-            border-bottom: none;
-            background: #fff;
-            margin-bottom: -2px;
-            display: inline-block;
-            padding: 8px 20px;
-            font-weight: 600;
-            font-size: 18px;
-            text-transform: uppercase;
-        }
-        &.platinum {
+  }
+  &.platinum {
             .box-header, .box  {
                 border-color: #cde1ec;
             }
-            .box {
                 img {
-                    margin: 20px;
                     .top-logos-large;
                     @media (max-width: 989px) {
                         .top-logos-medium;
@@ -1079,15 +1078,12 @@ form {
                         .top-logos-small;
                     }
                 }
-            }
-        }
-        &.gold {
+  }
+  &.gold {
             .box-header, .box  {
                 border-color: #f8cd79;
             }
-            .box {
                 img {
-                    margin: 20px;
                     .mid-logos-large;
                     @media (max-width: 989px) {
                         .mid-logos-medium;
@@ -1098,6 +1094,10 @@ form {
                         .mid-logos-small;
                     }
                 }
+  }
+        &.corporate {
+            .box-header, .box  {
+                border-color: #9ed8f9;
             }
         }
          &.silver {
@@ -1105,22 +1105,6 @@ form {
                 border-color: #dbddde;
             }
         }
-        &.financial {
-            .box-header, .box  {
-                border-color: #9ed8f9;
-            }
-        }
-        &.bronze {
-            .box-header, .box  {
-                border-color: #d9c5ac;
-            }
-        }
-        &.corporate {
-            .box-header, .box  {
-                border-color: #9ed8f9;
-            }
-        }
-
         &.financial, &.bronze {
             a:first-child {
                 padding-left: 0px;
@@ -1136,8 +1120,17 @@ form {
                 border-right: 0px;
             }
         }
+        &.financial {
+            .box-header, .box  {
+                border-color: #9ed8f9;
+            }
+        }
+        &.bronze {
+            .box-header, .box  {
+                border-color: #d9c5ac;
+            }
+        }
     }
-}
 
 .logo-grid {
     table { 
