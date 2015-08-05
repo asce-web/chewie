@@ -1122,18 +1122,24 @@ form {
 }
 /*.top-sponsor-block*/.financial,
 /*.top-sponsor-block*/.bronze {
-    a:first-child {
-        padding-left: 0px;
-    }
     a {
         font-size: 18px;
         font-weight: 700;
-        border-right: 1px solid #0c5fa8;
-        padding-right: 12px;
-        padding-left: 8px;
-    }
-    a:last-child {
-        border-right: 0px;
+        // border-right: 1px solid #0c5fa8;
+        // padding-right: 12px;
+        // padding-left: 8px;
+        &:not(:last-child)::after {
+          content: '';
+          padding-right: 12px;
+          border-right: 1px solid currentColor; // currently #0c5fa8
+          margin-right: 8px;
+        }
+        // &:first-child {
+        //     padding-left: 0px;
+        // }
+        // &:last-child {
+        //     border-right: 0px;
+        // }
     }
 }
 /*.top-sponsor-block*/.financial {
