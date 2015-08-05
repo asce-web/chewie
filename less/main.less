@@ -1026,6 +1026,12 @@ form {
     }
 }
 .top-sponsor-block {
+    @color_platinum:  #cde1ec;
+    @color_gold:      #f8cd79;
+    @color_corporate: #9ed8f9; // same as financial?
+    @color_silver:    #dbddde;
+    @color_financial: #9ed8f9; // same as corporate?
+    @color_bronze:    #d9c5ac;
     margin-bottom: 40px;
     .box-header,
     .box {
@@ -1068,7 +1074,7 @@ form {
     &.platinum {
         .box-header,
         .box  {
-            border-color: #cde1ec;
+            border-color: @color_platinum;
         }
         img {
             .top-logos-large;
@@ -1085,7 +1091,7 @@ form {
     &.gold {
         .box-header,
         .box  {
-            border-color: #f8cd79;
+            border-color: @color_gold;
         }
         img {
             .mid-logos-large;
@@ -1102,13 +1108,13 @@ form {
     &.corporate {
         .box-header,
         .box  {
-            border-color: #9ed8f9;
+            border-color: @color_corporate;
         }
     }
     &.silver {
         .box-header,
         .box  {
-            border-color: #dbddde;
+            border-color: @color_silver;
         }
     }
     &.financial,
@@ -1130,13 +1136,13 @@ form {
     &.financial {
         .box-header,
         .box  {
-            border-color: #9ed8f9;
+            border-color: @color_financial;
         }
     }
     &.bronze {
         .box-header,
         .box  {
-            border-color: #d9c5ac;
+            border-color: @color_bronze;
         }
     }
     }
