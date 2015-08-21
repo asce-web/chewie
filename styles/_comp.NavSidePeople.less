@@ -1,0 +1,40 @@
+
+/*################################*\
+    _comp.NavSidePeople.less
+\*################################*/
+
+
+// NavSidePeople is the side navigation component on the top of the page containing
+// information for people: for speakers, sponsors, exhibitors, etc.
+//
+// ^author
+// : Dae Clarke
+// ^updated
+// : 2015-08-21
+.nav3 {
+  padding: 5px 26px 29px 26px;
+
+  // can't we use a fallback tool for this?
+  background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+  background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+
+  text-align: center;
+  a {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 5px 10px;
+
+    @media (max-width: 989px) {
+      padding: 5px 0px;
+      text-align: right;
+      display: block;
+    }
+  }
+}

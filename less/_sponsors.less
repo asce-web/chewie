@@ -1,47 +1,13 @@
-@color_platinum:  #cde1ec;
-@color_gold:    #f8cd79;
-@color_corporate: #9ed8f9; // same as financial?
-@color_silver:  #dbddde;
-@color_financial: #9ed8f9; // same as corporate?
-@color_bronze:  #d9c5ac;
+@import "../styles/__settings.less";
+@import "../styles/__tools.logos.less";
 
-// Logo dimensions
-.top-logos-large() {
-  max-width: 360px;
-  max-height: 160px;
-}
-.top-logos-medium() {
-  max-width: 250px;
-  max-height: 110px;
-}
-.top-logos-small() {
-  max-width: 120px;
-  max-height: 65px;
-}
-.mid-logos-large() {
-  max-width: 270px;
-  max-height: 120px;
-}
-.mid-logos-medium() {
-  max-width: 188px;
-  max-height: 82px;
-}
-.mid-logos-small() {
-  max-width: 90px;
-  max-height: 48px;
-}
-.low-logos-large() {
-  max-width: 202px;
-  max-height: 90px;
-}
-.low-logos-medium() {
-  max-width: 140px;
-  max-height: 62px;
-}
-.low-logos-small() {
-  max-width: 68px;
-  max-height: 36px;
-}
+@color_platinum:  #cde1ec;
+@color_gold:      #f8cd79;
+@color_corporate: #9ed8f9;
+@color_silver:    #dbddde;
+@color_bronze:    #d9c5ac;
+@color_copper:    #d6a985;
+
 
 .sponsor-container {
   h2 {
@@ -156,7 +122,7 @@
 .financial {
   &::before,
   .box  {
-    border-color: @color_financial;
+    border-color: @color_copper;
   }
   &::before {
     content: 'Financial Corporate Sponsors';
