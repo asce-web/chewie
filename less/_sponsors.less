@@ -1,0 +1,212 @@
+@color_platinum:  #cde1ec;
+@color_gold:    #f8cd79;
+@color_corporate: #9ed8f9; // same as financial?
+@color_silver:  #dbddde;
+@color_financial: #9ed8f9; // same as corporate?
+@color_bronze:  #d9c5ac;
+
+// Logo dimensions
+.top-logos-large() {
+  max-width: 360px;
+  max-height: 160px;
+}
+.top-logos-medium() {
+  max-width: 250px;
+  max-height: 110px;
+}
+.top-logos-small() {
+  max-width: 120px;
+  max-height: 65px;
+}
+.mid-logos-large() {
+  max-width: 270px;
+  max-height: 120px;
+}
+.mid-logos-medium() {
+  max-width: 188px;
+  max-height: 82px;
+}
+.mid-logos-small() {
+  max-width: 90px;
+  max-height: 48px;
+}
+.low-logos-large() {
+  max-width: 202px;
+  max-height: 90px;
+}
+.low-logos-medium() {
+  max-width: 140px;
+  max-height: 62px;
+}
+.low-logos-small() {
+  max-width: 68px;
+  max-height: 36px;
+}
+
+.sponsor-container {
+  h2 {
+    margin-bottom: 30px;
+  }
+}
+
+.top-sponsor-block,
+.coop-orgs-block {
+  img {
+    margin: 20px;
+    @media (max-width: 767px) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
+
+.top-sponsor-block {
+  @border_width: 2px;
+  margin-bottom: 40px;
+  &::before,
+  .box {
+    border: @border_width solid currentColor;
+  }
+  // [1] hides border from .box
+  &::before {
+    display: inline-block;
+    padding: 8px 20px;
+    border-bottom-color: #fff !important; // [1] // !important overrides later border color
+    margin-bottom: -@border_width;        // [1]
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+  .box {
+    padding: 20px;
+    text-align: center;
+    @media (max-width: 767px) {
+      padding: 5px;
+    }
+  }
+  img {
+    .low-logos-large();
+    @media (max-width: 989px) {
+      .low-logos-medium();
+    }
+    @media (max-width: 767px) {
+      .low-logos-small();
+    }
+  }
+}
+
+.platinum {
+  &::before,
+  .box  {
+    border-color: @color_platinum;
+  }
+  &::before {
+    content: 'Platinum';
+  }
+  img {
+    .top-logos-large();
+    @media (max-width: 989px) {
+      .top-logos-medium();
+    }
+    @media (max-width: 767px) {
+      .top-logos-small();
+    }
+  }
+}
+
+.gold {
+  &::before,
+  .box  {
+    border-color: @color_gold;
+  }
+  &::before {
+    content: 'Gold';
+  }
+  img {
+    .mid-logos-large();
+    @media (max-width: 989px) {
+      .mid-logos-medium();
+    }
+    @media (max-width: 767px) {
+      .mid-logos-small();
+    }
+  }
+}
+
+.corporate {
+  &::before,
+  .box  {
+    border-color: @color_corporate;
+  }
+  &::before {
+    content: 'Corporate Sponsors';
+  }
+}
+
+.silver {
+  &::before,
+  .box  {
+    border-color: @color_silver;
+  }
+  &::before {
+    content: 'Silver';
+  }
+}
+
+.financial {
+  &::before,
+  .box  {
+    border-color: @color_financial;
+  }
+  &::before {
+    content: 'Financial Corporate Sponsors';
+  }
+}
+
+.bronze {
+  &::before,
+  .box  {
+    border-color: @color_bronze;
+  }
+  &::before {
+    content: 'Bronze';
+  }
+}
+
+.financial,
+.bronze {
+  a {
+    font-size: 18px;
+    font-weight: 700;
+    &:not(:last-child)::after {
+      content: '';
+      padding-right: 12px;
+      border-right: 1px solid currentColor; // currently #0c5fa8
+      margin-right: 8px;
+    }
+  }
+}
+
+.coop-orgs-block {
+  background-color: #e8eaeb;
+  padding: 40px 15px;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+  @media (max-width: 767px) {
+    padding: 5px;
+  }
+  h2 {
+    text-align: left;
+  }
+  img {
+    .mid-logos-large();
+    opacity: .7;
+    @media (max-width: 989px) {
+      .mid-logos-medium();
+    }
+    @media (max-width: 767px) {
+      .mid-logos-small();
+    }
+  }
+}
