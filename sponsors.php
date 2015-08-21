@@ -14,7 +14,7 @@
         <!-- <script type="text/javascript">try{Typekit.load();}catch(e){}</script> -->
         <link rel="stylesheet" href="css/futura.css">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,600italic,700italic,400,600,700' rel='stylesheet' type='text/css'>
-        
+
         <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/author.css">
@@ -24,8 +24,8 @@
         <![endif]-->
     </head>
     <body>
-    
-    
+
+
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -197,7 +197,7 @@
                                         <td>$10,000 </td>
                                         <td>Limit: 1</td>
                                         <td><span class="flag">sold out</span></td>
-                                    </tr>   
+                                    </tr>
                                     <tr>
                                         <td>&nbsp;</td>
                                         <td></td>
@@ -339,7 +339,7 @@
                                 <strong>See <a href="">Sponsor Toolkit</a> for more details.</strong>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -350,14 +350,12 @@
                 <p>The generous contributions from the following sponsors enable our conference to continue its commitment to excellence in programming and networking events for the attendees.</p>
                 <br>
                 <div class="top-sponsor-block platinum">
-                    <div class="box-header">PLATINUM</div>
                     <div class="box">
                         <img src="img/sponsor_logo_horizontal2.gif" alt="">
                         <img src="img/sponsor_logo_horizontal1.gif" alt="">
                     </div>
                 </div>
                 <div class="top-sponsor-block gold">
-                    <div class="box-header">GOLD</div>
                     <div class="box">
                         <img src="img/Sponsorlogo_square1.gif" alt="">
                         <img src="img/sponsor_logo_horizontal3.gif" alt="">
@@ -365,14 +363,12 @@
                     </div>
                 </div>
                 <div class="top-sponsor-block corporate">
-                    <div class="box-header">CORPORATE SPONSORS</div>
                     <div class="box">
                         <img src="img/sponsor_logo_horizontal3.gif" alt="">
                         <img src="img/sponsor_logo_horizontal4.gif" alt="">
                     </div>
                 </div>
                 <div class="top-sponsor-block silver">
-                    <div class="box-header">SILVER</div>
                     <div class="box">
                         <img src="img/Sponsorlogo_square3.gif" alt="">
                         <img src="img/sponsor_logo_horizontal2.gif" alt="">
@@ -381,7 +377,6 @@
                     </div>
                 </div>
                 <div class="top-sponsor-block financial">
-                    <div class="box-header">Financial Corporate Sponsors</div>
                     <div class="box">
                         <a href="">ExpoFactor</a>
                         <a href="">K Chen International</a>
@@ -390,13 +385,24 @@
                     </div>
                 </div>
                 <div class="top-sponsor-block bronze">
-                    <div class="box-header">BRONZE</div>
                     <div class="box">
                         <a href="">ExpoFactor</a>
                         <a href="">K Chen International</a>
                         <a href="">LeCorbusee</a>
                         <a href="">McMalley/daSilva</a>
                     </div>
+                </div>
+            </div>
+            <div class="coop-orgs-block row">
+                <div class="container">
+                    <h2>COOPERATING ORGANIZATIONS</h2>
+                    <img src="img/cooplogo_square1.gif" alt="">
+                    <img src="img/cooplogo_horizontal1.gif" alt="">
+                    <img src="img/cooplogo_horizontal2.gif" alt="">
+                    <img src="img/cooplogo_horizontal3.gif" alt="">
+                    <img src="img/cooplogo_square4.gif" alt="">
+                    <img src="img/cooplogo_horizontal4.gif" alt="">
+                    <img src="img/cooplogo_square2.gif" alt="">
                 </div>
             </div>
         </div>
@@ -512,7 +518,7 @@
                     <a href="">Register</a>
                     <a class="menu-toggle" href="">Menu <span class="ic menu"></span></a>
                 </div>
-            </div>    
+            </div>
             <div class="tab-pane" id="yearnext">
                 <div class="row title">
                     <div class="container">

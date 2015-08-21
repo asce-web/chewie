@@ -10,16 +10,15 @@
 .top-sponsor-block {
   margin-bottom: 40px;
 }
-.top-sponsor-block .box-header,
+.top-sponsor-block::before,
 .top-sponsor-block .box {
-  border: 2px solid orange;
+  border: 2px solid currentColor;
 }
-.top-sponsor-block .box-header {
-  border-bottom: none;
-  background: #fff;
-  margin-bottom: -2px;
+.top-sponsor-block::before {
   display: inline-block;
   padding: 8px 20px;
+  border-bottom-color: #fff;
+  margin-bottom: -2px;
   font-weight: 600;
   font-size: 18px;
   text-transform: uppercase;
@@ -46,15 +45,18 @@
 }
 @media (max-width: 767px) {
   .top-sponsor-block img {
-    margin-left: 0px;
-    margin-right: 0px;
     max-width: 68px;
     max-height: 36px;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
-.platinum .box-header,
+.platinum::before,
 .platinum .box {
   border-color: #cde1ec;
+}
+.platinum::before {
+  content: 'Platinum';
 }
 .platinum img {
   max-width: 360px;
@@ -68,15 +70,16 @@
 }
 @media (max-width: 767px) {
   .platinum img {
-    margin-left: 0px;
-    margin-right: 0px;
     max-width: 120px;
     max-height: 65px;
   }
 }
-.gold .box-header,
+.gold::before,
 .gold .box {
   border-color: #f8cd79;
+}
+.gold::before {
+  content: 'Gold';
 }
 .gold img {
   max-width: 270px;
@@ -90,19 +93,37 @@
 }
 @media (max-width: 767px) {
   .gold img {
-    margin-left: 0px;
-    margin-right: 0px;
     max-width: 90px;
     max-height: 48px;
   }
 }
-.corporate .box-header,
+.corporate::before,
 .corporate .box {
   border-color: #9ed8f9;
 }
-.silver .box-header,
+.corporate::before {
+  content: 'Corporate Sponsors';
+}
+.silver::before,
 .silver .box {
   border-color: #dbddde;
+}
+.silver::before {
+  content: 'Silver';
+}
+.financial::before,
+.financial .box {
+  border-color: #9ed8f9;
+}
+.financial::before {
+  content: 'Financial Corporate Sponsors';
+}
+.bronze::before,
+.bronze .box {
+  border-color: #d9c5ac;
+}
+.bronze::before {
+  content: 'Bronze';
 }
 .financial a,
 .bronze a {
@@ -115,13 +136,5 @@
   padding-right: 12px;
   border-right: 1px solid currentColor;
   margin-right: 8px;
-}
-.financial .box-header,
-.financial .box {
-  border-color: #9ed8f9;
-}
-.bronze .box-header,
-.bronze .box {
-  border-color: #d9c5ac;
 }
  */

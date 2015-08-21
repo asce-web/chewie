@@ -50,17 +50,19 @@
 }
 
 .top-sponsor-block {
+  @border_width: 2px;
   margin-bottom: 40px;
-  .box-header,
+  &::before,
   .box {
-    border: 2px solid orange;
+    border: @border_width solid currentColor;
   }
-  .box-header {
-    border-bottom: none;
-    background: #fff;  // hides border from .box
-    margin-bottom: -2px; // hides border from .box
+  //
+  // [1] hides border from .box
+  &::before {
     display: inline-block;
     padding: 8px 20px;
+    border-bottom-color: #fff !important; // [1] // !important overrides later border color
+    margin-bottom: -@border_width;        // [1]
     font-weight: 600;
     font-size: 18px;
     text-transform: uppercase;
@@ -80,16 +82,19 @@
     }
     @media (max-width: 767px) {
       .low-logos-small();
-      margin-left: 0px;
-      margin-right: 0px;
+      margin-left: 0;
+      margin-right: 0;
     }
   }
 }
 
 .platinum {
-  .box-header,
+  &::before,
   .box  {
     border-color: @color_platinum;
+  }
+  &::before {
+    content: 'Platinum';
   }
   img {
     .top-logos-large();
@@ -97,17 +102,18 @@
       .top-logos-medium();
     }
     @media (max-width: 767px) {
-      margin-left: 0px;
-      margin-right: 0px;
       .top-logos-small();
     }
   }
 }
 
 .gold {
-  .box-header,
+  &::before,
   .box  {
     border-color: @color_gold;
+  }
+  &::before {
+    content: 'Gold';
   }
   img {
     .mid-logos-large();
@@ -115,24 +121,48 @@
       .mid-logos-medium();
     }
     @media (max-width: 767px) {
-      margin-left: 0px;
-      margin-right: 0px;
       .mid-logos-small();
     }
   }
 }
 
 .corporate {
-  .box-header,
+  &::before,
   .box  {
     border-color: @color_corporate;
+  }
+  &::before {
+    content: 'Corporate Sponsors';
   }
 }
 
 .silver {
-  .box-header,
+  &::before,
   .box  {
     border-color: @color_silver;
+  }
+  &::before {
+    content: 'Silver';
+  }
+}
+
+.financial {
+  &::before,
+  .box  {
+    border-color: @color_financial;
+  }
+  &::before {
+    content: 'Financial Corporate Sponsors';
+  }
+}
+
+.bronze {
+  &::before,
+  .box  {
+    border-color: @color_bronze;
+  }
+  &::before {
+    content: 'Bronze';
   }
 }
 
@@ -147,20 +177,6 @@
       border-right: 1px solid currentColor; // currently #0c5fa8
       margin-right: 8px;
     }
-  }
-}
-
-.financial {
-  .box-header,
-  .box  {
-    border-color: @color_financial;
-  }
-}
-
-.bronze {
-  .box-header,
-  .box  {
-    border-color: @color_bronze;
   }
 }
 
