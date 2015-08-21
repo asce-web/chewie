@@ -1,39 +1,3 @@
-.top-logos-large {
-  max-width: 360px;
-  max-height: 160px;
-}
-.top-logos-medium {
-  max-width: 250px;
-  max-height: 110px;
-}
-.top-logos-small {
-  max-width: 120px;
-  max-height: 65px;
-}
-.mid-logos-large {
-  max-width: 270px;
-  max-height: 120px;
-}
-.mid-logos-medium {
-  max-width: 188px;
-  max-height: 82px;
-}
-.mid-logos-small {
-  max-width: 90px;
-  max-height: 48px;
-}
-.low-logos-large {
-  max-width: 202px;
-  max-height: 90px;
-}
-.low-logos-medium {
-  max-width: 140px;
-  max-height: 62px;
-}
-.low-logos-small {
-  max-width: 68px;
-  max-height: 36px;
-}
 body,
 html {
   height: 100%;
@@ -1108,41 +1072,6 @@ form {
 .summary-banner h4 {
   font-style: normal;
 }
-.coop-orgs-block {
-  background-color: #e8eaeb;
-  padding: 40px 15px;
-  padding-bottom: 20px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-@media (max-width: 767px) {
-  .coop-orgs-block {
-    padding: 5px;
-  }
-}
-.coop-orgs-block h2 {
-  text-align: left;
-}
-.coop-orgs-block img {
-  margin: 20px;
-  max-width: 270px;
-  max-height: 120px;
-  opacity: .7;
-}
-@media (max-width: 989px) {
-  .coop-orgs-block img {
-    max-width: 188px;
-    max-height: 82px;
-  }
-}
-@media (max-width: 767px) {
-  .coop-orgs-block img {
-    margin-left: 0px;
-    margin-right: 0px;
-    max-width: 90px;
-    max-height: 48px;
-  }
-}
 .sponsor-container h2 {
   margin-bottom: 30px;
 }
@@ -1262,6 +1191,41 @@ form {
 .bronze .box-header,
 .bronze .box {
   border-color: #d9c5ac;
+}
+.coop-orgs-block {
+  background-color: #e8eaeb;
+  padding: 40px 15px;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .coop-orgs-block {
+    padding: 5px;
+  }
+}
+.coop-orgs-block h2 {
+  text-align: left;
+}
+.coop-orgs-block img {
+  margin: 20px;
+  max-width: 270px;
+  max-height: 120px;
+  opacity: .7;
+}
+@media (max-width: 989px) {
+  .coop-orgs-block img {
+    max-width: 188px;
+    max-height: 82px;
+  }
+}
+@media (max-width: 767px) {
+  .coop-orgs-block img {
+    margin-left: 0px;
+    margin-right: 0px;
+    max-width: 90px;
+    max-height: 48px;
+  }
 }
 .logo-grid table {
   table-layout: fixed;

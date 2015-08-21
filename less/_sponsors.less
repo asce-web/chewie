@@ -5,6 +5,44 @@
 @color_financial: #9ed8f9; // same as corporate?
 @color_bronze:  #d9c5ac;
 
+// Logo dimensions
+.top-logos-large() {
+    max-width: 360px;
+    max-height: 160px;
+}
+.top-logos-medium() {
+    max-width: 250px;
+    max-height: 110px;
+}
+.top-logos-small() {
+    max-width: 120px;
+    max-height: 65px;
+}
+.mid-logos-large() {
+    max-width: 270px;
+    max-height: 120px;
+}
+.mid-logos-medium() {
+    max-width: 188px;
+    max-height: 82px;
+}
+.mid-logos-small() {
+    max-width: 90px;
+    max-height: 48px;
+}
+.low-logos-large() {
+    max-width: 202px;
+    max-height: 90px;
+}
+.low-logos-medium() {
+    max-width: 140px;
+    max-height: 62px;
+}
+.low-logos-small() {
+    max-width: 68px;
+    max-height: 36px;
+}
+
 .sponsor-container {
   h2 {
     margin-bottom: 30px;
@@ -35,13 +73,13 @@
     }
   }
   img {
-    .low-logos-large;
+    .low-logos-large();
     margin: 20px;
     @media (max-width: 989px) {
-      .low-logos-medium;
+      .low-logos-medium();
     }
     @media (max-width: 767px) {
-      .low-logos-small;
+      .low-logos-small();
       margin-left: 0px;
       margin-right: 0px;
     }
@@ -54,14 +92,14 @@
     border-color: @color_platinum;
   }
   img {
-    .top-logos-large;
+    .top-logos-large();
     @media (max-width: 989px) {
-      .top-logos-medium;
+      .top-logos-medium();
     }
     @media (max-width: 767px) {
       margin-left: 0px;
       margin-right: 0px;
-      .top-logos-small;
+      .top-logos-small();
     }
   }
 }
@@ -72,14 +110,14 @@
     border-color: @color_gold;
   }
   img {
-    .mid-logos-large;
+    .mid-logos-large();
     @media (max-width: 989px) {
-      .mid-logos-medium;
+      .mid-logos-medium();
     }
     @media (max-width: 767px) {
       margin-left: 0px;
       margin-right: 0px;
-      .mid-logos-small;
+      .mid-logos-small();
     }
   }
 }
@@ -124,4 +162,31 @@
   .box  {
     border-color: @color_bronze;
   }
+}
+
+.coop-orgs-block {
+    background-color: #e8eaeb;
+    padding: 40px 15px;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    @media (max-width: 767px) {
+        padding: 5px;
+    }
+    h2 {
+        text-align: left;
+    }
+    img {
+        margin: 20px;
+        .mid-logos-large();
+        opacity: .7;
+        @media (max-width: 989px) {
+            .mid-logos-medium();
+        }
+        @media (max-width: 767px) {
+            margin-left: 0px;
+            margin-right: 0px;
+            .mid-logos-small();
+        }
+    }
 }
