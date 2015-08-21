@@ -1075,6 +1075,17 @@ form {
 .sponsor-container h2 {
   margin-bottom: 30px;
 }
+.top-sponsor-block img,
+.coop-orgs-block img {
+  margin: 20px;
+}
+@media (max-width: 767px) {
+  .top-sponsor-block img,
+  .coop-orgs-block img {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 .top-sponsor-block {
   margin-bottom: 40px;
 }
@@ -1103,7 +1114,6 @@ form {
 .top-sponsor-block img {
   max-width: 202px;
   max-height: 90px;
-  margin: 20px;
 }
 @media (max-width: 989px) {
   .top-sponsor-block img {
@@ -1115,8 +1125,6 @@ form {
   .top-sponsor-block img {
     max-width: 68px;
     max-height: 36px;
-    margin-left: 0;
-    margin-right: 0;
   }
 }
 .platinum::before,
@@ -1221,7 +1229,6 @@ form {
   text-align: left;
 }
 .coop-orgs-block img {
-  margin: 20px;
   max-width: 270px;
   max-height: 120px;
   opacity: .7;
@@ -1234,8 +1241,6 @@ form {
 }
 @media (max-width: 767px) {
   .coop-orgs-block img {
-    margin-left: 0px;
-    margin-right: 0px;
     max-width: 90px;
     max-height: 48px;
   }
