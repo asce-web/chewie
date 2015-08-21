@@ -60,11 +60,13 @@
   .box {
     border: @border_width solid currentColor;
   }
+  //
+  // [1] hides border from .box
   &::before {
     display: inline-block;
     padding: 8px 20px;
-    border-bottom-color: #fff; // hides border from .box
-    margin-bottom: -@border_width; // hides border from .box
+    border-bottom-color: #fff !important; // [1] // !important overrides later border color
+    margin-bottom: -@border_width;        // [1]
     font-weight: 600;
     font-size: 18px;
     text-transform: uppercase;

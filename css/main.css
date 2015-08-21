@@ -1088,7 +1088,7 @@ form {
 .top-sponsor-block::before {
   display: inline-block;
   padding: 8px 20px;
-  border-bottom-color: #fff;
+  border-bottom-color: #fff !important;
   margin-bottom: -2px;
   font-weight: 600;
   font-size: 18px;
