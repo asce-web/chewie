@@ -10,9 +10,6 @@
 .top-sponsor-block {
   margin-bottom: 40px;
 }
-.box-header {
-  display: none !important;
-}
 .top-sponsor-block::before,
 .top-sponsor-block .box {
   border: 2px solid currentColor;
