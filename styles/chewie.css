@@ -162,7 +162,6 @@ li.active .tab-button::after {
 \*################################*/
 .conference-logo {
   max-width: 85px;
-  padding-top: 20px;
   float: left;
 }
 @media (max-width: 767px) {
@@ -171,11 +170,25 @@ li.active .tab-button::after {
     margin: 0 10px 20px;
   }
 }
+.header .conference-logo {
+  padding-top: 20px;
+}
 .header,
 .footer,
 .summary-banner {
   color: #ffffff;
   background-color: #6a9556;
+}
+.header a,
+.footer a,
+.summary-banner a {
+  display: block;
+  color: #fff;
+}
+.header .ic,
+.footer .ic,
+.summary-banner .ic {
+  margin: -7px;
 }
 /*################################*\
     _comp.SiteHeader.less
@@ -530,7 +543,6 @@ li.active .tab-button::after {
 }
 .link-block.contact .ic {
   margin-right: 9px;
-  margin-left: -7px;
 }
 .link-block.connect h3 {
   margin-bottom: 20px;
