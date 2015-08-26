@@ -8,11 +8,13 @@
 
 
 // a container that acts like a table
+// used on big horizontal sections of page
 .col-container {
   display: table;
   table-layout: fixed;
   width: 100%;
 }
+
 // three possible columns in the col-container
 .logo-col,
 .side-nav-col,
@@ -24,6 +26,7 @@
     width: 100% !important; // why important??
   }
 }
+
 // column for the shield ConfLogo component
 .logo-col {
   width: 105px;
@@ -34,7 +37,8 @@
     }
   }
 }
-// column for side content
+
+// sidebar of page
 .side-nav-col {
   width: 450px;
   @media (max-width: 1199px) {
@@ -55,6 +59,7 @@
     }
   }
 }
+
 // column for main shit
 .auto-col {
   .header & {
@@ -67,5 +72,32 @@
     //     padding-right: 0;
     // }
     //
+  }
+}
+
+
+// a section in the sidebar
+.callout {
+  margin-bottom: 40px;
+  width: 100%;
+
+  h2 {
+    font-weight: 400;
+  }
+  .callout-body {
+    @image_top_border: 2px; // thickness of top border in image
+    @image_color: #f0f1f1;
+    background-image: url(../img/pattern-bg-fade.png);
+    background-repeat: repeat-x;
+    // background-position: center top;
+    background-position: center -@image_top_border;
+    padding: 18px 20px 0 20px;
+    border-top: @image_top_border solid @image_color;
+    &.no-bg {
+      background-image: none;
+    }
+  }
+  &.no-bg .callout-body { // this is stupid. should be `.callout-body.no-bg`
+    background-image: none;
   }
 }

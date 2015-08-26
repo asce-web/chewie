@@ -53,6 +53,9 @@ button {
 .button {
   font-family: 'futura-pt', 'Open Sans', 'Arial', sans-serif;
 }
+img {
+  max-width: 100%;
+}
 /*################################*\
     _objects.less
 \*################################*/
@@ -116,6 +119,26 @@ button {
   .header .auto-col {
     padding-right: 50px;
   }
+}
+.callout {
+  margin-bottom: 40px;
+  width: 100%;
+}
+.callout h2 {
+  font-weight: 400;
+}
+.callout .callout-body {
+  background-image: url(../img/pattern-bg-fade.png);
+  background-repeat: repeat-x;
+  background-position: center -2px;
+  padding: 18px 20px 0 20px;
+  border-top: 2px solid #f0f1f1;
+}
+.callout .callout-body.no-bg {
+  background-image: none;
+}
+.callout.no-bg .callout-body {
+  background-image: none;
 }
 /*################################*\
     _comp.YearBadge.less
