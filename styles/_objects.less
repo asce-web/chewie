@@ -7,24 +7,65 @@
 // Temporary stylesheet containg ALL objects
 
 
-.header {
-  .auto-col {
-    padding-right: 50px;
-
-    @media (max-width: 767px) {
-        padding-right: 0px;
+// a container that acts like a table
+.col-container {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+// three possible columns in the col-container
+.logo-col,
+.side-nav-col,
+.auto-col {
+  display: table-cell;
+  vertical-align: top;
+  @media (max-width: 767px) {
+    display: block;
+    width: 100% !important; // why important??
+  }
+}
+// column for the shield ConfLogo component
+.logo-col {
+  width: 105px;
+  @media (max-width: 1199px) {
+    width: 75px;
+    img {
+      width: 60px;
     }
   }
-  .side-nav-col {
+}
+// column for side content
+.side-nav-col {
+  width: 450px;
+  @media (max-width: 1199px) {
+    width: 385px;
+  }
+  @media (max-width: 989px) {
+    width: 300px;
+  }
+  .header & {
     background-size: cover;
     background-position: 50% 0;
     position: relative;
-
     @media (max-width: 767px) {
       background-position: 50% 50%;
       height: 145px;
-      max-width: 100%;
+      max-width: 100%; // is this necessary?
       margin-bottom: 8px;
     }
+  }
+}
+// column for main shit
+.auto-col {
+  .header & {
+    @media (min-width: 768px) {
+      padding-right: 50px;
+    }
+    // same as:
+    // padding-right: 50px;
+    // @media (max-width: 767px) {
+    //     padding-right: 0;
+    // }
+    //
   }
 }

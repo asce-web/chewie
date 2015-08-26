@@ -56,12 +56,47 @@ button {
 /*################################*\
     _objects.less
 \*################################*/
-.header .auto-col {
-  padding-right: 50px;
+.col-container {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+.logo-col,
+.side-nav-col,
+.auto-col {
+  display: table-cell;
+  vertical-align: top;
 }
 @media (max-width: 767px) {
-  .header .auto-col {
-    padding-right: 0px;
+  .logo-col,
+  .side-nav-col,
+  .auto-col {
+    display: block;
+    width: 100% !important;
+  }
+}
+.logo-col {
+  width: 105px;
+}
+@media (max-width: 1199px) {
+  .logo-col {
+    width: 75px;
+  }
+  .logo-col img {
+    width: 60px;
+  }
+}
+.side-nav-col {
+  width: 450px;
+}
+@media (max-width: 1199px) {
+  .side-nav-col {
+    width: 385px;
+  }
+}
+@media (max-width: 989px) {
+  .side-nav-col {
+    width: 300px;
   }
 }
 .header .side-nav-col {
@@ -75,6 +110,11 @@ button {
     height: 145px;
     max-width: 100%;
     margin-bottom: 8px;
+  }
+}
+@media (min-width: 768px) {
+  .header .auto-col {
+    padding-right: 50px;
   }
 }
 /*################################*\
@@ -671,6 +711,11 @@ li.active .tab-button::after {
     -webkit-overflow-scrolling: touch;
   }
 }
+@media (max-width: 1199px) {
+  .summary-banner .col-container .logo-col {
+    width: 105px;
+  }
+}
 .title .hidden-xs {
   margin-left: 120px;
   margin-right: 20px;
@@ -678,10 +723,5 @@ li.active .tab-button::after {
 @media (max-width: 1199px) {
   .title .hidden-xs {
     margin-left: 85px;
-  }
-}
-@media (max-width: 1199px) {
-  .summary-banner .col-container .logo-col {
-    width: 105px;
   }
 }
