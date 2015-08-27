@@ -20,6 +20,10 @@
  *
  * ## COMPONENTS
  * YearBadge......................shield with year at top of all pages
+ * YearTabs.......................tabs for each year in the footer
+ * ConfLogo.......................image of conference logo shield in header/footer
+ * Icon...........................small icons
+ * Button.........................buttons
  *
  * ## TRUMPS
  * helpers........................context-agnostic helper classes
@@ -39,6 +43,8 @@
 @import url('_comp.YearBadge.less');
 @import url('_comp.YearTabs.less');
 @import url('_comp.ConfLogo.less');
+@import url('_comp.Icon.less');
+@import url('_comp.Button.less');
 
 // NOTE the Header, Footer, and Summary Banner are too big to be components.
 // We may just use small components inside to create the look-and-feel of each.
@@ -47,13 +53,10 @@
 .summary-banner {
   color: @color_header;
   background-color: @color_key1;
-    a {
-        display: block;
-        color: #fff;
-    }
-    .ic {
-      margin: -7px;
-    }
+  a {
+    display: block;
+    color: #fff;
+  }
 }
 @import url('_comp.SiteHeader.less');
 @import url('_comp.SiteFooter.less');

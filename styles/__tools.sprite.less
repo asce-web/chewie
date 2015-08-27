@@ -16,22 +16,22 @@
 // : Dae Clarke
 // ^updated
 // 2015-08-05
-.sprite(@path, @size, @w, @h, @pad: 0) when (isstring(@path)) {
-    background-image: url(@path);
-    width: @size;
-    height: @size;
-    display: inline-block;
-    @at2x_path: ~`@{path}.replace(/\.[\w\?=]+$/, function(match) { return "@2x" + match; })`;
-    font-size: @size;
-    @media @highdpi {
-        font-size: @size + @pad;
-        background-image: url("@{at2x_path}");
-        background-size: @w @h;
-    }
+.sprite(@path; @size; @w; @h; @pad: 0) when (isstring(@path)) {
+  background-image: url(@path);
+  width: @size;
+  height: @size;
+  display: inline-block;
+  @at2x_path: ~`@{path}.replace(/\.[\w\?=]+$/, function(match) { return "@2x" + match; })`;
+  font-size: @size;
+  @media @highdpi {
+    font-size: @size + @pad; // this is a bad idea. just sayin.
+    background-image: url('@{at2x_path}');
+    background-size: @w @h;
+  }
 }
 
 // This mixin should be renamed, or if it is a special case of the one above,
 // delete this and put in default values for the params of the mixin above.
-.sprite(@x, @y) {
-    background-position: -@x * 1em -@y * 1em;
+.sprite(@x; @y) {
+  background-position: (-@x * 1em) (-@y * 1em);
 }

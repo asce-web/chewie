@@ -112,93 +112,14 @@
 }
 
 
-.container {
-    width: 100% !important;
-    max-width: 1400px;
-}
 
-.ic {
-    vertical-align: middle;
-    position: relative;
-    text-indent: -9999px;
-    top: -2px;
-    .sprite("../img/sprite.png", 30px, 590px, 330px, 0px);
-    &.menu { .sprite(10, 9); }
-    &.home { .sprite(17, 4); }
-    &.close-nav { .sprite(7, 9); }
-    &.download { .sprite(10, 4)}
-    &.contact {.sprite(5, 8); }
-    &.contact-large {.sprite(17, 3); }
-    &.contact-blue {.sprite(5, 6); }
-    &.telephone {.sprite(4, 6); }
-    &.chat {.sprite(6, 6); }
-    &.mobile-phone {.sprite(17, 2); }
-    &.chevron-down { .sprite(17, 5); }
-    &.linkedin  { .sprite(1, 9)}
-    &.facebook  { .sprite(2, 9)}
-    &.twitter  { .sprite(3, 9)}
-    &.youtube  { .sprite(4, 9)}
-    &.google  { .sprite(5, 9)}
-    &.collapse-icon { .sprite(3, 6);}
-}
 
-.twitter-large {
-    background-position: -540px 0px;
-    width: 50px;
-    height: 60px;
-}
-.facebook-large {
-    background-position: -540px -60px;
-    width: 50px;
-    height: 60px;
-}
-.google-large {
-    background-position: -540px -120px;
-    width: 50px;
-    height: 60px;
-}
 
-.collapsed .collapse-icon {
-    .sprite(2, 6);
-}
 
-.collapse-icon {
-    position: absolute;
-    margin-left: -45px;
-    top: initial;
-    margin-top: -6px;
-}
-.panel-heading:hover .collapse-icon {
-    .sprite(3, 6);
-}
-
-.panel-heading.collapsed:hover .collapse-icon {
-    .sprite(2, 7);
-}
 
 hr {
     margin-top: 0px;
     border-top: 2px solid #f4f4f5;
-}
-
-button, a.button {
-    background-color: @color_primary;
-    text-transform: uppercase;
-    color: #fff;
-    display: inline-block;
-    border: none;
-    padding: .5em 1em;
-    border-radius: 3px;
-    box-shadow: 0px 2px 0px #cdcdcd;
-    font-weight: 500;
-    margin-bottom: 20px;
-    cursor: pointer;
-
-    &:hover, a:visited, a:focus {
-        background-color: lighten(@color_primary, 5%);
-        color: #fff;
-        text-decoration: none;
-    }
 }
 
 ul, ol {
@@ -640,18 +561,18 @@ a {
         &::after {
             content: "";
             display: inline-block;
-            .sprite("../img/sprite.png", 30px, 590px, 330px, 0px);
-            .sprite(10, 6);
+            .sprite('../img/sprite.png'; 30px; 590px; 330px; 0);
+            .sprite(10; 6);
             margin-top: -7px;
             margin-bottom: -7px;
             position: relative;
             top: 1px;
         }
     }
-    a[href$=".pdf"]::after {
+    a[href$='.pdf']::after {
         display: inline-block;
         background: @color_primary;
-        content: "PDF";
+        content: 'PDF';
         height: auto;
         width: auto;
         margin-left: 8px;
@@ -666,12 +587,12 @@ a {
 
 
 
-a[href^="mailto:"] {
+a[href^='mailto:'] {
     &::before {
         content: "";
         display: inline-block;
-        .sprite("../img/sprite.png", 30px, 590px, 330px, 0px);
-        .sprite(5, 6);
+        .sprite('../img/sprite.png'; 30px; 590px; 330px; 0);
+        .sprite(5; 6);
         margin-top: -7px;
         margin-right: 6px;
         position: relative;
@@ -684,7 +605,7 @@ a[href^="mailto:"] {
     margin-bottom: 20px !important;
     font-size: 18px;
     &::after {
-        .sprite(7, 6);
+        .sprite(7; 6);
     }
 
     @media (max-width: 1199px) {
@@ -730,8 +651,8 @@ a[href^="mailto:"] {
     &::before {
         content: "";
         display: inline-block;
-        .sprite("../img/sprite.png", 30px, 590px, 330px, 0px);
-        .sprite(6, 6);
+        .sprite('../img/sprite.png'; 30px; 590px; 330px; 0);
+        .sprite(6; 6);
         margin-top: -7px;
         margin-right: 6px;
         margin-bottom: -7px;
@@ -746,8 +667,8 @@ a[href^="mailto:"] {
     &::before {
         content: "";
         display: inline-block;
-        .sprite("../img/sprite.png", 30px, 590px, 330px, 0px);
-        .sprite(4, 6);
+        .sprite('../img/sprite.png'; 30px; 590px; 330px; 0);
+        .sprite(4; 6);
         margin-top: -7px;
         margin-right: 6px;
         margin-bottom: -7px;
