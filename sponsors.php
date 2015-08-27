@@ -104,7 +104,7 @@
                     <div class="auto-col">
                         <div class="nav1">
                             <a class="no-hover" href=""><span class="ic home"></span></a>
-                            <a class="current-page" href="" data-menu-target="#programlevel2">Program <span class="ic chevron-down"></span></a>
+                            <a href="" data-menu-target="#programlevel2">Program <span class="ic chevron-down"></span></a>
                             <a href="" data-menu-target="#locationlevel2">Location <span class="ic chevron-down"></span></a>
                             <a href="" data-menu-target="#aboutlevel2">About <span class="ic chevron-down"></span></a>
                             <a href="" class="no-hover hidden-md hidden-lg"><span class="ic contact">Contact</span></a>
@@ -122,7 +122,7 @@
         </div>
         <div class="container-fluid navigation-level2 show-current-page">
             <div class="container">
-                <ul id="programlevel2" class="list-unstyled current-page">
+                <ul id="programlevel2" class="list-unstyled">
                     <li><a href="">Speakers</a></li>
                     <li><a href="">Exhibitor List</a></li>
                     <li><a href="">ASCE Communities & Pavilion</a></li>
