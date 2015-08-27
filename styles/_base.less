@@ -3,15 +3,138 @@
     _base.less
 \*################################*/
 
-body,html {
+
+/**
+ * # CONTENTS
+ *
+ * GENERIC........................far-reaching page-wide selectors
+ * SECTIONS.......................sections, articles, headers, footers, headings
+ * GROUPING.......................paragraphs, lists, tables
+ * TEXT...........................phrasing (inline) content
+ * FORMS..........................form elements
+ * EMBEDDED.......................images, videos
+ */
+
+// Table Of Contents
+// #GENERIC.......................
+// #
+// #EMBEDDED
+
+
+/*++++++++++++++++++++++++++++++++*\
+    ## GENERIC
+\*++++++++++++++++++++++++++++++++*/
+html,
+body {
   // what purpose does this serve?
   height: 100%;
   width: 100%;
 }
-
 body {
   font-family: 'Open Sans', 'Arial', sans-serif;
 }
+
+
+/*++++++++++++++++++++++++++++++++*\
+    ## SECTIONS
+\*++++++++++++++++++++++++++++++++*/
+hr {
+    margin-top: 0px;
+    border-top: 2px solid #f4f4f5;
+}
+
+
+/*++++++++++++++++++++++++++++++++*\
+    ## GROUPING
+\*++++++++++++++++++++++++++++++++*/
+ul,
+ol {
+  margin-bottom: 20px;
+  padding-left: 1.9em;
+  & & {
+    margin-bottom: 0; // override above
+  }
+}
+ul {
+  list-style-type: disc;
+  > li {
+    list-style-image: url(../img/li-bullet.png);
+  }
+  ul > li {
+    list-style-image: none;
+  }
+}
+
+
+/*++++++++++++++++++++++++++++++++*\
+    ## TEXT
+\*++++++++++++++++++++++++++++++++*/
+
+
+/*++++++++++++++++++++++++++++++++*\
+    ## FORMS
+\*++++++++++++++++++++++++++++++++*/
+form {
+  display: inline-block;
+  width: 100%;
+  background-color: #f4f4f5;
+  padding: 20px 20px 0 20px;
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="range"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+textarea,
+select {
+  border-radius: 1px;
+  border: 1px solid #b3b8bc;
+  box-shadow: inset 0px 1px 2px #e8eaeb;
+  outline: none;
+  padding: 8px;
+  background: #fff;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 38px;
+  &:focus {
+    border-color: #97d5e9;
+  }
+}
+
+label {
+  display: block;
+  font-weight: 300;
+  font-size: 13px;
+  text-transform: uppercase;
+  em {
+    color: red; // WHY ?
+  }
+}
+
+
+/*++++++++++++++++++++++++++++++++*\
+    ## EMBEDDED
+\*++++++++++++++++++++++++++++++++*/
+img {
+  max-width: 100%; // seems to be a recurring theme here
+}
+
+
+
+
+
+// OTHER
 h1, h2,
 button {
   // this looks like a UI font. can we make it a variable?
@@ -21,9 +144,4 @@ button {
 .navigation, .year-tabs, .button {
   // just gonna put this here for now. move it later.
   font-family: 'futura-pt', 'Open Sans', 'Arial', sans-serif;
-}
-
-
-img {
-  max-width: 100%; // seems to be a recurring theme here
 }

@@ -39,13 +39,128 @@
 /*################################*\
     _base.less
 \*################################*/
-body,
-html {
+/**
+ * # CONTENTS
+ *
+ * GENERIC........................far-reaching page-wide selectors
+ * SECTIONS.......................sections, articles, headers, footers, headings
+ * GROUPING.......................paragraphs, lists, tables
+ * TEXT...........................phrasing (inline) content
+ * FORMS..........................form elements
+ * EMBEDDED.......................images, videos
+ */
+/*++++++++++++++++++++++++++++++++*\
+    ## GENERIC
+\*++++++++++++++++++++++++++++++++*/
+html,
+body {
   height: 100%;
   width: 100%;
 }
 body {
   font-family: 'Open Sans', 'Arial', sans-serif;
+}
+/*++++++++++++++++++++++++++++++++*\
+    ## SECTIONS
+\*++++++++++++++++++++++++++++++++*/
+hr {
+  margin-top: 0px;
+  border-top: 2px solid #f4f4f5;
+}
+/*++++++++++++++++++++++++++++++++*\
+    ## GROUPING
+\*++++++++++++++++++++++++++++++++*/
+ul,
+ol {
+  margin-bottom: 20px;
+  padding-left: 1.9em;
+}
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  margin-bottom: 0;
+}
+ul {
+  list-style-type: disc;
+}
+ul > li {
+  list-style-image: url(../img/li-bullet.png);
+}
+ul ul > li {
+  list-style-image: none;
+}
+/*++++++++++++++++++++++++++++++++*\
+    ## TEXT
+\*++++++++++++++++++++++++++++++++*/
+/*++++++++++++++++++++++++++++++++*\
+    ## FORMS
+\*++++++++++++++++++++++++++++++++*/
+form {
+  display: inline-block;
+  width: 100%;
+  background-color: #f4f4f5;
+  padding: 20px 20px 0 20px;
+  margin-bottom: 20px;
+}
+input[type="text"],
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="range"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+textarea,
+select {
+  border-radius: 1px;
+  border: 1px solid #b3b8bc;
+  box-shadow: inset 0px 1px 2px #e8eaeb;
+  outline: none;
+  padding: 8px;
+  background: #fff;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 38px;
+}
+input[type="text"]:focus,
+input[type="color"]:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="email"]:focus,
+input[type="month"]:focus,
+input[type="number"]:focus,
+input[type="range"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+input[type="week"]:focus,
+textarea:focus,
+select:focus {
+  border-color: #97d5e9;
+}
+label {
+  display: block;
+  font-weight: 300;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+label em {
+  color: red;
+}
+/*++++++++++++++++++++++++++++++++*\
+    ## EMBEDDED
+\*++++++++++++++++++++++++++++++++*/
+img {
+  max-width: 100%;
 }
 h1,
 h2,
@@ -56,9 +171,6 @@ button {
 .year-tabs,
 .button {
   font-family: 'futura-pt', 'Open Sans', 'Arial', sans-serif;
-}
-img {
-  max-width: 100%;
 }
 /*################################*\
     _objects.less
