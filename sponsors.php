@@ -17,6 +17,7 @@
 
         <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="/styles/chewie.css">
         <link rel="stylesheet" href="css/author.css">
 
         <!--[if lt IE 9]>
@@ -376,7 +377,7 @@
                         <img src="img/sponsor_logo_horizontal1.gif" alt="">
                     </div>
                 </div>
-                <div class="top-sponsor-block financial">
+                <div class="top-sponsor-block bronze">
                     <div class="box">
                         <a href="">ExpoFactor</a>
                         <a href="">K Chen International</a>
@@ -384,7 +385,7 @@
                         <a href="">McMalley/daSilva</a>
                     </div>
                 </div>
-                <div class="top-sponsor-block bronze">
+                <div class="top-sponsor-block financial">
                     <div class="box">
                         <a href="">ExpoFactor</a>
                         <a href="">K Chen International</a>

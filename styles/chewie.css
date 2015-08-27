@@ -22,6 +22,9 @@
  * Icon...........................small icons
  * Button.........................buttons
  *
+ * SponsorHeading.................heading of Sponsors section
+ * SponsorBlock...................a block of sponsor logos
+ *
  * ## TRUMPS
  * helpers........................context-agnostic helper classes
  * utils..........................atoms (exactly one style and marked `!important`)
@@ -160,6 +163,8 @@ label em {
     ## EMBEDDED
 \*++++++++++++++++++++++++++++++++*/
 img {
+  width: auto;
+  height: auto;
   max-width: 100%;
 }
 h1,
@@ -873,6 +878,291 @@ a.button a:focus {
   display: inline-block;
   margin-right: 9px;
   margin-left: 9px;
+}
+/*################################*\
+    _comp.SponsorHeading.less
+\*################################*/
+.sponsor-container h2,
+.c-SponsorHeading {
+  margin-bottom: 30px;
+}
+/*################################*\
+    _comp.SponsorBlock.less
+\*################################*/
+.top-sponsor-block,
+.c-SponsorBlock {
+  margin-bottom: 40px;
+}
+.top-sponsor-block::before,
+.c-SponsorBlock::before,
+.top-sponsor-block .box,
+.c-SponsorBlock .box {
+  border: 2px solid currentColor;
+}
+.top-sponsor-block::before,
+.c-SponsorBlock::before {
+  display: inline-block;
+  padding: 8px 20px;
+  border-bottom-color: #fff !important;
+  margin-bottom: -2px;
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.top-sponsor-block .box,
+.c-SponsorBlock .box {
+  padding: 20px;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .top-sponsor-block .box,
+  .c-SponsorBlock .box {
+    padding: 5px;
+  }
+}
+.top-sponsor-block img,
+.c-SponsorBlock img {
+  max-width: 202px;
+  max-height: 90px;
+  margin: 20px;
+}
+@media (max-width: 989px) {
+  .top-sponsor-block img,
+  .c-SponsorBlock img {
+    max-width: 140px;
+    max-height: 62px;
+  }
+}
+@media (max-width: 767px) {
+  .top-sponsor-block img,
+  .c-SponsorBlock img {
+    max-width: 68px;
+    max-height: 36px;
+  }
+}
+@media (max-width: 767px) {
+  .top-sponsor-block img,
+  .c-SponsorBlock img {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.platinum::before,
+.c-SponsorBlock--platinum::before,
+.platinum .box,
+.c-SponsorBlock--platinum .box {
+  border-color: #cde1ec;
+}
+.platinum::before,
+.c-SponsorBlock--platinum::before {
+  content: 'Platinum';
+}
+.platinum img,
+.c-SponsorBlock--platinum img {
+  max-width: 360px;
+  max-height: 160px;
+}
+@media (max-width: 989px) {
+  .platinum img,
+  .c-SponsorBlock--platinum img {
+    max-width: 250px;
+    max-height: 110px;
+  }
+}
+@media (max-width: 767px) {
+  .platinum img,
+  .c-SponsorBlock--platinum img {
+    max-width: 120px;
+    max-height: 65px;
+  }
+}
+.gold::before,
+.c-SponsorBlock--gold::before,
+.gold .box,
+.c-SponsorBlock--gold .box {
+  border-color: #f8cd79;
+}
+.gold::before,
+.c-SponsorBlock--gold::before {
+  content: 'Gold';
+}
+.gold img,
+.c-SponsorBlock--gold img {
+  max-width: 270px;
+  max-height: 120px;
+}
+@media (max-width: 989px) {
+  .gold img,
+  .c-SponsorBlock--gold img {
+    max-width: 188px;
+    max-height: 82px;
+  }
+}
+@media (max-width: 767px) {
+  .gold img,
+  .c-SponsorBlock--gold img {
+    max-width: 90px;
+    max-height: 48px;
+  }
+}
+.corporate::before,
+.c-SponsorBlock--corporate::before,
+.corporate .box,
+.c-SponsorBlock--corporate .box {
+  border-color: #9ed8f9;
+}
+.corporate::before,
+.c-SponsorBlock--corporate::before {
+  content: 'Corporate Sponsors';
+}
+.silver::before,
+.c-SponsorBlock--silver::before,
+.silver .box,
+.c-SponsorBlock--silver .box {
+  border-color: #dbddde;
+}
+.silver::before,
+.c-SponsorBlock--silver::before {
+  content: 'Silver';
+}
+.bronze::before,
+.c-SponsorBlock--bronze::before,
+.bronze .box,
+.c-SponsorBlock--bronze .box {
+  border-color: #d9c5ac;
+}
+.bronze::before,
+.c-SponsorBlock--bronze::before {
+  content: 'Bronze';
+}
+.financial::before,
+.c-SponsorBlock--copper::before,
+.financial .box,
+.c-SponsorBlock--copper .box {
+  border-color: #d6a985;
+}
+.financial::before,
+.c-SponsorBlock--copper::before {
+  content: 'Copper';
+}
+.bronze a,
+.financial a,
+.c-SponsorBlock--silver a,
+.c-SponsorBlock--copper a {
+  font-size: 18px;
+  font-weight: 700;
+}
+.bronze a:not(:last-child)::after,
+.financial a:not(:last-child)::after,
+.c-SponsorBlock--silver a:not(:last-child)::after,
+.c-SponsorBlock--copper a:not(:last-child)::after {
+  content: '';
+  padding-right: 12px;
+  border-right: 1px solid #0c5fa8;
+  margin-right: 8px;
+}
+.c-SponsorBlock__Logo {
+  max-width: 202px;
+  max-height: 90px;
+  margin: 20px;
+}
+@media (max-width: 989px) {
+  .c-SponsorBlock__Logo {
+    max-width: 140px;
+    max-height: 62px;
+  }
+}
+@media (max-width: 767px) {
+  .c-SponsorBlock__Logo {
+    max-width: 68px;
+    max-height: 36px;
+  }
+}
+@media (max-width: 767px) {
+  .c-SponsorBlock__Logo {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.c-SponsorBlock__Logo--platinum {
+  max-width: 360px;
+  max-height: 160px;
+}
+@media (max-width: 989px) {
+  .c-SponsorBlock__Logo--platinum {
+    max-width: 250px;
+    max-height: 110px;
+  }
+}
+@media (max-width: 767px) {
+  .c-SponsorBlock__Logo--platinum {
+    max-width: 120px;
+    max-height: 65px;
+  }
+}
+.c-SponsorBlock__Logo--gold {
+  max-width: 270px;
+  max-height: 120px;
+}
+@media (max-width: 989px) {
+  .c-SponsorBlock__Logo--gold {
+    max-width: 188px;
+    max-height: 82px;
+  }
+}
+@media (max-width: 767px) {
+  .c-SponsorBlock__Logo--gold {
+    max-width: 90px;
+    max-height: 48px;
+  }
+}
+.c-SponsorBlock__TextLink {
+  font-size: 18px;
+  font-weight: 700;
+}
+.c-SponsorBlock__TextLink:not(:last-child)::after {
+  content: '';
+  padding-right: 12px;
+  border-right: 1px solid #0c5fa8;
+  margin-right: 8px;
+}
+.coop-orgs-block,
+.c-CoopBlock {
+  background-color: #e8eaeb;
+  padding: 40px 15px;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .coop-orgs-block,
+  .c-CoopBlock {
+    padding: 5px;
+  }
+}
+.coop-orgs-block h2,
+.c-CoopBlock h2 {
+  text-align: left;
+}
+.coop-orgs-block img,
+.c-CoopBlock img {
+  max-width: 270px;
+  max-height: 120px;
+  opacity: .7;
+}
+@media (max-width: 989px) {
+  .coop-orgs-block img,
+  .c-CoopBlock img {
+    max-width: 188px;
+    max-height: 82px;
+  }
+}
+@media (max-width: 767px) {
+  .coop-orgs-block img,
+  .c-CoopBlock img {
+    max-width: 90px;
+    max-height: 48px;
+  }
 }
 /*################################*\
     _trumps.helpers.less
