@@ -48,7 +48,7 @@
  * GENERIC........................far-reaching page-wide selectors
  * SECTIONS.......................sections, articles, headers, footers, headings
  * GROUPING.......................paragraphs, lists, tables
- * TEXT...........................phrasing (inline) content
+ * TEXT...........................phrasing (inline) content and links
  * FORMS..........................form elements
  * EMBEDDED.......................images, videos
  */
@@ -96,6 +96,12 @@ ul ul > li {
 /*++++++++++++++++++++++++++++++++*\
     ## TEXT
 \*++++++++++++++++++++++++++++++++*/
+a {
+  color: #0c5fa8;
+}
+a:hover {
+  color: #19a1cf;
+}
 /*++++++++++++++++++++++++++++++++*\
     ## FORMS
 \*++++++++++++++++++++++++++++++++*/
@@ -776,7 +782,6 @@ a.button a:focus {
 .nav1 .current-page {
   background-color: #e6f1f9;
   color: #0c5fa8;
-  border-bottom: 6px solid #e6f1f9;
 }
 .nav1 a:hover .chevron-down,
 .nav1 a.active .chevron-down,
@@ -787,7 +792,6 @@ a.button a:focus {
 .nav1 a.no-hover:active {
   background-color: transparent;
   opacity: .5;
-  border-bottom: 6px solid transparent;
 }
 /*################################*\
     _comp.NavMainSecondary.less
@@ -795,8 +799,7 @@ a.button a:focus {
 .navigation-level2 {
   background-color: #e6f1f9;
   position: absolute;
-  right: 0px;
-  left: 0px;
+  width: 100%;
   z-index: 2;
 }
 .navigation-level2.show-current-page {
@@ -804,7 +807,7 @@ a.button a:focus {
 }
 .navigation-level2 ul {
   display: none;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 @media (min-width: 767px) {
   .navigation-level2 ul.active,
@@ -812,10 +815,10 @@ a.button a:focus {
     display: block;
   }
 }
-.navigation-level2 ul li {
+.navigation-level2 li {
   display: inline-block;
 }
-.navigation-level2 ul li a {
+.navigation-level2 a {
   color: #0c5fa8;
   font-weight: 700;
   padding: 14px 10px;
@@ -831,7 +834,7 @@ a.button a:focus {
   background-color: #0e6cc0;
 }
 /*################################*\
-    _comp.NavSidePeople.less
+    _comp.NavTertiary.less
 \*################################*/
 .nav3 {
   padding: 5px 26px 29px 26px;

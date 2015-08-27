@@ -10,25 +10,26 @@
 // ^author
 // : Dae Clarke
 // ^updated
-// : 2015-08-21
+// : 2015-08-27
 .nav1 {
   a {
-    border-bottom: 6px solid transparent;
-    margin-bottom: -6px;
+    @nav1_bb_width: 6px; // why 6?
+    border-bottom: @nav1_bb_width solid transparent;
+    margin-bottom: -@nav1_bb_width;
   }
   a:hover,
   a.active,
   .current-page {
-    background-color: #e6f1f9;
-    color: @color_primary;
-    border-bottom: 6px solid #e6f1f9;
-    .chevron-down { .sprite(17, 6); }
+    background-color: @color_link_navbg;
+    color: @color_link;
+    // border-bottom: 6px solid @color_link_navbg; // removing due to bb already set above
+    .chevron-down { .sprite(17, 6); } // only to change color
   }
 
   a.no-hover:hover,
   a.no-hover:active {
     background-color: transparent;
     opacity: .5;
-    border-bottom: 6px solid transparent;
+    // border-bottom: 6px solid transparent; // removing due to bb already set above
   }
 }

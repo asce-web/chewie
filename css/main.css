@@ -197,12 +197,6 @@
 .logo-grid table td a {
   font-weight: 700;
 }
-a {
-  color: #0c5fa8;
-}
-a:hover {
-  color: #19a1cf;
-}
 .person-name {
   font-size: 18px;
   text-transform: none;

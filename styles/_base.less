@@ -10,7 +10,7 @@
  * GENERIC........................far-reaching page-wide selectors
  * SECTIONS.......................sections, articles, headers, footers, headings
  * GROUPING.......................paragraphs, lists, tables
- * TEXT...........................phrasing (inline) content
+ * TEXT...........................phrasing (inline) content and links
  * FORMS..........................form elements
  * EMBEDDED.......................images, videos
  */
@@ -69,6 +69,12 @@ ul {
 /*++++++++++++++++++++++++++++++++*\
     ## TEXT
 \*++++++++++++++++++++++++++++++++*/
+a {
+  color: @color_link;
+  &:hover {
+    color: @color_link_hover;
+  }
+}
 
 
 /*++++++++++++++++++++++++++++++++*\
