@@ -155,32 +155,6 @@
 .panel-body {
   padding-bottom: 0px;
 }
-.summary-banner {
-  padding-left: 10px;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
-}
-@media (max-width: 1199px) {
-  .summary-banner .col-container .logo-col {
-    width: 105px;
-  }
-}
-.summary-banner h2 {
-  margin-top: 0px;
-  padding-top: 10px;
-  font-weight: 700;
-  font-size: 30px;
-}
-.summary-banner .year-badge h2 {
-  margin-bottom: 0px;
-}
-.summary-banner h3 {
-  float: left;
-  margin-right: 20px;
-}
-.summary-banner h4 {
-  font-style: normal;
-}
 /*################################*\
     __tools.logos.less
 \*################################*/

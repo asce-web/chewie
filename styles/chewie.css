@@ -201,6 +201,9 @@ button {
   .logo-col {
     width: 75px;
   }
+  .summary-banner .logo-col {
+    width: 105px;
+  }
   .logo-col img {
     width: 60px;
   }
@@ -683,20 +686,20 @@ a.button a:focus {
 }
 .summary-banner h2 {
   padding-top: 10px;
-  margin: 0px;
+  margin: 0;
   font-weight: 700;
   text-transform: uppercase;
   font-size: 30px;
-}
-@media (max-width: 1199px) {
-  .summary-banner h2 {
-    font-size: 20px;
-  }
 }
 @media (max-width: 989px) {
   .summary-banner h2 {
     font-size: 18px;
     padding-top: 20px;
+  }
+}
+@media (max-width: 1199px) {
+  .summary-banner h2 {
+    font-size: 20px;
   }
 }
 .summary-banner h3 {
