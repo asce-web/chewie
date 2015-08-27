@@ -197,69 +197,6 @@
 .logo-grid table td a {
   font-weight: 700;
 }
-.person-name {
-  font-size: 18px;
-  text-transform: none;
-}
-.person-title {
-  font-style: italic;
-  font-weight: 300;
-  margin-bottom: 10px;
-}
-.speaker-profile {
-  display: table;
-  width: 100%;
-  margin-bottom: 20px;
-}
-@media (max-width: 989px) {
-  .speaker-profile {
-    display: block;
-    width: 100%;
-  }
-}
-.speaker-profile .session-col,
-.speaker-profile .photo-col,
-.speaker-profile .details-col {
-  display: table-cell;
-  vertical-align: middle;
-}
-@media (max-width: 989px) {
-  .speaker-profile .details-col {
-    display: block;
-    width: 100%;
-  }
-}
-.speaker-profile .dateline {
-  border-right: 1px solid #ccc;
-  padding-left: 0px;
-  letter-spacing: 2px;
-}
-@media (max-width: 989px) {
-  .speaker-profile .dateline {
-    border-right: none;
-  }
-}
-.speaker-profile .photo-col {
-  width: 130px;
-  padding: 0 10px 0 5px;
-}
-.speaker-profile .sessiontype {
-  padding-right: 0px;
-  letter-spacing: 2px;
-}
-.speaker-profile .session-col {
-  text-transform: uppercase;
-}
-.speaker-profile button {
-  margin-bottom: 0;
-}
-.speaker-profile img {
-  max-width: 100%;
-  max-height: 130px;
-}
-.speaker-profile p {
-  margin-bottom: 0px;
-}
 .register {
   margin-bottom: 0px !important;
   margin-top: 20px;

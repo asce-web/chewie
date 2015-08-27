@@ -501,7 +501,6 @@ a.button {
   border-radius: 3px;
   box-shadow: 0px 2px 0px #cdcdcd;
   font-weight: 500;
-  margin-bottom: 20px;
   cursor: pointer;
 }
 button:hover,
@@ -1168,6 +1167,59 @@ a.button a:focus {
   }
 }
 /*################################*\
+    _comp.SpeakerProfile.less
+\*################################*/
+.speaker-profile {
+  display: table;
+  width: 100%;
+  margin-bottom: 20px;
+}
+@media (max-width: 989px) {
+  .speaker-profile {
+    display: block;
+  }
+}
+.speaker-profile img {
+  max-height: 130px;
+}
+.session-col,
+.photo-col,
+.details-col {
+  display: table-cell;
+  vertical-align: middle;
+}
+.session-col {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.photo-col {
+  width: 130px;
+  padding: 0 10px 0 5px;
+}
+@media (max-width: 989px) {
+  .details-col {
+    display: block;
+    width: 100%;
+  }
+}
+.dateline {
+  border-right: 1px solid #ccc;
+}
+@media (max-width: 989px) {
+  .dateline {
+    border-right: none;
+  }
+}
+.person-name {
+  font-size: 18px;
+  text-transform: none;
+}
+.person-title {
+  font-style: italic;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+/*################################*\
     _trumps.helpers.less
 \*################################*/
 .light {
@@ -1303,4 +1355,10 @@ a.button a:focus {
 .container {
   width: 100% !important;
   max-width: 1400px;
+}
+.dateline {
+  padding-left: 0;
+}
+.sessiontype {
+  padding-right: 0;
 }
