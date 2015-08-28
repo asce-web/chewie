@@ -197,21 +197,6 @@
 .logo-grid table td a {
   font-weight: 700;
 }
-.register {
-  margin-bottom: 0px !important;
-  margin-top: 20px;
-}
-.register a {
-  display: inline-block;
-  margin-bottom: 20px;
-}
-.register h4 {
-  margin-bottom: 20px;
-}
-.register img {
-  max-width: 100%;
-  margin-bottom: 20px;
-}
 .content .sponsor-opportunities {
   margin-top: 20px;
 }
@@ -249,54 +234,6 @@
 }
 .content .recognition td:first-child {
   text-align: left;
-}
-.important-dates .callout-body {
-  display: table;
-  width: 100%;
-  padding-left: 5px !important;
-}
-.important-dates .date-block {
-  display: table-row;
-}
-.important-dates .date-block .date-col,
-.important-dates .date-block .description-col {
-  display: table-cell;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-.important-dates .date-block .date-col {
-  padding-right: 2px;
-  text-align: right;
-  font-size: 12px;
-  min-width: 90px;
-}
-.important-dates .date-block .date-col .date {
-  font-weight: 600;
-  font-size: 14px;
-}
-.important-dates .date-block .date-col .date::after {
-  content: " ";
-  display: block;
-  float: right;
-  margin-left: 10px;
-  margin-bottom: 10px;
-  height: 38px;
-  width: 0px;
-  border-right: 1px solid #ccc;
-}
-.important-dates .date-block .description-col {
-  font-size: 12px;
-  padding-left: 8px;
-}
-.callout.sponsors .callout-body {
-  text-align: center;
-}
-.callout.sponsors .callout-body img {
-  max-height: 130px;
-}
-.callout.contacts {
-  line-height: 26px;
 }
 .introduction {
   background-color: #6a9556;
