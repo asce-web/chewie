@@ -74,19 +74,6 @@
 .content p {
   margin: 0 0 20px;
 }
-.content .side-nav-col {
-  padding: 20px 60px 0 60px;
-}
-@media (max-width: 1199px) {
-  .content .side-nav-col {
-    padding: 20px 40px 0 40px;
-  }
-}
-@media (max-width: 767px) {
-  .content .side-nav-col {
-    padding: 0px;
-  }
-}
 .content table {
   width: 100%;
   margin-bottom: 20px;

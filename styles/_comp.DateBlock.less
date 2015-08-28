@@ -41,18 +41,18 @@
   .description-col,
   .o-DateBlock__Desc {
     @date_block_width: 305px;
-    max-width: (@date_block_width - @date_w - @date_mr);
-      @media (max-width: 1199px) {
-        @date_block_width: 280px;
-        max-width: (@date_block_width - @date_w - @date_mr);
-      }
-      @media (max-width: 989px) {
-        @date_block_width: 195px;
-        max-width: (@date_block_width - @date_w - @date_mr);
-      }
-      @media (max-width: 767px) {
-        @date_block_width: 682px;
-        max-width: (@date_block_width - @date_w - @date_mr);
-      }
+    max-width: (@date_block_width - @date_w - @date_mr); // 205
+    @media (max-width: 1199px) {
+      @date_block_width: 280px;
+      max-width: (@date_block_width - @date_w - @date_mr); // 180
+    }
+    @media (max-width: 989px) {
+      @date_block_width: 195px;
+      max-width: (@date_block_width - @date_w - @date_mr); // 95
+    }
+    @media (max-width: 767px) {
+      @date_block_width: 682px;
+      max-width: (@date_block_width - @date_w - @date_mr); // 582
+    }
   }
 }

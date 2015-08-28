@@ -43,17 +43,14 @@
 
 // sidebar of page
 .side-nav-col {
-  @padding_x: 60px;
   width: 450px;
   @media (max-width: 1199px) {
-    @padding_x: 40px;
     width: 385px;
   }
   @media (max-width: 989px) {
     width: 300px;
   }
   @media (max-width: 767px) {
-    @padding_x: 0;
   }
   .header & {
     background-size: cover;
@@ -64,6 +61,19 @@
       height: 145px;
       max-width: 100%; // is this necessary?
       margin-bottom: 8px;
+    }
+  }
+  // not sure what .content is yet (2015-08-28)
+  .content & {
+    @padding_x: 60px;
+    padding: 20px @padding_x 0;
+    @media (max-width: 1199px) {
+      @padding_x: 40px;
+      padding: 20px @padding_x 0;
+    }
+    @media (max-width: 767px) {
+      @padding_x: 0;
+      padding: 0;
     }
   }
 }

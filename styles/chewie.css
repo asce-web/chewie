@@ -245,6 +245,19 @@ button {
     margin-bottom: 8px;
   }
 }
+.content .side-nav-col {
+  padding: 20px 60px 0;
+}
+@media (max-width: 1199px) {
+  .content .side-nav-col {
+    padding: 20px 40px 0;
+  }
+}
+@media (max-width: 767px) {
+  .content .side-nav-col {
+    padding: 0;
+  }
+}
 @media (min-width: 768px) {
   .header .auto-col {
     padding-right: 50px;
