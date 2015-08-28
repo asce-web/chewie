@@ -1028,6 +1028,56 @@ a.button a:focus {
     margin-right: 0;
   }
 }
+.platinum .top-sponsor-block img,
+.platinum .c-SponsorBlock img,
+.c-SponsorBlock--platinum .top-sponsor-block img,
+.c-SponsorBlock--platinum .c-SponsorBlock img {
+  max-width: 360px;
+  max-height: 160px;
+}
+@media (max-width: 989px) {
+  .platinum .top-sponsor-block img,
+  .platinum .c-SponsorBlock img,
+  .c-SponsorBlock--platinum .top-sponsor-block img,
+  .c-SponsorBlock--platinum .c-SponsorBlock img {
+    max-width: 250px;
+    max-height: 110px;
+  }
+}
+@media (max-width: 767px) {
+  .platinum .top-sponsor-block img,
+  .platinum .c-SponsorBlock img,
+  .c-SponsorBlock--platinum .top-sponsor-block img,
+  .c-SponsorBlock--platinum .c-SponsorBlock img {
+    max-width: 120px;
+    max-height: 65px;
+  }
+}
+.gold .top-sponsor-block img,
+.gold .c-SponsorBlock img,
+.c-SponsorBlock--gold .top-sponsor-block img,
+.c-SponsorBlock--gold .c-SponsorBlock img {
+  max-width: 270px;
+  max-height: 120px;
+}
+@media (max-width: 989px) {
+  .gold .top-sponsor-block img,
+  .gold .c-SponsorBlock img,
+  .c-SponsorBlock--gold .top-sponsor-block img,
+  .c-SponsorBlock--gold .c-SponsorBlock img {
+    max-width: 188px;
+    max-height: 82px;
+  }
+}
+@media (max-width: 767px) {
+  .gold .top-sponsor-block img,
+  .gold .c-SponsorBlock img,
+  .c-SponsorBlock--gold .top-sponsor-block img,
+  .c-SponsorBlock--gold .c-SponsorBlock img {
+    max-width: 90px;
+    max-height: 48px;
+  }
+}
 .platinum::before,
 .c-SponsorBlock--platinum::before,
 .platinum .box,
@@ -1163,6 +1213,44 @@ a.button a:focus {
   .c-SponsorBlock__Logo {
     margin-left: 0;
     margin-right: 0;
+  }
+}
+.platinum .c-SponsorBlock__Logo,
+.c-SponsorBlock--platinum .c-SponsorBlock__Logo {
+  max-width: 360px;
+  max-height: 160px;
+}
+@media (max-width: 989px) {
+  .platinum .c-SponsorBlock__Logo,
+  .c-SponsorBlock--platinum .c-SponsorBlock__Logo {
+    max-width: 250px;
+    max-height: 110px;
+  }
+}
+@media (max-width: 767px) {
+  .platinum .c-SponsorBlock__Logo,
+  .c-SponsorBlock--platinum .c-SponsorBlock__Logo {
+    max-width: 120px;
+    max-height: 65px;
+  }
+}
+.gold .c-SponsorBlock__Logo,
+.c-SponsorBlock--gold .c-SponsorBlock__Logo {
+  max-width: 270px;
+  max-height: 120px;
+}
+@media (max-width: 989px) {
+  .gold .c-SponsorBlock__Logo,
+  .c-SponsorBlock--gold .c-SponsorBlock__Logo {
+    max-width: 188px;
+    max-height: 82px;
+  }
+}
+@media (max-width: 767px) {
+  .gold .c-SponsorBlock__Logo,
+  .c-SponsorBlock--gold .c-SponsorBlock__Logo {
+    max-width: 90px;
+    max-height: 48px;
   }
 }
 .c-SponsorBlock__Logo--platinum {

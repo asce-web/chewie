@@ -47,6 +47,7 @@
     }
   }
   img {
+    // TODO remove this selector once we can apply a class
     .c-SponsorBlock__Logo;
   }
 }
@@ -60,6 +61,7 @@
     content: 'Platinum';
   }
   img {
+    // TODO remove this selector once we can apply a class
     .c-SponsorBlock__Logo--platinum;
   }
 }
@@ -73,6 +75,7 @@
     content: 'Gold';
   }
   img {
+    // TODO remove this selector once we can apply a class
     .c-SponsorBlock__Logo--gold;
   }
 }
@@ -121,6 +124,7 @@
 .c-SponsorBlock--silver,
 .c-SponsorBlock--copper {
   a {
+    // TODO remove this selector once we can apply a class
     .c-SponsorBlock__TextLink;
   }
 }
@@ -141,7 +145,17 @@
     margin-left: 0;
     margin-right: 0;
   }
+  .platinum &,
+  .c-SponsorBlock--platinum & {
+    .top-logo();
+  }
+  .gold &,
+  .c-SponsorBlock--gold & {
+    .mid-logo();
+  }
 }
+// TODO leaving these here for now for readability but removing later
+// once we can rename classes
 .c-SponsorBlock__Logo--platinum {
   .top-logo();
 }
