@@ -102,6 +102,41 @@ a {
 a:hover {
   color: #19a1cf;
 }
+a[href^='mailto:']::before {
+  content: '';
+  background-image: url('../img/sprite.png');
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  font-size: 30px;
+  background-position: -5em -6em;
+  margin-top: -7px;
+  margin-right: 6px;
+  margin-bottom: -7px;
+  position: relative;
+  top: 4px;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+  a[href^='mailto:']::before {
+    font-size: 30px;
+    background-image: url('../img/sprite@2x.png');
+    background-size: 590px 330px;
+  }
+}
+a[href$='.pdf']::after {
+  display: inline-block;
+  background: #0c5fa8;
+  content: 'PDF';
+  height: auto;
+  width: auto;
+  margin-left: 8px;
+  padding: 1px 4px;
+  position: relative;
+  top: -1px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+}
 /*++++++++++++++++++++++++++++++++*\
     ## FORMS
 \*++++++++++++++++++++++++++++++++*/
