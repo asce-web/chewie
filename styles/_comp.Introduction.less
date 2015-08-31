@@ -1,0 +1,88 @@
+
+/*################################*\
+    _comp.Introduction.less
+\*################################*/
+
+
+// The introduction section of the conference home page.
+// Includes an image, heading and intro paragraph.
+//
+// ^author
+// : Dae Clarke
+// ^updated
+// : 2015-08-31
+.introduction {
+  background-color: @color_key1;
+  color: #fff;
+  margin-top: 10px;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+  h1 {
+    font-size: 26px;
+    color: inherit; // not #fff
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    @media (max-width: 989px) {
+      font-size: 22px;
+    }
+    @media (max-width: 767px) {
+      font-size: 18px;
+    }
+  }
+  img {
+    max-width: 100%;
+    display: block;
+    margin: auto auto;
+  }
+
+  a,
+  a:hover,
+  a:visited,
+  a:active {
+    color: inherit; // not #fff
+  }
+  a:hover {
+    opacity: .5;
+  }
+
+  & > div {
+  // this NEEDS to be given a class.
+    padding: 10px 30px;
+  }
+}
+// the introduction (lede) paragraph
+.intro {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  @media (max-width: 989px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  @media (max-width: 767px) {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+// an empty div whose gradient fades the image into the content piece
+// (this should be an img::after pseudo-element)
+.img-fade {
+  @height: 50px;
+  height: @height;
+  width: 100%;
+  position: absolute;
+  margin-top: -@height;
+  // padding: 0 !important; // TODO remove this line when we add a damn class (only here because `.introduction > div` has higher specificity)
+
+  // can't we use a mixin for background gradients?
+  background: -moz-linear-gradient(top, fade(@color_key1, 0%) 0%, @color_key1 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,fade(@color_key1, 0%)), color-stop(100%,@color_key1)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, fade(@color_key1, 0%) 0%,@color_key1 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, fade(@color_key1, 0%) 0%,@color_key1 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, fade(@color_key1, 0%) 0%,@color_key1 100%); /* IE10+ */
+  background: linear-gradient(to bottom, fade(@color_key1, 0%) 0%,@color_key1 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='fade(@color_key1, 0%)', endColorstr='@color_key1',GradientType=0 ); /* IE6-9 */
+}

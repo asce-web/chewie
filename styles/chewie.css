@@ -826,6 +826,89 @@ a.button a:focus {
   }
 }
 /*################################*\
+    _comp.Introduction.less
+\*################################*/
+.introduction {
+  background-color: #6a9556;
+  color: #fff;
+  margin-top: 10px;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.introduction h1 {
+  font-size: 26px;
+  color: inherit;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+@media (max-width: 989px) {
+  .introduction h1 {
+    font-size: 22px;
+  }
+}
+@media (max-width: 767px) {
+  .introduction h1 {
+    font-size: 18px;
+  }
+}
+.introduction img {
+  max-width: 100%;
+  display: block;
+  margin: auto auto;
+}
+.introduction a,
+.introduction a:hover,
+.introduction a:visited,
+.introduction a:active {
+  color: inherit;
+}
+.introduction a:hover {
+  opacity: .5;
+}
+.introduction > div {
+  padding: 10px 30px;
+}
+.intro {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+@media (max-width: 989px) {
+  .intro {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .intro {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+.img-fade {
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  margin-top: -50px;
+  background: -moz-linear-gradient(top, rgba(106, 149, 86, 0) 0%, #6a9556 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(106, 149, 86, 0)), color-stop(100%, #6a9556));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(106, 149, 86, 0) 0%, #6a9556 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(106, 149, 86, 0) 0%, #6a9556 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(106, 149, 86, 0) 0%, #6a9556 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, rgba(106, 149, 86, 0) 0%, #6a9556 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='fade(@color_key1, 0%)', endColorstr='@color_key1', GradientType=0);
+  /* IE6-9 */
+}
+/*################################*\
     _comp.NavMain.less
 \*################################*/
 .navigation {

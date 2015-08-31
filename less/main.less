@@ -237,69 +237,6 @@
 
 
 
-.introduction {
-    background-color: @color_key1;
-    color: #fff;
-    margin-top: 10px;
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    margin-bottom: 20px;
-    h1 {
-        font-size: 26px;
-        color: #fff;
-        margin-bottom: 10px;
-        text-transform: uppercase;
-        @media (max-width: 989px) {
-            font-size: 22px;
-        }
-        @media (max-width: 767px) {
-            font-size: 18px;
-        }
-
-    }
-    .intro {
-        @media (max-width: 989px) {
-            font-size: 16px;
-            line-height: 20px;
-        }
-        @media (max-width: 767px) {
-            font-size: 14px;
-            line-height: 18px;
-        }
-
-    }
-    img {
-        max-width: 100%;
-        display: block;
-        margin: auto auto;
-    }
-    .img-fade {
-        height: 50px;
-        width: 100%;
-        position: absolute;
-        margin-top: -49px;
-        padding: 0px;
-        background: -moz-linear-gradient(top, fade(@color_key1, 0%) 0%, @color_key1 100%); /* FF3.6+ */
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,fade(@color_key1, 0%)), color-stop(100%,@color_key1)); /* Chrome,Safari4+ */
-        background: -webkit-linear-gradient(top, fade(@color_key1, 0%) 0%,@color_key1 100%); /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(top, fade(@color_key1, 0%) 0%,@color_key1 100%); /* Opera 11.10+ */
-        background: -ms-linear-gradient(top, fade(@color_key1, 0%) 0%,@color_key1 100%); /* IE10+ */
-        background: linear-gradient(to bottom, fade(@color_key1, 0%) 0%,@color_key1 100%); /* W3C */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='fade(@color_key1, 0%)', endColorstr='@color_key1',GradientType=0 ); /* IE6-9 */
-    }
-
-    a, a:hover, a:visited, a:active {
-        color: #fff;
-    }
-    a:hover {
-        opacity: .5;
-    }
-
-    &>div {
-        padding: 10px 30px;
-    }
-}
 
 .key-links {
     a {
