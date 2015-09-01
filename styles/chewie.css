@@ -1092,6 +1092,47 @@ a.button a:focus {
   margin-left: 9px;
 }
 /*################################*\
+    _comp.LinkArrow.less
+\*################################*/
+.link-arrow {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.link-arrow::after {
+  content: '';
+  background-image: url('../img/sprite.png');
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  font-size: 30px;
+  background-position: -10em -6em;
+  margin-top: -7px;
+  margin-bottom: -7px;
+  position: relative;
+  top: 1px;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+  .link-arrow::after {
+    font-size: 30px;
+    background-image: url('../img/sprite@2x.png');
+    background-size: 590px 330px;
+  }
+}
+.footer .link-arrow {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.footer .link-arrow::after {
+  background-position: -7em -6em;
+}
+@media (max-width: 1199px) {
+  .footer .link-arrow {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+}
+/*################################*\
     _comp.SponsorHeading.less
 \*################################*/
 .sponsor-container h2,

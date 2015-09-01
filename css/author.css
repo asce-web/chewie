@@ -57,32 +57,6 @@
   font-style: italic;
   margin-bottom: 20px;
 }
-.link-arrow {
-  font-size: 16px;
-  font-weight: 700;
-  color: #0c5fa8;
-  text-transform: uppercase;
-}
-.link-arrow::after {
-  content: "";
-  background-image: url("../img/sprite.png");
-  width: 30px;
-  height: 30px;
-  display: inline-block;
-  font-size: 30px;
-  background-position: -10em -6em;
-  margin-top: -7px;
-  margin-bottom: -7px;
-  position: relative;
-  top: 1px;
-}
-@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
-  .link-arrow::after {
-    font-size: 30px;
-    background-image: url('../img/sprite@2x.png');
-    background-size: 590px 330px;
-  }
-}
 .table-header {
   margin: 0;
   padding: 10px;

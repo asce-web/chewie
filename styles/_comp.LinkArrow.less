@@ -1,0 +1,39 @@
+
+/*################################*\
+    _comp.LinkArrow.less
+\*################################*/
+
+
+// A link with an arrow icon following.
+//
+// ^author
+// : Dae Clarke
+// ^updated
+// : 2015-09-01
+.link-arrow {
+  font-size: 16px;
+  font-weight: 700;
+  // color: @color_primary; // no need for this if `a` already has it
+  text-transform: uppercase;
+  &::after {
+    content: '';
+    display: inline-block;
+    .sprite('../img/sprite.png', 30px, 590px, 330px, 0);
+    .sprite(10, 6);
+    margin-top: -7px;
+    margin-bottom: -7px;
+    position: relative;
+    top: 1px;
+  }
+  .footer & {
+    margin-bottom: 20px;
+    font-size: 18px;
+    &::after {
+      .sprite(7; 6);
+    }
+    @media (max-width: 1199px) {
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+  }
+}
