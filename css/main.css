@@ -23,6 +23,52 @@
     max-width: 60px;
   }
 }
+.toggleable-nav {
+  display: none;
+}
+.toggleable-nav a {
+  display: block;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+.toggleable-nav a:hover,
+.toggleable-nav a:focus,
+.toggleable-nav a:visited,
+.toggleable-nav a:active {
+  color: #fff;
+}
+.toggleable-nav .link-block {
+  margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+  .toggleable-nav.in {
+    z-index: 10;
+    background: #6a9556;
+    box-shadow: -4px 0px 0px rgba(0, 0, 0, 0.25);
+    display: block;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    padding: 20px;
+    width: 90%;
+    max-width: 350px;
+    overflow: auto;
+  }
+  .toggleable-nav.in .close-nav {
+    display: block;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 12;
+    cursor: pointer;
+  }
+  .toggleable-nav.in .hidden-xs {
+    display: block !important;
+  }
+}
 .content h1,
 .content h2,
 .content h3,
@@ -248,61 +294,3 @@
     background-size: 590px 330px;
   }
 }
-.breadcrumb-link {
-  font-weight: 700;
-  margin-top: 25px;
-  display: inline-block;
-}
-.share-logos {
-  font-weight: 600;
-  margin-top: 10px;
-  font-size: 13px;
-}
-.live-chat {
-  font-size: 18px;
-  font-weight: 600;
-  color: #62b840;
-}
-.live-chat::before {
-  content: "";
-  background-image: url('../img/sprite.png');
-  width: 30px;
-  height: 30px;
-  display: inline-block;
-  font-size: 30px;
-  background-position: -6em -6em;
-  margin-top: -7px;
-  margin-right: 6px;
-  margin-bottom: -7px;
-}
-@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
-  .live-chat::before {
-    font-size: 30px;
-    background-image: url('../img/sprite@2x.png');
-    background-size: 590px 330px;
-  }
-}
-.live-chat span {
-  color: #333;
-  font-size: 12px;
-}
-.phone::before {
-  content: "";
-  background-image: url('../img/sprite.png');
-  width: 30px;
-  height: 30px;
-  display: inline-block;
-  font-size: 30px;
-  background-position: -4em -6em;
-  margin-top: -7px;
-  margin-right: 6px;
-  margin-bottom: -7px;
-}
-@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
-  .phone::before {
-    font-size: 30px;
-    background-image: url('../img/sprite@2x.png');
-    background-size: 590px 330px;
-  }
-}
-/* AUTHOR */

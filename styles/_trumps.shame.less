@@ -8,51 +8,52 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 
-// COMMENTS PLEASE
-.toggleable-nav {
-  display: none;
-  a {
-    display: block;
-    color: #fff;
-    font-weight: 600;
-    margin-bottom: 8px;
-    font-size: 13px;
-    &:hover, &:focus, &:visited, &:active {
-      color: #fff;
-    }
-  }
-  .link-block {
-    margin-bottom: 20px;
-  }
-  @media (max-width: 767px) {
-    &.in {
-      z-index: 10;
-      background: @color_key1;
-      box-shadow: -4px 0px 0px rgba(0,0,0,.25);
-      display: block;
-      position: fixed;
-      top: 0px;
-      right: 0px;
-      bottom: 0px;
-      padding: 20px;
-      width: 90%;
-      max-width: 350px;
-      overflow: auto;
-      .close-nav {
-        display: block;
-        position: absolute;
-        top: 16px;
-        right: 16px;
-        z-index: 12;
-        cursor: pointer;
-      }
-      .hidden-xs {
-        display: block !important;
-      }
-    }
-  }
 
+// meta stuff belonging in content
+.breadcrumb-link {
+    font-weight: 700;
+    margin-top: 25px;
+    display: inline-block;
 }
+.share-logos {
+    font-weight: 600;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+// these are icons... what?
+.live-chat {
+  font-size: 18px;
+  font-weight: 600;
+  color: #62b840; // okay random
+  &::before {
+    content: '';
+    display: inline-block;
+    .sprite('../img/sprite.png'; 30px; 590px; 330px; 0);
+    .sprite(6; 6);
+    margin-top: -7px;
+    margin-right: 6px;
+    margin-bottom: -7px;
+  }
+  span { // REALLY??? a nested span selector?
+    color: #333; // what color is this? body text?
+    font-size: 12px;
+  }
+}
+.phone {
+  &::before {
+    content: '';
+    display: inline-block;
+    .sprite('../img/sprite.png'; 30px; 590px; 330px; 0);
+    .sprite(4; 6);
+    margin-top: -7px;
+    margin-right: 6px;
+    margin-bottom: -7px;
+  }
+}
+
+
+
 
 
 
