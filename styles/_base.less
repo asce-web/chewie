@@ -15,11 +15,6 @@
  * EMBEDDED.......................images, videos
  */
 
-// Table Of Contents
-// #GENERIC.......................
-// #
-// #EMBEDDED
-
 
 /*++++++++++++++++++++++++++++++++*\
     ## GENERIC
@@ -32,6 +27,7 @@ body {
 }
 body {
   font-family: 'Open Sans', 'Arial', sans-serif;
+  color: @color_body_txt;
 }
 
 
@@ -87,17 +83,17 @@ a {
   }
   &[href$='.pdf']::after {
     display: inline-block;
-    background: @color_primary;
-    content: 'PDF';
-    height: auto;
     width: auto;
-    margin-left: 8px;
+    height: auto;
+    content: 'PDF';
     padding: 1px 4px;
+    margin-left: 8px;
     position: relative;
     top: -1px;
     font-size: 12px;
     font-weight: 700;
-    color: #fff;
+    background: @color_primary;
+    color: @color_body_bg;
   }
 }
 
@@ -150,6 +146,7 @@ label {
   font-size: 13px;
   text-transform: uppercase;
   em {
+    // use `<abbr title="required">*</abbr>`
     color: red; // WHY ?
   }
 }

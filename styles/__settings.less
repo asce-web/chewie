@@ -4,27 +4,44 @@
 \*################################*/
 
 
-// use this for setting other things to the body background
+// body colors
 @color_body_bg: #fff;
+@color_body_txt: #333;
 
+// accent colors
 @color_primary: #0c5fa8;
 @color_key1: #6a9556;
 @color_key2: #7aa96c;
 @color_key3: #6c965e;
 
-@color_link: @color_primary; // for links and things same color as link
+// link colors
+@color_link: @color_primary;
 @color_link_hover: #19a1cf;
-@color_link_navbg: #e6f1f9;
+@color_link_navbg: #e6f1f9; // bgcolor of nav links on hover/active
+
+// button colors
+@color_btn_bg: @color_primary;
+@color_btn_txt: #fff;
+@color_btn_sw: #cdcdcd;
+
+// flag colors
+@color_flag: #ed1c24; // default
+@color_note_bg: #fef0c1;
+@color_note_br: #fdcd2f;
 
 
-@color_header: @color_body_bg;
+// other colors
+@color_header_txt: #fff;
+@color_livechat: #62b840; // okay random
+
 
 @highdpi: ~"(-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx)";
 
-
+// sponsor colors
 @color_platinum:  #cde1ec;
 @color_gold:      #f8cd79;
 @color_corporate: #9ed8f9;
 @color_silver:    #dbddde;
 @color_bronze:    #d9c5ac;
-@color_copper:    #d6a985;
+@color_copper:    #d6a985; // CH chose this; may be changed at any time <charvey@asce.org>
+@color_coop_bg:   #e8eaeb; // bgcolor for coop orgs

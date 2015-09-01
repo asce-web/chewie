@@ -11,7 +11,7 @@
 // ^updated
 // : 2015-08-21
 .year-tabs {
-  background-color: @color_body_bg; // override @color_key1
+  background-color: @color_body_bg;
 }
 
 .tab-buttons {
@@ -21,35 +21,34 @@
   display: inline-block;
 }
 .tab-button {
-  color: @color_key1;
-  font-weight: 700;
   padding: 6px 20px;
-  font-size: 24px;
   position: relative;
+  font-weight: 700;
+  font-size: 24px;
   text-decoration: none;
+  color: @color_key1;
   &:hover {
-    color: #1a1d22; // be wise about this color
+    color: @color_body_txt;
   }
   @media (max-width: 767px) {
-    font-size: 16px;
     padding: 6px 12px;
+    font-size: 16px;
   }
   li.active & {
     color: @color_body_bg;
-    cursor: default;
     background: @color_key2;
-
-    &::after { // little arrow
-        content: "";
-        width: 0;
-        height: 0;
-        border-left: 15px solid transparent;
-        border-right: 15px solid transparent;
-        border-top: 15px solid @color_key2;
-        bottom: -15px;
-        left: 50%;
-        margin-left: -15px;
-        position: absolute;
+    cursor: default;
+    &::after { // little arrow below
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-top: 15px solid @color_key2;
+      bottom: -15px;
+      left: 50%;
+      margin-left: -15px;
+      position: absolute;
     }
   }
 }

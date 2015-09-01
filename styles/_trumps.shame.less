@@ -25,7 +25,7 @@
 .live-chat {
   font-size: 18px;
   font-weight: 600;
-  color: #62b840; // okay random
+  color: @color_livechat;
   &::before {
     content: '';
     display: inline-block;
@@ -36,7 +36,7 @@
     margin-bottom: -7px;
   }
   span { // REALLY??? a nested span selector?
-    color: #333; // what color is this? body text?
+    color: @color_body_txt; // why are we undoing shit?
     font-size: 12px;
   }
 }
@@ -63,7 +63,6 @@
     .col-container {
         .logo-col {
             width: 185px;
-
             @media (max-width: 1199px) {
                 width: 130px;
                 img {
@@ -306,7 +305,7 @@
     }
     .recognition {
         h3 {
-            color: #333;
+            color: @color_body_txt;
             font-size: 18px;
             margin: 0;
             text-align: left;

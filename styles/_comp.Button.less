@@ -12,21 +12,21 @@
 // : 2015-08-27
 button,
 a.button {
-    background-color: @color_primary;
-    text-transform: uppercase;
-    color: #fff;
-    display: inline-block;
-    border: none;
-    padding: .5em 1em;
-    border-radius: 3px;
-    box-shadow: 0px 2px 0px #cdcdcd;
-    font-weight: 500;
-    // margin-bottom: 20px; // uh why
-    cursor: pointer;
+  background-color: @color_btn_bg;
+  text-transform: uppercase;
+  color: @color_btn_txt;
+  display: inline-block;
+  border: none;
+  padding: .5em 1em;
+  border-radius: 3px;
+  box-shadow: 0px 2px 0px @color_btn_sw;
+  font-weight: 500;
+  // margin-bottom: 20px; // uh why
+  cursor: pointer;
 
-    &:hover, a:visited, a:focus {
-        background-color: lighten(@color_primary, 5%);
-        color: #fff;
-        text-decoration: none;
-    }
+  &:hover, a:visited, a:focus {
+    background-color: lighten(@color_btn_bg, 5%);
+    color: @color_btn_txt; // why does this even exist
+    text-decoration: none;
+  }
 }

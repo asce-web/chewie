@@ -133,7 +133,7 @@
 }
 .c-Callout__Body {
   @image_top_border: 2px; // thickness of top border in image
-  @image_color: #f0f1f1;
+  @image_color: #f0f1f1; // color of lines in bg image
   background-image: url(../img/pattern-bg-fade.png);
   background-repeat: repeat-x;
   background-position: center -@image_top_border;
@@ -144,8 +144,7 @@
   }
   .callout.important-dates &,
   .c-Callout--dates & {
-    margin-left: -15px; // takes away from the padding-left
-                        // instead of changing padding-left to 5px
+    margin-left: -15px; // takes away from the padding-left, instead of changing padding-left to 5px
   }
   .callout.sponsors &,
   .c-Callout--sponsors & {
@@ -173,7 +172,7 @@
 
 .callout.sponsors .callout-body {
   // TODO copy-pasting until we can rename classes
-  text-align: center;
+  text-align: center; // IDEA can't we just use a utility
   img {
     max-height: 130px; // magic number?
   }

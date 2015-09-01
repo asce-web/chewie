@@ -33,7 +33,7 @@
   &::before {
     display: inline-block;
     padding: 8px 20px;
-    border-bottom-color: #fff !important; // [1] // !important overrides later border color
+    border-bottom-color: @color_body_bg !important; // [1] // !important overrides later border color
     margin-bottom: -@border_width;        // [1]
     font-weight: 600;
     font-size: 18px;
@@ -190,16 +190,17 @@
 // : 2015-08-27
 .coop-orgs-block,
 .c-CoopBlock {
-  background-color: #e8eaeb;
-  padding: 40px 15px;
-  padding-bottom: 20px;
-  margin-bottom: 30px;
+  background-color: @color_coop_bg;
+  padding: 40px 15px;   // numbers numbers numbers
+  padding-bottom: 20px; // numbers numbers numbers
+  margin-bottom: 30px;  // numbers numbers numbers
   text-align: center;
   @media (max-width: 767px) {
     padding: 5px;
   }
   h2 {
     text-align: left; // overrides tac above
+    // IDEA can't we just use a utility class???
   }
   img {
     .mid-logo();
