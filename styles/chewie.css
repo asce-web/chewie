@@ -1639,6 +1639,49 @@ a.button a:focus {
   }
 }
 /*################################*\
+    _comp.typo.Date.less
+\*################################*/
+.date {
+  color: #6c965e;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+/*################################*\
+    _comp.typo.TableHeader.less
+\*################################*/
+.table-header {
+  margin: 0;
+  padding: 10px;
+  background: #d1d4d7;
+  margin-bottom: -1px !important;
+  z-index: 2;
+  position: relative;
+}
+/*################################*\
+    _comp.ui.Flag.less
+\*################################*/
+.flag {
+  border: 1px solid #ed1c24;
+  padding: 2px 6px;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  font-style: italic;
+  text-transform: uppercase;
+  color: #ed1c24;
+}
+.note-flag {
+  background: #fef0c1;
+  display: inline-block;
+  border-left: 2px solid #fdcd2f;
+  padding: 8px 12px;
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+/*################################*\
     _trumps.helpers.less
 \*################################*/
 .light {
@@ -1713,6 +1756,10 @@ a.button a:focus {
   color: #333;
   font-size: 12px;
 }
+.phone {
+  font-size: 18px;
+  font-weight: 600;
+}
 .phone::before {
   content: '';
   background-image: url('../img/sprite.png');
@@ -1732,69 +1779,6 @@ a.button a:focus {
     background-size: 590px 330px;
   }
 }
-@media (min-width: 1370px) {
-  .container {
-    width: 1350px;
-  }
-}
-@media (max-width: 989px) {
-  .header .container,
-  .header .container-fluid {
-    padding: 0 10px;
-  }
-}
-@media (max-width: 767px) {
-  .header .container,
-  .header .container-fluid {
-    padding: 0px;
-  }
-}
-.footer .auto-col .col-xs-2 {
-  max-width: 68px;
-}
-@media (max-width: 767px) {
-  .table-responsive {
-    border: none;
-  }
-}
-@media (max-width: 989px) {
-  .table-responsive {
-    width: 100%;
-    border: none;
-    margin-bottom: 15px;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
-    -webkit-overflow-scrolling: touch;
-  }
-}
-@media (max-width: 1199px) {
-  .summary-banner .col-container .logo-col {
-    width: 105px;
-  }
-}
-.title .hidden-xs {
-  margin-left: 120px;
-  margin-right: 20px;
-}
-@media (max-width: 1199px) {
-  .title .hidden-xs {
-    margin-left: 85px;
-  }
-}
-.container {
-  width: 100% !important;
-  max-width: 1400px;
-}
-.dateline {
-  padding-left: 0;
-}
-.sessiontype {
-  padding-right: 0;
-}
-/*################################*\
-    _trumps.temp.less
-\*################################*/
 .alternate .col-container .logo-col {
   width: 185px;
 }
@@ -2084,4 +2068,91 @@ a.button a:focus {
     background-image: url('../img/sprite@2x.png');
     background-size: 590px 330px;
   }
+}
+.milestone {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.checkmark {
+  background-image: url("../img/sprite.png");
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  font-size: 30px;
+  background-position: -15em -1em;
+  display: block;
+  margin: auto auto;
+  margin-top: -7px;
+  margin-bottom: -7px;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+  .checkmark {
+    font-size: 30px;
+    background-image: url('../img/sprite@2x.png');
+    background-size: 590px 330px;
+  }
+}
+.session {
+  font-weight: 600;
+  font-size: 18px;
+}
+@media (min-width: 1370px) {
+  .container {
+    width: 1350px;
+  }
+}
+@media (max-width: 989px) {
+  .header .container,
+  .header .container-fluid {
+    padding: 0 10px;
+  }
+}
+@media (max-width: 767px) {
+  .header .container,
+  .header .container-fluid {
+    padding: 0px;
+  }
+}
+.footer .auto-col .col-xs-2 {
+  max-width: 68px;
+}
+@media (max-width: 767px) {
+  .table-responsive {
+    border: none;
+  }
+}
+@media (max-width: 989px) {
+  .table-responsive {
+    width: 100%;
+    border: none;
+    margin-bottom: 15px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+@media (max-width: 1199px) {
+  .summary-banner .col-container .logo-col {
+    width: 105px;
+  }
+}
+.title .hidden-xs {
+  margin-left: 120px;
+  margin-right: 20px;
+}
+@media (max-width: 1199px) {
+  .title .hidden-xs {
+    margin-left: 85px;
+  }
+}
+.container {
+  width: 100% !important;
+  max-width: 1400px;
+}
+.dateline {
+  padding-left: 0;
+}
+.sessiontype {
+  padding-right: 0;
 }

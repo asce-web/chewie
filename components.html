@@ -16,9 +16,7 @@
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,600italic,700italic,400,600,700' rel='stylesheet' type='text/css'>
 
         <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
-        <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="/styles/chewie.css">
-        <link rel="stylesheet" href="css/author.css">
 
         <!--[if lt IE 9]>
             <script src="js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
