@@ -1506,6 +1506,24 @@ a.button a:focus {
   }
 }
 /*################################*\
+    _comp.AsceLogo.less
+\*################################*/
+.asce-logo {
+  background-image: url('../img/asce-logo-footer.png');
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  width: 233px;
+  height: 30px;
+}
+@media (max-width: 1199px) {
+  .asce-logo {
+    background-image: url('../img/asce-logo-footer-small.png');
+    width: 73px;
+    height: 23px;
+  }
+}
+/*################################*\
     _comp.SpeakerProfile.less
 \*################################*/
 .speaker-profile {

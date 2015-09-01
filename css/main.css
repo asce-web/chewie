@@ -248,21 +248,6 @@
     background-size: 590px 330px;
   }
 }
-.asce-logo {
-  background-image: url('../img/asce-logo-footer.png');
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 10px;
-  width: 233px;
-  height: 30px;
-}
-@media (max-width: 1199px) {
-  .asce-logo {
-    background-image: url('../img/asce-logo-footer-small.png');
-    width: 73px;
-    height: 23px;
-  }
-}
 .breadcrumb-link {
   font-weight: 700;
   margin-top: 25px;
