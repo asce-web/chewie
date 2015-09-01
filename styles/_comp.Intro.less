@@ -1,6 +1,6 @@
 
 /*################################*\
-    _comp.Introduction.less
+    _comp.Intro.less
 \*################################*/
 
 
@@ -11,37 +11,26 @@
 // : Dae Clarke
 // ^updated
 // : 2015-08-31
-.introduction {
+.introduction,
+.c-Intro {
   background-color: @color_key1;
-  color: #fff;
+  color: @color_header_txt;
   margin-top: 10px;
   display: inline-block;
   position: relative;
   width: 100%;
   margin-bottom: 20px;
-  h1 {
-    font-size: 26px;
-    color: inherit; // not #fff
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    @media (max-width: 989px) {
-      font-size: 22px;
-    }
-    @media (max-width: 767px) {
-      font-size: 18px;
-    }
-  }
   img {
-    max-width: 100%;
-    display: block;
-    margin: auto auto;
+    .c-Intro__Hero;
   }
-
+  h1 {
+    .c-Intro__Hn;
+  }
   a,
   a:hover,
   a:visited,
   a:active {
-    color: inherit; // not #fff
+    color: inherit;
   }
   a:hover {
     opacity: .5;
@@ -52,8 +41,27 @@
     padding: 10px 30px;
   }
 }
+// Hero image
+.c-Intro__Hero {
+  display: block;
+  margin: auto;
+}
+// The heading of the Introcuction module
+.c-Intro__Hn {
+  font-size: 26px;
+  color: inherit; // not #fff
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  @media (max-width: 989px) {
+    font-size: 22px;
+  }
+  @media (max-width: 767px) {
+    font-size: 18px;
+  }
+}
 // the introduction (lede) paragraph
-.intro {
+.intro,
+.c-Intro__Lede {
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
@@ -68,7 +76,7 @@
   }
 }
 // an empty div whose gradient fades the image into the content piece
-// (this should be an img::after pseudo-element)
+// (this should be an .c-Intro__Hero::after pseudo-element)
 .img-fade {
   @height: 50px;
   height: @height;

@@ -861,64 +861,97 @@ a.button a:focus {
   }
 }
 /*################################*\
-    _comp.Introduction.less
+    _comp.Intro.less
 \*################################*/
-.introduction {
+.introduction,
+.c-Intro {
   background-color: #6a9556;
-  color: #fff;
+  color: #ffffff;
   margin-top: 10px;
   display: inline-block;
   position: relative;
   width: 100%;
   margin-bottom: 20px;
 }
-.introduction h1 {
+.introduction img,
+.c-Intro img {
+  display: block;
+  margin: auto;
+}
+.introduction h1,
+.c-Intro h1 {
   font-size: 26px;
   color: inherit;
   margin-bottom: 10px;
   text-transform: uppercase;
 }
 @media (max-width: 989px) {
-  .introduction h1 {
+  .introduction h1,
+  .c-Intro h1 {
     font-size: 22px;
   }
 }
 @media (max-width: 767px) {
-  .introduction h1 {
+  .introduction h1,
+  .c-Intro h1 {
     font-size: 18px;
   }
 }
-.introduction img {
-  max-width: 100%;
-  display: block;
-  margin: auto auto;
-}
 .introduction a,
+.c-Intro a,
 .introduction a:hover,
+.c-Intro a:hover,
 .introduction a:visited,
-.introduction a:active {
+.c-Intro a:visited,
+.introduction a:active,
+.c-Intro a:active {
   color: inherit;
 }
-.introduction a:hover {
+.introduction a:hover,
+.c-Intro a:hover {
   opacity: .5;
 }
-.introduction > div {
+.introduction > div,
+.c-Intro > div {
   padding: 10px 30px;
 }
-.intro {
+.c-Intro__Hero {
+  display: block;
+  margin: auto;
+}
+.c-Intro__Hn {
+  font-size: 26px;
+  color: inherit;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+@media (max-width: 989px) {
+  .c-Intro__Hn {
+    font-size: 22px;
+  }
+}
+@media (max-width: 767px) {
+  .c-Intro__Hn {
+    font-size: 18px;
+  }
+}
+.intro,
+.c-Intro__Lede {
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
   margin-bottom: 20px;
 }
 @media (max-width: 989px) {
-  .intro {
+  .intro,
+  .c-Intro__Lede {
     font-size: 16px;
     line-height: 20px;
   }
 }
 @media (max-width: 767px) {
-  .intro {
+  .intro,
+  .c-Intro__Lede {
     font-size: 14px;
     line-height: 18px;
   }
