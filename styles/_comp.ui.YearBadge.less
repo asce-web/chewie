@@ -1,0 +1,82 @@
+
+/*################################*\
+    _comp.ui.YearBadge.less
+\*################################*/
+
+
+// The YearBadge component represents the shield-like icon at the top
+// of all pages containing the year (2015).
+// Subcomponents:
+// .year-badge-corner
+// // make this an ::after pseudo-element!!!!!! or rename it .YearBadge__Corner
+//
+// ^author
+// : Dae Clarke
+// ^updated
+// : 2015-08-21
+.c-YearBadge {
+  @size: 100px;
+  @bgcolor: @color_primary;
+  display: inline-block;
+  width: @size; // not sure why 90 is so special
+  margin: 0;
+  padding: 0;
+  padding-top: (@size / 4);
+  position: absolute;
+  left: -(@size / 2);
+  font-size: (@size / 3);
+  line-height: 1;
+  font-family: @font_ui;
+  text-align: center;
+  background: @bgcolor;
+  color: @color_header_txt;
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left:  (@size / 2) solid transparent;
+    border-right: (@size / 2) solid transparent;
+    border-top: (@size / 4) solid @bgcolor;
+    line-height: 0;
+    position: relative;
+    top: (@size * 0.29) * 1px; // .29 is a magic number (tweak)
+  }
+}
+.year-badge {
+  width: 90px; // not sure why 90 is so special
+  background: @color_primary;
+  color: @color_header_txt;
+  h2 {
+    // remove this selector, move styles to parent component
+    // add ta-c and stop using atom
+    padding: 40px 10px 10px;
+    margin: 0; // override h2 default margin, see what's going on here?
+  }
+}
+.year-badge-corner {
+  width: 0;
+  height: 0;
+  border-left: 45px solid transparent;
+  border-right: 45px solid transparent;
+  border-top: 20px solid @color_primary;
+}
+
+
+// just putting this here for now
+// later find a way to integrate it with .year-badge
+.year-badge-wrapper {
+  position: absolute;
+  margin-left: -45px;
+  @media (max-width: 767px) {
+    display: none;
+    // top: 0px;
+    // left: 10px;
+    // margin: 0;
+    // zoom: 0.75;
+    // -ms-zoom: 0.75;
+    // -webkit-zoom: 0.75;
+    // -moz-transform:  scale(0.75,0.75);
+    // -moz-transform-origin: top center;
+  }
+}

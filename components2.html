@@ -19,6 +19,7 @@
         margin: 0.5em;
         border: 1px solid #e5eaef;
         border-radius: 8px;
+        position: relative; /* for containing other relative things */
         background: #f5faff;
       }
       .devnote { opacity: 0.8; color: #c64; }
@@ -42,14 +43,16 @@
       UI components.
     </p>
     <p><b>Typographical components</b> are of a static nature and consist
-      mainly of text. There is little to no user interaction required. Examples
-      include kinds of boxes or sections that contain descriptions, and
+      mainly of textual content. There is little to no user interaction required.
+      Examples include kinds of boxes or sections that contain descriptions, and
       inline-level elements such as dates and places.
     </p>
     <p><b>UI (user-interactive) components</b> are the dynamic bells-and-whistles
       that make a webpage pop. These are things that users are likely to interact
       with, such as alerts, labels, navigation, and buttons.
       Specially-styled (not default) form elements also go in this category.
+      Not all of these must be interactive, though. Some UI components can
+      just sit there and look pretty (like an icon or badge).
     </p>
     <p><strong>Note:</strong> On this page, each component demo will be placed in a
       <code>&lt;figure&gt;</code> element to separate it from the surrounding content.
@@ -108,6 +111,21 @@
               </p>
             </div>
           </section>
+        </figure>
+      </section>
+      <section class="doc-ss">
+        <h1>Year Badge</h1>
+        <p>A badge or shield icon showing the year of the current conference.</p>
+        <figure>
+          <div class="year-badge-wrapper">
+            <div class="year-badge">
+              <h2>2015</h2>
+            </div>
+            <div class="year-badge-corner"></div>
+          </div>
+        </figure><br style="line-height:8;">
+        <figure>
+          <div class="c-YearBadge">2015</div>
         </figure>
       </section>
     </section>

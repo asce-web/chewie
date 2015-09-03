@@ -19,6 +19,7 @@ html
         margin: 0.5em;
         border: 1px solid #e5eaef;
         border-radius: 8px;
+        position: relative; /* for containing other relative things */
         background: #f5faff;
       }
       .devnote { opacity: 0.8; color: #c64; }
@@ -39,14 +40,16 @@ html
       UI components.
     p.
       #[b Typographical components] are of a static nature and consist
-      mainly of text. There is little to no user interaction required. Examples
-      include kinds of boxes or sections that contain descriptions, and
+      mainly of textual content. There is little to no user interaction required.
+      Examples include kinds of boxes or sections that contain descriptions, and
       inline-level elements such as dates and places.
     p.
       #[b UI (user-interactive) components] are the dynamic bells-and-whistles
       that make a webpage pop. These are things that users are likely to interact
       with, such as alerts, labels, navigation, and buttons.
       Specially-styled (not default) form elements also go in this category.
+      Not all of these must be interactive, though. Some UI components can
+      just sit there and look pretty (like an icon or badge).
     p.
       #[strong Note:] On this page, each component demo will be placed in a
       #[code &lt;figure&gt;] element to separate it from the surrounding content.
@@ -93,6 +96,17 @@ html
                 nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
                 amet, consectetur adipisicing elit, sed do eiusmod tempor
                 incididunt ut labore et dolore magna aliqua.
+      section.doc-ss
+        h1 Year Badge
+        p A badge or shield icon showing the year of the current conference.
+        figure
+          div.year-badge-wrapper
+            div.year-badge
+              h2 2015
+            div.year-badge-corner
+        br(style="line-height:8;")
+        figure
+          .c-YearBadge 2015
     div.strict.
       <div class="toggleable-nav fade">
           <div tabindex="0" class="ic close-nav">X</div>

@@ -411,22 +411,42 @@ button {
   line-height: 26px;
 }
 /*################################*\
-    _comp.ui.SpeakerPhoto.less
+    _comp.ui.YearBadge.less
 \*################################*/
-.c-SpeakerPhoto {
-  min-width: 130px;
-  max-height: 130px;
-  margin: 0 10px;
-}
-/*################################*\
-    _comp.YearBadge.less
-\*################################*/
-.year-badge {
+.c-YearBadge {
+  display: inline-block;
+  width: 100px;
+  margin: 0;
+  padding: 0;
+  padding-top: 25px;
+  position: absolute;
+  left: -50px;
+  font-size: 33.33333333px;
+  line-height: 1;
+  font-family: 'futura-pt', 'Open Sans', 'Arial', sans-serif;
+  text-align: center;
   background: #0c5fa8;
+  color: #ffffff;
+}
+.c-YearBadge::after {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 25px solid #0c5fa8;
+  line-height: 0;
+  position: relative;
+  top: 29px;
+}
+.year-badge {
   width: 90px;
+  background: #0c5fa8;
+  color: #ffffff;
 }
 .year-badge h2 {
-  padding: 40px 10px 10px 10px;
+  padding: 40px 10px 10px;
   margin: 0;
 }
 .year-badge-corner {
@@ -442,15 +462,16 @@ button {
 }
 @media (max-width: 767px) {
   .year-badge-wrapper {
-    top: 0px;
-    left: 10px;
-    margin: 0;
-    zoom: 0.75;
-    -ms-zoom: 0.75;
-    -webkit-zoom: 0.75;
-    -moz-transform: scale(0.75, 0.75);
-    -moz-transform-origin: top center;
+    display: none;
   }
+}
+/*################################*\
+    _comp.ui.SpeakerPhoto.less
+\*################################*/
+.c-SpeakerPhoto {
+  min-width: 130px;
+  max-height: 130px;
+  margin: 0 10px;
 }
 /*################################*\
     _comp.YearTabs.less
