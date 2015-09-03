@@ -411,6 +411,14 @@ button {
   line-height: 26px;
 }
 /*################################*\
+    _comp.ui.SpeakerPhoto.less
+\*################################*/
+.c-SpeakerPhoto {
+  min-width: 130px;
+  max-height: 130px;
+  margin: 0 10px;
+}
+/*################################*\
     _comp.YearBadge.less
 \*################################*/
 .year-badge {
@@ -671,6 +679,20 @@ a.button a:focus {
 .c-Person__Title {
   font-style: italic;
   margin-bottom: 10px;
+}
+/*################################*\
+    _comp.DateLine.less
+\*################################*/
+.dateline {
+  padding-right: 10px;
+  border-right: 1px solid #ccc;
+  margin-right: 10px;
+  text-align: right;
+}
+@media (max-width: 989px) {
+  .dateline {
+    border-right: 0;
+  }
 }
 .header,
 .footer,
@@ -1602,7 +1624,9 @@ a.button a:focus {
   }
 }
 .speaker-profile img {
+  min-width: 130px;
   max-height: 130px;
+  margin: 0 10px;
 }
 .session-col,
 .photo-col,
@@ -1610,13 +1634,10 @@ a.button a:focus {
   display: table-cell;
   vertical-align: middle;
 }
-.session-col {
+.session-col,
+.c-SessionDetails {
   text-transform: uppercase;
   letter-spacing: 2px;
-}
-.photo-col {
-  width: 130px;
-  padding: 0 10px 0 5px;
 }
 @media (max-width: 989px) {
   .details-col {
@@ -1624,13 +1645,9 @@ a.button a:focus {
     width: 100%;
   }
 }
-.dateline {
-  border-right: 1px solid #ccc;
-}
-@media (max-width: 989px) {
-  .dateline {
-    border-right: none;
-  }
+.dateline,
+.sessiontype {
+  float: left;
 }
 /*################################*\
     _comp.DateBlock.less

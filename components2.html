@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="/styles/chewie.css">
     <style>
+      section.doc-ss {
+        /* sections scoped in this document */
+        margin-left: 1em;
+      }
       figure {
         padding: 0.5em;
         margin: 0.5em;
@@ -17,6 +21,9 @@
         border-radius: 8px;
         background: #f5faff;
       }
+      .devnote { opacity: 0.8; color: #c64; }
+      .devnote::before { content:'(devs: '; }
+      .devnote::after  { content:')'; }
     </style>
   </head>
   <body>
@@ -44,22 +51,65 @@
       with, such as alerts, labels, navigation, and buttons.
       Specially-styled (not default) form elements also go in this category.
     </p>
-    <p><strong>Note:</strong> On this page, each component will be placed in a
+    <p><strong>Note:</strong> On this page, each component demo will be placed in a
       <code>&lt;figure&gt;</code> element to separate it from the surrounding content.
     </p>
-    <section>
-      <h2>Typographical Components</h2>
-      <figure>
-        <section class="c-Callout">
-          <h1 class="c-Callout__Heading">Generic Callout</h1>
-          <div class="c-Callout__Body">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. eiusmod tempor.</p>
-            <section>
-              <h1>Lorem ipsum dolor</h1><a href="">Example link lorem ipsum dolor</a>
-            </section>
+    <section class="doc-ss">
+      <h1>Typographical Components</h1>
+      <section class="doc-ss">
+        <h1>Callouts</h1>
+        <figure>
+          <section class="c-Callout">
+            <h1 class="c-Callout__Heading">Generic Callout</h1>
+            <div class="c-Callout__Body">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. eiusmod tempor.</p>
+              <section>
+                <h1>Lorem ipsum dolor</h1><a href="">Example link lorem ipsum dolor</a>
+              </section>
+            </div>
+          </section>
+        </figure>
+      </section>
+      <section class="doc-ss">
+        <h1>Speaker Profile</h1>
+        <p class="devnote">
+          this doesn't need to be a component. we could use objects here,
+          given a robust grid system.
+        </p>
+        <figure>
+          <div class="speaker-profile">
+            <div class="session-col">
+              <div class="dateline">Thursday 
+                <div class="date">Apr 3</div>
+              </div>
+              <div class="sessiontype">Opening Plenary</div>
+            </div>
+            <div class="photo-col"><img src="img/FPO_speaker_130x130.jpg" alt="speaker" class="c-SpeakerPhoto"></div>
+            <div class="details-col">
+              <div class="person-name">Charles Johnson</div>
+              <div class="person-title">Ph.D., P.E., S.E., CVS, F.ASCE Illuminate Foundry, Inc.</div><a class="button">Speaker Details</a>
+            </div>
           </div>
-        </section>
-      </figure>
+        </figure>
+        <figure>
+          <section class="speaker-profile">
+            <div class="photo-col"><img src="img/FPO_speaker_130x130.jpg" alt="speaker" class="c-SpeakerPhoto"></div>
+            <div class="details-col">
+              <div class="person-name">Charles Johnson</div>
+              <div class="person-title">Ph.D., P.E., S.E., CVS, F.ASCE Illuminate Foundry, Inc.</div>
+              <p>
+                Description of this person’s talk and/or a profile of this person.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
+                amet, consectetur adipisicing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </section>
+        </figure>
+      </section>
     </section>
     <div class="strict">
       <div class="toggleable-nav fade">

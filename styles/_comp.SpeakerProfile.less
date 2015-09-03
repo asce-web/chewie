@@ -10,40 +10,40 @@
 // of table styles. they can be abstracted with a grid system, and then
 // we could just apply texual, component-specific styles as needed.
 // That way we could get rid of a lot of classes here.
+// IDEA change this to something like `.o-RowResponsive`
 //
 // ^author
 // : Dae Clarke
 // ^updated
 // : 2015-08-27
 .speaker-profile {
-  display: table;
-  width: 100%;
+  display: table; width: 100%;
   margin-bottom: 20px;
   @media (max-width: 989px) {
     display: block;
   }
   img {
-    max-height: 130px; // what is 130?
+    .c-SpeakerPhoto;
   }
 }
 
 // three columns in the speaker profile
 // these classes are not really needed if we stick to a robust grid system
+// IDEA use `.o-RowResponsive__Col`
 .session-col,
 .photo-col,
 .details-col {
   display: table-cell;
   vertical-align: middle;
 }
-.session-col {
+.session-col,
+.c-SessionDetails {
   // this one has specific styles so it is necessary to keep
   // but I wouldn't name it session-col, how about SessionDetails?
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 .photo-col {
-  width: 130px;
-  padding: 0 10px 0 5px;
 }
 .details-col {
   @media (max-width: 989px) {
@@ -54,10 +54,9 @@
 
 
 // inside session column, two objects
-.dateline {
-  border-right: 1px solid #ccc;
-  @media (max-width: 989px) {
-    border-right: none;
-  }
+.dateline,
+.sessiontype {
+  float: left;
 }
+.dateline {}
 .sessiontype {}
