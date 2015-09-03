@@ -19,6 +19,11 @@
  * object.........................temporary file containing ALL objects : will be broken up later
  *
  * ## COMPONENTS
+ *
+ * ### Typographical Components
+ * Callout........................section in the sidebar with a heading and body
+ *
+ * ### User-Interactive Components
  * YearBadge......................shield with year at top of all pages
  * YearTabs.......................tabs for each year in the footer
  * ConfLogo.......................image of conference logo shield in header/footer
@@ -43,13 +48,14 @@
 
 @import url('_objects.less'); // temp
 
+@import url('_comp.typo.Callout.less');
+
 @import url('_comp.YearBadge.less');
 @import url('_comp.YearTabs.less');
 @import url('_comp.ConfLogo.less');
 @import url('_comp.Icon.less');
 @import url('_comp.Button.less');
 @import url('_comp.Person.less');
-@import url('_comp.Callout.less');
 
 // NOTE the Header, Footer, and Summary Banner are too big to be components.
 // We may just use small components inside to create the look-and-feel of each.

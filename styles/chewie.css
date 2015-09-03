@@ -16,6 +16,11 @@
  * object.........................temporary file containing ALL objects : will be broken up later
  *
  * ## COMPONENTS
+ *
+ * ### Typographical Components
+ * Callout........................section in the sidebar with a heading and body
+ *
+ * ### User-Interactive Components
  * YearBadge......................shield with year at top of all pages
  * YearTabs.......................tabs for each year in the footer
  * ConfLogo.......................image of conference logo shield in header/footer
@@ -300,6 +305,112 @@ button {
   }
 }
 /*################################*\
+    _comp.typo.Callout.less
+\*################################*/
+.callout,
+.c-Callout {
+  margin-bottom: 40px;
+}
+.callout:first-child,
+.c-Callout:first-child {
+  margin-top: 20px;
+}
+.callout h2,
+.c-Callout h2 {
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.c-Callout--register .callout h2,
+.c-Callout--register .c-Callout h2 {
+  margin-bottom: 20px;
+}
+.callout .callout-body,
+.c-Callout .callout-body {
+  background-image: url(../img/pattern-bg-fade.png);
+  background-repeat: repeat-x;
+  background-position: center -2px;
+  padding: 18px 20px 0;
+  border-top: 2px solid #f0f1f1;
+}
+.callout .callout-body.no-bg,
+.c-Callout .callout-body.no-bg {
+  background-image: none;
+}
+.callout.important-dates .callout .callout-body,
+.callout.important-dates .c-Callout .callout-body,
+.c-Callout--dates .callout .callout-body,
+.c-Callout--dates .c-Callout .callout-body {
+  margin-left: -15px;
+}
+.callout.sponsors .callout .callout-body,
+.callout.sponsors .c-Callout .callout-body,
+.c-Callout--sponsors .callout .callout-body,
+.c-Callout--sponsors .c-Callout .callout-body {
+  text-align: center;
+}
+.callout.sponsors .callout .callout-body img,
+.callout.sponsors .c-Callout .callout-body img,
+.c-Callout--sponsors .callout .callout-body img,
+.c-Callout--sponsors .c-Callout .callout-body img {
+  max-height: 130px;
+}
+.callout.no-bg .callout-body,
+.c-Callout.no-bg .callout-body {
+  background-image: none;
+}
+.c-Callout__Heading {
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.c-Callout--register .c-Callout__Heading {
+  margin-bottom: 20px;
+}
+.c-Callout__Body {
+  background-image: url(../img/pattern-bg-fade.png);
+  background-repeat: repeat-x;
+  background-position: center -2px;
+  padding: 18px 20px 0;
+  border-top: 2px solid #f0f1f1;
+}
+.c-Callout__Body.no-bg {
+  background-image: none;
+}
+.callout.important-dates .c-Callout__Body,
+.c-Callout--dates .c-Callout__Body {
+  margin-left: -15px;
+}
+.callout.sponsors .c-Callout__Body,
+.c-Callout--sponsors .c-Callout__Body {
+  text-align: center;
+}
+.callout.sponsors .c-Callout__Body img,
+.c-Callout--sponsors .c-Callout__Body img {
+  max-height: 130px;
+}
+.callout.register h4,
+.c-Callout--register h4 {
+  margin-bottom: 20px;
+}
+.callout.register img,
+.c-Callout--register img {
+  margin-bottom: 20px;
+}
+.callout.important-dates .callout-body {
+  margin-left: -15px;
+}
+.callout.sponsors .callout-body {
+  text-align: center;
+}
+.callout.sponsors .callout-body img {
+  max-height: 130px;
+}
+.callout.contacts,
+.c-Callout--contacts {
+  line-height: 26px;
+}
+/*################################*\
     _comp.YearBadge.less
 \*################################*/
 .year-badge {
@@ -560,108 +671,6 @@ a.button a:focus {
 .c-Person__Title {
   font-style: italic;
   margin-bottom: 10px;
-}
-/*################################*\
-    _comp.Callout.less
-\*################################*/
-.callout,
-.C-Callout {
-  margin-bottom: 40px;
-}
-.callout:first-child,
-.C-Callout:first-child {
-  margin-top: 20px;
-}
-.callout h2,
-.C-Callout h2 {
-  font-weight: 400;
-}
-.c-Callout--register .callout h2,
-.c-Callout--register .C-Callout h2 {
-  margin-bottom: 20px;
-}
-.callout .callout-body,
-.C-Callout .callout-body {
-  background-image: url(../img/pattern-bg-fade.png);
-  background-repeat: repeat-x;
-  background-position: center -2px;
-  padding: 18px 20px 0;
-  border-top: 2px solid #f0f1f1;
-}
-.callout .callout-body.no-bg,
-.C-Callout .callout-body.no-bg {
-  background-image: none;
-}
-.callout.important-dates .callout .callout-body,
-.callout.important-dates .C-Callout .callout-body,
-.c-Callout--dates .callout .callout-body,
-.c-Callout--dates .C-Callout .callout-body {
-  margin-left: -15px;
-}
-.callout.sponsors .callout .callout-body,
-.callout.sponsors .C-Callout .callout-body,
-.c-Callout--sponsors .callout .callout-body,
-.c-Callout--sponsors .C-Callout .callout-body {
-  text-align: center;
-}
-.callout.sponsors .callout .callout-body img,
-.callout.sponsors .C-Callout .callout-body img,
-.c-Callout--sponsors .callout .callout-body img,
-.c-Callout--sponsors .C-Callout .callout-body img {
-  max-height: 130px;
-}
-.callout.no-bg .callout-body,
-.C-Callout.no-bg .callout-body {
-  background-image: none;
-}
-.c-Callout__Heading {
-  font-weight: 400;
-}
-.c-Callout--register .c-Callout__Heading {
-  margin-bottom: 20px;
-}
-.c-Callout__Body {
-  background-image: url(../img/pattern-bg-fade.png);
-  background-repeat: repeat-x;
-  background-position: center -2px;
-  padding: 18px 20px 0;
-  border-top: 2px solid #f0f1f1;
-}
-.c-Callout__Body.no-bg {
-  background-image: none;
-}
-.callout.important-dates .c-Callout__Body,
-.c-Callout--dates .c-Callout__Body {
-  margin-left: -15px;
-}
-.callout.sponsors .c-Callout__Body,
-.c-Callout--sponsors .c-Callout__Body {
-  text-align: center;
-}
-.callout.sponsors .c-Callout__Body img,
-.c-Callout--sponsors .c-Callout__Body img {
-  max-height: 130px;
-}
-.callout.register h4,
-.c-Callout--register h4 {
-  margin-bottom: 20px;
-}
-.callout.register img,
-.c-Callout--register img {
-  margin-bottom: 20px;
-}
-.callout.important-dates .callout-body {
-  margin-left: -15px;
-}
-.callout.sponsors .callout-body {
-  text-align: center;
-}
-.callout.sponsors .callout-body img {
-  max-height: 130px;
-}
-.callout.contacts,
-.c-Callout--contacts {
-  line-height: 26px;
 }
 .header,
 .footer,
