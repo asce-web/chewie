@@ -641,6 +641,25 @@ a.button a:focus {
   color: #ffffff;
   text-decoration: none;
 }
+/*################################*\
+    _comp.Person.less
+\*################################*/
+.c-Person {
+  font-weight: inherit;
+}
+.person-name,
+.person-title {
+  font-weight: inherit;
+}
+.person-name,
+.c-Person__Name {
+  font-size: 18px;
+}
+.person-title,
+.c-Person__Title {
+  font-style: italic;
+  margin-bottom: 10px;
+}
 .header,
 .footer,
 .summary-banner {
@@ -1600,15 +1619,6 @@ a.button a:focus {
   .dateline {
     border-right: none;
   }
-}
-.person-name {
-  font-size: 18px;
-  text-transform: none;
-}
-.person-title {
-  font-style: italic;
-  font-weight: 300;
-  margin-bottom: 10px;
 }
 /*################################*\
     _comp.DateBlock.less
