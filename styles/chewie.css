@@ -421,12 +421,17 @@ button {
   padding-top: 25px;
   position: absolute;
   left: -50px;
+  font-weight: 700;
   font-size: 33.33333333px;
   line-height: 1;
   font-family: 'futura-pt', 'Open Sans', 'Arial', sans-serif;
   text-align: center;
   background: #0c5fa8;
   color: #ffffff;
+}
+.c-YearBadge::before {
+  content: '20';
+  font-weight: 300;
 }
 .c-YearBadge::after {
   content: '';

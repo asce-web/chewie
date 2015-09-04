@@ -24,12 +24,17 @@
   padding-top: (@size / 4);
   position: absolute;
   left: -(@size / 2);
+  font-weight: 700;
   font-size: (@size / 3);
   line-height: 1;
   font-family: @font_ui;
   text-align: center;
   background: @bgcolor;
   color: @color_header_txt;
+  &::before {
+    content: '20';
+    font-weight: 300;
+  }
   &::after {
     content: '';
     display: inline-block;
