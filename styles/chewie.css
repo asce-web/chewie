@@ -515,6 +515,7 @@ button {
   height: 30px;
   display: inline-block;
   font-size: 30px;
+  margin: -7px;
   position: relative;
   top: -2px;
   color: transparent;
@@ -526,11 +527,6 @@ button {
     background-image: url('../img/sprite@2x.png');
     background-size: 590px 330px;
   }
-}
-.header .ic,
-.footer .ic,
-.summary-banner .ic {
-  margin: -7px;
 }
 .link-block.contact .ic {
   margin-right: 9px;
@@ -1064,6 +1060,7 @@ a.button a:focus {
   }
 }
 .c-NavBar__Link:hover,
+.c-NavBar__Link.active,
 .navigation a:hover,
 .navigation a.active,
 .nav3 a:hover,
@@ -1085,13 +1082,9 @@ li.active .tab-button,
   background-color: #0c5fa8;
   text-align: center;
 }
-.nav2 a:hover,
-.c-NavBar--side a:hover {
-  background-color: #0e6cc0;
-}
 .nav3,
-.c-NavBar--tertiary {
-  padding: 5px 26px 29px 26px;
+.c-NavBar--utility {
+  padding: 5px 26px 29px;
   background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
   /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.65)), color-stop(100%, rgba(0, 0, 0, 0)));
@@ -1109,7 +1102,7 @@ li.active .tab-button,
   text-align: center;
 }
 .nav3 a,
-.c-NavBar--tertiary a {
+.c-NavBar--utility a {
   font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
@@ -1117,16 +1110,44 @@ li.active .tab-button,
 }
 @media (max-width: 989px) {
   .nav3 a,
-  .c-NavBar--tertiary a {
+  .c-NavBar--utility a {
     padding: 5px 0px;
     text-align: right;
     display: block;
   }
 }
 .nav3 a:hover,
-.c-NavBar--tertiary a:hover {
+.c-NavBar--utility a:hover {
   background: transparent;
   text-decoration: underline !important;
+}
+.c-NavBar--tabs {
+  font-size: 24px;
+}
+.c-NavBar--tabs .c-NavBar__Link {
+  padding: 6px 20px;
+  font-size: inherit;
+}
+@media (max-width: 767px) {
+  .c-NavBar--tabs .c-NavBar__Link {
+    padding: 6px 12px;
+  }
+}
+.c-NavBar--tabs .c-NavBar__Link.active {
+  cursor: default;
+  position: relative;
+}
+.c-NavBar--tabs .c-NavBar__Link.active::after {
+  content: '';
+  display: block;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border: 15px solid transparent;
+  border-top-color: #714509;
+  position: absolute;
+  top: 46px;
+  left: 35px;
 }
 .mobile-nav {
   text-align: right;
@@ -1170,25 +1191,25 @@ li.active .tab-button,
   margin-bottom: 0;
   float: right !important;
   margin-top: -46px;
+  font-size: 24px;
+  text-align: center;
 }
 @media (max-width: 767px) {
   .tab-buttons {
     margin-top: -34px;
+    font-size: 16px;
   }
 }
 .tab-buttons li {
   display: inline-block;
 }
 .tab-button {
-  display: block;
   padding: 6px 20px;
-  font-size: 24px;
-  text-align: center;
+  font-size: inherit;
 }
 @media (max-width: 767px) {
   .tab-button {
     padding: 6px 12px;
-    font-size: 16px;
   }
 }
 li.active .tab-button {

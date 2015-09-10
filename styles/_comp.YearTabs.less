@@ -17,21 +17,21 @@
   margin-bottom: 0; // override default ul margin-bottom
   float: right !important; // remove bootstrap pull-right
   margin-top: -46px; // 34px (fs*lh) + 6px (pad-t) + 6px (pad-b)
+  font-size: 24px;
+  text-align: center;
   @media (max-width: 767px) {
     margin-top: -34px;
+    font-size: 16px;
   }
 }
 .tab-buttons li {
   display: inline-block;
 }
 .tab-button {
-  display: block;
   padding: 6px 20px;
-  font-size: 24px;
-  text-align: center;
+  font-size: inherit;
   @media (max-width: 767px) {
     padding: 6px 12px;
-    font-size: 16px;
   }
   li.active & {
     cursor: default;

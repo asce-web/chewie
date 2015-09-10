@@ -16,6 +16,7 @@
 // : 2015-08-27
 .ic {
   .sprite('../img/sprite.png'; 30px; 590px; 330px; 0);
+  margin: -7px; // why this number?
   position: relative;
   top: -2px;
   color: transparent; // instead of `text-indent: -9999px;`
@@ -23,10 +24,9 @@
   .header &,
   .footer &,
   .summary-banner & {
-    margin: -7px; // why this number?
   }
   .link-block.contact & {
-    margin-right: 9px; // override .footer .ic {margin:-7px;}
+    margin-right: 9px;
   }
 }
 .ic.menu          { .sprite(10;  9); }
