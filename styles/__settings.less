@@ -4,25 +4,51 @@
 \*################################*/
 
 
-// body colors
-@color_body_bg: #fff;
-@color_body_txt: #333;
+/*++++++++++++++++++++++++++++++++*\
+    ASCE COMPANY COLORS
+\*++++++++++++++++++++++++++++++++*/
+@color_asce_primary: #0c5fa8;
+@color_asce_body_bg: #fff;
+@color_asce_body_txt: #333;
+@color_asce_header_txt: #fff;
+
+// ASCE button colors
+@color_asce_btn_bg: @color_asce_primary;
+@color_asce_btn_txt: #fff;
+@color_asce_btn_sw: #cdcdcd;
+
+// ASCE inline hyperlink colors
+@color_asce_link: @color_asce_primary;
+@color_asce_link_hover: #19a1cf;
+
+
+/*++++++++++++++++++++++++++++++++*\
+    SPONSOR COLORS
+\*++++++++++++++++++++++++++++++++*/
+@color_platinum:  #cde1ec;
+@color_gold:      #f8cd79;
+@color_corporate: #9ed8f9;
+@color_silver:    #dbddde;
+@color_bronze:    #d9c5ac;
+@color_copper:    #d6a985; // CH chose this; may be changed at any time <charvey@asce.org>
+@color_coop_bg:   #e8eaeb; // bgcolor for coop orgs
+
+
+/*++++++++++++++++++++++++++++++++*\
+    CONFERENCE SITE-SPECIFIC COLORS
+\*++++++++++++++++++++++++++++++++*/
 
 // accent colors
-@color_primary: #0c5fa8;
-@color_key1: #6a9556;
-@color_key2: #7aa96c;
-@color_key3: #6c965e;
+@color_site_primary: #6a9556;
+@color_site_secondary: #7aa96c;
+@color_site_accent: #e6f1f9; // bgcolor of nav links on hover/active
 
-// link colors
-@color_link: @color_primary;
-@color_link_hover: #19a1cf;
-@color_link_navbg: #e6f1f9; // bgcolor of nav links on hover/active
 
-// button colors
-@color_btn_bg: @color_primary;
-@color_btn_txt: #fff;
-@color_btn_sw: #cdcdcd;
+
+
+
+
+// -------------------- DRAFT BELOW ------------------------
 
 // flag colors
 @color_flag: #ed1c24; // default
@@ -31,18 +57,8 @@
 
 
 // other colors
-@color_header_txt: #fff;
 @color_livechat: #62b840; // okay random
 
 // UI fonts
 @font_ui: 'futura-pt', 'Open Sans', 'Arial', sans-serif;
 @highdpi: ~"(-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx)";
-
-// sponsor colors
-@color_platinum:  #cde1ec;
-@color_gold:      #f8cd79;
-@color_corporate: #9ed8f9;
-@color_silver:    #dbddde;
-@color_bronze:    #d9c5ac;
-@color_copper:    #d6a985; // CH chose this; may be changed at any time <charvey@asce.org>
-@color_coop_bg:   #e8eaeb; // bgcolor for coop orgs

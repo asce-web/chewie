@@ -16,7 +16,7 @@
 // : 2015-08-21
 .c-YearBadge {
   @size: 100px;
-  @bgcolor: @color_primary;
+  @bgcolor: @color_asce_primary;
   display: inline-block;
   width: @size; // not sure why 90 is so special
   margin: 0;
@@ -30,7 +30,7 @@
   font-family: @font_ui;
   text-align: center;
   background: @bgcolor;
-  color: @color_header_txt;
+  color: @color_asce_header_txt;
   &::before {
     content: '20';
     font-weight: 300;
@@ -50,8 +50,8 @@
 }
 .year-badge {
   width: 90px; // not sure why 90 is so special
-  background: @color_primary;
-  color: @color_header_txt;
+  background: @color_asce_primary;
+  color: @color_asce_header_txt;
   h2 {
     // remove this selector, move styles to parent component
     // add ta-c and stop using atom
@@ -64,7 +64,7 @@
   height: 0;
   border-left: 45px solid transparent;
   border-right: 45px solid transparent;
-  border-top: 20px solid @color_primary;
+  border-top: 20px solid @color_asce_primary;
 }
 
 
