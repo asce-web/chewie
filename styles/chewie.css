@@ -495,6 +495,7 @@ button {
 }
 .tab-buttons {
   margin-bottom: 0;
+  background-color: #7aa96c;
 }
 .tab-buttons li {
   display: inline-block;
@@ -504,11 +505,10 @@ button {
   position: relative;
   font-weight: 700;
   font-size: 24px;
-  text-decoration: none;
-  color: #6a9556;
+  text-decoration: none !important;
 }
 .tab-button:hover {
-  color: #333333;
+  background-color: #714509;
 }
 @media (max-width: 767px) {
   .tab-button {
@@ -517,8 +517,7 @@ button {
   }
 }
 li.active .tab-button {
-  color: #ffffff;
-  background: #e6f1f9;
+  background-color: #714509;
   cursor: default;
 }
 li.active .tab-button::after {
@@ -527,7 +526,7 @@ li.active .tab-button::after {
   height: 0;
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
-  border-top: 15px solid #e6f1f9;
+  border-top: 15px solid #714509;
   bottom: -15px;
   left: 50%;
   margin-left: -15px;
@@ -1111,13 +1110,7 @@ a.button a:focus {
 .nav1 a:hover,
 .nav1 a.active,
 .nav1 .current-page {
-  color: #0c5fa8;
-  background-color: #e6f1f9;
-}
-.nav1 a:hover .chevron-down,
-.nav1 a.active .chevron-down,
-.nav1 .current-page .chevron-down {
-  background-position: -17em -6em;
+  background-color: #714509;
 }
 .nav1 a.no-hover:hover,
 .nav1 a.no-hover:active {
@@ -1125,10 +1118,10 @@ a.button a:focus {
   opacity: .5;
 }
 /*################################*\
-    _comp.NavMainSecondary.less
+    _comp.NavSecondary.less
 \*################################*/
 .navigation-level2 {
-  background-color: #e6f1f9;
+  background-color: #714509;
   position: absolute;
   width: 100%;
   z-index: 2;
@@ -1150,7 +1143,6 @@ a.button a:focus {
   display: inline-block;
 }
 .navigation-level2 a {
-  color: #0c5fa8;
   font-weight: 700;
   padding: 14px 10px;
 }
