@@ -103,7 +103,48 @@ html
           .c-YearBadge(style="left:6rem;") 15
         br(style="line-height:6;")
       section.doc-ss
-        h1 Another component goes here.
+        h1 Speaker Photo
+        p An image with margins. Usually appears in a speaker profile.
+        figure
+          img.c-SpeakerPhoto(src="img/FPO_speaker_130x130.jpg", alt="speaker")
+      section.doc-ss
+        h1 Generic Navigation Bar
+        figure
+          div.c-NavBar
+            a.c-NavBar__Link.c-NavBar__Link--index --index
+            a.c-NavBar__Link Link
+            a.c-NavBar__Link Link
+            a.c-NavBar__Link Link
+            a.c-NavBar__Link Link
+      section.doc-ss
+        h1 Main Navigation Bar
+        figure
+          div.c-NavBar.c-NavBar--main
+            a.c-NavBar__Link.no-hover: span.ic.home
+            a.c-NavBar__Link Program
+            a.c-NavBar__Link Location
+            a.c-NavBar__Link About
+            a.c-NavBar__Link Contact
+      section.doc-ss
+        h1 Side Navigation Bar
+        figure
+          div.c-NavBar.c-NavBar--side
+            a.c-NavBar__Link Why Attend
+            a.c-NavBar__Link Registration
+      section.doc-ss
+        h1 Tertiary Navigation Bar
+        figure
+          div.c-NavBar.c-NavBar--tertiary
+            a.c-NavBar__Link For Speakers
+            a.c-NavBar__Link Sponsors
+            a.c-NavBar__Link Exhibitors
+      section.doc-ss
+        h1 Year Tabs
+        figure
+          div.c-NavBar.c-NavBar--tertiary
+            a.c-NavBar__Link For Speakers
+            a.c-NavBar__Link Sponsors
+            a.c-NavBar__Link Exhibitors
     div.strict.
       <div class="toggleable-nav fade">
           <div tabindex="0" class="ic close-nav">X</div>

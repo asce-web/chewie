@@ -12,10 +12,11 @@
 // : Chris Harvey
 // ^updated
 // : 2015-09-10
-.NavBar,
+.c-NavBar,
 .navigation,
 .nav3,
 .tab-buttons {
+  color: @color_asce_header_txt;
   background-color: @color_site_secondary;
 }
 
@@ -25,8 +26,7 @@
 // : Chris Harvey
 // ^updated
 // : 2015-09-10
-.NavLink,
-.NavBar a,
+.c-NavBar__Link,
 .navigation a,
 .nav3 a,
 .tab-button {
@@ -36,6 +36,7 @@
   font-weight: 700;
   text-decoration: none !important; // to override hover behavior
   text-transform: uppercase;
+  color: inherit;
   @media (max-width: 1199px) {
     font-size: 14px;
     padding: 12px 12px;
@@ -44,20 +45,102 @@
     font-size: 13px;
     padding: 12px 7px;
   }
-  &:hover,
-  &.active, {
-
-  }
 }
-.NavLink:hover,
+.c-NavBar__Link:hover,
 .navigation a:hover,
 .navigation a.active,
 .nav3 a:hover,
 .tab-button:hover,
 li.active .tab-button,
 .current-page {
+  color: inherit;
   background-color: @color_site_accent;
 }
+
+.c-NavBar__Link--index,
+.no-hover {
+  &:hover,
+  &:active {
+    background-color: transparent !important;
+    opacity: .5 !important;
+  }
+}
+
+
+// A main navigation component containing the main directories:
+// program, location, about, and contact.
+//
+// ^author
+// : Dae Clarke
+// ^updated
+// : 2015-09-10
+.nav1,
+.c-NavBar--main {
+}
+
+
+// A secondary navigation component containing the other top-level pages:
+// why attend, registration, etc.
+// NOTE : this is NOT secondary navigation.
+//
+// ^author
+// : Dae Clarke
+// ^updated
+// : 2015-08-21
+.nav2,
+.c-NavBar--side {
+  background-color: @color_asce_primary;
+  text-align: center;
+  a:hover {
+    background-color: lighten(@color_asce_primary, 5%);
+    // background-color: fadeout(#fff, 90%);
+    // keeping conference accent color
+  }
+}
+
+
+// The navigation component on the top of the page containing
+// information for people: for speakers, sponsors, exhibitors, etc.
+//
+// ^author
+// : Dae Clarke
+// ^updated
+// : 2015-08-21
+.nav3,
+.c-NavBar--tertiary {
+  padding: 5px 26px 29px 26px;
+
+  // can't we use a fallback tool for this?
+  background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+  background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+
+  text-align: center;
+  a {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    @media (max-width: 989px) {
+      padding: 5px 0px;
+      text-align: right;
+      display: block;
+    }
+    &:hover {
+      background: transparent;
+      text-decoration: underline !important; // specificity bullshit
+    }
+  }
+}
+
+
+
+
+
 
 
 
