@@ -9,45 +9,44 @@
 // ^author
 // : Dae Clarke
 // ^updated
-// : 2015-08-21
+// : 2015-09-10
 .year-tabs {
-  background-color: @color_asce_body_bg;
 }
 
 .tab-buttons {
   margin-bottom: 0; // override default ul margin-bottom
-  background-color: @color_site_secondary;
+  float: right !important; // remove bootstrap pull-right
+  margin-top: -46px; // 34px (fs*lh) + 6px (pad-t) + 6px (pad-b)
+  @media (max-width: 767px) {
+    margin-top: -34px;
+  }
 }
 .tab-buttons li {
   display: inline-block;
 }
 .tab-button {
+  display: block;
   padding: 6px 20px;
-  position: relative;
-  font-weight: 700;
   font-size: 24px;
-  text-decoration: none !important; // to override hover behavior
-  &:hover {
-    background-color: @color_site_accent;
-  }
+  text-align: center;
   @media (max-width: 767px) {
     padding: 6px 12px;
     font-size: 16px;
   }
   li.active & {
-    background-color: @color_site_accent;
     cursor: default;
+    position: relative;
     &::after { // little arrow below
       content: '';
+      display: block;
+      margin: auto;
       width: 0;
       height: 0;
-      border-left: 15px solid transparent;
-      border-right: 15px solid transparent;
-      border-top: 15px solid @color_site_accent;
-      bottom: -15px;
-      left: 50%;
-      margin-left: -15px;
+      border:  15px solid transparent;
+      border-top-color: @color_site_accent;
       position: absolute;
+      top: 46px;
+      left: 35px; // magic number
     }
   }
 }

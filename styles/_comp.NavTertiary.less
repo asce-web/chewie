@@ -25,16 +25,18 @@
 
   text-align: center;
   a {
-    display: inline-block;
     font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
     padding: 5px 10px;
-
     @media (max-width: 989px) {
       padding: 5px 0px;
       text-align: right;
       display: block;
+    }
+    &:hover {
+      background: transparent;
+      text-decoration: underline !important; // specificity bullshit
     }
   }
 }

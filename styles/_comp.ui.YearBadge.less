@@ -18,7 +18,7 @@
   @size: 100px;
   @bgcolor: @color_asce_primary;
   display: inline-block;
-  width: @size; // not sure why 90 is so special
+  width: @size;
   margin: 0;
   padding: 0;
   padding-top: (@size / 4);
@@ -40,9 +40,10 @@
     display: inline-block;
     width: 0;
     height: 0;
-    border-left:  (@size / 2) solid transparent;
-    border-right: (@size / 2) solid transparent;
-    border-top: (@size / 4) solid @bgcolor;
+    border: (@size / 2) solid transparent;
+    border-top-width: (@size / 4);
+    border-top-color: @bgcolor;
+    border-bottom: 0;
     line-height: 0;
     position: relative;
     top: (@size * 0.29) * 1px; // .29 is a magic number (tweak)

@@ -447,9 +447,10 @@ button {
   display: inline-block;
   width: 0;
   height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-top: 25px solid #0c5fa8;
+  border: 50px solid transparent;
+  border-top-width: 25px;
+  border-top-color: #0c5fa8;
+  border-bottom: 0;
   line-height: 0;
   position: relative;
   top: 29px;
@@ -486,51 +487,6 @@ button {
   min-width: 130px;
   max-height: 130px;
   margin: 0 10px;
-}
-/*################################*\
-    _comp.YearTabs.less
-\*################################*/
-.year-tabs {
-  background-color: #ffffff;
-}
-.tab-buttons {
-  margin-bottom: 0;
-  background-color: #7aa96c;
-}
-.tab-buttons li {
-  display: inline-block;
-}
-.tab-button {
-  padding: 6px 20px;
-  position: relative;
-  font-weight: 700;
-  font-size: 24px;
-  text-decoration: none !important;
-}
-.tab-button:hover {
-  background-color: #714509;
-}
-@media (max-width: 767px) {
-  .tab-button {
-    padding: 6px 12px;
-    font-size: 16px;
-  }
-}
-li.active .tab-button {
-  background-color: #714509;
-  cursor: default;
-}
-li.active .tab-button::after {
-  content: '';
-  width: 0;
-  height: 0;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-top: 15px solid #714509;
-  bottom: -15px;
-  left: 50%;
-  margin-left: -15px;
-  position: absolute;
 }
 /*################################*\
     _comp.SiteHeader.less
@@ -805,6 +761,7 @@ a.button a:focus {
 \*################################*/
 .footer {
   background-image: url(../img/pattern-bg.png);
+  margin-top: 46px;
 }
 .footer h2 {
   padding-top: 40px;
@@ -1065,37 +1022,57 @@ a.button a:focus {
   /* IE6-9 */
 }
 /*################################*\
-    _comp.NavMain.less
+    _comp.NavBar.less
 \*################################*/
-.navigation {
+.NavBar,
+.navigation,
+.nav3,
+.tab-buttons {
   background-color: #7aa96c;
-  border-bottom: 6px solid #6a9556;
 }
-.navigation a {
+.NavLink,
+.NavBar a,
+.navigation a,
+.nav3 a,
+.tab-button {
+  display: inline-block;
+  padding: 17px 24px;
   font-size: 18px;
   font-weight: 700;
-  padding: 17px 24px;
-  display: inline-block;
-  text-decoration: none;
+  text-decoration: none !important;
   text-transform: uppercase;
 }
 @media (max-width: 1199px) {
-  .navigation a {
+  .NavLink,
+  .NavBar a,
+  .navigation a,
+  .nav3 a,
+  .tab-button {
     font-size: 14px;
     padding: 12px 12px;
   }
 }
 @media (max-width: 989px) {
-  .navigation a {
+  .NavLink,
+  .NavBar a,
+  .navigation a,
+  .nav3 a,
+  .tab-button {
     font-size: 13px;
     padding: 12px 7px;
   }
 }
+.NavLink:hover,
+.navigation a:hover,
+.navigation a.active,
+.nav3 a:hover,
+.tab-button:hover,
+li.active .tab-button,
+.current-page {
+  background-color: #714509;
+}
 .mobile-nav {
-  background-color: #7aa96c;
-  padding-left: 75px;
   text-align: right;
-  border-bottom: 0px;
 }
 .mobile-nav a {
   padding: 11px 10px;
@@ -1103,15 +1080,6 @@ a.button a:focus {
 /*################################*\
     _comp.NavMain.less
 \*################################*/
-.nav1 a {
-  border-bottom: 6px solid transparent;
-  margin-bottom: -6px;
-}
-.nav1 a:hover,
-.nav1 a.active,
-.nav1 .current-page {
-  background-color: #714509;
-}
 .nav1 a.no-hover:hover,
 .nav1 a.no-hover:active {
   background-color: transparent;
@@ -1178,7 +1146,6 @@ a.button a:focus {
   text-align: center;
 }
 .nav3 a {
-  display: inline-block;
   font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
@@ -1190,6 +1157,54 @@ a.button a:focus {
     text-align: right;
     display: block;
   }
+}
+.nav3 a:hover {
+  background: transparent;
+  text-decoration: underline !important;
+}
+/*################################*\
+    _comp.YearTabs.less
+\*################################*/
+.tab-buttons {
+  margin-bottom: 0;
+  float: right !important;
+  margin-top: -46px;
+}
+@media (max-width: 767px) {
+  .tab-buttons {
+    margin-top: -34px;
+  }
+}
+.tab-buttons li {
+  display: inline-block;
+}
+.tab-button {
+  display: block;
+  padding: 6px 20px;
+  font-size: 24px;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .tab-button {
+    padding: 6px 12px;
+    font-size: 16px;
+  }
+}
+li.active .tab-button {
+  cursor: default;
+  position: relative;
+}
+li.active .tab-button::after {
+  content: '';
+  display: block;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border: 15px solid transparent;
+  border-top-color: #714509;
+  position: absolute;
+  top: 46px;
+  left: 35px;
 }
 /*################################*\
     _comp.LinkBlock.less
