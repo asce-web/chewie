@@ -5,6 +5,7 @@
 
 
 // A section in the sidebar.
+//
 // Subclasses:
 // `--register`
 // `--dates`
@@ -13,6 +14,7 @@
 //
 // Subcomponents:
 // `__Heading`
+// `__Subheading`
 // `__Body`
 //
 // ^author
@@ -31,18 +33,28 @@
   .callout-body {
     .c-Callout__Body;
   }
-  &.no-bg .callout-body { // FIXME this is stupid. should be `.callout-body.no-bg`
-    background-image: none;
-  }
 }
+
 .c-Callout__Heading {
-  font-size: 24px;
   font-weight: 400;
+  font-size: 24px;
   text-transform: uppercase;
   .c-Callout--register & {
+    margin-top: 20px;
     margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
   }
 }
+
+.c-Callout__Subheading {
+  margin: 0 0 5px;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
 .c-Callout__Body {
   @image_top_border: 2px; // thickness of top border in image
   @image_color: #f0f1f1; // color of lines in bg image
@@ -51,14 +63,9 @@
   background-position: center -@image_top_border;
   padding: 18px 20px 0;
   border-top: @image_top_border solid @image_color;
-  &.no-bg {
-    background-image: none;
-  }
-  .callout.important-dates &,
   .c-Callout--dates & {
     margin-left: -15px; // takes away from the padding-left, instead of changing padding-left to 5px
   }
-  .callout.sponsors &,
   .c-Callout--sponsors & {
     text-align: center;
     img {
@@ -67,19 +74,24 @@
   }
 }
 
-// subclasses of .callout
-.callout.register,
-.c-Callout--register {
-  h4 {
-    margin-bottom: 20px; // TODO copied from `.c-Callout--register >> .c-Callout__Heading` above; remove this later
-  }
-  img {
-    margin-bottom: 20px;
-  }
+.callout.contacts,
+.c-Callout--contacts {
+  line-height: 26px; // okay, random
+}
+
+
+
+// --------TODO REMOVE THESE BELOW ONCE WE CAN CHANGE MARKUP--------------------
+
+.callout.register h4 {
+  // TODO copied from `.c-Callout--register >> .c-Callout__Heading` above; remove this later
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .callout.important-dates .callout-body {
-  margin-left: -15px; // TODO copy-pasting until we can rename classes
+  // TODO copy-pasting until we can rename classes
+  margin-left: -15px;
 }
 
 .callout.sponsors .callout-body {
@@ -88,9 +100,4 @@
   img {
     max-height: 130px; // magic number?
   }
-}
-
-.callout.contacts,
-.c-Callout--contacts {
-  line-height: 26px; // okay, random
 }

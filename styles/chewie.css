@@ -327,13 +327,17 @@ button {
 }
 .callout h2,
 .c-Callout h2 {
-  font-size: 24px;
   font-weight: 400;
+  font-size: 24px;
   text-transform: uppercase;
 }
 .c-Callout--register .callout h2,
 .c-Callout--register .c-Callout h2 {
+  margin-top: 20px;
   margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
 }
 .callout .callout-body,
 .c-Callout .callout-body {
@@ -343,39 +347,35 @@ button {
   padding: 18px 20px 0;
   border-top: 2px solid #f0f1f1;
 }
-.callout .callout-body.no-bg,
-.c-Callout .callout-body.no-bg {
-  background-image: none;
-}
-.callout.important-dates .callout .callout-body,
-.callout.important-dates .c-Callout .callout-body,
 .c-Callout--dates .callout .callout-body,
 .c-Callout--dates .c-Callout .callout-body {
   margin-left: -15px;
 }
-.callout.sponsors .callout .callout-body,
-.callout.sponsors .c-Callout .callout-body,
 .c-Callout--sponsors .callout .callout-body,
 .c-Callout--sponsors .c-Callout .callout-body {
   text-align: center;
 }
-.callout.sponsors .callout .callout-body img,
-.callout.sponsors .c-Callout .callout-body img,
 .c-Callout--sponsors .callout .callout-body img,
 .c-Callout--sponsors .c-Callout .callout-body img {
   max-height: 130px;
 }
-.callout.no-bg .callout-body,
-.c-Callout.no-bg .callout-body {
-  background-image: none;
-}
 .c-Callout__Heading {
-  font-size: 24px;
   font-weight: 400;
+  font-size: 24px;
   text-transform: uppercase;
 }
 .c-Callout--register .c-Callout__Heading {
+  margin-top: 20px;
   margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.c-Callout__Subheading {
+  margin: 0 0 5px;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
 }
 .c-Callout__Body {
   background-image: url(../img/pattern-bg-fade.png);
@@ -384,27 +384,21 @@ button {
   padding: 18px 20px 0;
   border-top: 2px solid #f0f1f1;
 }
-.c-Callout__Body.no-bg {
-  background-image: none;
-}
-.callout.important-dates .c-Callout__Body,
 .c-Callout--dates .c-Callout__Body {
   margin-left: -15px;
 }
-.callout.sponsors .c-Callout__Body,
 .c-Callout--sponsors .c-Callout__Body {
   text-align: center;
 }
-.callout.sponsors .c-Callout__Body img,
 .c-Callout--sponsors .c-Callout__Body img {
   max-height: 130px;
 }
-.callout.register h4,
-.c-Callout--register h4 {
-  margin-bottom: 20px;
+.callout.contacts,
+.c-Callout--contacts {
+  line-height: 26px;
 }
-.callout.register img,
-.c-Callout--register img {
+.callout.register h4 {
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 .callout.important-dates .callout-body {
@@ -415,10 +409,6 @@ button {
 }
 .callout.sponsors .callout-body img {
   max-height: 130px;
-}
-.callout.contacts,
-.c-Callout--contacts {
-  line-height: 26px;
 }
 /*################################*\
     _comp.typo.headings.less
@@ -1939,6 +1929,15 @@ a.button a:focus {
 \*################################*/
 .uppercase {
   text-transform: uppercase;
+}
+.u-bg_n {
+  background: none !important;
+}
+.no-bg .callout-body {
+  background-image: none;
+}
+.u-ta_c {
+  text-align: center !important;
 }
 /*################################*\
     _trumps.shame.less
