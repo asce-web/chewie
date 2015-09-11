@@ -13,6 +13,7 @@ html
       section.doc-ss {
         /* sections scoped in this document */
         margin-left: 1em;
+        background-color: rgba(0,0,0,0.03);
       }
       figure {
         padding: 0.5em;
@@ -23,6 +24,7 @@ html
         background: #f5faff;
       }
       .devnote {
+        margin: 0 0.5em;
         padding: 0.5em;
         color: #c64;
         background: #f5fbeb;
@@ -90,6 +92,50 @@ html
           h1.c-Callout__Heading Generic Callout Heading (in sidebar)
           h1.c-LinkBlock__Heading Link Block Heading (in footer)
       section.doc-ss
+        h1 Callouts
+        section.doc-ss
+          h2 Generic Callout
+          figure
+            section.c-Callout
+              h1.c-Callout__Heading Generic Callout Heading
+              div.c-Callout__Body
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. eiusmod tempor.
+                section
+                  h1.c-Callout__Subheading Callout Subheading
+                  a(href="") Example link lorem ipsum dolor
+        section.doc-ss
+          h2 Register Callout
+          figure
+            section.c-Callout.c-Callout--register
+              h1.c-Callout__Heading Register Callout Heading
+              div.c-Callout__Body
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. eiusmod tempor.
+                section
+                  h1.c-Callout__Subheading Callout Subheading
+                  a(href="") Example link lorem ipsum dolor
+        section.doc-ss
+          h2 Dates Callout
+          figure
+            section.c-Callout.c-Callout--dates
+              h1.c-Callout__Heading Important Dates Callout Heading
+              div.c-Callout__Body
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. eiusmod tempor.
+                section
+                  h1.c-Callout__Subheading Callout Subheading
+                  a(href="") Example link lorem ipsum dolor
+        section.doc-ss
+          h2 Sponsors Callout
+          figure
+            section.c-Callout.c-Callout--sponsors
+              h1.c-Callout__Heading Sponsors Callout Heading
+              div.c-Callout__Body
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. eiusmod tempor.
+                section
+                  h1.c-Callout__Subheading Callout Subheading
+                  a(href="") Example link lorem ipsum dolor
+    section.doc-ss
+      h1 UI Components
+      section.doc-ss
         h1 Year Badge
         p A badge showing the year of the current conference.
         figure(style="margin-bottom:8em;")
@@ -100,95 +146,57 @@ html
         figure
           img.conference-logo(src="../img/conf-logo.png")
       section.doc-ss
-        h1 Generic Callout
-        figure
-          section.c-Callout
-            h1.c-Callout__Heading Generic Callout Heading
-            div.c-Callout__Body
-              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. eiusmod tempor.
-              section
-                h1.c-Callout__Subheading Callout Subheading
-                a(href="") Example link lorem ipsum dolor
-      section.doc-ss
-        h1 Register Callout
-        figure
-          section.c-Callout.c-Callout--register
-            h1.c-Callout__Heading Register Callout Heading
-            div.c-Callout__Body
-              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. eiusmod tempor.
-              section
-                h1.c-Callout__Subheading Callout Subheading
-                a(href="") Example link lorem ipsum dolor
-      section.doc-ss
-        h1 Dates Callout
-        figure
-          section.c-Callout.c-Callout--dates
-            h1.c-Callout__Heading Important Dates Callout Heading
-            div.c-Callout__Body
-              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. eiusmod tempor.
-              section
-                h1.c-Callout__Subheading Callout Subheading
-                a(href="") Example link lorem ipsum dolor
-      section.doc-ss
-        h1 Sponsors Callout
-        figure
-          section.c-Callout.c-Callout--sponsors
-            h1.c-Callout__Heading Sponsors Callout Heading
-            div.c-Callout__Body
-              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. eiusmod tempor.
-              section
-                h1.c-Callout__Subheading Callout Subheading
-                a(href="") Example link lorem ipsum dolor
-      section.doc-ss
         h1 Speaker Photo
         p An image with margins. Usually appears in a speaker profile.
         figure
           img.c-SpeakerPhoto(src="img/FPO_speaker_130x130.jpg", alt="speaker")
       section.doc-ss
-        h1 Generic Navigation Bar
-        figure
-          nav.c-NavBar
-            a.c-NavBar__Link.c-NavBar__Link--index --index
-            a.c-NavBar__Link Link
-            a.c-NavBar__Link Link
-            a.c-NavBar__Link Link
-            a.c-NavBar__Link Link
-      section.doc-ss
-        h1 Main Navigation Bar
-        figure
-          nav.c-NavBar.c-NavBar--main
-            a.c-NavBar__Link.c-NavBar__Link--index: span.ic.home
-            a.c-NavBar__Link Program
-            a.c-NavBar__Link Location
-            a.c-NavBar__Link About
-            a.c-NavBar__Link Contact
-      section.doc-ss
-        h1 Side Navigation Bar
-        figure
-          nav.c-NavBar.c-NavBar--side
-            a.c-NavBar__Link Why Attend
-            a.c-NavBar__Link Registration
-      section.doc-ss
-        h1 Utility Navigation Bar
-        figure
-          nav.c-NavBar.c-NavBar--utility
-            a.c-NavBar__Link For Speakers
-            a.c-NavBar__Link Sponsors
-            a.c-NavBar__Link Exhibitors
-      section.doc-ss
-        h1 Secondary Nav Bar
-        figure(style="margin-bottom:4em;")
-          nav.c-NavBar.c-NavBar--secondary
-            a.c-NavBar__Link Lodging & Transportation
-            a.c-NavBar__Link For International Travel
-      section.doc-ss
-        h1 Year Tab Bar
-        figure
-          nav.c-NavBar.c-NavBar--tabs
-            a.c-NavBar__Link 2000
-            a.c-NavBar__Link 2001
-            a.c-NavBar__Link 2002
-            a.c-NavBar__Link.current .current
+        h1 Navigation Bars
+        section.doc-ss
+          h2 Generic Navigation Bar
+          figure
+            nav.c-NavBar
+              a.c-NavBar__Link.c-NavBar__Link--index --index
+              a.c-NavBar__Link Link
+              a.c-NavBar__Link Link
+              a.c-NavBar__Link Link
+              a.c-NavBar__Link Link
+        section.doc-ss
+          h2 Main Navigation Bar
+          figure
+            nav.c-NavBar.c-NavBar--main
+              a.c-NavBar__Link.c-NavBar__Link--index: span.ic.home
+              a.c-NavBar__Link Program
+              a.c-NavBar__Link Location
+              a.c-NavBar__Link About
+              a.c-NavBar__Link Contact
+        section.doc-ss
+          h2 Side Navigation Bar
+          figure
+            nav.c-NavBar.c-NavBar--side
+              a.c-NavBar__Link Why Attend
+              a.c-NavBar__Link Registration
+        section.doc-ss
+          h2 Utility Navigation Bar
+          figure
+            nav.c-NavBar.c-NavBar--utility
+              a.c-NavBar__Link For Speakers
+              a.c-NavBar__Link Sponsors
+              a.c-NavBar__Link Exhibitors
+        section.doc-ss
+          h2 Secondary Nav Bar
+          figure(style="margin-bottom:4em;")
+            nav.c-NavBar.c-NavBar--secondary
+              a.c-NavBar__Link Lodging & Transportation
+              a.c-NavBar__Link For International Travel
+        section.doc-ss
+          h2 Year Tab Bar
+          figure
+            nav.c-NavBar.c-NavBar--tabs
+              a.c-NavBar__Link 2000
+              a.c-NavBar__Link 2001
+              a.c-NavBar__Link 2002
+              a.c-NavBar__Link.current .current
       section.doc-ss
         h1 Speaker Profile
         p.devnote.
@@ -220,7 +228,7 @@ html
                 nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
                 amet, consectetur adipisicing elit, sed do eiusmod tempor
                 incididunt ut labore et dolore magna aliqua.
-    div.strict.
+    div.strict(style="padding-top: 2em; border-top: 4px double black; margin-top: 2em;").
       <div class="toggleable-nav fade">
           <div tabindex="0" class="ic close-nav">X</div>
           <div class="link-block">
