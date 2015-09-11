@@ -39,6 +39,25 @@
       width: 60px;
     }
   }
+  .header & {
+    padding-top: 20px;
+  }
+}
+
+// column for main shit
+.auto-col {
+  .header & {
+    padding-top: 20px;
+    @media (min-width: 768px) {
+      padding-right: 50px;
+    }
+    // same as:
+    // padding-right: 50px;
+    // @media (max-width: 767px) {
+    //     padding-right: 0;
+    // }
+    //
+  }
 }
 
 // sidebar of page
@@ -53,9 +72,9 @@
   @media (max-width: 767px) {
   }
   .header & {
+    position: relative;
     background-size: cover;
     background-position: 50% 0;
-    position: relative;
     @media (max-width: 767px) {
       background-position: 50% 50%;
       height: 145px;
@@ -75,20 +94,5 @@
       @padding_x: 0;
       padding: 0;
     }
-  }
-}
-
-// column for main shit
-.auto-col {
-  .header & {
-    @media (min-width: 768px) {
-      padding-right: 50px;
-    }
-    // same as:
-    // padding-right: 50px;
-    // @media (max-width: 767px) {
-    //     padding-right: 0;
-    // }
-    //
   }
 }

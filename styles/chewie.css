@@ -269,6 +269,17 @@ button {
     width: 60px;
   }
 }
+.header .logo-col {
+  padding-top: 20px;
+}
+.header .auto-col {
+  padding-top: 20px;
+}
+@media (min-width: 768px) {
+  .header .auto-col {
+    padding-right: 50px;
+  }
+}
 .side-nav-col {
   width: 450px;
 }
@@ -283,9 +294,9 @@ button {
   }
 }
 .header .side-nav-col {
+  position: relative;
   background-size: cover;
   background-position: 50% 0;
-  position: relative;
 }
 @media (max-width: 767px) {
   .header .side-nav-col {
@@ -306,11 +317,6 @@ button {
 @media (max-width: 767px) {
   .content .side-nav-col {
     padding: 0;
-  }
-}
-@media (min-width: 768px) {
-  .header .auto-col {
-    padding-right: 50px;
   }
 }
 /*################################*\
@@ -483,6 +489,20 @@ button {
   }
 }
 /*################################*\
+    _comp.ui.InstShield.less
+\*################################*/
+.conference-logo,
+.c-InstShield {
+  max-width: 85px;
+}
+@media (max-width: 767px) {
+  .conference-logo,
+  .c-InstShield {
+    max-width: 45px;
+    margin: 0 10px 20px;
+  }
+}
+/*################################*\
     _comp.ui.SpeakerPhoto.less
 \*################################*/
 .c-SpeakerPhoto {
@@ -491,7 +511,7 @@ button {
   margin: 0 10px;
 }
 /*################################*\
-    _comp.NavBar.less
+    _comp.ui.NavBar.less
 \*################################*/
 .c-NavBar,
 .navigation,
@@ -720,22 +740,6 @@ li.active .tab-button::after {
   padding: 11px 10px;
 }
 /*################################*\
-    _comp.SiteHeader.less
-\*################################*/
-.conference-logo {
-  max-width: 85px;
-  float: left;
-}
-@media (max-width: 767px) {
-  .conference-logo {
-    max-width: 45px;
-    margin: 0 10px 20px;
-  }
-}
-.header .conference-logo {
-  padding-top: 20px;
-}
-/*################################*\
     _comp.Icon.less
 \*################################*/
 .ic {
@@ -926,7 +930,6 @@ a.button a:focus {
     _comp.SiteHeader.less
 \*################################*/
 .header h2 {
-  padding-top: 20px;
   margin: 0;
   font-weight: 700;
   text-transform: uppercase;
