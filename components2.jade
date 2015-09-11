@@ -56,52 +56,20 @@ html
     section.doc-ss
       h1 Typographical Components
       section.doc-ss
-        h1 Callouts
+        h1 Generic Callout
         figure
           section.c-Callout
-            h1.c-Callout__Heading Generic Callout
+            h1.c-Callout__Heading Title of Callout
             div.c-Callout__Body
               p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. eiusmod tempor.
               section
                 h1 Lorem ipsum dolor
                 a(href="") Example link lorem ipsum dolor
       section.doc-ss
-        h1 Speaker Profile
-        p.devnote.
-          this doesn't need to be a component. we could use objects here,
-          given a robust grid system.
-        figure
-          div.speaker-profile
-            div.session-col
-              div.dateline Thursday #[div.date Apr 3]
-              div.sessiontype Opening Plenary
-            div.photo-col
-              img.c-SpeakerPhoto(src="img/FPO_speaker_130x130.jpg", alt="speaker")
-            div.details-col
-              div.person-name Charles Johnson
-              div.person-title Ph.D., P.E., S.E., CVS, F.ASCE Illuminate Foundry, Inc.
-              a.button Speaker Details
-        figure
-          section.speaker-profile
-            div.photo-col
-              img.c-SpeakerPhoto(src="img/FPO_speaker_130x130.jpg", alt="speaker")
-            div.details-col
-              div.person-name Charles Johnson
-              div.person-title Ph.D., P.E., S.E., CVS, F.ASCE Illuminate Foundry, Inc.
-              p.
-                Description of this person’s talk and/or a profile of this person.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
-                amet, consectetur adipisicing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua.
-      section.doc-ss
         h1 Year Badge
         p A badge or shield icon showing the year of the current conference.
-        figure
-          .c-YearBadge(style="left:6rem;") 15
-        br(style="line-height:6;")
+        figure(style="margin-bottom:8em;")
+          .c-YearBadge(style="left:8em;") 15
       section.doc-ss
         h1 Speaker Photo
         p An image with margins. Usually appears in a speaker profile.
@@ -140,19 +108,50 @@ html
             a.c-NavBar__Link Exhibitors
       section.doc-ss
         h1 Secondary Nav Bar
-        figure
+        figure(style="margin-bottom:4em;")
           nav.c-NavBar.c-NavBar--secondary
             a.c-NavBar__Link Lodging & Transportation
             a.c-NavBar__Link For International Travel
-      section.doc-ss(style="margin-top:8em;")
-        h1 Year Tabs
+      section.doc-ss
+        h1 Year Tab Bar
         figure
           nav.c-NavBar.c-NavBar--tabs
             a.c-NavBar__Link 2000
             a.c-NavBar__Link 2001
             a.c-NavBar__Link 2002
             a.c-NavBar__Link.current .current
-    div.strict(style="margin-top:8em;").
+      section.doc-ss
+        h1 Speaker Profile
+        p.devnote.
+          this doesn't need to be a component. we could use objects here,
+          given a robust grid system.
+        figure
+          div.speaker-profile
+            div.session-col
+              div.dateline Thursday #[div.date Apr 3]
+              div.sessiontype Opening Plenary
+            div.photo-col
+              img.c-SpeakerPhoto(src="img/FPO_speaker_130x130.jpg", alt="speaker")
+            div.details-col
+              div.person-name Charles Johnson
+              div.person-title Ph.D., P.E., S.E., CVS, F.ASCE Illuminate Foundry, Inc.
+              a.button Speaker Details
+        figure
+          section.speaker-profile
+            div.photo-col
+              img.c-SpeakerPhoto(src="img/FPO_speaker_130x130.jpg", alt="speaker")
+            div.details-col
+              div.person-name Charles Johnson
+              div.person-title Ph.D., P.E., S.E., CVS, F.ASCE Illuminate Foundry, Inc.
+              p.
+                Description of this person’s talk and/or a profile of this person.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
+                amet, consectetur adipisicing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua.
+    div.strict.
       <div class="toggleable-nav fade">
           <div tabindex="0" class="ic close-nav">X</div>
           <div class="link-block">
