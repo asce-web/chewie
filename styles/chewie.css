@@ -223,8 +223,6 @@ img {
   height: auto;
   max-width: 100%;
 }
-h1,
-h2,
 button {
   font-family: 'futura-pt', 'Open Sans', 'Arial', sans-serif;
 }
@@ -270,9 +268,6 @@ button {
   }
 }
 .header .logo-col {
-  padding-top: 20px;
-}
-.header .auto-col {
   padding-top: 20px;
 }
 @media (min-width: 768px) {
@@ -424,6 +419,185 @@ button {
 .callout.contacts,
 .c-Callout--contacts {
   line-height: 26px;
+}
+/*################################*\
+    _comp.typo.headings.less
+\*################################*/
+.c-ConferenceName,
+.header h2,
+.footer h2 {
+  padding-top: 20px;
+  margin: 0;
+  font-weight: 700;
+  font-size: 30px;
+  font-family: 'futura-pt', 'Open Sans', 'Arial', sans-serif;
+  text-transform: uppercase;
+}
+@media (max-width: 1199px) {
+  .c-ConferenceName,
+  .header h2,
+  .footer h2 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 989px) {
+  .c-ConferenceName,
+  .header h2,
+  .footer h2 {
+    font-size: 18px;
+  }
+}
+@media (max-width: 767px) {
+  .c-ConferenceName,
+  .header h2,
+  .footer h2 {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .footer .c-ConferenceName,
+  .footer h2 {
+    margin-left: 15px;
+  }
+}
+@media (min-width: 990px) {
+  .footer .c-ConferenceName,
+  .footer h2 {
+    padding-top: 40px;
+  }
+}
+.c-ConferenceLocation,
+.header h5,
+.footer .year-prev-next h2 {
+  margin: 10px 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 18px;
+}
+@media (max-width: 1199px) {
+  .c-ConferenceLocation,
+  .header h5,
+  .footer .year-prev-next h2 {
+    font-size: 14px;
+  }
+}
+@media (max-width: 767px) {
+  .c-ConferenceLocation,
+  .header h5,
+  .footer .year-prev-next h2 {
+    padding: 10px;
+    margin-top: 0px;
+  }
+}
+.footer .c-ConferenceLocation,
+.footer .year-prev-next h2 {
+  font-size: 20px;
+  padding-top: 0;
+}
+.c-ConferenceVenue,
+.year-prev-next h3 {
+  margin: 10px 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 18px;
+  opacity: .7;
+}
+@media (max-width: 989px) {
+  .c-ConferenceVenue,
+  .year-prev-next h3 {
+    font-size: 14px;
+  }
+}
+.footer .c-ConferenceVenue,
+.year-prev-next h3 {
+  margin: 0;
+}
+.c-ConferenceTagline,
+.header h4,
+.year-prev-next h4 {
+  margin: 10px 0;
+  font-style: italic;
+  font-size: 18px;
+  opacity: 0.7;
+}
+@media (max-width: 1199px) {
+  .c-ConferenceTagline,
+  .header h4,
+  .year-prev-next h4 {
+    font-size: 14px;
+  }
+}
+.c-ConferenceTagline.visible-xs,
+.header h4.visible-xs,
+.year-prev-next h4.visible-xs {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+}
+.footer .c-ConferenceTagline,
+.year-prev-next h4 {
+  margin-bottom: 5px;
+}
+.c-H--alpha,
+.c-H--beta,
+.c-H--gamma,
+.c-H--delta,
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+  margin: 0;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+.c-H--alpha,
+.content h1 {
+  margin-top: 20px;
+  font-weight: 500;
+  font-size: 36px;
+  font-family: 'futura-pt', 'Open Sans', 'Arial', sans-serif;
+  color: #6a9556;
+}
+@media (max-width: 989px) {
+  .c-H--alpha,
+  .content h1 {
+    font-size: 32px;
+  }
+}
+@media (max-width: 767px) {
+  .c-H--alpha,
+  .content h1 {
+    font-size: 24px;
+  }
+}
+.c-H--beta,
+.content h2 {
+  font-weight: 400;
+  font-size: 24px;
+}
+@media (max-width: 767px) {
+  .c-H--beta,
+  .content h2 {
+    font-size: 20px;
+  }
+}
+.c-H--gamma,
+.content h3 {
+  font-weight: 600;
+  font-size: 16px;
+}
+.c-H--delta,
+.content h4,
+.content h5,
+.content h6 {
+  font-weight: 700;
+  font-size: 14px;
 }
 /*################################*\
     _comp.ui.YearBadge.less
@@ -927,130 +1101,15 @@ a.button a:focus {
   color: inherit;
 }
 /*################################*\
-    _comp.SiteHeader.less
-\*################################*/
-.header h2 {
-  margin: 0;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-@media (max-width: 1199px) {
-  .header h2 {
-    font-size: 20px;
-  }
-}
-@media (max-width: 989px) {
-  .header h2 {
-    font-size: 18px;
-  }
-}
-@media (max-width: 767px) {
-  .header h2 {
-    margin-bottom: 20px;
-  }
-}
-.header h4 {
-  font-style: italic;
-  opacity: .7;
-}
-@media (max-width: 1199px) {
-  .header h4 {
-    font-size: 14px;
-  }
-}
-.header h4.visible-xs {
-  display: block;
-  width: 100%;
-  margin: 0;
-  padding: 10px;
-  position: absolute;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.85);
-}
-.header h5 {
-  text-transform: uppercase;
-}
-@media (max-width: 1199px) {
-  .header h5 {
-    font-size: 14px !important;
-  }
-}
-.header h5 {
-  font-weight: 600;
-  font-size: 18px;
-}
-@media (max-width: 767px) {
-  .header h5 {
-    padding: 10px;
-    margin-top: 0px;
-  }
-}
-/*################################*\
     _comp.SiteFooter.less
 \*################################*/
 .footer {
   background-image: url(../img/pattern-bg.png);
   margin-top: 46px;
 }
-.footer h2 {
-  padding-top: 40px;
-  margin: 0px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-@media (max-width: 1199px) {
-  .footer h2 {
-    font-size: 20px;
-  }
-}
-@media (max-width: 989px) {
-  .footer h2 {
-    font-size: 18px;
-    padding-top: 20px;
-  }
-}
-@media (max-width: 767px) {
-  .footer .title h2 {
-    margin-left: 15px;
-  }
-}
-.footer h4 {
-  font-style: italic;
-  opacity: .7;
-}
-@media (max-width: 1199px) {
-  .footer h4 {
-    font-size: 14px;
-  }
-}
-.footer h5 {
-  text-transform: uppercase;
-}
-@media (max-width: 1199px) {
-  .footer h5 {
-    font-size: 14px !important;
-  }
-}
 .footer .details {
   padding-top: 20px;
   font-weight: 600;
-}
-@media (max-width: 767px) {
-  .footer .details h2 {
-    font-size: 14px;
-  }
-}
-.footer .details h3 {
-  opacity: .7;
-  text-transform: uppercase;
-  margin: 0;
-  font-weight: 600;
-  font-size: 18px;
-}
-@media (max-width: 989px) {
-  .footer .details h3 {
-    font-size: 14px;
-  }
 }
 .footer .details a {
   display: block;
@@ -1059,16 +1118,6 @@ a.button a:focus {
   .footer .details a {
     margin-bottom: 6px;
   }
-}
-.footer .details.year-prev-next h2 {
-  font-size: 20px;
-  padding-top: 0px !important;
-}
-.footer .details.year-prev-next h4 {
-  margin-bottom: 5px;
-}
-.footer .details.year-prev-next h5 {
-  font-weight: 600;
 }
 .footer .copyright {
   padding: 20px;
@@ -1254,6 +1303,23 @@ a.button a:focus {
     _comp.LinkBlock.less
 \*################################*/
 .link-block {
+  margin-bottom: 20px;
+}
+.c-LinkBlock__Heading,
+.link-block h3 {
+  opacity: .7;
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: 600;
+  font-size: 18px;
+}
+@media (max-width: 989px) {
+  .c-LinkBlock__Heading,
+  .link-block h3 {
+    font-size: 14px;
+  }
+}
+.c-LinkBlock--connect .c-LinkBlock__Heading {
   margin-bottom: 20px;
 }
 .link-block.connect h3 {
@@ -2002,54 +2068,6 @@ a.button a:focus {
   .toggleable-nav.in .hidden-xs {
     display: block !important;
   }
-}
-.content h1,
-.content h2,
-.content h3,
-.content h4,
-.content h5,
-.content h6 {
-  margin-top: 0px;
-  margin-bottom: 5px;
-}
-.content h1 {
-  font-size: 36px;
-  text-transform: uppercase;
-  margin-top: 20px;
-  font-weight: 500;
-  color: #6a9556;
-}
-@media (max-width: 989px) {
-  .content h1 {
-    font-size: 32px;
-  }
-}
-@media (max-width: 767px) {
-  .content h1 {
-    font-size: 24px;
-  }
-}
-.content h2 {
-  font-size: 24px;
-  text-transform: uppercase;
-  font-weight: 400;
-  display: block;
-}
-@media (max-width: 767px) {
-  .content h2 {
-    font-size: 20px;
-  }
-}
-.content h3 {
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 16px;
-}
-.content h4,
-.content h5 {
-  font-weight: 700;
-  font-size: 14px;
-  text-transform: uppercase;
 }
 .content p {
   margin: 0 0 20px;

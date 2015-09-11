@@ -22,7 +22,12 @@
         position: relative; /* for containing other relative things */
         background: #f5faff;
       }
-      .devnote { opacity: 0.8; color: #c64; }
+      .devnote {
+        padding: 0.5em;
+        color: #c64;
+        background: #f5fbeb;
+        opacity: 0.8;
+      }
       .devnote::before { content:'(devs: '; }
       .devnote::after  { content:')'; }
     </style>
@@ -60,6 +65,40 @@
     <section class="doc-ss">
       <h1>Typographical Components</h1>
       <section class="doc-ss">
+        <h1>Headings</h1>
+        <p>This section lists every single type of heading used on a site.</p>
+        <figure>
+          <p>This figure shows headings belonging in the site header/footer.</p>
+          <h1 class="c-ConferenceName">Conference Name</h1>
+          <h1 class="c-ConferenceLocation">Conference Location | Dates</h1>
+          <h1 class="c-ConferenceVenue">Conference Venue</h1>
+          <h1 class="c-ConferenceTagline">Conference Tagline</h1>
+        </figure>
+        <figure class="footer">
+          <p class="devnote">These are the same headings above, shown in a <code>.footer</code>.
+            Notice the similarities. We can probably remove these
+            
+            <q>similar-but-not-identical</q> components.
+          </p>
+          <h1 class="c-ConferenceName">Conference Name</h1>
+          <h1 class="c-ConferenceLocation">Conference Location | Dates</h1>
+          <h1 class="c-ConferenceVenue">Conference Venue</h1>
+          <h1 class="c-ConferenceTagline">Conference Tagline</h1>
+        </figure>
+        <figure>
+          <p>This figure shows headings belonging in page content.</p>
+          <h1 class="c-H--alpha">Page Heading (alpha)</h1>
+          <h1 class="c-H--beta">Section Heading (beta)</h1>
+          <h1 class="c-H--gamma">Section Subheading (gamma)</h1>
+          <h1 class="c-H--delta">Section Subsubheading (delta)</h1>
+        </figure>
+        <figure>
+          <p>This figure shows specific headings used in other components.</p>
+          <h1 class="c-Callout__Heading">Generic Callout Heading</h1>
+          <h1 class="c-LinkBlock__Heading">Link Block Heading (in footer)</h1>
+        </figure>
+      </section>
+      <section class="doc-ss">
         <h1>Year Badge</h1>
         <p>A badge showing the year of the current conference.</p>
         <figure style="margin-bottom:8em;">
@@ -75,7 +114,49 @@
         <h1>Generic Callout</h1>
         <figure>
           <section class="c-Callout">
-            <h1 class="c-Callout__Heading">Title of Callout</h1>
+            <h1 class="c-Callout__Heading">Callout Heading</h1>
+            <div class="c-Callout__Body">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. eiusmod tempor.</p>
+              <section>
+                <h1>Lorem ipsum dolor</h1><a href="">Example link lorem ipsum dolor</a>
+              </section>
+            </div>
+          </section>
+        </figure>
+      </section>
+      <section class="doc-ss">
+        <h1>Register Callout</h1>
+        <figure>
+          <section class="c-Callout c-Callout--register">
+            <h1 class="c-Callout__Heading">Register Callout Heading</h1>
+            <div class="c-Callout__Body">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. eiusmod tempor.</p>
+              <section>
+                <h1>Lorem ipsum dolor</h1><a href="">Example link lorem ipsum dolor</a>
+              </section>
+            </div>
+          </section>
+        </figure>
+      </section>
+      <section class="doc-ss">
+        <h1>Dates Callout</h1>
+        <figure>
+          <section class="c-Callout c-Callout--dates">
+            <h1 class="c-Callout__Heading">Important Dates Callout Heading</h1>
+            <div class="c-Callout__Body">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. eiusmod tempor.</p>
+              <section>
+                <h1>Lorem ipsum dolor</h1><a href="">Example link lorem ipsum dolor</a>
+              </section>
+            </div>
+          </section>
+        </figure>
+      </section>
+      <section class="doc-ss">
+        <h1>Sponsors Callout</h1>
+        <figure>
+          <section class="c-Callout c-Callout--sponsors">
+            <h1 class="c-Callout__Heading">Sponsors Callout Heading</h1>
             <div class="c-Callout__Body">
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. eiusmod tempor.</p>
               <section>
