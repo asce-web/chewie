@@ -110,7 +110,7 @@ html
       section.doc-ss
         h1 Generic Navigation Bar
         figure
-          div.c-NavBar
+          nav.c-NavBar
             a.c-NavBar__Link.c-NavBar__Link--index --index
             a.c-NavBar__Link Link
             a.c-NavBar__Link Link
@@ -119,8 +119,8 @@ html
       section.doc-ss
         h1 Main Navigation Bar
         figure
-          div.c-NavBar.c-NavBar--main
-            a.c-NavBar__Link.no-hover: span.ic.home
+          nav.c-NavBar.c-NavBar--main
+            a.c-NavBar__Link.c-NavBar__Link--index: span.ic.home
             a.c-NavBar__Link Program
             a.c-NavBar__Link Location
             a.c-NavBar__Link About
@@ -128,26 +128,30 @@ html
       section.doc-ss
         h1 Side Navigation Bar
         figure
-          div.c-NavBar.c-NavBar--side
+          nav.c-NavBar.c-NavBar--side
             a.c-NavBar__Link Why Attend
             a.c-NavBar__Link Registration
       section.doc-ss
         h1 Utility Navigation Bar
         figure
-          div.c-NavBar.c-NavBar--utility
+          nav.c-NavBar.c-NavBar--utility
             a.c-NavBar__Link For Speakers
             a.c-NavBar__Link Sponsors
             a.c-NavBar__Link Exhibitors
       section.doc-ss
+        h1 Secondary Nav Bar
+        figure
+          nav.c-NavBar.c-NavBar--secondary
+            a.c-NavBar__Link Lodging & Transportation
+            a.c-NavBar__Link For International Travel
+      section.doc-ss(style="margin-top:8em;")
         h1 Year Tabs
         figure
-          div.c-NavBar.c-NavBar--tabs
+          nav.c-NavBar.c-NavBar--tabs
             a.c-NavBar__Link 2000
             a.c-NavBar__Link 2001
             a.c-NavBar__Link 2002
-            a.c-NavBar__Link.active .active
-      section.doc-ss
-        h1 component
+            a.c-NavBar__Link.current .current
     div.strict(style="margin-top:8em;").
       <div class="toggleable-nav fade">
           <div tabindex="0" class="ic close-nav">X</div>

@@ -15,7 +15,11 @@
 .c-NavBar,
 .navigation,
 .nav3,
-.tab-buttons {
+.tab-buttons,
+.navigation-level2 {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
   color: @color_asce_header_txt;
   background-color: @color_site_secondary;
 }
@@ -29,13 +33,10 @@
 .c-NavBar__Link,
 .navigation a,
 .nav3 a,
-.tab-button {
+.tab-button,
+.navigation-level2 a {
   display: inline-block;
   padding: 17px 24px;
-  font-size: 18px;
-  font-weight: 700;
-  text-decoration: none !important; // to override hover behavior
-  text-transform: uppercase;
   color: inherit;
   @media (max-width: 1199px) {
     font-size: 14px;
@@ -46,25 +47,17 @@
     padding: 12px 7px;
   }
 }
+// default hover behavior for ALL nav bars
 .c-NavBar__Link:hover,
 .c-NavBar__Link.active,
 .navigation a:hover,
 .navigation a.active,
 .nav3 a:hover,
 .tab-button:hover,
-li.active .tab-button,
-.current-page {
-  color: inherit;
-  background-color: @color_site_accent;
-}
-
-.c-NavBar__Link--index,
-.no-hover {
-  &:hover,
-  &:active {
-    background-color: transparent !important;
-    opacity: .5 !important;
-  }
+.navigation-level2 a:hover,
+.navigation-level2 a.active {
+  color: inherit; // override default
+  // background-color: fadeout(#fff, 85%);
 }
 
 
@@ -77,6 +70,13 @@ li.active .tab-button,
 // : 2015-09-10
 .nav1,
 .c-NavBar--main {
+  a,
+  .c-NavBar__Link {
+    &:hover {
+      text-decoration: none;
+      background-color: @color_site_accent;
+    }
+  }
 }
 
 
@@ -92,11 +92,6 @@ li.active .tab-button,
 .c-NavBar--side {
   background-color: @color_asce_primary;
   text-align: center;
-  a:hover {
-    // background-color: lighten(@color_asce_primary, 5%);
-    // background-color: fadeout(#fff, 90%);
-    // keeping conference accent color
-  }
 }
 
 
@@ -110,6 +105,11 @@ li.active .tab-button,
 .nav3,
 .c-NavBar--utility {
   padding: 5px 26px 29px; // NUMBERS BRUH
+  font-size: 13px;
+  text-align: center;
+  @media (max-width: 989px) {
+    text-align: right;
+  }
 
   // can't we use a fallback tool for this?
   background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
@@ -120,23 +120,60 @@ li.active .tab-button,
   background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
 
-  text-align: center;
-  a {
-    font-size: 13px;
-    font-weight: 700;
-    text-transform: uppercase;
+  a,
+  .c-NavBar__Link {
     padding: 5px 10px;
     @media (max-width: 989px) {
-      padding: 5px 0px;
-      text-align: right;
       display: block;
-    }
-    &:hover {
-      background: transparent;
-      text-decoration: underline !important; // specificity bullshit
+      padding: 5px 0px;
     }
   }
 }
+
+// NavSecondary is the secondary-level navigation component under
+// the main navigation component. It contains subpages of the main directories.
+//
+// NOTE: we need to move this so that each is a child of a main nav element.
+//
+// ^author
+// : Dae Clarke
+// ^updated
+// : 2015-09-10
+.navigation-level2,
+.c-NavBar--secondary {
+  font-size: inherit;
+  text-transform: none;
+  background-color: @color_site_accent;
+  position: absolute; // pops over page content
+  width: 100%; // instead of `right: 0; left: 0;`
+  z-index: 2;
+  a,
+  .c-NavBar__Link {
+    padding: 14px 10px;
+  }
+
+
+
+  // ------------- TRASH TRASH TRASH TRASH --------------------------
+  &.show-current-page {
+    position: relative;
+  }
+  ul {
+    display: none;
+    margin-bottom: 0; // override base ul
+    @media (min-width: 767px) {
+      &.active {
+        display: block;
+      }
+    }
+  }
+  li {
+    display: inline-block;
+  }
+  // ------------- END TRASH END TRASH --------------------------
+}
+
+
 
 // Tabs for past and future years of conference.
 //
@@ -152,9 +189,16 @@ li.active .tab-button,
     @media (max-width: 767px) {
       padding: 6px 12px;
     }
-    &.active {
-      cursor: default;
+    &:hover,
+    &.current {
+      background-color: @color_site_accent;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+    &.current {
       position: relative;
+      cursor: default;
       &::after {
         content: '';
         display: block;
@@ -165,11 +209,70 @@ li.active .tab-button,
         border-top-color: @color_site_accent;
         position: absolute;
         top: 46px;
-        left: 35px; // magic number
+        left: 40%;
       }
     }
   }
 }
+
+
+
+// ----------------------------------------------------------------------------
+// Tabs for past and future years of conference.
+// TODO THIS CLASS IS OLD; DELETE IT ONCE WE CAN CHANGE MARKUP
+//
+// ^author
+// : Dae Clarke
+// ^updated
+// : 2015-09-10
+.year-tabs {
+}
+
+.tab-buttons {
+  margin-bottom: 0; // override default ul margin-bottom
+  float: right !important; // remove bootstrap pull-right
+  margin-top: -46px; // 34px (fs*lh) + 6px (pad-t) + 6px (pad-b)
+  font-size: 24px;
+  text-align: center;
+  @media (max-width: 767px) {
+    margin-top: -34px;
+    font-size: 16px;
+  }
+}
+.tab-buttons li {
+  display: inline-block;
+}
+.tab-button {
+  padding: 6px 20px;
+  font-size: inherit;
+  @media (max-width: 767px) {
+    padding: 6px 12px;
+  }
+  &:hover,
+  li.active & {
+    background-color: @color_site_accent;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+  li.active & {
+    cursor: default;
+    position: relative;
+    &::after { // little arrow below
+      content: '';
+      display: block;
+      margin: auto;
+      width: 0;
+      height: 0;
+      border:  15px solid transparent;
+      border-top-color: @color_site_accent;
+      position: absolute;
+      top: 46px;
+      left: 35px; // magic number
+    }
+  }
+}
+// ----------------------------------------------------------------------------
 
 
 

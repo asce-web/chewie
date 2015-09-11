@@ -1025,27 +1025,29 @@ a.button a:focus {
 .c-NavBar,
 .navigation,
 .nav3,
-.tab-buttons {
+.tab-buttons,
+.navigation-level2 {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
   color: #ffffff;
   background-color: #7aa96c;
 }
 .c-NavBar__Link,
 .navigation a,
 .nav3 a,
-.tab-button {
+.tab-button,
+.navigation-level2 a {
   display: inline-block;
   padding: 17px 24px;
-  font-size: 18px;
-  font-weight: 700;
-  text-decoration: none !important;
-  text-transform: uppercase;
   color: inherit;
 }
 @media (max-width: 1199px) {
   .c-NavBar__Link,
   .navigation a,
   .nav3 a,
-  .tab-button {
+  .tab-button,
+  .navigation-level2 a {
     font-size: 14px;
     padding: 12px 12px;
   }
@@ -1054,7 +1056,8 @@ a.button a:focus {
   .c-NavBar__Link,
   .navigation a,
   .nav3 a,
-  .tab-button {
+  .tab-button,
+  .navigation-level2 a {
     font-size: 13px;
     padding: 12px 7px;
   }
@@ -1065,17 +1068,16 @@ a.button a:focus {
 .navigation a.active,
 .nav3 a:hover,
 .tab-button:hover,
-li.active .tab-button,
-.current-page {
+.navigation-level2 a:hover,
+.navigation-level2 a.active {
   color: inherit;
-  background-color: #714509;
 }
-.c-NavBar__Link--index:hover,
-.no-hover:hover,
-.c-NavBar__Link--index:active,
-.no-hover:active {
-  background-color: transparent !important;
-  opacity: .5 !important;
+.nav1 a:hover,
+.c-NavBar--main a:hover,
+.nav1 .c-NavBar__Link:hover,
+.c-NavBar--main .c-NavBar__Link:hover {
+  text-decoration: none;
+  background-color: #714509;
 }
 .nav2,
 .c-NavBar--side {
@@ -1085,6 +1087,8 @@ li.active .tab-button,
 .nav3,
 .c-NavBar--utility {
   padding: 5px 26px 29px;
+  font-size: 13px;
+  text-align: center;
   background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
   /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.65)), color-stop(100%, rgba(0, 0, 0, 0)));
@@ -1099,27 +1103,61 @@ li.active .tab-button,
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000', endColorstr='#00000000', GradientType=0);
   /* IE6-9 */
-  text-align: center;
+}
+@media (max-width: 989px) {
+  .nav3,
+  .c-NavBar--utility {
+    text-align: right;
+  }
 }
 .nav3 a,
-.c-NavBar--utility a {
-  font-size: 13px;
-  font-weight: 700;
-  text-transform: uppercase;
+.c-NavBar--utility a,
+.nav3 .c-NavBar__Link,
+.c-NavBar--utility .c-NavBar__Link {
   padding: 5px 10px;
 }
 @media (max-width: 989px) {
   .nav3 a,
-  .c-NavBar--utility a {
+  .c-NavBar--utility a,
+  .nav3 .c-NavBar__Link,
+  .c-NavBar--utility .c-NavBar__Link {
+    display: block;
     padding: 5px 0px;
-    text-align: right;
+  }
+}
+.navigation-level2,
+.c-NavBar--secondary {
+  font-size: inherit;
+  text-transform: none;
+  background-color: #714509;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+.navigation-level2 a,
+.c-NavBar--secondary a,
+.navigation-level2 .c-NavBar__Link,
+.c-NavBar--secondary .c-NavBar__Link {
+  padding: 14px 10px;
+}
+.navigation-level2.show-current-page,
+.c-NavBar--secondary.show-current-page {
+  position: relative;
+}
+.navigation-level2 ul,
+.c-NavBar--secondary ul {
+  display: none;
+  margin-bottom: 0;
+}
+@media (min-width: 767px) {
+  .navigation-level2 ul.active,
+  .c-NavBar--secondary ul.active {
     display: block;
   }
 }
-.nav3 a:hover,
-.c-NavBar--utility a:hover {
-  background: transparent;
-  text-decoration: underline !important;
+.navigation-level2 li,
+.c-NavBar--secondary li {
+  display: inline-block;
 }
 .c-NavBar--tabs {
   font-size: 24px;
@@ -1133,11 +1171,18 @@ li.active .tab-button,
     padding: 6px 12px;
   }
 }
-.c-NavBar--tabs .c-NavBar__Link.active {
-  cursor: default;
-  position: relative;
+.c-NavBar--tabs .c-NavBar__Link:hover,
+.c-NavBar--tabs .c-NavBar__Link.current {
+  background-color: #714509;
 }
-.c-NavBar--tabs .c-NavBar__Link.active::after {
+.c-NavBar--tabs .c-NavBar__Link:hover {
+  text-decoration: none;
+}
+.c-NavBar--tabs .c-NavBar__Link.current {
+  position: relative;
+  cursor: default;
+}
+.c-NavBar--tabs .c-NavBar__Link.current::after {
   content: '';
   display: block;
   margin: auto;
@@ -1147,46 +1192,8 @@ li.active .tab-button,
   border-top-color: #714509;
   position: absolute;
   top: 46px;
-  left: 35px;
+  left: 40%;
 }
-.mobile-nav {
-  text-align: right;
-}
-.mobile-nav a {
-  padding: 11px 10px;
-}
-/*################################*\
-    _comp.NavSecondary.less
-\*################################*/
-.navigation-level2 {
-  background-color: #714509;
-  position: absolute;
-  width: 100%;
-  z-index: 2;
-}
-.navigation-level2.show-current-page {
-  position: relative;
-}
-.navigation-level2 ul {
-  display: none;
-  margin-bottom: 0;
-}
-@media (min-width: 767px) {
-  .navigation-level2 ul.active,
-  .navigation-level2 ul.current-page {
-    display: block;
-  }
-}
-.navigation-level2 li {
-  display: inline-block;
-}
-.navigation-level2 a {
-  font-weight: 700;
-  padding: 14px 10px;
-}
-/*################################*\
-    _comp.YearTabs.less
-\*################################*/
 .tab-buttons {
   margin-bottom: 0;
   float: right !important;
@@ -1212,6 +1219,13 @@ li.active .tab-button,
     padding: 6px 12px;
   }
 }
+.tab-button:hover,
+li.active .tab-button {
+  background-color: #714509;
+}
+.tab-button:hover {
+  text-decoration: none;
+}
 li.active .tab-button {
   cursor: default;
   position: relative;
@@ -1227,6 +1241,12 @@ li.active .tab-button::after {
   position: absolute;
   top: 46px;
   left: 35px;
+}
+.mobile-nav {
+  text-align: right;
+}
+.mobile-nav a {
+  padding: 11px 10px;
 }
 /*################################*\
     _comp.LinkBlock.less
