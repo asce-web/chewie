@@ -635,6 +635,7 @@ button {
 .year-badge h2 {
   padding: 40px 10px 10px;
   margin: 0;
+  font-size: 30px;
 }
 .year-badge-corner {
   width: 0;
@@ -895,7 +896,12 @@ li.active .tab-button::after {
   border-top-color: #714509;
   position: absolute;
   top: 46px;
-  left: 35px;
+  left: 38%;
+}
+@media (max-width: 767px) {
+  li.active .tab-button::after {
+    top: 34px;
+  }
 }
 .mobile-nav {
   text-align: right;
@@ -1109,21 +1115,21 @@ a.button a:focus {
     margin-bottom: 6px;
   }
 }
-.footer .copyright {
+.footer .mobile-nav {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.copyright {
   padding: 20px;
   background: #0c5fa8;
 }
 @media (max-width: 767px) {
-  .footer .copyright {
+  .copyright {
     font-size: 10px;
   }
 }
-.footer .copyright img {
+.copyright img {
   margin-right: 20px;
-}
-.footer .mobile-nav {
-  margin-left: -15px;
-  margin-right: -15px;
 }
 /*################################*\
     _comp.YearBadge.less

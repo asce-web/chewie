@@ -268,7 +268,10 @@
       border-top-color: @color_site_accent;
       position: absolute;
       top: 46px;
-      left: 35px; // magic number
+      left: 38%;
+      @media (max-width: 767px) {
+        top: 34px;
+      }
     }
   }
 }
