@@ -130,7 +130,7 @@
 // ^author
 // : Dae Clarke
 // ^updated
-// : 2015-09-11
+// : 2015-09-14
 .c-H--alpha,
 .c-H--beta,
 .c-H--gamma,
@@ -182,4 +182,14 @@
 .content h6 {
   font-weight: 700;
   font-size: 14px;
+}
+
+// fixes for headings not in content section but in `.content` class
+.callout,
+.summary-banner,
+.sponsor-container,
+.coop-orgs-block {
+  h1, h2, h3, h4, h5, h6 {
+    color: inherit;
+  }
 }
