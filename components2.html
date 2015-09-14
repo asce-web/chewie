@@ -76,16 +76,31 @@
           <h1 class="c-ConferenceVenue">Conference Venue</h1>
           <h1 class="c-ConferenceTagline">Conference Tagline</h1>
         </figure>
-        <figure class="footer">
+        <figure>
           <p class="devnote">These are the same headings above, shown in a <code>.footer</code>.
             Notice the similarities. We can probably remove these
             
             <q>similar-but-not-identical</q> components.
           </p>
-          <h1 class="c-ConferenceName">Conference Name</h1>
-          <h1 class="c-ConferenceLocation">Conference Location | Dates</h1>
-          <h1 class="c-ConferenceVenue">Conference Venue</h1>
-          <h1 class="c-ConferenceTagline">Conference Tagline</h1>
+          <footer class="footer">
+            <h1 class="c-ConferenceName">Conference Name</h1>
+            <h1 class="c-ConferenceLocation">Conference Location | Dates</h1>
+            <h1 class="c-ConferenceVenue">Conference Venue</h1>
+            <h1 class="c-ConferenceTagline">Conference Tagline</h1>
+          </footer>
+        </figure>
+        <figure>
+          <p class="devnote">These are the same headings above, shown in a <code>.summary-banner</code>.
+            Notice the similarities. We can probably remove these
+            
+            <q>similar-but-not-identical</q> components.
+          </p>
+          <aside class="summary-banner">
+            <h1 class="c-ConferenceName">Conference Name</h1>
+            <h1 class="c-ConferenceLocation">Conference Location | Dates</h1>
+            <h1 class="c-ConferenceVenue">Conference Venue</h1>
+            <h1 class="c-ConferenceTagline">Conference Tagline</h1>
+          </aside>
         </figure>
         <figure>
           <p>This figure shows headings belonging in page content.</p>
@@ -96,8 +111,9 @@
         </figure>
         <figure>
           <p>This figure shows specific headings used in other components.</p>
-          <h1 class="c-Callout__Heading">Generic Callout Heading (in sidebar)</h1>
-          <h1 class="c-LinkBlock__Heading">Link Block Heading (in footer)</h1>
+          <h1 class="c-Callout__Heading">Generic Callout Heading in sidebar (same as Beta heading)</h1>
+          <h1 class="c-Callout__Subheading">Callout Subheading (same as Gamma heading)</h1>
+          <h1 class="c-LinkBlock__Heading">Link Block Heading in footer (same as conference venue heading)</h1>
         </figure>
       </section>
       <section class="doc-ss">
@@ -159,15 +175,31 @@
           </figure>
         </section>
       </section>
+      <section class="doc-ss">
+        <h1>Summary Banner</h1>
+        <p>
+          Conference summary banners can be placed at the top of pages that have
+          information about past year&rsquo;s and future year&rsquo;s conferences.
+          The color in the banner should ideally correspond to the primary color
+          for that year&rsquo;s conference, which may or may
+          not be the same as the current year&rsquo;s primary color.
+        </p>
+        <figure>
+          <p class="devnote">we may scratch this</p>
+          <aside class="c-SummaryBanner"><span style="float:right;" class="c-YearBadge">13</span>
+            <h1 class="c-ConferenceName">1st T&amp;DI Green Streets, Highways &amp; Development Conference</h1>
+            <h2 class="c-ConferenceLocation">Toronto, Canada  |  May 2&ndash;4, 2013</h2>
+            <h3 class="c-ConferenceVenue">Baylord Hotel</h3>
+          </aside>
+        </figure>
+      </section>
     </section>
     <section class="doc-ss">
       <h1>UI Components</h1>
       <section class="doc-ss">
         <h1>Year Badge</h1>
         <p>A badge showing the year of the current conference.</p>
-        <figure style="margin-bottom:8em;">
-          <div style="left:1em;" class="c-YearBadge">15</div>
-        </figure>
+        <figure style="margin-bottom:8em;"><span style="left:1em;" class="c-YearBadge">15</span></figure>
       </section>
       <section class="doc-ss">
         <h1>Institute Shield</h1>

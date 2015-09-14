@@ -72,15 +72,26 @@ html
           h1.c-ConferenceLocation Conference Location | Dates
           h1.c-ConferenceVenue Conference Venue
           h1.c-ConferenceTagline Conference Tagline
-        figure.footer
+        figure
           p.devnote.
             These are the same headings above, shown in a #[code .footer].
             Notice the similarities. We can probably remove these
             #[q similar-but-not-identical] components.
-          h1.c-ConferenceName Conference Name
-          h1.c-ConferenceLocation Conference Location | Dates
-          h1.c-ConferenceVenue Conference Venue
-          h1.c-ConferenceTagline Conference Tagline
+          footer.footer
+            h1.c-ConferenceName Conference Name
+            h1.c-ConferenceLocation Conference Location | Dates
+            h1.c-ConferenceVenue Conference Venue
+            h1.c-ConferenceTagline Conference Tagline
+        figure
+          p.devnote.
+            These are the same headings above, shown in a #[code .summary-banner].
+            Notice the similarities. We can probably remove these
+            #[q similar-but-not-identical] components.
+          aside.summary-banner
+            h1.c-ConferenceName Conference Name
+            h1.c-ConferenceLocation Conference Location | Dates
+            h1.c-ConferenceVenue Conference Venue
+            h1.c-ConferenceTagline Conference Tagline
         figure
           p This figure shows headings belonging in page content.
           h1.c-H--alpha Page Heading (alpha)
@@ -89,8 +100,9 @@ html
           h1.c-H--delta Section Subsubheading (delta)
         figure
           p This figure shows specific headings used in other components.
-          h1.c-Callout__Heading Generic Callout Heading (in sidebar)
-          h1.c-LinkBlock__Heading Link Block Heading (in footer)
+          h1.c-Callout__Heading Generic Callout Heading in sidebar (same as Beta heading)
+          h1.c-Callout__Subheading Callout Subheading (same as Gamma heading)
+          h1.c-LinkBlock__Heading Link Block Heading in footer (same as conference venue heading)
       section.doc-ss
         h1 Callouts
         section.doc-ss
@@ -133,13 +145,28 @@ html
                 section
                   h1.c-Callout__Subheading Callout Subheading
                   a(href="") Example link lorem ipsum dolor
+      section.doc-ss
+        h1 Summary Banner
+        p.
+          Conference summary banners can be placed at the top of pages that have
+          information about past year&rsquo;s and future year&rsquo;s conferences.
+          The color in the banner should ideally correspond to the primary color
+          for that year&rsquo;s conference, which may or may
+          not be the same as the current year&rsquo;s primary color.
+        figure
+          p.devnote we may scratch this
+          aside.c-SummaryBanner
+            span.c-YearBadge(style="float:right;") 13
+            h1.c-ConferenceName 1st T&amp;DI Green Streets, Highways &amp; Development Conference
+            h2.c-ConferenceLocation Toronto, Canada  |  May 2&ndash;4, 2013
+            h3.c-ConferenceVenue Baylord Hotel
     section.doc-ss
       h1 UI Components
       section.doc-ss
         h1 Year Badge
         p A badge showing the year of the current conference.
         figure(style="margin-bottom:8em;")
-          .c-YearBadge(style="left:1em;") 15
+          span.c-YearBadge(style="left:1em;") 15
       section.doc-ss
         h1 Institute Shield
         p An image of Institute&rsquo;s shield icon in charge of conference.

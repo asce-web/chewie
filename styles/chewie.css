@@ -317,125 +317,6 @@ button {
 /*################################*\
     _comp.typo.headings.less
 \*################################*/
-.c-ConferenceName,
-.header h2,
-.footer h2 {
-  padding-top: 20px;
-  margin: 0;
-  font-weight: 700;
-  font-size: 30px;
-  font-family: 'futura-pt', 'Open Sans', 'Arial', sans-serif;
-  text-transform: uppercase;
-}
-@media (max-width: 1199px) {
-  .c-ConferenceName,
-  .header h2,
-  .footer h2 {
-    font-size: 20px;
-  }
-}
-@media (max-width: 989px) {
-  .c-ConferenceName,
-  .header h2,
-  .footer h2 {
-    font-size: 18px;
-  }
-}
-@media (max-width: 767px) {
-  .c-ConferenceName,
-  .header h2,
-  .footer h2 {
-    margin-bottom: 20px;
-  }
-}
-@media (max-width: 767px) {
-  .footer .c-ConferenceName,
-  .footer h2 {
-    margin-left: 15px;
-  }
-}
-@media (min-width: 990px) {
-  .footer .c-ConferenceName,
-  .footer h2 {
-    padding-top: 40px;
-  }
-}
-.c-ConferenceLocation,
-.header h5,
-.footer .year-prev-next h2 {
-  margin: 10px 0;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 18px;
-}
-@media (max-width: 1199px) {
-  .c-ConferenceLocation,
-  .header h5,
-  .footer .year-prev-next h2 {
-    font-size: 14px;
-  }
-}
-@media (max-width: 767px) {
-  .c-ConferenceLocation,
-  .header h5,
-  .footer .year-prev-next h2 {
-    padding: 10px;
-    margin-top: 0px;
-  }
-}
-.footer .c-ConferenceLocation,
-.footer .year-prev-next h2 {
-  font-size: 20px;
-  padding-top: 0;
-}
-.c-ConferenceVenue,
-.year-prev-next h3 {
-  margin: 10px 0;
-  font-weight: 500;
-  text-transform: uppercase;
-  font-size: 18px;
-  opacity: .7;
-}
-@media (max-width: 989px) {
-  .c-ConferenceVenue,
-  .year-prev-next h3 {
-    font-size: 14px;
-  }
-}
-.footer .c-ConferenceVenue,
-.year-prev-next h3 {
-  margin: 0;
-}
-.c-ConferenceTagline,
-.header h4,
-.year-prev-next h4 {
-  margin: 10px 0;
-  font-style: italic;
-  font-size: 18px;
-  opacity: 0.7;
-}
-@media (max-width: 1199px) {
-  .c-ConferenceTagline,
-  .header h4,
-  .year-prev-next h4 {
-    font-size: 14px;
-  }
-}
-.c-ConferenceTagline.visible-xs,
-.header h4.visible-xs,
-.year-prev-next h4.visible-xs {
-  display: block;
-  width: 100%;
-  margin: 0;
-  padding: 10px;
-  position: absolute;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.85);
-}
-.footer .c-ConferenceTagline,
-.year-prev-next h4 {
-  margin-bottom: 5px;
-}
 .c-H--alpha,
 .c-H--beta,
 .c-H--gamma,
@@ -492,6 +373,164 @@ button {
 .content h6 {
   font-weight: 700;
   font-size: 14px;
+}
+.c-ConferenceName,
+.header h2,
+.footer h2,
+.summary-banner h2 {
+  padding-top: 20px;
+  margin: 0;
+  font-weight: 700;
+  font-size: 30px;
+  font-family: 'futura-pt', 'Open Sans', 'Arial', sans-serif;
+  text-transform: uppercase;
+}
+@media (max-width: 1199px) {
+  .c-ConferenceName,
+  .header h2,
+  .footer h2,
+  .summary-banner h2 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 989px) {
+  .c-ConferenceName,
+  .header h2,
+  .footer h2,
+  .summary-banner h2 {
+    font-size: 18px;
+  }
+}
+@media (max-width: 767px) {
+  .c-ConferenceName,
+  .header h2,
+  .footer h2,
+  .summary-banner h2 {
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 990px) {
+  .footer .c-ConferenceName,
+  .footer h2 {
+    padding-top: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .footer .c-ConferenceName,
+  .footer h2 {
+    margin-left: 15px;
+  }
+}
+.c-SummaryBanner .c-ConferenceName,
+.summary-banner h2 {
+  padding-top: 10px;
+}
+@media (max-width: 1199px) {
+  .c-SummaryBanner .c-ConferenceName,
+  .summary-banner h2 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 989px) {
+  .c-SummaryBanner .c-ConferenceName,
+  .summary-banner h2 {
+    font-size: 18px;
+    padding-top: 20px;
+  }
+}
+.c-ConferenceLocation,
+.header h5,
+.footer .year-prev-next h2,
+.summary-banner h3 {
+  margin: 10px 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 18px;
+}
+@media (max-width: 1199px) {
+  .c-ConferenceLocation,
+  .header h5,
+  .footer .year-prev-next h2,
+  .summary-banner h3 {
+    font-size: 14px;
+  }
+}
+@media (max-width: 767px) {
+  .c-ConferenceLocation,
+  .header h5,
+  .footer .year-prev-next h2,
+  .summary-banner h3 {
+    padding: 10px;
+    margin-top: 0px;
+  }
+}
+.footer .c-ConferenceLocation,
+.footer .year-prev-next h2 {
+  font-size: 20px;
+  padding-top: 0;
+}
+.c-SummaryBanner .c-ConferenceLocation,
+.summary-banner h3 {
+  float: left;
+  margin-right: 20px;
+}
+.c-ConferenceVenue,
+.year-prev-next h3 {
+  margin: 10px 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 18px;
+  opacity: .7;
+}
+@media (max-width: 989px) {
+  .c-ConferenceVenue,
+  .year-prev-next h3 {
+    font-size: 14px;
+  }
+}
+.footer .c-ConferenceVenue,
+.year-prev-next h3 {
+  margin: 0;
+}
+.c-SummaryBanner .c-ConferenceVenue,
+.summary-banner h4 {
+  opacity: .7;
+}
+@media (max-width: 1199px) {
+  .c-SummaryBanner .c-ConferenceVenue,
+  .summary-banner h4 {
+    font-size: 14px;
+  }
+}
+.c-ConferenceTagline,
+.header h4,
+.year-prev-next h4 {
+  margin: 10px 0;
+  font-style: italic;
+  font-size: 18px;
+  opacity: 0.7;
+}
+@media (max-width: 1199px) {
+  .c-ConferenceTagline,
+  .header h4,
+  .year-prev-next h4 {
+    font-size: 14px;
+  }
+}
+.c-ConferenceTagline.visible-xs,
+.header h4.visible-xs,
+.year-prev-next h4.visible-xs {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+}
+.footer .c-ConferenceTagline,
+.year-prev-next h4 {
+  margin-bottom: 5px;
 }
 /*################################*\
     _comp.typo.Callout.less
@@ -1087,13 +1126,15 @@ a.button a:focus {
 }
 .header,
 .footer,
-.summary-banner {
+.summary-banner,
+.c-SummaryBanner {
   color: #ffffff;
   background-color: #6a9556;
 }
 .header a,
 .footer a,
-.summary-banner a {
+.summary-banner a,
+.c-SummaryBanner a {
   color: inherit;
 }
 /*################################*\
@@ -1132,52 +1173,14 @@ a.button a:focus {
   margin-right: 20px;
 }
 /*################################*\
-    _comp.YearBadge.less
+    _comp.SummaryBanner.less
 \*################################*/
+.c-SummaryBanner,
 .summary-banner {
-  background-image: url(../img/pattern-bg.png);
-  padding-left: 10px;
-  padding-bottom: 10px;
+  padding: 10px;
   margin-bottom: 20px;
-}
-.summary-banner h2 {
-  padding-top: 10px;
-  margin: 0;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 30px;
-}
-@media (max-width: 989px) {
-  .summary-banner h2 {
-    font-size: 18px;
-    padding-top: 20px;
-  }
-}
-@media (max-width: 1199px) {
-  .summary-banner h2 {
-    font-size: 20px;
-  }
-}
-.summary-banner h3 {
-  float: left;
-  margin-right: 20px;
-}
-.summary-banner h4 {
-  font-style: normal;
-  opacity: .7;
-}
-@media (max-width: 1199px) {
-  .summary-banner h4 {
-    font-size: 14px;
-  }
-}
-.summary-banner h5 {
-  text-transform: uppercase;
-}
-@media (max-width: 1199px) {
-  .summary-banner h5 {
-    font-size: 14px !important;
-  }
+  position: relative;
+  background-image: url(../img/pattern-bg.png);
 }
 /*################################*\
     _comp.Intro.less
