@@ -449,6 +449,7 @@ button {
   margin: 0;
   margin-bottom: 5px;
   text-transform: uppercase;
+  color: #6a9556;
 }
 .c-H--alpha,
 .content h1 {
@@ -456,7 +457,6 @@ button {
   font-weight: 500;
   font-size: 36px;
   font-family: 'futura-pt', 'Open Sans', 'Arial', sans-serif;
-  color: #6a9556;
 }
 @media (max-width: 989px) {
   .c-H--alpha,
