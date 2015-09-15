@@ -1,0 +1,84 @@
+doctype html
+html
+  head
+    title Home | Styleguide
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="css/futura.css")
+    link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,600italic,700italic,400,600,700")
+    link(rel="stylesheet", href="/css/vendor/bootstrap.min.css")
+    link(rel="stylesheet", href="/styles/chewie.css")
+    link(rel="stylesheet", href="/styleguide/styleguide.css")
+  body
+    main
+      h1 Conferences Master Styleguide
+      p.
+        Some intro stuff here. Link to old #[a(href="/components.html") components.html]
+        goes here.
+      section.doc-ss
+        h2 Table of Contents
+        section.doc-ss
+          h3: a(href="base.html") Base Typography
+          p This page demonstrates the appearance of bare, unclassed, unstyled HTML elements.
+          ol
+            li Headings and Paragraphs
+            li Lists
+            li Tables
+            li Text-Level Elements
+              ol
+                li Links
+                li Stress
+        section.doc-ss
+          h3 Components
+          p.
+            All the usual components needed on any given conference site are listed here.
+            Each component is shown independent of location and context,
+            apart from other components and apart from its usual position on a site page.
+            #[strong This is #[em not] meant to be a page mockup or wireframe.]
+            It is simply used by developers to organize components into logical groupings
+            and to see what they look like out of context.
+          p.
+            There are two general types of components: typographical components and
+            UI components.
+          p.
+            #[strong Note:] On these pages, each component demo will be placed in a
+            #[code &lt;figure&gt;] element to separate it from the surrounding content.
+          section.doc-ss
+            h4: a(href="comp-typo.html") Typographical Components
+            p.
+              These are of a static nature and consist
+              mainly of textual content. There is little to no user interaction required.
+              Examples include kinds of boxes or sections that contain descriptions, and
+              inline-level elements such as dates and places.
+            ol
+              li Headings
+              li Callouts
+                ol
+                  li Generic Callout
+                  li Register Callout
+                  li Dates Callout
+                  li Sponsors Callout
+              li Summary Banner
+          section.doc-ss
+            h4: a(href="comp-ui.html") UI (user-interactive) Components
+            p.
+              These are the dynamic bells-and-whistles
+              that make a webpage pop. These are things that users are likely to interact
+              with, such as alerts, labels, navigation, and buttons.
+              Specially-styled (not default) form elements also go in this category.
+              Not all of these must be interactive, though. Some UI components can
+              just sit there and look pretty (like an icon or badge).
+            ol
+              li Year Badge
+              li Institute Shield (conference-logo)
+              li Speaker Photo
+              li Navigation Bars
+                ol
+                  li Generic Navigation Bar
+                  li Main Navigation Bar
+                  li Side Navigation Bar
+                  li Utility Navigation Bar
+                  li Secondary Navigation Bar
+                  li Year Tab Bar
+              li Speaker Profile

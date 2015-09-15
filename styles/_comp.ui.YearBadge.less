@@ -1,0 +1,91 @@
+
+/*################################*\
+    _comp.ui.YearBadge.less
+\*################################*/
+
+
+// The YearBadge component represents the shield-like icon at the top
+// of all pages containing the year (2015).
+// Subcomponents:
+// .year-badge-corner
+// // make this an ::after pseudo-element!!!!!! or rename it .YearBadge__Corner
+//
+// ^author
+// : Dae Clarke
+// ^updated
+// : 2015-08-21
+.c-YearBadge {
+  @sizepx: 100px; // NOTE change this size to scale the complete badge
+  @bgcolor: @color_asce_primary;
+  display: inline-block;
+  width: @sizepx;
+  margin: 0;
+  padding: 0;
+  padding-top: (@sizepx/2);
+  position: absolute;
+  left: -(@sizepx/2);
+  font-weight: 700;
+  font-size: (@sizepx/3);
+  font-size: floor((@sizepx/3) / 10) * 10px; // rounds down to the nearest 10px
+  line-height: 0;
+  font-family: @font_ui;
+  text-align: center;
+  letter-spacing: -2px;
+  background: @bgcolor;
+  color: @color_asce_header_txt;
+  &::before {
+    content: '20';
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+  &::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border: (@sizepx/2) solid transparent;
+    border-top-width: (@sizepx/4);
+    border-top-color: @bgcolor;
+    border-bottom: 0;
+    position: relative;
+    top: (@sizepx/4);
+  }
+}
+.year-badge {
+  width: 90px; // not sure why 90 is so special
+  background: @color_asce_primary;
+  color: @color_asce_header_txt;
+  h2 {
+    // remove this selector, move styles to parent component
+    // add ta-c and stop using atom
+    padding: 40px 10px 10px;
+    margin: 0; // override h2 default margin, see what's going on here?
+    font-size: 30px; // override .header h2
+  }
+}
+.year-badge-corner {
+  width: 0;
+  height: 0;
+  border-left: 45px solid transparent;
+  border-right: 45px solid transparent;
+  border-top: 20px solid @color_asce_primary;
+}
+
+
+// just putting this here for now
+// later find a way to integrate it with .year-badge
+.year-badge-wrapper {
+  position: absolute;
+  margin-left: -45px;
+  @media (max-width: 767px) {
+    display: none;
+    // top: 0px;
+    // left: 10px;
+    // margin: 0;
+    // zoom: 0.75;
+    // -ms-zoom: 0.75;
+    // -webkit-zoom: 0.75;
+    // -moz-transform:  scale(0.75,0.75);
+    // -moz-transform-origin: top center;
+  }
+}

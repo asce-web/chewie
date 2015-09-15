@@ -1,0 +1,108 @@
+doctype html
+html
+  head
+    title UI Components | Styleguide
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="/css/futura.css")
+    link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,600italic,700italic,400,600,700")
+    link(rel="stylesheet", href="/css/vendor/bootstrap.min.css")
+    link(rel="stylesheet", href="/styles/chewie.css")
+    link(rel="stylesheet", href="/styleguide/styleguide.css")
+  body
+    main
+      h1 UI Components
+      section.doc-ss
+        h2 Year Badge
+        p A badge showing the year of the current conference.
+        figure(style="margin-bottom:8em;")
+          span.c-YearBadge(style="left:1em;") 15
+      section.doc-ss
+        h2 Institute Shield
+        p An image of Institute&rsquo;s shield icon in charge of conference.
+        figure
+          img.conference-logo(src="/img/conf-logo.png")
+      section.doc-ss
+        h2 Speaker Photo
+        p An image with margins. Usually appears in a speaker profile.
+        figure
+          img.c-SpeakerPhoto(src="/img/FPO_speaker_130x130.jpg", alt="speaker")
+      section.doc-ss
+        h2 Navigation Bars
+        section.doc-ss
+          h3 Generic Navigation Bar
+          figure
+            nav.c-NavBar
+              a.c-NavBar__Link.c-NavBar__Link--index --index
+              a.c-NavBar__Link Link
+              a.c-NavBar__Link Link
+              a.c-NavBar__Link Link
+              a.c-NavBar__Link Link
+        section.doc-ss
+          h3 Main Navigation Bar
+          figure
+            nav.c-NavBar.c-NavBar--main
+              a.c-NavBar__Link.c-NavBar__Link--index: span.ic.home
+              a.c-NavBar__Link Program
+              a.c-NavBar__Link Location
+              a.c-NavBar__Link About
+              a.c-NavBar__Link Contact
+        section.doc-ss
+          h3 Side Navigation Bar
+          figure
+            nav.c-NavBar.c-NavBar--side
+              a.c-NavBar__Link Why Attend
+              a.c-NavBar__Link Registration
+        section.doc-ss
+          h3 Utility Navigation Bar
+          figure
+            nav.c-NavBar.c-NavBar--utility
+              a.c-NavBar__Link For Speakers
+              a.c-NavBar__Link Sponsors
+              a.c-NavBar__Link Exhibitors
+        section.doc-ss
+          h3 Secondary Navigation Bar
+          figure(style="margin-bottom:4em;")
+            nav.c-NavBar.c-NavBar--secondary
+              a.c-NavBar__Link Lodging & Transportation
+              a.c-NavBar__Link For International Travel
+        section.doc-ss
+          h3 Year Tab Bar
+          figure
+            nav.c-NavBar.c-NavBar--tabs
+              a.c-NavBar__Link 2000
+              a.c-NavBar__Link 2001
+              a.c-NavBar__Link 2002
+              a.c-NavBar__Link.current .current
+      section.doc-ss
+        h2 Speaker Profile
+        p.devnote.
+          this doesn't need to be a component. we could use objects here,
+          given a robust grid system.
+        figure
+          div.speaker-profile
+            div.session-col
+              div.dateline Thursday #[div.date Apr 3]
+              div.sessiontype Opening Plenary
+            div.photo-col
+              img.c-SpeakerPhoto(src="/img/FPO_speaker_130x130.jpg", alt="speaker")
+            div.details-col
+              div.person-name Charles Johnson
+              div.person-title Ph.D., P.E., S.E., CVS, F.ASCE Illuminate Foundry, Inc.
+              a.button Speaker Details
+        figure
+          section.speaker-profile
+            div.photo-col
+              img.c-SpeakerPhoto(src="/img/FPO_speaker_130x130.jpg", alt="speaker")
+            div.details-col
+              div.person-name Charles Johnson
+              div.person-title Ph.D., P.E., S.E., CVS, F.ASCE Illuminate Foundry, Inc.
+              p.
+                Description of this person’s talk and/or a profile of this person.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
+                amet, consectetur adipisicing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua.

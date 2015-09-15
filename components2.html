@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ASCE Conferences</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/futura.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,600italic,700italic,400,600,700">
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/chewie.css">
+    <style>
+      section.doc-ss {
+        /* sections scoped in this document */
+        margin-left: 1em;
+        background-color: rgba(0,0,0,0.03);
+      }
+      figure {
+        padding: 0.5em;
+        margin: 0.5em;
+        border: 1px solid #e6f1f9;
+        border-radius: 8px;
+        position: relative; /* for containing other relative things */
+        background: #f6fafd; /* lighten(#e6f1f9, 4%) */
+      }
+      .devnote {
+        margin: 0 0.5em;
+        padding: 0.5em;
+        color: #c64;
+        background: #f5fbeb;
+        opacity: 0.8;
+      }
+      .devnote::before { content:'(devs: '; }
+      .devnote::after  { content:')'; }
+    </style>
+  </head>
+  <body>
+    <h1>Site-Wide Components</h1>
+    <p>
+      This is the &ldquo;kitchen sink.&rdquo;
+      This page lists all the usual components needed on any given conference site.
+      Each component is shown independent of location and context,
+      apart from other components and apart from its usual position on a site page.
+      <strong>This is <em>not</em> meant to be a page mockup or wireframe.</strong>
+      It is simply used by developers to organize components into logical groupings
+      and to see what they look like out of context.
+    </p>
+    <p>
+      There are two general types of components: typographical components and
+      UI components.
+    </p>
+    <p><b>Typographical components</b> are of a static nature and consist
+      mainly of textual content. There is little to no user interaction required.
+      Examples include kinds of boxes or sections that contain descriptions, and
+      inline-level elements such as dates and places.
+    </p>
+    <p><b>UI (user-interactive) components</b> are the dynamic bells-and-whistles
+      that make a webpage pop. These are things that users are likely to interact
+      with, such as alerts, labels, navigation, and buttons.
+      Specially-styled (not default) form elements also go in this category.
+      Not all of these must be interactive, though. Some UI components can
+      just sit there and look pretty (like an icon or badge).
+    </p>
+    <p><strong>Note:</strong> On this page, each component demo will be placed in a
+      <code>&lt;figure&gt;</code> element to separate it from the surrounding content.
+    </p>
+    <section class="doc-ss">
+      <h1>Typographical Components</h1>
+      <section class="doc-ss">
+        <h1>Headings</h1>
+        <p>This section lists every single type of heading used on a site.</p>
+        <figure>
+          <p>This figure shows headings belonging in the site header/footer.</p>
+          <h1 class="c-ConferenceName">Conference Name</h1>
+          <h1 class="c-ConferenceLocation">Conference Location | Dates</h1>
+          <h1 class="c-ConferenceVenue">Conference Venue</h1>
+          <h1 class="c-ConferenceTagline">Conference Tagline</h1>
+        </figure>
+        <figure class="footer">
+          <p class="devnote">These are the same headings above, shown in a <code>.footer</code>.
+            Notice the similarities. We can probably remove these
+            
+            <q>similar-but-not-identical</q> components.
+          </p>
+          <h1 class="c-ConferenceName">Conference Name</h1>
+          <h1 class="c-ConferenceLocation">Conference Location | Dates</h1>
+          <h1 class="c-ConferenceVenue">Conference Venue</h1>
+          <h1 class="c-ConferenceTagline">Conference Tagline</h1>
+        </figure>
+        <figure>
+          <p>This figure shows headings belonging in page content.</p>
+          <h1 class="c-H--alpha">Page Heading (alpha)</h1>
+          <h1 class="c-H--beta">Section Heading (beta)</h1>
+          <h1 class="c-H--gamma">Section Subheading (gamma)</h1>
+          <h1 class="c-H--delta">Section Subsubheading (delta)</h1>
+        </figure>
+        <figure>
+          <p>This figure shows specific headings used in other components.</p>
+          <h1 class="c-Callout__Heading">Generic Callout Heading (in sidebar)</h1>
+          <h1 class="c-LinkBlock__Heading">Link Block Heading (in footer)</h1>
+        </figure>
+      </section>
+      <section class="doc-ss">
+        <h1>Callouts</h1>
+        <section class="doc-ss">
+          <h2>Generic Callout</h2>
+          <figure>
+            <section class="c-Callout">
+              <h1 class="c-Callout__Heading">Generic Callout Heading</h1>
+              <div class="c-Callout__Body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. eiusmod tempor.</p>
+                <section>
+                  <h1 class="c-Callout__Subheading">Callout Subheading</h1><a href="">Example link lorem ipsum dolor</a>
+                </section>
+              </div>
+            </section>
+          </figure>
+        </section>
+        <section class="doc-ss">
+          <h2>Register Callout</h2>
+          <figure>
+            <section class="c-Callout c-Callout--register">
+              <h1 class="c-Callout__Heading">Register Callout Heading</h1>
+              <div class="c-Callout__Body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. eiusmod tempor.</p>
+                <section>
+                  <h1 class="c-Callout__Subheading">Callout Subheading</h1><a href="">Example link lorem ipsum dolor</a>
+                </section>
+              </div>
+            </section>
+          </figure>
+        </section>
+        <section class="doc-ss">
+          <h2>Dates Callout</h2>
+          <figure>
+            <section class="c-Callout c-Callout--dates">
+              <h1 class="c-Callout__Heading">Important Dates Callout Heading</h1>
+              <div class="c-Callout__Body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. eiusmod tempor.</p>
+                <section>
+                  <h1 class="c-Callout__Subheading">Callout Subheading</h1><a href="">Example link lorem ipsum dolor</a>
+                </section>
+              </div>
+            </section>
+          </figure>
+        </section>
+        <section class="doc-ss">
+          <h2>Sponsors Callout</h2>
+          <figure>
+            <section class="c-Callout c-Callout--sponsors">
+              <h1 class="c-Callout__Heading">Sponsors Callout Heading</h1>
+              <div class="c-Callout__Body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. eiusmod tempor.</p>
+                <section>
+                  <h1 class="c-Callout__Subheading">Callout Subheading</h1><a href="">Example link lorem ipsum dolor</a>
+                </section>
+              </div>
+            </section>
+          </figure>
+        </section>
+      </section>
+    </section>
+    <section class="doc-ss">
+      <h1>UI Components</h1>
+      <section class="doc-ss">
+        <h1>Year Badge</h1>
+        <p>A badge showing the year of the current conference.</p>
+        <figure style="margin-bottom:8em;">
+          <div style="left:1em;" class="c-YearBadge">15</div>
+        </figure>
+      </section>
+      <section class="doc-ss">
+        <h1>Institute Shield</h1>
+        <p>An image of Institute&rsquo;s shield icon in charge of conference.</p>
+        <figure><img src="../img/conf-logo.png" class="conference-logo"></figure>
+      </section>
+      <section class="doc-ss">
+        <h1>Speaker Photo</h1>
+        <p>An image with margins. Usually appears in a speaker profile.</p>
+        <figure><img src="img/FPO_speaker_130x130.jpg" alt="speaker" class="c-SpeakerPhoto"></figure>
+      </section>
+      <section class="doc-ss">
+        <h1>Navigation Bars</h1>
+        <section class="doc-ss">
+          <h2>Generic Navigation Bar</h2>
+          <figure>
+            <nav class="c-NavBar"><a class="c-NavBar__Link c-NavBar__Link--index">--index</a><a class="c-NavBar__Link">Link</a><a class="c-NavBar__Link">Link</a><a class="c-NavBar__Link">Link</a><a class="c-NavBar__Link">Link</a></nav>
+          </figure>
+        </section>
+        <section class="doc-ss">
+          <h2>Main Navigation Bar</h2>
+          <figure>
+            <nav class="c-NavBar c-NavBar--main"><a class="c-NavBar__Link c-NavBar__Link--index"><span class="ic home"></span></a><a class="c-NavBar__Link">Program</a><a class="c-NavBar__Link">Location</a><a class="c-NavBar__Link">About</a><a class="c-NavBar__Link">Contact</a></nav>
+          </figure>
+        </section>
+        <section class="doc-ss">
+          <h2>Side Navigation Bar</h2>
+          <figure>
+            <nav class="c-NavBar c-NavBar--side"><a class="c-NavBar__Link">Why Attend</a><a class="c-NavBar__Link">Registration</a></nav>
+          </figure>
+        </section>
+        <section class="doc-ss">
+          <h2>Utility Navigation Bar</h2>
+          <figure>
+            <nav class="c-NavBar c-NavBar--utility"><a class="c-NavBar__Link">For Speakers</a><a class="c-NavBar__Link">Sponsors</a><a class="c-NavBar__Link">Exhibitors</a></nav>
+          </figure>
+        </section>
+        <section class="doc-ss">
+          <h2>Secondary Nav Bar</h2>
+          <figure style="margin-bottom:4em;">
+            <nav class="c-NavBar c-NavBar--secondary"><a class="c-NavBar__Link">Lodging & Transportation</a><a class="c-NavBar__Link">For International Travel</a></nav>
+          </figure>
+        </section>
+        <section class="doc-ss">
+          <h2>Year Tab Bar</h2>
+          <figure>
+            <nav class="c-NavBar c-NavBar--tabs"><a class="c-NavBar__Link">2000</a><a class="c-NavBar__Link">2001</a><a class="c-NavBar__Link">2002</a><a class="c-NavBar__Link current">.current</a></nav>
+          </figure>
+        </section>
+      </section>
+      <section class="doc-ss">
+        <h1>Speaker Profile</h1>
+        <p class="devnote">
+          this doesn't need to be a component. we could use objects here,
+          given a robust grid system.
+        </p>
+        <figure>
+          <div class="speaker-profile">
+            <div class="session-col">
+              <div class="dateline">Thursday 
+                <div class="date">Apr 3</div>
+              </div>
+              <div class="sessiontype">Opening Plenary</div>
+            </div>
+            <div class="photo-col"><img src="img/FPO_speaker_130x130.jpg" alt="speaker" class="c-SpeakerPhoto"></div>
+            <div class="details-col">
+              <div class="person-name">Charles Johnson</div>
+              <div class="person-title">Ph.D., P.E., S.E., CVS, F.ASCE Illuminate Foundry, Inc.</div><a class="button">Speaker Details</a>
+            </div>
+          </div>
+        </figure>
+        <figure>
+          <section class="speaker-profile">
+            <div class="photo-col"><img src="img/FPO_speaker_130x130.jpg" alt="speaker" class="c-SpeakerPhoto"></div>
+            <div class="details-col">
+              <div class="person-name">Charles Johnson</div>
+              <div class="person-title">Ph.D., P.E., S.E., CVS, F.ASCE Illuminate Foundry, Inc.</div>
+              <p>
+                Description of this person’s talk and/or a profile of this person.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
+                amet, consectetur adipisicing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </section>
+        </figure>
+      </section>
+    </section>
+    <div style="padding-top: 2em; border-top: 4px double black; margin-top: 2em;" class="strict">
+      <div class="toggleable-nav fade">
+          <div tabindex="0" class="ic close-nav">X</div>
+          <div class="link-block">
+              <a class="large uppercase" href="">Home</a>
+          </div>
+          <div class="link-block">
+              <a class="large uppercase" href="">Program</a>
+              <a href="">Speakers</a>
+              <a href="">Exhibitor List</a>
+              <a href="">ASCE Communities & Pavilions</a>
+          </div>
+          <div class="link-block">
+              <a class="large uppercase" href="">Location</a>
+              <a href="">Lodging & Transportation</a>
+              <a href="">For International Travel</a>
+          </div>
+          <div class="link-block">
+              <a class="large uppercase" href="">About</a>
+              <a href="">Cooperating Organizations</a>
+              <a href="">Volunteer</a>
+          </div>
+          <a class="large uppercase" href="">Why Attend</a>
+          <a class="large uppercase" href="">Registration</a>
+          <a class="large uppercase" href="">For Speakers</a>
+          <a class="large uppercase" href="">Sponsors</a>
+          <a class="large uppercase" href="">Exhibitors</a>
+      </div>
+      <div class="header">
+          <div class="visible-xs mobile-nav navigation">
+              <div class="year-badge-wrapper">
+                  <div class="year-badge text-center">
+                      <h2><span class="light">20</span>14</h2>
+                  </div>
+                  <div class="year-badge-corner"></div>
+              </div>
+              <a href=""><span class="ic home"></span></a>
+              <a href="">Register</a>
+              <a class="menu-toggle" href="">Menu <span class="ic menu"></span></a>
+          </div>
+          <div class="container-fluid titles">
+              <div class="container">
+                  <div class="col-container">
+                      <div class="logo-col text-center">
+                          <img class="conference-logo" src="../img/conf-logo.png"/>
+                      </div>
+                      <div class="auto-col">
+                          <h2>2ND T&amp;DI GREEN STREETS, HIGHWAYS &amp; DEVELOPMENT CONFERENCE
+                              <h5>Boston, Massachusetts  |  April 3-5, 2014</h5>
+                          </h2>
+                          <h4 class="hidden-xs">Optional Tagline for the Conference Goes Here Lorem Ipsum</h4>
+                      </div>
+                      <div class="side-nav-col hidden-xs" hidden-xs style="background-image: url(../img/fpo-header.jpg);">
+                          <div class="year-badge-wrapper hidden-xs">
+                              <div class="year-badge text-center">
+                                  <h2><span class="light">20</span>14</h2>
+                              </div>
+                              <div class="year-badge-corner"></div>
+                          </div>
+                          <div class="right-header hidden-xs">
+                              <div class="nav3">
+                                  <a href="">For Speakers</a>
+                                  <a href="">Sponsors</a>
+                                  <a href="">Exhibitors</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="container-fluid navigation hidden-xs">
+              <div class="container">
+                  <div class="col-container">
+                      <div class="auto-col">
+                          <div class="nav1">
+                              <a class="no-hover" href=""><span class="ic home"></span></a>
+                              <a class="current-page" href="" data-menu-target="#programlevel2">Program <span class="ic chevron-down"></span></a>
+                              <a href="" data-menu-target="#locationlevel2">Location <span class="ic chevron-down"></span></a>
+                              <a href="" data-menu-target="#aboutlevel2">About <span class="ic chevron-down"></span></a>
+                              <a href="" class="no-hover hidden-md hidden-lg"><span class="ic contact">Contact</span></a>
+                              <a href="" class="hidden-sm hidden-xs">Contact</a>
+                          </div>
+                      </div>
+                      <div class="side-nav-col">
+                          <div class="nav2">
+                              <a href="">Why Attend</a>
+                              <a href="">Registration</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="container-fluid navigation-level2 show-current-page">
+              <div class="container">
+                  <ul id="programlevel2" class="list-unstyled current-page">
+                      <li><a href="">Speakers</a></li>
+                      <li><a href="">Exhibitor List</a></li>
+                      <li><a href="">ASCE Communities & Pavilion</a></li>
+                  </ul>
+                  <ul id="locationlevel2" class="list-unstyled">
+                      <li><a href="">Lodging & Transportation</a></li>
+                      <li><a href="">For International Travel</a></li>
+                  </ul>
+                  <ul id="aboutlevel2" class="list-unstyled">
+                      <li><a href="">Cooperating Organizations</a></li>
+                      <li><a href="">Volunteer</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+          <div class="container-fluid">
+              <div class="container content">
+                  <div class="col-container">
+                      <div class="auto-col">
+                          <a class="breadcrumb-link" href="">Breadcrumb ></a>
+                          <h1>MISCELLANEOUS COMPONENTS</h1>
+                          <div class="share-logos">
+                              SHARE
+                              <img src="img/fpo-share-logos.png">
+                          </div>
+                          <br>
+                          <div class="intro">.intro class - 16/24 semibold. Registration is managed by ASCE. When registering online, sign-in with your ASCE account. If you do not have one, you will be prompted to create one at no additional charge.</div>
+      
+                          <h2>PRE-CONFERENCE SEMINARS</h2>
+                          <p>Sign up to earn additional PDHs at a pre-conference seminar:</p>
+      
+                          <h3>H3 Lorem ipsum dolor</h3>
+                          <p>6.0 PDHs - in cooperation with California Office of Emergency Services (CalOES) and Applied Technology Council (ATC)</p>
+      
+                          <h4>H4 lorem ipsum</h4>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+      
+                          <h5>H5-H6-H7 lorem ipsum</h5>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+      
+                          <div class="session">Design of Sustainable Thermal Breaks</div>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+      
+                          <div class="accordion panel-group" id="accordion">
+                            <div class="panel panel-default">
+                              <div data-toggle="collapse" href="#collapseOne" class="panel-heading">
+                                <span class="ic collapse-icon">toggle</span>
+                                <h2 class="panel-title">
+                                    Collapsible Group Item #1
+                                </h2>
+                                <p>Comprehensive registration package for individuals planning to attend the entire conference.</p>
+                              </div>
+                              <div id="collapseOne" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                  <h3>LOREM IPSUM</h3>
+                                  <p>
+                                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                  </p>
+                                  <h3>LOREM IPSUM</h3>
+                                  <p>
+                                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="panel panel-default">
+                              <div data-toggle="collapse" href="#collapseTwo" class="panel-heading collapsed">
+                                <span class="ic collapse-icon">toggle</span>
+                                <h2 class="panel-title">
+                                    Collapsible Group Item #2
+                                </h2>
+                                <p>Comprehensive registration for full-time students planning to attend the entire conference.</p>
+                              </div>
+                              <div id="collapseTwo" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                  <h3>LOREM IPSUM</h3>
+                                  <p>
+                                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="panel panel-default">
+                              <div data-toggle="collapse" href="#collapseThree" class="panel-heading collapsed">
+                                <span class="ic collapse-icon">toggle</span>
+                                <h2 class="panel-title">
+                                    Collapsible Group Item #3
+                                </h2>
+                              </div>
+                              <div id="collapseThree" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                  <p>
+                                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+      
+                          <h3 class="table-header">H3 open sanS HEADER TABLE VIEW </h3>
+                          <table>
+                              <thead>
+                                  <tr>
+                                      <td>QTY</td>
+                                      <td>Column Header</td>
+                                      <td>Column Header</td>
+                                      <td>QTY</td>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr>
+                                      <td>23</td>
+                                      <td>Lorem ipsum</td>
+                                      <td>Bandit neque nec.</td>
+                                      <td>23</td>
+                                  </tr>
+                                  <tr>
+                                      <td>23</td>
+                                      <td>Lorem ipsum</td>
+                                      <td>Bandit neque nec.</td>
+                                      <td>23</td>
+                                  </tr>
+                                  <tr>
+                                      <td>23</td>
+                                      <td>Lorem ipsum</td>
+                                      <td>Bandit neque nec.</td>
+                                      <td>23</td>
+                                  </tr>
+                                  <tr>
+                                      <td>23</td>
+                                      <td>Lorem ipsum</td>
+                                      <td>Bandit neque nec.</td>
+                                      <td>23</td>
+                                  </tr>
+                                  <tr>
+                                      <td>23</td>
+                                      <td>Lorem ipsum</td>
+                                      <td>Bandit neque nec.</td>
+                                      <td>23</td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                          <div class="speaker-profile">
+                                  <div class="photo-col">
+                                      <img src="img/FPO_speaker_130x130.jpg" alt="speaker">
+                                  </div>
+                                  <div class="details-col">
+                                      <div class="person-name">Charles Johnson</div>
+                                      <div class="person-title">Ph.D., P.E., S.E., CVS, F.ASCE Illuminate Foundry, Inc.</div>
+                                      <p>Description of this person’s talk and/or a profile of this person. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                  </div>
+                          </div>
+                          <p>Below is a conference summary banner. It can be placed at the top of pages that have information about past year&rsquo;s and future year&rsquo;s conference. The color in the banner should ideally correspond to the key theme color for that year&rsquo;s conference - which may or may not be the same as the current year&rsquo;s key color.</p>
+                          <div class="summary-banner past">
+                              <div class="col-container">
+                                  <div class="logo-col">
+                                      <div class="year-badge text-center">
+                                          <h2><span class="light">20</span>13</h2>
+                                      </div>
+                                      <div class="year-badge-corner"></div>
+                                  </div>
+                                  <div class="auto-col">
+                                      <h2>1st T&amp;DI Green Streets, Highways &amp; Development Conference</h2>
+                                      <h3>Toronto, Canada  |  May 2-4, 2013</h3>
+                                      <h4>Baylord Hotel</h4>
+                                  </div>
+                              </div>
+                          </div>
+      
+                          <div class="summary-banner future">
+                              <div class="col-container">
+                                  <div class="logo-col">
+                                      <div class="year-badge text-center">
+                                          <h2><span class="light">20</span>15</h2>
+                                      </div>
+                                      <div class="year-badge-corner"></div>
+                                  </div>
+                                  <div class="auto-col">
+                                      <h2>3rd T&amp;DI Green Streets, Highways &amp; Development Conference</h2>
+                                      <h3>Mexico City, Mexico  |  April 30 - May 2, 2015</h3>
+                                      <h4>Fuentes Conference Center</h4>
+                                  </div>
+                              </div>
+                          </div>
+      
+                          <div class="note-flag">
+                              Program is now over
+                          </div>
+                          <br>
+                          <a href="" class="link-arrow">Technical sessions by speaker</a>
+                          <br>
+                          <br>
+                          <hr>
+                          <div class="logo-grid">
+                              <table>
+                                  <tbody>
+                                      <tr>
+                                          <td>
+                                              <img src="img/sponsor_logo_horizontal3.gif" alt="">
+                                              <div>
+                                                  Le Messurier
+                                              </div>
+                                              <a href="">www.lemessurier.com</a>
+                                          </td>
+                                          <td>
+                                              <img src="img/Sponsorlogo_square1.gif" alt="">
+                                              <div>
+                                                  Le Messurier
+                                              </div>
+                                              <a href="">www.lemessurier.com</a>
+                                          </td>
+                                          <td>
+                                              <img src="img/sponsor_logo_horizontal4.gif" alt="">
+                                              <div>
+                                                  Le Messurier
+                                              </div>
+                                              <a href="">www.lemessurier.com</a>
+                                          </td>
+      
+                                      </tr>
+                                  </tbody>
+                              </table>
+                          </div>
+                          <button>Med Button</button>
+                          <button>Speaker Details</button>
+                          <br>
+                          <button style="font-size: 18px;">Big 18pt Button</button>
+                          <br>
+                          <button style="font-size: 12px;">Small 12pt Button</button>
+      
+                          <h2>Unordered List</h2>
+                          <ul>
+                              <li>Lorem ipsum</li>
+                              <li>Speaker details</li>
+                              <li>Program is now over
+                                  <ul>
+                                      <li>Nested list item</li>
+                                      <li>Nested list item
+                                          <ul>
+                                              <li>Another nested list item</li>
+                                              <li>Another nested list item</li>
+                                          </ul>
+                                      </li>
+                                  </ul>
+                              </li>
+                          </ul>
+      
+                          <h2>Ordered List</h2>
+                          <ol>
+                              <li>Lorem ipsum</li>
+                              <li>Speaker details</li>
+                              <li>Program is now over
+                                  <ol>
+                                      <li>Nested list item</li>
+                                      <li>Nested list item
+                                          <ol>
+                                              <li>Another nested list item</li>
+                                              <li>Another nested list item</li>
+                                          </ol>
+                                      </li>
+                                  </ol>
+                              </li>
+                          </ol>
+      
+                          <form action="">
+                              <h2>Form name</h2>
+                              <div class="row">
+                                  <div class="col-md-6">
+                                      <label for="">First Name <em>*</em></label>
+                                      <input type="text" value="test">
+                                  </div>
+                                  <div class="col-md-6">
+                                      <label for="">Last Name</label>
+                                      <input type="text" value="test">
+                                  </div>
+                              </div>
+                              <label for="">Email <em>*</em></label>
+                              <input type="text" value="test">
+                              <label for="">Select</label>
+                              <select name="" id="">
+                                  <option value="">Option 1</option>
+                                  <option value="">Option 2</option>
+                                  <option value="">Option 3</option>
+                              </select>
+                              <button class="pull-right">Submit</button>
+                          </form>
+                      </div>
+                      <div class="side-nav-col">
+                          <div class="callout">
+                              <h2>Generic Callout</h2>
+                              <div class="callout-body">
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. eiusmod tempor.</p>
+                                  <h3>Example H3 Lorem ipsum dolor</h3>
+                                  <a href="">Example link lorem ipsum dolor</a>
+                              </div>
+                          </div>
+                          <div class="callout">
+                              <h2>Questions?</h2>
+                              <div class="callout-body">
+                                  <div class="phone">703-123-4567</div>
+                                  <a href="mailto:jsmith@asce.org">jsmith@asce.org</a>
+                                  <div class="live-chat">Live Chat <span>by LivePerson</span></div>
+                                  <br>
+                                  <p>Customer service reps are available to answer your questions via live chat Mon-Fri 9am-6pm ET 9am-6pm ET</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="container-fluid content">
+              <div class="coop-orgs-block row">
+                  <div class="container">
+                      <h2>COOPERATING ORGANIZATIONS</h2>
+                      <img src="img/cooplogo_square1.gif" alt="">
+                      <img src="img/cooplogo_horizontal1.gif" alt="">
+                      <img src="img/cooplogo_horizontal2.gif" alt="">
+                      <img src="img/cooplogo_horizontal3.gif" alt="">
+                      <img src="img/cooplogo_square4.gif" alt="">
+                      <img src="img/cooplogo_horizontal4.gif" alt="">
+                      <img src="img/cooplogo_square2.gif" alt="">
+                  </div>
+              </div>
+              <div class="container sponsor-container">
+                  <h2>2014 Top Sponsors</h2>
+                  <div class="top-sponsor-block platinum">
+                      <div class="box">
+                          <img src="img/sponsor_logo_horizontal2.gif" alt="">
+                          <img src="img/sponsor_logo_horizontal1.gif" alt="">
+                      </div>
+                  </div>
+                  <div class="top-sponsor-block gold">
+                      <div class="box">
+                          <img src="img/Sponsorlogo_square1.gif" alt="">
+                          <img src="img/sponsor_logo_horizontal3.gif" alt="">
+                          <img src="img/sponsor_logo_horizontal4.gif" alt="">
+                      </div>
+                  </div>
+              </div>
+          </div>
+      <div class="footer container-fluid">
+          <div class="row year-tabs">
+              <div class="container">
+                  <ul class="tab-buttons pull-right list-unstyled">
+                       <li><a href="#yearprev" data-toggle="tab" class="tab-button">2013</a></li>
+                       <li class="active"><a href="#yearpresent" data-toggle="tab" class="tab-button">2014</a></li>
+                       <li><a href="#yearnext" data-toggle="tab" class="tab-button">2015</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="tab-content">
+              <div class="tab-pane" id="yearprev">
+                  <div class="row title">
+                      <div class="container">
+                          <div class="hidden-xs pull-left">
+                              <div class="year-badge text-center">
+                                  <h2><span class="light">20</span>13</h2>
+                              </div>
+                              <div class="year-badge-corner"></div>
+                          </div>
+                          <h2>1st T&DI Green Streets, Highways & Development Conference</h2>
+                      </div>
+                  </div>
+                  <div class="row details year-prev-next">
+                      <div class="container">
+                          <div class="col-container">
+                              <div class="logo-col hidden-xs text-center"><img class="conference-logo" src="../img/conf-logo.png"/></div>
+                              <div class="auto-col">
+                                  <div class="col-sm-12 col-xs-10 col4">
+                                      <h2>TORONTO, CANADA  |  MAY 2-4, 2013</h2>
+                                      <h3>Baylord Hotel</h3>
+                                      <h4>Optional Tagline for the Conference Goes Here Lorem Ipsum</h4>
+                                      <p><strong>This is a place to write the theme or a brief description of this conference. It’s optional. lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum.</strong></p>
+                                      <a class="link-arrow" href="">Program</a>
+                                      <a class="link-arrow" href="">Proceedings</a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="tab-pane active" id="yearpresent">
+                  <div class="row title">
+                      <div class="container">
+                          <div class="hidden-xs pull-left">
+                              <div class="year-badge text-center">
+                                  <h2><span class="light">20</span>14</h2>
+                              </div>
+                              <div class="year-badge-corner"></div>
+                          </div>
+                          <h2>2nd T&DI Green Streets, Highways & Development Conference</h2>
+                      </div>
+                  </div>
+                  <div class="row details">
+                      <div class="container">
+                          <div class="col-container">
+                              <div class="logo-col hidden-xs text-center"><img class="conference-logo" src="../img/conf-logo.png"/></div>
+                              <div class="auto-col">
+                                  <div class="col-sm-4 hidden-xs">
+                                      <div class="link-block">
+                                          <a class="large uppercase" href="">Home</a>
+                                      </div>
+                                      <div class="link-block">
+                                          <a class="large uppercase" href="">Program</a>
+                                          <a href="">Speakers</a>
+                                          <a href="">Exhibitor List</a>
+                                          <a href="">ASCE Communities & Pavilions</a>
+                                      </div>
+                                      <div class="link-block">
+                                          <a class="large uppercase" href="">Location</a>
+                                          <a href="">Lodging & Transportation</a>
+                                          <a href="">For International Travel</a>
+                                      </div>
+                                      <div class="link-block">
+                                          <a class="large uppercase" href="">About</a>
+                                          <a href="">Cooperating Organizations</a>
+                                          <a href="">Volunteer</a>
+                                      </div>
+                                  </div>
+                                  <div class="col-sm-4 col3 hidden-xs">
+                                      <a class="large" href="">Why Attend</a>
+                                      <a class="large" href="">Registration</a>
+                                      <a class="large" href="">For Speakers</a>
+                                      <a class="large" href="">Sponsors</a>
+                                      <a class="large" href="">Exhibitors</a>
+                                  </div>
+                                  <div class="pull-left col-xs-2 visible-xs"><img class="conference-logo" src="../img/conf-logo.png"/></div>
+                                  <div class="col-sm-4 col-xs-10 col4">
+                                      <div class="link-block contact">
+                                          <h3>Contact Us</h3>
+                                          <a class="large" href=""><span class="ic mobile-phone"></span>(800) 548-2723</a>
+                                          <a class="large" href=""><span class="ic twitter"></span>#structures2014</a>
+                                          <a class="large" href=""><span class="ic contact-large"></span>Other contacts</a>
+                                      </div>
+                                      <div class="link-block connect">
+                                          <h3>Connect With ASCE</h3>
+                                          <a href=""><span class="ic linkedin"></span></a>
+                                          <a href=""><span class="ic facebook"></span></a>
+                                          <a href=""><span class="ic twitter"></span></a>
+                                          <a href=""><span class="ic youtube"></span></a>
+                                          <a href=""><span class="ic google"></span></a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="visible-xs mobile-nav navigation">
+                      <a href=""><span class="ic home"></span></a>
+                      <a href="">Register</a>
+                      <a class="menu-toggle" href="">Menu <span class="ic menu"></span></a>
+                  </div>
+              </div>
+              <div class="tab-pane" id="yearnext">
+                  <div class="row title">
+                      <div class="container">
+                          <div class="hidden-xs pull-left">
+                              <div class="year-badge text-center">
+                                  <h2><span class="light">20</span>15</h2>
+                              </div>
+                              <div class="year-badge-corner"></div>
+                          </div>
+                          <h2>3rd T&DI Green Streets, Highways & Development Conference</h2>
+                      </div>
+                  </div>
+                  <div class="row details year-prev-next">
+                      <div class="container">
+                          <div class="col-container">
+                              <div class="logo-col hidden-xs text-center"><img class="conference-logo" src="../img/conf-logo.png"/></div>
+                              <div class="auto-col">
+                                  <div class="col-sm-12 col-xs-10 col4">
+                                      <h2>Mexico City, Mexico  |  April 30 -  May 2, 2015</h2>
+                                      <h3>Fuentes Conference center</h3>
+                                      <h4>Optional Tagline for the Conference Goes Here Lorem Ipsum</h4>
+                                      <p><strong>This is a place to write the theme or a brief description of this conference. It’s optional. lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum.</strong></p>
+                                      <a class="link-arrow" href="">Call for submissions</a>
+                                      <a class="link-arrow" href="">Sponsors</a>
+                                      <a class="link-arrow" href="">Exhibit</a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="row copyright text-center">
+              <div class="container">
+                  <div class="asce-logo"></div>
+                  <span>Copyright © 1996-2014, American Society of Civil Engineers | <a href="">ASCE.org</a></span>
+              </div>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
