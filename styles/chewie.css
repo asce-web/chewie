@@ -82,7 +82,7 @@ body {
     ## SECTIONS
 \*++++++++++++++++++++++++++++++++*/
 hr {
-  margin-top: 0px;
+  margin-top: 0;
   border-top: 2px solid #f4f4f5;
 }
 /*++++++++++++++++++++++++++++++++*\
@@ -218,6 +218,7 @@ img {
   width: auto;
   height: auto;
   max-width: 100%;
+  font-style: italic;
 }
 button {
   font-family: 'futura-pt', 'Open Sans', 'Arial', sans-serif;
