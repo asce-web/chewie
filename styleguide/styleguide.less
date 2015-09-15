@@ -1,0 +1,28 @@
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
+    styleguide.less
+\*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+section.doc-ss {
+  // sections scoped in the document
+  margin-left: 1em;
+  background-color: rgba(0,0,0,0.03);
+}
+figure {
+  padding: 0.5em;
+  margin: 0.5em;
+  border: 1px solid #e5eaef;
+  border-radius: 8px;
+  position: relative; // for containing other relative things
+  background: #f5faff;
+}
+.devnote {
+  margin: 0 0.5em;
+  padding: 0.5em;
+  color: #c64;
+  background: #f5fbeb;
+  opacity: 0.8;
+  &::before { content:'(devs: '; }
+  &::after  { content:')'; }
+}

@@ -1936,6 +1936,12 @@ a.button a:focus {
 /*################################*\
     _trumps.utils.less
 \*################################*/
+.u-d_ib {
+  display: inline-block !important;
+}
+.u-mr_1 {
+  margin-right: 1em !important;
+}
 .uppercase {
   text-transform: uppercase;
 }
