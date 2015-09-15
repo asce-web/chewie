@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>UI Components | Styleguide</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/futura.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,600italic,700italic,400,600,700">
+    <link rel="stylesheet" href="/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/chewie.css">
+    <link rel="stylesheet" href="/styleguide/styleguide.css">
+  </head>
+  <body>
+    <main>
+      <h1>UI Components</h1>
+      <section class="doc-ss">
+        <h2>Year Badge</h2>
+        <p>A badge showing the year of the current conference.</p>
+        <figure style="margin-bottom:8em;"><span style="left:1em;" class="c-YearBadge">15</span></figure>
+      </section>
+      <section class="doc-ss">
+        <h2>Institute Shield</h2>
+        <p>An image of Institute&rsquo;s shield icon in charge of conference.</p>
+        <figure><img src="/img/conf-logo.png" class="conference-logo"></figure>
+      </section>
+      <section class="doc-ss">
+        <h2>Speaker Photo</h2>
+        <p>An image with margins. Usually appears in a speaker profile.</p>
+        <figure><img src="/img/FPO_speaker_130x130.jpg" alt="speaker" class="c-SpeakerPhoto"></figure>
+      </section>
+      <section class="doc-ss">
+        <h2>Navigation Bars</h2>
+        <section class="doc-ss">
+          <h3>Generic Navigation Bar</h3>
+          <figure>
+            <nav class="c-NavBar"><a class="c-NavBar__Link c-NavBar__Link--index">--index</a><a class="c-NavBar__Link">Link</a><a class="c-NavBar__Link">Link</a><a class="c-NavBar__Link">Link</a><a class="c-NavBar__Link">Link</a></nav>
+          </figure>
+        </section>
+        <section class="doc-ss">
+          <h3>Main Navigation Bar</h3>
+          <figure>
+            <nav class="c-NavBar c-NavBar--main"><a class="c-NavBar__Link c-NavBar__Link--index"><span class="ic home"></span></a><a class="c-NavBar__Link">Program</a><a class="c-NavBar__Link">Location</a><a class="c-NavBar__Link">About</a><a class="c-NavBar__Link">Contact</a></nav>
+          </figure>
+        </section>
+        <section class="doc-ss">
+          <h3>Side Navigation Bar</h3>
+          <figure>
+            <nav class="c-NavBar c-NavBar--side"><a class="c-NavBar__Link">Why Attend</a><a class="c-NavBar__Link">Registration</a></nav>
+          </figure>
+        </section>
+        <section class="doc-ss">
+          <h3>Utility Navigation Bar</h3>
+          <figure>
+            <nav class="c-NavBar c-NavBar--utility"><a class="c-NavBar__Link">For Speakers</a><a class="c-NavBar__Link">Sponsors</a><a class="c-NavBar__Link">Exhibitors</a></nav>
+          </figure>
+        </section>
+        <section class="doc-ss">
+          <h3>Secondary Navigation Bar</h3>
+          <figure style="margin-bottom:4em;">
+            <nav class="c-NavBar c-NavBar--secondary"><a class="c-NavBar__Link">Lodging & Transportation</a><a class="c-NavBar__Link">For International Travel</a></nav>
+          </figure>
+        </section>
+        <section class="doc-ss">
+          <h3>Year Tab Bar</h3>
+          <figure>
+            <nav class="c-NavBar c-NavBar--tabs"><a class="c-NavBar__Link">2000</a><a class="c-NavBar__Link">2001</a><a class="c-NavBar__Link">2002</a><a class="c-NavBar__Link current">.current</a></nav>
+          </figure>
+        </section>
+      </section>
+      <section class="doc-ss">
+        <h2>Speaker Profile</h2>
+        <p class="devnote">
+          this doesn't need to be a component. we could use objects here,
+          given a robust grid system.
+        </p>
+        <figure>
+          <div class="speaker-profile">
+            <div class="session-col">
+              <div class="dateline">Thursday 
+                <div class="date">Apr 3</div>
+              </div>
+              <div class="sessiontype">Opening Plenary</div>
+            </div>
+            <div class="photo-col"><img src="/img/FPO_speaker_130x130.jpg" alt="speaker" class="c-SpeakerPhoto"></div>
+            <div class="details-col">
+              <div class="person-name">Charles Johnson</div>
+              <div class="person-title">Ph.D., P.E., S.E., CVS, F.ASCE Illuminate Foundry, Inc.</div><a class="button">Speaker Details</a>
+            </div>
+          </div>
+        </figure>
+        <figure>
+          <section class="speaker-profile">
+            <div class="photo-col"><img src="/img/FPO_speaker_130x130.jpg" alt="speaker" class="c-SpeakerPhoto"></div>
+            <div class="details-col">
+              <div class="person-name">Charles Johnson</div>
+              <div class="person-title">Ph.D., P.E., S.E., CVS, F.ASCE Illuminate Foundry, Inc.</div>
+              <p>
+                Description of this person’s talk and/or a profile of this person.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
+                amet, consectetur adipisicing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </section>
+        </figure>
+      </section>
+    </main>
+  </body>
+</html>

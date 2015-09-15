@@ -5,7 +5,7 @@ section.doc-ss {
   margin-left: 1em;
   background-color: rgba(0, 0, 0, 0.03);
 }
-figure {
+figure:not(.bare) {
   padding: 0.5em;
   margin: 0.5em;
   border: 1px solid #e5eaef;
