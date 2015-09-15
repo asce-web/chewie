@@ -82,7 +82,7 @@ body {
     ## SECTIONS
 \*++++++++++++++++++++++++++++++++*/
 hr {
-  margin-top: 0px;
+  margin-top: 0;
   border-top: 2px solid #f4f4f5;
 }
 /*++++++++++++++++++++++++++++++++*\
@@ -93,19 +93,15 @@ ol {
   margin-bottom: 20px;
   padding-left: 1.9em;
 }
-ul ul,
-ul ol,
-ol ul,
-ol ol {
+li ul,
+li ol {
   margin-bottom: 0;
 }
 ul {
   list-style-type: disc;
-}
-ul > li {
   list-style-image: url(../img/li-bullet.png);
 }
-ul ul > li {
+li ul {
   list-style-image: none;
 }
 /*++++++++++++++++++++++++++++++++*\
@@ -222,6 +218,7 @@ img {
   width: auto;
   height: auto;
   max-width: 100%;
+  font-style: italic;
 }
 button {
   font-family: 'futura-pt', 'Open Sans', 'Arial', sans-serif;
@@ -330,6 +327,7 @@ button {
   margin: 0;
   margin-bottom: 5px;
   text-transform: uppercase;
+  color: #6a9556;
 }
 .c-H--alpha,
 .content h1 {
@@ -373,6 +371,32 @@ button {
 .content h6 {
   font-weight: 700;
   font-size: 14px;
+}
+.callout h1,
+.summary-banner h1,
+.sponsor-container h1,
+.coop-orgs-block h1,
+.callout h2,
+.summary-banner h2,
+.sponsor-container h2,
+.coop-orgs-block h2,
+.callout h3,
+.summary-banner h3,
+.sponsor-container h3,
+.coop-orgs-block h3,
+.callout h4,
+.summary-banner h4,
+.sponsor-container h4,
+.coop-orgs-block h4,
+.callout h5,
+.summary-banner h5,
+.sponsor-container h5,
+.coop-orgs-block h5,
+.callout h6,
+.summary-banner h6,
+.sponsor-container h6,
+.coop-orgs-block h6 {
+  color: inherit;
 }
 .c-ConferenceName,
 .header h2,

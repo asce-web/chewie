@@ -25,6 +25,7 @@
   margin: 0;
   margin-bottom: 5px;
   text-transform: uppercase;
+  color: @color_site_primary;
 }
 
 .c-H--alpha,
@@ -65,6 +66,15 @@
   font-size: 14px;
 }
 
+// fixes for headings not in content section but in `.content` class
+.callout,
+.summary-banner,
+.sponsor-container,
+.coop-orgs-block {
+  h1, h2, h3, h4, h5, h6 {
+    color: inherit;
+  }
+}
 
 
 // Heading for entire conference site.
