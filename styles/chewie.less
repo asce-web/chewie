@@ -1,0 +1,103 @@
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
+    chewie.less
+\*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+/**
+ * # CONTENTS
+ *
+ * settings.......................variables
+ *
+ * tools
+ * ....sprite.........................mixin for creating sprite background
+ * ....logos..........................logo sizes
+ *
+ * base...........................bare, unclassed elements
+ *
+ * ## OBJECTS
+ * object.........................temporary file containing ALL objects : will be broken up later
+ *
+ * ## COMPONENTS
+ *
+ * ### Typographical Components
+ * Callout........................section in the sidebar with a heading and body
+ *
+ * ### User-Interactive Components
+ * YearBadge......................shield with year at top of all pages
+ * YearTabs.......................tabs for each year in the footer
+ * ConfLogo.......................image of conference logo shield in header/footer
+ * Icon...........................small icons
+ * Button.........................buttons
+ *
+ * SponsorHeading.................heading of Sponsors section
+ * SponsorBlock...................a block of sponsor logos
+ *
+ * ## TRUMPS
+ * helpers........................context-agnostic helper classes
+ * utils..........................atoms (exactly one style and marked `!important`)
+ * shame..........................temporary hacks and fixes
+ */
+
+@import url('__settings.less');
+
+@import url('__tools.sprite.less');
+@import url('__tools.logos.less');
+
+@import url('_base.less');
+
+@import url('_objects.less'); // temp
+
+@import url('_comp.typo.headings.less');
+@import url('_comp.typo.Callout.less');
+
+
+@import url('_comp.ui.YearBadge.less');
+@import url('_comp.ui.InstShield.less');
+@import url('_comp.ui.SpeakerPhoto.less');
+@import url('_comp.ui.NavBar.less');
+
+
+
+@import url('_comp.Icon.less');
+@import url('_comp.Button.less');
+@import url('_comp.Person.less');
+@import url('_comp.DateLine.less');
+
+// NOTE the Header, Footer, and Summary Banner are too big to be components.
+// We may just use small components inside to create the look-and-feel of each.
+.header,
+.footer,
+.summary-banner,
+.c-SummaryBanner {
+  color: @color_asce_header_txt;
+  background-color: @color_site_primary;
+  a {
+    color: inherit;
+  }
+}
+@import url('_comp.SiteFooter.less');
+@import url('_comp.SummaryBanner.less');
+@import url('_comp.Intro.less');
+
+
+@import url('_comp.LinkBlock.less');
+@import url('_comp.LinkArrow.less');
+
+@import url('_comp.SponsorHeading.less');
+@import url('_comp.SponsorBlock.less');
+
+@import url('_comp.AsceLogo.less');
+
+@import url('_comp.SpeakerProfile.less');
+@import url('_comp.DateBlock.less');
+
+@import url('_comp.typo.Date.less');
+@import url('_comp.typo.TableHeader.less');
+
+@import url('_comp.ui.Flag.less');
+
+
+@import url('_trumps.helpers.less');
+@import url('_trumps.utils.less');
+@import url('_trumps.shame.less');

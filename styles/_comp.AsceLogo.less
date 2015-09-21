@@ -1,0 +1,26 @@
+
+/*################################*\
+    _comp.AsceLogo.less
+\*################################*/
+
+
+// ASCE's logo at bottom of footer.
+// Let's completely remove this and use an actual <img> element, shall we?
+//
+// ^author
+// : Dae Clarke
+// ^updated
+// : 2015-09-01
+.asce-logo {
+  background-image: url('../img/asce-logo-footer.png');
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  width: 233px; // magic numberrrrrrrrrs
+  height: 30px; // magic numberrrrrrrrrs
+  @media (max-width: 1199px) {
+    background-image: url('../img/asce-logo-footer-small.png');
+    width: 73px;  // magic nummmmmmmbers
+    height: 23px; // magic nummmmmmmbers
+  }
+}

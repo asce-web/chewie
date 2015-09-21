@@ -1,0 +1,29 @@
+
+/*################################*\
+    _comp.Person.less
+\*################################*/
+
+
+// Styling a person’s name and title.
+// Perfect opportunity for Schema.org’s Person itemtype.
+//
+// ^author
+// : Dae Clarke
+// ^updated
+// : 2015-09-03
+.c-Person {
+  font-weight: inherit;
+}
+.person-name,
+.person-title {
+  font-weight: inherit; // TODO remove once we can add parent .c-Person
+}
+.person-name,
+.c-Person__Name {
+  font-size: 18px;
+}
+.person-title,
+.c-Person__Title {
+  font-style: italic;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,97 @@
+
+/*################################*\
+    _objects.less
+\*################################*/
+
+
+// Temporary stylesheet containg ALL objects
+
+
+// a container that acts like a table
+// used on big horizontal sections of page
+.col-container {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+// three possible columns in the col-container
+.logo-col,
+.side-nav-col,
+.auto-col {
+  display: table-cell;
+  vertical-align: top;
+  @media (max-width: 767px) {
+    display: block;
+    width: 100% !important; // why important??
+  }
+}
+
+// column for the shield ConfLogo component
+.logo-col {
+  width: 105px;
+  @media (max-width: 1199px) {
+    width: 75px;
+    .summary-banner & {
+      width: 105px;
+    }
+    img {
+      width: 60px;
+    }
+  }
+  .header & {
+    padding-top: 20px;
+  }
+}
+
+// column for main shit
+.auto-col {
+  .header & {
+    @media (min-width: 768px) {
+      padding-right: 50px;
+    }
+    // same as:
+    // padding-right: 50px;
+    // @media (max-width: 767px) {
+    //     padding-right: 0;
+    // }
+    //
+  }
+}
+
+// sidebar of page
+.side-nav-col {
+  width: 450px;
+  @media (max-width: 1199px) {
+    width: 385px;
+  }
+  @media (max-width: 989px) {
+    width: 300px;
+  }
+  @media (max-width: 767px) {
+  }
+  .header & {
+    position: relative;
+    background-size: cover;
+    background-position: 50% 0;
+    @media (max-width: 767px) {
+      background-position: 50% 50%;
+      height: 145px;
+      max-width: 100%; // is this necessary?
+      margin-bottom: 8px;
+    }
+  }
+  // not sure what .content is yet (2015-08-28)
+  .content & {
+    @padding_x: 60px;
+    padding: 20px @padding_x 0;
+    @media (max-width: 1199px) {
+      @padding_x: 40px;
+      padding: 20px @padding_x 0;
+    }
+    @media (max-width: 767px) {
+      @padding_x: 0;
+      padding: 0;
+    }
+  }
+}

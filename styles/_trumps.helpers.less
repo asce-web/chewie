@@ -1,0 +1,48 @@
+
+/*################################*\
+    _trumps.helpers.less
+\*################################*/
+
+
+// Light font weight.
+// Rename this class!!!! could we change it to a utility and use `.u-fw_300`?
+//
+// ^author
+// : Dae Clarke
+// ^updated
+// : 2015-08-21
+.light {
+  font-weight: 300;
+}
+
+
+// this is nonsense. if “large” is supposed to affect font size, then
+// why are we changing text-transform and margins based on which column it’s in?
+// Are we changing these because the actual `.large` class needs to be changed
+// depending on its parent column?
+// or are we changing these elements for other reasons, and they
+// just so happen to have class `.large`?
+.large {
+  font-size: 14px;
+
+  .details & {
+    font-size: 18px;
+    font-weight: 600;
+    @media (max-width: 989px) {
+      font-size: 14px;
+    }
+  }
+
+  .details .col2 & {
+    text-transform: uppercase;
+  }
+
+  .details .col3 & {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  .details .col4 & {
+    margin: 10px;
+  }
+}

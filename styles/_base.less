@@ -1,0 +1,176 @@
+
+/*################################*\
+    _base.less
+\*################################*/
+
+
+/**
+ * # CONTENTS
+ *
+ * GENERIC........................far-reaching page-wide selectors
+ * SECTIONS.......................sections, articles, headers, footers, headings
+ * GROUPING.......................paragraphs, lists, tables
+ * TEXT...........................phrasing (inline) content and links
+ * FORMS..........................form elements
+ * EMBEDDED.......................images, videos
+ */
+
+
+/*++++++++++++++++++++++++++++++++*\
+    ## GENERIC
+\*++++++++++++++++++++++++++++++++*/
+html,
+body {
+  // what purpose does this serve?
+  height: 100%;
+  width: 100%;
+}
+body {
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  color: @color_asce_body_txt;
+}
+
+
+/*++++++++++++++++++++++++++++++++*\
+    ## SECTIONS
+\*++++++++++++++++++++++++++++++++*/
+hr {
+  margin-top: 0;
+  border-top: 2px solid #f4f4f5; // what the hell is this color
+}
+
+
+/*++++++++++++++++++++++++++++++++*\
+    ## GROUPING
+\*++++++++++++++++++++++++++++++++*/
+ul,
+ol {
+  margin-bottom: 20px;
+  padding-left: 1.9em;
+  li & {
+    margin-bottom: 0; // override above
+  }
+}
+ul {
+  list-style-type: disc;
+  list-style-image: url(../img/li-bullet.png);
+  li & {
+    list-style-image: none;
+  }
+}
+
+
+/*++++++++++++++++++++++++++++++++*\
+    ## TEXT
+\*++++++++++++++++++++++++++++++++*/
+a {
+  color: @color_asce_link;
+  &:hover {
+    color: @color_asce_link_hover;
+  }
+  &[href^='mailto:']::before {
+    content: '';
+    display: inline-block;
+    .sprite('../img/sprite.png'; 30px; 590px; 330px; 0);
+    .sprite(5; 6);
+    margin-top: -7px;
+    margin-right: 6px;
+    margin-bottom: -7px;
+    position: relative;
+    top: 4px;
+  }
+  &[href$='.pdf']::after {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    content: 'PDF';
+    padding: 1px 4px;
+    margin-left: 8px;
+    position: relative;
+    top: -1px;
+    font-size: 12px;
+    font-weight: 700;
+    background: @color_asce_primary;
+    color: @color_asce_body_bg;
+  }
+}
+
+
+
+/*++++++++++++++++++++++++++++++++*\
+    ## FORMS
+\*++++++++++++++++++++++++++++++++*/
+form {
+  display: inline-block;
+  width: 100%;
+  background-color: #f4f4f5;  // okay random color
+  padding: 20px 20px 0 20px;
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="range"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+textarea,
+select {
+  border-radius: 1px;
+  border: 1px solid #b3b8bc;  // okay random color
+  box-shadow: inset 0px 1px 2px #e8eaeb;  // okay random color
+  outline: none;
+  padding: 8px;
+  background: #fff;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 38px;
+  &:focus {
+    border-color: #97d5e9; // okay random color CAN WE PLEASE USE VARIABLES
+  }
+}
+
+label {
+  display: block;
+  font-weight: 300;
+  font-size: 13px;
+  text-transform: uppercase;
+  em {
+    // use `<abbr title="required">*</abbr>`
+    color: red; // WHY ?
+  }
+}
+
+
+/*++++++++++++++++++++++++++++++++*\
+    ## EMBEDDED
+\*++++++++++++++++++++++++++++++++*/
+img {
+  width: auto;  // correct squishing
+  height: auto; // correct squishing
+  max-width: 100%; // seems to be a recurring theme here
+  font-style: italic; // for alt text
+}
+
+
+
+
+
+// OTHER
+button {
+  // this looks like a UI font. can we make it a variable?
+  font-family: @font_ui;
+}
+
+.navigation, .year-tabs, .button {
+  // just gonna put this here for now. move it later.
+  font-family: 'futura-pt', 'Open Sans', 'Arial', sans-serif;
+}

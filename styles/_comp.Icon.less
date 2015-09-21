@@ -1,0 +1,91 @@
+
+/*################################*\
+    _comp.Icon.less
+\*################################*/
+
+
+// A small icon.
+// This takes the form of an inline element ("phrasing content"),
+// usually a <span> or <i> element, with no contents.
+// The style applied sets its background image as a sprite,
+// with subclasses determining the background positioning.
+//
+// ^author
+// : Dae Clarke
+// ^updated
+// : 2015-08-27
+.ic {
+  .sprite('../img/sprite.png'; 30px; 590px; 330px; 0);
+  margin: -7px; // why this number?
+  position: relative;
+  top: -2px;
+  color: transparent; // instead of `text-indent: -9999px;`
+  vertical-align: middle;
+  .header &,
+  .footer &,
+  .summary-banner & {
+  }
+  .link-block.contact & {
+    margin-right: 9px;
+  }
+}
+.ic.menu          { .sprite(10;  9); }
+.ic.home          { .sprite(17;  4); }
+.ic.close-nav     { .sprite( 7;  9); }
+.ic.download      { .sprite(10;  4); }
+.ic.contact       { .sprite( 5;  8); }
+.ic.contact-large { .sprite(17;  3); }
+.ic.contact-blue  { .sprite( 5;  6); }
+.ic.telephone     { .sprite( 4;  6); }
+.ic.chat          { .sprite( 6;  6); }
+.ic.mobile-phone  { .sprite(17;  2); }
+.ic.chevron-down  { .sprite(17;  5); }
+.ic.linkedin      { .sprite( 1;  9); }
+.ic.facebook      { .sprite( 2;  9); }
+.ic.twitter       { .sprite( 3;  9); }
+.ic.youtube       { .sprite( 4;  9); }
+.ic.google        { .sprite( 5;  9); }
+.ic.collapse-icon { .sprite( 3;  6); }
+
+.ic.twitter-large {
+  background-position: -540px 0px;
+  width: 50px;
+  height: 60px;
+}
+.ic.facebook-large {
+  background-position: -540px -60px;
+  width: 50px;
+  height: 60px;
+}
+.ic.google-large {
+  background-position: -540px -120px;
+}
+
+// suggestion:
+.c-Icon--large {
+  width: 50px;
+  height: 60px;
+}
+.c-Icon--large--twitter  { background-position: -540px 0px; }
+.c-Icon--large--facebook { background-position: -540px -60px; }
+.c-Icon--large--gplus    { background-position: -540px -120px; }
+
+
+
+
+/// NOT SURE WHAT THESE ARE USED FOR
+.collapse-icon {
+    position: absolute;
+    margin-left: -45px;
+    top: initial;
+    margin-top: -6px;
+}
+.collapsed .collapse-icon {
+    .sprite(2; 6);
+}
+.panel-heading:hover .collapse-icon {
+    .sprite(3; 6);
+}
+.panel-heading.collapsed:hover .collapse-icon {
+    .sprite(2; 7);
+}

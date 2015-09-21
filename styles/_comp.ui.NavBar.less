@@ -1,0 +1,295 @@
+
+/*################################*\
+    _comp.ui.NavBar.less
+\*################################*/
+
+
+// Any navigation bar.
+// This class should be extended by specific types of bars,
+// such as NavMain and YearTabs
+//
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2015-09-10
+.c-NavBar,
+.navigation,
+.nav3,
+.tab-buttons,
+.navigation-level2 {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: @color_asce_header_txt;
+  background-color: @color_site_secondary;
+}
+
+// A link in a navigation bar
+//
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2015-09-10
+.c-NavBar__Link,
+.navigation a,
+.nav3 a,
+.tab-button,
+.navigation-level2 a {
+  display: inline-block;
+  padding: 17px 24px;
+  color: inherit;
+  @media (max-width: 1199px) {
+    font-size: 14px;
+    padding: 12px 12px;
+  }
+  @media (max-width: 989px) {
+    font-size: 13px;
+    padding: 12px 7px;
+  }
+}
+// default hover behavior for ALL nav bars
+.c-NavBar__Link:hover,
+.c-NavBar__Link.active,
+.navigation a:hover,
+.navigation a.active,
+.nav3 a:hover,
+.tab-button:hover,
+.navigation-level2 a:hover,
+.navigation-level2 a.active {
+  color: inherit; // override default
+  // background-color: fadeout(#fff, 85%);
+}
+
+
+// A main navigation component containing the main directories:
+// program, location, about, and contact.
+//
+// ^author
+// : Dae Clarke
+// ^updated
+// : 2015-09-10
+.nav1,
+.c-NavBar--main {
+  a,
+  .c-NavBar__Link {
+    &:hover {
+      text-decoration: none;
+      background-color: @color_site_accent;
+    }
+  }
+}
+
+
+// A secondary navigation component containing the other top-level pages:
+// why attend, registration, etc.
+// NOTE : this is NOT secondary navigation.
+//
+// ^author
+// : Dae Clarke
+// ^updated
+// : 2015-08-21
+.nav2,
+.c-NavBar--side {
+  background-color: @color_asce_primary;
+  text-align: center;
+}
+
+
+// The navigation component on the top of the page containing
+// information for people: for speakers, sponsors, exhibitors, etc.
+//
+// ^author
+// : Dae Clarke
+// ^updated
+// : 2015-08-21
+.nav3,
+.c-NavBar--utility {
+  padding: 5px 26px 29px; // NUMBERS BRUH
+  font-size: 13px;
+  text-align: center;
+  @media (max-width: 989px) {
+    text-align: right;
+  }
+
+  // can’t we use a fallback tool for this?
+  background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+  background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+
+  a,
+  .c-NavBar__Link {
+    padding: 5px 10px;
+    @media (max-width: 989px) {
+      display: block;
+      padding: 5px 0px;
+    }
+  }
+}
+
+// NavSecondary is the secondary-level navigation component under
+// the main navigation component. It contains subpages of the main directories.
+//
+// NOTE: we need to move this so that each is a child of a main nav element.
+//
+// ^author
+// : Dae Clarke
+// ^updated
+// : 2015-09-10
+.navigation-level2,
+.c-NavBar--secondary {
+  font-size: inherit;
+  text-transform: none;
+  background-color: @color_site_accent;
+  position: absolute; // pops over page content
+  width: 100%; // instead of `right: 0; left: 0;`
+  z-index: 2;
+  a,
+  .c-NavBar__Link {
+    padding: 14px 10px;
+  }
+
+
+
+  // ------------- TRASH TRASH TRASH TRASH --------------------------
+  &.show-current-page {
+    position: relative;
+  }
+  ul {
+    display: none;
+    margin-bottom: 0; // override base ul
+    @media (min-width: 767px) {
+      &.active {
+        display: block;
+      }
+    }
+  }
+  li {
+    display: inline-block;
+  }
+  // ------------- END TRASH END TRASH --------------------------
+}
+
+
+
+// Tabs for past and future years of conference.
+//
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2015-09-10
+.c-NavBar--tabs {
+  font-size: 24px;
+  .c-NavBar__Link {
+    padding: 6px 20px;
+    font-size: inherit;
+    @media (max-width: 767px) {
+      padding: 6px 12px;
+    }
+    &:hover,
+    &.current {
+      background-color: @color_site_accent;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+    &.current {
+      position: relative;
+      cursor: default;
+      &::after {
+        content: '';
+        display: block;
+        margin: auto;
+        width: 0;
+        height: 0;
+        border:  15px solid transparent;
+        border-top-color: @color_site_accent;
+        position: absolute;
+        top: 46px;
+        left: 40%;
+      }
+    }
+  }
+}
+
+
+
+// ----------------------------------------------------------------------------
+// Tabs for past and future years of conference.
+// TODO THIS CLASS IS OLD; DELETE IT ONCE WE CAN CHANGE MARKUP
+//
+// ^author
+// : Dae Clarke
+// ^updated
+// : 2015-09-10
+.year-tabs {
+}
+
+.tab-buttons {
+  margin-bottom: 0; // override default ul margin-bottom
+  float: right !important; // remove bootstrap pull-right
+  margin-top: -46px; // 34px (fs*lh) + 6px (pad-t) + 6px (pad-b)
+  font-size: 24px;
+  text-align: center;
+  @media (max-width: 767px) {
+    margin-top: -34px;
+    font-size: 16px;
+  }
+}
+.tab-buttons li {
+  display: inline-block;
+}
+.tab-button {
+  padding: 6px 20px;
+  font-size: inherit;
+  @media (max-width: 767px) {
+    padding: 6px 12px;
+  }
+  &:hover,
+  li.active & {
+    background-color: @color_site_accent;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+  li.active & {
+    cursor: default;
+    position: relative;
+    &::after { // little arrow below
+      content: '';
+      display: block;
+      margin: auto;
+      width: 0;
+      height: 0;
+      border:  15px solid transparent;
+      border-top-color: @color_site_accent;
+      position: absolute;
+      top: 46px;
+      left: 38%;
+      @media (max-width: 767px) {
+        top: 34px;
+      }
+    }
+  }
+}
+// ----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+// WHY DOES THIS EVEN EXIST
+.mobile-nav {
+  text-align: right;
+  // padding-left: 75px;
+  // border-bottom: 0px;
+  a {
+    padding: 11px 10px; // numbers?!?
+  }
+}
