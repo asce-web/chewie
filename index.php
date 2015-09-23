@@ -1,8 +1,3 @@
-<?php
-   $path = $_SERVER['DOCUMENT_ROOT'];
-   $path .= "/_vars.php";
-   include_once($path);
-?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -11,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title><?php print $site_name; ?></title>
+        <title>Sample ASCE Conference</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -36,7 +31,7 @@
     <div class="toggleable-nav fade">
         <div tabindex="0" class="ic close-nav">X</div>
         <div class="link-block">
-            <a class="large uppercase" href="<?php print $home_link; ?>">Home</a>
+            <a class="large uppercase" href="/">Home</a>
         </div>
         <div class="link-block">
             <a class="large uppercase" href="">Program</a>
@@ -57,7 +52,7 @@
         <a class="large uppercase" href="">Why Attend</a>
         <a class="large uppercase" href="">Registration</a>
         <a class="large uppercase" href="">For Speakers</a>
-        <a class="large uppercase" href="<?php print $sponsors_link; ?>">Sponsors</a>
+        <a class="large uppercase" href="sponsors.php">Sponsors</a>
         <a class="large uppercase" href="">Exhibitors</a>
     </div>
     <div class="header">
@@ -68,7 +63,7 @@
                 </div>
                 <div class="year-badge-corner"></div>
             </div>
-            <a href="<?php print $home_link; ?>"><span class="ic home"></span></a>
+            <a href="/"><span class="ic home"></span></a>
             <a href="">Register</a>
             <a class="menu-toggle" href="">Menu <span class="ic menu"></span></a>
         </div>
@@ -76,12 +71,12 @@
             <div class="container">
                 <div class="col-container">
                     <div class="logo-col text-center">
-                        <a href="<?php print $home_link ?>"><img class="conference-logo" src="../img/conf-logo.png"/></a>
+                        <a href="/"><img class="conference-logo" src="../img/conf-logo.png"/></a>
                     </div>
                     <div class="auto-col">
-                        <h2><a href="<?php print $home_link; ?>" title="Home"><?php print $site_name; ?></a></h2>
+                        <h2><a href="/" title="Home">Sample ASCE Conference</a></h2>
                         <h4 class="hidden-xs">Optional Tagline for the Conference Goes Here Lorem Ipsum</h4>
-                        <h5 class="hidden-xs"><?php print $conf_location ?>  |  <?php print $conf_date; ?></h5>
+                        <h5 class="hidden-xs">Boston, Massachusetts  |  April 3&ndash;5, 2015</h5>
                     </div>
                     <div class="side-nav-col" style="background-image: url(../img/fpo-header.jpg);">
                         <div class="year-badge-wrapper hidden-xs">
@@ -93,13 +88,13 @@
                         <div class="right-header hidden-xs">
                             <div class="nav3">
                                 <a href="">For Speakers</a>
-                                <a href="<?php print $sponsors_link; ?>">Sponsors</a>
+                                <a href="sponsors.php">Sponsors</a>
                                 <a href="">Exhibitors</a>
                             </div>
                         </div>
                         <h4 class="visible-xs">Optional Tagline for the Conference Goes Here Lorem Ipsum</h4>
                     </div>
-                    <h5 class="visible-xs"><?php print $conf_location; ?>  |  <?php print $conf_date; ?></h5>
+                    <h5 class="visible-xs">Boston, Massachusetts  |  April 3&ndash;5, 2015</h5>
                 </div>
             </div>
         </div>
@@ -214,7 +209,7 @@
                     <div class="side-nav-col">
                         <div class="callout register">
                             <img src="img/FPO_sidebar_340x135.jpg" alt="">
-                            <h4><?php print $conf_venue; ?></h4>
+                            <h4>Sheraton Boston Hotel &amp; Hynes Convention Center</h4>
                             <a href="" class="button">REGISTER TODAY</a> <a href=""> <span class="ic download"></span>Save to my calendar</a>
                         </div>
                         <div class="callout rates">
@@ -359,7 +354,7 @@
                             </div>
                             <div class="year-badge-corner"></div>
                         </div>
-                        <h2><?php print $site_name; ?></h2>
+                        <h2>Sample ASCE Conference</h2>
                     </div>
                 </div>
                 <div class="row details year-prev-next">
@@ -389,7 +384,7 @@
                             </div>
                             <div class="year-badge-corner"></div>
                         </div>
-                        <h2><?php print $site_name; ?></h2>
+                        <h2>Sample ASCE Conference</h2>
                     </div>
                 </div>
                 <div class="row details">
@@ -399,7 +394,7 @@
                             <div class="auto-col">
                                 <div class="col-sm-4 hidden-xs">
                                     <div class="link-block">
-                                        <a class="large uppercase" href="<?php print $home_link; ?>">Home</a>
+                                        <a class="large uppercase" href="/">Home</a>
                                     </div>
                                     <div class="link-block">
                                         <a class="large uppercase" href="">Program</a>
@@ -422,7 +417,7 @@
                                     <a class="large" href="">Why Attend</a>
                                     <a class="large" href="">Registration</a>
                                     <a class="large" href="">For Speakers</a>
-                                    <a class="large" href="<?php print $sponsors_link; ?>">Sponsors</a>
+                                    <a class="large" href="sponsors.php">Sponsors</a>
                                     <a class="large" href="">Exhibitors</a>
                                 </div>
                                 <div class="pull-left col-xs-2 visible-xs"><img class="conference-logo" src="../img/conf-logo.png"/></div>
@@ -461,7 +456,7 @@
                             </div>
                             <div class="year-badge-corner"></div>
                         </div>
-                        <h2><?php print $site_name; ?></h2>
+                        <h2>Sample ASCE Conference</h2>
                     </div>
                 </div>
                 <div class="row details year-prev-next">
@@ -470,12 +465,12 @@
                             <div class="logo-col hidden-xs text-center"><img class="conference-logo" src="../img/conf-logo.png"/></div>
                             <div class="auto-col">
                                 <div class="col-sm-12 col-xs-10 col4">
-                                    <h2>Mexico City, Mexico  |  April 30 -  May 2, 2015</h2>
+                                    <h2>Mexico City, Mexico  |  April 30 &ndash;  May 2, 2015</h2>
                                     <h3>Fuentes Conference center</h3>
                                     <h4>Optional Tagline for the Conference Goes Here Lorem Ipsum</h4>
                                     <p><strong>This is a place to write the theme or a brief description of this conference. It’s optional. lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum.</strong></p>
                                     <a class="link-arrow" href="">Call for submissions</a>
-                                    <a class="link-arrow" href="<?php print $sponsors_link; ?>">Sponsors</a>
+                                    <a class="link-arrow" href="sponsors.php">Sponsors</a>
                                     <a class="link-arrow" href="">Exhibit</a>
                                 </div>
                             </div>
@@ -487,10 +482,17 @@
         <div class="row copyright text-center">
             <div class="container">
                 <div class="asce-logo"></div>
-                <span>Copyright © 1996-<?php print date('Y'); ?>, American Society of Civil Engineers | <a href="">ASCE.org</a></span>
+                <span>Copyright © 1996&ndash;2015, American Society of Civil Engineers | <a href="">ASCE.org</a></span>
             </div>
         </div>
     </div>
-        <?php include '_scripts.php'; ?>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+
+        <script src="/js/vendor/bootstrap.min.js"></script>
+        <script src="/js/vendor/jquery.hoverIntent.min.js"></script>
+        <script src="/bower_components/jquery-cycle2/build/jquery.cycle2.min.js"></script>
+
+        <script src="/js/main.js"></script>
     </body>
 </html>
