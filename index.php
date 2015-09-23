@@ -12,14 +12,14 @@
 
         <!-- <script type="text/javascript" src="//use.typekit.net/imj1jdn.js"></script> -->
         <!-- <script type="text/javascript">try{Typekit.load();}catch(e){}</script> -->
-        <link rel="stylesheet" href="/css/futura.css">
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,600italic,700italic,400,600,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="./css/futura.css">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,600italic,700italic,400,600,700">
 
-        <link rel="stylesheet" href="/css/vendor/bootstrap.min.css">
-        <link rel="stylesheet" href="/styles/chewie.css">
+        <link rel="stylesheet" href="./css/vendor/bootstrap.min.css">
+        <link rel="stylesheet" href="./styles/chewie.css">
 
         <!--[if lt IE 9]>
-            <script src="js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+            <script src="./js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
         <![endif]-->
     </head>
     <body>
@@ -31,7 +31,7 @@
     <div class="toggleable-nav fade">
         <div tabindex="0" class="ic close-nav">X</div>
         <div class="link-block">
-            <a class="large uppercase" href="/">Home</a>
+            <a class="large uppercase" href="./">Home</a>
         </div>
         <div class="link-block">
             <a class="large uppercase" href="">Program</a>
@@ -52,7 +52,7 @@
         <a class="large uppercase" href="">Why Attend</a>
         <a class="large uppercase" href="">Registration</a>
         <a class="large uppercase" href="">For Speakers</a>
-        <a class="large uppercase" href="sponsors.php">Sponsors</a>
+        <a class="large uppercase" href="./sponsors.php">Sponsors</a>
         <a class="large uppercase" href="">Exhibitors</a>
     </div>
     <div class="header">
@@ -63,7 +63,7 @@
                 </div>
                 <div class="year-badge-corner"></div>
             </div>
-            <a href="/"><span class="ic home"></span></a>
+            <a href="./"><span class="ic home"></span></a>
             <a href="">Register</a>
             <a class="menu-toggle" href="">Menu <span class="ic menu"></span></a>
         </div>
@@ -71,14 +71,14 @@
             <div class="container">
                 <div class="col-container">
                     <div class="logo-col text-center">
-                        <a href="/"><img class="conference-logo" src="../img/conf-logo.png"/></a>
+                        <a href="./"><img class="conference-logo" src="./img/conf-logo.png"/></a>
                     </div>
                     <div class="auto-col">
-                        <h2><a href="/" title="Home">Sample ASCE Conference</a></h2>
+                        <h2><a href="./" title="Home">Sample ASCE Conference</a></h2>
                         <h4 class="hidden-xs">Optional Tagline for the Conference Goes Here Lorem Ipsum</h4>
                         <h5 class="hidden-xs">Boston, Massachusetts  |  April 3&ndash;5, 2015</h5>
                     </div>
-                    <div class="side-nav-col" style="background-image: url(../img/fpo-header.jpg);">
+                    <div class="side-nav-col" style="background-image: url('./img/fpo-header.jpg');">
                         <div class="year-badge-wrapper hidden-xs">
                             <div class="year-badge text-center">
                                 <h2><span class="light">20</span>15</h2>
@@ -88,7 +88,7 @@
                         <div class="right-header hidden-xs">
                             <div class="nav3">
                                 <a href="">For Speakers</a>
-                                <a href="sponsors.php">Sponsors</a>
+                                <a href="./sponsors.php">Sponsors</a>
                                 <a href="">Exhibitors</a>
                             </div>
                         </div>
@@ -144,10 +144,10 @@
                     <div class="auto-col">
                         <div class="share-logos">
                             SHARE
-                            <img src="img/fpo-share-logos.png">
+                            <img src="./img/fpo-share-logos.png">
                         </div>
                         <div class="introduction">
-                            <img src="img/fpo-hero.jpg" alt="">
+                            <img src="./img/fpo-hero.jpg" alt="">
                             <div class="img-fade"></div>
                             <div>
                                 <h1>
@@ -167,7 +167,7 @@
                                 <div class="col-sm-6 sessiontype">OPENING <br>PLENARY</div>
                             </div>
                             <div class="photo-col">
-                                <img src="img/FPO_speaker_130x130.jpg" alt="speaker">
+                                <img src="./img/FPO_speaker_130x130.jpg" alt="speaker">
                             </div>
                             <div class="details-col">
                                 <div class="person-name">Charles Johnson</div>
@@ -181,7 +181,7 @@
                                 <div class="col-sm-6 sessiontype">OPENING <br>PLENARY</div>
                             </div>
                             <div class="photo-col">
-                                <img src="img/FPO_speaker_130x130.jpg" alt="speaker">
+                                <img src="./img/FPO_speaker_130x130.jpg" alt="speaker">
                             </div>
                             <div class="details-col">
                                 <div class="person-name">Charles Johnson</div>
@@ -208,7 +208,7 @@
                     </div>
                     <div class="side-nav-col">
                         <div class="callout register">
-                            <img src="img/FPO_sidebar_340x135.jpg" alt="">
+                            <img src="./img/FPO_sidebar_340x135.jpg" alt="">
                             <h4>Sheraton Boston Hotel &amp; Hynes Convention Center</h4>
                             <a href="" class="button">REGISTER TODAY</a> <a href=""> <span class="ic download"></span>Save to my calendar</a>
                         </div>
@@ -277,8 +277,8 @@
                         <div class="callout sponsors hidden-xs">
                             <h2>Platinum Sponsors</h2>
                             <div class="callout-body cycle-slideshow">
-                                <img src="img/sponsor_logo_horizontal2.gif" alt="">
-                                <img src="img/sponsor_logo_horizontal1.gif" alt="">
+                                <img src="./img/sponsor_logo_horizontal2.gif" alt="">
+                                <img src="./img/sponsor_logo_horizontal1.gif" alt="">
                             </div>
                         </div>
                         <div class="callout mobile-app">
@@ -286,8 +286,8 @@
                             <div class="callout-body">
                                 <p><strong>PLAN, ENGAGE, CONNECT</strong> <br>Enhance your conference experience with our mobile app. </p>
                                 <div class="text-center">
-                                    <a href=""><img src="img/App-Store.png" alt=""></a>
-                                    <a href=""><img src="img/Google-Play.png" alt=""></a>
+                                    <a href=""><img src="./img/App-Store.png" alt=""></a>
+                                    <a href=""><img src="./img/Google-Play.png" alt=""></a>
                                 </div>
                             </div>
                         </div>
@@ -309,28 +309,28 @@
                 <h2>2014 Top Sponsors</h2>
                 <div class="top-sponsor-block platinum">
                     <div class="box">
-                        <img src="img/sponsor_logo_horizontal2.gif" alt="">
-                        <img src="img/sponsor_logo_horizontal1.gif" alt="">
+                        <img src="./img/sponsor_logo_horizontal2.gif" alt="">
+                        <img src="./img/sponsor_logo_horizontal1.gif" alt="">
                     </div>
                 </div>
                 <div class="top-sponsor-block gold">
                     <div class="box">
-                        <img src="img/Sponsorlogo_square1.gif" alt="">
-                        <img src="img/sponsor_logo_horizontal3.gif" alt="">
-                        <img src="img/sponsor_logo_horizontal4.gif" alt="">
+                        <img src="./img/Sponsorlogo_square1.gif" alt="">
+                        <img src="./img/sponsor_logo_horizontal3.gif" alt="">
+                        <img src="./img/sponsor_logo_horizontal4.gif" alt="">
                     </div>
                 </div>
             </div>
             <div class="coop-orgs-block row">
                 <div class="container">
                     <h2>COOPERATING ORGANIZATIONS</h2>
-                    <img src="img/cooplogo_square1.gif" alt="">
-                    <img src="img/cooplogo_horizontal1.gif" alt="">
-                    <img src="img/cooplogo_horizontal2.gif" alt="">
-                    <img src="img/cooplogo_horizontal3.gif" alt="">
-                    <img src="img/cooplogo_square4.gif" alt="">
-                    <img src="img/cooplogo_horizontal4.gif" alt="">
-                    <img src="img/cooplogo_square2.gif" alt="">
+                    <img src="./img/cooplogo_square1.gif" alt="">
+                    <img src="./img/cooplogo_horizontal1.gif" alt="">
+                    <img src="./img/cooplogo_horizontal2.gif" alt="">
+                    <img src="./img/cooplogo_horizontal3.gif" alt="">
+                    <img src="./img/cooplogo_square4.gif" alt="">
+                    <img src="./img/cooplogo_horizontal4.gif" alt="">
+                    <img src="./img/cooplogo_square2.gif" alt="">
                 </div>
             </div>
         </div>
@@ -338,9 +338,9 @@
         <div class="row year-tabs">
             <div class="container">
                 <ul class="tab-buttons pull-right list-unstyled">
-                     <li><a href="#yearprev" data-toggle="tab" class="tab-button">2014</a></li>
+                     <li>               <a href="#yearprev"    data-toggle="tab" class="tab-button">2014</a></li>
                      <li class="active"><a href="#yearpresent" data-toggle="tab" class="tab-button">2015</a></li>
-                     <li><a href="#yearnext" data-toggle="tab" class="tab-button">2016</a></li>
+                     <li>               <a href="#yearnext"    data-toggle="tab" class="tab-button">2016</a></li>
                 </ul>
             </div>
         </div>
@@ -360,7 +360,7 @@
                 <div class="row details year-prev-next">
                     <div class="container">
                         <div class="col-container">
-                            <div class="logo-col hidden-xs text-center"><img class="conference-logo" src="../img/conf-logo.png"/></div>
+                            <div class="logo-col hidden-xs text-center"><img class="conference-logo" src="./img/conf-logo.png"/></div>
                             <div class="auto-col">
                                 <div class="col-sm-12 col-xs-10 col4">
                                     <h2>TORONTO, CANADA  |  MAY 2-4, 2013</h2>
@@ -390,11 +390,11 @@
                 <div class="row details">
                     <div class="container">
                         <div class="col-container">
-                            <div class="logo-col hidden-xs text-center"><img class="conference-logo" src="../img/conf-logo.png"/></div>
+                            <div class="logo-col hidden-xs text-center"><img class="conference-logo" src="./img/conf-logo.png"/></div>
                             <div class="auto-col">
                                 <div class="col-sm-4 hidden-xs">
                                     <div class="link-block">
-                                        <a class="large uppercase" href="/">Home</a>
+                                        <a class="large uppercase" href="./">Home</a>
                                     </div>
                                     <div class="link-block">
                                         <a class="large uppercase" href="">Program</a>
@@ -417,10 +417,10 @@
                                     <a class="large" href="">Why Attend</a>
                                     <a class="large" href="">Registration</a>
                                     <a class="large" href="">For Speakers</a>
-                                    <a class="large" href="sponsors.php">Sponsors</a>
+                                    <a class="large" href="./sponsors.php">Sponsors</a>
                                     <a class="large" href="">Exhibitors</a>
                                 </div>
-                                <div class="pull-left col-xs-2 visible-xs"><img class="conference-logo" src="../img/conf-logo.png"/></div>
+                                <div class="pull-left col-xs-2 visible-xs"><img class="conference-logo" src="./img/conf-logo.png"/></div>
                                 <div class="col-sm-4 col-xs-10 col4">
                                     <div class="link-block contact">
                                         <h3>Contact Us</h3>
@@ -462,7 +462,7 @@
                 <div class="row details year-prev-next">
                     <div class="container">
                         <div class="col-container">
-                            <div class="logo-col hidden-xs text-center"><img class="conference-logo" src="../img/conf-logo.png"/></div>
+                            <div class="logo-col hidden-xs text-center"><img class="conference-logo" src="./img/conf-logo.png"/></div>
                             <div class="auto-col">
                                 <div class="col-sm-12 col-xs-10 col4">
                                     <h2>Mexico City, Mexico  |  April 30 &ndash;  May 2, 2015</h2>
@@ -470,7 +470,7 @@
                                     <h4>Optional Tagline for the Conference Goes Here Lorem Ipsum</h4>
                                     <p><strong>This is a place to write the theme or a brief description of this conference. It’s optional. lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum.</strong></p>
                                     <a class="link-arrow" href="">Call for submissions</a>
-                                    <a class="link-arrow" href="sponsors.php">Sponsors</a>
+                                    <a class="link-arrow" href="./sponsors.php">Sponsors</a>
                                     <a class="link-arrow" href="">Exhibit</a>
                                 </div>
                             </div>
@@ -487,12 +487,12 @@
         </div>
     </div>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+        <script>window.jQuery || document.write('<script src="./js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
 
-        <script src="/js/vendor/bootstrap.min.js"></script>
-        <script src="/js/vendor/jquery.hoverIntent.min.js"></script>
-        <script src="/bower_components/jquery-cycle2/build/jquery.cycle2.min.js"></script>
+        <script src="./js/vendor/bootstrap.min.js"></script>
+        <script src="./js/vendor/jquery.hoverIntent.min.js"></script>
+        <script src="./bower_components/jquery-cycle2/build/jquery.cycle2.min.js"></script>
 
-        <script src="/js/main.js"></script>
+        <script src="./js/main.js"></script>
     </body>
 </html>

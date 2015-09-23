@@ -12,14 +12,14 @@
 
         <!-- <script type="text/javascript" src="//use.typekit.net/imj1jdn.js"></script> -->
         <!-- <script type="text/javascript">try{Typekit.load();}catch(e){}</script> -->
-        <link rel="stylesheet" href="css/futura.css">
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,600italic,700italic,400,600,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="./css/futura.css">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,600italic,700italic,400,600,700">
 
-        <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
-        <link rel="stylesheet" href="/styles/chewie.css">
+        <link rel="stylesheet" href="./css/vendor/bootstrap.min.css">
+        <link rel="stylesheet" href="./styles/chewie.css">
 
         <!--[if lt IE 9]>
-            <script src="js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+            <script src="./js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
         <![endif]-->
     </head>
     <body>
@@ -31,7 +31,7 @@
     <div class="toggleable-nav fade">
         <div tabindex="0" class="ic close-nav">X</div>
         <div class="link-block">
-            <a class="large uppercase" href="">Home</a>
+            <a class="large uppercase" href="./">Home</a>
         </div>
         <div class="link-block">
             <a class="large uppercase" href="">Program</a>
@@ -71,15 +71,15 @@
             <div class="container">
                 <div class="col-container">
                     <div class="logo-col text-center">
-                        <img class="conference-logo" src="../img/conf-logo.png"/>
+                        <img class="conference-logo" src="./img/conf-logo.png"/>
                     </div>
                     <div class="auto-col">
                         <h2>2ND T&DI GREEN STREETS, HIGHWAYS & DEVELOPMENT CONFERENCE
-                            <h5 >Boston, Massachusetts  |  April 3-5, 2014</h5>
+                            <h5 >Boston, Massachusetts  |  April 3&ndash;5, 2014</h5>
                         </h2>
                         <h4 class="hidden-xs">Optional Tagline for the Conference Goes Here Lorem Ipsum</h4>
                     </div>
-                    <div class="side-nav-col hidden-xs" hidden-xs style="background-image: url(../img/fpo-header.jpg);">
+                    <div class="side-nav-col hidden-xs" hidden-xs style="background-image: url('./img/fpo-header.jpg');">
                         <div class="year-badge-wrapper hidden-xs">
                             <div class="year-badge text-center">
                                 <h2><span class="light">20</span>14</h2>
@@ -102,7 +102,7 @@
                 <div class="col-container">
                     <div class="auto-col">
                         <div class="nav1">
-                            <a class="no-hover" href=""><span class="ic home"></span></a>
+                            <a class="no-hover" href="./"><span class="ic home"></span></a>
                             <a href="" data-menu-target="#programlevel2">Program <span class="ic chevron-down"></span></a>
                             <a href="" data-menu-target="#locationlevel2">Location <span class="ic chevron-down"></span></a>
                             <a href="" data-menu-target="#aboutlevel2">About <span class="ic chevron-down"></span></a>
@@ -144,7 +144,7 @@
                         <h1>SPONSOR THE 2014 CONFERENCE</h1>
                         <div class="share-logos">
                             SHARE
-                            <img src="img/fpo-share-logos.png">
+                            <img src="./img/fpo-share-logos.png">
                         </div>
 
                         <br>
@@ -152,8 +152,8 @@
                         <br>
                         <p>Introductory copy e.g. Promote your company to the engineering community at Structures Congress 2014. As a forum for the best minds in civil engineering, this conference will be a prime opportunity to showcase your company or product.</p>
                         <div class="key-links">
-                            <a href="test.pdf">Sponsor Prospectus</a>
-                            <a href="test2.pdf">Sponsor Contract</a>
+                            <a href="./test.pdf">Sponsor Prospectus</a>
+                            <a href="./test2.pdf">Sponsor Contract</a>
                             <a href="">Sponsor Toolkit</a>
                         </div>
                         <br><br><br>
@@ -350,29 +350,29 @@
                 <br>
                 <div class="top-sponsor-block platinum">
                     <div class="box">
-                        <img src="img/sponsor_logo_horizontal2.gif" alt="">
-                        <img src="img/sponsor_logo_horizontal1.gif" alt="">
+                        <img src="./img/sponsor_logo_horizontal2.gif" alt="">
+                        <img src="./img/sponsor_logo_horizontal1.gif" alt="">
                     </div>
                 </div>
                 <div class="top-sponsor-block gold">
                     <div class="box">
-                        <img src="img/Sponsorlogo_square1.gif" alt="">
-                        <img src="img/sponsor_logo_horizontal3.gif" alt="">
-                        <img src="img/sponsor_logo_horizontal4.gif" alt="">
+                        <img src="./img/Sponsorlogo_square1.gif" alt="">
+                        <img src="./img/sponsor_logo_horizontal3.gif" alt="">
+                        <img src="./img/sponsor_logo_horizontal4.gif" alt="">
                     </div>
                 </div>
                 <div class="top-sponsor-block corporate">
                     <div class="box">
-                        <img src="img/sponsor_logo_horizontal3.gif" alt="">
-                        <img src="img/sponsor_logo_horizontal4.gif" alt="">
+                        <img src="./img/sponsor_logo_horizontal3.gif" alt="">
+                        <img src="./img/sponsor_logo_horizontal4.gif" alt="">
                     </div>
                 </div>
                 <div class="top-sponsor-block silver">
                     <div class="box">
-                        <img src="img/Sponsorlogo_square3.gif" alt="">
-                        <img src="img/sponsor_logo_horizontal2.gif" alt="">
-                        <img src="img/Sponsorlogo_square2.gif" alt="">
-                        <img src="img/sponsor_logo_horizontal1.gif" alt="">
+                        <img src="./img/Sponsorlogo_square3.gif" alt="">
+                        <img src="./img/sponsor_logo_horizontal2.gif" alt="">
+                        <img src="./img/Sponsorlogo_square2.gif" alt="">
+                        <img src="./img/sponsor_logo_horizontal1.gif" alt="">
                     </div>
                 </div>
                 <div class="top-sponsor-block bronze">
@@ -395,13 +395,13 @@
             <div class="coop-orgs-block row">
                 <div class="container">
                     <h2>COOPERATING ORGANIZATIONS</h2>
-                    <img src="img/cooplogo_square1.gif" alt="">
-                    <img src="img/cooplogo_horizontal1.gif" alt="">
-                    <img src="img/cooplogo_horizontal2.gif" alt="">
-                    <img src="img/cooplogo_horizontal3.gif" alt="">
-                    <img src="img/cooplogo_square4.gif" alt="">
-                    <img src="img/cooplogo_horizontal4.gif" alt="">
-                    <img src="img/cooplogo_square2.gif" alt="">
+                    <img src="./img/cooplogo_square1.gif" alt="">
+                    <img src="./img/cooplogo_horizontal1.gif" alt="">
+                    <img src="./img/cooplogo_horizontal2.gif" alt="">
+                    <img src="./img/cooplogo_horizontal3.gif" alt="">
+                    <img src="./img/cooplogo_square4.gif" alt="">
+                    <img src="./img/cooplogo_horizontal4.gif" alt="">
+                    <img src="./img/cooplogo_square2.gif" alt="">
                 </div>
             </div>
         </div>
@@ -409,9 +409,9 @@
         <div class="row year-tabs">
             <div class="container">
                 <ul class="tab-buttons pull-right list-unstyled">
-                     <li><a href="#yearprev" data-toggle="tab" class="tab-button">2013</a></li>
+                     <li>               <a href="#yearprev"    data-toggle="tab" class="tab-button">2013</a></li>
                      <li class="active"><a href="#yearpresent" data-toggle="tab" class="tab-button">2014</a></li>
-                     <li><a href="#yearnext" data-toggle="tab" class="tab-button">2015</a></li>
+                     <li>               <a href="#yearnext"    data-toggle="tab" class="tab-button">2015</a></li>
                 </ul>
             </div>
         </div>
@@ -431,7 +431,7 @@
                 <div class="row details year-prev-next">
                     <div class="container">
                         <div class="col-container">
-                            <div class="logo-col hidden-xs text-center"><img class="conference-logo" src="../img/conf-logo.png"/></div>
+                            <div class="logo-col hidden-xs text-center"><img class="conference-logo" src="./img/conf-logo.png"/></div>
                             <div class="auto-col">
                                 <div class="col-sm-12 col-xs-10 col4">
                                     <h2>TORONTO, CANADA  |  MAY 2-4, 2013</h2>
@@ -461,7 +461,7 @@
                 <div class="row details">
                     <div class="container">
                         <div class="col-container">
-                            <div class="logo-col hidden-xs text-center"><img class="conference-logo" src="../img/conf-logo.png"/></div>
+                            <div class="logo-col hidden-xs text-center"><img class="conference-logo" src="./img/conf-logo.png"/></div>
                             <div class="auto-col">
                                 <div class="col-sm-4 hidden-xs">
                                     <div class="link-block">
@@ -491,7 +491,7 @@
                                     <a class="large" href="">Sponsors</a>
                                     <a class="large" href="">Exhibitors</a>
                                 </div>
-                                <div class="pull-left col-xs-2 visible-xs"><img class="conference-logo" src="../img/conf-logo.png"/></div>
+                                <div class="pull-left col-xs-2 visible-xs"><img class="conference-logo" src="./img/conf-logo.png"/></div>
                                 <div class="col-sm-4 col-xs-10 col4">
                                     <div class="link-block contact">
                                         <h3>Contact Us</h3>
@@ -533,7 +533,7 @@
                 <div class="row details year-prev-next">
                     <div class="container">
                         <div class="col-container">
-                            <div class="logo-col hidden-xs text-center"><img class="conference-logo" src="../img/conf-logo.png"/></div>
+                            <div class="logo-col hidden-xs text-center"><img class="conference-logo" src="./img/conf-logo.png"/></div>
                             <div class="auto-col">
                                 <div class="col-sm-12 col-xs-10 col4">
                                     <h2>Mexico City, Mexico  |  April 30 -  May 2, 2015</h2>
@@ -558,12 +558,12 @@
         </div>
     </div>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+        <script>window.jQuery || document.write('<script src="./js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
 
-        <script src="/js/vendor/bootstrap.min.js"></script>
-        <script src="/js/vendor/jquery.hoverIntent.min.js"></script>
-        <script src="/bower_components/jquery-cycle2/build/jquery.cycle2.min.js"></script>
+        <script src="./js/vendor/bootstrap.min.js"></script>
+        <script src="./js/vendor/jquery.hoverIntent.min.js"></script>
+        <script src="./bower_components/jquery-cycle2/build/jquery.cycle2.min.js"></script>
 
-        <script src="/js/main.js"></script>
+        <script src="./js/main.js"></script>
     </body>
 </html>
