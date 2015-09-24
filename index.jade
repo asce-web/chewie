@@ -57,10 +57,10 @@ html.no-js
             div.logo-col.text-center
               a(href="./")
                 img.conference-logo(src="./img/conf-logo.png")
-            div.auto-col.
-              <h2><a href="./" title="Home">Sample ASCE Conference</a></h2>
-              <h4 class="hidden-xs">Optional Tagline for the Conference Goes Here Lorem Ipsum</h4>
-              <h5 class="hidden-xs">Boston, Massachusetts  |  April 3&ndash;5, 2015</h5>
+            div.auto-col
+              h2: a(href="./", title="Home") Sample ASCE Conference
+              h4.hidden-xs Optional Tagline for the Conference Goes Here Lorem Ipsum
+              h5.hidden-xs Boston, Massachusetts  |  April 3&ndash;5, 2015
             div.side-nav.col(style="background-image: url('./img/fpo-header.jpg');")
               div.year-badge-wrapper.hidden-xs
                 div.year-badge.text-center
@@ -78,7 +78,7 @@ html.no-js
           div.col-container
             div.auto-col
               div.nav1
-                a.no-hover(href="./")                            #[span.ic.home]
+                a.no-hover(href="./")                          #[span.ic.home]
                 a(href="", data-menu-target="#programlevel2")  Program  #[span.ic.chevron-down]
                 a(href="", data-menu-target="#locationlevel2") Location #[span.ic.chevron-down]
                 a(href="", data-menu-target="#aboutlevel2")    About    #[span.ic.chevron-down]
@@ -103,69 +103,52 @@ html.no-js
     div.container-fluid
       div.container.content
         div.col-container
-          div.auto-col.
-            <div class="share-logos">
-              SHARE
-              <img src="./img/fpo-share-logos.png">
-            </div>
-            <div class="introduction">
-              <img src="./img/fpo-hero.jpg" alt="">
-              <div class="img-fade"></div>
-              <div>
-                <h1>
-                  New ideas. New practices. New science. New resources. New colleagues. New business procedures.
-                </h1>
-                <div class="intro">
-                  Exposure to the latest industry advances will help you discover your own cutting-edge solutions. Gain contacts among colleagues and resource providers. Ultimately, STRUCTURES CONGRESS 2014 will prepare you and your organization to tackle greater challenges.
-                </div>
-              </div>
-            </div>
+          div.auto-col
+            div.share-logos SHARE
+              img(src="./img/fpo-share-logos.png")
+            div.introduction
+              img(src="./img/fpo-hero.jpg", alt="")
+              div.img-fade
+              div
+                h1 New ideas. New practices. New science. New resources. New colleagues. New business procedures.
+                div.intro Exposure to the latest industry advances will help you discover your own cutting-edge solutions. Gain contacts among colleagues and resource providers. Ultimately, STRUCTURES CONGRESS 2014 will prepare you and your organization to tackle greater challenges.
             <br>
             <br>
-            <h2>Keynote Speakers</h2>
-            <div class="speaker-profile">
-              <div class="session-col">
-                <div class="col-sm-6 dateline text-right">THURSDAY <div class="date">APR 3</div></div>
-                <div class="col-sm-6 sessiontype">OPENING <br>PLENARY</div>
-              </div>
-              <div class="photo-col">
-                <img src="./img/FPO_speaker_130x130.jpg" alt="speaker">
-              </div>
-              <div class="details-col">
-                <div class="person-name">Charles Johnson</div>
-                <div class="person-title"> Ph.D., P.E., S.E., CVS, F.ASCE Illuminate Foundry, Inc.</div>
-                <a class="button">Speaker Details</a>
-              </div>
-            </div>
-            <div class="speaker-profile">
-              <div class="session-col">
-                <div class="col-sm-6 dateline text-right">THURSDAY <div class="date">APR 3</div></div>
-                <div class="col-sm-6 sessiontype">OPENING <br>PLENARY</div>
-              </div>
-              <div class="photo-col">
-                <img src="./img/FPO_speaker_130x130.jpg" alt="speaker">
-              </div>
-              <div class="details-col">
-                <div class="person-name">Charles Johnson</div>
-                <div class="person-title"> Ph.D., P.E., S.E., CVS, F.ASCE Illuminate Foundry, Inc.</div>
-                <a class="button">Speaker Details</a>
-              </div>
-            </div>
+            h2 Keynote Speakers
+            div.speaker-profile
+              div.session-col
+                div.col-sm-6.dateline.text-right THURSDAY #[div.date APR 3]
+                div.col-sm-6.sessiontype         OPENING <br>PLENARY
+              div.photo-col
+                img(src="./img/FPO_speaker_130x130.jpg", alt="speaker")
+              div.details-col
+                div.person-name Charles Johnson
+                div.person-title Ph.D., P.E., S.E., CVS, F.ASCE Illuminate Foundry, Inc.
+                a.button(href="") Speaker Details
+            div.speaker-profile
+              div.session-col
+                div.col-sm-6.dateline.text-right THURSDAY #[div.date APR 3]
+                div.col-sm-6.sessiontype         OPENING <br>PLENARY
+              div.photo-col
+                img(src="./img/FPO_speaker_130x130.jpg", alt="speaker")
+              div.details-col
+                div.person-name Charles Johnson
+                div.person-title Ph.D., P.E., S.E., CVS, F.ASCE Illuminate Foundry, Inc.
+                a.button(href="") Speaker Details
             <br>
-            <h2>Pre-Conference Seminars</h2>
-            <p>Sign up to earn additional PDHs at a pre-conference seminar:</p>
-            <div class="session">Post Disaster Safety Evaluations</div>
-            <p>6.0 PDHs - in cooperation with California Office of Emergency Services (CalOES) and Applied Technology Council (ATC)</p>
-            <div class="session">Design of Sustainable Thermal Breaks</div>
-            <p>4.0 PDHs</p>
+            h2 Pre-Conference Seminars
+            p Sign up to earn additional PDHs at a pre-conference seminar:
+            div.session Post Disaster Safety Evaluations
+            p 6.0 PDHs - in cooperation with California Office of Emergency Services (CalOES) and Applied Technology Council (ATC)
+            div.session Design of Sustainable Thermal Breaks
+            p 4.0 PDHs
             <br>
-            <h2>More Highlights</h2>
-            <ul>
-              <li>Dynamic technical sessions - choose from more than 120 sessions</li>
-              <li>The Council of American Structural Engineers (CASE) Spring Risk Management Convocation</li>
-              <li>Networking with more than 1,200 colleagues</li>
-            </ul>
-            <a class="button" href="">View Program</a>
+            h2 More Highlights
+            ul.
+              li Dynamic technical sessions - choose from more than 120 sessions
+              li The Council of American Structural Engineers (CASE) Spring Risk Management Convocation
+              li Networking with more than 1,200 colleagues
+            a.button(href="") View Program
             <br><br>
           div.side-nav-col
             div.callout.register
@@ -178,7 +161,7 @@ html.no-js
                 EARLY BIRD RATES - Save up to $200! <br><br>
                 $675 - Members <br>
                 $875 - Non-Members <br>
-                <a href="">More options & rates available</a><br>
+                #[a(href="") More options &amp; rates available]<br>
                 Prices go up February 12, 2014 <br>
             div.callout.important-dates
               h2 Important Dates
@@ -223,9 +206,9 @@ html.no-js
               h2 Conference Chairs
               div.callout-body.
                 <div class="person-name">Glenn Bell, P.E., F.SEI, M.ASCE</div>
-                <div class="person-title">Simpson Gumpertz & Heger Inc.</div>
+                <div class="person-title">Simpson Gumpertz &amp; Heger Inc.</div>
                 <div class="person-name">Matt Card, P.E., Aff.M.ASCE</div>
-                <div class="person-title">Alfred Benesch & Co.</div>
+                <div class="person-title">Alfred Benesch &amp; Co.</div>
                 <a href="">Message from the Chairs</a>
             div.callout.sponsors.hidden-xs
               h2 Platinum Sponsors
@@ -296,7 +279,7 @@ html.no-js
                   img.conference-logo(src="./img/conf-logo.png")
                 div.auto-col.
                   <div class="col-sm-12 col-xs-10 col4">
-                    <h2>TORONTO, CANADA  |  MAY 2-4, 2013</h2>
+                    <h2>TORONTO, CANADA  |  MAY 2&ndash;4, 2013</h2>
                     <h3>Baylord Hotel</h3>
                     <h4>Optional Tagline for the Conference Goes Here Lorem Ipsum</h4>
                     <p><strong>This is a place to write the theme or a brief description of this conference. It’s optional. lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum.</strong></p>
@@ -325,11 +308,11 @@ html.no-js
                       <a class="large uppercase" href="">Program</a>
                       <a href="">Speakers</a>
                       <a href="">Exhibitor List</a>
-                      <a href="">ASCE Communities & Pavilions</a>
+                      <a href="">ASCE Communities &amp; Pavilions</a>
                     </div>
                     <div class="link-block">
                       <a class="large uppercase" href="">Location</a>
-                      <a href="">Lodging & Transportation</a>
+                      <a href="">Lodging &amp; Transportation</a>
                       <a href="">For International Travel</a>
                     </div>
                     <div class="link-block">
