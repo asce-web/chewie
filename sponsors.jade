@@ -24,19 +24,19 @@ html.no-js
       div.ic.close-nav(tabindex="0") X
       div.link-block.
         <a class="large uppercase" href="./">Home</a>
-      div.link-block.
-        <a class="large uppercase" href="">Program</a>
-        <a href="">Speakers</a>
-        <a href="">Exhibitor List</a>
-        <a href="">ASCE Communities & Pavilions</a>
-      div.link-block.
-        <a class="large uppercase" href="">Location</a>
-        <a href="">Lodging & Transportation</a>
-        <a href="">For International Travel</a>
-      div.link-block.
-        <a class="large uppercase" href="">About</a>
-        <a href="">Cooperating Organizations</a>
-        <a href="">Volunteer</a>
+      div.link-block
+        a.large.uppercase(href="") Program
+        a(href="") Speakers
+        a(href="") Exhibitor List
+        a(href="") ASCE Communities &amp; Pavilions
+      div.link-block
+        a.large.uppercase(href="") Location
+        a(href="") Lodging &amp; Transportation
+        a(href="") For International Travel
+      div.link-block
+        a.large.uppercase(href="") About
+        a(href="") Cooperating Organizations
+        a(href="") Volunteer
       a.large.uppercase(href="") Why Attend
       a.large.uppercase(href="") Registration
       a.large.uppercase(href="") For Speakers
@@ -44,75 +44,61 @@ html.no-js
       a.large.uppercase(href="") Exhibitors
     div.header
       div.visible-xs.mobile-nav.navigation
-        div.year-badge-wrapper.
-          <div class="year-badge text-center">
-            <h2><span class="light">20</span>14</h2>
-          </div>
-          <div class="year-badge-corner"></div>
-        a(href="./") <span class="ic home"></span>
+        div.year-badge-wrapper
+          div.year-badge.text-center
+            h2 #[span.light 20]15
+          div.year-badge-corner
+        a(href="./") #[span.ic.home]
         a(href="") Register
-        a.menu-toggle(href="") Menu <span class="ic menu"></span>
+        a.menu-toggle(href="") Menu #[span.ic.menu]
       div.container-fluid.titles
         div.container
-          div.col-container.
-            <div class="logo-col text-center">
-              <img class="conference-logo" src="./img/conf-logo.png"/>
-            </div>
-            <div class="auto-col">
+          div.col-container
+            div.logo-col.text-center
+              a(href="./")
+                img.conference-logo(src="./img/conf-logo.png")
+            div.auto-col.
               <h2>2ND T&DI GREEN STREETS, HIGHWAYS & DEVELOPMENT CONFERENCE
                 <h5 >Boston, Massachusetts  |  April 3&ndash;5, 2014</h5>
               </h2>
               <h4 class="hidden-xs">Optional Tagline for the Conference Goes Here Lorem Ipsum</h4>
-            </div>
-            <div class="side-nav-col hidden-xs" hidden-xs style="background-image: url('./img/fpo-header.jpg');">
-              <div class="year-badge-wrapper hidden-xs">
-                <div class="year-badge text-center">
-                  <h2><span class="light">20</span>14</h2>
-                </div>
-                <div class="year-badge-corner"></div>
-              </div>
-              <div class="right-header hidden-xs">
-                <div class="nav3">
-                  <a href="">For Speakers</a>
-                  <a href="">Sponsors</a>
-                  <a href="">Exhibitors</a>
-                </div>
-              </div>
-            </div>
+            div.side-nav.col.hidden-xs(style="background-image: url('./img/fpo-header.jpg');")
+              div.year-badge-wrapper.hidden-xs
+                div.year-badge.text-center
+                  h2 #[span.light 20]14
+                div.year-badge.corner
+              div.right-header.hidden-xs
+                div.nav3
+                  a(href="") For Speakers
+                  a(href="./sponsors.php") Sponsors
+                  a(href="") Exhibitors
       div.container-fluid.navigation.hidden-xs
         div.container
-          div.col-container.
-            <div class="auto-col">
-              <div class="nav1">
-                <a class="no-hover" href="./"><span class="ic home"></span></a>
-                <a href="" data-menu-target="#programlevel2">Program <span class="ic chevron-down"></span></a>
-                <a href="" data-menu-target="#locationlevel2">Location <span class="ic chevron-down"></span></a>
-                <a href="" data-menu-target="#aboutlevel2">About <span class="ic chevron-down"></span></a>
-                <a href="" class="no-hover hidden-md hidden-lg"><span class="ic contact">Contact</span></a>
-                <a href="" class="hidden-sm hidden-xs">Contact</a>
-              </div>
-            </div>
-            <div class="side-nav-col">
-              <div class="nav2">
-                <a href="">Why Attend</a>
-                <a href="">Registration</a>
-              </div>
-            </div>
+          div.col-container
+            div.auto-col
+              div.nav1
+                a.no-hover(href="./")                            #[span.ic.home]
+                a(href="", data-menu-target="#programlevel2")  Program  #[span.ic.chevron-down]
+                a(href="", data-menu-target="#locationlevel2") Location #[span.ic.chevron-down]
+                a(href="", data-menu-target="#aboutlevel2")    About    #[span.ic.chevron-down]
+                a.no-hover.hidden-md.hidden-lg(href="")        #[span.ic.contact Contact]
+                a.hidden-sm.hidden-xs(href="")                 Contact
+            div.side-nav-col
+              div.nav2
+                a(href="") Why Attend
+                a(href="") Registration
       div.container-fluid.navigation-level2.show-current-page
-        div.container.
-          <ul id="programlevel2" class="list-unstyled">
-            <li><a href="">Speakers</a></li>
-            <li><a href="">Exhibitor List</a></li>
-            <li><a href="">ASCE Communities & Pavilion</a></li>
-          </ul>
-          <ul id="locationlevel2" class="list-unstyled">
-            <li><a href="">Lodging & Transportation</a></li>
-            <li><a href="">For International Travel</a></li>
-          </ul>
-          <ul id="aboutlevel2" class="list-unstyled">
-            <li><a href="">Cooperating Organizations</a></li>
-            <li><a href="">Volunteer</a></li>
-          </ul>
+        div.container
+          ul.list-unstyled#programlevel2
+            li: a(href="") Speakers
+            li: a(href="") Exhibitor List
+            li: a(href="") ASCE Communities &amp; Pavilion
+          ul.list-unstyled#locationlevel2
+            li: a(href="") Lodging &amp; Transportation
+            li: a(href="") For International Travel
+          ul.list-unstyled#aboutlevel2
+            li: a(href="") Cooperating Organizations
+            li: a(href="") Volunteer
     div.container-fluid
       div.container.content
         div.col-container
@@ -263,10 +249,10 @@ html.no-js
               </table>
             </div>
             <br><br>
-          div.side-nav-col.
-            <div class="callout contacts">
-              <h2>Contacts</h2>
-              <div class="callout-body">
+          div.side-nav-col
+            div.callout.contacts
+              h2 Contacts
+              div.callout-body.
                 <strong>John Smith</strong>
                 <br>
                 <div class="phone">703-123-4567</div>
@@ -276,11 +262,9 @@ html.no-js
                 <br>
                 <div class="phone">703-123-4567</div>
                 <a href="mailto:jdoe@asce.org">jdoe@asce.org</a>
-              </div>
-            </div>
-            <div class="callout">
-              <h2>BENEFITS</h2>
-              <div class="callout-body">
+            div.callout
+              h2 BENEFITS
+              div.callout-body.
                 <ul>
                   <li>Standard UL List</li>
                   <li>Same look as core site</li>
@@ -292,11 +276,9 @@ html.no-js
                     </ul>
                   </li>
                 </ul>
-              </div>
-            </div>
-            <div class="callout important-dates">
-              <h2>IMPORTANT DATES <br>for sponsors</h2>
-              <div class="callout-body">
+            div.callout.important-dates
+              h2 IMPORTANT DATES <br>for sponsors
+              div.callout-body.
                 <div class="date">DEC 18, 2013</div>
                 <div class="milestone">Lorem ipsum deadline</div>
                 <br>
@@ -309,85 +291,68 @@ html.no-js
                 <br>
                 <br>
                 <strong>See <a href="">Sponsor Toolkit</a> for more details.</strong>
-              </div>
-            </div>
     div.container-fluid.content
-      div.container.sponsor-container.
-        <h2>Thank you to our 2014 sponsors!</h2>
-        <p>The generous contributions from the following sponsors enable our conference to continue its commitment to excellence in programming and networking events for the attendees.</p>
-        <br>
-        <div class="top-sponsor-block platinum">
-          <div class="box">
-            <img src="./img/sponsor_logo_horizontal2.gif" alt="">
-            <img src="./img/sponsor_logo_horizontal1.gif" alt="">
-          </div>
-        </div>
-        <div class="top-sponsor-block gold">
-          <div class="box">
-            <img src="./img/Sponsorlogo_square1.gif" alt="">
-            <img src="./img/sponsor_logo_horizontal3.gif" alt="">
-            <img src="./img/sponsor_logo_horizontal4.gif" alt="">
-          </div>
-        </div>
-        <div class="top-sponsor-block corporate">
-          <div class="box">
-            <img src="./img/sponsor_logo_horizontal3.gif" alt="">
-            <img src="./img/sponsor_logo_horizontal4.gif" alt="">
-          </div>
-        </div>
-        <div class="top-sponsor-block silver">
-          <div class="box">
-            <img src="./img/Sponsorlogo_square3.gif" alt="">
-            <img src="./img/sponsor_logo_horizontal2.gif" alt="">
-            <img src="./img/Sponsorlogo_square2.gif" alt="">
-            <img src="./img/sponsor_logo_horizontal1.gif" alt="">
-          </div>
-        </div>
-        <div class="top-sponsor-block bronze">
-          <div class="box">
-            <a href="">ExpoFactor</a>
-            <a href="">K Chen International</a>
-            <a href="">LeCorbusee</a>
-            <a href="">McMalley/daSilva</a>
-          </div>
-        </div>
-        <div class="top-sponsor-block financial">
-          <div class="box">
-            <a href="">ExpoFactor</a>
-            <a href="">K Chen International</a>
-            <a href="">LeCorbusee</a>
-            <a href="">McMalley/daSilva</a>
-          </div>
-        </div>
+      div.container.sponsor-container
+        h2 Thank you to our 2014 sponsors!
+        p The generous contributions from the following sponsors enable our conference to continue its commitment to excellence in programming and networking events for the attendees.
+        br
+        div.top-sponsor-block.platinum
+          div.box
+            img(src="./img/sponsor_logo_horizontal2.gif" , alt="")
+            img(src="./img/sponsor_logo_horizontal1.gif" , alt="")
+        div.top-sponsor-block.gold
+          div.box
+            img(src="./img/Sponsorlogo_square1.gif"      , alt="")
+            img(src="./img/sponsor_logo_horizontal3.gif" , alt="")
+            img(src="./img/sponsor_logo_horizontal4.gif" , alt="")
+        div.top-sponsor-block.corporate
+          div.box
+            img(src="./img/sponsor_logo_horizontal3.gif" , alt="")
+            img(src="./img/sponsor_logo_horizontal4.gif" , alt="")
+        div.top-sponsor-block.silver
+          div.box
+            img(src="./img/Sponsorlogo_square3.gif"      , alt="")
+            img(src="./img/sponsor_logo_horizontal2.gif" , alt="")
+            img(src="./img/Sponsorlogo_square2.gif"      , alt="")
+            img(src="./img/sponsor_logo_horizontal1.gif" , alt="")
+        div.top-sponsor-block.bronze
+          div.box
+            a(href="") ExpoFactor
+            a(href="") K Chen International
+            a(href="") LeCorbusee
+            a(href="") McMalley/daSilva
+        div.top-sponsor-block.financial
+          div.box
+            a(href="") ExpoFactor
+            a(href="") K Chen International
+            a(href="") LeCorbusee
+            a(href="") McMalley/daSilva
       div.coop-orgs-block.row
-        div.container.
-          <h2>COOPERATING ORGANIZATIONS</h2>
-          <img src="./img/cooplogo_square1.gif" alt="">
-          <img src="./img/cooplogo_horizontal1.gif" alt="">
-          <img src="./img/cooplogo_horizontal2.gif" alt="">
-          <img src="./img/cooplogo_horizontal3.gif" alt="">
-          <img src="./img/cooplogo_square4.gif" alt="">
-          <img src="./img/cooplogo_horizontal4.gif" alt="">
-          <img src="./img/cooplogo_square2.gif" alt="">
+        div.container
+          h2 COOPERATING ORGANIZATIONS
+          img(src="./img/cooplogo_square1.gif"     , alt="")
+          img(src="./img/cooplogo_horizontal1.gif" , alt="")
+          img(src="./img/cooplogo_horizontal2.gif" , alt="")
+          img(src="./img/cooplogo_horizontal3.gif" , alt="")
+          img(src="./img/cooplogo_square4.gif"     , alt="")
+          img(src="./img/cooplogo_horizontal4.gif" , alt="")
+          img(src="./img/cooplogo_square2.gif"     , alt="")
     div.footer.container-fluid
       div.row.year-tabs
-        div.container.
-          <ul class="tab-buttons pull-right list-unstyled">
-             <li>         <a href="#yearprev"  data-toggle="tab" class="tab-button">2013</a></li>
-             <li class="active"><a href="#yearpresent" data-toggle="tab" class="tab-button">2014</a></li>
-             <li>         <a href="#yearnext"  data-toggle="tab" class="tab-button">2015</a></li>
-          </ul>
+        div.container
+          ul.tab-buttons.pull-right.list-unstyled
+            li:        a.tab-button(data-toggle="tab", href="#yearprev")    2013
+            li.active: a.tab-button(data-toggle="tab", href="#yearpresent") 2014
+            li:        a.tab-button(data-toggle="tab", href="#yearnext")    2015
       div.tab-content
         div#yearprev.tab-pane
           div.row.title
-            div.container.
-              <div class="hidden-xs pull-left">
-                <div class="year-badge text-center">
-                  <h2><span class="light">20</span>13</h2>
-                </div>
-                <div class="year-badge-corner"></div>
-              </div>
-              <h2>1st T&DI Green Streets, Highways & Development Conference</h2>
+            div.container
+              div.hidden-xs.pull-left
+                div.year-badge.text-center
+                  h2 #[span.light 20]13
+                div.year-badge-corner
+              h2 1st T&amp;DI Green Streets, Highways &amp; Development Conferencex
           div.row.details.year-prev-next
             div.container
               div.col-container
@@ -404,14 +369,12 @@ html.no-js
                   </div>
         div#yearpresent.tab-pane.active
           div.row.title
-            div.container.
-              <div class="hidden-xs pull-left">
-                <div class="year-badge text-center">
-                  <h2><span class="light">20</span>14</h2>
-                </div>
-                <div class="year-badge-corner"></div>
-              </div>
-              <h2>2nd T&DI Green Streets, Highways & Development Conference</h2>
+            div.container
+              div.hidden-xs.pull-left
+                div.year-badge.text-center
+                  h2 #[span.light 20]14
+                div.year-badge-corner
+              h2 2nd T&amp;DI Green Streets, Highways &amp; Development Conference
           div.row.details
             div.container
               div.col-container
@@ -469,14 +432,12 @@ html.no-js
             <a class="menu-toggle" href="">Menu <span class="ic menu"></span></a>
         div#yearnext.tab-pane
           div.row.title
-            div.container.
-              <div class="hidden-xs pull-left">
-                <div class="year-badge text-center">
-                  <h2><span class="light">20</span>15</h2>
-                </div>
-                <div class="year-badge-corner"></div>
-              </div>
-              <h2>3rd T&DI Green Streets, Highways & Development Conference</h2>
+            div.container
+              div.hidden-xs.pull-left
+                div.year-badge.text-center
+                  h2 #[span.light 20]16
+                div.year-badge-corner
+              h2 3rd T&amp;DI Green Streets, Highways &amp; Development Conference
           div.row.details.year-prev-next
             div.container
               div.col-container
