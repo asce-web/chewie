@@ -4,13 +4,6 @@
 \*################################*/
 
 
-.navigation {
-  // FIXME a container holding nav1.
-  // this is here only as a bug fix.
-  // remove this!
-  background-color: @color_site_secondary;
-}
-
 // Any navigation bar.
 // This class should be extended by specific types of bars,
 // such as NavMain and YearTabs
@@ -28,6 +21,7 @@
   font-weight: 700;
   text-transform: uppercase;
   color: @color_asce_header_txt;
+  background-color: @color_site_secondary;
 }
 
 // A link in a navigation bar
@@ -76,7 +70,6 @@
 // : 2015-09-10
 .nav1,
 .c-NavBar--main {
-  background-color: @color_site_secondary;
   a,
   .c-NavBar__Link {
     &:hover {
@@ -114,17 +107,18 @@
   padding: 5px 26px 29px; // NUMBERS BRUH
   font-size: 13px;
   text-align: center;
+  background-color: transparent !important; // sets up for gradient // overrides secondary color set in conference.less
   @media (max-width: 989px) {
     text-align: right;
   }
 
   // can’t we use a fallback tool for this?
-  background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
-  background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C */
+  background-image: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+  background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+  background-image: -o-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+  background-image: -ms-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
 
   a,
