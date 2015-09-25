@@ -1228,7 +1228,7 @@ a.button a:focus {
 .introduction h1,
 .c-Intro h1 {
   font-size: 26px;
-  color: inherit;
+  color: inherit !important;
   margin-bottom: 10px;
   text-transform: uppercase;
 }
@@ -1268,7 +1268,7 @@ a.button a:focus {
 }
 .c-Intro__Hn {
   font-size: 26px;
-  color: inherit;
+  color: inherit !important;
   margin-bottom: 10px;
   text-transform: uppercase;
 }
