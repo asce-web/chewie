@@ -20,6 +20,9 @@
   position: relative;
   width: 100%;
   margin-bottom: 20px;
+  #pipelines & {
+    background-color: @color_pl_primary;
+  }
   img {
     .c-Intro__Hero;
   }
@@ -84,13 +87,18 @@
   position: absolute;
   margin-top: -@height;
   // padding: 0 !important; // TODO remove this line when we add a damn class (only here because `.introduction > div` has higher specificity)
-
-  // can’t we use a mixin for background gradients?
-  background: -moz-linear-gradient(top, fade(@color_site_primary, 0%) 0%, @color_site_primary 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,fade(@color_site_primary, 0%)), color-stop(100%,@color_site_primary)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, fade(@color_site_primary, 0%) 0%,@color_site_primary 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, fade(@color_site_primary, 0%) 0%,@color_site_primary 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, fade(@color_site_primary, 0%) 0%,@color_site_primary 100%); /* IE10+ */
-  background: linear-gradient(to bottom, fade(@color_site_primary, 0%) 0%,@color_site_primary 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='fade(@color_site_primary, 0%)', endColorstr='@color_site_primary',GradientType=0 ); /* IE6-9 */
+  .bg-grad(@color_site_primary);
+  #pipelines & {
+    .bg-grad(@color_pl_primary);
+  }
+  .bg-grad(@primary) {
+    // a mixin for background gradients
+    background: -moz-linear-gradient(top, fade(@primary, 0%) 0%, @primary 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,fade(@primary, 0%)), color-stop(100%,@primary)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, fade(@primary, 0%) 0%,@primary 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, fade(@primary, 0%) 0%,@primary 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, fade(@primary, 0%) 0%,@primary 100%); /* IE10+ */
+    background: linear-gradient(to bottom, fade(@primary, 0%) 0%,@primary 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='fade(@primary, 0%)', endColorstr='@primary',GradientType=0 ); /* IE6-9 */
+  }
 }

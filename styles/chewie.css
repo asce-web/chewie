@@ -329,6 +329,18 @@ button {
   text-transform: uppercase;
   color: #6a9556;
 }
+#pipelines .c-H--alpha,
+#pipelines .c-H--beta,
+#pipelines .c-H--gamma,
+#pipelines .c-H--delta,
+#pipelines .content h1,
+#pipelines .content h2,
+#pipelines .content h3,
+#pipelines .content h4,
+#pipelines .content h5,
+#pipelines .content h6 {
+  color: #006c67;
+}
 .c-H--alpha,
 .content h1 {
   margin-top: 20px;
@@ -751,6 +763,13 @@ button {
   color: #ffffff;
   background-color: #7aa96c;
 }
+#pipelines .c-NavBar,
+#pipelines .navigation,
+#pipelines .nav3,
+#pipelines .tab-buttons,
+#pipelines .navigation-level2 {
+  background-color: #717073;
+}
 .c-NavBar__Link,
 .navigation a,
 .nav3 a,
@@ -796,6 +815,12 @@ button {
 .c-NavBar--main .c-NavBar__Link:hover {
   text-decoration: none;
   background-color: #714509;
+}
+#pipelines .nav1 a:hover,
+#pipelines .c-NavBar--main a:hover,
+#pipelines .nav1 .c-NavBar__Link:hover,
+#pipelines .c-NavBar--main .c-NavBar__Link:hover {
+  background-color: #c1d8c5;
 }
 .nav2,
 .c-NavBar--side {
@@ -859,6 +884,10 @@ button {
 .c-NavBar--secondary .c-NavBar__Link {
   padding: 14px 10px;
 }
+#pipelines .navigation-level2,
+#pipelines .c-NavBar--secondary {
+  background-color: #c1d8c5;
+}
 .navigation-level2.show-current-page,
 .c-NavBar--secondary.show-current-page {
   position: relative;
@@ -894,6 +923,10 @@ button {
 .c-NavBar--tabs .c-NavBar__Link.current {
   background-color: #714509;
 }
+#pipelines .c-NavBar--tabs .c-NavBar__Link:hover,
+#pipelines .c-NavBar--tabs .c-NavBar__Link.current {
+  background-color: #c1d8c5;
+}
 .c-NavBar--tabs .c-NavBar__Link:hover {
   text-decoration: none;
 }
@@ -912,6 +945,9 @@ button {
   position: absolute;
   top: 46px;
   left: 40%;
+}
+#pipelines .c-NavBar--tabs .c-NavBar__Link.current::after {
+  border-top-color: #c1d8c5;
 }
 .tab-buttons {
   margin-bottom: 0;
@@ -942,6 +978,10 @@ button {
 li.active .tab-button {
   background-color: #714509;
 }
+#pipelines .tab-button:hover,
+#pipelines li.active .tab-button {
+  background-color: #c1d8c5;
+}
 .tab-button:hover {
   text-decoration: none;
 }
@@ -965,6 +1005,9 @@ li.active .tab-button::after {
   li.active .tab-button::after {
     top: 34px;
   }
+}
+#pipelines li.active .tab-button::after {
+  border-top-color: #c1d8c5;
 }
 .mobile-nav {
   text-align: right;
@@ -1155,6 +1198,12 @@ a.button a:focus {
   color: #ffffff;
   background-color: #6a9556;
 }
+#pipelines .header,
+#pipelines .footer,
+#pipelines .summary-banner,
+#pipelines .c-SummaryBanner {
+  background-color: #006c67;
+}
 .header a,
 .footer a,
 .summary-banner a,
@@ -1218,6 +1267,10 @@ a.button a:focus {
   position: relative;
   width: 100%;
   margin-bottom: 20px;
+}
+#pipelines .introduction,
+#pipelines .c-Intro {
+  background-color: #006c67;
 }
 .introduction img,
 .c-Intro img {
@@ -1319,7 +1372,23 @@ a.button a:focus {
   /* IE10+ */
   background: linear-gradient(to bottom, rgba(106, 149, 86, 0) 0%, #6a9556 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='fade(@color_site_primary, 0%)', endColorstr='@color_site_primary', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='fade(@primary, 0%)', endColorstr='@primary', GradientType=0);
+  /* IE6-9 */
+}
+#pipelines .img-fade {
+  background: -moz-linear-gradient(top, rgba(0, 108, 103, 0) 0%, #006c67 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 108, 103, 0)), color-stop(100%, #006c67));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(0, 108, 103, 0) 0%, #006c67 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(0, 108, 103, 0) 0%, #006c67 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(0, 108, 103, 0) 0%, #006c67 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, rgba(0, 108, 103, 0) 0%, #006c67 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='fade(@primary, 0%)', endColorstr='@primary', GradientType=0);
   /* IE6-9 */
 }
 /*################################*\
@@ -1896,6 +1965,9 @@ a.button a:focus {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
+#pipelines .date {
+  color: #717073;
+}
 /*################################*\
     _comp.typo.TableHeader.less
 \*################################*/
@@ -2094,6 +2166,9 @@ a.button a:focus {
     width: 90%;
     max-width: 350px;
     overflow: auto;
+  }
+  #pipelines .toggleable-nav.in {
+    background: #006c67;
   }
   .toggleable-nav.in .close-nav {
     display: block;
