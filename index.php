@@ -17,6 +17,7 @@
 
         <link rel="stylesheet" href="./css/vendor/bootstrap.min.css">
         <link rel="stylesheet" href="./styles/chewie.css">
+        <link rel="stylesheet" href="./styles/conference.css">
 
         <!--[if lt IE 9]>
             <script src="./js/vendor/html5-3.6-respond-1.1.0.min.js"></script>

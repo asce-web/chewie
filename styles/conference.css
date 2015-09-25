@@ -1,0 +1,87 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
+    conference.less
+\*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*++++++++++++++++++++++++++++++++*\
+    CONFERENCE SITE-SPECIFIC COLORS
+\*++++++++++++++++++++++++++++++++*/
+.c-H--alpha,
+.c-H--beta,
+.c-H--gamma,
+.c-H--delta,
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+  color: #bf0575;
+}
+.introduction,
+.c-Intro {
+  background-color: #bf0575;
+}
+.img-fade {
+  background: -moz-linear-gradient(top, rgba(191, 5, 117, 0) 0%, #bf0575 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(191, 5, 117, 0)), color-stop(100%, #bf0575));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(191, 5, 117, 0) 0%, #bf0575 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(191, 5, 117, 0) 0%, #bf0575 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(191, 5, 117, 0) 0%, #bf0575 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, rgba(191, 5, 117, 0) 0%, #bf0575 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='fade(@color_site_primary, 0%)', endColorstr='@color_site_primary', GradientType=0);
+  /* IE6-9 */
+}
+.date {
+  color: #613286;
+}
+.c-NavBar,
+.navigation,
+.nav3,
+.tab-buttons,
+.navigation-level2 {
+  background-color: #613286;
+}
+.nav1,
+.c-NavBar--main {
+  background-color: #613286;
+}
+.nav1 a:hover,
+.c-NavBar--main a:hover,
+.nav1 .c-NavBar__Link:hover,
+.c-NavBar--main .c-NavBar__Link:hover {
+  background-color: #f56ace;
+}
+.navigation-level2,
+.c-NavBar--secondary {
+  background-color: #f56ace;
+}
+.c-NavBar--tabs .c-NavBar__Link:hover,
+.c-NavBar--tabs .c-NavBar__Link.current {
+  background-color: #f56ace;
+}
+.c-NavBar--tabs .c-NavBar__Link.current::after {
+  border-top-color: #f56ace;
+}
+.tab-button:hover,
+li.active .tab-button {
+  background-color: #f56ace;
+}
+li.active .tab-button::after {
+  border-top-color: #f56ace;
+}
+@media (max-width: 767px) {
+  .toggleable-nav.in {
+    background: #bf0575;
+  }
+}
+.header,
+.footer,
+.summary-banner,
+.c-SummaryBanner {
+  background-color: #bf0575;
+}
