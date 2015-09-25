@@ -1,7 +1,7 @@
 doctype html
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8">      <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9">             <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8">        <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9">               <![endif]-->
 <!--[if gt IE 8]><!-->
 html.no-js
   <!--<![endif]-->
@@ -22,8 +22,8 @@ html.no-js
     <!--[if lt IE 7]> <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p> <![endif]-->
     div.toggleable-nav.fade
       div.ic.close-nav(tabindex="0") X
-      div.link-block.
-        <a class="large uppercase" href="./">Home</a>
+      div.link-block
+        a.large.uppercase(href="./") Home
       div.link-block
         a.large.uppercase(href="") Program
         a(href="") Speakers
@@ -105,15 +105,17 @@ html.no-js
             h1 SPONSOR THE 2014 CONFERENCE
             div.share-logos SHARE
               img(src="./img/fpo-share-logos.png")
-            <br>
+            br
             h2 Get your company in the spotlight
-            <br>
+            br
             p Introductory copy e.g. Promote your company to the engineering community at Structures Congress 2014. As a forum for the best minds in civil engineering, this conference will be a prime opportunity to showcase your company or product.
             div.key-links
               a(href="./test.pdf")  Sponsor Prospectus
               a(href="./test2.pdf") Sponsor Contract
               a(href="") Sponsor Toolkit
-            <br><br><br>
+            br
+            br
+            br
             h3 Sponsorshp Opportunities At A Glance
             div.table-responsive
               table.sponsor-opportunities.no-stripe.no-border
@@ -225,45 +227,42 @@ html.no-js
           div.side-nav-col
             div.callout.contacts
               h2 Contacts
-              div.callout-body.
-                <strong>John Smith</strong>
-                <br>
-                <div class="phone">703-123-4567</div>
-                <a href="mailto:jsmith@asce.org">jsmith@asce.org</a>
-                <br><br>
-                <strong>Jane Doe</strong>
-                <br>
-                <div class="phone">703-123-4567</div>
-                <a href="mailto:jdoe@asce.org">jdoe@asce.org</a>
+              div.callout-body
+                strong John Smith
+                br
+                div.phone 703-123-4567
+                a(href="mailto:jsmith@asce.org") jsmith@asce.org
+                br
+                br
+                strong Jane Doe
+                br
+                div.phone 703-123-4567
+                a(href="mailto:jdoe@asce.org") jdoe@asce.org
             div.callout
               h2 BENEFITS
-              div.callout-body.
-                <ul>
-                  <li>Standard UL List</li>
-                  <li>Same look as core site</li>
-                  <li><a href="">Lorem ipsum</a>
-                    <ul>
-                      <li>Standard UL List</li>
-                      <li>Same look as core site</li>
-                      <li><a href="">Lorem ipsum</a></li>
-                    </ul>
-                  </li>
-                </ul>
+              div.callout-body
+                ul
+                  li Standard UL List
+                  li Same look as core site
+                  li #[a(href="") Lorem ipsum]
+                    ul
+                      li Standard UL List
+                      li Same look as core site
+                      li #[a(href="") Lorem ipsum]
             div.callout.important-dates
-              h2 IMPORTANT DATES <br>for sponsors
-              div.callout-body.
-                <div class="date">DEC 18, 2013</div>
-                <div class="milestone">Lorem ipsum deadline</div>
-                <br>
-                <div class="date">FEB 12, 2014</div>
-                <div class="milestone">LOGOS DUE</div>
-                <br>
-                <div class="date">MAR 26, 2014</div>
-                <div class="milestone">Conference registration deadline</div>
-                If your sponsorship includes conference registration tickets, register your attendees by this date.
-                <br>
-                <br>
-                <strong>See <a href="">Sponsor Toolkit</a> for more details.</strong>
+              h2 IMPORTANT DATES #[br] for sponsors
+              div.callout-body
+                div.date      Dec 18, 2013
+                div.milestone Lorem ipsum deadline
+                br
+                div.date      Feb 12, 2013
+                div.milestone LOGOS DUE
+                br
+                div.date      MAR 26, 2014
+                div.milestone Conference registration deadline
+                br
+                p If your sponsorship includes conference registration tickets, register your attendees by this date.
+                p: strong See #[a(href="") Sponsor Toolkit] for more details.
     div.container-fluid.content
       div.container.sponsor-container
         h2 Thank you to our 2014 sponsors!
