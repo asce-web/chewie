@@ -4,6 +4,13 @@
 \*################################*/
 
 
+.navigation {
+  // FIXME a container holding nav1.
+  // this is here only as a bug fix.
+  // remove this!
+  background-color: @color_site_secondary;
+}
+
 // Any navigation bar.
 // This class should be extended by specific types of bars,
 // such as NavMain and YearTabs
@@ -21,7 +28,6 @@
   font-weight: 700;
   text-transform: uppercase;
   color: @color_asce_header_txt;
-  background-color: @color_site_secondary;
 }
 
 // A link in a navigation bar
@@ -70,6 +76,7 @@
 // : 2015-09-10
 .nav1,
 .c-NavBar--main {
+  background-color: @color_site_secondary;
   a,
   .c-NavBar__Link {
     &:hover {

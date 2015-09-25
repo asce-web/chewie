@@ -741,6 +741,9 @@ button {
 /*################################*\
     _comp.ui.NavBar.less
 \*################################*/
+.navigation {
+  background-color: #7aa96c;
+}
 .c-NavBar,
 .navigation,
 .nav3,
@@ -750,7 +753,6 @@ button {
   font-weight: 700;
   text-transform: uppercase;
   color: #ffffff;
-  background-color: #7aa96c;
 }
 .c-NavBar__Link,
 .navigation a,
@@ -790,6 +792,10 @@ button {
 .navigation-level2 a:hover,
 .navigation-level2 a.active {
   color: inherit;
+}
+.nav1,
+.c-NavBar--main {
+  background-color: #7aa96c;
 }
 .nav1 a:hover,
 .c-NavBar--main a:hover,

@@ -25,6 +25,8 @@
 @color_site_secondary: #59067c;
 @color_site_accent:    #f66fb0;
 
+//==============================================================================
+
 .c-H--alpha,
 .c-H--beta,
 .c-H--gamma,
@@ -57,16 +59,16 @@
   color: @color_site_secondary;
 }
 
-.c-NavBar,
-.navigation,
-.nav3,
-.tab-buttons,
-.navigation-level2 {
+.navigation {
+  // FIXME a container holding nav1.
+  // this is here only as a bug fix.
+  // remove this!
   background-color: @color_site_secondary;
 }
 
 .nav1,
 .c-NavBar--main {
+  background-color: @color_site_secondary;
   a,
   .c-NavBar__Link {
     &:hover {

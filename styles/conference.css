@@ -51,11 +51,11 @@
 .date {
   color: #59067c;
 }
-.c-NavBar,
-.navigation,
-.nav3,
-.tab-buttons,
-.navigation-level2 {
+.navigation {
+  background-color: #59067c;
+}
+.nav1,
+.c-NavBar--main {
   background-color: #59067c;
 }
 .nav1 a:hover,
