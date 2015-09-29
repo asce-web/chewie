@@ -22,6 +22,9 @@
   text-transform: uppercase;
   color: @color_asce_header_txt;
   background-color: @color_site_secondary;
+  #pipelines & {
+    background-color: @color_pl_secondary;
+  }
 }
 
 // A link in a navigation bar
@@ -76,6 +79,9 @@
     &:hover {
       text-decoration: none;
       background-color: @color_site_accent;
+      #pipelines & {
+        background-color: @color_pl_accent;
+      }
     }
   }
 }
@@ -153,6 +159,9 @@
   .c-NavBar__Link {
     padding: 14px 10px;
   }
+  #pipelines & {
+    background-color: @color_pl_accent;
+  }
 
 
 
@@ -191,6 +200,9 @@
     &:hover,
     &.current {
       background-color: @color_site_accent;
+      #pipelines & {
+        background-color: @color_pl_accent;
+      }
     }
     &:hover {
       text-decoration: none;
@@ -209,6 +221,9 @@
         position: absolute;
         top: 46px;
         left: 40%;
+        #pipelines & {
+          border-top-color: @color_pl_accent;
+        }
       }
     }
   }
@@ -250,6 +265,9 @@
   &:hover,
   li.active & {
     background-color: @color_site_accent;
+    #pipelines & {
+      background-color: @color_pl_accent;
+    }
   }
   &:hover {
     text-decoration: none;
@@ -270,6 +288,9 @@
       left: 38%;
       @media (max-width: 767px) {
         top: 34px;
+      }
+      #pipelines & {
+        border-top-color: @color_pl_accent;
       }
     }
   }

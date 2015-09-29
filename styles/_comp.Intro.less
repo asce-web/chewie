@@ -20,6 +20,9 @@
   position: relative;
   width: 100%;
   margin-bottom: 20px;
+  #pipelines & {
+    background-color: @color_pl_primary;
+  }
   img {
     .c-Intro__Hero;
   }
@@ -85,6 +88,9 @@
   margin-top: -@height;
   // padding: 0 !important; // TODO remove this line when we add a damn class (only here because `.introduction > div` has higher specificity)
   .bg-grad(@color_site_primary);
+  #pipelines & {
+    .bg-grad(@color_pl_primary);
+  }
   .bg-grad(@primary) {
     // a mixin for background gradients
     background: -moz-linear-gradient(top, fade(@primary, 0%) 0%, @primary 100%); /* FF3.6+ */
