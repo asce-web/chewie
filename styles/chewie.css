@@ -794,6 +794,10 @@ button {
 .navigation-level2 a.active {
   color: inherit;
 }
+.nav1 a.active,
+.c-NavBar--main a.active,
+.nav1 .c-NavBar__Link.active,
+.c-NavBar--main .c-NavBar__Link.active,
 .nav1 a:hover,
 .c-NavBar--main a:hover,
 .nav1 .c-NavBar__Link:hover,
@@ -862,10 +866,6 @@ button {
 .navigation-level2 .c-NavBar__Link,
 .c-NavBar--secondary .c-NavBar__Link {
   padding: 14px 10px;
-}
-.navigation-level2.show-current-page,
-.c-NavBar--secondary.show-current-page {
-  position: relative;
 }
 .navigation-level2 ul,
 .c-NavBar--secondary ul {

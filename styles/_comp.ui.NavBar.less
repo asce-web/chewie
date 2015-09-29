@@ -72,6 +72,7 @@
 .c-NavBar--main {
   a,
   .c-NavBar__Link {
+    &.active, // a javascript class added on hover
     &:hover {
       text-decoration: none;
       background-color: @color_site_accent;
@@ -156,9 +157,6 @@
 
 
   // ------------- TRASH TRASH TRASH TRASH --------------------------
-  &.show-current-page {
-    position: relative;
-  }
   ul {
     display: none;
     margin-bottom: 0; // override base ul

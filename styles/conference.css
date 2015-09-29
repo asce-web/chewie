@@ -50,6 +50,10 @@
 .c-NavBar--main {
   background-color: #613286;
 }
+.nav1 a.active,
+.c-NavBar--main a.active,
+.nav1 .c-NavBar__Link.active,
+.c-NavBar--main .c-NavBar__Link.active,
 .nav1 a:hover,
 .c-NavBar--main a:hover,
 .nav1 .c-NavBar__Link:hover,
