@@ -347,7 +347,21 @@
 
 
 
+// HEREBELOW are ektron fixes that should at some point in time
+// be moved to proper points in the project.
 
+
+// Ektron's automated lists
+.content ul {
+  // regular prose lists
+  ol, ul {
+    margin-bottom: 20px;
+    // nested prose lists
+    ol, ul {
+      margin-bottom: 0;
+    }
+  }
+}
 
 
 

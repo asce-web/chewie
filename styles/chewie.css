@@ -2317,6 +2317,16 @@ a.button a:focus {
   font-weight: 600;
   font-size: 18px;
 }
+.content ul ol,
+.content ul ul {
+  margin-bottom: 20px;
+}
+.content ul ol ol,
+.content ul ul ol,
+.content ul ol ul,
+.content ul ul ul {
+  margin-bottom: 0;
+}
 @media (min-width: 1370px) {
   .container {
     width: 1350px;
@@ -2380,6 +2390,10 @@ a.button a:focus {
 /*################################*\
     _trumps.ektron-fixes.less
 \*################################*/
+/*main .content-main [data-ux-pagebuilder="Column"]>ul>li,
+main .content-right [data-ux-pagebuilder="Column"]>ul>li,
+main .content-bottom [data-ux-pagebuilder="Column"]>ul>li,
+main .content-main [data-ux-pagebuilder="Column"]>ul>li .widgetBody ul.feeds>li,*/
 ul.pb-dz-control-column-ul {
   margin-bottom: 0;
 }
