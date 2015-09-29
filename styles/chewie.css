@@ -1322,7 +1322,7 @@ a.button a:focus {
   /* IE10+ */
   background: linear-gradient(to bottom, rgba(106, 149, 86, 0) 0%, #6a9556 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='fade(@color_site_primary, 0%)', endColorstr='@color_site_primary', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#6a9556', GradientType=0);
   /* IE6-9 */
 }
 /*################################*\
