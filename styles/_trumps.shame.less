@@ -352,13 +352,16 @@
 
 // HEREBELOW are ektron fixes that should at some point in time
 // be moved to proper points in the project.
+// These styles do not belong in `ektron-fixes.less` because they will
+// eventually be merged back into chewie, whereas the sole purpose of
+// ektron-fixes is to fix ektron’s automated page-builder styles.
 
 
 // Ektron's automated lists
 .content ul {
   // regular prose lists
   ol, ul {
-    margin-bottom: 20px;
+    margin-bottom: 20px; // TODO put this in base.generic with other block stuff
     // nested prose lists
     ol, ul {
       margin-bottom: 0;

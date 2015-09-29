@@ -98,11 +98,10 @@ li ol {
   margin-bottom: 0;
 }
 ul {
-  list-style-type: disc;
-  list-style-image: url(../img/li-bullet.png);
+  list-style-type: circle;
 }
 li ul {
-  list-style-image: none;
+  list-style-type: disc;
 }
 li {
   line-height: inherit;
@@ -2469,20 +2468,20 @@ a.button a:focus {
 /*################################*\
     _trumps.ektron-fixes.less
 \*################################*/
+ul.pb-dz-control-column-ul {
+  margin-bottom: 0;
+}
 /*main .content-main [data-ux-pagebuilder="Column"]>ul>li,
 main .content-right [data-ux-pagebuilder="Column"]>ul>li,
 main .content-bottom [data-ux-pagebuilder="Column"]>ul>li,
 main .content-main [data-ux-pagebuilder="Column"]>ul>li .widgetBody ul.feeds>li,*/
-ul.pb-dz-control-column-ul {
-  margin-bottom: 0;
-}
 /*ul.pb-dz-control-column-ul */
 li.pb-dz-widget-control-li,
 .PBItem {
   padding: 0;
   margin: 0;
   background: none no-repeat top right;
-  list-style-image: none;
+  list-style: none;
 }
 .asce-widget-settings {
   font-size: 12px !important;
