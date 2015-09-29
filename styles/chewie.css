@@ -2398,7 +2398,8 @@ ul.pb-dz-control-column-ul {
   margin-bottom: 0;
 }
 /*ul.pb-dz-control-column-ul */
-li.pb-dz-widget-control-li {
+li.pb-dz-widget-control-li,
+.PBItem {
   padding: 0;
   margin: 0;
   background: none no-repeat top right;
