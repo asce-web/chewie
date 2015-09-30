@@ -344,6 +344,18 @@ button {
 #pipelines .content h6 {
   color: #006c67;
 }
+#icsi .c-H--alpha,
+#icsi .c-H--beta,
+#icsi .c-H--gamma,
+#icsi .c-H--delta,
+#icsi .content h1,
+#icsi .content h2,
+#icsi .content h3,
+#icsi .content h4,
+#icsi .content h5,
+#icsi .content h6 {
+  color: #0b2f69;
+}
 .c-H--alpha,
 .content h1 {
   margin-top: 20px;
@@ -774,6 +786,13 @@ button {
 #pipelines .navigation-level2 {
   background-color: #717073;
 }
+#icsi .c-NavBar,
+#icsi .navigation,
+#icsi .nav3,
+#icsi .tab-buttons,
+#icsi .navigation-level2 {
+  background-color: #a6044d;
+}
 .c-NavBar__Link,
 .navigation a,
 .nav3 a,
@@ -833,6 +852,16 @@ button {
 #pipelines .nav1 .c-NavBar__Link:hover,
 #pipelines .c-NavBar--main .c-NavBar__Link:hover {
   background-color: #c1d8c5;
+}
+#icsi .nav1 a.active,
+#icsi .c-NavBar--main a.active,
+#icsi .nav1 .c-NavBar__Link.active,
+#icsi .c-NavBar--main .c-NavBar__Link.active,
+#icsi .nav1 a:hover,
+#icsi .c-NavBar--main a:hover,
+#icsi .nav1 .c-NavBar__Link:hover,
+#icsi .c-NavBar--main .c-NavBar__Link:hover {
+  background-color: #a3446d;
 }
 .nav2,
 .c-NavBar--side {
@@ -900,6 +929,10 @@ button {
 #pipelines .c-NavBar--secondary {
   background-color: #c1d8c5;
 }
+#icsi .navigation-level2,
+#icsi .c-NavBar--secondary {
+  background-color: #a3446d;
+}
 .navigation-level2 ul,
 .c-NavBar--secondary ul {
   display: none;
@@ -935,6 +968,10 @@ button {
 #pipelines .c-NavBar--tabs .c-NavBar__Link.current {
   background-color: #c1d8c5;
 }
+#icsi .c-NavBar--tabs .c-NavBar__Link:hover,
+#icsi .c-NavBar--tabs .c-NavBar__Link.current {
+  background-color: #a3446d;
+}
 .c-NavBar--tabs .c-NavBar__Link:hover {
   text-decoration: none;
 }
@@ -956,6 +993,9 @@ button {
 }
 #pipelines .c-NavBar--tabs .c-NavBar__Link.current::after {
   border-top-color: #c1d8c5;
+}
+#icsi .c-NavBar--tabs .c-NavBar__Link.current::after {
+  border-top-color: #a3446d;
 }
 .tab-buttons {
   margin-bottom: 0;
@@ -990,6 +1030,10 @@ li.active .tab-button {
 #pipelines li.active .tab-button {
   background-color: #c1d8c5;
 }
+#icsi .tab-button:hover,
+#icsi li.active .tab-button {
+  background-color: #a3446d;
+}
 .tab-button:hover {
   text-decoration: none;
 }
@@ -1016,6 +1060,9 @@ li.active .tab-button::after {
 }
 #pipelines li.active .tab-button::after {
   border-top-color: #c1d8c5;
+}
+#icsi li.active .tab-button::after {
+  border-top-color: #a3446d;
 }
 .mobile-nav {
   text-align: right;
@@ -1211,6 +1258,12 @@ a.button a:focus {
 #pipelines .c-SummaryBanner {
   background-color: #006c67;
 }
+#icsi .header,
+#icsi .footer,
+#icsi .summary-banner,
+#icsi .c-SummaryBanner {
+  background-color: #0b2f69;
+}
 .header a,
 .footer a,
 .summary-banner a,
@@ -1278,6 +1331,10 @@ a.button a:focus {
 #pipelines .introduction,
 #pipelines .c-Intro {
   background-color: #006c67;
+}
+#icsi .introduction,
+#icsi .c-Intro {
+  background-color: #0b2f69;
 }
 .introduction img,
 .c-Intro img {
@@ -1396,6 +1453,22 @@ a.button a:focus {
   background: linear-gradient(to bottom, rgba(0, 108, 103, 0) 0%, #006c67 100%);
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#006c67', GradientType=0);
+  /* IE6-9 */
+}
+#icsi .img-fade {
+  background: -moz-linear-gradient(top, rgba(11, 47, 105, 0) 0%, #0b2f69 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(11, 47, 105, 0)), color-stop(100%, #0b2f69));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(11, 47, 105, 0) 0%, #0b2f69 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(11, 47, 105, 0) 0%, #0b2f69 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(11, 47, 105, 0) 0%, #0b2f69 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, rgba(11, 47, 105, 0) 0%, #0b2f69 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#0b2f69', GradientType=0);
   /* IE6-9 */
 }
 /*################################*\
@@ -1977,6 +2050,9 @@ a.button a:focus {
 }
 #pipelines .date {
   color: #717073;
+}
+#icsi .date {
+  color: #a6044d;
 }
 /*################################*\
     _comp.typo.TableHeader.less
