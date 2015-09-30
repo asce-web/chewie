@@ -107,6 +107,9 @@ li ul {
 li {
   line-height: inherit;
 }
+dt {
+  font-weight: inherit;
+}
 /*++++++++++++++++++++++++++++++++*\
     ## TEXT
 \*++++++++++++++++++++++++++++++++*/
