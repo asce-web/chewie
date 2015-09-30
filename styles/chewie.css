@@ -332,28 +332,28 @@ button {
   text-transform: uppercase;
   color: #6a9556;
 }
-#pipelines .c-H--alpha,
-#pipelines .c-H--beta,
-#pipelines .c-H--gamma,
-#pipelines .c-H--delta,
-#pipelines .content h1,
-#pipelines .content h2,
-#pipelines .content h3,
-#pipelines .content h4,
-#pipelines .content h5,
-#pipelines .content h6 {
+#pipelinesconference .c-H--alpha,
+#pipelinesconference .c-H--beta,
+#pipelinesconference .c-H--gamma,
+#pipelinesconference .c-H--delta,
+#pipelinesconference .content h1,
+#pipelinesconference .content h2,
+#pipelinesconference .content h3,
+#pipelinesconference .content h4,
+#pipelinesconference .content h5,
+#pipelinesconference .content h6 {
   color: #006c67;
 }
-#icsi .c-H--alpha,
-#icsi .c-H--beta,
-#icsi .c-H--gamma,
-#icsi .c-H--delta,
-#icsi .content h1,
-#icsi .content h2,
-#icsi .content h3,
-#icsi .content h4,
-#icsi .content h5,
-#icsi .content h6 {
+#icsiconference .c-H--alpha,
+#icsiconference .c-H--beta,
+#icsiconference .c-H--gamma,
+#icsiconference .c-H--delta,
+#icsiconference .content h1,
+#icsiconference .content h2,
+#icsiconference .content h3,
+#icsiconference .content h4,
+#icsiconference .content h5,
+#icsiconference .content h6 {
   color: #0b2f69;
 }
 .c-H--alpha,
@@ -779,18 +779,18 @@ button {
   color: #ffffff;
   background-color: #7aa96c;
 }
-#pipelines .c-NavBar,
-#pipelines .navigation,
-#pipelines .nav3,
-#pipelines .tab-buttons,
-#pipelines .navigation-level2 {
+#pipelinesconference .c-NavBar,
+#pipelinesconference .navigation,
+#pipelinesconference .nav3,
+#pipelinesconference .tab-buttons,
+#pipelinesconference .navigation-level2 {
   background-color: #717073;
 }
-#icsi .c-NavBar,
-#icsi .navigation,
-#icsi .nav3,
-#icsi .tab-buttons,
-#icsi .navigation-level2 {
+#icsiconference .c-NavBar,
+#icsiconference .navigation,
+#icsiconference .nav3,
+#icsiconference .tab-buttons,
+#icsiconference .navigation-level2 {
   background-color: #a6044d;
 }
 .c-NavBar__Link,
@@ -843,24 +843,24 @@ button {
   text-decoration: none;
   background-color: #714509;
 }
-#pipelines .nav1 a.active,
-#pipelines .c-NavBar--main a.active,
-#pipelines .nav1 .c-NavBar__Link.active,
-#pipelines .c-NavBar--main .c-NavBar__Link.active,
-#pipelines .nav1 a:hover,
-#pipelines .c-NavBar--main a:hover,
-#pipelines .nav1 .c-NavBar__Link:hover,
-#pipelines .c-NavBar--main .c-NavBar__Link:hover {
+#pipelinesconference .nav1 a.active,
+#pipelinesconference .c-NavBar--main a.active,
+#pipelinesconference .nav1 .c-NavBar__Link.active,
+#pipelinesconference .c-NavBar--main .c-NavBar__Link.active,
+#pipelinesconference .nav1 a:hover,
+#pipelinesconference .c-NavBar--main a:hover,
+#pipelinesconference .nav1 .c-NavBar__Link:hover,
+#pipelinesconference .c-NavBar--main .c-NavBar__Link:hover {
   background-color: #c1d8c5;
 }
-#icsi .nav1 a.active,
-#icsi .c-NavBar--main a.active,
-#icsi .nav1 .c-NavBar__Link.active,
-#icsi .c-NavBar--main .c-NavBar__Link.active,
-#icsi .nav1 a:hover,
-#icsi .c-NavBar--main a:hover,
-#icsi .nav1 .c-NavBar__Link:hover,
-#icsi .c-NavBar--main .c-NavBar__Link:hover {
+#icsiconference .nav1 a.active,
+#icsiconference .c-NavBar--main a.active,
+#icsiconference .nav1 .c-NavBar__Link.active,
+#icsiconference .c-NavBar--main .c-NavBar__Link.active,
+#icsiconference .nav1 a:hover,
+#icsiconference .c-NavBar--main a:hover,
+#icsiconference .nav1 .c-NavBar__Link:hover,
+#icsiconference .c-NavBar--main .c-NavBar__Link:hover {
   background-color: #a3446d;
 }
 .nav2,
@@ -925,12 +925,12 @@ button {
 .c-NavBar--secondary .c-NavBar__Link {
   padding: 14px 10px;
 }
-#pipelines .navigation-level2,
-#pipelines .c-NavBar--secondary {
+#pipelinesconference .navigation-level2,
+#pipelinesconference .c-NavBar--secondary {
   background-color: #c1d8c5;
 }
-#icsi .navigation-level2,
-#icsi .c-NavBar--secondary {
+#icsiconference .navigation-level2,
+#icsiconference .c-NavBar--secondary {
   background-color: #a3446d;
 }
 .navigation-level2 ul,
@@ -964,12 +964,12 @@ button {
 .c-NavBar--tabs .c-NavBar__Link.current {
   background-color: #714509;
 }
-#pipelines .c-NavBar--tabs .c-NavBar__Link:hover,
-#pipelines .c-NavBar--tabs .c-NavBar__Link.current {
+#pipelinesconference .c-NavBar--tabs .c-NavBar__Link:hover,
+#pipelinesconference .c-NavBar--tabs .c-NavBar__Link.current {
   background-color: #c1d8c5;
 }
-#icsi .c-NavBar--tabs .c-NavBar__Link:hover,
-#icsi .c-NavBar--tabs .c-NavBar__Link.current {
+#icsiconference .c-NavBar--tabs .c-NavBar__Link:hover,
+#icsiconference .c-NavBar--tabs .c-NavBar__Link.current {
   background-color: #a3446d;
 }
 .c-NavBar--tabs .c-NavBar__Link:hover {
@@ -991,10 +991,10 @@ button {
   top: 46px;
   left: 40%;
 }
-#pipelines .c-NavBar--tabs .c-NavBar__Link.current::after {
+#pipelinesconference .c-NavBar--tabs .c-NavBar__Link.current::after {
   border-top-color: #c1d8c5;
 }
-#icsi .c-NavBar--tabs .c-NavBar__Link.current::after {
+#icsiconference .c-NavBar--tabs .c-NavBar__Link.current::after {
   border-top-color: #a3446d;
 }
 .tab-buttons {
@@ -1026,12 +1026,12 @@ button {
 li.active .tab-button {
   background-color: #714509;
 }
-#pipelines .tab-button:hover,
-#pipelines li.active .tab-button {
+#pipelinesconference .tab-button:hover,
+#pipelinesconference li.active .tab-button {
   background-color: #c1d8c5;
 }
-#icsi .tab-button:hover,
-#icsi li.active .tab-button {
+#icsiconference .tab-button:hover,
+#icsiconference li.active .tab-button {
   background-color: #a3446d;
 }
 .tab-button:hover {
@@ -1058,10 +1058,10 @@ li.active .tab-button::after {
     top: 34px;
   }
 }
-#pipelines li.active .tab-button::after {
+#pipelinesconference li.active .tab-button::after {
   border-top-color: #c1d8c5;
 }
-#icsi li.active .tab-button::after {
+#icsiconference li.active .tab-button::after {
   border-top-color: #a3446d;
 }
 .mobile-nav {
@@ -1268,16 +1268,16 @@ a.button--disabled:hover {
   color: #ffffff;
   background-color: #6a9556;
 }
-#pipelines .header,
-#pipelines .footer,
-#pipelines .summary-banner,
-#pipelines .c-SummaryBanner {
+#pipelinesconference .header,
+#pipelinesconference .footer,
+#pipelinesconference .summary-banner,
+#pipelinesconference .c-SummaryBanner {
   background-color: #006c67;
 }
-#icsi .header,
-#icsi .footer,
-#icsi .summary-banner,
-#icsi .c-SummaryBanner {
+#icsiconference .header,
+#icsiconference .footer,
+#icsiconference .summary-banner,
+#icsiconference .c-SummaryBanner {
   background-color: #0b2f69;
 }
 .header a,
@@ -1344,12 +1344,12 @@ a.button--disabled:hover {
   width: 100%;
   margin-bottom: 20px;
 }
-#pipelines .introduction,
-#pipelines .c-Intro {
+#pipelinesconference .introduction,
+#pipelinesconference .c-Intro {
   background-color: #006c67;
 }
-#icsi .introduction,
-#icsi .c-Intro {
+#icsiconference .introduction,
+#icsiconference .c-Intro {
   background-color: #0b2f69;
 }
 .introduction img,
@@ -1455,7 +1455,7 @@ a.button--disabled:hover {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#6a9556', GradientType=0);
   /* IE6-9 */
 }
-#pipelines .img-fade {
+#pipelinesconference .img-fade {
   background: -moz-linear-gradient(top, rgba(0, 108, 103, 0) 0%, #006c67 100%);
   /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 108, 103, 0)), color-stop(100%, #006c67));
@@ -1471,7 +1471,7 @@ a.button--disabled:hover {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#006c67', GradientType=0);
   /* IE6-9 */
 }
-#icsi .img-fade {
+#icsiconference .img-fade {
   background: -moz-linear-gradient(top, rgba(11, 47, 105, 0) 0%, #0b2f69 100%);
   /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(11, 47, 105, 0)), color-stop(100%, #0b2f69));
@@ -2064,10 +2064,10 @@ a.button--disabled:hover {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-#pipelines .date {
+#pipelinesconference .date {
   color: #717073;
 }
-#icsi .date {
+#icsiconference .date {
   color: #a6044d;
 }
 /*################################*\
@@ -2269,7 +2269,7 @@ a.button--disabled:hover {
     max-width: 350px;
     overflow: auto;
   }
-  #pipelines .toggleable-nav.in {
+  #pipelinesconference .toggleable-nav.in {
     background: #006c67;
   }
   .toggleable-nav.in .close-nav {
