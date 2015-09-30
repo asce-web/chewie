@@ -25,6 +25,9 @@
   #pipelines & {
     background-color: @color_pl_secondary;
   }
+  #icsi & {
+    background-color: @color_icsi_secondary;
+  }
 }
 
 // A link in a navigation bar
@@ -81,6 +84,9 @@
       background-color: @color_site_accent;
       #pipelines & {
         background-color: @color_pl_accent;
+      }
+      #icsi & {
+        background-color: @color_icsi_accent;
       }
     }
   }
@@ -162,6 +168,9 @@
   #pipelines & {
     background-color: @color_pl_accent;
   }
+  #icsi & {
+    background-color: @color_icsi_accent;
+  }
 
 
 
@@ -203,6 +212,9 @@
       #pipelines & {
         background-color: @color_pl_accent;
       }
+      #icsi & {
+        background-color: @color_icsi_accent;
+      }
     }
     &:hover {
       text-decoration: none;
@@ -210,7 +222,7 @@
     &.current {
       position: relative;
       cursor: default;
-      &::after {
+      &::after { // little arrow below
         content: '';
         display: block;
         margin: auto;
@@ -223,6 +235,9 @@
         left: 40%;
         #pipelines & {
           border-top-color: @color_pl_accent;
+        }
+        #icsi & {
+          border-top-color: @color_icsi_accent;
         }
       }
     }
@@ -268,6 +283,9 @@
     #pipelines & {
       background-color: @color_pl_accent;
     }
+    #icsi & {
+      background-color: @color_icsi_accent;
+    }
   }
   &:hover {
     text-decoration: none;
@@ -291,6 +309,9 @@
       }
       #pipelines & {
         border-top-color: @color_pl_accent;
+      }
+      #icsi & {
+        border-top-color: @color_icsi_accent;
       }
     }
   }
