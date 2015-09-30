@@ -6,9 +6,6 @@
 
 // The YearBadge component represents the shield-like icon at the top
 // of all pages containing the year (2015).
-// Subcomponents:
-// .year-badge-corner
-// // make this an ::after pseudo-element!!!!!! or rename it .YearBadge__Corner
 //
 // ^author
 // : Dae Clarke
@@ -25,8 +22,8 @@
   position: absolute;
   left: -(@sizepx/2);
   font-weight: 700;
-  font-size: (@sizepx/3);
-  font-size: floor((@sizepx/3) / 10) * 10px; // rounds down to the nearest 10px
+  font-size: (@sizepx/4);
+  // font-size: floor((@sizepx/3) / 10) * 10px; // rounds down to the nearest 10px
   line-height: 0;
   font-family: @font_ui;
   text-align: center;
@@ -39,16 +36,17 @@
     letter-spacing: 1px;
   }
   &::after {
+    @length: (@sizepx/4); // length of badge corner
     content: '';
     display: block;
     width: 0;
     height: 0;
+    position: relative;
+    top: @length;
     border: (@sizepx/2) solid transparent;
-    border-top-width: (@sizepx/4);
+    border-top-width: @length;
     border-top-color: @bgcolor;
     border-bottom: 0;
-    position: relative;
-    top: (@sizepx/4);
   }
 }
 .year-badge {

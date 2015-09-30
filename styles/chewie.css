@@ -678,8 +678,7 @@ button {
   position: absolute;
   left: -50px;
   font-weight: 700;
-  font-size: 33.33333333px;
-  font-size: 30px;
+  font-size: 25px;
   line-height: 0;
   font-family: 'futura-pt', 'Open Sans', 'Arial', sans-serif;
   text-align: center;
@@ -697,12 +696,12 @@ button {
   display: block;
   width: 0;
   height: 0;
+  position: relative;
+  top: 25px;
   border: 50px solid transparent;
   border-top-width: 25px;
   border-top-color: #0c5fa8;
   border-bottom: 0;
-  position: relative;
-  top: 25px;
 }
 .year-badge {
   width: 90px;
@@ -729,6 +728,42 @@ button {
   .year-badge-wrapper {
     display: none;
   }
+}
+/*################################*\
+    _comp.ui.YearBadge.less
+\*################################*/
+.c-YearRibbon {
+  display: block;
+  width: 100px;
+  margin: 0;
+  padding: 0;
+  padding-top: 50px;
+  position: absolute;
+  left: -50px;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 0;
+  font-family: 'futura-pt', 'Open Sans', 'Arial', sans-serif;
+  text-align: center;
+  letter-spacing: -2px;
+  background: #0c5fa8;
+  color: #ffffff;
+}
+.c-YearRibbon::before {
+  content: '20';
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+.c-YearRibbon::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  position: relative;
+  top: 25px;
+  border: 0 solid #0c5fa8;
+  border-width: 10px 50px 25px;
+  border-bottom-color: transparent;
 }
 /*################################*\
     _comp.ui.InstShield.less
