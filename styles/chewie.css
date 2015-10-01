@@ -1,5 +1,5 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
-    chewie.less
+    chewie.less @v1.3.0
 \*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /**
  * # CONTENTS
@@ -106,6 +106,9 @@ li ul {
 }
 li {
   line-height: inherit;
+}
+dt {
+  font-weight: inherit;
 }
 /*++++++++++++++++++++++++++++++++*\
     ## TEXT
@@ -2190,6 +2193,10 @@ a.button--disabled:hover {
 /*################################*\
     _trumps.shame.less
 \*################################*/
+#icsiconference .corporate::before,
+#icsiconference .c-SponsorBlock--corporate::before {
+  content: 'Conference Co-Organizers';
+}
 .breadcrumb-link {
   font-weight: 700;
   margin-top: 25px;
