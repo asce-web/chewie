@@ -1,0 +1,103 @@
+
+/*################################*\
+    _trumps.ektron-fixes.less
+\*################################*/
+
+
+// This file is used specifically for fixing issues with
+// the Ektron server’s automated styles.
+// This file should ONLY be changed due to
+// a change in Ektron’s stylesheet.
+// Do not use this file for your own styling purposes!
+//
+// ////////////////////////////////////////////////////////////////////////////
+
+
+/*main .content-main [data-ux-pagebuilder="Column"]>ul>li,
+main .content-right [data-ux-pagebuilder="Column"]>ul>li,
+main .content-bottom [data-ux-pagebuilder="Column"]>ul>li,
+main .content-main [data-ux-pagebuilder="Column"]>ul>li .widgetBody ul.feeds>li,*/
+ul.pb-dz-control-column-ul {
+  margin-bottom: 0;
+}
+/*ul.pb-dz-control-column-ul */li.pb-dz-widget-control-li,
+.PBItem {
+    padding:0;
+    margin:0;
+    background: none no-repeat top right;
+    list-style-image: none;
+}
+.asce-widget-settings {
+    font-size:12px !important;
+    line-height:1.25em !important;
+    color: #888;
+}
+.asce-widget-settings input, select {
+    font-size: 14px !important;
+    color: #444;
+    margin-top:.25em;
+}
+.asce-widget-settings input[type="text"] {
+    height: auto;
+}
+.asce-widget-settings select {
+    height: auto;
+}
+.asce-widget-settings select[widget-data-select], input[type=text] {
+    min-width: 85%;
+}
+.asce-widget-settings {
+    position: relative;
+}
+.ektron-ux-dialog.ui-dialog .ui-dialog-content {
+    overflow: visible !important;
+}
+/* chosen jquery plugin fixes */
+.asce-widget-settings.CBWidget {
+    overflow:visible;
+}
+.asce-widget-settings select[widget-data-select], input[type=text] {
+    min-width: 85%;
+}
+
+.asce-widget-settings .chosen-container {
+    position: relative !important;
+}
+.asce-widget-settings .chosen-container-single .chosen-search input[type="text"] {
+    width: auto;
+}
+.asce-widget-settings .chosen-container .chosen-drop
+{
+    width: auto;
+}
+.asce-widget-settings, .chosen-container-single .chosen-single span {
+    margin-top: 5px;
+    color: #444;
+}
+.asce-widget-settings .ektron-ui-dateField {
+    position:relative !important;
+}
+.asce-widget-settings .ektron-ui-dateField label.inFieldLabel  {
+    top: .6em; left: .6em;
+}
+.asce-widget-settings div.CBEdit {
+    min-width:auto;
+}
+
+.BrightcoveExperience {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.tab-content
+{
+    overflow:hidden;
+}
+
+// YOU KNOW WHO YOU ARE
+form#aspnetForm {
+  background-color: transparent !important;
+}

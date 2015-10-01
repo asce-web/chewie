@@ -8,6 +8,16 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 
+// ICSI is a unique conference
+#icsiconference {
+  .corporate,
+  .c-SponsorBlock--corporate {
+    &::before {
+      content: 'Conference Co-Organizers';
+    }
+  }
+}
+
 
 // meta stuff belonging in content
 .breadcrumb-link {
@@ -101,6 +111,9 @@
     &.in {
       z-index: 10;
       background: @color_site_primary;
+      #pipelinesconference & {
+        background: @color_pl_primary;
+      }
       box-shadow: -4px 0px 0px rgba(0,0,0,.25);
       display: block;
       position: fixed;
@@ -347,7 +360,21 @@
 
 
 
+// HEREBELOW are ektron fixes that should at some point in time
+// be moved to proper points in the project.
 
+
+// Ektron's automated lists
+.content ul {
+  // regular prose lists
+  ol, ul {
+    margin-bottom: 20px;
+    // nested prose lists
+    ol, ul {
+      margin-bottom: 0;
+    }
+  }
+}
 
 
 
