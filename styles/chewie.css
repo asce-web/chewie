@@ -1,5 +1,5 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
-    chewie.less @v1.3.0
+    chewie.less @v1.3.1
 \*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /**
  * # CONTENTS
@@ -802,6 +802,10 @@ button {
   min-width: 130px;
   max-height: 130px;
   margin: 0 10px;
+}
+.c-SpeakerPhoto--whole {
+  max-width: none;
+  max-height: none;
 }
 /*################################*\
     _comp.ui.NavBar.less
@@ -2020,6 +2024,9 @@ a.button--disabled:hover {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+.photo-col {
+  text-align: center;
+}
 @media (max-width: 989px) {
   .details-col {
     display: block;
@@ -2029,6 +2036,20 @@ a.button--disabled:hover {
 .dateline,
 .sessiontype {
   float: left;
+}
+.o-SpeakerDetails {
+  display: table;
+  width: 100%;
+  margin-bottom: 20px;
+}
+@media (max-width: 989px) {
+  .o-SpeakerDetails {
+    display: block;
+  }
+}
+.o-SpeakerDetails .photo-col,
+.o-SpeakerDetails .details-col {
+  vertical-align: top;
 }
 /*################################*\
     _comp.DateBlock.less

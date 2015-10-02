@@ -96,21 +96,27 @@ html
               div.person-name Charles Johnson
               div.person-title Ph.D., P.E., S.E., CVS, F.ASCE Illuminate Foundry, Inc.
               a.button Speaker Details
+      section.doc-ss
+        h2 Speaker Details
+        p.devnote.
+          this doesn't need to be a component. we could use objects here,
+          given a robust grid system.
         figure
-          section.speaker-profile
+          section.o-SpeakerDetails
             div.photo-col
-              img.c-SpeakerPhoto(src="/img/FPO_speaker_130x130.jpg", alt="speaker")
+              img.c-SpeakerPhoto.c-SpeakerPhoto--whole(src="/img/Katherine-Sierra.jpg", alt="speaker")
             div.details-col
               div.person-name Charles Johnson
               div.person-title Ph.D., P.E., S.E., CVS, F.ASCE Illuminate Foundry, Inc.
-              p.
-                Description of this person’s talk and/or a profile of this person.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
-                amet, consectetur adipisicing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua.
+              blockquote
+                p.
+                  Description of this person’s talk and/or a profile of this person.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                  enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                  nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
+                  amet, consectetur adipisicing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua.
       section.doc-ss
         h2 Buttons
         figure
