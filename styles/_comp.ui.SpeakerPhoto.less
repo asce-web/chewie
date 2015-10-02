@@ -5,6 +5,8 @@
 
 
 // photo of a keynote speaker
+// Subclasses:
+// --big - an uncropped speaker photo on the speakers page
 //
 // ^author
 // : Dae Clarke
@@ -16,4 +18,9 @@
   min-width: @size;
   max-height: @size;
   margin: 0 @mlr;
+}
+
+.c-SpeakerPhoto--whole {
+  max-width: none; // override base
+  max-height: none; // override .c-SpeakerPhoto
 }
