@@ -2183,6 +2183,9 @@ a.button--disabled:hover {
 #icsiconference .c-SponsorBlock--corporate::before {
   content: 'Conference Co-Organizers';
 }
+.content {
+  margin-bottom: 20px;
+}
 .breadcrumb-link {
   font-weight: 700;
   margin-top: 25px;
