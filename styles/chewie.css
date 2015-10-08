@@ -746,16 +746,16 @@ button {
   }
 }
 /*################################*\
-    _comp.ui.InstShield.less
+    _comp.ui.ConfLogo.less
 \*################################*/
 .conference-logo,
-.c-InstShield {
+.c-ConfLogo {
   max-width: 85px;
   padding-bottom: 20px;
 }
 @media (max-width: 767px) {
   .conference-logo,
-  .c-InstShield {
+  .c-ConfLogo {
     max-width: 45px;
     margin: 0 10px 20px;
   }
