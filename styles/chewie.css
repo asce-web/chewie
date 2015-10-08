@@ -1339,10 +1339,10 @@ a.button--disabled:hover {
   background-image: url(../img/pattern-bg.png);
 }
 /*################################*\
-    _comp.Intro.less
+    _comp.Hero.less
 \*################################*/
 .introduction,
-.c-Intro {
+.c-Hero {
   background-color: #6a9556;
   color: #ffffff;
   margin-top: 10px;
@@ -1352,20 +1352,20 @@ a.button--disabled:hover {
   margin-bottom: 20px;
 }
 #pipelinesconference .introduction,
-#pipelinesconference .c-Intro {
+#pipelinesconference .c-Hero {
   background-color: #006c67;
 }
 #icsiconference .introduction,
-#icsiconference .c-Intro {
+#icsiconference .c-Hero {
   background-color: #0b2f69;
 }
 .introduction img,
-.c-Intro img {
+.c-Hero img {
   display: block;
   margin: auto;
 }
 .introduction h1,
-.c-Intro h1 {
+.c-Hero h1 {
   font-size: 26px;
   color: inherit !important;
   margin-bottom: 10px;
@@ -1373,56 +1373,56 @@ a.button--disabled:hover {
 }
 @media (max-width: 989px) {
   .introduction h1,
-  .c-Intro h1 {
+  .c-Hero h1 {
     font-size: 22px;
   }
 }
 @media (max-width: 767px) {
   .introduction h1,
-  .c-Intro h1 {
+  .c-Hero h1 {
     font-size: 18px;
   }
 }
 .introduction a,
-.c-Intro a,
+.c-Hero a,
 .introduction a:hover,
-.c-Intro a:hover,
+.c-Hero a:hover,
 .introduction a:visited,
-.c-Intro a:visited,
+.c-Hero a:visited,
 .introduction a:active,
-.c-Intro a:active {
+.c-Hero a:active {
   color: inherit;
 }
 .introduction a:hover,
-.c-Intro a:hover {
+.c-Hero a:hover {
   opacity: .5;
 }
 .introduction > div,
-.c-Intro > div {
+.c-Hero > div {
   padding: 10px 30px;
 }
-.c-Intro__Hero {
+.c-Hero__Img {
   display: block;
   margin: auto;
 }
-.c-Intro__Hn {
+.c-Hero__Hn {
   font-size: 26px;
   color: inherit !important;
   margin-bottom: 10px;
   text-transform: uppercase;
 }
 @media (max-width: 989px) {
-  .c-Intro__Hn {
+  .c-Hero__Hn {
     font-size: 22px;
   }
 }
 @media (max-width: 767px) {
-  .c-Intro__Hn {
+  .c-Hero__Hn {
     font-size: 18px;
   }
 }
 .intro,
-.c-Intro__Lede {
+.c-Hero__Lede {
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
@@ -1430,14 +1430,14 @@ a.button--disabled:hover {
 }
 @media (max-width: 989px) {
   .intro,
-  .c-Intro__Lede {
+  .c-Hero__Lede {
     font-size: 16px;
     line-height: 20px;
   }
 }
 @media (max-width: 767px) {
   .intro,
-  .c-Intro__Lede {
+  .c-Hero__Lede {
     font-size: 14px;
     line-height: 18px;
   }
