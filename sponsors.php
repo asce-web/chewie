@@ -346,7 +346,7 @@
         </div>
         <div class="container-fluid content">
             <div class="container sponsor-container">
-                <h2>Thank you to our 2014 sponsors!</h2>
+                <h2>Thank you to our sponsors!</h2>
                 <p>The generous contributions from the following sponsors enable our conference to continue its commitment to excellence in programming and networking events for the attendees.</p>
                 <br>
                 <div class="top-sponsor-block platinum">

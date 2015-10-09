@@ -307,7 +307,7 @@
         </div>
         <div class="container-fluid content">
             <div class="container sponsor-container">
-                <h2>2014 Top Sponsors</h2>
+                <h2>Top Sponsors</h2>
                 <div class="top-sponsor-block platinum">
                     <div class="box">
                         <img src="./img/sponsor_logo_horizontal2.gif" alt="">
