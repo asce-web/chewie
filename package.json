@@ -4,7 +4,8 @@
   "description": "master conferences stylesheet",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "minify": "cleancss ./styles/chewie.css -o ./styles/chewie.min.css"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,7 @@
     "url": "https://github.com/asce-web/chewie/issues"
   },
   "homepage": "https://github.com/asce-web/chewie#readme",
-  "devDependencies": {}
+  "devDependencies": {
+    "clean-css": "^3.4.5"
+  }
 }
