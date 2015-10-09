@@ -1,0 +1,23 @@
+{
+  "name": "chewie",
+  "version": "1.3.1",
+  "description": "master conferences stylesheet",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "minify": "cleancss ./styles/chewie.css -o ./styles/chewie.min.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asce-web/chewie.git"
+  },
+  "author": "ASCE Web Team <webteam@asce.org> (https://github.com/asce-web)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/asce-web/chewie/issues"
+  },
+  "homepage": "https://github.com/asce-web/chewie#readme",
+  "devDependencies": {
+    "clean-css": "^3.4.5"
+  }
+}
