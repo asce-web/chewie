@@ -784,7 +784,7 @@ button {
   font-weight: 700;
   text-transform: uppercase;
   color: #ffffff;
-  background-color: #7aa96c;
+  background-color: #6fc2c4;
 }
 #pipelinesconference .c-NavBar,
 #pipelinesconference .navigation,
@@ -2082,7 +2082,7 @@ a.button--disabled:hover {
     _comp.typo.Date.less
 \*################################*/
 .date {
-  color: #7aa96c;
+  color: #6fc2c4;
   font-weight: 600;
   font-size: 14px;
   letter-spacing: 2px;
