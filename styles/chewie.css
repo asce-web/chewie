@@ -1466,7 +1466,6 @@ a.button--disabled:hover {
 @media (max-width: 989px) {
   .intro,
   .c-Hero__Lede {
-    font-size: 16px;
     line-height: 20px;
   }
 }
@@ -2037,6 +2036,9 @@ a.button--disabled:hover {
 .sessiontype {
   float: left;
 }
+.sessiontype {
+  padding-left: 10px;
+}
 .o-SpeakerDetails {
   display: table;
   width: 100%;
@@ -2157,7 +2159,6 @@ a.button--disabled:hover {
   display: inline-block;
   padding: 8px 12px;
   border-left: 2px solid #fdcd2f;
-  margin-bottom: 20px;
   font-weight: 700;
   font-style: italic;
   background: #fef0c1;
