@@ -19,10 +19,10 @@
         <p>This section lists every single type of heading used on a site.</p>
         <figure>
           <figcaption>This figure shows headings belonging in the site header/footer.</figcaption>
-          <h1 class="c-ConferenceName">Conference Name</h1>
-          <h1 class="c-ConferenceLocation">Conference Location | Dates</h1>
-          <h1 class="c-ConferenceVenue">Conference Venue</h1>
-          <h1 class="c-ConferenceTagline">Conference Tagline</h1>
+          <h1 class="c-ConferenceName">    .c-ConferenceName     Sample ASCE Conference</h1>
+          <h1 class="c-ConferenceLocation">.c-ConferenceLocation Boston, MA | April 3&ndash;5, 2015</h1>
+          <h1 class="c-ConferenceVenue">   .c-ConferenceVenue    Sheraton Boston Hotel</h1>
+          <h1 class="c-ConferenceTagline"> .c-ConferenceTagline  One Team, One Goal, No Excuses</h1>
         </figure>
         <figure>
           <p class="devnote">These are the same headings above, shown in a <code>.footer</code>.
@@ -31,10 +31,10 @@
             <q>similar-but-not-identical</q> components.
           </p>
           <footer class="footer">
-            <h1 class="c-ConferenceName">Conference Name</h1>
-            <h1 class="c-ConferenceLocation">Conference Location | Dates</h1>
-            <h1 class="c-ConferenceVenue">Conference Venue</h1>
-            <h1 class="c-ConferenceTagline">Conference Tagline</h1>
+            <h1 class="c-ConferenceName">    .c-ConferenceName     Sample ASCE Conference</h1>
+            <h1 class="c-ConferenceLocation">.c-ConferenceLocation Boston, MA | April 3&ndash;5, 2015</h1>
+            <h1 class="c-ConferenceVenue">   .c-ConferenceVenue    Sheraton Boston Hotel</h1>
+            <h1 class="c-ConferenceTagline"> .c-ConferenceTagline  One Team, One Goal, No Excuses</h1>
           </footer>
         </figure>
         <figure>
@@ -44,10 +44,10 @@
             <q>similar-but-not-identical</q> components.
           </figcaption>
           <aside class="summary-banner">
-            <h1 class="c-ConferenceName">Conference Name</h1>
-            <h1 class="c-ConferenceLocation">Conference Location | Dates</h1>
-            <h1 class="c-ConferenceVenue">Conference Venue</h1>
-            <h1 class="c-ConferenceTagline">Conference Tagline</h1>
+            <h1 class="c-ConferenceName">    .c-ConferenceName     Sample ASCE Conference</h1>
+            <h1 class="c-ConferenceLocation">.c-ConferenceLocation Boston, MA | April 3&ndash;5, 2015</h1>
+            <h1 class="c-ConferenceVenue">   .c-ConferenceVenue    Sheraton Boston Hotel</h1>
+            <h1 class="c-ConferenceTagline"> .c-ConferenceTagline  One Team, One Goal, No Excuses</h1>
           </aside>
         </figure>
         <figure>
@@ -59,15 +59,15 @@
         </figure>
         <figure>
           <figcaption>This figure shows specific headings used in other components.</figcaption>
-          <h1 class="c-Callout__Heading">Generic Callout Heading in sidebar (same as Beta heading)</h1>
-          <h1 class="c-Callout__Subheading">Callout Subheading (same as Gamma heading)</h1>
-          <h1 class="c-LinkBlock__Heading">Link Block Heading in footer (same as conference venue heading)</h1>
+          <h1 class="c-Callout__Heading">   .c-Callout__Heading    Generic Callout Heading in sidebar (same as Beta heading)</h1>
+          <h1 class="c-Callout__Subheading">.c-Callout__Subheading Callout Subheading (same as Gamma heading)</h1>
+          <h1 class="c-LinkBlock__Heading"> .c-LinkBlock__Heading  Link Block Heading in footer (same as conference venue heading)</h1>
         </figure>
       </section>
       <section class="doc-ss">
         <h2>Callouts</h2>
         <section class="doc-ss">
-          <h3>Generic Callout</h3>
+          <h3>Generic Callout (.c-Callout)</h3>
           <figure>
             <section class="c-Callout">
               <h1 class="c-Callout__Heading">Generic Callout Heading</h1>
@@ -81,7 +81,7 @@
           </figure>
         </section>
         <section class="doc-ss">
-          <h3>Register Callout</h3>
+          <h3>Register Callout (.c-Callout.c-Callout--register)</h3>
           <figure>
             <section class="c-Callout c-Callout--register">
               <h1 class="c-Callout__Heading">Register Callout Heading</h1>
@@ -95,7 +95,7 @@
           </figure>
         </section>
         <section class="doc-ss">
-          <h3>Dates Callout</h3>
+          <h3>Dates Callout (.c-Callout.c-Callout--dates)</h3>
           <figure>
             <section class="c-Callout c-Callout--dates">
               <h1 class="c-Callout__Heading">Important Dates Callout Heading</h1>
@@ -109,7 +109,7 @@
           </figure>
         </section>
         <section class="doc-ss">
-          <h3>Sponsors Callout</h3>
+          <h3>Sponsors Callout (.c-Callout.c-Callout--sponsors)</h3>
           <figure>
             <section class="c-Callout c-Callout--sponsors">
               <h1 class="c-Callout__Heading">Sponsors Callout Heading</h1>
@@ -126,7 +126,9 @@
       <section class="doc-ss">
         <h2>Summary Banner</h2>
         <p>
-          Conference summary banners can be placed at the top of pages that have
+          Conference summary banners
+          <code>.c-SummaryBanner</code>
+          can be placed at the top of pages that have
           information about past year&rsquo;s and future year&rsquo;s conferences.
           The color in the banner should ideally correspond to the primary color
           for that year&rsquo;s conference, which may or may
@@ -134,9 +136,9 @@
         </p>
         <figure>
           <p class="devnote">we may scratch this</p>
-          <aside class="c-SummaryBanner"><span style="float:right;" class="c-YearBadge">13</span>
+          <aside class="c-SummaryBanner"><span class="c-YearBadge">13</span>
             <h1 class="c-ConferenceName">1st T&amp;DI Green Streets, Highways &amp; Development Conference</h1>
-            <h2 class="c-ConferenceLocation">Toronto, Canada  |  May 2&ndash;4, 2013</h2>
+            <h2 class="c-ConferenceLocation">Toronto, Canada | May 2&ndash;4, 2013</h2>
             <h3 class="c-ConferenceVenue">Baylord Hotel</h3>
           </aside>
         </figure>

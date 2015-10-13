@@ -16,8 +16,9 @@ html
       section.doc-ss
         h2 Headings and Paragraphs
         figure
-          h1 Heading 1
-          p. 
+          h1 h1
+          p.
+            p
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Aliquam sagittis suscipit nunc, a cursus libero euismod at.
             Nulla placerat neque massa, quis interdum leo efficitur vel.
@@ -25,8 +26,9 @@ html
             Mauris eget mauris ut mauris auctor mattis id vel justo.
             Nulla dictum arcu nec suscipit mollis.
             Maecenas a iaculis nisl, ut pretium est. Nulla facilisi.
-          h2 Heading 2
-          p. 
+          h2 h2
+          p.
+            p
             Suspendisse ut auctor enim.
             Aliquam viverra enim vitae ante aliquet venenatis.
             Sed vel nibh sit amet sapien fermentum mattis nec non arcu.
@@ -40,8 +42,9 @@ html
             Vivamus pulvinar ligula eget mi tincidunt, eget faucibus justo laoreet.
             In sapien lacus, egestas faucibus laoreet eu, tempor sit amet lorem.
             Sed luctus congue tortor a scelerisque.
-          h3 Heading 3
-          p. 
+          h3 h3
+          p.
+            p
             Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
             Nunc sit amet scelerisque lectus. Cras cursus sed dui quis convallis.
             Quisque id justo elit.
@@ -52,8 +55,9 @@ html
             Suspendisse sit amet fermentum sapien.
             Aliquam luctus laoreet iaculis.
             Proin lacinia orci vitae tellus pellentesque porttitor.
-          h4 Heading 4
-          p. 
+          h4 h4
+          p.
+            p
             Aenean consectetur suscipit urna, non vehicula lacus blandit et.
             Integer at lacus et diam tristique suscipit.
             Ut cursus massa sit amet nisl convallis, elementum accumsan sapien mattis.
@@ -67,8 +71,9 @@ html
             In quis lectus in lectus interdum laoreet eu quis quam.
             Fusce auctor posuere purus, quis semper libero dignissim euismod.
             Curabitur commodo mauris a sapien vulputate, eget pharetra urna facilisis.
-          h5 Heading 5
-          p. 
+          h5 h5
+          p.
+            p
             Donec finibus ut lectus finibus pellentesque.
             Nulla euismod feugiat nulla nec posuere.
             Sed ac est id sem sagittis rhoncus eu ac neque.
@@ -77,8 +82,9 @@ html
             Mauris nec ipsum id orci porttitor auctor sed sit amet sem.
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Etiam tellus leo, venenatis sit amet ipsum non, sagittis feugiat ante.
-          h6 Heading 6
-          p. 
+          h6 h6
+          p.
+            p
             Donec vel dolor ut felis dapibus ultricies vitae a nibh.
             Ut semper odio est, sed lacinia ligula gravida ut.
             Vestibulum facilisis viverra pulvinar.
@@ -88,12 +94,12 @@ html
             Vestibulum sapien justo, commodo a eros in, rhoncus interdum nisl.
             Etiam a porta lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         figure
-          h1 Heading 1
-          h2 Heading 2
-          h3 Heading 3
-          h4 Heading 4
-          h5 Heading 5
-          h6 Heading 6
+          h1 h1
+          h2 h2
+          h3 h3
+          h4 h4
+          h5 h5
+          h6 h6
         figure
           figcaption This figure shows headings belonging in page content.
           h1.c-H--alpha Page Heading (alpha)
@@ -101,22 +107,20 @@ html
           h1.c-H--gamma Section Subheading (gamma)
           h1.c-H--delta Section Subsubheading (delta)
         figure
-          figcaption A blockquote is demonstrated in this figure.
-          blockquote Donec vel dolor ut felis dapibus ultricies vitae a nibh.
+          blockquote Donec #[code blockquote] vel dolor ut felis dapibus ultricies #[code footer] vitae a nibh.
             footer: cite Finibus Pellentesque
         figure
-          figcaption This figure actually demonstrates a #[code figure] element, with a caption.
-          figure.bare this is the figure, and &hellip;
-            figcaption this is the figcaption
+          figure.bare Aenean consectetur #[code figure] suscipit urna, non vehicula lacus blandit et.
+            figcaption Integer at lacus et diam tristique #[code figcaption] suscipit.
         figure
           p.
-            A horizontal rule is shown below. I&rsquo;m honestly not sure when
+            A horizontal rule (#[code hr]) is shown below. I&rsquo;m honestly not sure when
             you would ever use this instead of a CSS border.
           hr
       section.doc-ss
         h2 Lists
         figure
-          figcaption Ordered List
+          figcaption Ordered List (#[code ol])
           ol
             li Speaker details
             li Program is now over
@@ -127,7 +131,7 @@ html
                     li Another nested list item
                     li Another nested list item
         figure
-          figcaption Unrdered List
+          figcaption Unrdered List (#[code ul])
           ul
             li Speaker details
             li Program is now over
@@ -138,8 +142,9 @@ html
                     li Another nested list item
                     li Another nested list item
         figure
-          figcaption Dictionary List
-          p.devnote Used for key-value pairs, such as a list of dates and descriptions.
+          figcaption.
+            Dictionary List (#[code dl]) &mdash; Used for key-value pairs,
+            such as a list of dates (or times) and descriptions.
           dl
             dt date
             dd description
@@ -151,8 +156,9 @@ html
         h2 Tables
         p An unclassed, unstyled table is shown below.
         p.devnote.
-          #[strong Reminder:] in source code, define #[code &lt;thead&gt;] and
-          #[code &lt;tfoot&gt;] before #[code &lt;tbody&gt;], for accessibility reasons.
+          #[strong Reminder:] in source code, define the #[code &lt;thead&gt;] and
+          #[code &lt;tfoot&gt;] #[em before] defining the #[code &lt;tbody&gt;],
+          for accessibility reasons.
         figure
           table
             caption Use #[code caption] for the title or heading of the table.
@@ -203,12 +209,23 @@ html
             p.
               Lorem ipsum #[a dolor] sit amet, consectetur adipisicing elit, sed do
               eiusmod tempor incididunt #[a ut labore et dolore] magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              enim ad #[code a[href]]minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat. #[a Lorem ipsum dolor sit]
               amet, consectetur adipisicing elit, sed do eiusmod tempor
               incididunt #[a ut labore et dolore magna aliqua].
         section.doc-ss
           h3 Stress
+          figure
+            p.u-d_ib.u-mr_1: em             em
+            p.u-d_ib.u-mr_1: strong         strong
+            p.u-d_ib.u-mr_1: i              i
+            p.u-d_ib.u-mr_1: b              b
+            p.u-d_ib.u-mr_1: small          small
+            p.u-d_ib.u-mr_1: s              s
+            p.u-d_ib.u-mr_1: sup            sup
+            p.u-d_ib.u-mr_1: sub            sub
+            p.u-d_ib.u-mr_1: abbr(title="") abbr(title="")
+            p.u-d_ib.u-mr_1: time           time
           figure
             p.u-d_ib.u-mr_1: em             emphasized text
             p.u-d_ib.u-mr_1: strong         important text
