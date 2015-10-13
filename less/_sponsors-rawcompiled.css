@@ -21,6 +21,9 @@
 .top-sponsor-block {
   margin-bottom: 40px;
 }
+.top-sponsor-block > .box-header {
+  opacity: 0; height: 0;
+}
 .top-sponsor-block::before,
 .top-sponsor-block .box {
   border: 2px solid currentColor;
