@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="./css/futura.css">
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,600italic,700italic,400,600,700">
 
-        <link rel="stylesheet" href="./css/vendor/bootstrap.min.css">
+        <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="./styles/chewie.css">
         <link rel="stylesheet" href="./styles/conference.css">
 
@@ -561,7 +561,7 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="./js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
 
-        <script src="./js/vendor/bootstrap.min.js"></script>
+        <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="./js/vendor/jquery.hoverIntent.min.js"></script>
         <script src="./bower_components/jquery-cycle2/build/jquery.cycle2.min.js"></script>
 
