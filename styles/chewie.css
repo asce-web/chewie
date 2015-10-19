@@ -76,7 +76,7 @@ body {
 }
 body {
   font-family: 'Open Sans', 'Arial', sans-serif;
-  color: #333333;
+  color: #333;
 }
 /*++++++++++++++++++++++++++++++++*\
     ## SECTIONS
@@ -152,7 +152,7 @@ a[href$='.pdf']::after {
   font-size: 12px;
   font-weight: 700;
   background: #0c5fa8;
-  color: #ffffff;
+  color: #fff;
 }
 /*++++++++++++++++++++++++++++++++*\
     ## FORMS
@@ -699,7 +699,7 @@ button {
   text-align: center;
   letter-spacing: -2px;
   background: #0c5fa8;
-  color: #ffffff;
+  color: #fff;
 }
 .c-YearBadge::before {
   content: '20';
@@ -721,7 +721,7 @@ button {
 .year-badge {
   width: 90px;
   background: #0c5fa8;
-  color: #ffffff;
+  color: #fff;
 }
 .year-badge h2 {
   padding: 40px 10px 10px;
@@ -762,7 +762,7 @@ button {
   text-align: center;
   letter-spacing: -2px;
   background: #0c5fa8;
-  color: #ffffff;
+  color: #fff;
 }
 .c-YearRibbon::before {
   content: '20';
@@ -818,7 +818,7 @@ button {
   font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
-  color: #ffffff;
+  color: #fff;
   background-color: #6fc2c4;
 }
 #pipelinesconference .c-NavBar,
@@ -1236,7 +1236,7 @@ button,
 a.button {
   background-color: #0c5fa8;
   text-transform: uppercase;
-  color: #ffffff;
+  color: #fff;
   display: inline-block;
   border: none;
   padding: .5em 1em;
@@ -1252,7 +1252,7 @@ a.button a:visited,
 button a:focus,
 a.button a:focus {
   background-color: #0e6cc0;
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
 }
 .button--disabled,
@@ -1307,7 +1307,7 @@ a.button--disabled:hover {
 .footer,
 .summary-banner,
 .c-SummaryBanner {
-  color: #ffffff;
+  color: #fff;
   background-color: #6a9556;
 }
 #pipelinesconference .header,
@@ -1379,7 +1379,7 @@ a.button--disabled:hover {
 .introduction,
 .c-Hero {
   background-color: #6a9556;
-  color: #ffffff;
+  color: #fff;
   margin-top: 10px;
   display: inline-block;
   position: relative;
@@ -1625,7 +1625,7 @@ a.button--disabled:hover {
 .c-SponsorBlock::before {
   display: inline-block;
   padding: 8px 20px;
-  border-bottom-color: #ffffff !important;
+  border-bottom-color: #fff !important;
   margin-bottom: -2px;
   font-weight: 600;
   font-size: 18px;
@@ -2256,7 +2256,7 @@ a.button--disabled:hover {
   }
 }
 .live-chat span {
-  color: #333333;
+  color: #333;
   font-size: 12px;
 }
 .phone {
@@ -2474,7 +2474,7 @@ a.button--disabled:hover {
   padding: 5px 8px;
 }
 .content .recognition h3 {
-  color: #333333;
+  color: #333;
   font-size: 18px;
   margin: 0;
   text-align: left;
