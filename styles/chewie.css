@@ -871,6 +871,7 @@ body {
     ## SECTIONS
 \*++++++++++++++++++++++++++++++++*/
 hr {
+  display: block;
   margin-top: 0;
   border-top: 2px solid #f4f4f5;
 }
@@ -882,19 +883,12 @@ ol {
   margin-bottom: 20px;
   padding-left: 1.9em;
 }
-li ul,
-li ol {
-  margin-bottom: 0;
-}
 ul {
   list-style-type: disc;
   list-style-image: url(../img/li-bullet.png);
 }
 li ul {
   list-style-image: none;
-}
-li {
-  line-height: inherit;
 }
 dt {
   font-weight: inherit;
@@ -950,7 +944,7 @@ form {
   display: inline-block;
   width: 100%;
   background-color: #f4f4f5;
-  padding: 20px 20px 0 20px;
+  padding: 20px 20px 0;
   margin-bottom: 20px;
 }
 input[type="text"],
@@ -1009,12 +1003,6 @@ label em {
 /*++++++++++++++++++++++++++++++++*\
     ## EMBEDDED
 \*++++++++++++++++++++++++++++++++*/
-img {
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  font-style: italic;
-}
 button {
   font-family: 'futura-pt', 'Open Sans', 'Arial', sans-serif;
 }
