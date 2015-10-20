@@ -803,26 +803,49 @@ img {
  *
  * ## OBJECTS
  * object.........................temporary file containing ALL objects : will be broken up later
+ * SpeakerProfile.................a three-column layout containing speaker session info, headshot, and speaker brief info
  *
  * ## COMPONENTS
  *
  * ### Typographical Components
+ * headings.......................temporary sheet for all headings ; break up later
+ * TableHeader....................title of table. should go in <caption> or preceding <h1>
  * Callout........................section in the sidebar with a heading and body
+ * Hero...........................section on home page with image, heading, and lede
+ * Person.........................person name and title
+ * DateBlock......................a block containing a date and a description of an event
+ * DateLine.......................remove this
+ * Date...........................inline span of text indicating any date
  *
  * ### User-Interactive Components
  * YearBadge......................shield with year at top of all pages
- * YearTabs.......................tabs for each year in the footer
+ * YearRibbon.....................alternate to YearBadge
  * ConfLogo.......................image of conference logo shield in header/footer
+ * SpeakerPhoto...................photo of keynote speaker(s)
+ * NavBar.........................any generic navigation bar element
+
  * Icon...........................small icons
  * Button.........................buttons
+ * Flag...........................label of some sort
  *
+ *
+ *
+ * ## UNSORTED
+ * SiteFooter.....................
+ * SummaryBanner..................
+ * LinkBlock
+ * LinkArrow
  * SponsorHeading.................heading of Sponsors section
  * SponsorBlock...................a block of sponsor logos
+ * AsceLogo.......................logo at site footer
+ *
+ *
  *
  * ## TRUMPS
  * helpers........................context-agnostic helper classes
  * utils..........................atoms (exactly one style and marked `!important`)
  * shame..........................temporary hacks and fixes
+ * ektron-fixes...................fixes specifically for ektron server custom styles
  */
 /*################################*\
     __settings.less
@@ -1095,6 +1118,65 @@ button {
   }
 }
 /*################################*\
+    _comp.SpeakerProfile.less
+\*################################*/
+.speaker-profile {
+  display: table;
+  width: 100%;
+  margin-bottom: 20px;
+}
+@media (max-width: 989px) {
+  .speaker-profile {
+    display: block;
+  }
+}
+.speaker-profile img {
+  min-width: 130px;
+  max-height: 130px;
+  margin: 0 10px;
+}
+.session-col,
+.photo-col,
+.details-col {
+  display: table-cell;
+  vertical-align: middle;
+}
+.session-col,
+.c-SessionDetails {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.photo-col {
+  text-align: center;
+}
+@media (max-width: 989px) {
+  .details-col {
+    display: block;
+    width: 100%;
+  }
+}
+.dateline,
+.sessiontype {
+  float: left;
+}
+.sessiontype {
+  padding-left: 10px;
+}
+.o-SpeakerDetails {
+  display: table;
+  width: 100%;
+  margin-bottom: 20px;
+}
+@media (max-width: 989px) {
+  .o-SpeakerDetails {
+    display: block;
+  }
+}
+.o-SpeakerDetails .photo-col,
+.o-SpeakerDetails .details-col {
+  vertical-align: top;
+}
+/*################################*\
     _comp.typo.headings.less
 \*################################*/
 .c-H--alpha,
@@ -1363,6 +1445,17 @@ button {
   margin-bottom: 5px;
 }
 /*################################*\
+    _comp.typo.TableHeader.less
+\*################################*/
+.table-header {
+  margin: 0;
+  padding: 10px;
+  background: #d1d4d7;
+  margin-bottom: -1px !important;
+  z-index: 2;
+  position: relative;
+}
+/*################################*\
     _comp.typo.Callout.less
 \*################################*/
 .callout,
@@ -1457,6 +1550,271 @@ button {
 }
 .callout.sponsors .callout-body img {
   max-height: 130px;
+}
+/*################################*\
+    _comp.Hero.less
+\*################################*/
+.introduction,
+.c-Hero {
+  background-color: #6a9556;
+  color: #fff;
+  margin-top: 10px;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+#pipelinesconference .introduction,
+#pipelinesconference .c-Hero {
+  background-color: #006c67;
+}
+#icsiconference .introduction,
+#icsiconference .c-Hero {
+  background-color: #0b2f69;
+}
+.introduction img,
+.c-Hero img {
+  display: block;
+  margin: auto;
+}
+.introduction h1,
+.c-Hero h1 {
+  font-size: 26px;
+  color: inherit !important;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+@media (max-width: 989px) {
+  .introduction h1,
+  .c-Hero h1 {
+    font-size: 22px;
+  }
+}
+@media (max-width: 767px) {
+  .introduction h1,
+  .c-Hero h1 {
+    font-size: 18px;
+  }
+}
+.introduction a,
+.c-Hero a,
+.introduction a:hover,
+.c-Hero a:hover,
+.introduction a:visited,
+.c-Hero a:visited,
+.introduction a:active,
+.c-Hero a:active {
+  color: inherit;
+}
+.introduction a:hover,
+.c-Hero a:hover {
+  opacity: .5;
+}
+.introduction > div,
+.c-Hero > div {
+  padding: 10px 30px;
+}
+.c-Hero__Img {
+  display: block;
+  margin: auto;
+}
+.c-Hero__Hn {
+  font-size: 26px;
+  color: inherit !important;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+@media (max-width: 989px) {
+  .c-Hero__Hn {
+    font-size: 22px;
+  }
+}
+@media (max-width: 767px) {
+  .c-Hero__Hn {
+    font-size: 18px;
+  }
+}
+.intro,
+.c-Hero__Lede {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+@media (max-width: 989px) {
+  .intro,
+  .c-Hero__Lede {
+    line-height: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .intro,
+  .c-Hero__Lede {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+.img-fade {
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  margin-top: -50px;
+  background: -moz-linear-gradient(top, rgba(106, 149, 86, 0) 0%, #6a9556 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(106, 149, 86, 0)), color-stop(100%, #6a9556));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(106, 149, 86, 0) 0%, #6a9556 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(106, 149, 86, 0) 0%, #6a9556 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(106, 149, 86, 0) 0%, #6a9556 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, rgba(106, 149, 86, 0) 0%, #6a9556 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#6a9556', GradientType=0);
+  /* IE6-9 */
+}
+#pipelinesconference .img-fade {
+  background: -moz-linear-gradient(top, rgba(0, 108, 103, 0) 0%, #006c67 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 108, 103, 0)), color-stop(100%, #006c67));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(0, 108, 103, 0) 0%, #006c67 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(0, 108, 103, 0) 0%, #006c67 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(0, 108, 103, 0) 0%, #006c67 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, rgba(0, 108, 103, 0) 0%, #006c67 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#006c67', GradientType=0);
+  /* IE6-9 */
+}
+#icsiconference .img-fade {
+  background: -moz-linear-gradient(top, rgba(11, 47, 105, 0) 0%, #0b2f69 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(11, 47, 105, 0)), color-stop(100%, #0b2f69));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(11, 47, 105, 0) 0%, #0b2f69 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(11, 47, 105, 0) 0%, #0b2f69 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(11, 47, 105, 0) 0%, #0b2f69 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, rgba(11, 47, 105, 0) 0%, #0b2f69 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#0b2f69', GradientType=0);
+  /* IE6-9 */
+}
+/*################################*\
+    _comp.Person.less
+\*################################*/
+.c-Person {
+  font-weight: inherit;
+}
+.person-name,
+.person-title {
+  font-weight: inherit;
+}
+.person-name,
+.c-Person__Name {
+  font-size: 18px;
+}
+.person-title,
+.c-Person__Title {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+/*################################*\
+    _comp.DateBlock.less
+\*################################*/
+.date-block,
+.o-DateBlock {
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.date-block .date-col,
+.o-DateBlock .date-col,
+.date-block .description-col,
+.o-DateBlock .description-col,
+.date-block .o-DateBlock__Date,
+.o-DateBlock .o-DateBlock__Date,
+.date-block .o-DateBlock__Desc,
+.o-DateBlock .o-DateBlock__Desc {
+  margin-bottom: 10px;
+}
+.date-block .date-col,
+.o-DateBlock .date-col,
+.date-block .o-DateBlock__Date,
+.o-DateBlock .o-DateBlock__Date {
+  text-align: right;
+  min-width: 90px;
+  padding-right: 10px;
+  border-right: 1px solid #ccc;
+  margin-right: 10px;
+}
+.date-block .description-col,
+.o-DateBlock .description-col,
+.date-block .o-DateBlock__Desc,
+.o-DateBlock .o-DateBlock__Desc {
+  max-width: 205px;
+}
+@media (max-width: 1199px) {
+  .date-block .description-col,
+  .o-DateBlock .description-col,
+  .date-block .o-DateBlock__Desc,
+  .o-DateBlock .o-DateBlock__Desc {
+    max-width: 180px;
+  }
+}
+@media (max-width: 989px) {
+  .date-block .description-col,
+  .o-DateBlock .description-col,
+  .date-block .o-DateBlock__Desc,
+  .o-DateBlock .o-DateBlock__Desc {
+    max-width: 95px;
+  }
+}
+@media (max-width: 767px) {
+  .date-block .description-col,
+  .o-DateBlock .description-col,
+  .date-block .o-DateBlock__Desc,
+  .o-DateBlock .o-DateBlock__Desc {
+    max-width: 582px;
+  }
+}
+/*################################*\
+    _comp.DateLine.less
+\*################################*/
+.dateline {
+  padding-right: 10px;
+  border-right: 1px solid #ccc;
+  text-align: right;
+}
+@media (max-width: 989px) {
+  .dateline {
+    border-right: 0;
+  }
+}
+/*################################*\
+    _comp.typo.Date.less
+\*################################*/
+.date {
+  color: #6fc2c4;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+#pipelinesconference .date {
+  color: #717073;
+}
+#icsiconference .date {
+  color: #a6044d;
 }
 /*################################*\
     _comp.ui.YearBadge.less
@@ -2049,36 +2407,25 @@ a.button--disabled:hover {
   background-color: #dadada;
 }
 /*################################*\
-    _comp.Person.less
+    _comp.ui.Flag.less
 \*################################*/
-.c-Person {
-  font-weight: inherit;
-}
-.person-name,
-.person-title {
-  font-weight: inherit;
-}
-.person-name,
-.c-Person__Name {
-  font-size: 18px;
-}
-.person-title,
-.c-Person__Title {
+.flag {
+  display: inline-block;
+  border: 1px solid #ed1c24;
+  padding: 2px 6px;
+  font-size: 11px;
+  font-weight: 600;
   font-style: italic;
-  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: #ed1c24;
 }
-/*################################*\
-    _comp.DateLine.less
-\*################################*/
-.dateline {
-  padding-right: 10px;
-  border-right: 1px solid #ccc;
-  text-align: right;
-}
-@media (max-width: 989px) {
-  .dateline {
-    border-right: 0;
-  }
+.note-flag {
+  display: inline-block;
+  padding: 8px 12px;
+  border-left: 2px solid #fdcd2f;
+  font-weight: 700;
+  font-style: italic;
+  background: #fef0c1;
 }
 .header,
 .footer,
@@ -2149,161 +2496,6 @@ a.button--disabled:hover {
   margin-bottom: 20px;
   position: relative;
   background-image: url(../img/pattern-bg.png);
-}
-/*################################*\
-    _comp.Hero.less
-\*################################*/
-.introduction,
-.c-Hero {
-  background-color: #6a9556;
-  color: #fff;
-  margin-top: 10px;
-  display: inline-block;
-  position: relative;
-  width: 100%;
-  margin-bottom: 20px;
-}
-#pipelinesconference .introduction,
-#pipelinesconference .c-Hero {
-  background-color: #006c67;
-}
-#icsiconference .introduction,
-#icsiconference .c-Hero {
-  background-color: #0b2f69;
-}
-.introduction img,
-.c-Hero img {
-  display: block;
-  margin: auto;
-}
-.introduction h1,
-.c-Hero h1 {
-  font-size: 26px;
-  color: inherit !important;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-}
-@media (max-width: 989px) {
-  .introduction h1,
-  .c-Hero h1 {
-    font-size: 22px;
-  }
-}
-@media (max-width: 767px) {
-  .introduction h1,
-  .c-Hero h1 {
-    font-size: 18px;
-  }
-}
-.introduction a,
-.c-Hero a,
-.introduction a:hover,
-.c-Hero a:hover,
-.introduction a:visited,
-.c-Hero a:visited,
-.introduction a:active,
-.c-Hero a:active {
-  color: inherit;
-}
-.introduction a:hover,
-.c-Hero a:hover {
-  opacity: .5;
-}
-.introduction > div,
-.c-Hero > div {
-  padding: 10px 30px;
-}
-.c-Hero__Img {
-  display: block;
-  margin: auto;
-}
-.c-Hero__Hn {
-  font-size: 26px;
-  color: inherit !important;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-}
-@media (max-width: 989px) {
-  .c-Hero__Hn {
-    font-size: 22px;
-  }
-}
-@media (max-width: 767px) {
-  .c-Hero__Hn {
-    font-size: 18px;
-  }
-}
-.intro,
-.c-Hero__Lede {
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-@media (max-width: 989px) {
-  .intro,
-  .c-Hero__Lede {
-    line-height: 20px;
-  }
-}
-@media (max-width: 767px) {
-  .intro,
-  .c-Hero__Lede {
-    font-size: 14px;
-    line-height: 18px;
-  }
-}
-.img-fade {
-  height: 50px;
-  width: 100%;
-  position: absolute;
-  margin-top: -50px;
-  background: -moz-linear-gradient(top, rgba(106, 149, 86, 0) 0%, #6a9556 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(106, 149, 86, 0)), color-stop(100%, #6a9556));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, rgba(106, 149, 86, 0) 0%, #6a9556 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, rgba(106, 149, 86, 0) 0%, #6a9556 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, rgba(106, 149, 86, 0) 0%, #6a9556 100%);
-  /* IE10+ */
-  background: linear-gradient(to bottom, rgba(106, 149, 86, 0) 0%, #6a9556 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#6a9556', GradientType=0);
-  /* IE6-9 */
-}
-#pipelinesconference .img-fade {
-  background: -moz-linear-gradient(top, rgba(0, 108, 103, 0) 0%, #006c67 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 108, 103, 0)), color-stop(100%, #006c67));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, rgba(0, 108, 103, 0) 0%, #006c67 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, rgba(0, 108, 103, 0) 0%, #006c67 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, rgba(0, 108, 103, 0) 0%, #006c67 100%);
-  /* IE10+ */
-  background: linear-gradient(to bottom, rgba(0, 108, 103, 0) 0%, #006c67 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#006c67', GradientType=0);
-  /* IE6-9 */
-}
-#icsiconference .img-fade {
-  background: -moz-linear-gradient(top, rgba(11, 47, 105, 0) 0%, #0b2f69 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(11, 47, 105, 0)), color-stop(100%, #0b2f69));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, rgba(11, 47, 105, 0) 0%, #0b2f69 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, rgba(11, 47, 105, 0) 0%, #0b2f69 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, rgba(11, 47, 105, 0) 0%, #0b2f69 100%);
-  /* IE10+ */
-  background: linear-gradient(to bottom, rgba(11, 47, 105, 0) 0%, #0b2f69 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#0b2f69', GradientType=0);
-  /* IE6-9 */
 }
 /*################################*\
     _comp.LinkBlock.less
@@ -2770,175 +2962,6 @@ a.button--disabled:hover {
     width: 73px;
     height: 23px;
   }
-}
-/*################################*\
-    _comp.SpeakerProfile.less
-\*################################*/
-.speaker-profile {
-  display: table;
-  width: 100%;
-  margin-bottom: 20px;
-}
-@media (max-width: 989px) {
-  .speaker-profile {
-    display: block;
-  }
-}
-.speaker-profile img {
-  min-width: 130px;
-  max-height: 130px;
-  margin: 0 10px;
-}
-.session-col,
-.photo-col,
-.details-col {
-  display: table-cell;
-  vertical-align: middle;
-}
-.session-col,
-.c-SessionDetails {
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-.photo-col {
-  text-align: center;
-}
-@media (max-width: 989px) {
-  .details-col {
-    display: block;
-    width: 100%;
-  }
-}
-.dateline,
-.sessiontype {
-  float: left;
-}
-.sessiontype {
-  padding-left: 10px;
-}
-.o-SpeakerDetails {
-  display: table;
-  width: 100%;
-  margin-bottom: 20px;
-}
-@media (max-width: 989px) {
-  .o-SpeakerDetails {
-    display: block;
-  }
-}
-.o-SpeakerDetails .photo-col,
-.o-SpeakerDetails .details-col {
-  vertical-align: top;
-}
-/*################################*\
-    _comp.DateBlock.less
-\*################################*/
-.date-block,
-.o-DateBlock {
-  display: flex;
-  flex-wrap: wrap;
-  font-weight: 600;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-.date-block .date-col,
-.o-DateBlock .date-col,
-.date-block .description-col,
-.o-DateBlock .description-col,
-.date-block .o-DateBlock__Date,
-.o-DateBlock .o-DateBlock__Date,
-.date-block .o-DateBlock__Desc,
-.o-DateBlock .o-DateBlock__Desc {
-  margin-bottom: 10px;
-}
-.date-block .date-col,
-.o-DateBlock .date-col,
-.date-block .o-DateBlock__Date,
-.o-DateBlock .o-DateBlock__Date {
-  text-align: right;
-  min-width: 90px;
-  padding-right: 10px;
-  border-right: 1px solid #ccc;
-  margin-right: 10px;
-}
-.date-block .description-col,
-.o-DateBlock .description-col,
-.date-block .o-DateBlock__Desc,
-.o-DateBlock .o-DateBlock__Desc {
-  max-width: 205px;
-}
-@media (max-width: 1199px) {
-  .date-block .description-col,
-  .o-DateBlock .description-col,
-  .date-block .o-DateBlock__Desc,
-  .o-DateBlock .o-DateBlock__Desc {
-    max-width: 180px;
-  }
-}
-@media (max-width: 989px) {
-  .date-block .description-col,
-  .o-DateBlock .description-col,
-  .date-block .o-DateBlock__Desc,
-  .o-DateBlock .o-DateBlock__Desc {
-    max-width: 95px;
-  }
-}
-@media (max-width: 767px) {
-  .date-block .description-col,
-  .o-DateBlock .description-col,
-  .date-block .o-DateBlock__Desc,
-  .o-DateBlock .o-DateBlock__Desc {
-    max-width: 582px;
-  }
-}
-/*################################*\
-    _comp.typo.Date.less
-\*################################*/
-.date {
-  color: #6fc2c4;
-  font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-#pipelinesconference .date {
-  color: #717073;
-}
-#icsiconference .date {
-  color: #a6044d;
-}
-/*################################*\
-    _comp.typo.TableHeader.less
-\*################################*/
-.table-header {
-  margin: 0;
-  padding: 10px;
-  background: #d1d4d7;
-  margin-bottom: -1px !important;
-  z-index: 2;
-  position: relative;
-}
-/*################################*\
-    _comp.ui.Flag.less
-\*################################*/
-.flag {
-  display: inline-block;
-  border: 1px solid #ed1c24;
-  padding: 2px 6px;
-  font-size: 11px;
-  font-weight: 600;
-  font-style: italic;
-  text-transform: uppercase;
-  color: #ed1c24;
-}
-.note-flag {
-  display: inline-block;
-  padding: 8px 12px;
-  border-left: 2px solid #fdcd2f;
-  font-weight: 700;
-  font-style: italic;
-  background: #fef0c1;
 }
 /*################################*\
     _trumps.helpers.less
