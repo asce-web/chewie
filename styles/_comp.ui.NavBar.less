@@ -22,8 +22,11 @@
   text-transform: uppercase;
   color: @color_asce_header_txt;
   background-color: @color_site_secondary;
-  #pipelines & {
+  #pipelinesconference & {
     background-color: @color_pl_secondary;
+  }
+  #icsiconference & {
+    background-color: @color_icsi_secondary;
   }
 }
 
@@ -79,8 +82,11 @@
     &:hover {
       text-decoration: none;
       background-color: @color_site_accent;
-      #pipelines & {
+      #pipelinesconference & {
         background-color: @color_pl_accent;
+      }
+      #icsiconference & {
+        background-color: @color_icsi_accent;
       }
     }
   }
@@ -159,8 +165,11 @@
   .c-NavBar__Link {
     padding: 14px 10px;
   }
-  #pipelines & {
+  #pipelinesconference & {
     background-color: @color_pl_accent;
+  }
+  #icsiconference & {
+    background-color: @color_icsi_accent;
   }
 
 
@@ -200,8 +209,11 @@
     &:hover,
     &.current {
       background-color: @color_site_accent;
-      #pipelines & {
+      #pipelinesconference & {
         background-color: @color_pl_accent;
+      }
+      #icsiconference & {
+        background-color: @color_icsi_accent;
       }
     }
     &:hover {
@@ -210,7 +222,7 @@
     &.current {
       position: relative;
       cursor: default;
-      &::after {
+      &::after { // little arrow below
         content: '';
         display: block;
         margin: auto;
@@ -221,8 +233,11 @@
         position: absolute;
         top: 46px;
         left: 40%;
-        #pipelines & {
+        #pipelinesconference & {
           border-top-color: @color_pl_accent;
+        }
+        #icsiconference & {
+          border-top-color: @color_icsi_accent;
         }
       }
     }
@@ -265,8 +280,11 @@
   &:hover,
   li.active & {
     background-color: @color_site_accent;
-    #pipelines & {
+    #pipelinesconference & {
       background-color: @color_pl_accent;
+    }
+    #icsiconference & {
+      background-color: @color_icsi_accent;
     }
   }
   &:hover {
@@ -289,8 +307,11 @@
       @media (max-width: 767px) {
         top: 34px;
       }
-      #pipelines & {
+      #pipelinesconference & {
         border-top-color: @color_pl_accent;
+      }
+      #icsiconference & {
+        border-top-color: @color_icsi_accent;
       }
     }
   }

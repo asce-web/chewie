@@ -1,6 +1,7 @@
+@import (inline) url('../node_modules/xmeter/xmeter.css');
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
-    chewie.less
+    chewie.less @v1.3.2
 \*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 
@@ -60,7 +61,8 @@
 
 
 @import url('_comp.ui.YearBadge.less');
-@import url('_comp.ui.InstShield.less');
+@import url('_comp.ui.YearRibbon.less');
+@import url('_comp.ui.ConfLogo.less');
 @import url('_comp.ui.SpeakerPhoto.less');
 @import url('_comp.ui.NavBar.less');
 
@@ -79,8 +81,11 @@
 .c-SummaryBanner {
   color: @color_asce_header_txt;
   background-color: @color_site_primary;
-  #pipelines & {
+  #pipelinesconference & {
     background-color: @color_pl_primary;
+  }
+  #icsiconference & {
+    background-color: @color_icsi_primary;
   }
   a {
     color: inherit;
@@ -88,7 +93,7 @@
 }
 @import url('_comp.SiteFooter.less');
 @import url('_comp.SummaryBanner.less');
-@import url('_comp.Intro.less');
+@import url('_comp.Hero.less');
 
 
 @import url('_comp.LinkBlock.less');

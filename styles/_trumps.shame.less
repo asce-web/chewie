@@ -8,6 +8,21 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 
+// ICSI is a unique conference
+#icsiconference {
+  .corporate,
+  .c-SponsorBlock--corporate {
+    &::before {
+      content: 'Conference Co-Organizers';
+    }
+  }
+}
+
+// vertically space blocks of .content.
+.content {
+  margin-bottom: 20px;
+}
+
 
 // meta stuff belonging in content
 .breadcrumb-link {
@@ -101,7 +116,7 @@
     &.in {
       z-index: 10;
       background: @color_site_primary;
-      #pipelines & {
+      #pipelinesconference & {
         background: @color_pl_primary;
       }
       box-shadow: -4px 0px 0px rgba(0,0,0,.25);

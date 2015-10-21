@@ -5,6 +5,8 @@
 
 
 // A button.
+// Subclasses:
+// --disabled
 //
 // ^author
 // : Dae Clarke
@@ -28,5 +30,15 @@ a.button {
     background-color: lighten(@color_asce_btn_bg, 5%);
     color: @color_asce_btn_txt; // why does this even exist
     text-decoration: none;
+  }
+}
+
+.button--disabled,
+button[disabled],
+input[type="button"][disabled],
+a.button--disabled {
+  cursor: not-allowed;
+  &, &:hover {
+    background-color: lighten(@color_asce_btn_sw, 5%);
   }
 }

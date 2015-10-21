@@ -1,18 +1,18 @@
 
 /*################################*\
-    _comp.Intro.less
+    _comp.Hero.less
 \*################################*/
 
 
 // The introduction section of the conference home page.
-// Includes an image, heading and intro paragraph.
+// Includes an image, heading and lede paragraph.
 //
 // ^author
 // : Dae Clarke
 // ^updated
 // : 2015-08-31
 .introduction,
-.c-Intro {
+.c-Hero {
   background-color: @color_site_primary;
   color: @color_asce_header_txt;
   margin-top: 10px;
@@ -20,14 +20,17 @@
   position: relative;
   width: 100%;
   margin-bottom: 20px;
-  #pipelines & {
+  #pipelinesconference & {
     background-color: @color_pl_primary;
   }
+  #icsiconference & {
+    background-color: @color_icsi_primary;
+  }
   img {
-    .c-Intro__Hero;
+    .c-Hero__Img;
   }
   h1 {
-    .c-Intro__Hn;
+    .c-Hero__Hn;
   }
   a,
   a:hover,
@@ -45,12 +48,12 @@
   }
 }
 // Hero image
-.c-Intro__Hero {
+.c-Hero__Img {
   display: block;
   margin: auto;
 }
 // The heading of the Introcuction module
-.c-Intro__Hn {
+.c-Hero__Hn {
   font-size: 26px;
   color: inherit !important; // not #fff // override .content h1 // !important override conf-spec
   margin-bottom: 10px;
@@ -62,9 +65,9 @@
     font-size: 18px;
   }
 }
-// the introduction (lede) paragraph
+// the introduction (lede) paragraph, also known as "blurb"
 .intro,
-.c-Intro__Lede {
+.c-Hero__Lede {
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
@@ -79,7 +82,7 @@
   }
 }
 // an empty div whose gradient fades the image into the content piece
-// (this should be an .c-Intro__Hero::after pseudo-element)
+// (this should be an .c-Hero__Img::after pseudo-element)
 .img-fade {
   @height: 50px;
   height: @height;
@@ -88,8 +91,11 @@
   margin-top: -@height;
   // padding: 0 !important; // TODO remove this line when we add a damn class (only here because `.introduction > div` has higher specificity)
   .bg-grad(@color_site_primary);
-  #pipelines & {
+  #pipelinesconference & {
     .bg-grad(@color_pl_primary);
+  }
+  #icsiconference & {
+    .bg-grad(@color_icsi_primary);
   }
   .bg-grad(@primary) {
     // a mixin for background gradients
