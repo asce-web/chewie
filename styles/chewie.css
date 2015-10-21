@@ -1202,94 +1202,91 @@ button {
   list-style-type: none;
   text-align: center;
 }
-.o-ListGrid__Cell {
+.o-ListGrid__Item {
   box-sizing: border-box;
   display: block;
   height: 100px;
   padding: 10px;
-  padding-bottom: 0;
+  width: 33.33333333%;
   border: 1px solid #ccc;
   overflow: hidden;
   transition: width 250ms;
 }
-.o-ListGrid__Cell {
-  width: 33.33333333%;
-}
 @media screen and (min-width: 480px) {
-  .o-ListGrid__Cell {
+  .o-ListGrid__Item {
     width: 25%;
   }
 }
 @media screen and (min-width: 768px) {
-  .o-ListGrid__Cell {
+  .o-ListGrid__Item {
     width: 33.33333333%;
   }
 }
 @media screen and (min-width: 990px) {
-  .o-ListGrid__Cell {
+  .o-ListGrid__Item {
     width: 20%;
   }
 }
 @media screen and (min-width: 1200px) {
-  .o-ListGrid__Cell {
+  .o-ListGrid__Item {
     width: 16.66666667%;
   }
 }
 @media screen and (min-width: 1400px) {
-  .o-ListGrid__Cell {
+  .o-ListGrid__Item {
     width: 12.5%;
   }
 }
 @media screen and (max-width: 479px) {
-  .o-ListGrid__Cell:nth-child(6n+4),
-  .o-ListGrid__Cell:nth-child(6n+5),
-  .o-ListGrid__Cell:nth-child(6n+6) {
+  .o-ListGrid__Item:nth-child(6n+4),
+  .o-ListGrid__Item:nth-child(6n+5),
+  .o-ListGrid__Item:nth-child(6n+6) {
     background-color: #f4f4f5;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
-  .o-ListGrid__Cell:nth-child(8n+5),
-  .o-ListGrid__Cell:nth-child(8n+6),
-  .o-ListGrid__Cell:nth-child(8n+7),
-  .o-ListGrid__Cell:nth-child(8n+8) {
+  .o-ListGrid__Item:nth-child(8n+5),
+  .o-ListGrid__Item:nth-child(8n+6),
+  .o-ListGrid__Item:nth-child(8n+7),
+  .o-ListGrid__Item:nth-child(8n+8) {
     background-color: #f4f4f5;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 989px) {
-  .o-ListGrid__Cell:nth-child(6n+4),
-  .o-ListGrid__Cell:nth-child(6n+5),
-  .o-ListGrid__Cell:nth-child(6n+6) {
+  .o-ListGrid__Item:nth-child(6n+4),
+  .o-ListGrid__Item:nth-child(6n+5),
+  .o-ListGrid__Item:nth-child(6n+6) {
     background-color: #f4f4f5;
   }
 }
 @media screen and (min-width: 990px) and (max-width: 1199px) {
-  .o-ListGrid__Cell:nth-child(10n+6),
-  .o-ListGrid__Cell:nth-child(10n+7),
-  .o-ListGrid__Cell:nth-child(10n+8),
-  .o-ListGrid__Cell:nth-child(10n+9),
-  .o-ListGrid__Cell:nth-child(10n+10) {
+  .o-ListGrid__Item:nth-child(10n+6),
+  .o-ListGrid__Item:nth-child(10n+7),
+  .o-ListGrid__Item:nth-child(10n+8),
+  .o-ListGrid__Item:nth-child(10n+9),
+  .o-ListGrid__Item:nth-child(10n+10) {
     background-color: #f4f4f5;
   }
 }
 @media screen and (min-width: 1200px) and (max-width: 1399px) {
-  .o-ListGrid__Cell:nth-child(12n+7),
-  .o-ListGrid__Cell:nth-child(12n+8),
-  .o-ListGrid__Cell:nth-child(12n+9),
-  .o-ListGrid__Cell:nth-child(12n+10),
-  .o-ListGrid__Cell:nth-child(12n+11),
-  .o-ListGrid__Cell:nth-child(12n+12) {
+  .o-ListGrid__Item:nth-child(12n+7),
+  .o-ListGrid__Item:nth-child(12n+8),
+  .o-ListGrid__Item:nth-child(12n+9),
+  .o-ListGrid__Item:nth-child(12n+10),
+  .o-ListGrid__Item:nth-child(12n+11),
+  .o-ListGrid__Item:nth-child(12n+12) {
     background-color: #f4f4f5;
   }
 }
 @media screen and (min-width: 1400px) {
-  .o-ListGrid__Cell:nth-child(16n+9),
-  .o-ListGrid__Cell:nth-child(16n+10),
-  .o-ListGrid__Cell:nth-child(16n+11),
-  .o-ListGrid__Cell:nth-child(16n+12),
-  .o-ListGrid__Cell:nth-child(16n+13),
-  .o-ListGrid__Cell:nth-child(16n+14),
-  .o-ListGrid__Cell:nth-child(16n+15),
-  .o-ListGrid__Cell:nth-child(16n+16) {
+  .o-ListGrid__Item:nth-child(16n+9),
+  .o-ListGrid__Item:nth-child(16n+10),
+  .o-ListGrid__Item:nth-child(16n+11),
+  .o-ListGrid__Item:nth-child(16n+12),
+  .o-ListGrid__Item:nth-child(16n+13),
+  .o-ListGrid__Item:nth-child(16n+14),
+  .o-ListGrid__Item:nth-child(16n+15),
+  .o-ListGrid__Item:nth-child(16n+16) {
     background-color: #f4f4f5;
   }
 }
