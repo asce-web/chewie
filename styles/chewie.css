@@ -1205,7 +1205,6 @@ button {
 .o-ListGrid__Item {
   box-sizing: border-box;
   display: block;
-  height: 100px;
   padding: 10px;
   width: 33.33333333%;
   border: 1px solid #ccc;
