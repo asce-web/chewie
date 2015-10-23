@@ -14,29 +14,30 @@ html
     main
       h1 UI Components
       section.doc-ss
-        h2 Year Badge
+        h2 Year Badge (.c-YearBadge)
         p A badge showing the year of the current conference.
         figure(style="margin-bottom:8em;")
           span.c-YearBadge(style="left:1em;") 15
       section.doc-ss
-        h2 Year Ribbon
+        h2 Year Ribbon (.c-YearRibbon)
         p A ribbon showing the year of the current conference. Alternative to Year Badge
         figure(style="margin-bottom:8em;")
           span.c-YearRibbon(style="left:1em;") 15
       section.doc-ss
-        h2 Institute Shield
-        p An image of Institute&rsquo;s shield icon in charge of conference.
+        h2 Conference (.c-ConfLogo)
+        p An image of Institute&rsquo;s shield (or org logo) icon in charge of conference.
         figure
-          img.conference-logo(src="/img/conf-logo.png")
+          img.c-ConfLogo(src="/img/conf-logo.png")
       section.doc-ss
-        h2 Speaker Photo
+        h2 Speaker Photo (c-SpeakerPhoto)
         p An image with margins. Usually appears in a speaker profile.
+        p.devnote does this really need to be a component?
         figure
           img.c-SpeakerPhoto(src="/img/FPO_speaker_130x130.jpg", alt="speaker")
       section.doc-ss
         h2 Navigation Bars
         section.doc-ss
-          h3 Generic Navigation Bar
+          h3 Generic Navigation Bar (.c-NavBar)
           figure
             nav.c-NavBar
               a.c-NavBar__Link.c-NavBar__Link--index --index
@@ -45,7 +46,7 @@ html
               a.c-NavBar__Link Link
               a.c-NavBar__Link Link
         section.doc-ss
-          h3 Main Navigation Bar
+          h3 Main Navigation Bar (.c-NavBar.c-NavBar--main)
           figure
             nav.c-NavBar.c-NavBar--main
               a.c-NavBar__Link.c-NavBar__Link--index: span.ic.home
@@ -54,26 +55,26 @@ html
               a.c-NavBar__Link About
               a.c-NavBar__Link Contact
         section.doc-ss
-          h3 Side Navigation Bar
+          h3 Side Navigation Bar (.c-NavBar.c-NavBar--side)
           figure
             nav.c-NavBar.c-NavBar--side
               a.c-NavBar__Link Why Attend
               a.c-NavBar__Link Registration
         section.doc-ss
-          h3 Utility Navigation Bar
+          h3 Utility Navigation Bar (.c-NavBar.c-NavBar--utility)
           figure
             nav.c-NavBar.c-NavBar--utility
               a.c-NavBar__Link For Speakers
               a.c-NavBar__Link Sponsors
               a.c-NavBar__Link Exhibitors
         section.doc-ss
-          h3 Secondary Navigation Bar
+          h3 Secondary Navigation Bar (.c-NavBar.c-NavBar--secondary)
           figure(style="margin-bottom:4em;")
             nav.c-NavBar.c-NavBar--secondary
               a.c-NavBar__Link Lodging & Transportation
               a.c-NavBar__Link For International Travel
         section.doc-ss
-          h3 Year Tab Bar
+          h3 Year Tab Bar (.c-NavBar.c-NavBar--tabs)
           figure
             nav.c-NavBar.c-NavBar--tabs
               a.c-NavBar__Link 2000
@@ -81,7 +82,7 @@ html
               a.c-NavBar__Link 2002
               a.c-NavBar__Link.current .current
       section.doc-ss
-        h2 Speaker Profile
+        h2 Speaker Profile (.speaker-profile)
         p.devnote.
           this doesn't need to be a component. we could use objects here,
           given a robust grid system.
@@ -97,7 +98,7 @@ html
               div.person-title Ph.D., P.E., S.E., CVS, F.ASCE Illuminate Foundry, Inc.
               a.button Speaker Details
       section.doc-ss
-        h2 Speaker Details
+        h2 Speaker Details (.o-SpeakerDetails)
         p.devnote.
           this doesn't need to be a component. we could use objects here,
           given a robust grid system.
@@ -127,3 +128,13 @@ html
           button.button--disabled button.button--disabled
           a.button.button--disabled a.button.button--disabled
           span.button.button--disabled span.button.button--disabled
+      section.doc-ss
+        h2 Flags
+        section.doc-ss
+          h3 Generic Flag (.flag)
+          figure
+            div.flag Warning: system will self-destruct in 60 seconds.
+        section.doc-ss
+          h3 Note Flag (.note-flag)
+          figure
+            div.note-flag Program is now over
