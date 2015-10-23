@@ -805,6 +805,7 @@ img {
  * object.........................temporary file containing ALL objects : will be broken up later
  * SpeakerProfile.................a three-column layout containing speaker session info, headshot, and speaker brief info
  * ListGrid.......................a list of blocks arranged in a table-like, flexible grid
+ * ColDouble......................sets two columns of text or list items
  *
  * ## COMPONENTS
  *
@@ -1288,6 +1289,14 @@ button {
   .o-ListGrid__Item:nth-child(16n+16) {
     background-color: #f4f4f5;
   }
+}
+/*################################*\
+    _obj.ColDouble.less
+\*################################*/
+.o-ColDouble {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
 }
 /*################################*\
     _comp.typo.headings.less
