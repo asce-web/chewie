@@ -3239,11 +3239,14 @@ a.button--disabled:hover {
 /*################################*\
     _trumps.utils.less
 \*################################*/
-.u-d_ib {
+.\!d\:ib {
   display: inline-block !important;
 }
-.u-mr_1 {
-  margin-right: 1em !important;
+.\!mr\:1 {
+  margin-right: 1rem !important;
+}
+.\!ta\:c {
+  text-align: center !important;
 }
 .uppercase {
   text-transform: uppercase;
@@ -3253,9 +3256,6 @@ a.button--disabled:hover {
 }
 .no-bg .callout-body {
   background-image: none;
-}
-.u-ta_c {
-  text-align: center !important;
 }
 /*################################*\
     _trumps.shame.less
