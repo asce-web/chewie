@@ -71,6 +71,9 @@ dt {
 \*++++++++++++++++++++++++++++++++*/
 a {
   color: @color_asce_link;
+  &:not([href]) {
+    opacity: initial; // undo xmeter
+  }
   &:hover {
     color: @color_asce_link_hover;
   }
