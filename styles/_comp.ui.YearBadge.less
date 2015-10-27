@@ -6,25 +6,32 @@
 
 // The YearBadge component represents the shield-like icon at the top
 // of all pages containing the year (2015).
+// Mixin .year-badge-mx() is a private tool to this component only.
 //
 // ^author
 // : Dae Clarke
 // ^updated
-// : 2015-08-21
-.c-YearBadge {
-  @sizepx: 100px; // NOTE change this size to scale the complete badge
-  @bgcolor: @color_asce_primary;
-  display: inline-block;
+// : 2015-10-27
+.year-badge-mx(@sizepx: 80px) {
   width: @sizepx;
-  margin: 0;
-  padding: 0;
   padding-top: (@sizepx/2);
-  position: absolute;
   left: -(@sizepx/2);
-  font-weight: 700;
   font-size: (@sizepx/4);
   // font-size: floor((@sizepx/3) / 10) * 10px; // rounds down to the nearest 10px
-  line-height: 0;
+  &::after {
+    @length: (@sizepx/4); // length of badge corner
+    top: @length;
+    border-width: (@sizepx/2);
+    border-top-width: @length;
+  }
+}
+.c-YearBadge {
+  .year-badge-mx();
+  @sizepx: 80px;
+  @bgcolor: @color_asce_primary;
+  display: none;
+  position: absolute;
+  font-weight: 700;
   font-family: @font_ui;
   text-align: center;
   letter-spacing: -2px;
@@ -36,17 +43,24 @@
     letter-spacing: 1px;
   }
   &::after {
-    @length: (@sizepx/4); // length of badge corner
     content: '';
     display: block;
     width: 0;
     height: 0;
     position: relative;
-    top: @length;
-    border: (@sizepx/2) solid transparent;
-    border-top-width: @length;
+    border-style: solid;
+    border-color: transparent;
     border-top-color: @bgcolor;
     border-bottom: 0;
+  }
+  @media screen and (min-width: 45em) { // breakpoint M+ (@M)
+    display: block;
+  }
+  @media screen and (min-width: 60em) { // breakpoint L+ (@G)
+    .year-badge-mx(100px);
+  }
+  @media screen and (min-width: 75em) { // breakpoint XL+ (@T)
+    .year-badge-mx(120px);
   }
 }
 .year-badge {
