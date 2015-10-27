@@ -1474,7 +1474,7 @@ button {
 #lidconference .content h4,
 #lidconference .content h5,
 #lidconference .content h6 {
-  color: #0f4e7a;
+  color: #354e71;
 }
 .c-H--alpha,
 .content h1 {
@@ -1871,7 +1871,7 @@ button {
 }
 #lidconference .introduction,
 #lidconference .c-Hero {
-  background-color: #0f4e7a;
+  background-color: #354e71;
 }
 .introduction img,
 .c-Hero img {
@@ -2015,19 +2015,19 @@ button {
   /* IE6-9 */
 }
 #lidconference .img-fade {
-  background: -moz-linear-gradient(top, rgba(15, 78, 122, 0) 0%, #0f4e7a 100%);
+  background: -moz-linear-gradient(top, rgba(53, 78, 113, 0) 0%, #354e71 100%);
   /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(15, 78, 122, 0)), color-stop(100%, #0f4e7a));
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(53, 78, 113, 0)), color-stop(100%, #354e71));
   /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, rgba(15, 78, 122, 0) 0%, #0f4e7a 100%);
+  background: -webkit-linear-gradient(top, rgba(53, 78, 113, 0) 0%, #354e71 100%);
   /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, rgba(15, 78, 122, 0) 0%, #0f4e7a 100%);
+  background: -o-linear-gradient(top, rgba(53, 78, 113, 0) 0%, #354e71 100%);
   /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, rgba(15, 78, 122, 0) 0%, #0f4e7a 100%);
+  background: -ms-linear-gradient(top, rgba(53, 78, 113, 0) 0%, #354e71 100%);
   /* IE10+ */
-  background: linear-gradient(to bottom, rgba(15, 78, 122, 0) 0%, #0f4e7a 100%);
+  background: linear-gradient(to bottom, rgba(53, 78, 113, 0) 0%, #354e71 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#0f4e7a', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#354e71', GradientType=0);
   /* IE6-9 */
 }
 /*################################*\
@@ -2892,7 +2892,7 @@ a.button--disabled:hover {
 #lidconference .footer,
 #lidconference .summary-banner,
 #lidconference .c-SummaryBanner {
-  background-color: #0f4e7a;
+  background-color: #354e71;
 }
 .header a,
 .footer a,
@@ -3583,7 +3583,7 @@ a.button--disabled:hover {
     background: #0b2f69;
   }
   #lidconference .toggleable-nav.in {
-    background: #0f4e7a;
+    background: #354e71;
   }
   .toggleable-nav.in .close-nav {
     display: block;
