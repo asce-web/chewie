@@ -14,22 +14,22 @@
 // : 2015-08-27
 button,
 a.button {
-  background-color: @color_asce_btn_bg;
-  text-transform: uppercase;
-  color: @color_asce_btn_txt;
   display: inline-block;
-  border: none;
   padding: .5em 1em;
+  // margin-bottom: 20px; // uh why
+  font-weight: 500;
+  line-height: inherit;
+  text-transform: uppercase;
+  border: none;
   border-radius: 3px;
   box-shadow: 0px 2px 0px @color_asce_btn_sw;
-  font-weight: 500;
-  // margin-bottom: 20px; // uh why
+  background-color: @color_asce_btn_bg;
+  color: @color_asce_btn_txt;
   cursor: pointer;
 
   &:hover, a:visited, a:focus {
     background-color: lighten(@color_asce_btn_bg, 5%);
     color: @color_asce_btn_txt; // why does this even exist
-    text-decoration: none;
   }
 }
 

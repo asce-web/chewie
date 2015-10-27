@@ -54,30 +54,29 @@
 }
 // The heading of the Introcuction module
 .c-Hero__Hn {
-  font-size: 26px;
+  font-size: 36px; font-size: 2.25rem;
+  line-height: (1.25/2.25)*1.75;
   color: inherit !important; // not #fff // override .content h1 // !important override conf-spec
-  margin-bottom: 10px;
   text-transform: uppercase;
   @media (max-width: 989px) {
-    font-size: 22px;
+    font-size: 22px; font-size: 1.375rem;
+    line-height: (1.25/1.375)*1.5;
   }
   @media (max-width: 767px) {
-    font-size: 18px;
+    font-size: 18px; font-size: 1.125rem;
+    line-height: (1.25/1.125)*1.25;
   }
 }
 // the introduction (lede) paragraph, also known as "blurb"
 .intro,
 .c-Hero__Lede {
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 600;
-  margin-bottom: 20px;
-  @media (max-width: 989px) {
-    line-height: 20px;
-  }
+  margin-bottom: 20px; margin-bottom: 1.25rem; // should already be applied to paragraphs but SOME PEOPLE DON’T USE <P> ELEMENTS
+  font-weight: 300;
+  font-size: 16px; font-size: 1rem;
+  line-height: (1.25/1) * 1.25;
   @media (max-width: 767px) {
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 14px; font-size: 0.875rem;
+    line-height: (1.25/0.875)*1;
   }
 }
 // an empty div whose gradient fades the image into the content piece
