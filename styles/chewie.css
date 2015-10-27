@@ -3345,7 +3345,8 @@ a.button--disabled:hover {
   margin-right: 8px;
 }
 .box-header {
-  display: none !important;
+  opacity: 0;
+  height: 0;
 }
 .coop-orgs-block,
 .c-CoopBlock {
