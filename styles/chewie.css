@@ -955,7 +955,7 @@ img {
  * SummaryBanner..................
  * LinkBlock
  * LinkArrow
- * SponsorHeading.................heading of Sponsors section
+ * SponsorHn......................heading of Sponsors section
  * SponsorBlock...................a block of sponsor logos
  * AsceLogo.......................logo at site footer
  *
@@ -1797,19 +1797,19 @@ button {
 .c-Callout--sponsors .c-Callout .callout-body img {
   max-height: 130px;
 }
-.c-Callout__Heading {
+.c-Callout__Hn {
   font-weight: 400;
   font-size: 24px;
   text-transform: uppercase;
 }
-.c-Callout--register .c-Callout__Heading {
+.c-Callout--register .c-Callout__Hn {
   margin-top: 20px;
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
   text-transform: uppercase;
 }
-.c-Callout__Subheading {
+.c-Callout__SubHn {
   margin: 0 0 5px;
   font-weight: 600;
   font-size: 16px;
@@ -2256,7 +2256,7 @@ button {
   display: none;
 }
 /*################################*\
-    _comp.ui.YearBadge.less
+    _comp.ui.YearRibbon.less
 \*################################*/
 .c-YearRibbon {
   width: 80px;
@@ -2943,7 +2943,7 @@ a.button--disabled:hover {
 .link-block {
   margin-bottom: 20px;
 }
-.c-LinkBlock__Heading,
+.c-LinkBlock__Hn,
 .link-block h3 {
   opacity: .7;
   text-transform: uppercase;
@@ -2951,7 +2951,7 @@ a.button--disabled:hover {
   font-size: 18px;
 }
 @media (max-width: 989px) {
-  .c-LinkBlock__Heading,
+  .c-LinkBlock__Hn,
   .link-block h3 {
     font-size: 14px;
   }
@@ -3010,10 +3010,10 @@ a.button--disabled:hover {
   }
 }
 /*################################*\
-    _comp.SponsorHeading.less
+    _comp.SponsorHn.less
 \*################################*/
 .sponsor-container h2,
-.c-SponsorHeading {
+.c-SponsorHn {
   margin-bottom: 30px;
 }
 /*################################*\
