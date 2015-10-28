@@ -2,6 +2,7 @@
     styleguide.less
 \*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 section.doc-ss {
+  clear: both;
   margin-left: 1em;
   background-color: rgba(0, 0, 0, 0.03);
 }
