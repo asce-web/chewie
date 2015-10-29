@@ -66,8 +66,9 @@
 .tab-button:hover,
 .navigation-level2 a:hover,
 .navigation-level2 a.active {
+  background-color: fadeout(#fff, 75%);
+  text-decoration: none; // override bootstrap
   color: inherit; // override default
-  // background-color: fadeout(#fff, 85%);
 }
 
 
@@ -84,7 +85,6 @@
   .c-NavBar__Link {
     &.active, // a javascript class added on hover
     &:hover {
-      text-decoration: none;
       background-color: @color_site_accent;
       #pipelinesconference & {
         background-color: @color_pl_accent;
@@ -107,7 +107,7 @@
 // ^author
 // : Dae Clarke
 // ^updated
-// : 2015-08-21
+// : 2015-10-29
 .nav2,
 .c-NavBar--side {
   background-color: @color_asce_primary;
@@ -144,6 +144,10 @@
   a,
   .c-NavBar__Link {
     padding: 5px 10px;
+    &:hover {
+      background-color: transparent;
+      text-decoration: underline;
+    }
     @media (max-width: 989px) {
       display: block;
       padding: 5px 0px;

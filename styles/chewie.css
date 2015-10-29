@@ -2420,6 +2420,8 @@ button {
 .tab-button:hover,
 .navigation-level2 a:hover,
 .navigation-level2 a.active {
+  background-color: rgba(255, 255, 255, 0.25);
+  text-decoration: none;
   color: inherit;
 }
 .nav1 a.active,
@@ -2430,7 +2432,6 @@ button {
 .c-NavBar--main a:hover,
 .nav1 .c-NavBar__Link:hover,
 .c-NavBar--main .c-NavBar__Link:hover {
-  text-decoration: none;
   background-color: #714509;
 }
 #pipelinesconference .nav1 a.active,
@@ -2500,6 +2501,13 @@ button {
 .nav3 .c-NavBar__Link,
 .c-NavBar--utility .c-NavBar__Link {
   padding: 5px 10px;
+}
+.nav3 a:hover,
+.c-NavBar--utility a:hover,
+.nav3 .c-NavBar__Link:hover,
+.c-NavBar--utility .c-NavBar__Link:hover {
+  background-color: transparent;
+  text-decoration: underline;
 }
 @media (max-width: 989px) {
   .nav3 a,
