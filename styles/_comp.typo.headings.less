@@ -55,7 +55,7 @@
 .content h2 {
   font-weight: 400;
   font-size: 24px; font-size: 1.5rem;
-  line-height: 0.833333333;
+  line-height: (1.25/1.5);
   @media (max-width: 767px) {
     font-size: 20px; font-size: 1.25rem;
     line-height: 1;
@@ -75,7 +75,7 @@
 .content h6 {
   font-weight: 700;
   font-size: 14px; font-size: 0.875rem;
-  line-height: 1.42857143;
+  line-height: (1.25/0.875);
 }
 
 // fixes for headings not in content section but in `.content` class
@@ -105,16 +105,16 @@
   margin: 0;
   font-weight: 700;
   font-size: 30px; font-size: 1.875rem;
-  line-height: 0.666666667;
+  line-height: (1.25/1.875)*1.25;
   font-family: @font_ui;
   text-transform: uppercase;
   @media (max-width: 1199px) {
     font-size: 20px; font-size: 1.25rem;
-    line-height: 1;
+    line-height: (1.25/1.25);
   }
   @media (max-width: 989px) {
     font-size: 18px; font-size: 1.125rem;
-    line-height: 1.11111111111;
+    line-height: (1.25/1.125);
   }
   @media (max-width: 767px) {
     margin-bottom: 20px;
@@ -134,11 +134,11 @@
   padding-top: 10px;
   @media (max-width: 1199px) {
     font-size: 20px; font-size: 1.25rem;
-    line-height: 1;
+    line-height: (1.25/1.25);
   }
   @media (max-width: 989px) {
     font-size: 18px; font-size: 1.125rem;
-    line-height: 1.11111111111;
+    line-height: (1.25/1.125);
     padding-top: 20px;
   }
 }
@@ -157,20 +157,20 @@
   text-transform: uppercase;
   font-weight: 600;
   font-size: 18px; font-size: 1.125rem;
-  line-height: 1.11111111111;
+  line-height: (1.25/1.125);
   @media (max-width: 1199px) {
     font-size: 14px; font-size: 0.875rem;
-    line-height: 1.42857143;
+    line-height: (1.25/0.875);
   }
   @media (max-width: 767px) {
     padding: 10px;
-    margin-top: 0px;
+    margin-top: 0; // override margin
   }
 }
 .footer .c-ConferenceLocation,
 .footer .year-prev-next h2 {
   font-size: 20px; font-size: 1.25rem;
-  line-height: 1;
+  line-height: (1.25/1.25);
   padding-top: 0;
 }
 .c-SummaryBanner .c-ConferenceLocation,
@@ -192,11 +192,11 @@
   font-weight: 500;
   text-transform: uppercase;
   font-size: 18px; font-size: 1.125rem;
-  line-height: 1.11111111111;
+  line-height: (1.25/1.125);
   opacity: .7;
   @media (max-width: 989px) {
     font-size: 14px; font-size: 0.875rem;
-    line-height: 1.42857143;
+    line-height: (1.25/0.875);
   }
 }
 .footer .c-ConferenceVenue,
@@ -209,7 +209,7 @@
   opacity: .7;
   @media (max-width: 1199px) {
     font-size: 14px; font-size: 0.875rem;
-    line-height: 1.42857143;
+    line-height: (1.25/0.875);
   }
 }
 
@@ -225,11 +225,11 @@
   margin: 10px 0;
   font-style: italic;
   font-size: 18px; font-size: 1.125rem;
-  line-height: 1.11111111111;
+  line-height: (1.25/1.125);
   opacity: 0.7;
   @media (max-width: 1199px) {
     font-size: 14px; font-size: 0.875rem;
-    line-height: 1.42857143;
+    line-height: (1.25/0.875);
   }
   &.visible-xs {
     // FIXME why are we overriding bootstrap classes ?!!??!?!?!!
