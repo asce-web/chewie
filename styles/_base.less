@@ -16,6 +16,9 @@
  */
 
 
+@random_gray_color: #f4f4f5;
+
+
 /*++++++++++++++++++++++++++++++++*\
     ## GENERIC
 \*++++++++++++++++++++++++++++++++*/
@@ -35,8 +38,9 @@ body {
     ## SECTIONS
 \*++++++++++++++++++++++++++++++++*/
 hr {
+  display: block; // override xmeter
   margin-top: 0;
-  border-top: 2px solid #f4f4f5; // what the hell is this color
+  border-top: 2px solid @random_gray_color;
 }
 
 
@@ -47,19 +51,15 @@ ul,
 ol {
   margin-bottom: 20px;
   padding-left: 1.9em;
-  li & {
-    margin-bottom: 0; // override above
-  }
 }
 ul {
-  list-style-type: disc;
-  list-style-image: url(../img/li-bullet.png);
+  list-style-type: circle;
   li & {
-    list-style-image: none;
+    list-style-type: disc;
   }
 }
 li {
-  line-height: inherit; // put this in base.generic
+  line-height: inherit; // TODO put this in base.generic with other inline stuff
 }
 dt {
   font-weight: inherit; // override bootstrap
@@ -71,6 +71,9 @@ dt {
 \*++++++++++++++++++++++++++++++++*/
 a {
   color: @color_asce_link;
+  &:not([href]) {
+    opacity: initial; // undo xmeter
+  }
   &:hover {
     color: @color_asce_link_hover;
   }
@@ -109,8 +112,8 @@ a {
 form {
   display: inline-block;
   width: 100%;
-  background-color: #f4f4f5;  // okay random color
-  padding: 20px 20px 0 20px;
+  background-color: @random_gray_color;
+  padding: 20px 20px 0;
   margin-bottom: 20px;
 }
 
@@ -159,24 +162,13 @@ label {
 /*++++++++++++++++++++++++++++++++*\
     ## EMBEDDED
 \*++++++++++++++++++++++++++++++++*/
-img {
-  width: auto;  // correct squishing
-  height: auto; // correct squishing
-  max-width: 100%; // seems to be a recurring theme here
-  font-style: italic; // for alt text
-}
-
-
-
-
 
 // OTHER
 button {
-  // this looks like a UI font. can we make it a variable?
   font-family: @font_ui;
 }
 
+// just gonna put this here for now. move it later.
 .navigation, .year-tabs, .button {
-  // just gonna put this here for now. move it later.
-  font-family: 'futura-pt', 'Open Sans', 'Arial', sans-serif;
+  font-family: @font_ui;
 }

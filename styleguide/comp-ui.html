@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/futura.css">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,600italic,700italic,400,600,700">
-    <link rel="stylesheet" href="../css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../styles/chewie.css">
     <link rel="stylesheet" href="./styleguide.css">
   </head>
@@ -15,61 +15,67 @@
     <main>
       <h1>UI Components</h1>
       <section class="doc-ss">
-        <h2>Year Badge</h2>
+        <h2>Year Badge (.c-YearBadge)</h2>
         <p>A badge showing the year of the current conference.</p>
         <figure style="margin-bottom:8em;"><span style="left:1em;" class="c-YearBadge">15</span></figure>
       </section>
       <section class="doc-ss">
-        <h2>Institute Shield</h2>
-        <p>An image of Institute&rsquo;s shield icon in charge of conference.</p>
-        <figure><img src="/img/conf-logo.png" class="conference-logo"></figure>
+        <h2>Year Ribbon (.c-YearRibbon)</h2>
+        <p>A ribbon showing the year of the current conference. Alternative to Year Badge</p>
+        <figure style="margin-bottom:8em;"><span style="left:1em;" class="c-YearRibbon">15</span></figure>
       </section>
       <section class="doc-ss">
-        <h2>Speaker Photo</h2>
+        <h2>Conference (.c-ConfLogo)</h2>
+        <p>An image of Institute&rsquo;s shield (or org logo) icon in charge of conference.</p>
+        <figure><img src="/img/conf-logo.png" class="c-ConfLogo"></figure>
+      </section>
+      <section class="doc-ss">
+        <h2>Speaker Photo (c-SpeakerPhoto)</h2>
         <p>An image with margins. Usually appears in a speaker profile.</p>
+        <p class="devnote">does this really need to be a component?</p>
         <figure><img src="/img/FPO_speaker_130x130.jpg" alt="speaker" class="c-SpeakerPhoto"></figure>
       </section>
       <section class="doc-ss">
         <h2>Navigation Bars</h2>
         <section class="doc-ss">
-          <h3>Generic Navigation Bar</h3>
+          <h3>Generic Navigation Bar (.c-NavBar)</h3>
           <figure>
             <nav class="c-NavBar"><a class="c-NavBar__Link c-NavBar__Link--index">--index</a><a class="c-NavBar__Link">Link</a><a class="c-NavBar__Link">Link</a><a class="c-NavBar__Link">Link</a><a class="c-NavBar__Link">Link</a></nav>
           </figure>
         </section>
         <section class="doc-ss">
-          <h3>Main Navigation Bar</h3>
+          <h3>Main Navigation Bar (.c-NavBar.c-NavBar--main)</h3>
           <figure>
             <nav class="c-NavBar c-NavBar--main"><a class="c-NavBar__Link c-NavBar__Link--index"><span class="ic home"></span></a><a class="c-NavBar__Link">Program</a><a class="c-NavBar__Link">Location</a><a class="c-NavBar__Link">About</a><a class="c-NavBar__Link">Contact</a></nav>
           </figure>
         </section>
         <section class="doc-ss">
-          <h3>Side Navigation Bar</h3>
+          <h3>Side Navigation Bar (.c-NavBar.c-NavBar--side)</h3>
           <figure>
             <nav class="c-NavBar c-NavBar--side"><a class="c-NavBar__Link">Why Attend</a><a class="c-NavBar__Link">Registration</a></nav>
           </figure>
         </section>
         <section class="doc-ss">
-          <h3>Utility Navigation Bar</h3>
+          <h3>Utility Navigation Bar (.c-NavBar.c-NavBar--utility)</h3>
           <figure>
             <nav class="c-NavBar c-NavBar--utility"><a class="c-NavBar__Link">For Speakers</a><a class="c-NavBar__Link">Sponsors</a><a class="c-NavBar__Link">Exhibitors</a></nav>
           </figure>
         </section>
         <section class="doc-ss">
-          <h3>Secondary Navigation Bar</h3>
+          <h3>Secondary Navigation Bar (.c-NavBar.c-NavBar--secondary)</h3>
           <figure style="margin-bottom:4em;">
             <nav class="c-NavBar c-NavBar--secondary"><a class="c-NavBar__Link">Lodging & Transportation</a><a class="c-NavBar__Link">For International Travel</a></nav>
           </figure>
         </section>
         <section class="doc-ss">
-          <h3>Year Tab Bar</h3>
+          <h3>Year Tab Bar (.c-NavBar.c-NavBar--tabs)</h3>
           <figure>
             <nav class="c-NavBar c-NavBar--tabs"><a class="c-NavBar__Link">2000</a><a class="c-NavBar__Link">2001</a><a class="c-NavBar__Link">2002</a><a class="c-NavBar__Link current">.current</a></nav>
           </figure>
         </section>
       </section>
       <section class="doc-ss">
-        <h2>Speaker Profile</h2>
+        <h2>Speaker Profile (.speaker-profile)</h2>
         <p class="devnote">
           this doesn't need to be a component. we could use objects here,
           given a robust grid system.
@@ -91,7 +97,7 @@
         </figure>
       </section>
       <section class="doc-ss">
-        <h2>Speaker Details</h2>
+        <h2>Speaker Details (.o-SpeakerDetails)</h2>
         <p class="devnote">
           this doesn't need to be a component. we could use objects here,
           given a robust grid system.
@@ -125,6 +131,21 @@
         <figure>
           <button class="button--disabled">button.button--disabled</button><a class="button button--disabled">a.button.button--disabled</a><span class="button button--disabled">span.button.button--disabled</span>
         </figure>
+      </section>
+      <section class="doc-ss">
+        <h2>Flags</h2>
+        <section class="doc-ss">
+          <h3>Generic Flag (.flag)</h3>
+          <figure>
+            <div class="flag">Warning: system will self-destruct in 60 seconds.</div>
+          </figure>
+        </section>
+        <section class="doc-ss">
+          <h3>Note Flag (.note-flag)</h3>
+          <figure>
+            <div class="note-flag">Program is now over</div>
+          </figure>
+        </section>
       </section>
     </main>
   </body>

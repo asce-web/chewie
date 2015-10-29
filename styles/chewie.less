@@ -1,6 +1,11 @@
+@import (inline) url('../node_modules/xmeter/xmeter.css');
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
-    chewie.less @v1.3.1
+    chewie.less
+    Version: 1.4.0
+    Licence:
+    Repo   : https://github.com/asce-web/chewie.git
+    Author : ASCE web team (webteam@asce.org)
 \*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 
@@ -24,26 +29,51 @@
  *
  * ## OBJECTS
  * object.........................temporary file containing ALL objects : will be broken up later
+ * SpeakerProfile.................a three-column layout containing speaker session info, headshot, and speaker brief info
+ * ListGrid.......................a list of blocks arranged in a table-like, flexible grid
+ * ColDouble......................sets two columns of text or list items
  *
  * ## COMPONENTS
  *
  * ### Typographical Components
+ * headings.......................temporary sheet for all headings ; break up later
+ * TableHeader....................title of table. should go in <caption> or preceding <h1>
  * Callout........................section in the sidebar with a heading and body
+ * Hero...........................section on home page with image, heading, and lede
+ * Person.........................person name and title
+ * DateBlock......................a block containing a date and a description of an event
+ * DateLine.......................remove this
+ * Date...........................inline span of text indicating any date
  *
  * ### User-Interactive Components
  * YearBadge......................shield with year at top of all pages
- * YearTabs.......................tabs for each year in the footer
+ * YearRibbon.....................alternate to YearBadge
  * ConfLogo.......................image of conference logo shield in header/footer
+ * SpeakerPhoto...................photo of keynote speaker(s)
+ * NavBar.........................any generic navigation bar element
+
  * Icon...........................small icons
  * Button.........................buttons
+ * Flag...........................label of some sort
  *
- * SponsorHeading.................heading of Sponsors section
+ *
+ *
+ * ## UNSORTED
+ * SiteFooter.....................
+ * SummaryBanner..................
+ * LinkBlock
+ * LinkArrow
+ * SponsorHn......................heading of Sponsors section
  * SponsorBlock...................a block of sponsor logos
+ * AsceLogo.......................logo at site footer
+ *
+ *
  *
  * ## TRUMPS
  * helpers........................context-agnostic helper classes
  * utils..........................atoms (exactly one style and marked `!important`)
  * shame..........................temporary hacks and fixes
+ * ektron-fixes...................fixes specifically for ektron server custom styles
  */
 
 @import url('__settings.less');
@@ -54,13 +84,23 @@
 @import url('_base.less');
 
 @import url('_objects.less'); // temp
+@import url('_comp.SpeakerProfile.less');
+@import url('_obj.ListGrid.less');
+@import url('_obj.ColDouble.less');
 
-@import url('_comp.typo.headings.less');
+@import url('_comp.typo.headings.less'); // temp
+@import url('_comp.typo.TableHeader.less');
 @import url('_comp.typo.Callout.less');
+@import url('_comp.Hero.less');
+@import url('_comp.Person.less');
+@import url('_comp.DateBlock.less');
+@import url('_comp.DateLine.less');
+@import url('_comp.typo.Date.less');
 
 
 @import url('_comp.ui.YearBadge.less');
-@import url('_comp.ui.InstShield.less');
+@import url('_comp.ui.YearRibbon.less');
+@import url('_comp.ui.ConfLogo.less');
 @import url('_comp.ui.SpeakerPhoto.less');
 @import url('_comp.ui.NavBar.less');
 
@@ -68,8 +108,7 @@
 
 @import url('_comp.Icon.less');
 @import url('_comp.Button.less');
-@import url('_comp.Person.less');
-@import url('_comp.DateLine.less');
+@import url('_comp.ui.Flag.less');
 
 // NOTE the Header, Footer, and Summary Banner are too big to be components.
 // We may just use small components inside to create the look-and-feel of each.
@@ -85,30 +124,27 @@
   #icsiconference & {
     background-color: @color_icsi_primary;
   }
+  #lidconference & {
+    background-color: @color_lid_primary;
+  }
   a {
     color: inherit;
   }
 }
 @import url('_comp.SiteFooter.less');
 @import url('_comp.SummaryBanner.less');
-@import url('_comp.Intro.less');
 
 
 @import url('_comp.LinkBlock.less');
 @import url('_comp.LinkArrow.less');
 
-@import url('_comp.SponsorHeading.less');
+@import url('_comp.SponsorHn.less');
 @import url('_comp.SponsorBlock.less');
 
 @import url('_comp.AsceLogo.less');
 
-@import url('_comp.SpeakerProfile.less');
-@import url('_comp.DateBlock.less');
 
-@import url('_comp.typo.Date.less');
-@import url('_comp.typo.TableHeader.less');
 
-@import url('_comp.ui.Flag.less');
 
 
 @import url('_trumps.helpers.less');

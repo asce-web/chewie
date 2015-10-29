@@ -7,7 +7,7 @@ html
     meta(name="viewport", content="width=device-width, initial-scale=1")
     link(rel="stylesheet", href="../css/futura.css")
     link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,600italic,700italic,400,600,700")
-    link(rel="stylesheet", href="../css/vendor/bootstrap.min.css")
+    link(rel="stylesheet", href="../bower_components/bootstrap/dist/css/bootstrap.min.css")
     link(rel="stylesheet", href="../styles/chewie.css")
     link(rel="stylesheet", href="./styleguide.css")
   body
@@ -15,34 +15,33 @@ html
       h1 Typographical Components
       section.doc-ss
         h2 Headings
-        p.
-          This section lists every single type of heading used on a site.
+        p This section lists every single type of heading used on a site.
         figure
           figcaption This figure shows headings belonging in the site header/footer.
-          h1.c-ConferenceName Conference Name
-          h1.c-ConferenceLocation Conference Location | Dates
-          h1.c-ConferenceVenue Conference Venue
-          h1.c-ConferenceTagline Conference Tagline
+          h1.c-ConferenceName     .c-ConferenceName     Sample ASCE Conference
+          h1.c-ConferenceLocation .c-ConferenceLocation Boston, MA | April 3&ndash;5, 2015
+          h1.c-ConferenceVenue    .c-ConferenceVenue    Sheraton Boston Hotel
+          h1.c-ConferenceTagline  .c-ConferenceTagline  One Team, One Goal, No Excuses
         figure
           p.devnote.
             These are the same headings above, shown in a #[code .footer].
             Notice the similarities. We can probably remove these
             #[q similar-but-not-identical] components.
           footer.footer
-            h1.c-ConferenceName Conference Name
-            h1.c-ConferenceLocation Conference Location | Dates
-            h1.c-ConferenceVenue Conference Venue
-            h1.c-ConferenceTagline Conference Tagline
+            h1.c-ConferenceName     .c-ConferenceName     Sample ASCE Conference
+            h1.c-ConferenceLocation .c-ConferenceLocation Boston, MA | April 3&ndash;5, 2015
+            h1.c-ConferenceVenue    .c-ConferenceVenue    Sheraton Boston Hotel
+            h1.c-ConferenceTagline  .c-ConferenceTagline  One Team, One Goal, No Excuses
         figure
           figcaption.devnote.
             These are the same headings above, shown in a #[code .summary-banner].
             Notice the similarities. We can probably remove these
             #[q similar-but-not-identical] components.
           aside.summary-banner
-            h1.c-ConferenceName Conference Name
-            h1.c-ConferenceLocation Conference Location | Dates
-            h1.c-ConferenceVenue Conference Venue
-            h1.c-ConferenceTagline Conference Tagline
+            h1.c-ConferenceName     .c-ConferenceName     Sample ASCE Conference
+            h1.c-ConferenceLocation .c-ConferenceLocation Boston, MA | April 3&ndash;5, 2015
+            h1.c-ConferenceVenue    .c-ConferenceVenue    Sheraton Boston Hotel
+            h1.c-ConferenceTagline  .c-ConferenceTagline  One Team, One Goal, No Excuses
         figure
           figcaption This figure shows headings belonging in page content.
           h1.c-H--alpha Page Heading (alpha)
@@ -51,55 +50,130 @@ html
           h1.c-H--delta Section Subsubheading (delta)
         figure
           figcaption This figure shows specific headings used in other components.
-          h1.c-Callout__Heading Generic Callout Heading in sidebar (same as Beta heading)
-          h1.c-Callout__Subheading Callout Subheading (same as Gamma heading)
-          h1.c-LinkBlock__Heading Link Block Heading in footer (same as conference venue heading)
+          h1.c-Hero__Hn       .c-Hero__Hn       Heading for hero image. New ideas. New Practices.
+          h1.c-Callout__Hn    .c-Callout__Hn    Generic Callout Heading in sidebar (same as Beta heading)
+          h1.c-Callout__SubHn .c-Callout__SubHn Callout Subheading (same as Gamma heading)
+          h1.c-LinkBlock__Hn  .c-LinkBlock__Hn  Link Block Heading in footer (same as conference venue heading)
+      section.doc-ss
+        h2 Paragraphs
+        p This section lists every single type of text block used on a site.
+        section.doc-ss
+          h3 Hero Lede (.c-Hero__Lede)
+          figure
+            p.c-Hero__Lede.
+              Paragraph for the hero image.
+              #[a(href="https://en.wikipedia.org/wiki/Lead_paragraph") Lede paragraph]
+              for the site.
+              Exposure to the latest industry advances will help you discover
+              your own cutting-edge solutions.
+              Gain contacts among colleagues and resource providers.
+        section.doc-ss
+          h3 Person Name and Title (.person-name, .person-title)
+          figure
+            div.person-name Han Solo
+            div.person-title Captain, #[i Millenium Falcon]. In it for the money.
+        section.doc-ss
+          h3 Date Block (.date-block)
+          p contains a Date Column 1 and a Description Column
+          figure
+            div.date-block
+              div.date-col Dec 18, 2013
+              div.description-col Final Papers Due
+          section.doc-ss
+            h4 Date Column 1 (.date-col)
+            figure
+              div.date-col Dec 18, 2013
+          section.doc-ss
+            h4 Description Column (.description-col)
+            figure
+              div.description-col Final Papers Due
+        section.doc-ss
+          h3 Session Column (.session-col), inside Speaker Profile
+          p conatains a Date Column 2 and a Session Type
+          figure
+            div.session-col
+              div.dateline Thursday, Apr 3
+              div.sessiontype Opening Plenary
+          section.doc-ss
+            h4 Date Column 2 (.dateline)
+            figure
+              div.dateline Thursday, Apr 3
+          section.doc-ss
+            h4 Session Type (.sessiontype)
+            figure
+              div.sessiontype Opening Plenary
+      section.doc-ss
+        h2 Inline Text
+        p This section lists every single type of inline text used on a site.
+        section.doc-ss
+          h3 Date Text (.date)
+          figure
+            div.date Apr 3
+        section.doc-ss
+          h3 Links
+          p All types of links listed here
+          section.doc-ss
+            h4 Link Arrow (a.link-arrow)
+            figure
+              a.link-arrow Program Details
+          section.doc-ss
+            h4 Link to PDF (a[href$='.pdf']) (href ends with `.pdf`)
+            p.devnote we may use a class instead
+            figure
+              a(href=".pdf") View Program
+          section.doc-ss
+            h4 Link to Email (a[href^='mailto:']) (href starts with `mailto:`)
+            p.devnote we may use a class instead
+            figure
+              a(href="mailto:example.com") Contact Us
       section.doc-ss
         h2 Callouts
         section.doc-ss
-          h3 Generic Callout
+          h3 Generic Callout (.c-Callout)
           figure
             section.c-Callout
-              h1.c-Callout__Heading Generic Callout Heading
+              h1.c-Callout__Hn Generic Callout Heading
               div.c-Callout__Body
                 p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. eiusmod tempor.
                 section
-                  h1.c-Callout__Subheading Callout Subheading
+                  h1.c-Callout__SubHn Callout Subheading
                   a(href="") Example link lorem ipsum dolor
         section.doc-ss
-          h3 Register Callout
+          h3 Register Callout (.c-Callout.c-Callout--register)
           figure
             section.c-Callout.c-Callout--register
-              h1.c-Callout__Heading Register Callout Heading
+              h1.c-Callout__Hn Register Callout Heading
               div.c-Callout__Body
                 p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. eiusmod tempor.
                 section
-                  h1.c-Callout__Subheading Callout Subheading
+                  h1.c-Callout__SubHn Callout Subheading
                   a(href="") Example link lorem ipsum dolor
         section.doc-ss
-          h3 Dates Callout
+          h3 Dates Callout (.c-Callout.c-Callout--dates)
           figure
             section.c-Callout.c-Callout--dates
-              h1.c-Callout__Heading Important Dates Callout Heading
+              h1.c-Callout__Hn Important Dates Callout Heading
               div.c-Callout__Body
                 p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. eiusmod tempor.
                 section
-                  h1.c-Callout__Subheading Callout Subheading
+                  h1.c-Callout__SubHn Callout Subheading
                   a(href="") Example link lorem ipsum dolor
         section.doc-ss
-          h3 Sponsors Callout
+          h3 Sponsors Callout (.c-Callout.c-Callout--sponsors)
           figure
             section.c-Callout.c-Callout--sponsors
-              h1.c-Callout__Heading Sponsors Callout Heading
+              h1.c-Callout__Hn Sponsors Callout Heading
               div.c-Callout__Body
                 p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. eiusmod tempor.
                 section
-                  h1.c-Callout__Subheading Callout Subheading
+                  h1.c-Callout__SubHn Callout Subheading
                   a(href="") Example link lorem ipsum dolor
       section.doc-ss
         h2 Summary Banner
         p.
-          Conference summary banners can be placed at the top of pages that have
+          Conference summary banners
+          #[code .c-SummaryBanner]
+          can be placed at the top of pages that have
           information about past year&rsquo;s and future year&rsquo;s conferences.
           The color in the banner should ideally correspond to the primary color
           for that year&rsquo;s conference, which may or may
@@ -107,7 +181,7 @@ html
         figure
           p.devnote we may scratch this
           aside.c-SummaryBanner
-            span.c-YearBadge(style="float:right;") 13
+            span.c-YearBadge 13
             h1.c-ConferenceName 1st T&amp;DI Green Streets, Highways &amp; Development Conference
-            h2.c-ConferenceLocation Toronto, Canada  |  May 2&ndash;4, 2013
+            h2.c-ConferenceLocation Toronto, Canada | May 2&ndash;4, 2013
             h3.c-ConferenceVenue Baylord Hotel

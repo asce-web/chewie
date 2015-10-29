@@ -1,0 +1,88 @@
+doctype html
+html
+  head
+    title Objects | Styleguide
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="../css/futura.css")
+    link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,600italic,700italic,400,600,700")
+    link(rel="stylesheet", href="../bower_components/bootstrap/dist/css/bootstrap.min.css")
+    link(rel="stylesheet", href="../styles/chewie.css")
+    link(rel="stylesheet", href="./styleguide.css")
+  body
+    main
+      h1 Objects
+      section.doc-ss
+        h2 List Grid (.o-ListGrid)
+        p.
+          A List Grid is simply a list of items arranged like blocks in a grid.
+          It has the structure of a list in that all items share the same container
+          (unlike tables where items are in different rows), while at the same time
+          appearing like a table with rows and columns.
+          The List Grid is flexible and responsive, adjusting the number of
+          columns based on screen size.
+        p.
+          The container must have the #[code .o-ListGrid] class and
+          each item must have the #[code .o-ListGrid__Item] class.
+        figure
+            ul.o-ListGrid
+              li.o-ListGrid__Item Burns &amp; McDonnell Engineering
+              li.o-ListGrid__Item DIS-TRAN Steel, LLC
+              li.o-ListGrid__Item EDM International
+              li.o-ListGrid__Item Electrical Consultants, Inc.
+              li.o-ListGrid__Item Fabrimet Inc.
+              li.o-ListGrid__Item Falcon Steel Company
+              li.o-ListGrid__Item Sabre-FWT
+              li.o-ListGrid__Item HDR
+              li.o-ListGrid__Item Mitas Energy
+              li.o-ListGrid__Item Power Consulting Associates, LLC
+              li.o-ListGrid__Item Power Line Systems, Inc.
+              li.o-ListGrid__Item Quanta Services
+              li.o-ListGrid__Item ReliaPOLE Inspection Services
+              li.o-ListGrid__Item Sabre-FWT 
+              li.o-ListGrid__Item SAE Towers
+              li.o-ListGrid__Item TAPP Steel Poles 
+              li.o-ListGrid__Item Trinity Meyer Utility Structures
+              li.o-ListGrid__Item TRC Engineers
+              li.o-ListGrid__Item Underground Devices 
+              li.o-ListGrid__Item Valmont Newmark
+      section.doc-ss
+        h2 Column Double (.o-ColDouble)
+        p.
+          This object sets two columns. It can be used for any passage of text
+          or even a list. If used on a list, the list items need not have
+          a class applied.
+        figure
+          p.o-ColDouble.
+            This paragraph is a double column and has lots of text. The reason
+            I am typing a lot of text is that I want to show how the paragraph
+            is broken into two columns. When you expand the window, the number
+            of columns remains as 2, no matter how wide the colummns are. This
+            may or may not be a good thing, depending on your design. Keep in mind
+            that the typical column width should be 45&ndash;75 characters,
+            otherwise readers will have a hard time reading the long passage
+            of text.
+        figure
+            ul.o-ColDouble
+              li Burns &amp; McDonnell Engineering
+              li DIS-TRAN Steel, LLC
+              li EDM International
+              li Electrical Consultants, Inc.
+              li Fabrimet Inc.
+              li Falcon Steel Company
+              li Sabre-FWT
+              li HDR
+              li Mitas Energy
+              li Power Consulting Associates, LLC
+              li Power Line Systems, Inc.
+              li Quanta Services
+              li ReliaPOLE Inspection Services
+              li Sabre-FWT
+              li SAE Towers
+              li TAPP Steel Poles
+              li Trinity Meyer Utility Structures
+              li TRC Engineers
+              li Underground Devices
+              li Valmont Newmark
+              li NOTE that there is a browser bug in which list-item markers do not render after the first column of a list.

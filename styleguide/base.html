@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/futura.css">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,600italic,700italic,400,600,700">
-    <link rel="stylesheet" href="../css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../styles/chewie.css">
     <link rel="stylesheet" href="./styleguide.css">
   </head>
@@ -17,8 +17,9 @@
       <section class="doc-ss">
         <h2>Headings and Paragraphs</h2>
         <figure>
-          <h1>Heading 1</h1>
+          <h1>h1</h1>
           <p>
+            p
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Aliquam sagittis suscipit nunc, a cursus libero euismod at.
             Nulla placerat neque massa, quis interdum leo efficitur vel.
@@ -27,8 +28,9 @@
             Nulla dictum arcu nec suscipit mollis.
             Maecenas a iaculis nisl, ut pretium est. Nulla facilisi.
           </p>
-          <h2>Heading 2</h2>
+          <h2>h2</h2>
           <p>
+            p
             Suspendisse ut auctor enim.
             Aliquam viverra enim vitae ante aliquet venenatis.
             Sed vel nibh sit amet sapien fermentum mattis nec non arcu.
@@ -43,8 +45,9 @@
             In sapien lacus, egestas faucibus laoreet eu, tempor sit amet lorem.
             Sed luctus congue tortor a scelerisque.
           </p>
-          <h3>Heading 3</h3>
+          <h3>h3</h3>
           <p>
+            p
             Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
             Nunc sit amet scelerisque lectus. Cras cursus sed dui quis convallis.
             Quisque id justo elit.
@@ -56,8 +59,9 @@
             Aliquam luctus laoreet iaculis.
             Proin lacinia orci vitae tellus pellentesque porttitor.
           </p>
-          <h4>Heading 4</h4>
+          <h4>h4</h4>
           <p>
+            p
             Aenean consectetur suscipit urna, non vehicula lacus blandit et.
             Integer at lacus et diam tristique suscipit.
             Ut cursus massa sit amet nisl convallis, elementum accumsan sapien mattis.
@@ -72,8 +76,9 @@
             Fusce auctor posuere purus, quis semper libero dignissim euismod.
             Curabitur commodo mauris a sapien vulputate, eget pharetra urna facilisis.
           </p>
-          <h5>Heading 5</h5>
+          <h5>h5</h5>
           <p>
+            p
             Donec finibus ut lectus finibus pellentesque.
             Nulla euismod feugiat nulla nec posuere.
             Sed ac est id sem sagittis rhoncus eu ac neque.
@@ -83,8 +88,9 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Etiam tellus leo, venenatis sit amet ipsum non, sagittis feugiat ante.
           </p>
-          <h6>Heading 6</h6>
+          <h6>h6</h6>
           <p>
+            p
             Donec vel dolor ut felis dapibus ultricies vitae a nibh.
             Ut semper odio est, sed lacinia ligula gravida ut.
             Vestibulum facilisis viverra pulvinar.
@@ -96,12 +102,12 @@
           </p>
         </figure>
         <figure>
-          <h1>Heading 1</h1>
-          <h2>Heading 2</h2>
-          <h3>Heading 3</h3>
-          <h4>Heading 4</h4>
-          <h5>Heading 5</h5>
-          <h6>Heading 6</h6>
+          <h1>h1</h1>
+          <h2>h2</h2>
+          <h3>h3</h3>
+          <h4>h4</h4>
+          <h5>h5</h5>
+          <h6>h6</h6>
         </figure>
         <figure>
           <figcaption>This figure shows headings belonging in page content.</figcaption>
@@ -111,22 +117,19 @@
           <h1 class="c-H--delta">Section Subsubheading (delta)</h1>
         </figure>
         <figure>
-          <figcaption>A blockquote is demonstrated in this figure.</figcaption>
-          <blockquote>Donec vel dolor ut felis dapibus ultricies vitae a nibh.
+          <blockquote>Donec <code>blockquote</code> vel dolor ut felis dapibus ultricies <code>footer</code> vitae a nibh.
             <footer>
               <cite>Finibus Pellentesque</cite>
             </footer>
           </blockquote>
         </figure>
         <figure>
-          <figcaption>This figure actually demonstrates a <code>figure</code> element, with a caption.</figcaption>
-          <figure class="bare">this is the figure, and &hellip;
-            <figcaption>this is the figcaption</figcaption>
+          <figure class="bare">Aenean consectetur <code>figure</code> suscipit urna, non vehicula lacus blandit et.
+            <figcaption>Integer at lacus et diam tristique <code>figcaption</code> suscipit.</figcaption>
           </figure>
         </figure>
         <figure>
-          <p>
-            A horizontal rule is shown below. I&rsquo;m honestly not sure when
+          <p>A horizontal rule (<code>hr</code>) is shown below. I&rsquo;m honestly not sure when
             you would ever use this instead of a CSS border.
           </p>
           <hr>
@@ -135,7 +138,7 @@
       <section class="doc-ss">
         <h2>Lists</h2>
         <figure>
-          <figcaption>Ordered List</figcaption>
+          <figcaption>Ordered List (<code>ol</code>)</figcaption>
           <ol>
             <li>Speaker details</li>
             <li>Program is now over
@@ -152,7 +155,7 @@
           </ol>
         </figure>
         <figure>
-          <figcaption>Unrdered List</figcaption>
+          <figcaption>Unrdered List (<code>ul</code>)</figcaption>
           <ul>
             <li>Speaker details</li>
             <li>Program is now over
@@ -169,8 +172,9 @@
           </ul>
         </figure>
         <figure>
-          <figcaption>Dictionary List</figcaption>
-          <p class="devnote">Used for key-value pairs, such as a list of dates and descriptions.</p>
+          <figcaption>Dictionary List (<code>dl</code>) &mdash; Used for key-value pairs,
+            such as a list of dates (or times) and descriptions.
+          </figcaption>
           <dl>
             <dt>date</dt>
             <dd>description</dd>
@@ -184,8 +188,9 @@
       <section class="doc-ss">
         <h2>Tables</h2>
         <p>An unclassed, unstyled table is shown below.</p>
-        <p class="devnote"><strong>Reminder:</strong> in source code, define <code>&lt;thead&gt;</code> and
-          <code>&lt;tfoot&gt;</code> before <code>&lt;tbody&gt;</code>, for accessibility reasons.
+        <p class="devnote"><strong>Reminder:</strong> in source code, define the <code>&lt;thead&gt;</code> and
+          <code>&lt;tfoot&gt;</code> <em>before</em> defining the <code>&lt;tbody&gt;</code>,
+          for accessibility reasons.
         </p>
         <figure>
           <table>
@@ -251,7 +256,7 @@
           <figure>
             <p>Lorem ipsum <a>dolor</a> sit amet, consectetur adipisicing elit, sed do
               eiusmod tempor incididunt <a>ut labore et dolore</a> magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              enim ad <code>a[href]</code>minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat. <a>Lorem ipsum dolor sit</a>
               amet, consectetur adipisicing elit, sed do eiusmod tempor
               incididunt <a>ut labore et dolore magna aliqua</a>.
@@ -261,18 +266,34 @@
         <section class="doc-ss">
           <h3>Stress</h3>
           <figure>
-            <p class="u-d_ib u-mr_1"><em>            emphasized text</em></p>
-            <p class="u-d_ib u-mr_1"><strong>        important text</strong></p>
-            <p class="u-d_ib u-mr_1"><i>             alternate voice/mood (scare quotes, mentions, foreign expressions)</i></p>
-            <p class="u-d_ib u-mr_1"><b>             keyword or technical term</b></p>
-            <p class="u-d_ib u-mr_1"><small>         side comment</small></p>
-            <p class="u-d_ib u-mr_1">
+            <p class="!d:ib !mr:1"><em>            em</em></p>
+            <p class="!d:ib !mr:1"><strong>        strong</strong></p>
+            <p class="!d:ib !mr:1"><i>             i</i></p>
+            <p class="!d:ib !mr:1"><b>             b</b></p>
+            <p class="!d:ib !mr:1"><small>         small</small></p>
+            <p class="!d:ib !mr:1">
+              <s>             s</s>
+            </p>
+            <p class="!d:ib !mr:1"><sup>           sup</sup></p>
+            <p class="!d:ib !mr:1"><sub>           sub</sub></p>
+            <p class="!d:ib !mr:1"><abbr title="">abbr(title="")</abbr></p>
+            <p class="!d:ib !mr:1">
+              <time>          time</time>
+            </p>
+          </figure>
+          <figure>
+            <p class="!d:ib !mr:1"><em>            emphasized text</em></p>
+            <p class="!d:ib !mr:1"><strong>        important text</strong></p>
+            <p class="!d:ib !mr:1"><i>             alternate voice/mood (scare quotes, mentions, foreign expressions)</i></p>
+            <p class="!d:ib !mr:1"><b>             keyword or technical term</b></p>
+            <p class="!d:ib !mr:1"><small>         side comment</small></p>
+            <p class="!d:ib !mr:1">
               <s>             text explicitly shown to be no longer relevant</s>
             </p>
-            <p class="u-d_ib u-mr_1"><sup>           superscript</sup></p>
-            <p class="u-d_ib u-mr_1"><sub>           subscript</sub></p>
-            <p class="u-d_ib u-mr_1"><abbr title="">abbreviation</abbr></p>
-            <p class="u-d_ib u-mr_1">
+            <p class="!d:ib !mr:1"><sup>           superscript</sup></p>
+            <p class="!d:ib !mr:1"><sub>           subscript</sub></p>
+            <p class="!d:ib !mr:1"><abbr title="">abbreviation</abbr></p>
+            <p class="!d:ib !mr:1">
               <time>          a specific date or time</time>
             </p>
           </figure>

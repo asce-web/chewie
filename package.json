@@ -1,0 +1,32 @@
+{
+  "name": "chewie",
+  "version": "1.4.0",
+  "description": "master conferences stylesheet",
+  "main": "index.html",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lessc:chewie": "lessc ./styles/chewie.less ./styles/chewie.css",
+    "lessc:styleguide": "lessc ./styleguide/styleguide.less ./styleguide/styleguide.css",
+    "lessc:all": "npm run lessc:chewie ; npm run lessc:styleguide",
+    "minify:chewie": "cleancss ./styles/chewie.css -o ./styles/chewie.min.css",
+    "jade:all": "jade -P ./",
+    "build": "npm run lessc:all ; npm run minify:chewie ; npm run jade:all"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asce-web/chewie.git"
+  },
+  "author": "ASCE Web Team <webteam@asce.org> (https://github.com/asce-web)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/asce-web/chewie/issues"
+  },
+  "homepage": "https://github.com/asce-web/chewie#readme",
+  "devDependencies": {
+    "clean-css": "^3.4.5",
+    "jade": "^1.11.0",
+    "less": "^2.5.3",
+    "xmeter": "^3.1.0"
+  }
+}
