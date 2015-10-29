@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "xmeter": "cd node_modules/xmeter/ ; npm run build ; cd -",
     "lessc:chewie": "lessc ./styles/chewie.less ./styles/chewie.css",
     "lessc:styleguide": "lessc ./styleguide/styleguide.less ./styleguide/styleguide.css",
     "lessc:all": "npm run lessc:chewie ; npm run lessc:styleguide",
