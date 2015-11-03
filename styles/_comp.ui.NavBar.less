@@ -2,7 +2,7 @@
 /*################################*\
     _comp.ui.NavBar.less
 \*################################*/
-
+@import url('../node_modules/xmeter/src/__tool.fallback.transition.less');
 
 // Any navigation bar.
 // This class should be extended by specific types of bars,
@@ -46,8 +46,9 @@
 .navigation-level2 a {
   display: inline-block;
   padding: 17px 24px;
-  line-height: 16px; // FIXME due to chevron icons in main nav causing bloated height
+  line-height: 20px; // FIXME due to chevron icons in main nav causing bloated height
   color: inherit;
+  #XMETER .transition(padding, background-color; 250ms);
   @media (max-width: 1199px) {
     font-size: 14px;
     padding: 12px 12px;
@@ -68,7 +69,7 @@
 .navigation-level2 a.active {
   background-color: fadeout(#fff, 75%);
   text-decoration: none; // override bootstrap
-  color: inherit; // override default
+  color: inherit; // override a:hover
 }
 
 
@@ -215,11 +216,6 @@
 .c-NavBar--tabs {
   font-size: 24px;
   .c-NavBar__Link {
-    padding: 6px 20px;
-    font-size: inherit;
-    @media (max-width: 767px) {
-      padding: 6px 12px;
-    }
     &:hover,
     &.current {
       background-color: @color_site_accent;
@@ -233,9 +229,6 @@
         background-color: @color_lid_accent;
       }
     }
-    &:hover {
-      text-decoration: none;
-    }
     &.current {
       position: relative;
       cursor: default;
@@ -245,11 +238,16 @@
         margin: auto;
         width: 0;
         height: 0;
-        border:  15px solid transparent;
+        border:  10px solid transparent;
         border-top-color: @color_site_accent;
         position: absolute;
-        top: 46px;
-        left: 40%;
+        top: 44px; // same as -margin-top for tab-buttons group
+        left: 33%;
+        #XMETER .transition(border-width; 500ms);
+        @media screen and (min-width: 1200px) {
+          top: 54px; // same as -margin-top for tab-buttons group
+          border-width: 15px;
+        }
         #pipelinesconference & {
           border-top-color: @color_pl_accent;
         }
@@ -280,23 +278,16 @@
 .tab-buttons {
   margin-bottom: 0; // override default ul margin-bottom
   float: right !important; // remove bootstrap pull-right
-  margin-top: -46px; // 34px (fs*lh) + 6px (pad-t) + 6px (pad-b)
-  font-size: 24px;
   text-align: center;
-  @media (max-width: 767px) {
-    margin-top: -34px;
-    font-size: 16px;
+  margin-top: -44px; // 20px (lh) + 12px (pt) + 12px (pb)
+  @media screen and (min-width: 1200px) {
+    margin-top: -54px; // 20px (lh) + 17px (pt) + 17px (pb)
   }
 }
 .tab-buttons li {
   display: inline-block;
 }
 .tab-button {
-  padding: 6px 20px;
-  font-size: inherit;
-  @media (max-width: 767px) {
-    padding: 6px 12px;
-  }
   &:hover,
   li.active & {
     background-color: @color_site_accent;
@@ -310,25 +301,24 @@
       background-color: @color_lid_accent;
     }
   }
-  &:hover {
-    text-decoration: none;
-  }
   li.active & {
-    cursor: default;
     position: relative;
+    cursor: default;
     &::after { // little arrow below
       content: '';
       display: block;
       margin: auto;
       width: 0;
       height: 0;
-      border:  15px solid transparent;
+      border:  10px solid transparent;
       border-top-color: @color_site_accent;
       position: absolute;
-      top: 46px;
-      left: 38%;
-      @media (max-width: 767px) {
-        top: 34px;
+      top: 44px; // same as -margin-top for tab-buttons group
+      left: 33%;
+      #XMETER .transition(border-width; 500ms);
+      @media screen and (min-width: 1200px) {
+        top: 54px; // same as -margin-top for tab-buttons group
+        border-width: 15px;
       }
       #pipelinesconference & {
         border-top-color: @color_pl_accent;

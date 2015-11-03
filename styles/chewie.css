@@ -903,7 +903,7 @@ img {
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     chewie.less
-    Version: 1.4.0
+    Version: 1.4.1
     Licence:
     Repo   : https://github.com/asce-web/chewie.git
     Author : ASCE web team (webteam@asce.org)
@@ -1505,7 +1505,7 @@ button {
   font-weight: 400;
   font-size: 24px;
   font-size: 1.5rem;
-  line-height: 0.833333333;
+  line-height: 0.83333333;
 }
 @media (max-width: 767px) {
   .c-H--beta,
@@ -1566,7 +1566,7 @@ button {
   font-weight: 700;
   font-size: 30px;
   font-size: 1.875rem;
-  line-height: 0.666666667;
+  line-height: 0.83333333;
   font-family: 'futura-pt', 'Open Sans', 'Arial', sans-serif;
   text-transform: uppercase;
 }
@@ -1587,7 +1587,7 @@ button {
   .summary-banner h2 {
     font-size: 18px;
     font-size: 1.125rem;
-    line-height: 1.11111111111;
+    line-height: 1.11111111;
   }
 }
 @media (max-width: 767px) {
@@ -1627,7 +1627,7 @@ button {
   .summary-banner h2 {
     font-size: 18px;
     font-size: 1.125rem;
-    line-height: 1.11111111111;
+    line-height: 1.11111111;
     padding-top: 20px;
   }
 }
@@ -1640,7 +1640,7 @@ button {
   font-weight: 600;
   font-size: 18px;
   font-size: 1.125rem;
-  line-height: 1.11111111111;
+  line-height: 1.11111111;
 }
 @media (max-width: 1199px) {
   .c-ConferenceLocation,
@@ -1658,7 +1658,7 @@ button {
   .footer .year-prev-next h2,
   .summary-banner h3 {
     padding: 10px;
-    margin-top: 0px;
+    margin-top: 0;
   }
 }
 .footer .c-ConferenceLocation,
@@ -1680,7 +1680,7 @@ button {
   text-transform: uppercase;
   font-size: 18px;
   font-size: 1.125rem;
-  line-height: 1.11111111111;
+  line-height: 1.11111111;
   opacity: .7;
 }
 @media (max-width: 989px) {
@@ -1714,7 +1714,7 @@ button {
   font-style: italic;
   font-size: 18px;
   font-size: 1.125rem;
-  line-height: 1.11111111111;
+  line-height: 1.11111111;
   opacity: 0.7;
 }
 @media (max-width: 1199px) {
@@ -2350,6 +2350,9 @@ button {
 /*################################*\
     _comp.ui.NavBar.less
 \*################################*/
+/*################################*\
+    __tool.fallback.transition.less
+\*################################*/
 .c-NavBar,
 .navigation,
 .nav3,
@@ -2389,8 +2392,28 @@ button {
 .navigation-level2 a {
   display: inline-block;
   padding: 17px 24px;
-  line-height: 16px;
+  line-height: 20px;
   color: inherit;
+  -webkit-transition-property: padding, background-color;
+  -moz-transition-property: padding, background-color;
+  -ms-transition-property: padding, background-color;
+  -o-transition-property: padding, background-color;
+  transition-property: padding, background-color;
+  -webkit-transition-duration: 250ms;
+  -moz-transition-duration: 250ms;
+  -ms-transition-duration: 250ms;
+  -o-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  -ms-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -webkit-transition-delay: 0ms;
+  -moz-transition-delay: 0ms;
+  -ms-transition-delay: 0ms;
+  -o-transition-delay: 0ms;
+  transition-delay: 0ms;
 }
 @media (max-width: 1199px) {
   .c-NavBar__Link,
@@ -2563,15 +2586,6 @@ button {
 .c-NavBar--tabs {
   font-size: 24px;
 }
-.c-NavBar--tabs .c-NavBar__Link {
-  padding: 6px 20px;
-  font-size: inherit;
-}
-@media (max-width: 767px) {
-  .c-NavBar--tabs .c-NavBar__Link {
-    padding: 6px 12px;
-  }
-}
 .c-NavBar--tabs .c-NavBar__Link:hover,
 .c-NavBar--tabs .c-NavBar__Link.current {
   background-color: #714509;
@@ -2588,9 +2602,6 @@ button {
 #lidconference .c-NavBar--tabs .c-NavBar__Link.current {
   background-color: #7d98ab;
 }
-.c-NavBar--tabs .c-NavBar__Link:hover {
-  text-decoration: none;
-}
 .c-NavBar--tabs .c-NavBar__Link.current {
   position: relative;
   cursor: default;
@@ -2601,11 +2612,37 @@ button {
   margin: auto;
   width: 0;
   height: 0;
-  border: 15px solid transparent;
+  border: 10px solid transparent;
   border-top-color: #714509;
   position: absolute;
-  top: 46px;
-  left: 40%;
+  top: 44px;
+  left: 33%;
+  -webkit-transition-property: border-width;
+  -moz-transition-property: border-width;
+  -ms-transition-property: border-width;
+  -o-transition-property: border-width;
+  transition-property: border-width;
+  -webkit-transition-duration: 500ms;
+  -moz-transition-duration: 500ms;
+  -ms-transition-duration: 500ms;
+  -o-transition-duration: 500ms;
+  transition-duration: 500ms;
+  -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  -ms-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -webkit-transition-delay: 0ms;
+  -moz-transition-delay: 0ms;
+  -ms-transition-delay: 0ms;
+  -o-transition-delay: 0ms;
+  transition-delay: 0ms;
+}
+@media screen and (min-width: 1200px) {
+  .c-NavBar--tabs .c-NavBar__Link.current::after {
+    top: 54px;
+    border-width: 15px;
+  }
 }
 #pipelinesconference .c-NavBar--tabs .c-NavBar__Link.current::after {
   border-top-color: #c1d8c5;
@@ -2619,27 +2656,16 @@ button {
 .tab-buttons {
   margin-bottom: 0;
   float: right !important;
-  margin-top: -46px;
-  font-size: 24px;
   text-align: center;
+  margin-top: -44px;
 }
-@media (max-width: 767px) {
+@media screen and (min-width: 1200px) {
   .tab-buttons {
-    margin-top: -34px;
-    font-size: 16px;
+    margin-top: -54px;
   }
 }
 .tab-buttons li {
   display: inline-block;
-}
-.tab-button {
-  padding: 6px 20px;
-  font-size: inherit;
-}
-@media (max-width: 767px) {
-  .tab-button {
-    padding: 6px 12px;
-  }
 }
 .tab-button:hover,
 li.active .tab-button {
@@ -2657,12 +2683,9 @@ li.active .tab-button {
 #lidconference li.active .tab-button {
   background-color: #7d98ab;
 }
-.tab-button:hover {
-  text-decoration: none;
-}
 li.active .tab-button {
-  cursor: default;
   position: relative;
+  cursor: default;
 }
 li.active .tab-button::after {
   content: '';
@@ -2670,15 +2693,36 @@ li.active .tab-button::after {
   margin: auto;
   width: 0;
   height: 0;
-  border: 15px solid transparent;
+  border: 10px solid transparent;
   border-top-color: #714509;
   position: absolute;
-  top: 46px;
-  left: 38%;
+  top: 44px;
+  left: 33%;
+  -webkit-transition-property: border-width;
+  -moz-transition-property: border-width;
+  -ms-transition-property: border-width;
+  -o-transition-property: border-width;
+  transition-property: border-width;
+  -webkit-transition-duration: 500ms;
+  -moz-transition-duration: 500ms;
+  -ms-transition-duration: 500ms;
+  -o-transition-duration: 500ms;
+  transition-duration: 500ms;
+  -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  -ms-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -webkit-transition-delay: 0ms;
+  -moz-transition-delay: 0ms;
+  -ms-transition-delay: 0ms;
+  -o-transition-delay: 0ms;
+  transition-delay: 0ms;
 }
-@media (max-width: 767px) {
+@media screen and (min-width: 1200px) {
   li.active .tab-button::after {
-    top: 34px;
+    top: 54px;
+    border-width: 15px;
   }
 }
 #pipelinesconference li.active .tab-button::after {
@@ -2913,7 +2957,7 @@ a.button--disabled:hover {
 \*################################*/
 .footer {
   background-image: url(../img/pattern-bg.png);
-  margin-top: 46px;
+  margin-top: 50px;
 }
 .footer .details {
   padding-top: 20px;
