@@ -2615,7 +2615,7 @@ button {
   border: 10px solid transparent;
   border-top-color: #714509;
   position: absolute;
-  top: 40px;
+  top: 44px;
   left: 33%;
   -webkit-transition-property: border-width;
   -moz-transition-property: border-width;
@@ -2640,7 +2640,7 @@ button {
 }
 @media screen and (min-width: 1200px) {
   .c-NavBar--tabs .c-NavBar__Link.current::after {
-    top: 50px;
+    top: 54px;
     border-width: 15px;
   }
 }
@@ -2657,11 +2657,11 @@ button {
   margin-bottom: 0;
   float: right !important;
   text-align: center;
-  margin-top: -40px;
+  margin-top: -44px;
 }
 @media screen and (min-width: 1200px) {
   .tab-buttons {
-    margin-top: -50px;
+    margin-top: -54px;
   }
 }
 .tab-buttons li {
@@ -2696,7 +2696,7 @@ li.active .tab-button::after {
   border: 10px solid transparent;
   border-top-color: #714509;
   position: absolute;
-  top: 40px;
+  top: 44px;
   left: 33%;
   -webkit-transition-property: border-width;
   -moz-transition-property: border-width;
@@ -2721,7 +2721,7 @@ li.active .tab-button::after {
 }
 @media screen and (min-width: 1200px) {
   li.active .tab-button::after {
-    top: 50px;
+    top: 54px;
     border-width: 15px;
   }
 }
