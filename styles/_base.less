@@ -70,9 +70,9 @@ dt {
     ## TEXT
 \*++++++++++++++++++++++++++++++++*/
 a {
-  color: @color_asce_link;
-  &:not([href]) {
-    opacity: initial; // undo xmeter
+  &[href] {
+    // matches :link and :visited
+    color: @color_asce_link;
   }
   &:hover {
     color: @color_asce_link_hover;
