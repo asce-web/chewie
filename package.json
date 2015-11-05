@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "xmeter": "cd node_modules/xmeter/ ; npm run build ; cd -",
+    "xmeter": "cd node_modules/xmeter/ ; npm install ; npm run build ; cd -",
     "lessc:chewie": "lessc ./styles/chewie.less ./styles/chewie.css",
     "lessc:styleguide": "lessc ./styleguide/styleguide.less ./styleguide/styleguide.css",
     "lessc:all": "npm run lessc:chewie ; npm run lessc:styleguide",
@@ -28,6 +28,6 @@
     "clean-css": "^3.4.5",
     "jade": "^1.11.0",
     "less": "^2.5.3",
-    "xmeter": "^3.1.0"
+    "xmeter": "^3.3.0"
   }
 }
