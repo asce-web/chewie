@@ -54,12 +54,24 @@
 }
 
 
-// inside session column, two objects
+// A date and description inside session-col
+//
+// ^author
+// : Dae Clarke
+// ^updated
+// : 2015-08-27
 .dateline,
 .sessiontype {
   float: left;
 }
-.dateline {} // see _comp.Dateline.less
+.dateline {
+  padding-right: 10px;
+  border-right: 1px solid #ccc; // same as dateblock__date border
+  text-align: right;
+  @media (max-width: 989px) {
+    border-right: 0; // why??
+  }
+}
 .sessiontype {
   padding-left: 10px;
 }
