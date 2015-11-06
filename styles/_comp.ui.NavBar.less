@@ -22,6 +22,12 @@
   text-transform: uppercase;
   color: @color_asce_header_txt;
   background-color: @color_site_secondary;
+  @media (max-width: 1199px) {
+    font-size: 14px;
+  }
+  @media (max-width: 989px) {
+    font-size: 13px;
+  }
   #pipelinesconference & {
     background-color: @color_pl_secondary;
   }
@@ -50,11 +56,9 @@
   color: inherit;
   #XMETER .transition(padding, background-color; 250ms);
   @media (max-width: 1199px) {
-    font-size: 14px;
     padding: 12px 12px;
   }
   @media (max-width: 989px) {
-    font-size: 13px;
     padding: 12px 7px;
   }
 }
@@ -170,7 +174,7 @@
 // : 2015-09-10
 .navigation-level2,
 .c-NavBar--secondary {
-  font-size: inherit;
+  font-size: inherit; // from body
   text-transform: none;
   background-color: @color_site_accent;
   position: absolute; // pops over page content
@@ -217,7 +221,7 @@
 // ^updated
 // : 2015-09-10
 .c-NavBar--tabs {
-  font-size: 24px;
+  // font-size: 24px; shouldn't be different from normal nav bar
   .c-NavBar__Link {
     &:hover,
     &.current {
@@ -281,8 +285,8 @@
 .tab-buttons {
   margin-bottom: 0; // override default ul margin-bottom
   float: right !important; // remove bootstrap pull-right
-  text-align: center;
   margin-top: -44px; // 20px (lh) + 12px (pt) + 12px (pb)
+  text-align: center;
   @media screen and (min-width: 1200px) {
     margin-top: -54px; // 20px (lh) + 17px (pt) + 17px (pb)
   }
