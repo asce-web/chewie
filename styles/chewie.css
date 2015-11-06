@@ -1081,7 +1081,7 @@ a[href^='mailto:']::before {
   }
 }
 a[href$='.pdf']::after {
-  display: inline-block;
+  display: inline;
   width: auto;
   height: auto;
   content: 'PDF';

@@ -89,7 +89,7 @@ a {
     top: 4px;
   }
   &[href$='.pdf']::after {
-    display: inline-block;
+    display: inline; // fixes non-zero height
     width: auto;
     height: auto;
     content: 'PDF';
