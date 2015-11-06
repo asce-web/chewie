@@ -21,7 +21,7 @@
   font-weight: 600;          // opinionated
   font-size: 12px;           // opinionated
   text-transform: uppercase; // opinionated
-  letter-spacing: 2px;       // opinionated
+  letter-spacing: 1px;       // opinionated
   .date-col,
   .description-col,
   .o-DateBlock__Date,
@@ -36,12 +36,12 @@
     min-width: @date_w;
     padding-right: @date_mr;
     border-right: 1px solid #ccc; // same as speaker-profile dateline border
-    margin-right: @date_mr;
   }
   .description-col,
   .o-DateBlock__Desc {
     @date_block_width: 305px;
     max-width: (@date_block_width - @date_w - @date_mr); // 205
+    padding-left: @date_mr;
     @media (max-width: 1199px) {
       @date_block_width: 280px;
       max-width: (@date_block_width - @date_w - @date_mr); // 180
