@@ -64,6 +64,43 @@ li {
 dt {
   font-weight: inherit; // override bootstrap
 }
+table {
+  .content & {
+    width: 100%;
+  }
+}
+th,
+td {
+  .content & {
+    padding: 10px;
+    border: 1px solid #e8eaeb;
+  }
+  .content table.no-border & {
+    border: 1px solid transparent;
+    border-bottom: 1px solid #e8eaeb;
+  }
+}
+thead > tr {
+  & > td,
+  & > th {
+    .content & {
+      background-color: #f4f4f5;
+      font-weight: 600;
+      font-size: 13px;
+    }
+  }
+}
+tbody > tr:nth-child(even) {
+  & > td,
+  & > th {
+    .content & {
+      background-color: #f4f4f5;
+    }
+    .content table.no-stripe & {
+      background-color: #fff;
+    }
+  }
+}
 
 
 /*++++++++++++++++++++++++++++++++*\
