@@ -1,6 +1,6 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     chewie
-    Version: 1.4.1
+    Version: 1.4.2
     Licence:
     Repo   : https://github.com/asce-web/chewie.git
     Author : ASCE web team (webteam@asce.org)
@@ -944,7 +944,6 @@ img {
  * Hero...........................section on home page with image, heading, and lede
  * Person.........................person name and title
  * DateBlock......................a block containing a date and a description of an event
- * DateLine.......................remove this
  * Date...........................inline span of text indicating any date
  *
  * ### User-Interactive Components
@@ -1054,11 +1053,8 @@ dt {
 /*++++++++++++++++++++++++++++++++*\
     ## TEXT
 \*++++++++++++++++++++++++++++++++*/
-a {
+a[href] {
   color: #0c5fa8;
-}
-a:not([href]) {
-  opacity: initial;
 }
 a:hover {
   color: #19a1cf;
@@ -1282,7 +1278,7 @@ button {
 .session-col,
 .c-SessionDetails {
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 .photo-col {
   text-align: center;
@@ -1296,6 +1292,16 @@ button {
 .dateline,
 .sessiontype {
   float: left;
+}
+.dateline {
+  padding-right: 10px;
+  border-right: 1px solid #ccc;
+  text-align: right;
+}
+@media (max-width: 989px) {
+  .dateline {
+    border-right: 0;
+  }
 }
 .sessiontype {
   padding-left: 10px;
@@ -2069,7 +2075,7 @@ button {
   font-weight: 600;
   font-size: 12px;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 .date-block .date-col,
 .o-DateBlock .date-col,
@@ -2089,13 +2095,13 @@ button {
   min-width: 90px;
   padding-right: 10px;
   border-right: 1px solid #ccc;
-  margin-right: 10px;
 }
 .date-block .description-col,
 .o-DateBlock .description-col,
 .date-block .o-DateBlock__Desc,
 .o-DateBlock .o-DateBlock__Desc {
   max-width: 205px;
+  padding-left: 10px;
 }
 @media (max-width: 1199px) {
   .date-block .description-col,
@@ -2119,19 +2125,6 @@ button {
   .date-block .o-DateBlock__Desc,
   .o-DateBlock .o-DateBlock__Desc {
     max-width: 582px;
-  }
-}
-/*################################*\
-    _comp.DateLine.less
-\*################################*/
-.dateline {
-  padding-right: 10px;
-  border-right: 1px solid #ccc;
-  text-align: right;
-}
-@media (max-width: 989px) {
-  .dateline {
-    border-right: 0;
   }
 }
 /*################################*\
@@ -2163,7 +2156,8 @@ button {
   left: -40px;
   font-size: 20px;
   display: none;
-  position: absolute;
+  position: relative;
+  z-index: 1;
   font-weight: 700;
   font-family: 'futura-pt', 'Open Sans', 'Arial', sans-serif;
   text-align: center;
@@ -2243,9 +2237,6 @@ button {
     border-top-width: 30px;
   }
 }
-.footer .year-badge {
-  position: initial;
-}
 .year-badge h2 {
   display: inline;
   font-size: inherit;
@@ -2274,7 +2265,8 @@ button {
   left: -40px;
   font-size: 20px;
   display: none;
-  position: absolute;
+  position: relative;
+  z-index: 1;
   font-weight: 700;
   font-family: 'futura-pt', 'Open Sans', 'Arial', sans-serif;
   text-align: center;
@@ -2374,6 +2366,24 @@ button {
   color: #fff;
   background-color: #6fc2c4;
 }
+@media (max-width: 1199px) {
+  .c-NavBar,
+  .navigation,
+  .nav3,
+  .tab-buttons,
+  .navigation-level2 {
+    font-size: 14px;
+  }
+}
+@media (max-width: 989px) {
+  .c-NavBar,
+  .navigation,
+  .nav3,
+  .tab-buttons,
+  .navigation-level2 {
+    font-size: 13px;
+  }
+}
 #pipelinesconference .c-NavBar,
 #pipelinesconference .navigation,
 #pipelinesconference .nav3,
@@ -2431,7 +2441,6 @@ button {
   .nav3 a,
   .tab-button,
   .navigation-level2 a {
-    font-size: 14px;
     padding: 12px 12px;
   }
 }
@@ -2441,7 +2450,6 @@ button {
   .nav3 a,
   .tab-button,
   .navigation-level2 a {
-    font-size: 13px;
     padding: 12px 7px;
   }
 }
@@ -2504,6 +2512,9 @@ button {
 }
 .nav3,
 .c-NavBar--utility {
+  position: absolute;
+  top: 0;
+  width: 100%;
   padding: 5px 26px 29px;
   font-size: 13px;
   text-align: center;
@@ -2593,9 +2604,6 @@ button {
 .c-NavBar--secondary li {
   display: inline-block;
 }
-.c-NavBar--tabs {
-  font-size: 24px;
-}
 .c-NavBar--tabs .c-NavBar__Link:hover,
 .c-NavBar--tabs .c-NavBar__Link.current {
   background-color: #714509;
@@ -2666,8 +2674,8 @@ button {
 .tab-buttons {
   margin-bottom: 0;
   float: right !important;
-  text-align: center;
   margin-top: -44px;
+  text-align: center;
 }
 @media screen and (min-width: 1200px) {
   .tab-buttons {
@@ -2881,6 +2889,7 @@ a.button {
   border-radius: 3px;
   box-shadow: 0px 2px 0px #cdcdcd;
   background-color: #0c5fa8;
+  opacity: 1;
   color: #fff;
   cursor: pointer;
 }
