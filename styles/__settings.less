@@ -5,7 +5,17 @@
 
 
 /*++++++++++++++++++++++++++++++++*\
-    ASCE COMPANY COLORS
+    # TYPOGRAPHY
+\*++++++++++++++++++++++++++++++++*/
+@chewie_1rem: 16px;
+// @chewie_font_size: @chewie_1rem; // not needed... yet
+@chewie_line_height: 1.25;
+@chewie_vru_px: (@chewie_line_height * @chewie_1rem); // fallback for @chewie_vru, which is in rems
+@chewie_vru:    (@chewie_line_height *  1rem);
+
+
+/*++++++++++++++++++++++++++++++++*\
+    # ASCE COMPANY COLORS
 \*++++++++++++++++++++++++++++++++*/
 @color_asce_primary: #0c5fa8;
 @color_asce_body_bg: #fff;
@@ -23,7 +33,7 @@
 
 
 /*++++++++++++++++++++++++++++++++*\
-    SPONSOR COLORS
+    # SPONSOR COLORS
 \*++++++++++++++++++++++++++++++++*/
 @color_platinum:  #cde1ec;
 @color_gold:      #f8cd79;
