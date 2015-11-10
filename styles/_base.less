@@ -58,11 +58,45 @@ ul {
     list-style-type: disc;
   }
 }
-li {
-  line-height: inherit; // TODO put this in base.generic with other inline stuff
-}
 dt {
   font-weight: inherit; // override bootstrap
+}
+@color_table_border: #e8eaeb;
+@color_table_bground: #f4f4f5;
+table {
+  .content & {
+    width: 100%;
+  }
+}
+thead,
+tfoot {
+  .content & {
+    background-color: @color_table_bground;
+    font-weight: 600;
+    font-size: 13px;
+  }
+}
+tbody > tr:nth-child(even) {
+  // we should really switch these:
+  // no-stripe should be default and stripe should be specified
+  .content & {
+    background-color: @color_table_bground;
+  }
+  .content /*table*/.no-stripe & {
+    background-color: transparent;
+  }
+}
+th,
+td {
+  // we should really switch these:
+  // no-border should be default and border should be specified
+  .content & {
+    padding: 10px;
+    border: 1px solid @color_table_border;
+  }
+  .content /*table*/.no-border & {
+    border-color: transparent transparent @color_table_border;
+  }
 }
 
 
