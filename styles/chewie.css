@@ -980,10 +980,13 @@ img {
     __settings.less
 \*################################*/
 /*++++++++++++++++++++++++++++++++*\
-    ASCE COMPANY COLORS
+    # TYPOGRAPHY
 \*++++++++++++++++++++++++++++++++*/
 /*++++++++++++++++++++++++++++++++*\
-    SPONSOR COLORS
+    # ASCE COMPANY COLORS
+\*++++++++++++++++++++++++++++++++*/
+/*++++++++++++++++++++++++++++++++*\
+    # SPONSOR COLORS
 \*++++++++++++++++++++++++++++++++*/
 /*################################*\
     __settings.conf-colors.less
@@ -1896,6 +1899,8 @@ button {
 }
 .introduction h1,
 .c-Hero h1 {
+  padding-left: 2rem;
+  padding-right: 2rem;
   font-size: 36px;
   font-size: 2.25rem;
   line-height: 0.97222222;
@@ -1928,17 +1933,15 @@ button {
 .c-Hero a:active {
   color: inherit;
 }
-.introduction a:hover,
-.c-Hero a:hover {
-  opacity: .5;
-}
-.introduction > div,
-.c-Hero > div {
-  padding: 10px 30px;
-}
 .c-Hero__Img {
   display: block;
   margin: auto;
+}
+.intro,
+.c-Hero__Hn,
+.c-Hero__Lede {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 .c-Hero__Hn {
   font-size: 36px;
@@ -1978,73 +1981,35 @@ button {
     line-height: 1.42857143;
   }
 }
-.img-fade {
-  height: 50px;
-  width: 100%;
+.img-fade,
+.introduction h1::before,
+.c-Hero__Hn::before {
+  display: block;
   position: absolute;
-  margin-top: -50px;
-  background: -moz-linear-gradient(top, rgba(106, 149, 86, 0) 0%, #6a9556 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(106, 149, 86, 0)), color-stop(100%, #6a9556));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, rgba(106, 149, 86, 0) 0%, #6a9556 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, rgba(106, 149, 86, 0) 0%, #6a9556 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, rgba(106, 149, 86, 0) 0%, #6a9556 100%);
-  /* IE10+ */
-  background: linear-gradient(to bottom, rgba(106, 149, 86, 0) 0%, #6a9556 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#6a9556', GradientType=0);
-  /* IE6-9 */
+  left: 0;
+  width: 100%;
+  height: 50px;
+  margin-top: -70px;
+  content: '';
+  box-shadow: 0 -25px 25px 0 #6a9556 inset;
 }
-#pipelinesconference .img-fade {
-  background: -moz-linear-gradient(top, rgba(0, 108, 103, 0) 0%, #006c67 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 108, 103, 0)), color-stop(100%, #006c67));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, rgba(0, 108, 103, 0) 0%, #006c67 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, rgba(0, 108, 103, 0) 0%, #006c67 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, rgba(0, 108, 103, 0) 0%, #006c67 100%);
-  /* IE10+ */
-  background: linear-gradient(to bottom, rgba(0, 108, 103, 0) 0%, #006c67 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#006c67', GradientType=0);
-  /* IE6-9 */
+#pipelinesconference .img-fade,
+#pipelinesconference .introduction h1::before,
+#pipelinesconference .c-Hero__Hn::before {
+  box-shadow: 0 -25px 25px 0 #006c67 inset;
 }
-#icsiconference .img-fade {
-  background: -moz-linear-gradient(top, rgba(11, 47, 105, 0) 0%, #0b2f69 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(11, 47, 105, 0)), color-stop(100%, #0b2f69));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, rgba(11, 47, 105, 0) 0%, #0b2f69 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, rgba(11, 47, 105, 0) 0%, #0b2f69 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, rgba(11, 47, 105, 0) 0%, #0b2f69 100%);
-  /* IE10+ */
-  background: linear-gradient(to bottom, rgba(11, 47, 105, 0) 0%, #0b2f69 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#0b2f69', GradientType=0);
-  /* IE6-9 */
+#icsiconference .img-fade,
+#icsiconference .introduction h1::before,
+#icsiconference .c-Hero__Hn::before {
+  box-shadow: 0 -25px 25px 0 #0b2f69 inset;
 }
-#lidconference .img-fade {
-  background: -moz-linear-gradient(top, rgba(53, 78, 113, 0) 0%, #354e71 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(53, 78, 113, 0)), color-stop(100%, #354e71));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, rgba(53, 78, 113, 0) 0%, #354e71 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, rgba(53, 78, 113, 0) 0%, #354e71 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, rgba(53, 78, 113, 0) 0%, #354e71 100%);
-  /* IE10+ */
-  background: linear-gradient(to bottom, rgba(53, 78, 113, 0) 0%, #354e71 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#354e71', GradientType=0);
-  /* IE6-9 */
+#lidconference .img-fade,
+#lidconference .introduction h1::before,
+#lidconference .c-Hero__Hn::before {
+  box-shadow: 0 -25px 25px 0 #354e71 inset;
+}
+.img-fade {
+  display: none;
 }
 /*################################*\
     _comp.Person.less
