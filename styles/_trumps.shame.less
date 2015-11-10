@@ -104,12 +104,21 @@
 // COMMENTS PLEASE
 .toggleable-nav {
   display: none;
+  // Headings of sections inside the toggleable-nav
+  // corresponding to the top-level pages:
+  // PROGRAM, LOCATION, etc.
+  .tog-nav-hn {
+    padding-top: 0;
+    margin-bottom: 0;
+    font: inherit;
+    line-height: inherit;
+  }
   a {
     display: block;
     color: #fff;
     font-weight: 600;
-    margin-bottom: 8px;
     font-size: 13px;
+    line-height: inherit; // because d:bk
     &:hover, &:focus, &:visited, &:active {
       color: #fff;
     }

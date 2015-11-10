@@ -2,6 +2,7 @@
 /*################################*\
     _comp.DateBlock.less
 \*################################*/
+@import (reference) url('../node_modules/xmeter/src/__tool.fallback.flexbox.less');
 
 
 // An object containing one or more groups of dates and descriptions.
@@ -16,8 +17,8 @@
 // : 2015-08-28
 .date-block,
 .o-DateBlock {
-  display: flex;
-  flex-wrap: wrap;
+  #XMETER .flexbox();
+  #XMETER .flex-wrap(wrap);
   font-weight: 600;          // opinionated
   font-size: 12px;           // opinionated
   text-transform: uppercase; // opinionated

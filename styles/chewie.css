@@ -2056,7 +2056,14 @@ button {
 \*################################*/
 .date-block,
 .o-DateBlock {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   font-weight: 600;
   font-size: 12px;
@@ -2832,6 +2839,8 @@ li.active .tab-button::after {
 }
 .ic.google-large {
   background-position: -540px -120px;
+  width: 50px;
+  height: 60px;
 }
 .c-Icon--large {
   width: 50px;
@@ -2963,6 +2972,9 @@ a.button--disabled:hover {
 .footer {
   background-image: url(../img/pattern-bg.png);
   margin-top: 50px;
+}
+.footer .title {
+  margin-bottom: 20px;
 }
 .footer .details {
   padding-top: 20px;
@@ -3603,12 +3615,18 @@ a.button--disabled:hover {
 .toggleable-nav {
   display: none;
 }
+.toggleable-nav .tog-nav-hn {
+  padding-top: 0;
+  margin-bottom: 0;
+  font: inherit;
+  line-height: inherit;
+}
 .toggleable-nav a {
   display: block;
   color: #fff;
   font-weight: 600;
-  margin-bottom: 8px;
   font-size: 13px;
+  line-height: inherit;
 }
 .toggleable-nav a:hover,
 .toggleable-nav a:focus,
@@ -3899,6 +3917,9 @@ a.button--disabled:hover {
 \*################################*/
 ul.pb-dz-control-column-ul {
   margin-bottom: 0;
+}
+li {
+  line-height: inherit;
 }
 /*main .content-main [data-ux-pagebuilder="Column"]>ul>li,
 main .content-right [data-ux-pagebuilder="Column"]>ul>li,
