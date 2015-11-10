@@ -1044,11 +1044,32 @@ ul {
 li ul {
   list-style-type: disc;
 }
-li {
-  line-height: inherit;
-}
 dt {
   font-weight: inherit;
+}
+.content table {
+  width: 100%;
+}
+.content thead,
+.content tfoot {
+  background-color: #f4f4f5;
+  font-weight: 600;
+  font-size: 13px;
+}
+.content tbody > tr:nth-child(even) {
+  background-color: #f4f4f5;
+}
+.content.no-stripe tbody > tr:nth-child(even) {
+  background-color: transparent;
+}
+.content th,
+.content td {
+  padding: 10px;
+  border: 1px solid #e8eaeb;
+}
+.content.no-border th,
+.content.no-border td {
+  border-color: transparent transparent #e8eaeb;
 }
 /*++++++++++++++++++++++++++++++++*\
     ## TEXT
@@ -3668,37 +3689,6 @@ a.button--disabled:hover {
   .toggleable-nav.in .hidden-xs {
     display: block !important;
   }
-}
-.content p {
-  margin: 0 0 20px;
-}
-.content table {
-  width: 100%;
-  margin-bottom: 20px;
-}
-.content table td,
-.content table th {
-  padding: 10px;
-  border: 1px solid #e8eaeb;
-}
-.content table thead > tr > td,
-.content table thead > tr > th {
-  background-color: #f4f4f5;
-  font-weight: 600;
-  font-size: 13px;
-}
-.content table tbody > tr:nth-child(even) > td,
-.content table tbody > tr:nth-child(even) > th {
-  background-color: #f4f4f5;
-}
-.content table.no-stripe tbody > tr:nth-child(even) > td,
-.content table.no-stripe tbody > tr:nth-child(even) > th {
-  background-color: #fff;
-}
-.content table.no-border td,
-.content table.no-border th {
-  border: 1px solid transparent;
-  border-bottom: 1px solid #e8eaeb;
 }
 .panel-default > .panel-heading {
   position: relative;
