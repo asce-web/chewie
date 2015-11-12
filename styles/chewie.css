@@ -1055,6 +1055,11 @@ a[href] {
 }
 a:hover {
   color: #19a1cf;
+  text-decoration: none;
+}
+.copyright a:hover,
+.content a:hover {
+  text-decoration: underline;
 }
 a[href^='mailto:']::before {
   content: '';
@@ -2417,7 +2422,6 @@ button {
   display: inline-block;
   padding: 17px 24px;
   line-height: 20px;
-  color: inherit;
   -webkit-transition-property: padding, background-color;
   -moz-transition-property: padding, background-color;
   -ms-transition-property: padding, background-color;
@@ -2457,17 +2461,39 @@ button {
     padding: 12px 7px;
   }
 }
+.c-NavBar__Link,
+.navigation a,
+.nav3 a,
+.tab-button,
+.navigation-level2 a,
+.c-NavBar__Link[href],
+.navigation a[href],
+.nav3 a[href],
+.tab-button[href],
+.navigation-level2 a[href],
 .c-NavBar__Link:hover,
-.c-NavBar__Link.active,
 .navigation a:hover,
-.navigation a.active,
 .nav3 a:hover,
 .tab-button:hover,
 .navigation-level2 a:hover,
+.c-NavBar__Link.active,
+.navigation a.active,
+.nav3 a.active,
+.tab-button.active,
+.navigation-level2 a.active {
+  color: inherit;
+}
+.c-NavBar__Link:hover,
+.navigation a:hover,
+.nav3 a:hover,
+.tab-button:hover,
+.navigation-level2 a:hover,
+.c-NavBar__Link.active,
+.navigation a.active,
+.nav3 a.active,
+.tab-button.active,
 .navigation-level2 a.active {
   background-color: rgba(255, 255, 255, 0.25);
-  text-decoration: none;
-  color: inherit;
 }
 .nav1 a.active,
 .c-NavBar--main a.active,
@@ -2971,10 +2997,14 @@ a.button--disabled:hover {
 #lidconference .c-SummaryBanner {
   background-color: #354e71;
 }
-.header a,
-.footer a,
-.summary-banner a,
-.c-SummaryBanner a {
+.header a[href],
+.footer a[href],
+.summary-banner a[href],
+.c-SummaryBanner a[href],
+.header a:hover,
+.footer a:hover,
+.summary-banner a:hover,
+.c-SummaryBanner a:hover {
   color: inherit;
 }
 /*################################*\
@@ -3036,10 +3066,16 @@ a.button--disabled:hover {
     font-size: 14px;
   }
 }
+.link-block a,
 .footer .details a,
 .c-LinkBlock__Link {
   display: block;
   line-height: inherit;
+}
+.link-block a:hover,
+.footer .details a:hover,
+.c-LinkBlock__Link:hover {
+  text-decoration: underline;
 }
 .link-block.connect a {
   display: inline-block;
