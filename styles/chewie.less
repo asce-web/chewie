@@ -133,7 +133,10 @@
     background-color: @color_lid_primary;
   }
   a {
+    &[href], // a[href] matches both a:link and a:visited
+    &:hover {
     color: inherit;
+    }
   }
 }
 @import url('_comp.SiteFooter.less');
