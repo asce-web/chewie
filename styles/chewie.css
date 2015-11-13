@@ -1,6 +1,6 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     chewie
-    Version: 1.4.2
+    Version: 1.4.3
     Licence:
     Repo   : https://github.com/asce-web/chewie.git
     Author : ASCE web team (webteam@asce.org)
@@ -1053,13 +1053,13 @@ dt {
 a[href] {
   color: #0c5fa8;
 }
-a:hover {
+a[href]:hover {
   color: #19a1cf;
-  text-decoration: none;
 }
-.copyright a:hover,
-.content a:hover {
-  text-decoration: underline;
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: inherit;
 }
 a[href^='mailto:']::before {
   content: '';
@@ -2927,13 +2927,10 @@ a.button {
 }
 button:hover,
 a.button:hover,
-button a:visited,
-a.button a:visited,
-button a:focus,
-a.button a:focus {
+button:focus,
+a.button:focus {
   text-decoration: none;
   background-color: #0e6cc0;
-  color: #fff;
 }
 .button--disabled,
 button[disabled],
@@ -2948,7 +2945,11 @@ a.button--disabled,
 .button--disabled:hover,
 button[disabled]:hover,
 input[type="button"][disabled]:hover,
-a.button--disabled:hover {
+a.button--disabled:hover,
+.button--disabled:focus,
+button[disabled]:focus,
+input[type="button"][disabled]:focus,
+a.button--disabled:focus {
   background-color: #dadada;
 }
 /*################################*\
@@ -3578,6 +3579,9 @@ a.button--disabled:hover {
 }
 .content {
   margin-bottom: 20px;
+}
+.footer a:hover {
+  text-decoration: underline;
 }
 .breadcrumb-link {
   font-weight: 700;
