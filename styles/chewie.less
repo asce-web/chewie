@@ -50,6 +50,7 @@
  * Person.........................person name and title
  * DateBlock......................a block containing a date and a description of an event
  * Date...........................inline span of text indicating any date
+ * LinkBanner.....................a link inside footer or other banner
  * LinkEmail......................a link to an email address
  * LinkPdf........................a link to a PDF document
  *
@@ -103,6 +104,7 @@
 @import url('_comp.Person.less');
 @import url('_comp.DateBlock.less');
 @import url('_comp.typo.Date.less');
+@import url('_comp.typo.LinkBanner.less');
 @import url('_comp.typo.LinkEmail.less');
 @import url('_comp.typo.LinkPdf.less');
 
@@ -135,12 +137,6 @@
   }
   #lidconference & {
     background-color: @color_lid_primary;
-  }
-  a {
-    &[href], // a[href] matches both a:link and a:visited
-    &:hover {
-    color: inherit;
-    }
   }
 }
 @import url('_comp.SiteFooter.less');
