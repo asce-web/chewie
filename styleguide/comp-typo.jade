@@ -119,15 +119,19 @@ html
               br
               a.link-arrow(href="") this is a .link-arrow[href]
           section.doc-ss
-            h4 Link to PDF (a[href$='.pdf']) (href ends with `.pdf`)
-            p.devnote we may use a class instead
+            h4 Link to PDF (.c-LinkPdf)
+            p Use this instead of #[code a[href$='.pdf']] (href ends with `.pdf`).
             figure
-              a(href=".pdf") View Program
+              a.c-LinkPdf This is a .c-LinkPdf
+              br
+              a.c-LinkPdf(href="") This is a .c-LinkPdf[href]
           section.doc-ss
-            h4 Link to Email (a[href^='mailto:']) (href starts with `mailto:`)
-            p.devnote we may use a class instead
+            h4 Link to Email (.c-LinkEmail)
+            p Use this instead of #[code a[href^='mailto:']] (href starts with `mailto:`).
             figure
-              a(href="mailto:example.com") Contact Us
+              a.c-LinkEmail This is a .c-LinkEmail
+              br
+              a.c-LinkEmail(href="mailto:example.com") This is a .c-LinkEmail[href]
       section.doc-ss
         h2 Callouts
         section.doc-ss

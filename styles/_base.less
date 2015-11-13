@@ -104,6 +104,11 @@ td {
     ## TEXT
 \*++++++++++++++++++++++++++++++++*/
 a {
+  &:hover,
+  &:focus {
+    text-decoration: none; // override bootstrap and ektron
+    color: inherit; // override bootstrap
+  }
   &[href] {
     // matches :link and :visited
     // also overrides bootstrap specificity
@@ -111,36 +116,6 @@ a {
     &:hover {
       color: @color_asce_link_hover;
     }
-  }
-  &:hover,
-  &:focus {
-    text-decoration: none; // override bootstrap and ektron
-    color: inherit; // override bootstrap
-  }
-  &[href^='mailto:']::before {
-    content: '';
-    display: inline-block;
-    .sprite('../img/sprite.png'; 30px; 590px; 330px; 0);
-    .sprite(5; 6);
-    margin-top: -7px;
-    margin-right: 6px;
-    margin-bottom: -7px;
-    position: relative;
-    top: 4px;
-  }
-  &[href$='.pdf']::after {
-    display: inline; // fixes non-zero height
-    width: auto;
-    height: auto;
-    content: 'PDF';
-    padding: 1px 4px;
-    margin-left: 8px;
-    position: relative;
-    top: -1px;
-    font-size: 12px;
-    font-weight: 700;
-    background: @color_asce_primary;
-    color: @color_asce_body_bg;
   }
 }
 
