@@ -1,0 +1,42 @@
+
+/*################################*\
+    _comp.typo.LinkArrow.less
+\*################################*/
+
+
+// A link with an arrow icon following.
+//
+// ^author
+// : Dae Clarke
+// ^updated
+// : 2015-11-13
+.link-arrow,
+.c-LinkArrow {
+  // font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: block;       // FIXME TODO remove these once you put them in a <p>
+  line-height: inherit; // FIXME TODO remove these once you put them in a <p>
+  margin-bottom: 20px;  // FIXME TODO remove these once you put them in a <p>
+  &::after {
+    content: '';
+    display: inline-block;
+    .sprite('../img/sprite.png', 30px, 590px, 330px, 0);
+    .sprite(10, 6);
+    margin-top: -7px;
+    margin-bottom: -7px;
+    position: relative;
+    top: 1px;
+  }
+  .footer & {
+    // margin-bottom: 20px;
+    // font-size: 18px;
+    @media (max-width: 1199px) {
+      // margin-bottom: 16px;
+      // font-size: 16px;
+    }
+    &::after {
+      .sprite(7; 6); // replaces blue with white
+    }
+  }
+}
