@@ -1062,7 +1062,7 @@ dt {
 .content tbody > tr:nth-child(even) {
   background-color: #f4f4f5;
 }
-.content.no-stripe tbody > tr:nth-child(even) {
+.content .no-stripe tbody > tr:nth-child(even) {
   background-color: transparent;
 }
 .content th,
@@ -1070,8 +1070,8 @@ dt {
   padding: 10px;
   border: 1px solid #e8eaeb;
 }
-.content.no-border th,
-.content.no-border td {
+.content .no-border th,
+.content .no-border td {
   border-color: transparent transparent #e8eaeb;
 }
 /*++++++++++++++++++++++++++++++++*\
