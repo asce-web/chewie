@@ -69,16 +69,16 @@ dt {
 a {
   &[href] {
     // matches :link and :visited
+    // also overrides bootstrap specificity
     color: @color_asce_link;
-  }
-  &:hover {
-    color: @color_asce_link_hover;
-    text-decoration: none; // override bootstrap and ektron
-    .copyright &,
-    .content & {
-      text-decoration: underline;
+    &:hover {
+      color: @color_asce_link_hover;
     }
-
+  }
+  &:hover,
+  &:focus {
+    text-decoration: none; // override bootstrap and ektron
+    color: inherit; // override bootstrap
   }
   &[href^='mailto:']::before {
     content: '';
