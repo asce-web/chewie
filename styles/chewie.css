@@ -1,6 +1,6 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     chewie
-    Version: 1.4.2
+    Version: 1.4.3
     Licence:
     Repo   : https://github.com/asce-web/chewie.git
     Author : ASCE web team (webteam@asce.org)
@@ -1080,8 +1080,13 @@ dt {
 a[href] {
   color: #0c5fa8;
 }
-a:hover {
+a[href]:hover {
   color: #19a1cf;
+}
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: inherit;
 }
 a[href^='mailto:']::before {
   content: '';
@@ -2406,7 +2411,6 @@ button {
   display: inline-block;
   padding: 17px 24px;
   line-height: 20px;
-  color: inherit;
   -webkit-transition-property: padding, background-color;
   -moz-transition-property: padding, background-color;
   -ms-transition-property: padding, background-color;
@@ -2446,17 +2450,39 @@ button {
     padding: 12px 7px;
   }
 }
+.c-NavBar__Link,
+.navigation a,
+.nav3 a,
+.tab-button,
+.navigation-level2 a,
+.c-NavBar__Link[href],
+.navigation a[href],
+.nav3 a[href],
+.tab-button[href],
+.navigation-level2 a[href],
 .c-NavBar__Link:hover,
-.c-NavBar__Link.active,
 .navigation a:hover,
-.navigation a.active,
 .nav3 a:hover,
 .tab-button:hover,
 .navigation-level2 a:hover,
+.c-NavBar__Link.active,
+.navigation a.active,
+.nav3 a.active,
+.tab-button.active,
+.navigation-level2 a.active {
+  color: inherit;
+}
+.c-NavBar__Link:hover,
+.navigation a:hover,
+.nav3 a:hover,
+.tab-button:hover,
+.navigation-level2 a:hover,
+.c-NavBar__Link.active,
+.navigation a.active,
+.nav3 a.active,
+.tab-button.active,
 .navigation-level2 a.active {
   background-color: rgba(255, 255, 255, 0.25);
-  text-decoration: none;
-  color: inherit;
 }
 .nav1 a.active,
 .c-NavBar--main a.active,
@@ -2890,13 +2916,10 @@ a.button {
 }
 button:hover,
 a.button:hover,
-button a:visited,
-a.button a:visited,
-button a:focus,
-a.button a:focus {
+button:focus,
+a.button:focus {
   text-decoration: none;
   background-color: #0e6cc0;
-  color: #fff;
 }
 .button--disabled,
 button[disabled],
@@ -2911,7 +2934,11 @@ a.button--disabled,
 .button--disabled:hover,
 button[disabled]:hover,
 input[type="button"][disabled]:hover,
-a.button--disabled:hover {
+a.button--disabled:hover,
+.button--disabled:focus,
+button[disabled]:focus,
+input[type="button"][disabled]:focus,
+a.button--disabled:focus {
   background-color: #dadada;
 }
 /*################################*\
@@ -2960,10 +2987,14 @@ a.button--disabled:hover {
 #lidconference .c-SummaryBanner {
   background-color: #354e71;
 }
-.header a,
-.footer a,
-.summary-banner a,
-.c-SummaryBanner a {
+.header a[href],
+.footer a[href],
+.summary-banner a[href],
+.c-SummaryBanner a[href],
+.header a:hover,
+.footer a:hover,
+.summary-banner a:hover,
+.c-SummaryBanner a:hover {
   color: inherit;
 }
 /*################################*\
@@ -3025,10 +3056,16 @@ a.button--disabled:hover {
     font-size: 14px;
   }
 }
+.link-block a,
 .footer .details a,
 .c-LinkBlock__Link {
   display: block;
   line-height: inherit;
+}
+.link-block a:hover,
+.footer .details a:hover,
+.c-LinkBlock__Link:hover {
+  text-decoration: underline;
 }
 .link-block.connect a {
   display: inline-block;
@@ -3531,6 +3568,9 @@ a.button--disabled:hover {
 }
 .content {
   margin-bottom: 20px;
+}
+.footer a:hover {
+  text-decoration: underline;
 }
 .breadcrumb-link {
   font-weight: 700;

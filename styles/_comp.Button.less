@@ -11,7 +11,7 @@
 // ^author
 // : Dae Clarke
 // ^updated
-// : 2015-08-27
+// : 2015-11-13
 button,
 a.button {
   display: inline-block;
@@ -27,11 +27,10 @@ a.button {
   opacity: 1; // for links without `href`
   color: @color_asce_btn_txt;
   cursor: pointer;
-
-  &:hover, a:visited, a:focus {
+  &:hover,
+  &:focus {
     text-decoration: none;
     background-color: lighten(@color_asce_btn_bg, 5%);
-    color: @color_asce_btn_txt; // why does this even exist
   }
 }
 
@@ -40,7 +39,9 @@ button[disabled],
 input[type="button"][disabled],
 a.button--disabled {
   cursor: not-allowed;
-  &, &:hover {
+  &,
+  &:hover,
+  &:focus {
     background-color: lighten(@color_asce_btn_sw, 5%);
   }
 }
