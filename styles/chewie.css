@@ -1,6 +1,6 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     chewie
-    Version: 1.4.2
+    Version: 1.4.3
     Licence:
     Repo   : https://github.com/asce-web/chewie.git
     Author : ASCE web team (webteam@asce.org)
@@ -1044,9 +1044,6 @@ ul {
 li ul {
   list-style-type: disc;
 }
-li {
-  line-height: inherit;
-}
 dt {
   font-weight: inherit;
 }
@@ -1056,8 +1053,13 @@ dt {
 a[href] {
   color: #0c5fa8;
 }
-a:hover {
+a[href]:hover {
   color: #19a1cf;
+}
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: inherit;
 }
 a[href^='mailto:']::before {
   content: '';
@@ -2070,7 +2072,14 @@ button {
 \*################################*/
 .date-block,
 .o-DateBlock {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   font-weight: 600;
   font-size: 12px;
@@ -2413,7 +2422,6 @@ button {
   display: inline-block;
   padding: 17px 24px;
   line-height: 20px;
-  color: inherit;
   -webkit-transition-property: padding, background-color;
   -moz-transition-property: padding, background-color;
   -ms-transition-property: padding, background-color;
@@ -2453,17 +2461,39 @@ button {
     padding: 12px 7px;
   }
 }
+.c-NavBar__Link,
+.navigation a,
+.nav3 a,
+.tab-button,
+.navigation-level2 a,
+.c-NavBar__Link[href],
+.navigation a[href],
+.nav3 a[href],
+.tab-button[href],
+.navigation-level2 a[href],
 .c-NavBar__Link:hover,
-.c-NavBar__Link.active,
 .navigation a:hover,
-.navigation a.active,
 .nav3 a:hover,
 .tab-button:hover,
 .navigation-level2 a:hover,
+.c-NavBar__Link.active,
+.navigation a.active,
+.nav3 a.active,
+.tab-button.active,
+.navigation-level2 a.active {
+  color: inherit;
+}
+.c-NavBar__Link:hover,
+.navigation a:hover,
+.nav3 a:hover,
+.tab-button:hover,
+.navigation-level2 a:hover,
+.c-NavBar__Link.active,
+.navigation a.active,
+.nav3 a.active,
+.tab-button.active,
 .navigation-level2 a.active {
   background-color: rgba(255, 255, 255, 0.25);
-  text-decoration: none;
-  color: inherit;
 }
 .nav1 a.active,
 .c-NavBar--main a.active,
@@ -2846,6 +2876,8 @@ li.active .tab-button::after {
 }
 .ic.google-large {
   background-position: -540px -120px;
+  width: 50px;
+  height: 60px;
 }
 .c-Icon--large {
   width: 50px;
@@ -2895,13 +2927,10 @@ a.button {
 }
 button:hover,
 a.button:hover,
-button a:visited,
-a.button a:visited,
-button a:focus,
-a.button a:focus {
+button:focus,
+a.button:focus {
   text-decoration: none;
   background-color: #0e6cc0;
-  color: #fff;
 }
 .button--disabled,
 button[disabled],
@@ -2916,7 +2945,11 @@ a.button--disabled,
 .button--disabled:hover,
 button[disabled]:hover,
 input[type="button"][disabled]:hover,
-a.button--disabled:hover {
+a.button--disabled:hover,
+.button--disabled:focus,
+button[disabled]:focus,
+input[type="button"][disabled]:focus,
+a.button--disabled:focus {
   background-color: #dadada;
 }
 /*################################*\
@@ -2965,10 +2998,14 @@ a.button--disabled:hover {
 #lidconference .c-SummaryBanner {
   background-color: #354e71;
 }
-.header a,
-.footer a,
-.summary-banner a,
-.c-SummaryBanner a {
+.header a[href],
+.footer a[href],
+.summary-banner a[href],
+.c-SummaryBanner a[href],
+.header a:hover,
+.footer a:hover,
+.summary-banner a:hover,
+.c-SummaryBanner a:hover {
   color: inherit;
 }
 /*################################*\
@@ -2977,6 +3014,9 @@ a.button--disabled:hover {
 .footer {
   background-image: url(../img/pattern-bg.png);
   margin-top: 50px;
+}
+.footer .title {
+  margin-bottom: 20px;
 }
 .footer .details {
   padding-top: 20px;
@@ -3027,10 +3067,16 @@ a.button--disabled:hover {
     font-size: 14px;
   }
 }
+.link-block a,
 .footer .details a,
 .c-LinkBlock__Link {
   display: block;
   line-height: inherit;
+}
+.link-block a:hover,
+.footer .details a:hover,
+.c-LinkBlock__Link:hover {
+  text-decoration: underline;
 }
 .link-block.connect a {
   display: inline-block;
@@ -3534,6 +3580,9 @@ a.button--disabled:hover {
 .content {
   margin-bottom: 20px;
 }
+.footer a:hover {
+  text-decoration: underline;
+}
 .breadcrumb-link {
   font-weight: 700;
   margin-top: 25px;
@@ -3617,12 +3666,18 @@ a.button--disabled:hover {
 .toggleable-nav {
   display: none;
 }
+.toggleable-nav .tog-nav-hn {
+  padding-top: 0;
+  margin-bottom: 0;
+  font: inherit;
+  line-height: inherit;
+}
 .toggleable-nav a {
   display: block;
   color: #fff;
   font-weight: 600;
-  margin-bottom: 8px;
   font-size: 13px;
+  line-height: inherit;
 }
 .toggleable-nav a:hover,
 .toggleable-nav a:focus,
@@ -3944,6 +3999,9 @@ a.button--disabled:hover {
 \*################################*/
 ul.pb-dz-control-column-ul {
   margin-bottom: 0;
+}
+li {
+  line-height: inherit;
 }
 /*main .content-main [data-ux-pagebuilder="Column"]>ul>li,
 main .content-right [data-ux-pagebuilder="Column"]>ul>li,

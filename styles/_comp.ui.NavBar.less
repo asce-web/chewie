@@ -40,6 +40,8 @@
 }
 
 // A link in a navigation bar
+// NOTE that the `.active` class is *NOT* a synonym for the `:active` pseudo-class.
+// It is a Javascript-added class used for toggling certain elements.
 //
 // ^author
 // : Chris Harvey
@@ -53,7 +55,6 @@
   display: inline-block;
   padding: 17px 24px;
   line-height: 20px; // FIXME due to chevron icons in main nav causing bloated height
-  color: inherit;
   #XMETER .transition(padding, background-color; 250ms);
   @media (max-width: 1199px) {
     padding: 12px 12px;
@@ -61,19 +62,17 @@
   @media (max-width: 989px) {
     padding: 12px 7px;
   }
-}
-// default hover behavior for ALL nav bars
-.c-NavBar__Link:hover,
-.c-NavBar__Link.active,
-.navigation a:hover,
-.navigation a.active,
-.nav3 a:hover,
-.tab-button:hover,
-.navigation-level2 a:hover,
-.navigation-level2 a.active {
+  &,
+  &[href], // a[href] matches both a:link and a:visited
+  &:hover,
+  &.active {
+    color: inherit;
+  }
+  &:hover,
+  &.active {
+    // default hover behavior for ALL nav bars
   background-color: fadeout(#fff, 75%);
-  text-decoration: none; // override bootstrap
-  color: inherit; // override a:hover
+  }
 }
 
 

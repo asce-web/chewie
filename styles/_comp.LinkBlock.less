@@ -22,11 +22,14 @@
   }
 }
 
-.footer .details a,
+.link-block a,
+.footer .details a, // for links not in a link-block
 .c-LinkBlock__Link {
-  // FIXME remove this and put the links in a <ul> with <li>s
-  display: block;
-  line-height: inherit;
+  display: block;       // FIXME remove this and put the links in a <ul> with <li>s
+  line-height: inherit; // FIXME remove this and put the links in a <ul> with <li>s
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .c-LinkBlock--connect {
