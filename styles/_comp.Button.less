@@ -29,8 +29,9 @@ a.button {
   cursor: pointer;
   &:hover,
   &:focus {
-    text-decoration: none;
+    // text-decoration: none; // already in base
     background-color: lighten(@color_asce_btn_bg, 5%);
+    color: @color_asce_btn_txt; // override a[href]:hover
   }
 }
 
