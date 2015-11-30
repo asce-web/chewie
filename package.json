@@ -27,7 +27,9 @@
   "devDependencies": {
     "clean-css": "^3.4.5",
     "jade": "^1.11.0",
-    "less": "^2.5.3",
-    "xmeter": "^3.3.0"
+    "less": "^2.5.3"
+  },
+  "dependencies": {
+    "xmeter": "^3.4.0"
   }
 }
