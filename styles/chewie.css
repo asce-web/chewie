@@ -1,13 +1,13 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     chewie
-    Version: 1.4.3
+    Version: 1.4.4
     Licence:
     Repo   : https://github.com/asce-web/chewie.git
     Author : ASCE web team (webteam@asce.org)
 \*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     xmeter
-    Version: 3.3.0
+    Version: 3.4.0
     Licence: MIT
     Repo   : https://github.com/chharvey/xmeter.git
     Home   : https://chharvey.github.io/xmeter/
@@ -761,11 +761,11 @@ th {
 /*################################*\
     _base.text.links.less
 \*################################*/
+a {
+  color: #00e;
+}
 a:not([href]) {
   opacity: 0.5;
-}
-a[href] {
-  color: #00e;
 }
 
 /*################################*\
@@ -2929,8 +2929,8 @@ button:hover,
 a.button:hover,
 button:focus,
 a.button:focus {
-  text-decoration: none;
   background-color: #0e6cc0;
+  color: #fff;
 }
 .button--disabled,
 button[disabled],
@@ -3167,83 +3167,6 @@ a.button--disabled:focus {
     padding: 5px;
   }
 }
-.top-sponsor-block img,
-.c-SponsorBlock img {
-  max-width: 202px;
-  max-height: 90px;
-  margin: 20px;
-}
-@media (max-width: 989px) {
-  .top-sponsor-block img,
-  .c-SponsorBlock img {
-    max-width: 140px;
-    max-height: 62px;
-  }
-}
-@media (max-width: 767px) {
-  .top-sponsor-block img,
-  .c-SponsorBlock img {
-    max-width: 68px;
-    max-height: 36px;
-  }
-}
-@media (max-width: 767px) {
-  .top-sponsor-block img,
-  .c-SponsorBlock img {
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-.platinum .top-sponsor-block img,
-.platinum .c-SponsorBlock img,
-.c-SponsorBlock--platinum .top-sponsor-block img,
-.c-SponsorBlock--platinum .c-SponsorBlock img {
-  max-width: 360px;
-  max-height: 160px;
-}
-@media (max-width: 989px) {
-  .platinum .top-sponsor-block img,
-  .platinum .c-SponsorBlock img,
-  .c-SponsorBlock--platinum .top-sponsor-block img,
-  .c-SponsorBlock--platinum .c-SponsorBlock img {
-    max-width: 250px;
-    max-height: 110px;
-  }
-}
-@media (max-width: 767px) {
-  .platinum .top-sponsor-block img,
-  .platinum .c-SponsorBlock img,
-  .c-SponsorBlock--platinum .top-sponsor-block img,
-  .c-SponsorBlock--platinum .c-SponsorBlock img {
-    max-width: 120px;
-    max-height: 65px;
-  }
-}
-.gold .top-sponsor-block img,
-.gold .c-SponsorBlock img,
-.c-SponsorBlock--gold .top-sponsor-block img,
-.c-SponsorBlock--gold .c-SponsorBlock img {
-  max-width: 270px;
-  max-height: 120px;
-}
-@media (max-width: 989px) {
-  .gold .top-sponsor-block img,
-  .gold .c-SponsorBlock img,
-  .c-SponsorBlock--gold .top-sponsor-block img,
-  .c-SponsorBlock--gold .c-SponsorBlock img {
-    max-width: 188px;
-    max-height: 82px;
-  }
-}
-@media (max-width: 767px) {
-  .gold .top-sponsor-block img,
-  .gold .c-SponsorBlock img,
-  .c-SponsorBlock--gold .top-sponsor-block img,
-  .c-SponsorBlock--gold .c-SponsorBlock img {
-    max-width: 90px;
-    max-height: 48px;
-  }
-}
 .platinum::before,
 .c-SponsorBlock--platinum::before,
 .platinum .box,
@@ -3342,78 +3265,94 @@ a.button--disabled:focus {
 .c-SponsorBlock--copper::before {
   content: 'Copper';
 }
-.bronze a,
-.financial a,
-.c-SponsorBlock--silver a,
-.c-SponsorBlock--copper a {
-  font-size: 18px;
-  font-weight: 700;
-}
-.bronze a:not(:last-child)::after,
-.financial a:not(:last-child)::after,
-.c-SponsorBlock--silver a:not(:last-child)::after,
-.c-SponsorBlock--copper a:not(:last-child)::after {
-  content: '';
-  padding-right: 12px;
-  border-right: 1px solid #0c5fa8;
-  margin-right: 8px;
-}
+.top-sponsor-block img,
+.coop-orgs-block img,
 .c-SponsorBlock__Logo {
   max-width: 202px;
   max-height: 90px;
   margin: 20px;
 }
 @media (max-width: 989px) {
+  .top-sponsor-block img,
+  .coop-orgs-block img,
   .c-SponsorBlock__Logo {
     max-width: 140px;
     max-height: 62px;
   }
 }
 @media (max-width: 767px) {
+  .top-sponsor-block img,
+  .coop-orgs-block img,
   .c-SponsorBlock__Logo {
     max-width: 68px;
     max-height: 36px;
   }
 }
 @media (max-width: 767px) {
+  .top-sponsor-block img,
+  .coop-orgs-block img,
   .c-SponsorBlock__Logo {
     margin-left: 0;
     margin-right: 0;
   }
 }
+.platinum .top-sponsor-block img,
+.platinum .coop-orgs-block img,
 .platinum .c-SponsorBlock__Logo,
+.c-SponsorBlock--platinum .top-sponsor-block img,
+.c-SponsorBlock--platinum .coop-orgs-block img,
 .c-SponsorBlock--platinum .c-SponsorBlock__Logo {
   max-width: 360px;
   max-height: 160px;
 }
 @media (max-width: 989px) {
+  .platinum .top-sponsor-block img,
+  .platinum .coop-orgs-block img,
   .platinum .c-SponsorBlock__Logo,
+  .c-SponsorBlock--platinum .top-sponsor-block img,
+  .c-SponsorBlock--platinum .coop-orgs-block img,
   .c-SponsorBlock--platinum .c-SponsorBlock__Logo {
     max-width: 250px;
     max-height: 110px;
   }
 }
 @media (max-width: 767px) {
+  .platinum .top-sponsor-block img,
+  .platinum .coop-orgs-block img,
   .platinum .c-SponsorBlock__Logo,
+  .c-SponsorBlock--platinum .top-sponsor-block img,
+  .c-SponsorBlock--platinum .coop-orgs-block img,
   .c-SponsorBlock--platinum .c-SponsorBlock__Logo {
     max-width: 120px;
     max-height: 65px;
   }
 }
+.gold .top-sponsor-block img,
+.gold .coop-orgs-block img,
 .gold .c-SponsorBlock__Logo,
+.c-SponsorBlock--gold .top-sponsor-block img,
+.c-SponsorBlock--gold .coop-orgs-block img,
 .c-SponsorBlock--gold .c-SponsorBlock__Logo {
   max-width: 270px;
   max-height: 120px;
 }
 @media (max-width: 989px) {
+  .gold .top-sponsor-block img,
+  .gold .coop-orgs-block img,
   .gold .c-SponsorBlock__Logo,
+  .c-SponsorBlock--gold .top-sponsor-block img,
+  .c-SponsorBlock--gold .coop-orgs-block img,
   .c-SponsorBlock--gold .c-SponsorBlock__Logo {
     max-width: 188px;
     max-height: 82px;
   }
 }
 @media (max-width: 767px) {
+  .gold .top-sponsor-block img,
+  .gold .coop-orgs-block img,
   .gold .c-SponsorBlock__Logo,
+  .c-SponsorBlock--gold .top-sponsor-block img,
+  .c-SponsorBlock--gold .coop-orgs-block img,
   .c-SponsorBlock--gold .c-SponsorBlock__Logo {
     max-width: 90px;
     max-height: 48px;
@@ -3451,10 +3390,18 @@ a.button--disabled:focus {
     max-height: 48px;
   }
 }
+.bronze a,
+.financial a,
+.c-SponsorBlock--silver a,
+.c-SponsorBlock--copper a,
 .c-SponsorBlock__TextLink {
   font-size: 18px;
   font-weight: 700;
 }
+.bronze a:not(:last-child)::after,
+.financial a:not(:last-child)::after,
+.c-SponsorBlock--silver a:not(:last-child)::after,
+.c-SponsorBlock--copper a:not(:last-child)::after,
 .c-SponsorBlock__TextLink:not(:last-child)::after {
   content: '';
   padding-right: 12px;
