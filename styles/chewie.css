@@ -1521,6 +1521,18 @@ button {
 #lidconference .content h6 {
   color: #354e71;
 }
+#structurescongress .c-H--alpha,
+#structurescongress .c-H--beta,
+#structurescongress .c-H--gamma,
+#structurescongress .c-H--delta,
+#structurescongress .content h1,
+#structurescongress .content h2,
+#structurescongress .content h3,
+#structurescongress .content h4,
+#structurescongress .content h5,
+#structurescongress .content h6 {
+  color: #571c1f;
+}
 .c-H--alpha,
 .content h1 {
   font-weight: 500;
@@ -1918,6 +1930,10 @@ button {
 #lidconference .c-Hero {
   background-color: #354e71;
 }
+#structurescongress .introduction,
+#structurescongress .c-Hero {
+  background-color: #571c1f;
+}
 .introduction img,
 .c-Hero img {
   display: block;
@@ -2034,6 +2050,11 @@ button {
 #lidconference .c-Hero__Hn::before {
   box-shadow: 0 -25px 25px 0 #354e71 inset;
 }
+#structurescongress .img-fade,
+#structurescongress .introduction h1::before,
+#structurescongress .c-Hero__Hn::before {
+  box-shadow: 0 -25px 25px 0 #571c1f inset;
+}
 .img-fade {
   display: none;
 }
@@ -2143,6 +2164,9 @@ button {
 }
 #lidconference .date {
   color: #841f27;
+}
+#structurescongress .date {
+  color: #14284b;
 }
 /*################################*\
     _comp.ui.YearBadge.less
@@ -2403,6 +2427,13 @@ button {
 #lidconference .navigation-level2 {
   background-color: #841f27;
 }
+#structurescongress .c-NavBar,
+#structurescongress .navigation,
+#structurescongress .nav3,
+#structurescongress .tab-buttons,
+#structurescongress .navigation-level2 {
+  background-color: #14284b;
+}
 .c-NavBar__Link,
 .navigation a,
 .nav3 a,
@@ -2524,6 +2555,16 @@ button {
 #lidconference .c-NavBar--main .c-NavBar__Link:hover {
   background-color: #7d98ab;
 }
+#structurescongress .nav1 a.active,
+#structurescongress .c-NavBar--main a.active,
+#structurescongress .nav1 .c-NavBar__Link.active,
+#structurescongress .c-NavBar--main .c-NavBar__Link.active,
+#structurescongress .nav1 a:hover,
+#structurescongress .c-NavBar--main a:hover,
+#structurescongress .nav1 .c-NavBar__Link:hover,
+#structurescongress .c-NavBar--main .c-NavBar__Link:hover {
+  background-color: #8b8c8e;
+}
 .nav2,
 .c-NavBar--side {
   background-color: #0c5fa8;
@@ -2608,6 +2649,10 @@ button {
 #lidconference .c-NavBar--secondary {
   background-color: #7d98ab;
 }
+#structurescongress .navigation-level2,
+#structurescongress .c-NavBar--secondary {
+  background-color: #8b8c8e;
+}
 .navigation-level2 ul,
 .c-NavBar--secondary ul {
   display: none;
@@ -2638,6 +2683,10 @@ button {
 #lidconference .c-NavBar--tabs .c-NavBar__Link:hover,
 #lidconference .c-NavBar--tabs .c-NavBar__Link.current {
   background-color: #7d98ab;
+}
+#structurescongress .c-NavBar--tabs .c-NavBar__Link:hover,
+#structurescongress .c-NavBar--tabs .c-NavBar__Link.current {
+  background-color: #8b8c8e;
 }
 .c-NavBar--tabs .c-NavBar__Link.current {
   position: relative;
@@ -2690,6 +2739,9 @@ button {
 #lidconference .c-NavBar--tabs .c-NavBar__Link.current::after {
   border-top-color: #7d98ab;
 }
+#structurescongress .c-NavBar--tabs .c-NavBar__Link.current::after {
+  border-top-color: #8b8c8e;
+}
 .tab-buttons {
   margin-bottom: 0;
   float: right !important;
@@ -2719,6 +2771,10 @@ li.active .tab-button {
 #lidconference .tab-button:hover,
 #lidconference li.active .tab-button {
   background-color: #7d98ab;
+}
+#structurescongress .tab-button:hover,
+#structurescongress li.active .tab-button {
+  background-color: #8b8c8e;
 }
 li.active .tab-button {
   position: relative;
@@ -2770,6 +2826,9 @@ li.active .tab-button::after {
 }
 #lidconference li.active .tab-button::after {
   border-top-color: #7d98ab;
+}
+#structurescongress li.active .tab-button::after {
+  border-top-color: #8b8c8e;
 }
 .mobile-nav {
   text-align: right;
@@ -2986,6 +3045,12 @@ a.button--disabled:focus {
 #lidconference .summary-banner,
 #lidconference .c-SummaryBanner {
   background-color: #354e71;
+}
+#structurescongress .header,
+#structurescongress .footer,
+#structurescongress .summary-banner,
+#structurescongress .c-SummaryBanner {
+  background-color: #571c1f;
 }
 .header a[href],
 .footer a[href],
@@ -3647,6 +3712,9 @@ a.button--disabled:focus {
   }
   #lidconference .toggleable-nav.in {
     background: #354e71;
+  }
+  #structurescongress .toggleable-nav.in {
+    background: #571c1f;
   }
   .toggleable-nav.in .close-nav {
     display: block;
