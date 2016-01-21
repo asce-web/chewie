@@ -11,7 +11,7 @@
     "lessc:styleguide": "lessc ./styleguide/styleguide.less ./styleguide/styleguide.css",
     "lessc:all": "npm run lessc:chewie ; npm run lessc:styleguide",
     "minify:chewie": "cleancss ./styles/chewie.css -o ./styles/chewie.min.css",
-    "jade:all": "jade -P ./",
+    "jade:all": "jade ./",
     "build": "npm run lessc:all ; npm run minify:chewie ; npm run jade:all"
   },
   "repository": {
