@@ -931,6 +931,7 @@ img {
  *
  * ## OBJECTS
  * object.........................temporary file containing ALL objects : will be broken up later
+ * Block..........................a simple block
  * SpeakerProfile.................a three-column layout containing speaker session info, headshot, and speaker brief info
  * ListGrid.......................a list of blocks arranged in a table-like, flexible grid
  * ColDouble......................sets two columns of text or list items
@@ -1208,50 +1209,43 @@ button {
 .logo-col,
 .side-nav-col,
 .auto-col {
-  display: table-cell;
-  vertical-align: top;
+  display: block;
+  width: 100%;
 }
-@media (max-width: 767px) {
+@media (min-width: 768px) {
   .logo-col,
   .side-nav-col,
   .auto-col {
-    display: block;
-    width: 100% !important;
-  }
-}
-.logo-col {
-  width: 105px;
-}
-@media (max-width: 1199px) {
-  .logo-col {
-    width: 75px;
-  }
-  .summary-banner .logo-col {
-    width: 105px;
-  }
-  .logo-col img {
-    width: 60px;
+    display: table-cell;
+    vertical-align: top;
   }
 }
 .header .logo-col {
   padding-top: 20px;
 }
 @media (min-width: 768px) {
+  .logo-col {
+    width: 105px;
+  }
+}
+@media (min-width: 768px) {
   .header .auto-col {
     padding-right: 50px;
   }
 }
-.side-nav-col {
-  width: 450px;
+@media (min-width: 768px) {
+  .side-nav-col {
+    width: 300px;
+  }
 }
-@media (max-width: 1199px) {
+@media (min-width: 990px) {
   .side-nav-col {
     width: 385px;
   }
 }
-@media (max-width: 989px) {
+@media (min-width: 1200px) {
   .side-nav-col {
-    width: 300px;
+    width: 450px;
   }
 }
 .header .side-nav-col {
@@ -1263,7 +1257,6 @@ button {
   .header .side-nav-col {
     background-position: 50% 50%;
     height: 145px;
-    max-width: 100%;
     margin-bottom: 8px;
   }
 }
@@ -1279,6 +1272,13 @@ button {
   .content .side-nav-col {
     padding: 0;
   }
+}
+/*################################*\
+    _obj.Block.less
+\*################################*/
+.o-Block {
+  display: block;
+  line-height: inherit;
 }
 /*################################*\
     _comp.SpeakerProfile.less
@@ -1532,6 +1532,18 @@ button {
 #structurescongress .content h5,
 #structurescongress .content h6 {
   color: #571c1f;
+}
+#georiskconference .c-H--alpha,
+#georiskconference .c-H--beta,
+#georiskconference .c-H--gamma,
+#georiskconference .c-H--delta,
+#georiskconference .content h1,
+#georiskconference .content h2,
+#georiskconference .content h3,
+#georiskconference .content h4,
+#georiskconference .content h5,
+#georiskconference .content h6 {
+  color: #00535e;
 }
 .c-H--alpha,
 .content h1 {
@@ -1934,6 +1946,10 @@ button {
 #structurescongress .c-Hero {
   background-color: #571c1f;
 }
+#georiskconference .introduction,
+#georiskconference .c-Hero {
+  background-color: #00535e;
+}
 .introduction img,
 .c-Hero img {
   display: block;
@@ -2055,6 +2071,11 @@ button {
 #structurescongress .c-Hero__Hn::before {
   box-shadow: 0 -25px 25px 0 #571c1f inset;
 }
+#georiskconference .img-fade,
+#georiskconference .introduction h1::before,
+#georiskconference .c-Hero__Hn::before {
+  box-shadow: 0 -25px 25px 0 #00535e inset;
+}
 .img-fade {
   display: none;
 }
@@ -2168,6 +2189,9 @@ button {
 #structurescongress .date {
   color: #14284b;
 }
+#georiskconference .date {
+  color: #5f504e;
+}
 /*################################*\
     _comp.ui.YearBadge.less
 \*################################*/
@@ -2215,7 +2239,7 @@ button {
   border-top-color: #0c5fa8;
   border-bottom: 0;
 }
-@media screen and (min-width: 45em) {
+@media screen and (min-width: 768px) {
   .year-badge,
   .c-YearBadge {
     display: block;
@@ -2349,14 +2373,14 @@ button {
 \*################################*/
 .conference-logo,
 .c-ConfLogo {
-  max-width: 85px;
+  width: 90px;
   padding-bottom: 20px;
+  margin: 0 10px 20px;
 }
-@media (max-width: 767px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   .conference-logo,
   .c-ConfLogo {
-    max-width: 45px;
-    margin: 0 10px 20px;
+    width: 60px;
   }
 }
 /*################################*\
@@ -2433,6 +2457,13 @@ button {
 #structurescongress .tab-buttons,
 #structurescongress .navigation-level2 {
   background-color: #14284b;
+}
+#georiskconference .c-NavBar,
+#georiskconference .navigation,
+#georiskconference .nav3,
+#georiskconference .tab-buttons,
+#georiskconference .navigation-level2 {
+  background-color: #5f504e;
 }
 .c-NavBar__Link,
 .navigation a,
@@ -2565,6 +2596,16 @@ button {
 #structurescongress .c-NavBar--main .c-NavBar__Link:hover {
   background-color: #8b8c8e;
 }
+#georiskconference .nav1 a.active,
+#georiskconference .c-NavBar--main a.active,
+#georiskconference .nav1 .c-NavBar__Link.active,
+#georiskconference .c-NavBar--main .c-NavBar__Link.active,
+#georiskconference .nav1 a:hover,
+#georiskconference .c-NavBar--main a:hover,
+#georiskconference .nav1 .c-NavBar__Link:hover,
+#georiskconference .c-NavBar--main .c-NavBar__Link:hover {
+  background-color: #82b2ba;
+}
 .nav2,
 .c-NavBar--side {
   background-color: #0c5fa8;
@@ -2653,6 +2694,10 @@ button {
 #structurescongress .c-NavBar--secondary {
   background-color: #8b8c8e;
 }
+#georiskconference .navigation-level2,
+#georiskconference .c-NavBar--secondary {
+  background-color: #82b2ba;
+}
 .navigation-level2 ul,
 .c-NavBar--secondary ul {
   display: none;
@@ -2687,6 +2732,10 @@ button {
 #structurescongress .c-NavBar--tabs .c-NavBar__Link:hover,
 #structurescongress .c-NavBar--tabs .c-NavBar__Link.current {
   background-color: #8b8c8e;
+}
+#georiskconference .c-NavBar--tabs .c-NavBar__Link:hover,
+#georiskconference .c-NavBar--tabs .c-NavBar__Link.current {
+  background-color: #82b2ba;
 }
 .c-NavBar--tabs .c-NavBar__Link.current {
   position: relative;
@@ -2742,6 +2791,9 @@ button {
 #structurescongress .c-NavBar--tabs .c-NavBar__Link.current::after {
   border-top-color: #8b8c8e;
 }
+#georiskconference .c-NavBar--tabs .c-NavBar__Link.current::after {
+  border-top-color: #82b2ba;
+}
 .tab-buttons {
   margin-bottom: 0;
   float: right !important;
@@ -2775,6 +2827,10 @@ li.active .tab-button {
 #structurescongress .tab-button:hover,
 #structurescongress li.active .tab-button {
   background-color: #8b8c8e;
+}
+#georiskconference .tab-button:hover,
+#georiskconference li.active .tab-button {
+  background-color: #82b2ba;
 }
 li.active .tab-button {
   position: relative;
@@ -2829,6 +2885,9 @@ li.active .tab-button::after {
 }
 #structurescongress li.active .tab-button::after {
   border-top-color: #8b8c8e;
+}
+#georiskconference li.active .tab-button::after {
+  border-top-color: #82b2ba;
 }
 .mobile-nav {
   text-align: right;
@@ -3051,6 +3110,12 @@ a.button--disabled:focus {
 #structurescongress .summary-banner,
 #structurescongress .c-SummaryBanner {
   background-color: #571c1f;
+}
+#georiskconference .header,
+#georiskconference .footer,
+#georiskconference .summary-banner,
+#georiskconference .c-SummaryBanner {
+  background-color: #00535e;
 }
 .header a[href],
 .footer a[href],
@@ -3716,6 +3781,9 @@ a.button--disabled:focus {
   #structurescongress .toggleable-nav.in {
     background: #571c1f;
   }
+  #georiskconference .toggleable-nav.in {
+    background: #00535e;
+  }
   .toggleable-nav.in .close-nav {
     display: block;
     position: absolute;
@@ -3970,6 +4038,10 @@ a.button--disabled:focus {
 /*################################*\
     _trumps.ektron-fixes.less
 \*################################*/
+body {
+  padding-left: 0;
+  padding-right: 0;
+}
 ul.pb-dz-control-column-ul {
   margin-bottom: 0;
 }
