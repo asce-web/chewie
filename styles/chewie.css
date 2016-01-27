@@ -1,13 +1,13 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     chewie
-    Version: 1.4.3
+    Version: 1.5.0
     Licence:
     Repo   : https://github.com/asce-web/chewie.git
     Author : ASCE web team (webteam@asce.org)
 \*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     xmeter
-    Version: 3.3.0
+    Version: 3.4.0
     Licence: MIT
     Repo   : https://github.com/chharvey/xmeter.git
     Home   : https://chharvey.github.io/xmeter/
@@ -761,11 +761,11 @@ th {
 /*################################*\
     _base.text.links.less
 \*################################*/
+a {
+  color: #00e;
+}
 a:not([href]) {
   opacity: 0.5;
-}
-a[href] {
-  color: #00e;
 }
 
 /*################################*\
@@ -931,6 +931,7 @@ img {
  *
  * ## OBJECTS
  * object.........................temporary file containing ALL objects : will be broken up later
+ * Block..........................a simple block
  * SpeakerProfile.................a three-column layout containing speaker session info, headshot, and speaker brief info
  * ListGrid.......................a list of blocks arranged in a table-like, flexible grid
  * ColDouble......................sets two columns of text or list items
@@ -980,10 +981,13 @@ img {
     __settings.less
 \*################################*/
 /*++++++++++++++++++++++++++++++++*\
-    ASCE COMPANY COLORS
+    # TYPOGRAPHY
 \*++++++++++++++++++++++++++++++++*/
 /*++++++++++++++++++++++++++++++++*\
-    SPONSOR COLORS
+    # ASCE COMPANY COLORS
+\*++++++++++++++++++++++++++++++++*/
+/*++++++++++++++++++++++++++++++++*\
+    # SPONSOR COLORS
 \*++++++++++++++++++++++++++++++++*/
 /*################################*\
     __settings.conf-colors.less
@@ -1046,6 +1050,30 @@ li ul {
 }
 dt {
   font-weight: inherit;
+}
+.content table {
+  width: 100%;
+}
+.content thead,
+.content tfoot {
+  background-color: #f4f4f5;
+  font-weight: 600;
+  font-size: 13px;
+}
+.content tbody > tr:nth-child(even) {
+  background-color: #f4f4f5;
+}
+.content .no-stripe tbody > tr:nth-child(even) {
+  background-color: transparent;
+}
+.content th,
+.content td {
+  padding: 10px;
+  border: 1px solid #e8eaeb;
+}
+.content .no-border th,
+.content .no-border td {
+  border-color: transparent transparent #e8eaeb;
 }
 /*++++++++++++++++++++++++++++++++*\
     ## TEXT
@@ -1181,50 +1209,43 @@ button {
 .logo-col,
 .side-nav-col,
 .auto-col {
-  display: table-cell;
-  vertical-align: top;
+  display: block;
+  width: 100%;
 }
-@media (max-width: 767px) {
+@media (min-width: 768px) {
   .logo-col,
   .side-nav-col,
   .auto-col {
-    display: block;
-    width: 100% !important;
-  }
-}
-.logo-col {
-  width: 105px;
-}
-@media (max-width: 1199px) {
-  .logo-col {
-    width: 75px;
-  }
-  .summary-banner .logo-col {
-    width: 105px;
-  }
-  .logo-col img {
-    width: 60px;
+    display: table-cell;
+    vertical-align: top;
   }
 }
 .header .logo-col {
   padding-top: 20px;
 }
 @media (min-width: 768px) {
+  .logo-col {
+    width: 105px;
+  }
+}
+@media (min-width: 768px) {
   .header .auto-col {
     padding-right: 50px;
   }
 }
-.side-nav-col {
-  width: 450px;
+@media (min-width: 768px) {
+  .side-nav-col {
+    width: 300px;
+  }
 }
-@media (max-width: 1199px) {
+@media (min-width: 990px) {
   .side-nav-col {
     width: 385px;
   }
 }
-@media (max-width: 989px) {
+@media (min-width: 1200px) {
   .side-nav-col {
-    width: 300px;
+    width: 450px;
   }
 }
 .header .side-nav-col {
@@ -1236,7 +1257,6 @@ button {
   .header .side-nav-col {
     background-position: 50% 50%;
     height: 145px;
-    max-width: 100%;
     margin-bottom: 8px;
   }
 }
@@ -1252,6 +1272,13 @@ button {
   .content .side-nav-col {
     padding: 0;
   }
+}
+/*################################*\
+    _obj.Block.less
+\*################################*/
+.o-Block {
+  display: block;
+  line-height: inherit;
 }
 /*################################*\
     _comp.SpeakerProfile.less
@@ -1493,6 +1520,30 @@ button {
 #lidconference .content h5,
 #lidconference .content h6 {
   color: #354e71;
+}
+#structurescongress .c-H--alpha,
+#structurescongress .c-H--beta,
+#structurescongress .c-H--gamma,
+#structurescongress .c-H--delta,
+#structurescongress .content h1,
+#structurescongress .content h2,
+#structurescongress .content h3,
+#structurescongress .content h4,
+#structurescongress .content h5,
+#structurescongress .content h6 {
+  color: #571c1f;
+}
+#georiskconference .c-H--alpha,
+#georiskconference .c-H--beta,
+#georiskconference .c-H--gamma,
+#georiskconference .c-H--delta,
+#georiskconference .content h1,
+#georiskconference .content h2,
+#georiskconference .content h3,
+#georiskconference .content h4,
+#georiskconference .content h5,
+#georiskconference .content h6 {
+  color: #00535e;
 }
 .c-H--alpha,
 .content h1 {
@@ -1891,6 +1942,14 @@ button {
 #lidconference .c-Hero {
   background-color: #354e71;
 }
+#structurescongress .introduction,
+#structurescongress .c-Hero {
+  background-color: #571c1f;
+}
+#georiskconference .introduction,
+#georiskconference .c-Hero {
+  background-color: #00535e;
+}
 .introduction img,
 .c-Hero img {
   display: block;
@@ -1898,6 +1957,8 @@ button {
 }
 .introduction h1,
 .c-Hero h1 {
+  padding-left: 2rem;
+  padding-right: 2rem;
   font-size: 36px;
   font-size: 2.25rem;
   line-height: 0.97222222;
@@ -1930,17 +1991,15 @@ button {
 .c-Hero a:active {
   color: inherit;
 }
-.introduction a:hover,
-.c-Hero a:hover {
-  opacity: .5;
-}
-.introduction > div,
-.c-Hero > div {
-  padding: 10px 30px;
-}
 .c-Hero__Img {
   display: block;
   margin: auto;
+}
+.intro,
+.c-Hero__Hn,
+.c-Hero__Lede {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 .c-Hero__Hn {
   font-size: 36px;
@@ -1980,73 +2039,45 @@ button {
     line-height: 1.42857143;
   }
 }
-.img-fade {
-  height: 50px;
-  width: 100%;
+.img-fade,
+.introduction h1::before,
+.c-Hero__Hn::before {
+  display: block;
   position: absolute;
-  margin-top: -50px;
-  background: -moz-linear-gradient(top, rgba(106, 149, 86, 0) 0%, #6a9556 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(106, 149, 86, 0)), color-stop(100%, #6a9556));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, rgba(106, 149, 86, 0) 0%, #6a9556 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, rgba(106, 149, 86, 0) 0%, #6a9556 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, rgba(106, 149, 86, 0) 0%, #6a9556 100%);
-  /* IE10+ */
-  background: linear-gradient(to bottom, rgba(106, 149, 86, 0) 0%, #6a9556 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#6a9556', GradientType=0);
-  /* IE6-9 */
+  left: 0;
+  width: 100%;
+  height: 50px;
+  margin-top: -70px;
+  content: '';
+  box-shadow: 0 -25px 25px 0 #6a9556 inset;
 }
-#pipelinesconference .img-fade {
-  background: -moz-linear-gradient(top, rgba(0, 108, 103, 0) 0%, #006c67 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 108, 103, 0)), color-stop(100%, #006c67));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, rgba(0, 108, 103, 0) 0%, #006c67 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, rgba(0, 108, 103, 0) 0%, #006c67 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, rgba(0, 108, 103, 0) 0%, #006c67 100%);
-  /* IE10+ */
-  background: linear-gradient(to bottom, rgba(0, 108, 103, 0) 0%, #006c67 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#006c67', GradientType=0);
-  /* IE6-9 */
+#pipelinesconference .img-fade,
+#pipelinesconference .introduction h1::before,
+#pipelinesconference .c-Hero__Hn::before {
+  box-shadow: 0 -25px 25px 0 #006c67 inset;
 }
-#icsiconference .img-fade {
-  background: -moz-linear-gradient(top, rgba(11, 47, 105, 0) 0%, #0b2f69 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(11, 47, 105, 0)), color-stop(100%, #0b2f69));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, rgba(11, 47, 105, 0) 0%, #0b2f69 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, rgba(11, 47, 105, 0) 0%, #0b2f69 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, rgba(11, 47, 105, 0) 0%, #0b2f69 100%);
-  /* IE10+ */
-  background: linear-gradient(to bottom, rgba(11, 47, 105, 0) 0%, #0b2f69 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#0b2f69', GradientType=0);
-  /* IE6-9 */
+#icsiconference .img-fade,
+#icsiconference .introduction h1::before,
+#icsiconference .c-Hero__Hn::before {
+  box-shadow: 0 -25px 25px 0 #0b2f69 inset;
 }
-#lidconference .img-fade {
-  background: -moz-linear-gradient(top, rgba(53, 78, 113, 0) 0%, #354e71 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(53, 78, 113, 0)), color-stop(100%, #354e71));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, rgba(53, 78, 113, 0) 0%, #354e71 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, rgba(53, 78, 113, 0) 0%, #354e71 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, rgba(53, 78, 113, 0) 0%, #354e71 100%);
-  /* IE10+ */
-  background: linear-gradient(to bottom, rgba(53, 78, 113, 0) 0%, #354e71 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#354e71', GradientType=0);
-  /* IE6-9 */
+#lidconference .img-fade,
+#lidconference .introduction h1::before,
+#lidconference .c-Hero__Hn::before {
+  box-shadow: 0 -25px 25px 0 #354e71 inset;
+}
+#structurescongress .img-fade,
+#structurescongress .introduction h1::before,
+#structurescongress .c-Hero__Hn::before {
+  box-shadow: 0 -25px 25px 0 #571c1f inset;
+}
+#georiskconference .img-fade,
+#georiskconference .introduction h1::before,
+#georiskconference .c-Hero__Hn::before {
+  box-shadow: 0 -25px 25px 0 #00535e inset;
+}
+.img-fade {
+  display: none;
 }
 /*################################*\
     _comp.Person.less
@@ -2155,6 +2186,12 @@ button {
 #lidconference .date {
   color: #841f27;
 }
+#structurescongress .date {
+  color: #14284b;
+}
+#georiskconference .date {
+  color: #5f504e;
+}
 /*################################*\
     _comp.ui.YearBadge.less
 \*################################*/
@@ -2202,7 +2239,7 @@ button {
   border-top-color: #0c5fa8;
   border-bottom: 0;
 }
-@media screen and (min-width: 45em) {
+@media screen and (min-width: 768px) {
   .year-badge,
   .c-YearBadge {
     display: block;
@@ -2336,14 +2373,14 @@ button {
 \*################################*/
 .conference-logo,
 .c-ConfLogo {
-  max-width: 85px;
+  width: 90px;
   padding-bottom: 20px;
+  margin: 0 10px 20px;
 }
-@media (max-width: 767px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   .conference-logo,
   .c-ConfLogo {
-    max-width: 45px;
-    margin: 0 10px 20px;
+    width: 60px;
   }
 }
 /*################################*\
@@ -2413,6 +2450,20 @@ button {
 #lidconference .tab-buttons,
 #lidconference .navigation-level2 {
   background-color: #841f27;
+}
+#structurescongress .c-NavBar,
+#structurescongress .navigation,
+#structurescongress .nav3,
+#structurescongress .tab-buttons,
+#structurescongress .navigation-level2 {
+  background-color: #14284b;
+}
+#georiskconference .c-NavBar,
+#georiskconference .navigation,
+#georiskconference .nav3,
+#georiskconference .tab-buttons,
+#georiskconference .navigation-level2 {
+  background-color: #5f504e;
 }
 .c-NavBar__Link,
 .navigation a,
@@ -2535,6 +2586,26 @@ button {
 #lidconference .c-NavBar--main .c-NavBar__Link:hover {
   background-color: #7d98ab;
 }
+#structurescongress .nav1 a.active,
+#structurescongress .c-NavBar--main a.active,
+#structurescongress .nav1 .c-NavBar__Link.active,
+#structurescongress .c-NavBar--main .c-NavBar__Link.active,
+#structurescongress .nav1 a:hover,
+#structurescongress .c-NavBar--main a:hover,
+#structurescongress .nav1 .c-NavBar__Link:hover,
+#structurescongress .c-NavBar--main .c-NavBar__Link:hover {
+  background-color: #8b8c8e;
+}
+#georiskconference .nav1 a.active,
+#georiskconference .c-NavBar--main a.active,
+#georiskconference .nav1 .c-NavBar__Link.active,
+#georiskconference .c-NavBar--main .c-NavBar__Link.active,
+#georiskconference .nav1 a:hover,
+#georiskconference .c-NavBar--main a:hover,
+#georiskconference .nav1 .c-NavBar__Link:hover,
+#georiskconference .c-NavBar--main .c-NavBar__Link:hover {
+  background-color: #82b2ba;
+}
 .nav2,
 .c-NavBar--side {
   background-color: #0c5fa8;
@@ -2619,6 +2690,14 @@ button {
 #lidconference .c-NavBar--secondary {
   background-color: #7d98ab;
 }
+#structurescongress .navigation-level2,
+#structurescongress .c-NavBar--secondary {
+  background-color: #8b8c8e;
+}
+#georiskconference .navigation-level2,
+#georiskconference .c-NavBar--secondary {
+  background-color: #82b2ba;
+}
 .navigation-level2 ul,
 .c-NavBar--secondary ul {
   display: none;
@@ -2649,6 +2728,14 @@ button {
 #lidconference .c-NavBar--tabs .c-NavBar__Link:hover,
 #lidconference .c-NavBar--tabs .c-NavBar__Link.current {
   background-color: #7d98ab;
+}
+#structurescongress .c-NavBar--tabs .c-NavBar__Link:hover,
+#structurescongress .c-NavBar--tabs .c-NavBar__Link.current {
+  background-color: #8b8c8e;
+}
+#georiskconference .c-NavBar--tabs .c-NavBar__Link:hover,
+#georiskconference .c-NavBar--tabs .c-NavBar__Link.current {
+  background-color: #82b2ba;
 }
 .c-NavBar--tabs .c-NavBar__Link.current {
   position: relative;
@@ -2701,6 +2788,12 @@ button {
 #lidconference .c-NavBar--tabs .c-NavBar__Link.current::after {
   border-top-color: #7d98ab;
 }
+#structurescongress .c-NavBar--tabs .c-NavBar__Link.current::after {
+  border-top-color: #8b8c8e;
+}
+#georiskconference .c-NavBar--tabs .c-NavBar__Link.current::after {
+  border-top-color: #82b2ba;
+}
 .tab-buttons {
   margin-bottom: 0;
   float: right !important;
@@ -2730,6 +2823,14 @@ li.active .tab-button {
 #lidconference .tab-button:hover,
 #lidconference li.active .tab-button {
   background-color: #7d98ab;
+}
+#structurescongress .tab-button:hover,
+#structurescongress li.active .tab-button {
+  background-color: #8b8c8e;
+}
+#georiskconference .tab-button:hover,
+#georiskconference li.active .tab-button {
+  background-color: #82b2ba;
 }
 li.active .tab-button {
   position: relative;
@@ -2781,6 +2882,12 @@ li.active .tab-button::after {
 }
 #lidconference li.active .tab-button::after {
   border-top-color: #7d98ab;
+}
+#structurescongress li.active .tab-button::after {
+  border-top-color: #8b8c8e;
+}
+#georiskconference li.active .tab-button::after {
+  border-top-color: #82b2ba;
 }
 .mobile-nav {
   text-align: right;
@@ -2929,8 +3036,8 @@ button:hover,
 a.button:hover,
 button:focus,
 a.button:focus {
-  text-decoration: none;
   background-color: #0e6cc0;
+  color: #fff;
 }
 .button--disabled,
 button[disabled],
@@ -2997,6 +3104,18 @@ a.button--disabled:focus {
 #lidconference .summary-banner,
 #lidconference .c-SummaryBanner {
   background-color: #354e71;
+}
+#structurescongress .header,
+#structurescongress .footer,
+#structurescongress .summary-banner,
+#structurescongress .c-SummaryBanner {
+  background-color: #571c1f;
+}
+#georiskconference .header,
+#georiskconference .footer,
+#georiskconference .summary-banner,
+#georiskconference .c-SummaryBanner {
+  background-color: #00535e;
 }
 .header a[href],
 .footer a[href],
@@ -3167,83 +3286,6 @@ a.button--disabled:focus {
     padding: 5px;
   }
 }
-.top-sponsor-block img,
-.c-SponsorBlock img {
-  max-width: 202px;
-  max-height: 90px;
-  margin: 20px;
-}
-@media (max-width: 989px) {
-  .top-sponsor-block img,
-  .c-SponsorBlock img {
-    max-width: 140px;
-    max-height: 62px;
-  }
-}
-@media (max-width: 767px) {
-  .top-sponsor-block img,
-  .c-SponsorBlock img {
-    max-width: 68px;
-    max-height: 36px;
-  }
-}
-@media (max-width: 767px) {
-  .top-sponsor-block img,
-  .c-SponsorBlock img {
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-.platinum .top-sponsor-block img,
-.platinum .c-SponsorBlock img,
-.c-SponsorBlock--platinum .top-sponsor-block img,
-.c-SponsorBlock--platinum .c-SponsorBlock img {
-  max-width: 360px;
-  max-height: 160px;
-}
-@media (max-width: 989px) {
-  .platinum .top-sponsor-block img,
-  .platinum .c-SponsorBlock img,
-  .c-SponsorBlock--platinum .top-sponsor-block img,
-  .c-SponsorBlock--platinum .c-SponsorBlock img {
-    max-width: 250px;
-    max-height: 110px;
-  }
-}
-@media (max-width: 767px) {
-  .platinum .top-sponsor-block img,
-  .platinum .c-SponsorBlock img,
-  .c-SponsorBlock--platinum .top-sponsor-block img,
-  .c-SponsorBlock--platinum .c-SponsorBlock img {
-    max-width: 120px;
-    max-height: 65px;
-  }
-}
-.gold .top-sponsor-block img,
-.gold .c-SponsorBlock img,
-.c-SponsorBlock--gold .top-sponsor-block img,
-.c-SponsorBlock--gold .c-SponsorBlock img {
-  max-width: 270px;
-  max-height: 120px;
-}
-@media (max-width: 989px) {
-  .gold .top-sponsor-block img,
-  .gold .c-SponsorBlock img,
-  .c-SponsorBlock--gold .top-sponsor-block img,
-  .c-SponsorBlock--gold .c-SponsorBlock img {
-    max-width: 188px;
-    max-height: 82px;
-  }
-}
-@media (max-width: 767px) {
-  .gold .top-sponsor-block img,
-  .gold .c-SponsorBlock img,
-  .c-SponsorBlock--gold .top-sponsor-block img,
-  .c-SponsorBlock--gold .c-SponsorBlock img {
-    max-width: 90px;
-    max-height: 48px;
-  }
-}
 .platinum::before,
 .c-SponsorBlock--platinum::before,
 .platinum .box,
@@ -3342,78 +3384,94 @@ a.button--disabled:focus {
 .c-SponsorBlock--copper::before {
   content: 'Copper';
 }
-.bronze a,
-.financial a,
-.c-SponsorBlock--silver a,
-.c-SponsorBlock--copper a {
-  font-size: 18px;
-  font-weight: 700;
-}
-.bronze a:not(:last-child)::after,
-.financial a:not(:last-child)::after,
-.c-SponsorBlock--silver a:not(:last-child)::after,
-.c-SponsorBlock--copper a:not(:last-child)::after {
-  content: '';
-  padding-right: 12px;
-  border-right: 1px solid #0c5fa8;
-  margin-right: 8px;
-}
+.top-sponsor-block img,
+.coop-orgs-block img,
 .c-SponsorBlock__Logo {
   max-width: 202px;
   max-height: 90px;
   margin: 20px;
 }
 @media (max-width: 989px) {
+  .top-sponsor-block img,
+  .coop-orgs-block img,
   .c-SponsorBlock__Logo {
     max-width: 140px;
     max-height: 62px;
   }
 }
 @media (max-width: 767px) {
+  .top-sponsor-block img,
+  .coop-orgs-block img,
   .c-SponsorBlock__Logo {
     max-width: 68px;
     max-height: 36px;
   }
 }
 @media (max-width: 767px) {
+  .top-sponsor-block img,
+  .coop-orgs-block img,
   .c-SponsorBlock__Logo {
     margin-left: 0;
     margin-right: 0;
   }
 }
+.platinum .top-sponsor-block img,
+.platinum .coop-orgs-block img,
 .platinum .c-SponsorBlock__Logo,
+.c-SponsorBlock--platinum .top-sponsor-block img,
+.c-SponsorBlock--platinum .coop-orgs-block img,
 .c-SponsorBlock--platinum .c-SponsorBlock__Logo {
   max-width: 360px;
   max-height: 160px;
 }
 @media (max-width: 989px) {
+  .platinum .top-sponsor-block img,
+  .platinum .coop-orgs-block img,
   .platinum .c-SponsorBlock__Logo,
+  .c-SponsorBlock--platinum .top-sponsor-block img,
+  .c-SponsorBlock--platinum .coop-orgs-block img,
   .c-SponsorBlock--platinum .c-SponsorBlock__Logo {
     max-width: 250px;
     max-height: 110px;
   }
 }
 @media (max-width: 767px) {
+  .platinum .top-sponsor-block img,
+  .platinum .coop-orgs-block img,
   .platinum .c-SponsorBlock__Logo,
+  .c-SponsorBlock--platinum .top-sponsor-block img,
+  .c-SponsorBlock--platinum .coop-orgs-block img,
   .c-SponsorBlock--platinum .c-SponsorBlock__Logo {
     max-width: 120px;
     max-height: 65px;
   }
 }
+.gold .top-sponsor-block img,
+.gold .coop-orgs-block img,
 .gold .c-SponsorBlock__Logo,
+.c-SponsorBlock--gold .top-sponsor-block img,
+.c-SponsorBlock--gold .coop-orgs-block img,
 .c-SponsorBlock--gold .c-SponsorBlock__Logo {
   max-width: 270px;
   max-height: 120px;
 }
 @media (max-width: 989px) {
+  .gold .top-sponsor-block img,
+  .gold .coop-orgs-block img,
   .gold .c-SponsorBlock__Logo,
+  .c-SponsorBlock--gold .top-sponsor-block img,
+  .c-SponsorBlock--gold .coop-orgs-block img,
   .c-SponsorBlock--gold .c-SponsorBlock__Logo {
     max-width: 188px;
     max-height: 82px;
   }
 }
 @media (max-width: 767px) {
+  .gold .top-sponsor-block img,
+  .gold .coop-orgs-block img,
   .gold .c-SponsorBlock__Logo,
+  .c-SponsorBlock--gold .top-sponsor-block img,
+  .c-SponsorBlock--gold .coop-orgs-block img,
   .c-SponsorBlock--gold .c-SponsorBlock__Logo {
     max-width: 90px;
     max-height: 48px;
@@ -3451,10 +3509,18 @@ a.button--disabled:focus {
     max-height: 48px;
   }
 }
+.bronze a,
+.financial a,
+.c-SponsorBlock--silver a,
+.c-SponsorBlock--copper a,
 .c-SponsorBlock__TextLink {
   font-size: 18px;
   font-weight: 700;
 }
+.bronze a:not(:last-child)::after,
+.financial a:not(:last-child)::after,
+.c-SponsorBlock--silver a:not(:last-child)::after,
+.c-SponsorBlock--copper a:not(:last-child)::after,
 .c-SponsorBlock__TextLink:not(:last-child)::after {
   content: '';
   padding-right: 12px;
@@ -3712,6 +3778,12 @@ a.button--disabled:focus {
   #lidconference .toggleable-nav.in {
     background: #354e71;
   }
+  #structurescongress .toggleable-nav.in {
+    background: #571c1f;
+  }
+  #georiskconference .toggleable-nav.in {
+    background: #00535e;
+  }
   .toggleable-nav.in .close-nav {
     display: block;
     position: absolute;
@@ -3723,37 +3795,6 @@ a.button--disabled:focus {
   .toggleable-nav.in .hidden-xs {
     display: block !important;
   }
-}
-.content p {
-  margin: 0 0 20px;
-}
-.content table {
-  width: 100%;
-  margin-bottom: 20px;
-}
-.content table td,
-.content table th {
-  padding: 10px;
-  border: 1px solid #e8eaeb;
-}
-.content table thead > tr > td,
-.content table thead > tr > th {
-  background-color: #f4f4f5;
-  font-weight: 600;
-  font-size: 13px;
-}
-.content table tbody > tr:nth-child(even) > td,
-.content table tbody > tr:nth-child(even) > th {
-  background-color: #f4f4f5;
-}
-.content table.no-stripe tbody > tr:nth-child(even) > td,
-.content table.no-stripe tbody > tr:nth-child(even) > th {
-  background-color: #fff;
-}
-.content table.no-border td,
-.content table.no-border th {
-  border: 1px solid transparent;
-  border-bottom: 1px solid #e8eaeb;
 }
 .panel-default > .panel-heading {
   position: relative;
@@ -3997,6 +4038,10 @@ a.button--disabled:focus {
 /*################################*\
     _trumps.ektron-fixes.less
 \*################################*/
+body {
+  padding-left: 0;
+  padding-right: 0;
+}
 ul.pb-dz-control-column-ul {
   margin-bottom: 0;
 }

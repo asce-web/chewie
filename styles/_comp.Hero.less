@@ -2,6 +2,7 @@
 /*################################*\
     _comp.Hero.less
 \*################################*/
+@import (reference) url('__settings.less');
 
 
 // The introduction section of the conference home page.
@@ -29,6 +30,12 @@
   #lidconference & {
     background-color: @color_lid_primary;
   }
+  #structurescongress & {
+    background-color: @color_struct_primary;
+  }
+  #georiskconference & {
+    background-color: @color_georisk_primary;
+  }
   img {
     .c-Hero__Img;
   }
@@ -41,19 +48,21 @@
   a:active {
     color: inherit;
   }
-  a:hover {
-    opacity: .5;
-  }
 
-  & > div {
-  // this NEEDS to be given a class.
-    padding: 10px 30px;
-  }
+  // & > div {
+  //   padding: 10px 30px;
+  // }
 }
 // Hero image
 .c-Hero__Img {
   display: block;
   margin: auto;
+}
+.intro,
+.c-Hero__Hn,
+.c-Hero__Lede {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 // The heading of the Introcuction module
 .c-Hero__Hn {
@@ -84,22 +93,33 @@
 }
 // an empty div whose gradient fades the image into the content piece
 // (this should be an .c-Hero__Img::after pseudo-element)
-.img-fade {
+// BUT APPARENTLY YOU CAN’T USE ::BEFORE ON IMG ELEMENTS!
+.img-fade,
+.introduction h1::before,
+.c-Hero__Hn::before {
   @height: 50px;
-  height: @height;
-  width: 100%;
+  display:block;
   position: absolute;
-  margin-top: -@height;
-  // padding: 0 !important; // TODO remove this line when we add a damn class (only here because `.introduction > div` has higher specificity)
-  .bg-grad(@color_site_primary);
+  left: 0;
+  width: 100%;
+  height: @height;
+  margin-top: -@height - @chewie_vru_px;
+  content: '';
+  .fade(@color_site_primary; @height);
   #pipelinesconference & {
-    .bg-grad(@color_pl_primary);
+    .fade(@color_pl_primary; @height);
   }
   #icsiconference & {
-    .bg-grad(@color_icsi_primary);
+    .fade(@color_icsi_primary; @height);
   }
   #lidconference & {
-    .bg-grad(@color_lid_primary);
+    .fade(@color_lid_primary; @height);
+  }
+  #structurescongress & {
+    .fade(@color_struct_primary; @height);
+  }
+  #georiskconference & {
+    .fade(@color_georisk_primary; @height);
   }
   .bg-grad(@primary) {
     // a mixin for background gradients
@@ -111,4 +131,13 @@
     background: linear-gradient(to bottom, fade(@primary, 0%) 0%,@primary 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='@{primary}',GradientType=0 ); /* IE6-9 */
   }
+  .fade(@primary; @box_h) {
+    // syntax reminder:
+    // box-shadow: <x> <y> <blur> <spread> <color> <inset>;
+    // see https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
+    box-shadow: 0 -(@box_h/2)*1px (@box_h/2)*1px 0 @primary inset;
+  }
+}
+.img-fade {
+  display: none;
 }

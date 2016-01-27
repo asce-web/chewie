@@ -1,7 +1,7 @@
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     chewie
-    Version: 1.4.3
+    Version: 1.5.0
     Licence:
     Repo   : https://github.com/asce-web/chewie.git
     Author : ASCE web team (webteam@asce.org)
@@ -36,6 +36,7 @@
  *
  * ## OBJECTS
  * object.........................temporary file containing ALL objects : will be broken up later
+ * Block..........................a simple block
  * SpeakerProfile.................a three-column layout containing speaker session info, headshot, and speaker brief info
  * ListGrid.......................a list of blocks arranged in a table-like, flexible grid
  * ColDouble......................sets two columns of text or list items
@@ -90,6 +91,7 @@
 @import url('_base.less');
 
 @import url('_objects.less'); // temp
+@import url('_obj.Block.less');
 @import url('_comp.SpeakerProfile.less');
 @import url('_obj.ListGrid.less');
 @import url('_obj.ColDouble.less');
@@ -131,6 +133,12 @@
   }
   #lidconference & {
     background-color: @color_lid_primary;
+  }
+  #structurescongress & {
+    background-color: @color_struct_primary;
+  }
+  #georiskconference & {
+    background-color: @color_georisk_primary;
   }
   a {
     &[href], // a[href] matches both a:link and a:visited
