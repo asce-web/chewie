@@ -104,18 +104,14 @@ td {
     ## TEXT
 \*++++++++++++++++++++++++++++++++*/
 a {
-  &:hover,
-  &:focus {
-    text-decoration: none; // override bootstrap and ektron
-    color: inherit; // override bootstrap
-  }
   &[href] {
     // matches :link and :visited
     // also overrides bootstrap specificity
     color: @color_asce_link;
-    &:hover {
-      color: @color_asce_link_hover;
-    }
+  }
+  &:hover,
+  &:focus {
+    color: @color_asce_link_hover;
   }
 }
 
