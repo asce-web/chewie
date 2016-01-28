@@ -19,28 +19,21 @@
 .logo-col,
 .side-nav-col,
 .auto-col {
-  display: table-cell;
-  vertical-align: top;
-  @media (max-width: 767px) {
-    display: block;
-    width: 100% !important; // why important??
+  display: block;
+  width: 100%;
+  @media (min-width: 768px) {
+    display: table-cell;
+    vertical-align: top;
   }
 }
 
 // column for the shield ConfLogo component
 .logo-col {
-  width: 105px;
-  @media (max-width: 1199px) {
-    width: 75px;
-    .summary-banner & {
-      width: 105px;
-    }
-    img {
-      width: 60px;
-    }
-  }
   .header & {
     padding-top: 20px;
+  }
+  @media (min-width: 768px) {
+    width: 105px;
   }
 }
 
@@ -50,25 +43,19 @@
     @media (min-width: 768px) {
       padding-right: 50px;
     }
-    // same as:
-    // padding-right: 50px;
-    // @media (max-width: 767px) {
-    //     padding-right: 0;
-    // }
-    //
   }
 }
 
 // sidebar of page
 .side-nav-col {
-  width: 450px;
-  @media (max-width: 1199px) {
-    width: 385px;
-  }
-  @media (max-width: 989px) {
+  @media (min-width: 768px) {
     width: 300px;
   }
-  @media (max-width: 767px) {
+  @media (min-width: 990px) {
+    width: 385px;
+  }
+  @media (min-width: 1200px) {
+    width: 450px;
   }
   .header & {
     position: relative;
@@ -77,7 +64,6 @@
     @media (max-width: 767px) {
       background-position: 50% 50%;
       height: 145px;
-      max-width: 100%; // is this necessary?
       margin-bottom: 8px;
     }
   }
