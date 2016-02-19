@@ -4,6 +4,10 @@
 \*################################*/
 
 
+//Table Of Contents
+//# CONFERENCE SITE-SPECIFIC COLORS
+//# MIXINS
+
 //++++++++++++++++++++++++++++++++//
 //    # CONFERENCE SITE-SPECIFIC COLORS
 //++++++++++++++++++++++++++++++++//
@@ -49,3 +53,73 @@
 @color_georisk_accent:    #82b2ba;
 
 //++++ end # CONFERENCE SITE-SPECIFIC COLORS ++++//
+
+
+//++++++++++++++++++++++++++++++++//
+//    # MIXINS
+//++++++++++++++++++++++++++++++++//
+.mx-bc-primary() {
+  background-color: @color_site_primary;
+  #pipelinesconference &, .pipelinesconference & { background-color: @color_pl_primary; }
+  #icsiconference      &, .icsiconference      & { background-color: @color_icsi_primary; }
+  #lidconference       &, .lidconference       & { background-color: @color_lid_primary; }
+  #structurescongress  &, .structurescongress  & { background-color: @color_struct_primary; }
+  #georiskconference   &, .georiskconference   & { background-color: @color_georisk_primary; }
+}
+.mx-bc-secondary() {
+  background-color: @color_site_secondary;
+  #pipelinesconference &, .pipelinesconference & { background-color: @color_pl_secondary; }
+  #icsiconference      &, .icsiconference      & { background-color: @color_icsi_secondary; }
+  #lidconference       &, .lidconference       & { background-color: @color_lid_secondary; }
+  #structurescongress  &, .structurescongress  & { background-color: @color_struct_secondary; }
+  #georiskconference   &, .georiskconference   & { background-color: @color_georisk_secondary; }
+}
+.mx-bc-accent() {
+  background-color: @color_site_accent;
+  #pipelinesconference &, .pipelinesconference & { background-color: @color_pl_accent; }
+  #icsiconference      &, .icsiconference      & { background-color: @color_icsi_accent; }
+  #lidconference       &, .lidconference       & { background-color: @color_lid_accent; }
+  #structurescongress  &, .structurescongress  & { background-color: @color_struct_accent; }
+  #georiskconference   &, .georiskconference   & { background-color: @color_georisk_accent; }
+}
+.mx-c-primary() {
+  color: @color_site_primary;
+  #pipelinesconference &, .pipelinesconference & { color: @color_pl_primary; }
+  #icsiconference      &, .icsiconference      & { color: @color_icsi_primary; }
+  #lidconference       &, .lidconference       & { color: @color_lid_primary; }
+  #structurescongress  &, .structurescongress  & { color: @color_struct_primary; }
+  #georiskconference   &, .georiskconference   & { color: @color_georisk_primary; }
+}
+.mx-c-secondary() {
+  color: @color_site_secondary;
+  #pipelinesconference &, .pipelinesconference & { color: @color_pl_secondary; }
+  #icsiconference      &, .icsiconference      & { color: @color_icsi_secondary; }
+  #lidconference       &, .lidconference       & { color: @color_lid_secondary; }
+  #structurescongress  &, .structurescongress  & { color: @color_struct_secondary; }
+  #georiskconference   &, .georiskconference   & { color: @color_georisk_secondary; }
+}
+.mx-c-accent() {
+  color: @color_site_accent;
+  #pipelinesconference &, .pipelinesconference & { color: @color_pl_accent; }
+  #icsiconference      &, .icsiconference      & { color: @color_icsi_accent; }
+  #lidconference       &, .lidconference       & { color: @color_lid_accent; }
+  #structurescongress  &, .structurescongress  & { color: @color_struct_accent; }
+  #georiskconference   &, .georiskconference   & { color: @color_georisk_accent; }
+}
+.mx-btc-accent() {
+  border-top-color: @color_site_accent;
+  #pipelinesconference &, .pipelinesconference & { border-top-color: @color_pl_accent; }
+  #icsiconference      &, .icsiconference      & { border-top-color: @color_icsi_accent; }
+  #lidconference       &, .lidconference       & { border-top-color: @color_lid_accent; }
+  #structurescongress  &, .structurescongress  & { border-top-color: @color_struct_accent; }
+  #georiskconference   &, .georiskconference   & { border-top-color: @color_georisk_accent; }
+}
+.mx-bc-primary-fade(@height) {
+  .fade(@color_site_primary; @height);
+  #pipelinesconference &, .pipelinesconference & { .fade(@color_pl_primary;      @height); }
+  #icsiconference      &, .icsiconference      & { .fade(@color_icsi_primary;    @height); }
+  #lidconference       &, .lidconference       & { .fade(@color_lid_primary;     @height); }
+  #structurescongress  &, .structurescongress  & { .fade(@color_struct_primary;  @height); }
+  #georiskconference   &, .georiskconference   & { .fade(@color_georisk_primary; @height); }
+}
+//++++ end # MIXINS ++++//
