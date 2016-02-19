@@ -135,22 +135,7 @@
   @media (max-width: 767px) {
     &.in {
       z-index: 10;
-      background: @color_site_primary;
-      #pipelinesconference & {
-        background: @color_pl_primary;
-      }
-      #icsiconference & {
-        background: @color_icsi_primary;
-      }
-      #lidconference & {
-        background: @color_lid_primary;
-      }
-      #structurescongress & {
-        background: @color_struct_primary;
-      }
-      #georiskconference & {
-        background: @color_georisk_primary;
-      }
+      .mx-bc-primary();
       box-shadow: -4px 0px 0px rgba(0,0,0,.25);
       display: block;
       position: fixed;

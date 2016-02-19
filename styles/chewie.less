@@ -126,22 +126,7 @@
 .summary-banner,
 .c-SummaryBanner {
   color: @color_asce_header_txt;
-  background-color: @color_site_primary;
-  #pipelinesconference & {
-    background-color: @color_pl_primary;
-  }
-  #icsiconference & {
-    background-color: @color_icsi_primary;
-  }
-  #lidconference & {
-    background-color: @color_lid_primary;
-  }
-  #structurescongress & {
-    background-color: @color_struct_primary;
-  }
-  #georiskconference & {
-    background-color: @color_georisk_primary;
-  }
+  .mx-bc-primary();
   a {
     &[href], // a[href] matches both a:link and a:visited
     &:hover {
