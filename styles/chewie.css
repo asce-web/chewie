@@ -1592,6 +1592,28 @@ button {
 .georiskconference .content h6 {
   color: #00535e;
 }
+#aei-conference .c-H--alpha,
+#aei-conference .c-H--beta,
+#aei-conference .c-H--gamma,
+#aei-conference .c-H--delta,
+#aei-conference .content h1,
+#aei-conference .content h2,
+#aei-conference .content h3,
+#aei-conference .content h4,
+#aei-conference .content h5,
+#aei-conference .content h6,
+.aei-conference .c-H--alpha,
+.aei-conference .c-H--beta,
+.aei-conference .c-H--gamma,
+.aei-conference .c-H--delta,
+.aei-conference .content h1,
+.aei-conference .content h2,
+.aei-conference .content h3,
+.aei-conference .content h4,
+.aei-conference .content h5,
+.aei-conference .content h6 {
+  color: #00548e;
+}
 .c-H--alpha,
 .content h1 {
   font-weight: 500;
@@ -2007,6 +2029,12 @@ button {
 .georiskconference .c-Hero {
   background-color: #00535e;
 }
+#aei-conference .introduction,
+#aei-conference .c-Hero,
+.aei-conference .introduction,
+.aei-conference .c-Hero {
+  background-color: #00548e;
+}
 .introduction img,
 .c-Hero img {
   display: block;
@@ -2148,6 +2176,14 @@ button {
 .georiskconference .c-Hero__Hn::before {
   box-shadow: 0 -25px 25px 0 #00535e inset;
 }
+#aei-conference .img-fade,
+#aei-conference .introduction h1::before,
+#aei-conference .c-Hero__Hn::before,
+.aei-conference .img-fade,
+.aei-conference .introduction h1::before,
+.aei-conference .c-Hero__Hn::before {
+  box-shadow: 0 -25px 25px 0 #00548e inset;
+}
 .img-fade {
   display: none;
 }
@@ -2267,7 +2303,11 @@ button {
 }
 #georiskconference .date,
 .georiskconference .date {
-  color: #5f504e;
+  color: #6e6259;
+}
+#aei-conference .date,
+.aei-conference .date {
+  color: #7f7f73;
 }
 /*################################*\
     chewie  |  _comp.ui.YearBadge.less
@@ -2565,7 +2605,19 @@ button {
 .georiskconference .nav3,
 .georiskconference .tab-buttons,
 .georiskconference .navigation-level2 {
-  background-color: #5f504e;
+  background-color: #6e6259;
+}
+#aei-conference .c-NavBar,
+#aei-conference .navigation,
+#aei-conference .nav3,
+#aei-conference .tab-buttons,
+#aei-conference .navigation-level2,
+.aei-conference .c-NavBar,
+.aei-conference .navigation,
+.aei-conference .nav3,
+.aei-conference .tab-buttons,
+.aei-conference .navigation-level2 {
+  background-color: #7f7f73;
 }
 .c-NavBar__Link,
 .navigation a,
@@ -2748,6 +2800,24 @@ button {
 .georiskconference .c-NavBar--main .c-NavBar__Link:hover {
   background-color: #82b2ba;
 }
+#aei-conference .nav1 a.active,
+#aei-conference .c-NavBar--main a.active,
+#aei-conference .nav1 .c-NavBar__Link.active,
+#aei-conference .c-NavBar--main .c-NavBar__Link.active,
+#aei-conference .nav1 a:hover,
+#aei-conference .c-NavBar--main a:hover,
+#aei-conference .nav1 .c-NavBar__Link:hover,
+#aei-conference .c-NavBar--main .c-NavBar__Link:hover,
+.aei-conference .nav1 a.active,
+.aei-conference .c-NavBar--main a.active,
+.aei-conference .nav1 .c-NavBar__Link.active,
+.aei-conference .c-NavBar--main .c-NavBar__Link.active,
+.aei-conference .nav1 a:hover,
+.aei-conference .c-NavBar--main a:hover,
+.aei-conference .nav1 .c-NavBar__Link:hover,
+.aei-conference .c-NavBar--main .c-NavBar__Link:hover {
+  background-color: #aba9a0;
+}
 .nav2,
 .c-NavBar--side {
   background-color: #0c5fa8;
@@ -2850,6 +2920,12 @@ button {
 .georiskconference .c-NavBar--secondary {
   background-color: #82b2ba;
 }
+#aei-conference .navigation-level2,
+#aei-conference .c-NavBar--secondary,
+.aei-conference .navigation-level2,
+.aei-conference .c-NavBar--secondary {
+  background-color: #aba9a0;
+}
 .navigation-level2 ul,
 .c-NavBar--secondary ul {
   display: none;
@@ -2898,6 +2974,12 @@ button {
 .georiskconference .c-NavBar--tabs .c-NavBar__Link:hover,
 .georiskconference .c-NavBar--tabs .c-NavBar__Link.current {
   background-color: #82b2ba;
+}
+#aei-conference .c-NavBar--tabs .c-NavBar__Link:hover,
+#aei-conference .c-NavBar--tabs .c-NavBar__Link.current,
+.aei-conference .c-NavBar--tabs .c-NavBar__Link:hover,
+.aei-conference .c-NavBar--tabs .c-NavBar__Link.current {
+  background-color: #aba9a0;
 }
 .c-NavBar--tabs .c-NavBar__Link.current {
   position: relative;
@@ -2961,6 +3043,10 @@ button {
 .georiskconference .c-NavBar--tabs .c-NavBar__Link.current::after {
   border-top-color: #82b2ba;
 }
+#aei-conference .c-NavBar--tabs .c-NavBar__Link.current::after,
+.aei-conference .c-NavBar--tabs .c-NavBar__Link.current::after {
+  border-top-color: #aba9a0;
+}
 .tab-buttons {
   margin-bottom: 0;
   float: right !important;
@@ -3008,6 +3094,12 @@ li.active .tab-button {
 .georiskconference .tab-button:hover,
 .georiskconference li.active .tab-button {
   background-color: #82b2ba;
+}
+#aei-conference .tab-button:hover,
+#aei-conference li.active .tab-button,
+.aei-conference .tab-button:hover,
+.aei-conference li.active .tab-button {
+  background-color: #aba9a0;
 }
 li.active .tab-button {
   position: relative;
@@ -3070,6 +3162,10 @@ li.active .tab-button::after {
 #georiskconference li.active .tab-button::after,
 .georiskconference li.active .tab-button::after {
   border-top-color: #82b2ba;
+}
+#aei-conference li.active .tab-button::after,
+.aei-conference li.active .tab-button::after {
+  border-top-color: #aba9a0;
 }
 .mobile-nav {
   text-align: right;
@@ -3318,6 +3414,16 @@ a.button--disabled:focus {
 .georiskconference .summary-banner,
 .georiskconference .c-SummaryBanner {
   background-color: #00535e;
+}
+#aei-conference .header,
+#aei-conference .footer,
+#aei-conference .summary-banner,
+#aei-conference .c-SummaryBanner,
+.aei-conference .header,
+.aei-conference .footer,
+.aei-conference .summary-banner,
+.aei-conference .c-SummaryBanner {
+  background-color: #00548e;
 }
 .header a[href],
 .footer a[href],
@@ -3866,6 +3972,10 @@ a.button--disabled:focus {
 .georiskconference .a-bc-primary {
   background-color: #00535e !important;
 }
+#aei-conference .a-bc-primary,
+.aei-conference .a-bc-primary {
+  background-color: #00548e !important;
+}
 .a-bc-secondary {
   background-color: #6fc2c4 !important;
 }
@@ -3887,7 +3997,11 @@ a.button--disabled:focus {
 }
 #georiskconference .a-bc-secondary,
 .georiskconference .a-bc-secondary {
-  background-color: #5f504e !important;
+  background-color: #6e6259 !important;
+}
+#aei-conference .a-bc-secondary,
+.aei-conference .a-bc-secondary {
+  background-color: #7f7f73 !important;
 }
 .a-bc-accent {
   background-color: #714509 !important;
@@ -3912,6 +4026,10 @@ a.button--disabled:focus {
 .georiskconference .a-bc-accent {
   background-color: #82b2ba !important;
 }
+#aei-conference .a-bc-accent,
+.aei-conference .a-bc-accent {
+  background-color: #aba9a0 !important;
+}
 .a-c-primary {
   color: #6a9556 !important;
 }
@@ -3935,6 +4053,10 @@ a.button--disabled:focus {
 .georiskconference .a-c-primary {
   color: #00535e !important;
 }
+#aei-conference .a-c-primary,
+.aei-conference .a-c-primary {
+  color: #00548e !important;
+}
 .a-c-secondary {
   color: #6fc2c4 !important;
 }
@@ -3956,7 +4078,11 @@ a.button--disabled:focus {
 }
 #georiskconference .a-c-secondary,
 .georiskconference .a-c-secondary {
-  color: #5f504e !important;
+  color: #6e6259 !important;
+}
+#aei-conference .a-c-secondary,
+.aei-conference .a-c-secondary {
+  color: #7f7f73 !important;
 }
 .a-c-accent {
   color: #714509 !important;
@@ -3980,6 +4106,10 @@ a.button--disabled:focus {
 #georiskconference .a-c-accent,
 .georiskconference .a-c-accent {
   color: #82b2ba !important;
+}
+#aei-conference .a-c-accent,
+.aei-conference .a-c-accent {
+  color: #aba9a0 !important;
 }
 /*################################*\
     chewie  |  _trumps.shame.less
@@ -4133,6 +4263,10 @@ a.button--disabled:focus {
   #georiskconference .toggleable-nav.in,
   .georiskconference .toggleable-nav.in {
     background-color: #00535e;
+  }
+  #aei-conference .toggleable-nav.in,
+  .aei-conference .toggleable-nav.in {
+    background-color: #00548e;
   }
   .toggleable-nav.in .close-nav {
     display: block;
