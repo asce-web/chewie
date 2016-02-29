@@ -1,6 +1,6 @@
 
 /*################################*\
-    _comp.ui.NavBar.less
+    chewie  |  _comp.ui.NavBar.less
 \*################################*/
 @import url('../node_modules/xmeter/src/__tool.fallback.transition.less');
 
@@ -21,28 +21,13 @@
   font-weight: 700;
   text-transform: uppercase;
   color: @color_asce_header_txt;
-  background-color: @color_site_secondary;
   @media (max-width: 1199px) {
     font-size: 14px;
   }
   @media (max-width: 989px) {
     font-size: 13px;
   }
-  #pipelinesconference & {
-    background-color: @color_pl_secondary;
-  }
-  #icsiconference & {
-    background-color: @color_icsi_secondary;
-  }
-  #lidconference & {
-    background-color: @color_lid_secondary;
-  }
-  #structurescongress & {
-    background-color: @color_struct_secondary;
-  }
-  #georiskconference & {
-    background-color: @color_georisk_secondary;
-  }
+  .mx-bc-secondary();
 }
 
 // A link in a navigation bar
@@ -95,22 +80,7 @@
   .c-NavBar__Link {
     &.active, // a javascript class added on hover
     &:hover {
-      background-color: @color_site_accent;
-      #pipelinesconference & {
-        background-color: @color_pl_accent;
-      }
-      #icsiconference & {
-        background-color: @color_icsi_accent;
-      }
-      #lidconference & {
-        background-color: @color_lid_accent;
-      }
-      #structurescongress & {
-        background-color: @color_struct_accent;
-      }
-      #georiskconference & {
-        background-color: @color_georisk_accent;
-      }
+      .mx-bc-accent();
     }
   }
 }
@@ -187,7 +157,6 @@
 .c-NavBar--secondary {
   font-size: inherit; // from body
   text-transform: none;
-  background-color: @color_site_accent;
   position: absolute; // pops over page content
   width: 100%; // instead of `right: 0; left: 0;`
   z-index: 2;
@@ -195,21 +164,7 @@
   .c-NavBar__Link {
     padding: 14px 10px;
   }
-  #pipelinesconference & {
-    background-color: @color_pl_accent;
-  }
-  #icsiconference & {
-    background-color: @color_icsi_accent;
-  }
-  #lidconference & {
-    background-color: @color_lid_accent;
-  }
-  #structurescongress & {
-    background-color: @color_struct_accent;
-  }
-  #georiskconference & {
-    background-color: @color_georisk_accent;
-  }
+  .mx-bc-accent();
 
 
 
@@ -242,22 +197,7 @@
   .c-NavBar__Link {
     &:hover,
     &.current {
-      background-color: @color_site_accent;
-      #pipelinesconference & {
-        background-color: @color_pl_accent;
-      }
-      #icsiconference & {
-        background-color: @color_icsi_accent;
-      }
-      #lidconference & {
-        background-color: @color_lid_accent;
-      }
-      #structurescongress & {
-        background-color: @color_struct_accent;
-      }
-      #georiskconference & {
-        background-color: @color_georisk_accent;
-      }
+      .mx-bc-accent();
     }
     &.current {
       position: relative;
@@ -269,7 +209,6 @@
         width: 0;
         height: 0;
         border:  10px solid transparent;
-        border-top-color: @color_site_accent;
         position: absolute;
         top: 44px; // same as -margin-top for tab-buttons group
         left: 33%;
@@ -278,21 +217,7 @@
           top: 54px; // same as -margin-top for tab-buttons group
           border-width: 15px;
         }
-        #pipelinesconference & {
-          border-top-color: @color_pl_accent;
-        }
-        #icsiconference & {
-          border-top-color: @color_icsi_accent;
-        }
-        #lidconference & {
-          border-top-color: @color_lid_accent;
-        }
-        #structurescongress & {
-          border-top-color: @color_struct_accent;
-        }
-        #georiskconference & {
-          border-top-color: @color_georisk_accent;
-        }
+        .mx-btc-accent();
       }
     }
   }
@@ -326,22 +251,7 @@
 .tab-button {
   &:hover,
   li.active & {
-    background-color: @color_site_accent;
-    #pipelinesconference & {
-      background-color: @color_pl_accent;
-    }
-    #icsiconference & {
-      background-color: @color_icsi_accent;
-    }
-    #lidconference & {
-      background-color: @color_lid_accent;
-    }
-    #structurescongress & {
-      background-color: @color_struct_accent;
-    }
-    #georiskconference & {
-      background-color: @color_georisk_accent;
-    }
+    .mx-bc-accent();
   }
   li.active & {
     position: relative;
@@ -353,7 +263,6 @@
       width: 0;
       height: 0;
       border:  10px solid transparent;
-      border-top-color: @color_site_accent;
       position: absolute;
       top: 44px; // same as -margin-top for tab-buttons group
       left: 33%;
@@ -362,21 +271,7 @@
         top: 54px; // same as -margin-top for tab-buttons group
         border-width: 15px;
       }
-      #pipelinesconference & {
-        border-top-color: @color_pl_accent;
-      }
-      #icsiconference & {
-        border-top-color: @color_icsi_accent;
-      }
-      #lidconference & {
-        border-top-color: @color_lid_accent;
-      }
-      #structurescongress & {
-        border-top-color: @color_struct_accent;
-      }
-      #georiskconference & {
-        border-top-color: @color_georisk_accent;
-      }
+      .mx-btc-accent();
     }
   }
 }

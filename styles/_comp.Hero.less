@@ -1,6 +1,6 @@
 
 /*################################*\
-    _comp.Hero.less
+    chewie  |  _comp.Hero.less
 \*################################*/
 @import (reference) url('__settings.less');
 
@@ -14,28 +14,13 @@
 // : 2015-08-31
 .introduction,
 .c-Hero {
-  background-color: @color_site_primary;
   color: @color_asce_header_txt;
   margin-top: 10px;
   display: inline-block;
   position: relative;
   width: 100%;
   margin-bottom: 20px;
-  #pipelinesconference & {
-    background-color: @color_pl_primary;
-  }
-  #icsiconference & {
-    background-color: @color_icsi_primary;
-  }
-  #lidconference & {
-    background-color: @color_lid_primary;
-  }
-  #structurescongress & {
-    background-color: @color_struct_primary;
-  }
-  #georiskconference & {
-    background-color: @color_georisk_primary;
-  }
+  .mx-bc-primary();
   img {
     .c-Hero__Img;
   }
@@ -105,22 +90,7 @@
   height: @height;
   margin-top: -@height - @chewie_vru_px;
   content: '';
-  .fade(@color_site_primary; @height);
-  #pipelinesconference & {
-    .fade(@color_pl_primary; @height);
-  }
-  #icsiconference & {
-    .fade(@color_icsi_primary; @height);
-  }
-  #lidconference & {
-    .fade(@color_lid_primary; @height);
-  }
-  #structurescongress & {
-    .fade(@color_struct_primary; @height);
-  }
-  #georiskconference & {
-    .fade(@color_georisk_primary; @height);
-  }
+  .mx-bc-primary-fade(@height);
   .bg-grad(@primary) {
     // a mixin for background gradients
     background: -moz-linear-gradient(top, fade(@primary, 0%) 0%, @primary 100%); /* FF3.6+ */

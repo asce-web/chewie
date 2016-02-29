@@ -136,12 +136,21 @@
 .bronze::before {
   content: 'Bronze';
 }
+.copper::before,
+.copper .box {
+  border-color: #d6a985;
+}
+.copper::before {
+  content: 'Copper';
+}
 .financial a,
+.copper a,
 .bronze a {
   font-size: 18px;
   font-weight: 700;
 }
 .financial a:not(:last-child)::after,
+.copper a:not(:last-child)::after,
 .bronze a:not(:last-child)::after {
   content: '';
   padding-right: 12px;
