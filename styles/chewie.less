@@ -1,7 +1,7 @@
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     chewie
-    Version: 1.5.0
+    Version: 1.6.0
     Licence:
     Repo   : https://github.com/asce-web/chewie.git
     Author : ASCE web team (webteam@asce.org)
@@ -38,6 +38,7 @@
  * object.........................temporary file containing ALL objects : will be broken up later
  * Block..........................a simple block
  * SpeakerProfile.................a three-column layout containing speaker session info, headshot, and speaker brief info
+ * ListBare.......................a plain unstyled list with no markers or padding
  * ListGrid.......................a list of blocks arranged in a table-like, flexible grid
  * ColDouble......................sets two columns of text or list items
  *
@@ -96,6 +97,7 @@
 @import url('_objects.less'); // temp
 @import url('_obj.Block.less');
 @import url('_comp.SpeakerProfile.less');
+@import url('_obj.ListBare.less');
 @import url('_obj.ListGrid.less');
 @import url('_obj.ColDouble.less');
 
@@ -132,22 +134,7 @@
 .summary-banner,
 .c-SummaryBanner {
   color: @color_asce_header_txt;
-  background-color: @color_site_primary;
-  #pipelinesconference & {
-    background-color: @color_pl_primary;
-  }
-  #icsiconference & {
-    background-color: @color_icsi_primary;
-  }
-  #lidconference & {
-    background-color: @color_lid_primary;
-  }
-  #structurescongress & {
-    background-color: @color_struct_primary;
-  }
-  #georiskconference & {
-    background-color: @color_georisk_primary;
-  }
+  .mx-bc-primary();
 }
 @import url('_comp.SiteFooter.less');
 @import url('_comp.SummaryBanner.less');

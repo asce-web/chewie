@@ -1,6 +1,6 @@
 {
   "name": "chewie",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "master conferences stylesheet",
   "main": "index.html",
   "private": true,
@@ -25,11 +25,10 @@
   },
   "homepage": "https://github.com/asce-web/chewie#readme",
   "devDependencies": {
-    "clean-css": "^3.4.5",
+    "clean-css": "^3.4.9",
     "jade": "^1.11.0",
-    "less": "^2.5.3"
+    "less": "^2.6.0",
+    "xmeter": "^3.6.0"
   },
-  "dependencies": {
-    "xmeter": "^3.4.0"
-  }
+  "dependencies": {}
 }

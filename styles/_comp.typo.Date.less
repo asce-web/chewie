@@ -1,6 +1,6 @@
 
 /*################################*\
-    _comp.typo.Date.less
+    chewie  |  _comp.typo.Date.less
 \*################################*/
 
 
@@ -12,24 +12,9 @@
 // ^updated
 // : 2015-09-01
 .date {
-  color: @color_site_secondary;
   font-weight: 600;
   font-size: 14px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  #pipelinesconference & {
-    color: @color_pl_secondary;
-  }
-  #icsiconference & {
-    color: @color_icsi_secondary;
-  }
-  #lidconference & {
-    color: @color_lid_secondary;
-  }
-  #structurescongress & {
-    color: @color_struct_secondary;
-  }
-  #georiskconference & {
-    color: @color_georisk_secondary;
-  }
+  .mx-c-secondary();
 }

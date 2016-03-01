@@ -14,19 +14,112 @@ html
     main
       h1 Objects
       section.doc-ss
+        h2 Block (.o-Block)
+        figure
+          p.
+            A simple block object. Use this class to display an element as a
+            #[span.o-Block block element,]
+            with an inherited line-height to maintain vertical rhythm.
+          pre.
+            ... to display an element as a &lt;span class="#[u o-Block]"&gt;block element,&lt;/span&gt; with an ...
+      section.doc-ss
+        h2 List Bare (.o-ListBare)
+        p.
+          Use the List Bare object to remove the usual styles accompanied by
+          #[code ol] and #[code ul] elements.
+          The result is a list of items, each on its own line.
+        figure
+          ul.o-ListBare
+            li Burns &amp; McDonnell Engineering
+            li DIS-TRAN Steel, LLC
+            li EDM International
+            li Electrical Consultants, Inc.
+            li Fabrimet Inc.
+            li Falcon Steel Company
+          pre.
+            &lt;ul class="#[u o-ListBare]"&gt;
+              &lt;li&gt;Burns &amp; McDonnell Engineering&lt;/li&gt;
+              &lt;li&gt;DIS-TRAN Steel, LLC&lt;/li&gt;
+              ...
+            &lt;/ul&gt;
+      section.doc-ss
         h2 List Grid (.o-ListGrid)
         p.
           A List Grid is simply a list of items arranged like blocks in a grid.
           It has the structure of a list in that all items share the same container
           (unlike tables where items are in different rows), while at the same time
           appearing like a table with rows and columns.
-          The List Grid is flexible and responsive, adjusting the number of
+          The List Grid can be flexible and responsive, adjusting the number of
           columns based on screen size.
         p.
           The container must have the #[code .o-ListGrid] class and
           each item must have the #[code .o-ListGrid__Item] class.
+          To remove normal list styles (bullets, etc),
+          add class #[code .o-ListBare] to the container.
         figure
-            ul.o-ListGrid
+          ul.o-ListBare.o-ListGrid
+            li.o-ListGrid__Item Burns &amp; McDonnell Engineering
+            li.o-ListGrid__Item DIS-TRAN Steel, LLC
+            li.o-ListGrid__Item EDM International
+            li.o-ListGrid__Item Electrical Consultants, Inc.
+            li.o-ListGrid__Item Fabrimet Inc.
+            li.o-ListGrid__Item Falcon Steel Company
+            li.o-ListGrid__Item Sabre-FWT
+            li.o-ListGrid__Item HDR
+            li.o-ListGrid__Item Mitas Energy
+            li.o-ListGrid__Item Power Consulting Associates, LLC
+            li.o-ListGrid__Item Power Line Systems, Inc.
+            li.o-ListGrid__Item Quanta Services
+            li.o-ListGrid__Item ReliaPOLE Inspection Services
+            li.o-ListGrid__Item Sabre-FWT
+            li.o-ListGrid__Item SAE Towers
+            li.o-ListGrid__Item TAPP Steel Poles
+            li.o-ListGrid__Item Trinity Meyer Utility Structures
+            li.o-ListGrid__Item TRC Engineers
+            li.o-ListGrid__Item Underground Devices
+            li.o-ListGrid__Item Valmont Newmark
+          pre.
+            &lt;ul class="o-ListBare #[u o-ListGrid]"&gt;
+              &lt;li class="#[u o-ListGrid__Item]"&gt;Burns &amp; McDonnell Engineering&lt;/li&gt;
+              &lt;li class="#[u o-ListGrid__Item]"&gt;DIS-TRAN Steel, LLC&lt;/li&gt;
+              ...
+            &lt;/ul&gt;
+        section
+          h3 Subclasses of List Grid
+          p.
+            #[em Add] one of the following classes to an element with class
+            #[code .o-ListGrid] to specify the number of columns.
+          style(scoped="").
+            .a-w-1o4 { width: 25%; }
+            .a-w-3o4 { width: 75%; }
+          dl.o-ListGrid
+            dt.a-w-1o4: code .o-ListGrid--halves
+            dd.a-w-3o4 grid with 2 columns
+            dt.a-w-1o4: code .o-ListGrid--thirds
+            dd.a-w-3o4 grid with 3 columns
+            dt.a-w-1o4: code .o-ListGrid--fourths
+            dd.a-w-3o4 grid with 4 columns
+            dt.a-w-1o4: code .o-ListGrid--fifths
+            dd.a-w-3o4 grid with 5 columns
+            dt.a-w-1o4: code .o-ListGrid--sixths
+            dd.a-w-3o4 grid with 6 columns
+          p.
+            In addition to these classes, append a
+            #[code @sK],
+            #[code @sM],
+            #[code @sG], or
+            #[code @sT]
+            to force the list to have the specified columns in a
+            #[b small],
+            #[b medium],
+            #[b large], or
+            #[b extra-large]
+            screen size, respectively.
+          figure
+            figcaption.
+              For example, the grid below has 3 columns by default but
+              5 columns for a large screen (bigger than 960px).
+            ul.o-ListBare.o-ListGrid.o-ListGrid--thirds(class="o-ListGrid--fifths@sG")
               li.o-ListGrid__Item Burns &amp; McDonnell Engineering
               li.o-ListGrid__Item DIS-TRAN Steel, LLC
               li.o-ListGrid__Item EDM International
@@ -40,13 +133,19 @@ html
               li.o-ListGrid__Item Power Line Systems, Inc.
               li.o-ListGrid__Item Quanta Services
               li.o-ListGrid__Item ReliaPOLE Inspection Services
-              li.o-ListGrid__Item Sabre-FWT 
+              li.o-ListGrid__Item Sabre-FWT
               li.o-ListGrid__Item SAE Towers
-              li.o-ListGrid__Item TAPP Steel Poles 
+              li.o-ListGrid__Item TAPP Steel Poles
               li.o-ListGrid__Item Trinity Meyer Utility Structures
               li.o-ListGrid__Item TRC Engineers
-              li.o-ListGrid__Item Underground Devices 
+              li.o-ListGrid__Item Underground Devices
               li.o-ListGrid__Item Valmont Newmark
+            pre.
+              &lt;ul class="o-ListBare #[u o-ListGrid] #[u o-ListGrid--thirds] #[u o-ListGrid--fifths@sG]"&gt;
+                &lt;li class="o-ListGrid__Item"&gt;Burns &amp; McDonnell Engineering&lt;/li&gt;
+                &lt;li class="o-ListGrid__Item"&gt;DIS-TRAN Steel, LLC&lt;/li&gt;
+                ...
+              &lt;/ul&gt;
       section.doc-ss
         h2 Column Double (.o-ColDouble)
         p.
@@ -63,26 +162,36 @@ html
             that the typical column width should be 45&ndash;75 characters,
             otherwise readers will have a hard time reading the long passage
             of text.
+          pre.
+            &lt;p class="#[u o-ColDouble]"&gt;
+              This paragraph is a double column and ...
+            &lt;/p&gt;
         figure
-            ul.o-ColDouble
-              li Burns &amp; McDonnell Engineering
-              li DIS-TRAN Steel, LLC
-              li EDM International
-              li Electrical Consultants, Inc.
-              li Fabrimet Inc.
-              li Falcon Steel Company
-              li Sabre-FWT
-              li HDR
-              li Mitas Energy
-              li Power Consulting Associates, LLC
-              li Power Line Systems, Inc.
-              li Quanta Services
-              li ReliaPOLE Inspection Services
-              li Sabre-FWT
-              li SAE Towers
-              li TAPP Steel Poles
-              li Trinity Meyer Utility Structures
-              li TRC Engineers
-              li Underground Devices
-              li Valmont Newmark
-              li NOTE that there is a browser bug in which list-item markers do not render after the first column of a list.
+          ul.o-ColDouble
+            li Burns &amp; McDonnell Engineering
+            li DIS-TRAN Steel, LLC
+            li EDM International
+            li Electrical Consultants, Inc.
+            li Fabrimet Inc.
+            li Falcon Steel Company
+            li Sabre-FWT
+            li HDR
+            li Mitas Energy
+            li Power Consulting Associates, LLC
+            li Power Line Systems, Inc.
+            li Quanta Services
+            li ReliaPOLE Inspection Services
+            li Sabre-FWT
+            li SAE Towers
+            li TAPP Steel Poles
+            li Trinity Meyer Utility Structures
+            li TRC Engineers
+            li Underground Devices
+            li Valmont Newmark
+            li NOTE that there is a browser bug in which list-item markers do not render after the first column of a list.
+          pre.
+            &lt;ul class="#[u o-ColDouble]"&gt;
+              &lt;li&gt;Burns &amp; McDonnell Engineering&lt;/li&gt;
+              &lt;li&gt;DIS-TRAN Steel, LLC&lt;/li&gt;
+              ...
+            &lt;/ul&gt;

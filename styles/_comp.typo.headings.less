@@ -1,6 +1,6 @@
 
 /*################################*\
-    _comp.typo.headings.less
+    chewie  |  _comp.typo.headings.less
 \*################################*/
 
 
@@ -23,22 +23,7 @@
 .content h5,
 .content h6 {
   text-transform: uppercase;
-  color: @color_site_primary;
-  #pipelinesconference & {
-    color: @color_pl_primary;
-  }
-  #icsiconference & {
-    color: @color_icsi_primary;
-  }
-  #lidconference & {
-    color: @color_lid_primary;
-  }
-  #structurescongress & {
-    color: @color_struct_primary;
-  }
-  #georiskconference & {
-    color: @color_georisk_primary;
-  }
+  .mx-c-primary();
 }
 
 .c-H--alpha,
@@ -169,7 +154,7 @@
     line-height: (1.25/0.875);
   }
   @media (max-width: 767px) {
-    padding: 10px;
+    padding: 10px 0;
     margin-top: 0; // override margin
   }
 }
