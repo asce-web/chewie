@@ -122,6 +122,8 @@ html
             h4 Link to PDF (.c-LinkPdf)
             p Use this instead of #[code a[href$='.pdf']] (href ends with `.pdf`).
             figure
+              a(href="example.pdf") This is an a[href$='.pdf'] (no extra styling).
+              br
               a.c-LinkPdf This is a .c-LinkPdf
               br
               a.c-LinkPdf(href="") This is a .c-LinkPdf[href]
@@ -129,15 +131,22 @@ html
             h4 Link to Email (.c-LinkEmail)
             p Use this instead of #[code a[href^='mailto:']] (href starts with `mailto:`).
             figure
+              a(href="mailto:me@example.com") This is an a[href^='mailto:'] (no extra styling).
+              br
               a.c-LinkEmail This is a .c-LinkEmail
               br
               a.c-LinkEmail(href="mailto:example.com") This is a .c-LinkEmail[href]
           section.doc-ss
             h4 Link in banner, header, footer, etc. (.c-LinkBanner)
             figure
-              a.c-LinkBanner This is a .c-LinkBanner
-              br
-              a.c-LinkBanner(href="") This is a .c-LinkBanner[href]
+              div.c-SummaryBanner
+                a This is an a (no extra styling).
+                br
+                a(href="") This is an a[href] (no extra styling).
+                br
+                a.c-LinkBanner This is a .c-LinkBanner
+                br
+                a.c-LinkBanner(href="") This is a .c-LinkBanner[href]
       section.doc-ss
         h2 Callouts
         section.doc-ss
