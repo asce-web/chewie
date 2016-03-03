@@ -2240,7 +2240,7 @@ button {
 .date-block .o-DateBlock__Date,
 .o-DateBlock .o-DateBlock__Date {
   text-align: right;
-  min-width: 90px;
+  width: 90px;
   padding-right: 10px;
   border-right: 1px solid #ccc;
 }
@@ -2248,32 +2248,8 @@ button {
 .o-DateBlock .description-col,
 .date-block .o-DateBlock__Desc,
 .o-DateBlock .o-DateBlock__Desc {
-  max-width: 205px;
+  width: calc(100% -  90px);
   padding-left: 10px;
-}
-@media (max-width: 1199px) {
-  .date-block .description-col,
-  .o-DateBlock .description-col,
-  .date-block .o-DateBlock__Desc,
-  .o-DateBlock .o-DateBlock__Desc {
-    max-width: 180px;
-  }
-}
-@media (max-width: 989px) {
-  .date-block .description-col,
-  .o-DateBlock .description-col,
-  .date-block .o-DateBlock__Desc,
-  .o-DateBlock .o-DateBlock__Desc {
-    max-width: 95px;
-  }
-}
-@media (max-width: 767px) {
-  .date-block .description-col,
-  .o-DateBlock .description-col,
-  .date-block .o-DateBlock__Desc,
-  .o-DateBlock .o-DateBlock__Desc {
-    max-width: 582px;
-  }
 }
 /*################################*\
     chewie  |  _comp.typo.Date.less
