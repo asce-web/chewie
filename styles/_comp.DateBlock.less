@@ -34,26 +34,13 @@
   .date-col,
   .o-DateBlock__Date {
     text-align: right;
-    min-width: @date_w;
+    width: @date_w;
     padding-right: @date_mr;
     border-right: 1px solid #ccc; // same as speaker-profile dateline border
   }
   .description-col,
   .o-DateBlock__Desc {
-    @date_block_width: 305px;
-    max-width: (@date_block_width - @date_w - @date_mr); // 205
+    width: calc(~'100% - ' @date_w);
     padding-left: @date_mr;
-    @media (max-width: 1199px) {
-      @date_block_width: 280px;
-      max-width: (@date_block_width - @date_w - @date_mr); // 180
-    }
-    @media (max-width: 989px) {
-      @date_block_width: 195px;
-      max-width: (@date_block_width - @date_w - @date_mr); // 95
-    }
-    @media (max-width: 767px) {
-      @date_block_width: 682px;
-      max-width: (@date_block_width - @date_w - @date_mr); // 582
-    }
   }
 }
