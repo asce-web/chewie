@@ -52,6 +52,9 @@
  * Person.........................person name and title
  * DateBlock......................a block containing a date and a description of an event
  * Date...........................inline span of text indicating any date
+ * LinkBanner.....................a link inside footer or other banner
+ * LinkEmail......................a link to an email address
+ * LinkPdf........................a link to a PDF document
  *
  * ### User-Interactive Components
  * YearBadge......................shield with year at top of all pages
@@ -106,6 +109,11 @@
 @import url('_comp.DateBlock.less');
 @import url('_comp.typo.Date.less');
 
+@import url('_comp.typo.LinkArrow.less');
+@import url('_comp.typo.LinkBanner.less');
+@import url('_comp.typo.LinkEmail.less');
+@import url('_comp.typo.LinkPdf.less');
+
 
 @import url('_comp.ui.YearBadge.less');
 @import url('_comp.ui.YearRibbon.less');
@@ -127,19 +135,12 @@
 .c-SummaryBanner {
   color: @color_asce_header_txt;
   .mx-bc-primary();
-  a {
-    &[href], // a[href] matches both a:link and a:visited
-    &:hover {
-    color: inherit;
-    }
-  }
 }
 @import url('_comp.SiteFooter.less');
 @import url('_comp.SummaryBanner.less');
 
 
 @import url('_comp.LinkBlock.less');
-@import url('_comp.LinkArrow.less');
 
 @import url('_comp.SponsorHn.less');
 @import url('_comp.SponsorBlock.less');
