@@ -7,41 +7,64 @@
 // a group of links with a header link and sub links.
 // it corresponds to a top-level page.
 // this component belongs in the site footer
+// TODO: remove this and just use a simple <ul class="o-ListBare">
 .link-block {
-  margin-bottom: 20px;
+  margin-bottom: 20px; // FIXME remove this once you put a <ul> in
 }
 
-.c-LinkBlock__Hn,
-.link-block h3 {
-  opacity: .7;
-  text-transform: uppercase;
+
+// A LinkBlockHn is a link that corresponds to the top-level pages,
+// Program, About, etc.
+// Subclasses:
+// `--title` - same as parent but not an actual hyperlink
+//
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2015-11-13
+/*.footer .details*/.col3 a.large, // why attend, etc
+/*.footer .details*/.col2 a.large, // why attend, etc
+.link-block .large.uppercase, // Program, etc
+.link-block.contact h3, // Contact Us
+.link-block.connect h3, // Connect with ASCE
+.c-LinkBlockHn {
+  margin-bottom: 20px; // we wouldn’t need this if it were in a <h1>
   font-weight: 600;
-  font-size: 18px;
+  font-size: 18px; // may remove this? or at least change line-height.
+  text-transform: uppercase;
   @media (max-width: 989px) {
-    font-size: 14px;
+    font-size: 14px; // may remove this? or at least change line-height.
   }
+}
+.link-block .large.uppercase {
+  // Program, etc has links under
+  margin-bottom: 0; // override above
+}
+.link-block.contact h3, // Contact Us
+.link-block.connect h3, // Connect with ASCE
+.c-LinkBlockHn--title {
+  font-weight: 700;
+  opacity: .7;
 }
 
 .link-block a,
-.footer .details a, // for links not in a link-block
-.c-LinkBlock__Link {
+/*.footer .details*/.col3 a.large,
+/*.footer .details*/.col2 a.large {
   display: block;       // FIXME remove this and put the links in a <ul> with <li>s
   line-height: inherit; // FIXME remove this and put the links in a <ul> with <li>s
-  &:hover {
-    text-decoration: underline;
-  }
 }
 
-.c-LinkBlock--connect {
-  .c-LinkBlock__Hn {
-  }
+.link-block.contact a {
+  margin-bottom: 20px; // we wouldn’t need this if it were in a <h1>
+  font-size: 18px; // may remove this? or at least change line-height.
 }
-.link-block.connect h3 {
-}
+// no need for this entire thing. read comments below.
+// TODO remove on next major release.
 .link-block.connect a {
-  display: inline-block;
-  margin-right: 1em;
+  display: inline; // just use an inline list on the parent (class="o-ListInline")
+  margin-right: 1em; // we can use a bang for this (class="!mr:1")
+  line-height: 0; // because d:il;
   &:first-of-type {
-    margin-left: 9px;
+    margin-left: 9px; // this can, and should, be an inline style.
   }
 }
