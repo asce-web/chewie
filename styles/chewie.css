@@ -1,6 +1,6 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     chewie
-    Version: 1.6.0
+    Version: 1.7.0
     Licence:
     Repo   : https://github.com/asce-web/chewie.git
     Author : ASCE web team (webteam@asce.org)
@@ -947,6 +947,9 @@ img {
  * Person.........................person name and title
  * DateBlock......................a block containing a date and a description of an event
  * Date...........................inline span of text indicating any date
+ * LinkBanner.....................a link inside footer or other banner
+ * LinkEmail......................a link to an email address
+ * LinkPdf........................a link to a PDF document
  *
  * ### User-Interactive Components
  * YearBadge......................shield with year at top of all pages
@@ -982,7 +985,7 @@ img {
     chewie  |  __settings.less
 \*################################*/
 /*################################*\
-    __settings.conf-colors.less
+    chewie  |  __settings.conf-colors.less
 \*################################*/
 /*################################*\
     chewie  |  __tools.sprite.less
@@ -1070,48 +1073,9 @@ dt {
 a[href] {
   color: #0c5fa8;
 }
-a[href]:hover {
-  color: #19a1cf;
-}
 a:hover,
 a:focus {
-  text-decoration: none;
-  color: inherit;
-}
-a[href^='mailto:']::before {
-  content: '';
-  background-image: url('../img/sprite.png');
-  width: 30px;
-  height: 30px;
-  display: inline-block;
-  font-size: 30px;
-  background-position: -5em -6em;
-  margin-top: -7px;
-  margin-right: 6px;
-  margin-bottom: -7px;
-  position: relative;
-  top: 4px;
-}
-@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
-  a[href^='mailto:']::before {
-    font-size: 30px;
-    background-image: url('../img/sprite@2x.png');
-    background-size: 590px 330px;
-  }
-}
-a[href$='.pdf']::after {
-  display: inline;
-  width: auto;
-  height: auto;
-  content: 'PDF';
-  padding: 1px 4px;
-  margin-left: 8px;
-  position: relative;
-  top: -1px;
-  font-size: 12px;
-  font-weight: 700;
-  background: #0c5fa8;
-  color: #fff;
+  color: #19a1cf;
 }
 /*++++++++++++++++++++++++++++++++*\
     ## FORMS
@@ -2066,16 +2030,6 @@ button {
     line-height: 1.38888889;
   }
 }
-.introduction a,
-.c-Hero a,
-.introduction a:hover,
-.c-Hero a:hover,
-.introduction a:visited,
-.c-Hero a:visited,
-.introduction a:active,
-.c-Hero a:active {
-  color: inherit;
-}
 .c-Hero__Img {
   display: block;
   margin: auto;
@@ -2240,7 +2194,7 @@ button {
 .date-block .o-DateBlock__Date,
 .o-DateBlock .o-DateBlock__Date {
   text-align: right;
-  min-width: 90px;
+  width: 90px;
   padding-right: 10px;
   border-right: 1px solid #ccc;
 }
@@ -2248,32 +2202,8 @@ button {
 .o-DateBlock .description-col,
 .date-block .o-DateBlock__Desc,
 .o-DateBlock .o-DateBlock__Desc {
-  max-width: 205px;
+  width: calc(100% -  90px);
   padding-left: 10px;
-}
-@media (max-width: 1199px) {
-  .date-block .description-col,
-  .o-DateBlock .description-col,
-  .date-block .o-DateBlock__Desc,
-  .o-DateBlock .o-DateBlock__Desc {
-    max-width: 180px;
-  }
-}
-@media (max-width: 989px) {
-  .date-block .description-col,
-  .o-DateBlock .description-col,
-  .date-block .o-DateBlock__Desc,
-  .o-DateBlock .o-DateBlock__Desc {
-    max-width: 95px;
-  }
-}
-@media (max-width: 767px) {
-  .date-block .description-col,
-  .o-DateBlock .description-col,
-  .date-block .o-DateBlock__Desc,
-  .o-DateBlock .o-DateBlock__Desc {
-    max-width: 582px;
-  }
 }
 /*################################*\
     chewie  |  _comp.typo.Date.less
@@ -2308,6 +2238,151 @@ button {
 #aei-conference .date,
 .aei-conference .date {
   color: #7f7f73;
+}
+/*################################*\
+    chewie  |  _comp.typo.LinkArrow.less
+\*################################*/
+.link-arrow,
+.c-LinkArrow {
+  font-weight: 700;
+  text-transform: uppercase;
+  display: block;
+  line-height: inherit;
+  margin-bottom: 20px;
+}
+.link-arrow::after,
+.c-LinkArrow::after {
+  content: '';
+  background-image: url('../img/sprite.png');
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  font-size: 30px;
+  background-position: -10em -6em;
+  margin-top: -7px;
+  margin-bottom: -7px;
+  position: relative;
+  top: 1px;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+  .link-arrow::after,
+  .c-LinkArrow::after {
+    font-size: 30px;
+    background-image: url('../img/sprite@2x.png');
+    background-size: 590px 330px;
+  }
+}
+.footer .link-arrow::after,
+.footer .c-LinkArrow::after {
+  background-position: -7em -6em;
+}
+/*################################*\
+    _comp.typo.LinkBanner.less
+\*################################*/
+.header a {
+  color: inherit !important;
+}
+.footer .details a,
+.copyright a,
+.summary-banner a,
+.c-SummaryBanner a,
+.c-LinkBanner,
+.footer .details a[href],
+.copyright a[href],
+.summary-banner a[href],
+.c-SummaryBanner a[href],
+.c-LinkBanner[href],
+.footer .details a:hover,
+.copyright a:hover,
+.summary-banner a:hover,
+.c-SummaryBanner a:hover,
+.c-LinkBanner:hover,
+.footer .details a[href]:hover,
+.copyright a[href]:hover,
+.summary-banner a[href]:hover,
+.c-SummaryBanner a[href]:hover,
+.c-LinkBanner[href]:hover,
+.footer .details a:focus,
+.copyright a:focus,
+.summary-banner a:focus,
+.c-SummaryBanner a:focus,
+.c-LinkBanner:focus,
+.footer .details a[href]:focus,
+.copyright a[href]:focus,
+.summary-banner a[href]:focus,
+.c-SummaryBanner a[href]:focus,
+.c-LinkBanner[href]:focus,
+.footer .details a:visited,
+.copyright a:visited,
+.summary-banner a:visited,
+.c-SummaryBanner a:visited,
+.c-LinkBanner:visited,
+.footer .details a[href]:visited,
+.copyright a[href]:visited,
+.summary-banner a[href]:visited,
+.c-SummaryBanner a[href]:visited,
+.c-LinkBanner[href]:visited,
+.footer .details a:active,
+.copyright a:active,
+.summary-banner a:active,
+.c-SummaryBanner a:active,
+.c-LinkBanner:active,
+.footer .details a[href]:active,
+.copyright a[href]:active,
+.summary-banner a[href]:active,
+.c-SummaryBanner a[href]:active,
+.c-LinkBanner[href]:active {
+  color: inherit;
+}
+.footer .details a:hover,
+.copyright a:hover,
+.summary-banner a:hover,
+.c-SummaryBanner a:hover,
+.c-LinkBanner:hover,
+.footer .details a:focus,
+.copyright a:focus,
+.summary-banner a:focus,
+.c-SummaryBanner a:focus,
+.c-LinkBanner:focus {
+  text-decoration: underline;
+}
+/*################################*\
+    _comp.typo.LinkEmail.less
+\*################################*/
+.c-LinkEmail::before {
+  content: '';
+  background-image: url('../img/sprite.png');
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  font-size: 30px;
+  background-position: -5em -6em;
+  margin-top: -7px;
+  margin-right: 6px;
+  margin-bottom: -7px;
+  position: relative;
+  top: 4px;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+  .c-LinkEmail::before {
+    font-size: 30px;
+    background-image: url('../img/sprite@2x.png');
+    background-size: 590px 330px;
+  }
+}
+/*################################*\
+    _comp.typo.LinkPdf.less
+\*################################*/
+.c-LinkPdf::after {
+  content: 'PDF';
+  padding: 1px 4px;
+  margin-left: 8px;
+  position: relative;
+  top: -1px;
+  font-size: 12px;
+  font-weight: 700;
+  background: #0c5fa8;
+  color: #fff;
 }
 /*################################*\
     chewie  |  _comp.ui.YearBadge.less
@@ -2686,7 +2761,7 @@ button {
 .nav3 a.active,
 .tab-button.active,
 .navigation-level2 a.active {
-  color: inherit;
+  color: inherit !important;
 }
 .c-NavBar__Link:hover,
 .navigation a:hover,
@@ -3425,16 +3500,6 @@ a.button--disabled:focus {
 .aei-conference .c-SummaryBanner {
   background-color: #00548e;
 }
-.header a[href],
-.footer a[href],
-.summary-banner a[href],
-.c-SummaryBanner a[href],
-.header a:hover,
-.footer a:hover,
-.summary-banner a:hover,
-.c-SummaryBanner a:hover {
-  color: inherit;
-}
 /*################################*\
     chewie  |  _comp.SiteFooter.less
 \*################################*/
@@ -3447,7 +3512,6 @@ a.button--disabled:focus {
 }
 .footer .details {
   padding-top: 20px;
-  font-weight: 600;
 }
 .footer .mobile-nav {
   margin-left: -15px;
@@ -3481,77 +3545,54 @@ a.button--disabled:focus {
 .link-block {
   margin-bottom: 20px;
 }
-.c-LinkBlock__Hn,
-.link-block h3 {
-  opacity: .7;
-  text-transform: uppercase;
+/*.footer .details*/
+.col3 a.large,
+.col2 a.large,
+.link-block .large.uppercase,
+.link-block.contact h3,
+.link-block.connect h3,
+.c-LinkBlockHn {
+  margin-bottom: 20px;
   font-weight: 600;
   font-size: 18px;
+  text-transform: uppercase;
 }
 @media (max-width: 989px) {
-  .c-LinkBlock__Hn,
-  .link-block h3 {
+  .col3 a.large,
+  .col2 a.large,
+  .link-block .large.uppercase,
+  .link-block.contact h3,
+  .link-block.connect h3,
+  .c-LinkBlockHn {
     font-size: 14px;
   }
 }
+.link-block .large.uppercase {
+  margin-bottom: 0;
+}
+.link-block.contact h3,
+.link-block.connect h3,
+.c-LinkBlockHn--title {
+  font-weight: 700;
+  opacity: .7;
+}
 .link-block a,
-.footer .details a,
-.c-LinkBlock__Link {
+.col3 a.large,
+.col2 a.large {
   display: block;
   line-height: inherit;
 }
-.link-block a:hover,
-.footer .details a:hover,
-.c-LinkBlock__Link:hover {
-  text-decoration: underline;
-}
-.link-block.connect a {
-  display: inline-block;
-  margin-right: 1em;
-}
-.link-block.connect a:first-of-type {
-  margin-left: 9px;
-}
-/*################################*\
-    chewie  |  _comp.LinkArrow.less
-\*################################*/
-.link-arrow {
-  font-size: 16px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-.link-arrow::after {
-  content: '';
-  background-image: url('../img/sprite.png');
-  width: 30px;
-  height: 30px;
-  display: inline-block;
-  font-size: 30px;
-  background-position: -10em -6em;
-  margin-top: -7px;
-  margin-bottom: -7px;
-  position: relative;
-  top: 1px;
-}
-@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
-  .link-arrow::after {
-    font-size: 30px;
-    background-image: url('../img/sprite@2x.png');
-    background-size: 590px 330px;
-  }
-}
-.footer .link-arrow {
+.link-block.contact a {
   margin-bottom: 20px;
   font-size: 18px;
 }
-.footer .link-arrow::after {
-  background-position: -7em -6em;
+.link-block.connect a {
+  display: inline;
+  margin-right: 1em;
+  line-height: 0;
 }
-@media (max-width: 1199px) {
-  .footer .link-arrow {
-    font-size: 16px;
-    margin-bottom: 16px;
-  }
+.link-block.connect a:first-of-type {
+  margin-left: 9px;
 }
 /*################################*\
     chewie  |  _comp.SponsorHn.less
@@ -3592,6 +3633,35 @@ a.button--disabled:focus {
   .top-sponsor-block .box,
   .c-SponsorBlock .box {
     padding: 5px;
+  }
+}
+.premier::before,
+.c-SponsorBlock--premier::before,
+.premier .box,
+.c-SponsorBlock--premier .box {
+  border-color: #cde1ec;
+}
+.premier::before,
+.c-SponsorBlock--premier::before {
+  content: 'Premier';
+}
+.premier img,
+.c-SponsorBlock--premier img {
+  max-width: 360px;
+  max-height: 160px;
+}
+@media (max-width: 989px) {
+  .premier img,
+  .c-SponsorBlock--premier img {
+    max-width: 250px;
+    max-height: 110px;
+  }
+}
+@media (max-width: 767px) {
+  .premier img,
+  .c-SponsorBlock--premier img {
+    max-width: 120px;
+    max-height: 65px;
   }
 }
 .platinum::before,
@@ -3726,6 +3796,37 @@ a.button--disabled:focus {
     margin-right: 0;
   }
 }
+.premier .top-sponsor-block img,
+.premier .coop-orgs-block img,
+.premier .c-SponsorBlock__Logo,
+.c-SponsorBlock--premier .top-sponsor-block img,
+.c-SponsorBlock--premier .coop-orgs-block img,
+.c-SponsorBlock--premier .c-SponsorBlock__Logo {
+  max-width: 360px;
+  max-height: 160px;
+}
+@media (max-width: 989px) {
+  .premier .top-sponsor-block img,
+  .premier .coop-orgs-block img,
+  .premier .c-SponsorBlock__Logo,
+  .c-SponsorBlock--premier .top-sponsor-block img,
+  .c-SponsorBlock--premier .coop-orgs-block img,
+  .c-SponsorBlock--premier .c-SponsorBlock__Logo {
+    max-width: 250px;
+    max-height: 110px;
+  }
+}
+@media (max-width: 767px) {
+  .premier .top-sponsor-block img,
+  .premier .coop-orgs-block img,
+  .premier .c-SponsorBlock__Logo,
+  .c-SponsorBlock--premier .top-sponsor-block img,
+  .c-SponsorBlock--premier .coop-orgs-block img,
+  .c-SponsorBlock--premier .c-SponsorBlock__Logo {
+    max-width: 120px;
+    max-height: 65px;
+  }
+}
 .platinum .top-sponsor-block img,
 .platinum .coop-orgs-block img,
 .platinum .c-SponsorBlock__Logo,
@@ -3786,6 +3887,22 @@ a.button--disabled:focus {
   .c-SponsorBlock--gold .c-SponsorBlock__Logo {
     max-width: 90px;
     max-height: 48px;
+  }
+}
+.c-SponsorBlock__Logo--premier {
+  max-width: 360px;
+  max-height: 160px;
+}
+@media (max-width: 989px) {
+  .c-SponsorBlock__Logo--premier {
+    max-width: 250px;
+    max-height: 110px;
+  }
+}
+@media (max-width: 767px) {
+  .c-SponsorBlock__Logo--premier {
+    max-width: 120px;
+    max-height: 65px;
   }
 }
 .c-SponsorBlock__Logo--platinum {
@@ -3905,28 +4022,6 @@ a.button--disabled:focus {
 \*################################*/
 .light {
   font-weight: 300;
-}
-.large {
-  font-size: 14px;
-}
-.details .large {
-  font-size: 18px;
-  font-weight: 600;
-}
-@media (max-width: 989px) {
-  .details .large {
-    font-size: 14px;
-  }
-}
-.details .col2 .large {
-  text-transform: uppercase;
-}
-.details .col3 .large {
-  margin-bottom: 20px;
-  text-transform: uppercase;
-}
-.details .col4 .large {
-  margin: 10px;
 }
 /*################################*\
     chewie  |  _trumps.utils.less
@@ -4120,9 +4215,6 @@ a.button--disabled:focus {
 }
 .content {
   margin-bottom: 20px;
-}
-.footer a:hover {
-  text-decoration: underline;
 }
 .breadcrumb-link {
   font-weight: 700;
@@ -4531,6 +4623,10 @@ ul.pb-dz-control-column-ul {
 }
 li {
   line-height: inherit;
+}
+a:hover,
+a:focus {
+  text-decoration: none;
 }
 /*main .content-main [data-ux-pagebuilder="Column"]>ul>li,
 main .content-right [data-ux-pagebuilder="Column"]>ul>li,

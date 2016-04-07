@@ -7,6 +7,7 @@
 // A block given to one sponsor level
 // (e.g. Platinum or Gold)
 // Subclasses:
+// `--premier`
 // `--platinum`
 // `--gold`
 // `--corporate`
@@ -20,7 +21,7 @@
 // ^author
 // : Chris Harvey
 // ^updated
-// : 2015-08-27
+// : 2016-04-03
 .top-sponsor-block,
 .c-SponsorBlock {
   @border_width: 2px;
@@ -45,6 +46,20 @@
     @media (max-width: 767px) {
       padding: 5px;
     }
+  }
+}
+.premier,
+.c-SponsorBlock--premier {
+  &::before,
+  .box  {
+    border-color: @color_premier;
+  }
+  &::before {
+    content: 'Premier';
+  }
+  img {
+    // TODO remove this selector once we can apply a class
+    .c-SponsorBlock__Logo--premier;
   }
 }
 .platinum,
@@ -119,13 +134,14 @@
 
 // A generic logo in a sponsor block
 // Subclasses:
+// `--premier`  - in a premier block
 // `--platinum` - in a platinum block
 // `--gold`     - in a gold block
 //
 // ^author
 // : Chris Harvey
 // ^updated
-// : 2015-08-27
+// : 2016-04-03
 .top-sponsor-block img,
 .coop-orgs-block img,
 .c-SponsorBlock__Logo {
@@ -134,6 +150,10 @@
   @media (max-width: 767px) {
     margin-left: 0;
     margin-right: 0;
+  }
+  .premier &,
+  .c-SponsorBlock--premier & {
+    .top-logo();
   }
   .platinum &,
   .c-SponsorBlock--platinum & {
@@ -146,6 +166,9 @@
 }
 // TODO leaving these here for now for readability but removing later
 // once we can rename classes
+.c-SponsorBlock__Logo--premier {
+  .top-logo();
+}
 .c-SponsorBlock__Logo--platinum {
   .top-logo();
 }
