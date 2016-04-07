@@ -1,0 +1,27 @@
+
+/*################################*\
+    _comp.typo.LinkEmail.less
+\*################################*/
+
+
+// Represents a link to an email address.
+// Typically add this class to a link with `[href^='mailto:']`.
+//
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2015-11-13
+// a[href^='mailto:'],
+.c-LinkEmail {
+  &::before {
+    content: '';
+    display: inline-block;
+    .sprite('../img/sprite.png'; 30px; 590px; 330px; 0);
+    .sprite(5; 6);
+    margin-top: -7px;
+    margin-right: 6px;
+    margin-bottom: -7px;
+    position: relative;
+    top: 4px;
+  }
+}
