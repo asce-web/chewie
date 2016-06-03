@@ -82,7 +82,7 @@
 //    # MIXINS
 //++++++++++++++++++++++++++++++++//
 .mx-bc-primary() {
-  background-color: @color_site_primary;
+                                                   background-color: @color_site_primary;
   #pipelinesconference &, .pipelinesconference & { background-color: @color_pl_primary; }
   #icsiconference      &, .icsiconference      & { background-color: @color_icsi_primary; }
   #lidconference       &, .lidconference       & { background-color: @color_lid_primary; }
@@ -94,7 +94,7 @@
   #cisummit            &, .cisummit            & { background-color: @color_ci_primary; }
 }
 .mx-bc-secondary() {
-  background-color: @color_site_secondary;
+                                                   background-color: @color_site_secondary;
   #pipelinesconference &, .pipelinesconference & { background-color: @color_pl_secondary; }
   #icsiconference      &, .icsiconference      & { background-color: @color_icsi_secondary; }
   #lidconference       &, .lidconference       & { background-color: @color_lid_secondary; }
@@ -106,7 +106,7 @@
   #cisummit            &, .cisummit            & { background-color: @color_ci_secondary; }
 }
 .mx-bc-accent() {
-  background-color: @color_site_accent;
+                                                   background-color: @color_site_accent;
   #pipelinesconference &, .pipelinesconference & { background-color: @color_pl_accent; }
   #icsiconference      &, .icsiconference      & { background-color: @color_icsi_accent; }
   #lidconference       &, .lidconference       & { background-color: @color_lid_accent; }
@@ -118,7 +118,7 @@
   #cisummit            &, .cisummit            & { background-color: @color_ci_accent; }
 }
 .mx-c-primary() {
-  color: @color_site_primary;
+                                                   color: @color_site_primary;
   #pipelinesconference &, .pipelinesconference & { color: @color_pl_primary; }
   #icsiconference      &, .icsiconference      & { color: @color_icsi_primary; }
   #lidconference       &, .lidconference       & { color: @color_lid_primary; }
@@ -130,7 +130,7 @@
   #cisummit            &, .cisummit            & { color: @color_ci_primary; }
 }
 .mx-c-secondary() {
-  color: @color_site_secondary;
+                                                   color: @color_site_secondary;
   #pipelinesconference &, .pipelinesconference & { color: @color_pl_secondary; }
   #icsiconference      &, .icsiconference      & { color: @color_icsi_secondary; }
   #lidconference       &, .lidconference       & { color: @color_lid_secondary; }
@@ -142,7 +142,7 @@
   #cisummit            &, .cisummit            & { color: @color_ci_secondary; }
 }
 .mx-c-accent() {
-  color: @color_site_accent;
+                                                   color: @color_site_accent;
   #pipelinesconference &, .pipelinesconference & { color: @color_pl_accent; }
   #icsiconference      &, .icsiconference      & { color: @color_icsi_accent; }
   #lidconference       &, .lidconference       & { color: @color_lid_accent; }
@@ -154,7 +154,7 @@
   #cisummit            &, .cisummit            & { color: @color_ci_accent; }
 }
 .mx-btc-accent() {
-  border-top-color: @color_site_accent;
+                                                   border-top-color: @color_site_accent;
   #pipelinesconference &, .pipelinesconference & { border-top-color: @color_pl_accent; }
   #icsiconference      &, .icsiconference      & { border-top-color: @color_icsi_accent; }
   #lidconference       &, .lidconference       & { border-top-color: @color_lid_accent; }
@@ -166,15 +166,34 @@
   #cisummit            &, .cisummit            & { border-top-color: @color_ci_accent; }
 }
 .mx-bc-primary-fade(@height) {
-  .fade(@color_site_primary; @height);
-  #pipelinesconference &, .pipelinesconference & { .fade(@color_pl_primary;      @height); }
-  #icsiconference      &, .icsiconference      & { .fade(@color_icsi_primary;    @height); }
-  #lidconference       &, .lidconference       & { .fade(@color_lid_primary;     @height); }
-  #structurescongress  &, .structurescongress  & { .fade(@color_struct_primary;  @height); }
-  #georiskconference   &, .georiskconference   & { .fade(@color_georisk_primary; @height); }
-  #aei-conference      &, .aei-conference      & { .fade(@color_aei_primary;     @height); }
-  #pavementsconference &, .pavementsconference & { .fade(@color_pave_primary;    @height); }
-  #groutingconference  &, .groutingconference  & { .fade(@color_grout_primary;   @height); }
-  #cisummit            &, .cisummit            & { .fade(@color_ci_primary;      @height); }
+                                                   .bg-grad(@color_site_primary;    @height);
+  #pipelinesconference &, .pipelinesconference & { .bg-grad(@color_pl_primary;      @height); }
+  #icsiconference      &, .icsiconference      & { .bg-grad(@color_icsi_primary;    @height); }
+  #lidconference       &, .lidconference       & { .bg-grad(@color_lid_primary;     @height); }
+  #structurescongress  &, .structurescongress  & { .bg-grad(@color_struct_primary;  @height); }
+  #georiskconference   &, .georiskconference   & { .bg-grad(@color_georisk_primary; @height); }
+  #aei-conference      &, .aei-conference      & { .bg-grad(@color_aei_primary;     @height); }
+  #pavementsconference &, .pavementsconference & { .bg-grad(@color_pave_primary;    @height); }
+  #groutingconference  &, .groutingconference  & { .bg-grad(@color_grout_primary;   @height); }
+  #cisummit            &, .cisummit            & { .bg-grad(@color_ci_primary;      @height); }
+}
+.bg-grad(@primary, ...) {
+  // a mixin for background gradients
+  background: @primary;    // fallback for transparent and gradient
+  background: transparent; // fallback for gradient
+  background: -webkit-linear-gradient(      top, transparent 0%, @primary 100%); /* Chrome10+,Safari5.1+ */
+  background:    -moz-linear-gradient(      top, transparent 0%, @primary 100%); /* FF3.6+ */
+  background:     -ms-linear-gradient(      top, transparent 0%, @primary 100%); /* IE10+ */
+  background:      -o-linear-gradient(      top, transparent 0%, @primary 100%); /* Opera 11.10+ */
+  background:         linear-gradient(to bottom, transparent 0%, @primary 100%); /* W3C */
+  // not supporting "old webkit" or IE<10
+  // background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,transparent), color-stop(100%,@primary)); /* Chrome,Safari4+ */
+  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='@{primary}',GradientType=0 ); /* IE6-9 */
+}
+.fade(@primary; @box_h) {
+  // syntax reminder:
+  // box-shadow: <x> <y> <blur> <spread> <color> <inset>;
+  // see https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
+  box-shadow: 0 -(@box_h/2)*1px (@box_h/2)*1px 0 @primary inset;
 }
 //++++ end # MIXINS ++++//
