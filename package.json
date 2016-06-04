@@ -1,6 +1,6 @@
 {
   "name": "chewie",
-  "version": "1.7.1",
+  "version": "1.7.3",
   "description": "master conferences stylesheet",
   "main": "index.html",
   "private": true,
