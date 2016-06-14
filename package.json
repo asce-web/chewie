@@ -11,11 +11,11 @@
     "jade:styleguide": "jade styleguide/{index,base,obj,comp-typo,comp-ui}.jade",
     "jade:all": "npm run jade:index  &&  npm run jade:styleguide",
     "lessc:chewie": "lessc styles/chewie.less styles/chewie.css",
-    "lessc:styleguide": "lessc styleguide/styleguide.less styleguide/styleguide.css",
+    "lessc:styleguide": "lessc styleguide/styles/styleguide.less styleguide/styles/styleguide.css",
     "lessc:all": "npm run lessc:chewie  &&  npm run lessc:styleguide",
     "minify": "cleancss styles/chewie.css -o styles/chewie.min.css",
     "unbuild:html": "rm {index,sponsors}.html styleguide/{index,base,obj,comp-typo,comp-ui}.html",
-    "unbuild:css": "rm styles/chewie.css styles/chewie.min.css styleguide/styleguide.css",
+    "unbuild:css": "rm styles/chewie.css styles/chewie.min.css styleguide/styles/styleguide.css",
     "unbuild": "npm run unbuild:html  &&  npm run unbuild:css",
     "build": "npm run jade:all  &&  npm run lessc:all  &&  npm run minify"
   },
