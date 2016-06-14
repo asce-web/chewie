@@ -85,22 +85,6 @@
   margin-top: -@height - @chewie_vru_px;
   content: '';
   .mx-bc-primary-fade(@height);
-  .bg-grad(@primary) {
-    // a mixin for background gradients
-    background: -moz-linear-gradient(top, fade(@primary, 0%) 0%, @primary 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,fade(@primary, 0%)), color-stop(100%,@primary)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, fade(@primary, 0%) 0%,@primary 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, fade(@primary, 0%) 0%,@primary 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, fade(@primary, 0%) 0%,@primary 100%); /* IE10+ */
-    background: linear-gradient(to bottom, fade(@primary, 0%) 0%,@primary 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='@{primary}',GradientType=0 ); /* IE6-9 */
-  }
-  .fade(@primary; @box_h) {
-    // syntax reminder:
-    // box-shadow: <x> <y> <blur> <spread> <color> <inset>;
-    // see https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
-    box-shadow: 0 -(@box_h/2)*1px (@box_h/2)*1px 0 @primary inset;
-  }
 }
 .img-fade {
   display: none;

@@ -1,6 +1,6 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     chewie
-    Version: 1.7.3
+    Version: 1.7.4
     Licence:
     Repo   : https://github.com/asce-web/chewie.git
     Author : ASCE web team (webteam@asce.org)
@@ -15,11 +15,11 @@
 \*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     resetcss
-    Version: 1.0.2
+    Version: 1.0.3
     Licence: MIT
     Repo   : https://github.com/chharvey/resetcss.git
-    Home   : https://chharvey.github.io/resetcss/
-    Author : https://chharvey.github.io/
+    Home   : https://github.com/chharvey/resetcss#readme
+    Author : Chris Harvey <chrisharvey2pi@gmail.com> (https://chharvey.github.io/)
 \*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*================================*\
     reset.less
@@ -55,7 +55,8 @@ fieldset {
 ol,
 ul,
 th,
-td {
+td,
+legend {
   padding: 0;
 }
 h1,
@@ -81,9 +82,6 @@ code,
 kbd,
 samp {
   font: inherit;
-}
-table {
-  text-align: left;
 }
 caption,
 th {
@@ -1637,6 +1635,28 @@ button {
 .groutingconference .content h6 {
   color: #00565b;
 }
+#cisummit .c-H--alpha,
+#cisummit .c-H--beta,
+#cisummit .c-H--gamma,
+#cisummit .c-H--delta,
+#cisummit .content h1,
+#cisummit .content h2,
+#cisummit .content h3,
+#cisummit .content h4,
+#cisummit .content h5,
+#cisummit .content h6,
+.cisummit .c-H--alpha,
+.cisummit .c-H--beta,
+.cisummit .c-H--gamma,
+.cisummit .c-H--delta,
+.cisummit .content h1,
+.cisummit .content h2,
+.cisummit .content h3,
+.cisummit .content h4,
+.cisummit .content h5,
+.cisummit .content h6 {
+  color: #d06f1a;
+}
 .c-H--alpha,
 .content h1 {
   font-weight: 500;
@@ -2070,6 +2090,12 @@ button {
 .groutingconference .c-Hero {
   background-color: #00565b;
 }
+#cisummit .introduction,
+#cisummit .c-Hero,
+.cisummit .introduction,
+.cisummit .c-Hero {
+  background-color: #d06f1a;
+}
 .introduction img,
 .c-Hero img {
   display: block;
@@ -2161,7 +2187,18 @@ button {
   height: 50px;
   margin-top: -70px;
   content: '';
-  box-shadow: 0 -25px 25px 0 #6a9556 inset;
+  background: #6a9556;
+  background: transparent;
+  background: -webkit-linear-gradient(top, transparent 0%, #6a9556 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -moz-linear-gradient(top, transparent 0%, #6a9556 100%);
+  /* FF3.6+ */
+  background: -ms-linear-gradient(top, transparent 0%, #6a9556 100%);
+  /* IE10+ */
+  background: -o-linear-gradient(top, transparent 0%, #6a9556 100%);
+  /* Opera 11.10+ */
+  background: linear-gradient(to bottom, transparent 0%, #6a9556 100%);
+  /* W3C */
 }
 #pipelinesconference .img-fade,
 #pipelinesconference .introduction h1::before,
@@ -2169,7 +2206,18 @@ button {
 .pipelinesconference .img-fade,
 .pipelinesconference .introduction h1::before,
 .pipelinesconference .c-Hero__Hn::before {
-  box-shadow: 0 -25px 25px 0 #006c67 inset;
+  background: #006c67;
+  background: transparent;
+  background: -webkit-linear-gradient(top, transparent 0%, #006c67 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -moz-linear-gradient(top, transparent 0%, #006c67 100%);
+  /* FF3.6+ */
+  background: -ms-linear-gradient(top, transparent 0%, #006c67 100%);
+  /* IE10+ */
+  background: -o-linear-gradient(top, transparent 0%, #006c67 100%);
+  /* Opera 11.10+ */
+  background: linear-gradient(to bottom, transparent 0%, #006c67 100%);
+  /* W3C */
 }
 #icsiconference .img-fade,
 #icsiconference .introduction h1::before,
@@ -2177,7 +2225,18 @@ button {
 .icsiconference .img-fade,
 .icsiconference .introduction h1::before,
 .icsiconference .c-Hero__Hn::before {
-  box-shadow: 0 -25px 25px 0 #0b2f69 inset;
+  background: #0b2f69;
+  background: transparent;
+  background: -webkit-linear-gradient(top, transparent 0%, #0b2f69 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -moz-linear-gradient(top, transparent 0%, #0b2f69 100%);
+  /* FF3.6+ */
+  background: -ms-linear-gradient(top, transparent 0%, #0b2f69 100%);
+  /* IE10+ */
+  background: -o-linear-gradient(top, transparent 0%, #0b2f69 100%);
+  /* Opera 11.10+ */
+  background: linear-gradient(to bottom, transparent 0%, #0b2f69 100%);
+  /* W3C */
 }
 #lidconference .img-fade,
 #lidconference .introduction h1::before,
@@ -2185,7 +2244,18 @@ button {
 .lidconference .img-fade,
 .lidconference .introduction h1::before,
 .lidconference .c-Hero__Hn::before {
-  box-shadow: 0 -25px 25px 0 #354e71 inset;
+  background: #354e71;
+  background: transparent;
+  background: -webkit-linear-gradient(top, transparent 0%, #354e71 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -moz-linear-gradient(top, transparent 0%, #354e71 100%);
+  /* FF3.6+ */
+  background: -ms-linear-gradient(top, transparent 0%, #354e71 100%);
+  /* IE10+ */
+  background: -o-linear-gradient(top, transparent 0%, #354e71 100%);
+  /* Opera 11.10+ */
+  background: linear-gradient(to bottom, transparent 0%, #354e71 100%);
+  /* W3C */
 }
 #structurescongress .img-fade,
 #structurescongress .introduction h1::before,
@@ -2193,7 +2263,18 @@ button {
 .structurescongress .img-fade,
 .structurescongress .introduction h1::before,
 .structurescongress .c-Hero__Hn::before {
-  box-shadow: 0 -25px 25px 0 #571c1f inset;
+  background: #571c1f;
+  background: transparent;
+  background: -webkit-linear-gradient(top, transparent 0%, #571c1f 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -moz-linear-gradient(top, transparent 0%, #571c1f 100%);
+  /* FF3.6+ */
+  background: -ms-linear-gradient(top, transparent 0%, #571c1f 100%);
+  /* IE10+ */
+  background: -o-linear-gradient(top, transparent 0%, #571c1f 100%);
+  /* Opera 11.10+ */
+  background: linear-gradient(to bottom, transparent 0%, #571c1f 100%);
+  /* W3C */
 }
 #georiskconference .img-fade,
 #georiskconference .introduction h1::before,
@@ -2201,7 +2282,18 @@ button {
 .georiskconference .img-fade,
 .georiskconference .introduction h1::before,
 .georiskconference .c-Hero__Hn::before {
-  box-shadow: 0 -25px 25px 0 #00535e inset;
+  background: #00535e;
+  background: transparent;
+  background: -webkit-linear-gradient(top, transparent 0%, #00535e 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -moz-linear-gradient(top, transparent 0%, #00535e 100%);
+  /* FF3.6+ */
+  background: -ms-linear-gradient(top, transparent 0%, #00535e 100%);
+  /* IE10+ */
+  background: -o-linear-gradient(top, transparent 0%, #00535e 100%);
+  /* Opera 11.10+ */
+  background: linear-gradient(to bottom, transparent 0%, #00535e 100%);
+  /* W3C */
 }
 #aei-conference .img-fade,
 #aei-conference .introduction h1::before,
@@ -2209,7 +2301,18 @@ button {
 .aei-conference .img-fade,
 .aei-conference .introduction h1::before,
 .aei-conference .c-Hero__Hn::before {
-  box-shadow: 0 -25px 25px 0 #00548e inset;
+  background: #00548e;
+  background: transparent;
+  background: -webkit-linear-gradient(top, transparent 0%, #00548e 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -moz-linear-gradient(top, transparent 0%, #00548e 100%);
+  /* FF3.6+ */
+  background: -ms-linear-gradient(top, transparent 0%, #00548e 100%);
+  /* IE10+ */
+  background: -o-linear-gradient(top, transparent 0%, #00548e 100%);
+  /* Opera 11.10+ */
+  background: linear-gradient(to bottom, transparent 0%, #00548e 100%);
+  /* W3C */
 }
 #pavementsconference .img-fade,
 #pavementsconference .introduction h1::before,
@@ -2217,7 +2320,18 @@ button {
 .pavementsconference .img-fade,
 .pavementsconference .introduction h1::before,
 .pavementsconference .c-Hero__Hn::before {
-  box-shadow: 0 -25px 25px 0 #5e6167 inset;
+  background: #5e6167;
+  background: transparent;
+  background: -webkit-linear-gradient(top, transparent 0%, #5e6167 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -moz-linear-gradient(top, transparent 0%, #5e6167 100%);
+  /* FF3.6+ */
+  background: -ms-linear-gradient(top, transparent 0%, #5e6167 100%);
+  /* IE10+ */
+  background: -o-linear-gradient(top, transparent 0%, #5e6167 100%);
+  /* Opera 11.10+ */
+  background: linear-gradient(to bottom, transparent 0%, #5e6167 100%);
+  /* W3C */
 }
 #groutingconference .img-fade,
 #groutingconference .introduction h1::before,
@@ -2225,7 +2339,37 @@ button {
 .groutingconference .img-fade,
 .groutingconference .introduction h1::before,
 .groutingconference .c-Hero__Hn::before {
-  box-shadow: 0 -25px 25px 0 #00565b inset;
+  background: #00565b;
+  background: transparent;
+  background: -webkit-linear-gradient(top, transparent 0%, #00565b 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -moz-linear-gradient(top, transparent 0%, #00565b 100%);
+  /* FF3.6+ */
+  background: -ms-linear-gradient(top, transparent 0%, #00565b 100%);
+  /* IE10+ */
+  background: -o-linear-gradient(top, transparent 0%, #00565b 100%);
+  /* Opera 11.10+ */
+  background: linear-gradient(to bottom, transparent 0%, #00565b 100%);
+  /* W3C */
+}
+#cisummit .img-fade,
+#cisummit .introduction h1::before,
+#cisummit .c-Hero__Hn::before,
+.cisummit .img-fade,
+.cisummit .introduction h1::before,
+.cisummit .c-Hero__Hn::before {
+  background: #d06f1a;
+  background: transparent;
+  background: -webkit-linear-gradient(top, transparent 0%, #d06f1a 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -moz-linear-gradient(top, transparent 0%, #d06f1a 100%);
+  /* FF3.6+ */
+  background: -ms-linear-gradient(top, transparent 0%, #d06f1a 100%);
+  /* IE10+ */
+  background: -o-linear-gradient(top, transparent 0%, #d06f1a 100%);
+  /* Opera 11.10+ */
+  background: linear-gradient(to bottom, transparent 0%, #d06f1a 100%);
+  /* W3C */
 }
 .img-fade {
   display: none;
@@ -2335,6 +2479,10 @@ button {
 #groutingconference .date,
 .groutingconference .date {
   color: #82b1ba;
+}
+#cisummit .date,
+.cisummit .date {
+  color: #7f7f73;
 }
 /*################################*\
     chewie  |  _comp.typo.LinkArrow.less
@@ -2817,6 +2965,18 @@ button {
 .groutingconference .navigation-level2 {
   background-color: #82b1ba;
 }
+#cisummit .c-NavBar,
+#cisummit .navigation,
+#cisummit .nav3,
+#cisummit .tab-buttons,
+#cisummit .navigation-level2,
+.cisummit .c-NavBar,
+.cisummit .navigation,
+.cisummit .nav3,
+.cisummit .tab-buttons,
+.cisummit .navigation-level2 {
+  background-color: #7f7f73;
+}
 .c-NavBar__Link,
 .navigation a,
 .nav3 a,
@@ -3052,6 +3212,24 @@ button {
 .groutingconference .c-NavBar--main .c-NavBar__Link:hover {
   background-color: #ff8038;
 }
+#cisummit .nav1 a.active,
+#cisummit .c-NavBar--main a.active,
+#cisummit .nav1 .c-NavBar__Link.active,
+#cisummit .c-NavBar--main .c-NavBar__Link.active,
+#cisummit .nav1 a:hover,
+#cisummit .c-NavBar--main a:hover,
+#cisummit .nav1 .c-NavBar__Link:hover,
+#cisummit .c-NavBar--main .c-NavBar__Link:hover,
+.cisummit .nav1 a.active,
+.cisummit .c-NavBar--main a.active,
+.cisummit .nav1 .c-NavBar__Link.active,
+.cisummit .c-NavBar--main .c-NavBar__Link.active,
+.cisummit .nav1 a:hover,
+.cisummit .c-NavBar--main a:hover,
+.cisummit .nav1 .c-NavBar__Link:hover,
+.cisummit .c-NavBar--main .c-NavBar__Link:hover {
+  background-color: #aba9a0;
+}
 .nav2,
 .c-NavBar--side {
   background-color: #0c5fa8;
@@ -3172,6 +3350,12 @@ button {
 .groutingconference .c-NavBar--secondary {
   background-color: #ff8038;
 }
+#cisummit .navigation-level2,
+#cisummit .c-NavBar--secondary,
+.cisummit .navigation-level2,
+.cisummit .c-NavBar--secondary {
+  background-color: #aba9a0;
+}
 .navigation-level2 ul,
 .c-NavBar--secondary ul {
   display: none;
@@ -3238,6 +3422,12 @@ button {
 .groutingconference .c-NavBar--tabs .c-NavBar__Link:hover,
 .groutingconference .c-NavBar--tabs .c-NavBar__Link.current {
   background-color: #ff8038;
+}
+#cisummit .c-NavBar--tabs .c-NavBar__Link:hover,
+#cisummit .c-NavBar--tabs .c-NavBar__Link.current,
+.cisummit .c-NavBar--tabs .c-NavBar__Link:hover,
+.cisummit .c-NavBar--tabs .c-NavBar__Link.current {
+  background-color: #aba9a0;
 }
 .c-NavBar--tabs .c-NavBar__Link.current {
   position: relative;
@@ -3313,6 +3503,10 @@ button {
 .groutingconference .c-NavBar--tabs .c-NavBar__Link.current::after {
   border-top-color: #ff8038;
 }
+#cisummit .c-NavBar--tabs .c-NavBar__Link.current::after,
+.cisummit .c-NavBar--tabs .c-NavBar__Link.current::after {
+  border-top-color: #aba9a0;
+}
 .tab-buttons {
   margin-bottom: 0;
   float: right !important;
@@ -3378,6 +3572,12 @@ li.active .tab-button {
 .groutingconference .tab-button:hover,
 .groutingconference li.active .tab-button {
   background-color: #ff8038;
+}
+#cisummit .tab-button:hover,
+#cisummit li.active .tab-button,
+.cisummit .tab-button:hover,
+.cisummit li.active .tab-button {
+  background-color: #aba9a0;
 }
 li.active .tab-button {
   position: relative;
@@ -3452,6 +3652,10 @@ li.active .tab-button::after {
 #groutingconference li.active .tab-button::after,
 .groutingconference li.active .tab-button::after {
   border-top-color: #ff8038;
+}
+#cisummit li.active .tab-button::after,
+.cisummit li.active .tab-button::after {
+  border-top-color: #aba9a0;
 }
 .mobile-nav {
   text-align: right;
@@ -3731,6 +3935,16 @@ a.button--disabled:focus {
 .groutingconference .c-SummaryBanner {
   background-color: #00565b;
 }
+#cisummit .header,
+#cisummit .footer,
+#cisummit .summary-banner,
+#cisummit .c-SummaryBanner,
+.cisummit .header,
+.cisummit .footer,
+.cisummit .summary-banner,
+.cisummit .c-SummaryBanner {
+  background-color: #d06f1a;
+}
 /*################################*\
     chewie  |  _comp.SiteFooter.less
 \*################################*/
@@ -3821,6 +4035,7 @@ a.button--disabled:focus {
   display: inline;
   margin-right: 1em;
   line-height: 0;
+  text-indent: -999999px;
 }
 .link-block.connect a:first-of-type {
   margin-left: 9px;
@@ -4310,6 +4525,10 @@ a.button--disabled:focus {
 .groutingconference .a-bc-primary {
   background-color: #00565b !important;
 }
+#cisummit .a-bc-primary,
+.cisummit .a-bc-primary {
+  background-color: #d06f1a !important;
+}
 .a-bc-secondary {
   background-color: #6fc2c4 !important;
 }
@@ -4344,6 +4563,10 @@ a.button--disabled:focus {
 #groutingconference .a-bc-secondary,
 .groutingconference .a-bc-secondary {
   background-color: #82b1ba !important;
+}
+#cisummit .a-bc-secondary,
+.cisummit .a-bc-secondary {
+  background-color: #7f7f73 !important;
 }
 .a-bc-accent {
   background-color: #714509 !important;
@@ -4380,6 +4603,10 @@ a.button--disabled:focus {
 .groutingconference .a-bc-accent {
   background-color: #ff8038 !important;
 }
+#cisummit .a-bc-accent,
+.cisummit .a-bc-accent {
+  background-color: #aba9a0 !important;
+}
 .a-c-primary {
   color: #6a9556 !important;
 }
@@ -4414,6 +4641,10 @@ a.button--disabled:focus {
 #groutingconference .a-c-primary,
 .groutingconference .a-c-primary {
   color: #00565b !important;
+}
+#cisummit .a-c-primary,
+.cisummit .a-c-primary {
+  color: #d06f1a !important;
 }
 .a-c-secondary {
   color: #6fc2c4 !important;
@@ -4450,6 +4681,10 @@ a.button--disabled:focus {
 .groutingconference .a-c-secondary {
   color: #82b1ba !important;
 }
+#cisummit .a-c-secondary,
+.cisummit .a-c-secondary {
+  color: #7f7f73 !important;
+}
 .a-c-accent {
   color: #714509 !important;
 }
@@ -4484,6 +4719,10 @@ a.button--disabled:focus {
 #groutingconference .a-c-accent,
 .groutingconference .a-c-accent {
   color: #ff8038 !important;
+}
+#cisummit .a-c-accent,
+.cisummit .a-c-accent {
+  color: #aba9a0 !important;
 }
 /*################################*\
     chewie  |  _trumps.shame.less
@@ -4646,6 +4885,10 @@ a.button--disabled:focus {
   #groutingconference .toggleable-nav.in,
   .groutingconference .toggleable-nav.in {
     background-color: #00565b;
+  }
+  #cisummit .toggleable-nav.in,
+  .cisummit .toggleable-nav.in {
+    background-color: #d06f1a;
   }
   .toggleable-nav.in .close-nav {
     display: block;
