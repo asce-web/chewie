@@ -81,6 +81,12 @@
 @color_aeisdc_primary:   #020f19;
 @color_aeisdc_secondary: #8ca7c2;
 @color_aeisdc_accent:    #7b7761;
+
+// ASCE Convention 2016
+// class: .asceconvention
+@color_convention_primary:   #3fae2a;
+@color_convention_secondary: #00a1e1;
+@color_convention_accent:    #01b7ff;
 //++++ end # CONFERENCE SITE-SPECIFIC COLORS ++++//
 
 
@@ -99,6 +105,7 @@
   #groutingconference  &, .groutingconference  & { background-color: @color_grout_primary; }
   #cisummit            &, .cisummit            & { background-color: @color_ci_primary; }
   #aeisdc              &, .aeisdc              & { background-color: @color_aeisdc_primary; }
+                          .asceconvention      & { background-color: @color_convention_primary; }
 }
 .mx-bc-secondary() {
                                                    background-color: @color_site_secondary;
@@ -112,6 +119,7 @@
   #groutingconference  &, .groutingconference  & { background-color: @color_grout_secondary; }
   #cisummit            &, .cisummit            & { background-color: @color_ci_secondary; }
   #aeisdc              &, .aeisdc              & { background-color: @color_aeisdc_secondary; }
+                          .asceconvention      & { background-color: @color_convention_secondary; }
 }
 .mx-bc-accent() {
                                                    background-color: @color_site_accent;
@@ -125,6 +133,7 @@
   #groutingconference  &, .groutingconference  & { background-color: @color_grout_accent; }
   #cisummit            &, .cisummit            & { background-color: @color_ci_accent; }
   #aeisdc              &, .aeisdc              & { background-color: @color_aeisdc_accent; }
+                          .asceconvention      & { background-color: @color_convention_accent; }
 }
 .mx-c-primary() {
                                                    color: @color_site_primary;
@@ -138,6 +147,7 @@
   #groutingconference  &, .groutingconference  & { color: @color_grout_primary; }
   #cisummit            &, .cisummit            & { color: @color_ci_primary; }
   #aeisdc              &, .aeisdc              & { color: @color_aeisdc_primary; }
+                          .asceconvention      & { color: @color_convention_primary; }
 }
 .mx-c-secondary() {
                                                    color: @color_site_secondary;
@@ -151,6 +161,7 @@
   #groutingconference  &, .groutingconference  & { color: @color_grout_secondary; }
   #cisummit            &, .cisummit            & { color: @color_ci_secondary; }
   #aeisdc              &, .aeisdc              & { color: @color_aeisdc_secondary; }
+                          .asceconvention      & { color: @color_convention_secondary; }
 }
 .mx-c-accent() {
                                                    color: @color_site_accent;
@@ -164,6 +175,7 @@
   #groutingconference  &, .groutingconference  & { color: @color_grout_accent; }
   #cisummit            &, .cisummit            & { color: @color_ci_accent; }
   #aeisdc              &, .aeisdc              & { color: @color_aeisdc_accent; }
+                          .asceconvention      & { color: @color_convention_accent; }
 }
 .mx-btc-accent() {
                                                    border-top-color: @color_site_accent;
@@ -177,6 +189,7 @@
   #groutingconference  &, .groutingconference  & { border-top-color: @color_grout_accent; }
   #cisummit            &, .cisummit            & { border-top-color: @color_ci_accent; }
   #aeisdc              &, .aeisdc              & { border-top-color: @color_aeisdc_accent; }
+                          .asceconvention      & { border-top-color: @color_convention_accent; }
 }
 .mx-bc-primary-fade(@height) {
                                                    .bg-grad(@color_site_primary;    @height);
@@ -190,6 +203,7 @@
   #groutingconference  &, .groutingconference  & { .bg-grad(@color_grout_primary;   @height); }
   #cisummit            &, .cisummit            & { .bg-grad(@color_ci_primary;      @height); }
   #aeisdc              &, .aeisdc              & { .bg-grad(@color_aeisdc_primary;  @height); }
+                          .asceconvention      & { .bg-grad(@color_convention_primary; @height); }
 }
 .bg-grad(@primary, ...) {
   // a mixin for background gradients
