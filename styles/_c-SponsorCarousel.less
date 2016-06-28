@@ -15,52 +15,25 @@
 // ^author
 // : Chris Harvey
 // ^updated
-// : 2016-06-21
+// : 2016-06-28
 .c-SponsorCarousel {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-    -webkit-flex-wrap: nowrap;
-       -moz-flex-wrap: nowrap;
-        -ms-flex-wrap: nowrap;
-            flex-wrap: nowrap;
-    -webkit-justify-content: space-around;
-       -moz-justify-content: space-around;
-        -ms-justify-content: space-around;
-            justify-content: space-around;
-    -webkit-align-items: center;
-       -moz-align-items: center;
-        -ms-align-items: center;
-            align-items: center;
   padding-left: 0;
-  line-height: inherit;
   text-align: center;
   list-style: none;
 }
 
 .c-SponsorCarousel__Item {
-  -webkit-box-flex: 1;
-     -moz-box-flex: 1;
-      -webkit-flex: 1;
-         -moz-flex: 1;
-          -ms-flex: 1;
-              flex: 1;
-  &:not(:last-child) {
-    padding-right: 1rem;
-    @media screen and (min-width: 45em) {
-      padding-right: 2rem;
-    }
+  padding: 0 0.5rem;
+  @media screen and (min-width: 45em) {
+    padding: 0 1rem;
   }
 }
 
 .c-SponsorCarousel__Logo {
   display: block;
   line-height: inherit;
-  max-width: 120px;
-  height: 65px;
-  margin: auto;
+  width: auto;
+  height: 9rem;
   text-indent: -999999px;
   background-position: center;
   background-size: contain;
