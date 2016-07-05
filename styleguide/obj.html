@@ -1,0 +1,53 @@
+<!DOCTYPE html><html><head><title>Objects | Styleguide</title><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="../css/futura.css"><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,600italic,700italic,400,600,700"><link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css"><link rel="stylesheet" href="../styles/chewie.css"><link rel="stylesheet" href="styles/styleguide.css"></head><body><main><h1>Objects</h1><section class="doc-ss"><h2>Block (.o-Block)</h2><figure><p>A simple block object. Use this class to display an element as a
+<span class="o-Block">block element,</span>
+with an inherited line-height to maintain vertical rhythm.</p><pre>... to display an element as a &lt;span class="<u>o-Block</u>"&gt;block element,&lt;/span&gt; with an ...</pre></figure></section><section class="doc-ss"><h2>List Bare (.o-ListBare)</h2><p>Use the List Bare object to remove the usual styles accompanied by
+<code>ol</code> and <code>ul</code> elements.
+The result is a list of items, each on its own line.</p><figure><ul class="o-ListBare"><li>Burns &amp; McDonnell Engineering</li><li>DIS-TRAN Steel, LLC</li><li>EDM International</li><li>Electrical Consultants, Inc.</li><li>Fabrimet Inc.</li><li>Falcon Steel Company</li></ul><pre>&lt;ul class="<u>o-ListBare</u>"&gt;
+  &lt;li&gt;Burns &amp; McDonnell Engineering&lt;/li&gt;
+  &lt;li&gt;DIS-TRAN Steel, LLC&lt;/li&gt;
+  ...
+&lt;/ul&gt;</pre></figure></section><section class="doc-ss"><h2>List Grid (.o-ListGrid)</h2><p>A List Grid is simply a list of items arranged like blocks in a grid.
+It has the structure of a list in that all items share the same container
+(unlike tables where items are in different rows), while at the same time
+appearing like a table with rows and columns.
+The List Grid can be flexible and responsive, adjusting the number of
+columns based on screen size.</p><p>The container must have the <code>.o-ListGrid</code> class and
+each item must have the <code>.o-ListGrid__Item</code> class.
+To remove normal list styles (bullets, etc),
+add class <code>.o-ListBare</code> to the container.</p><figure><ul class="o-ListBare o-ListGrid"><li class="o-ListGrid__Item">Burns &amp; McDonnell Engineering</li><li class="o-ListGrid__Item">DIS-TRAN Steel, LLC</li><li class="o-ListGrid__Item">EDM International</li><li class="o-ListGrid__Item">Electrical Consultants, Inc.</li><li class="o-ListGrid__Item">Fabrimet Inc.</li><li class="o-ListGrid__Item">Falcon Steel Company</li><li class="o-ListGrid__Item">Sabre-FWT</li><li class="o-ListGrid__Item">HDR</li><li class="o-ListGrid__Item">Mitas Energy</li><li class="o-ListGrid__Item">Power Consulting Associates, LLC</li><li class="o-ListGrid__Item">Power Line Systems, Inc.</li><li class="o-ListGrid__Item">Quanta Services</li><li class="o-ListGrid__Item">ReliaPOLE Inspection Services</li><li class="o-ListGrid__Item">Sabre-FWT</li><li class="o-ListGrid__Item">SAE Towers</li><li class="o-ListGrid__Item">TAPP Steel Poles</li><li class="o-ListGrid__Item">Trinity Meyer Utility Structures</li><li class="o-ListGrid__Item">TRC Engineers</li><li class="o-ListGrid__Item">Underground Devices</li><li class="o-ListGrid__Item">Valmont Newmark</li></ul><pre>&lt;ul class="o-ListBare <u>o-ListGrid</u>"&gt;
+  &lt;li class="<u>o-ListGrid__Item</u>"&gt;Burns &amp; McDonnell Engineering&lt;/li&gt;
+  &lt;li class="<u>o-ListGrid__Item</u>"&gt;DIS-TRAN Steel, LLC&lt;/li&gt;
+  ...
+&lt;/ul&gt;</pre></figure><section><h3>Subclasses of List Grid</h3><p><em>Add</em> one of the following classes to an element with class
+<code>.o-ListGrid</code> to specify the number of columns.</p><style scoped="">.a-w-1o4 { width: 25%; }
+.a-w-3o4 { width: 75%; }</style><dl class="o-ListGrid"><dt class="a-w-1o4"><code>.o-ListGrid--halves</code></dt><dd class="a-w-3o4">grid with 2 columns</dd><dt class="a-w-1o4"><code>.o-ListGrid--thirds</code></dt><dd class="a-w-3o4">grid with 3 columns</dd><dt class="a-w-1o4"><code>.o-ListGrid--fourths</code></dt><dd class="a-w-3o4">grid with 4 columns</dd><dt class="a-w-1o4"><code>.o-ListGrid--fifths</code></dt><dd class="a-w-3o4">grid with 5 columns</dd><dt class="a-w-1o4"><code>.o-ListGrid--sixths</code></dt><dd class="a-w-3o4">grid with 6 columns</dd></dl><p>In addition to these classes, append a
+<code>@sK</code>,
+<code>@sM</code>,
+<code>@sG</code>, or
+<code>@sT</code>
+to force the list to have the specified columns in a
+<b>small</b>,
+<b>medium</b>,
+<b>large</b>, or
+<b>extra-large</b>
+screen size, respectively.</p><figure><figcaption>For example, the grid below has 3 columns by default but
+5 columns for a large screen (bigger than 960px).</figcaption><ul class="o-ListBare o-ListGrid o-ListGrid--thirds o-ListGrid--fifths@sG"><li class="o-ListGrid__Item">Burns &amp; McDonnell Engineering</li><li class="o-ListGrid__Item">DIS-TRAN Steel, LLC</li><li class="o-ListGrid__Item">EDM International</li><li class="o-ListGrid__Item">Electrical Consultants, Inc.</li><li class="o-ListGrid__Item">Fabrimet Inc.</li><li class="o-ListGrid__Item">Falcon Steel Company</li><li class="o-ListGrid__Item">Sabre-FWT</li><li class="o-ListGrid__Item">HDR</li><li class="o-ListGrid__Item">Mitas Energy</li><li class="o-ListGrid__Item">Power Consulting Associates, LLC</li><li class="o-ListGrid__Item">Power Line Systems, Inc.</li><li class="o-ListGrid__Item">Quanta Services</li><li class="o-ListGrid__Item">ReliaPOLE Inspection Services</li><li class="o-ListGrid__Item">Sabre-FWT</li><li class="o-ListGrid__Item">SAE Towers</li><li class="o-ListGrid__Item">TAPP Steel Poles</li><li class="o-ListGrid__Item">Trinity Meyer Utility Structures</li><li class="o-ListGrid__Item">TRC Engineers</li><li class="o-ListGrid__Item">Underground Devices</li><li class="o-ListGrid__Item">Valmont Newmark</li></ul><pre>&lt;ul class="o-ListBare <u>o-ListGrid</u> <u>o-ListGrid--thirds</u> <u>o-ListGrid--fifths@sG</u>"&gt;
+  &lt;li class="o-ListGrid__Item"&gt;Burns &amp; McDonnell Engineering&lt;/li&gt;
+  &lt;li class="o-ListGrid__Item"&gt;DIS-TRAN Steel, LLC&lt;/li&gt;
+  ...
+&lt;/ul&gt;</pre></figure></section></section><section class="doc-ss"><h2>Column Double (.o-ColDouble)</h2><p>This object sets two columns. It can be used for any passage of text
+or even a list. If used on a list, the list items need not have
+a class applied.</p><figure><p class="o-ColDouble">This paragraph is a double column and has lots of text. The reason
+I am typing a lot of text is that I want to show how the paragraph
+is broken into two columns. When you expand the window, the number
+of columns remains as 2, no matter how wide the colummns are. This
+may or may not be a good thing, depending on your design. Keep in mind
+that the typical column width should be 45&ndash;75 characters,
+otherwise readers will have a hard time reading the long passage
+of text.</p><pre>&lt;p class="<u>o-ColDouble</u>"&gt;
+  This paragraph is a double column and ...
+&lt;/p&gt;</pre></figure><figure><ul class="o-ColDouble"><li>Burns &amp; McDonnell Engineering</li><li>DIS-TRAN Steel, LLC</li><li>EDM International</li><li>Electrical Consultants, Inc.</li><li>Fabrimet Inc.</li><li>Falcon Steel Company</li><li>Sabre-FWT</li><li>HDR</li><li>Mitas Energy</li><li>Power Consulting Associates, LLC</li><li>Power Line Systems, Inc.</li><li>Quanta Services</li><li>ReliaPOLE Inspection Services</li><li>Sabre-FWT</li><li>SAE Towers</li><li>TAPP Steel Poles</li><li>Trinity Meyer Utility Structures</li><li>TRC Engineers</li><li>Underground Devices</li><li>Valmont Newmark</li><li>NOTE that there is a browser bug in which list-item markers do not render after the first column of a list.</li></ul><pre>&lt;ul class="<u>o-ColDouble</u>"&gt;
+  &lt;li&gt;Burns &amp; McDonnell Engineering&lt;/li&gt;
+  &lt;li&gt;DIS-TRAN Steel, LLC&lt;/li&gt;
+  ...
+&lt;/ul&gt;</pre></figure></section></main></body></html>
