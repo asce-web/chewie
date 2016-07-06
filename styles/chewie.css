@@ -1,6 +1,6 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     chewie
-    Version: 1.7.4
+    Version: 1.8.0
     Licence:
     Repo   : https://github.com/asce-web/chewie.git
     Author : ASCE web team (webteam@asce.org)
@@ -1657,6 +1657,40 @@ button {
 .cisummit .content h6 {
   color: #d06f1a;
 }
+#aeisdc .c-H--alpha,
+#aeisdc .c-H--beta,
+#aeisdc .c-H--gamma,
+#aeisdc .c-H--delta,
+#aeisdc .content h1,
+#aeisdc .content h2,
+#aeisdc .content h3,
+#aeisdc .content h4,
+#aeisdc .content h5,
+#aeisdc .content h6,
+.aeisdc .c-H--alpha,
+.aeisdc .c-H--beta,
+.aeisdc .c-H--gamma,
+.aeisdc .c-H--delta,
+.aeisdc .content h1,
+.aeisdc .content h2,
+.aeisdc .content h3,
+.aeisdc .content h4,
+.aeisdc .content h5,
+.aeisdc .content h6 {
+  color: #020f19;
+}
+.asceconvention .c-H--alpha,
+.asceconvention .c-H--beta,
+.asceconvention .c-H--gamma,
+.asceconvention .c-H--delta,
+.asceconvention .content h1,
+.asceconvention .content h2,
+.asceconvention .content h3,
+.asceconvention .content h4,
+.asceconvention .content h5,
+.asceconvention .content h6 {
+  color: #3fae2a;
+}
 .c-H--alpha,
 .content h1 {
   font-weight: 500;
@@ -2096,6 +2130,16 @@ button {
 .cisummit .c-Hero {
   background-color: #d06f1a;
 }
+#aeisdc .introduction,
+#aeisdc .c-Hero,
+.aeisdc .introduction,
+.aeisdc .c-Hero {
+  background-color: #020f19;
+}
+.asceconvention .introduction,
+.asceconvention .c-Hero {
+  background-color: #3fae2a;
+}
 .introduction img,
 .c-Hero img {
   display: block;
@@ -2371,6 +2415,41 @@ button {
   background: linear-gradient(to bottom, transparent 0%, #d06f1a 100%);
   /* W3C */
 }
+#aeisdc .img-fade,
+#aeisdc .introduction h1::before,
+#aeisdc .c-Hero__Hn::before,
+.aeisdc .img-fade,
+.aeisdc .introduction h1::before,
+.aeisdc .c-Hero__Hn::before {
+  background: #020f19;
+  background: transparent;
+  background: -webkit-linear-gradient(top, transparent 0%, #020f19 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -moz-linear-gradient(top, transparent 0%, #020f19 100%);
+  /* FF3.6+ */
+  background: -ms-linear-gradient(top, transparent 0%, #020f19 100%);
+  /* IE10+ */
+  background: -o-linear-gradient(top, transparent 0%, #020f19 100%);
+  /* Opera 11.10+ */
+  background: linear-gradient(to bottom, transparent 0%, #020f19 100%);
+  /* W3C */
+}
+.asceconvention .img-fade,
+.asceconvention .introduction h1::before,
+.asceconvention .c-Hero__Hn::before {
+  background: #3fae2a;
+  background: transparent;
+  background: -webkit-linear-gradient(top, transparent 0%, #3fae2a 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -moz-linear-gradient(top, transparent 0%, #3fae2a 100%);
+  /* FF3.6+ */
+  background: -ms-linear-gradient(top, transparent 0%, #3fae2a 100%);
+  /* IE10+ */
+  background: -o-linear-gradient(top, transparent 0%, #3fae2a 100%);
+  /* Opera 11.10+ */
+  background: linear-gradient(to bottom, transparent 0%, #3fae2a 100%);
+  /* W3C */
+}
 .img-fade {
   display: none;
 }
@@ -2483,6 +2562,13 @@ button {
 #cisummit .date,
 .cisummit .date {
   color: #7f7f73;
+}
+#aeisdc .date,
+.aeisdc .date {
+  color: #8ca7c2;
+}
+.asceconvention .date {
+  color: #00a1e1;
 }
 /*################################*\
     chewie  |  _comp.typo.LinkArrow.less
@@ -2977,6 +3063,25 @@ button {
 .cisummit .navigation-level2 {
   background-color: #7f7f73;
 }
+#aeisdc .c-NavBar,
+#aeisdc .navigation,
+#aeisdc .nav3,
+#aeisdc .tab-buttons,
+#aeisdc .navigation-level2,
+.aeisdc .c-NavBar,
+.aeisdc .navigation,
+.aeisdc .nav3,
+.aeisdc .tab-buttons,
+.aeisdc .navigation-level2 {
+  background-color: #8ca7c2;
+}
+.asceconvention .c-NavBar,
+.asceconvention .navigation,
+.asceconvention .nav3,
+.asceconvention .tab-buttons,
+.asceconvention .navigation-level2 {
+  background-color: #00a1e1;
+}
 .c-NavBar__Link,
 .navigation a,
 .nav3 a,
@@ -3230,13 +3335,43 @@ button {
 .cisummit .c-NavBar--main .c-NavBar__Link:hover {
   background-color: #aba9a0;
 }
+#aeisdc .nav1 a.active,
+#aeisdc .c-NavBar--main a.active,
+#aeisdc .nav1 .c-NavBar__Link.active,
+#aeisdc .c-NavBar--main .c-NavBar__Link.active,
+#aeisdc .nav1 a:hover,
+#aeisdc .c-NavBar--main a:hover,
+#aeisdc .nav1 .c-NavBar__Link:hover,
+#aeisdc .c-NavBar--main .c-NavBar__Link:hover,
+.aeisdc .nav1 a.active,
+.aeisdc .c-NavBar--main a.active,
+.aeisdc .nav1 .c-NavBar__Link.active,
+.aeisdc .c-NavBar--main .c-NavBar__Link.active,
+.aeisdc .nav1 a:hover,
+.aeisdc .c-NavBar--main a:hover,
+.aeisdc .nav1 .c-NavBar__Link:hover,
+.aeisdc .c-NavBar--main .c-NavBar__Link:hover {
+  background-color: #7b7761;
+}
+.asceconvention .nav1 a.active,
+.asceconvention .c-NavBar--main a.active,
+.asceconvention .nav1 .c-NavBar__Link.active,
+.asceconvention .c-NavBar--main .c-NavBar__Link.active,
+.asceconvention .nav1 a:hover,
+.asceconvention .c-NavBar--main a:hover,
+.asceconvention .nav1 .c-NavBar__Link:hover,
+.asceconvention .c-NavBar--main .c-NavBar__Link:hover {
+  background-color: #01b7ff;
+}
 .nav2,
-.c-NavBar--side {
+.c-NavBar--side,
+.c-NavBar--register {
   background-color: #0c5fa8;
   text-align: center;
 }
 .nav3,
-.c-NavBar--utility {
+.c-NavBar--utility,
+.c-NavBar--contrib {
   position: absolute;
   top: 0;
   width: 100%;
@@ -3261,28 +3396,35 @@ button {
 }
 @media (max-width: 989px) {
   .nav3,
-  .c-NavBar--utility {
+  .c-NavBar--utility,
+  .c-NavBar--contrib {
     text-align: right;
   }
 }
 .nav3 a,
 .c-NavBar--utility a,
+.c-NavBar--contrib a,
 .nav3 .c-NavBar__Link,
-.c-NavBar--utility .c-NavBar__Link {
+.c-NavBar--utility .c-NavBar__Link,
+.c-NavBar--contrib .c-NavBar__Link {
   padding: 5px 10px;
 }
 .nav3 a:hover,
 .c-NavBar--utility a:hover,
+.c-NavBar--contrib a:hover,
 .nav3 .c-NavBar__Link:hover,
-.c-NavBar--utility .c-NavBar__Link:hover {
+.c-NavBar--utility .c-NavBar__Link:hover,
+.c-NavBar--contrib .c-NavBar__Link:hover {
   background-color: transparent;
   text-decoration: underline;
 }
 @media (max-width: 989px) {
   .nav3 a,
   .c-NavBar--utility a,
+  .c-NavBar--contrib a,
   .nav3 .c-NavBar__Link,
-  .c-NavBar--utility .c-NavBar__Link {
+  .c-NavBar--utility .c-NavBar__Link,
+  .c-NavBar--contrib .c-NavBar__Link {
     display: block;
     padding: 5px 0px;
   }
@@ -3356,6 +3498,16 @@ button {
 .cisummit .c-NavBar--secondary {
   background-color: #aba9a0;
 }
+#aeisdc .navigation-level2,
+#aeisdc .c-NavBar--secondary,
+.aeisdc .navigation-level2,
+.aeisdc .c-NavBar--secondary {
+  background-color: #7b7761;
+}
+.asceconvention .navigation-level2,
+.asceconvention .c-NavBar--secondary {
+  background-color: #01b7ff;
+}
 .navigation-level2 ul,
 .c-NavBar--secondary ul {
   display: none;
@@ -3428,6 +3580,16 @@ button {
 .cisummit .c-NavBar--tabs .c-NavBar__Link:hover,
 .cisummit .c-NavBar--tabs .c-NavBar__Link.current {
   background-color: #aba9a0;
+}
+#aeisdc .c-NavBar--tabs .c-NavBar__Link:hover,
+#aeisdc .c-NavBar--tabs .c-NavBar__Link.current,
+.aeisdc .c-NavBar--tabs .c-NavBar__Link:hover,
+.aeisdc .c-NavBar--tabs .c-NavBar__Link.current {
+  background-color: #7b7761;
+}
+.asceconvention .c-NavBar--tabs .c-NavBar__Link:hover,
+.asceconvention .c-NavBar--tabs .c-NavBar__Link.current {
+  background-color: #01b7ff;
 }
 .c-NavBar--tabs .c-NavBar__Link.current {
   position: relative;
@@ -3507,6 +3669,13 @@ button {
 .cisummit .c-NavBar--tabs .c-NavBar__Link.current::after {
   border-top-color: #aba9a0;
 }
+#aeisdc .c-NavBar--tabs .c-NavBar__Link.current::after,
+.aeisdc .c-NavBar--tabs .c-NavBar__Link.current::after {
+  border-top-color: #7b7761;
+}
+.asceconvention .c-NavBar--tabs .c-NavBar__Link.current::after {
+  border-top-color: #01b7ff;
+}
 .tab-buttons {
   margin-bottom: 0;
   float: right !important;
@@ -3578,6 +3747,16 @@ li.active .tab-button {
 .cisummit .tab-button:hover,
 .cisummit li.active .tab-button {
   background-color: #aba9a0;
+}
+#aeisdc .tab-button:hover,
+#aeisdc li.active .tab-button,
+.aeisdc .tab-button:hover,
+.aeisdc li.active .tab-button {
+  background-color: #7b7761;
+}
+.asceconvention .tab-button:hover,
+.asceconvention li.active .tab-button {
+  background-color: #01b7ff;
 }
 li.active .tab-button {
   position: relative;
@@ -3656,6 +3835,13 @@ li.active .tab-button::after {
 #cisummit li.active .tab-button::after,
 .cisummit li.active .tab-button::after {
   border-top-color: #aba9a0;
+}
+#aeisdc li.active .tab-button::after,
+.aeisdc li.active .tab-button::after {
+  border-top-color: #7b7761;
+}
+.asceconvention li.active .tab-button::after {
+  border-top-color: #01b7ff;
 }
 .mobile-nav {
   text-align: right;
@@ -3944,6 +4130,22 @@ a.button--disabled:focus {
 .cisummit .summary-banner,
 .cisummit .c-SummaryBanner {
   background-color: #d06f1a;
+}
+#aeisdc .header,
+#aeisdc .footer,
+#aeisdc .summary-banner,
+#aeisdc .c-SummaryBanner,
+.aeisdc .header,
+.aeisdc .footer,
+.aeisdc .summary-banner,
+.aeisdc .c-SummaryBanner {
+  background-color: #020f19;
+}
+.asceconvention .header,
+.asceconvention .footer,
+.asceconvention .summary-banner,
+.asceconvention .c-SummaryBanner {
+  background-color: #3fae2a;
 }
 /*################################*\
     chewie  |  _comp.SiteFooter.less
@@ -4464,6 +4666,37 @@ a.button--disabled:focus {
   }
 }
 /*################################*\
+    chewie  |  _c-SponsorCarousel.less
+\*################################*/
+.c-SponsorCarousel {
+  padding-left: 0;
+  text-align: center;
+  list-style: none;
+}
+.c-SponsorCarousel__Item {
+  padding: 0 0.5rem;
+}
+@media screen and (min-width: 45em) {
+  .c-SponsorCarousel__Item {
+    padding: 0 1rem;
+  }
+}
+.c-SponsorCarousel__Logo {
+  display: block;
+  line-height: inherit;
+  width: auto;
+  height: 9rem;
+  text-indent: -999999px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.c-SponsorCarousel__Label {
+  font-weight: 800;
+  font-size: 0.75em;
+  color: #aaa;
+}
+/*################################*\
     chewie  |  _trumps.helpers.less
 \*################################*/
 .light {
@@ -4529,6 +4762,13 @@ a.button--disabled:focus {
 .cisummit .a-bc-primary {
   background-color: #d06f1a !important;
 }
+#aeisdc .a-bc-primary,
+.aeisdc .a-bc-primary {
+  background-color: #020f19 !important;
+}
+.asceconvention .a-bc-primary {
+  background-color: #3fae2a !important;
+}
 .a-bc-secondary {
   background-color: #6fc2c4 !important;
 }
@@ -4567,6 +4807,13 @@ a.button--disabled:focus {
 #cisummit .a-bc-secondary,
 .cisummit .a-bc-secondary {
   background-color: #7f7f73 !important;
+}
+#aeisdc .a-bc-secondary,
+.aeisdc .a-bc-secondary {
+  background-color: #8ca7c2 !important;
+}
+.asceconvention .a-bc-secondary {
+  background-color: #00a1e1 !important;
 }
 .a-bc-accent {
   background-color: #714509 !important;
@@ -4607,6 +4854,13 @@ a.button--disabled:focus {
 .cisummit .a-bc-accent {
   background-color: #aba9a0 !important;
 }
+#aeisdc .a-bc-accent,
+.aeisdc .a-bc-accent {
+  background-color: #7b7761 !important;
+}
+.asceconvention .a-bc-accent {
+  background-color: #01b7ff !important;
+}
 .a-c-primary {
   color: #6a9556 !important;
 }
@@ -4645,6 +4899,13 @@ a.button--disabled:focus {
 #cisummit .a-c-primary,
 .cisummit .a-c-primary {
   color: #d06f1a !important;
+}
+#aeisdc .a-c-primary,
+.aeisdc .a-c-primary {
+  color: #020f19 !important;
+}
+.asceconvention .a-c-primary {
+  color: #3fae2a !important;
 }
 .a-c-secondary {
   color: #6fc2c4 !important;
@@ -4685,6 +4946,13 @@ a.button--disabled:focus {
 .cisummit .a-c-secondary {
   color: #7f7f73 !important;
 }
+#aeisdc .a-c-secondary,
+.aeisdc .a-c-secondary {
+  color: #8ca7c2 !important;
+}
+.asceconvention .a-c-secondary {
+  color: #00a1e1 !important;
+}
 .a-c-accent {
   color: #714509 !important;
 }
@@ -4723,6 +4991,13 @@ a.button--disabled:focus {
 #cisummit .a-c-accent,
 .cisummit .a-c-accent {
   color: #aba9a0 !important;
+}
+#aeisdc .a-c-accent,
+.aeisdc .a-c-accent {
+  color: #7b7761 !important;
+}
+.asceconvention .a-c-accent {
+  color: #01b7ff !important;
 }
 /*################################*\
     chewie  |  _trumps.shame.less
@@ -4889,6 +5164,13 @@ a.button--disabled:focus {
   #cisummit .toggleable-nav.in,
   .cisummit .toggleable-nav.in {
     background-color: #d06f1a;
+  }
+  #aeisdc .toggleable-nav.in,
+  .aeisdc .toggleable-nav.in {
+    background-color: #020f19;
+  }
+  .asceconvention .toggleable-nav.in {
+    background-color: #3fae2a;
   }
   .toggleable-nav.in .close-nav {
     display: block;

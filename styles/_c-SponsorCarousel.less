@@ -1,0 +1,47 @@
+
+/*################################*\
+    chewie  |  _c-SponsorCarousel.less
+\*################################*/
+
+
+// Carousel for all sponsors.
+// NOTE everything in this stylesheet is taken from the Conf repo
+// so developemnt will not be maintained here.
+//
+// ^subcomponents
+// __Item  - item in list
+// __Logo  - cosmetic styles for sponsor logo
+// __Label - label for sponsor in carousel
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2016-06-28
+.c-SponsorCarousel {
+  padding-left: 0;
+  text-align: center;
+  list-style: none;
+}
+
+.c-SponsorCarousel__Item {
+  padding: 0 0.5rem;
+  @media screen and (min-width: 45em) {
+    padding: 0 1rem;
+  }
+}
+
+.c-SponsorCarousel__Logo {
+  display: block;
+  line-height: inherit;
+  width: auto;
+  height: 9rem;
+  text-indent: -999999px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.c-SponsorCarousel__Label {
+  font-weight: 800;
+  font-size: 0.75em;
+  color: #aaa;
+}

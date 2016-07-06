@@ -1,17 +1,9 @@
-doctype html
-html
-  head
+extends styleguide.tpl.jade
+
+block title
     title UI Components | Styleguide
-    meta(charset="utf-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
-    meta(name="viewport", content="width=device-width, initial-scale=1")
-    link(rel="stylesheet", href="../css/futura.css")
-    link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,600italic,700italic,400,600,700")
-    link(rel="stylesheet", href="../bower_components/bootstrap/dist/css/bootstrap.min.css")
-    link(rel="stylesheet", href="../styles/chewie.css")
-    link(rel="stylesheet", href="./styleguide.css")
-  body
-    main
+
+block mainContent
       h1 UI Components
       section.doc-ss
         h2 Year Badge (.c-YearBadge)
@@ -55,15 +47,15 @@ html
               a.c-NavBar__Link About
               a.c-NavBar__Link Contact
         section.doc-ss
-          h3 Side Navigation Bar (.c-NavBar.c-NavBar--side)
+          h3 Registration Navigation Bar (.c-NavBar.c-NavBar--register)
           figure
-            nav.c-NavBar.c-NavBar--side
+            nav.c-NavBar.c-NavBar--register
               a.c-NavBar__Link Why Attend
               a.c-NavBar__Link Registration
         section.doc-ss
-          h3 Utility Navigation Bar (.c-NavBar.c-NavBar--utility)
+          h3 Contributor Navigation Bar (.c-NavBar.c-NavBar--contrib)
           figure
-            nav.c-NavBar.c-NavBar--utility
+            nav.c-NavBar.c-NavBar--contrib
               a.c-NavBar__Link For Speakers
               a.c-NavBar__Link Sponsors
               a.c-NavBar__Link Exhibitors
@@ -71,7 +63,7 @@ html
           h3 Secondary Navigation Bar (.c-NavBar.c-NavBar--secondary)
           figure(style="margin-bottom:4em;")
             nav.c-NavBar.c-NavBar--secondary
-              a.c-NavBar__Link Lodging & Transportation
+              a.c-NavBar__Link Lodging &amp; Transportation
               a.c-NavBar__Link For International Travel
         section.doc-ss
           h3 Year Tab Bar (.c-NavBar.c-NavBar--tabs)
@@ -138,3 +130,37 @@ html
           h3 Note Flag (.note-flag)
           figure
             div.note-flag Program is now over
+      section.doc-ss
+        h2 Sponsor Carousel
+        figure
+          ol.c-SponsorCarousel
+            li.c-SponsorCarousel__Item
+              a.c-SponsorCarousel__Logo(href="" style="background-image: url('http://2016.asceconvention.org/sites/default/files/bank-of-america-logo.jpg');") Bank of America
+              small.c-SponsorCarousel__Label Platinum
+            li.c-SponsorCarousel__Item
+              a.c-SponsorCarousel__Logo(href="" style="background-image: url('http://2016.asceconvention.org/sites/default/files/ups-logo.jpg');") UPS
+              small.c-SponsorCarousel__Label Platinum
+            li.c-SponsorCarousel__Item
+              a.c-SponsorCarousel__Logo(href="" style="background-image: url('http://2016.asceconvention.org/sites/default/files/geico-logo.gif');") Geico
+              small.c-SponsorCarousel__Label Silver
+            li.c-SponsorCarousel__Item
+              a.o-Block.c-SponsorCarousel__Logo(href="#0" style="background-image: url('http://2016.asceconvention.org/sites/default/files/pearl-insurance-logo.jpg');") Pearl Insurance
+              small.c-SponsorCarousel__Label Bronze
+          pre.
+            //- pseudo-HTML
+            link(rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css")
+            link(rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css")
+            script(src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous")
+            script(src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js")
+            script.
+              $('.c-SponsorCarousel').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                mobileFirst: true,
+                arrows: true,
+                dots: true,
+                autoplay: true,
+                autoplaySpeed: 1000,
+                draggable: true,
+                swipeToSlide: true
+              })
