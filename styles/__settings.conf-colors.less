@@ -88,11 +88,17 @@
 @color_convention_secondary: #00a1e1;
 @color_convention_accent:    #01b7ff;
 
-// HMEM 2017
+// EWRI HMEM 2017
 // class: .hmemconference
 @color_hmem_primary:   #3b421b;
 @color_hmem_secondary: #b4c1d1;
 @color_hmem_accent:    #a5904f;
+
+// EWRI Congress 2017
+// class: .ewricongress
+@color_ewri_primary:   #19458d; // #6991bb // #a5bcd6
+@color_ewri_secondary: #dbb92a;
+@color_ewri_accent:    #e9d57f;
 //++++ end # CONFERENCE SITE-SPECIFIC COLORS ++++//
 
 
@@ -113,6 +119,7 @@
   #aeisdc              &, .aeisdc              & { background-color: @color_aeisdc_primary; }
                           .asceconvention      & { background-color: @color_convention_primary; }
                           .hmemconference      & { background-color: @color_hmem_primary; }
+                          .ewricongress        & { background-color: @color_ewri_primary; }
 }
 .mx-bc-secondary() {
                                                    background-color: @color_site_secondary;
@@ -128,6 +135,7 @@
   #aeisdc              &, .aeisdc              & { background-color: @color_aeisdc_secondary; }
                           .asceconvention      & { background-color: @color_convention_secondary; }
                           .hmemconference      & { background-color: @color_hmem_secondary; }
+                          .ewricongress        & { background-color: @color_ewri_secondary; }
 }
 .mx-bc-accent() {
                                                    background-color: @color_site_accent;
@@ -143,6 +151,7 @@
   #aeisdc              &, .aeisdc              & { background-color: @color_aeisdc_accent; }
                           .asceconvention      & { background-color: @color_convention_accent; }
                           .hmemconference      & { background-color: @color_hmem_accent; }
+                          .ewricongress        & { background-color: @color_ewri_accent; }
 }
 .mx-c-primary() {
                                                    color: @color_site_primary;
@@ -158,6 +167,7 @@
   #aeisdc              &, .aeisdc              & { color: @color_aeisdc_primary; }
                           .asceconvention      & { color: @color_convention_primary; }
                           .hmemconference      & { color: @color_hmem_primary; }
+                          .ewricongress        & { color: @color_ewri_primary; }
 }
 .mx-c-secondary() {
                                                    color: @color_site_secondary;
@@ -173,6 +183,7 @@
   #aeisdc              &, .aeisdc              & { color: @color_aeisdc_secondary; }
                           .asceconvention      & { color: @color_convention_secondary; }
                           .hmemconference      & { color: @color_hmem_secondary; }
+                          .ewricongress        & { color: @color_ewri_secondary; }
 }
 .mx-c-accent() {
                                                    color: @color_site_accent;
@@ -188,6 +199,7 @@
   #aeisdc              &, .aeisdc              & { color: @color_aeisdc_accent; }
                           .asceconvention      & { color: @color_convention_accent; }
                           .hmemconference      & { color: @color_hmem_accent; }
+                          .ewricongress        & { color: @color_ewri_accent; }
 }
 .mx-btc-accent() {
                                                    border-top-color: @color_site_accent;
@@ -203,6 +215,7 @@
   #aeisdc              &, .aeisdc              & { border-top-color: @color_aeisdc_accent; }
                           .asceconvention      & { border-top-color: @color_convention_accent; }
                           .hmemconference      & { border-top-color: @color_hmem_accent; }
+                          .ewricongress        & { border-top-color: @color_ewri_accent; }
 }
 .mx-bc-primary-fade(@height) {
                                                    .bg-grad(@color_site_primary;    @height);
@@ -218,6 +231,7 @@
   #aeisdc              &, .aeisdc              & { .bg-grad(@color_aeisdc_primary;  @height); }
                           .asceconvention      & { .bg-grad(@color_convention_primary; @height); }
                           .hmemconference      & { .bg-grad(@color_hmem_primary;       @height); }
+                          .ewricongress        & { .bg-grad(@color_ewri_primary;       @height); }
 }
 .bg-grad(@primary, ...) {
   // a mixin for background gradients
