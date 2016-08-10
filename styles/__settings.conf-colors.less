@@ -28,7 +28,7 @@
 @color_pl_secondary: #717073;
 @color_pl_accent:    #c1d8c5;
 
-// ICSI 2016 // equipped with Chewie on CDN
+// ICSI 2016 & 2017
 // class: .icsiconference
 @color_icsi_primary:   #0b2f69;
 @color_icsi_secondary: #a6044d;
@@ -87,6 +87,18 @@
 @color_convention_primary:   #3fae2a;
 @color_convention_secondary: #00a1e1;
 @color_convention_accent:    #01b7ff;
+
+// EWRI HMEM 2017
+// class: .hmemconference
+@color_hmem_primary:   #3b421b;
+@color_hmem_secondary: #b4c1d1;
+@color_hmem_accent:    #a5904f;
+
+// EWRI Congress 2017
+// class: .ewricongress
+@color_ewri_primary:   #446c97;
+@color_ewri_secondary: #dbb92a;
+@color_ewri_accent:    #a26049;
 //++++ end # CONFERENCE SITE-SPECIFIC COLORS ++++//
 
 
@@ -96,7 +108,7 @@
 .mx-bc-primary() {
                                                    background-color: @color_site_primary;
   #pipelinesconference &, .pipelinesconference & { background-color: @color_pl_primary; }
-  #icsiconference      &, .icsiconference      & { background-color: @color_icsi_primary; }
+                          .icsiconference      & { background-color: @color_icsi_primary; }
   #lidconference       &, .lidconference       & { background-color: @color_lid_primary; }
   #structurescongress  &, .structurescongress  & { background-color: @color_struct_primary; }
   #georiskconference   &, .georiskconference   & { background-color: @color_georisk_primary; }
@@ -106,11 +118,13 @@
   #cisummit            &, .cisummit            & { background-color: @color_ci_primary; }
   #aeisdc              &, .aeisdc              & { background-color: @color_aeisdc_primary; }
                           .asceconvention      & { background-color: @color_convention_primary; }
+                          .hmemconference      & { background-color: @color_hmem_primary; }
+                          .ewricongress        & { background-color: @color_ewri_primary; }
 }
 .mx-bc-secondary() {
                                                    background-color: @color_site_secondary;
   #pipelinesconference &, .pipelinesconference & { background-color: @color_pl_secondary; }
-  #icsiconference      &, .icsiconference      & { background-color: @color_icsi_secondary; }
+                          .icsiconference      & { background-color: @color_icsi_secondary; }
   #lidconference       &, .lidconference       & { background-color: @color_lid_secondary; }
   #structurescongress  &, .structurescongress  & { background-color: @color_struct_secondary; }
   #georiskconference   &, .georiskconference   & { background-color: @color_georisk_secondary; }
@@ -120,11 +134,13 @@
   #cisummit            &, .cisummit            & { background-color: @color_ci_secondary; }
   #aeisdc              &, .aeisdc              & { background-color: @color_aeisdc_secondary; }
                           .asceconvention      & { background-color: @color_convention_secondary; }
+                          .hmemconference      & { background-color: @color_hmem_secondary; }
+                          .ewricongress        & { background-color: @color_ewri_secondary; }
 }
 .mx-bc-accent() {
                                                    background-color: @color_site_accent;
   #pipelinesconference &, .pipelinesconference & { background-color: @color_pl_accent; }
-  #icsiconference      &, .icsiconference      & { background-color: @color_icsi_accent; }
+                          .icsiconference      & { background-color: @color_icsi_accent; }
   #lidconference       &, .lidconference       & { background-color: @color_lid_accent; }
   #structurescongress  &, .structurescongress  & { background-color: @color_struct_accent; }
   #georiskconference   &, .georiskconference   & { background-color: @color_georisk_accent; }
@@ -134,11 +150,13 @@
   #cisummit            &, .cisummit            & { background-color: @color_ci_accent; }
   #aeisdc              &, .aeisdc              & { background-color: @color_aeisdc_accent; }
                           .asceconvention      & { background-color: @color_convention_accent; }
+                          .hmemconference      & { background-color: @color_hmem_accent; }
+                          .ewricongress        & { background-color: @color_ewri_accent; }
 }
 .mx-c-primary() {
                                                    color: @color_site_primary;
   #pipelinesconference &, .pipelinesconference & { color: @color_pl_primary; }
-  #icsiconference      &, .icsiconference      & { color: @color_icsi_primary; }
+                          .icsiconference      & { color: @color_icsi_primary; }
   #lidconference       &, .lidconference       & { color: @color_lid_primary; }
   #structurescongress  &, .structurescongress  & { color: @color_struct_primary; }
   #georiskconference   &, .georiskconference   & { color: @color_georisk_primary; }
@@ -148,11 +166,13 @@
   #cisummit            &, .cisummit            & { color: @color_ci_primary; }
   #aeisdc              &, .aeisdc              & { color: @color_aeisdc_primary; }
                           .asceconvention      & { color: @color_convention_primary; }
+                          .hmemconference      & { color: @color_hmem_primary; }
+                          .ewricongress        & { color: @color_ewri_primary; }
 }
 .mx-c-secondary() {
                                                    color: @color_site_secondary;
   #pipelinesconference &, .pipelinesconference & { color: @color_pl_secondary; }
-  #icsiconference      &, .icsiconference      & { color: @color_icsi_secondary; }
+                          .icsiconference      & { color: @color_icsi_secondary; }
   #lidconference       &, .lidconference       & { color: @color_lid_secondary; }
   #structurescongress  &, .structurescongress  & { color: @color_struct_secondary; }
   #georiskconference   &, .georiskconference   & { color: @color_georisk_secondary; }
@@ -162,11 +182,13 @@
   #cisummit            &, .cisummit            & { color: @color_ci_secondary; }
   #aeisdc              &, .aeisdc              & { color: @color_aeisdc_secondary; }
                           .asceconvention      & { color: @color_convention_secondary; }
+                          .hmemconference      & { color: @color_hmem_secondary; }
+                          .ewricongress        & { color: @color_ewri_secondary; }
 }
 .mx-c-accent() {
                                                    color: @color_site_accent;
   #pipelinesconference &, .pipelinesconference & { color: @color_pl_accent; }
-  #icsiconference      &, .icsiconference      & { color: @color_icsi_accent; }
+                          .icsiconference      & { color: @color_icsi_accent; }
   #lidconference       &, .lidconference       & { color: @color_lid_accent; }
   #structurescongress  &, .structurescongress  & { color: @color_struct_accent; }
   #georiskconference   &, .georiskconference   & { color: @color_georisk_accent; }
@@ -176,11 +198,13 @@
   #cisummit            &, .cisummit            & { color: @color_ci_accent; }
   #aeisdc              &, .aeisdc              & { color: @color_aeisdc_accent; }
                           .asceconvention      & { color: @color_convention_accent; }
+                          .hmemconference      & { color: @color_hmem_accent; }
+                          .ewricongress        & { color: @color_ewri_accent; }
 }
 .mx-btc-accent() {
                                                    border-top-color: @color_site_accent;
   #pipelinesconference &, .pipelinesconference & { border-top-color: @color_pl_accent; }
-  #icsiconference      &, .icsiconference      & { border-top-color: @color_icsi_accent; }
+                          .icsiconference      & { border-top-color: @color_icsi_accent; }
   #lidconference       &, .lidconference       & { border-top-color: @color_lid_accent; }
   #structurescongress  &, .structurescongress  & { border-top-color: @color_struct_accent; }
   #georiskconference   &, .georiskconference   & { border-top-color: @color_georisk_accent; }
@@ -190,11 +214,13 @@
   #cisummit            &, .cisummit            & { border-top-color: @color_ci_accent; }
   #aeisdc              &, .aeisdc              & { border-top-color: @color_aeisdc_accent; }
                           .asceconvention      & { border-top-color: @color_convention_accent; }
+                          .hmemconference      & { border-top-color: @color_hmem_accent; }
+                          .ewricongress        & { border-top-color: @color_ewri_accent; }
 }
 .mx-bc-primary-fade(@height) {
                                                    .bg-grad(@color_site_primary;    @height);
   #pipelinesconference &, .pipelinesconference & { .bg-grad(@color_pl_primary;      @height); }
-  #icsiconference      &, .icsiconference      & { .bg-grad(@color_icsi_primary;    @height); }
+                          .icsiconference      & { .bg-grad(@color_icsi_primary;    @height); }
   #lidconference       &, .lidconference       & { .bg-grad(@color_lid_primary;     @height); }
   #structurescongress  &, .structurescongress  & { .bg-grad(@color_struct_primary;  @height); }
   #georiskconference   &, .georiskconference   & { .bg-grad(@color_georisk_primary; @height); }
@@ -204,6 +230,8 @@
   #cisummit            &, .cisummit            & { .bg-grad(@color_ci_primary;      @height); }
   #aeisdc              &, .aeisdc              & { .bg-grad(@color_aeisdc_primary;  @height); }
                           .asceconvention      & { .bg-grad(@color_convention_primary; @height); }
+                          .hmemconference      & { .bg-grad(@color_hmem_primary;       @height); }
+                          .ewricongress        & { .bg-grad(@color_ewri_primary;       @height); }
 }
 .bg-grad(@primary, ...) {
   // a mixin for background gradients
