@@ -8,18 +8,10 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     xmeter
     Version: 3.6.0
-    Licence: MIT
-    Repo   : https://github.com/chharvey/xmeter.git
-    Home   : https://chharvey.github.io/xmeter/
-    Author : https://chharvey.github.io/
 \*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     resetcss
     Version: 1.0.3
-    Licence: MIT
-    Repo   : https://github.com/chharvey/resetcss.git
-    Home   : https://github.com/chharvey/resetcss#readme
-    Author : Chris Harvey <chrisharvey2pi@gmail.com> (https://chharvey.github.io/)
 \*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*================================*\
     reset.less
@@ -914,7 +906,6 @@ img {
   vertical-align: middle;
 }
 
-
 /*================================*\
     chewie.less
 \*================================*/
@@ -1276,6 +1267,9 @@ button {
 .photo-col {
   text-align: center;
 }
+.details-col {
+  width: 45%;
+}
 @media (max-width: 989px) {
   .details-col {
     display: block;
@@ -1481,16 +1475,6 @@ button {
 .pipelinesconference .content h6 {
   color: #006c67;
 }
-#icsiconference .c-H--alpha,
-#icsiconference .c-H--beta,
-#icsiconference .c-H--gamma,
-#icsiconference .c-H--delta,
-#icsiconference .content h1,
-#icsiconference .content h2,
-#icsiconference .content h3,
-#icsiconference .content h4,
-#icsiconference .content h5,
-#icsiconference .content h6,
 .icsiconference .c-H--alpha,
 .icsiconference .c-H--beta,
 .icsiconference .c-H--gamma,
@@ -1690,6 +1674,30 @@ button {
 .asceconvention .content h5,
 .asceconvention .content h6 {
   color: #3fae2a;
+}
+.hmemconference .c-H--alpha,
+.hmemconference .c-H--beta,
+.hmemconference .c-H--gamma,
+.hmemconference .c-H--delta,
+.hmemconference .content h1,
+.hmemconference .content h2,
+.hmemconference .content h3,
+.hmemconference .content h4,
+.hmemconference .content h5,
+.hmemconference .content h6 {
+  color: #3b421b;
+}
+.ewricongress .c-H--alpha,
+.ewricongress .c-H--beta,
+.ewricongress .c-H--gamma,
+.ewricongress .c-H--delta,
+.ewricongress .content h1,
+.ewricongress .content h2,
+.ewricongress .content h3,
+.ewricongress .content h4,
+.ewricongress .content h5,
+.ewricongress .content h6 {
+  color: #446c97;
 }
 .c-H--alpha,
 .content h1 {
@@ -1954,7 +1962,7 @@ button {
 }
 .footer .c-ConferenceTagline,
 .year-prev-next h4 {
-  margin-bottom: 5px;
+  margin-bottom: 20px;
 }
 /*################################*\
     chewie  |  _comp.typo.TableHeader.less
@@ -2082,8 +2090,6 @@ button {
 .pipelinesconference .c-Hero {
   background-color: #006c67;
 }
-#icsiconference .introduction,
-#icsiconference .c-Hero,
 .icsiconference .introduction,
 .icsiconference .c-Hero {
   background-color: #0b2f69;
@@ -2139,6 +2145,14 @@ button {
 .asceconvention .introduction,
 .asceconvention .c-Hero {
   background-color: #3fae2a;
+}
+.hmemconference .introduction,
+.hmemconference .c-Hero {
+  background-color: #3b421b;
+}
+.ewricongress .introduction,
+.ewricongress .c-Hero {
+  background-color: #446c97;
 }
 .introduction img,
 .c-Hero img {
@@ -2263,9 +2277,6 @@ button {
   background: linear-gradient(to bottom, transparent 0%, #006c67 100%);
   /* W3C */
 }
-#icsiconference .img-fade,
-#icsiconference .introduction h1::before,
-#icsiconference .c-Hero__Hn::before,
 .icsiconference .img-fade,
 .icsiconference .introduction h1::before,
 .icsiconference .c-Hero__Hn::before {
@@ -2450,6 +2461,38 @@ button {
   background: linear-gradient(to bottom, transparent 0%, #3fae2a 100%);
   /* W3C */
 }
+.hmemconference .img-fade,
+.hmemconference .introduction h1::before,
+.hmemconference .c-Hero__Hn::before {
+  background: #3b421b;
+  background: transparent;
+  background: -webkit-linear-gradient(top, transparent 0%, #3b421b 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -moz-linear-gradient(top, transparent 0%, #3b421b 100%);
+  /* FF3.6+ */
+  background: -ms-linear-gradient(top, transparent 0%, #3b421b 100%);
+  /* IE10+ */
+  background: -o-linear-gradient(top, transparent 0%, #3b421b 100%);
+  /* Opera 11.10+ */
+  background: linear-gradient(to bottom, transparent 0%, #3b421b 100%);
+  /* W3C */
+}
+.ewricongress .img-fade,
+.ewricongress .introduction h1::before,
+.ewricongress .c-Hero__Hn::before {
+  background: #446c97;
+  background: transparent;
+  background: -webkit-linear-gradient(top, transparent 0%, #446c97 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -moz-linear-gradient(top, transparent 0%, #446c97 100%);
+  /* FF3.6+ */
+  background: -ms-linear-gradient(top, transparent 0%, #446c97 100%);
+  /* IE10+ */
+  background: -o-linear-gradient(top, transparent 0%, #446c97 100%);
+  /* Opera 11.10+ */
+  background: linear-gradient(to bottom, transparent 0%, #446c97 100%);
+  /* W3C */
+}
 .img-fade {
   display: none;
 }
@@ -2531,7 +2574,6 @@ button {
 .pipelinesconference .date {
   color: #717073;
 }
-#icsiconference .date,
 .icsiconference .date {
   color: #a6044d;
 }
@@ -2569,6 +2611,12 @@ button {
 }
 .asceconvention .date {
   color: #00a1e1;
+}
+.hmemconference .date {
+  color: #b4c1d1;
+}
+.ewricongress .date {
+  color: #dbb92a;
 }
 /*################################*\
     chewie  |  _comp.typo.LinkArrow.less
@@ -2967,11 +3015,6 @@ button {
 .pipelinesconference .navigation-level2 {
   background-color: #717073;
 }
-#icsiconference .c-NavBar,
-#icsiconference .navigation,
-#icsiconference .nav3,
-#icsiconference .tab-buttons,
-#icsiconference .navigation-level2,
 .icsiconference .c-NavBar,
 .icsiconference .navigation,
 .icsiconference .nav3,
@@ -3082,6 +3125,20 @@ button {
 .asceconvention .navigation-level2 {
   background-color: #00a1e1;
 }
+.hmemconference .c-NavBar,
+.hmemconference .navigation,
+.hmemconference .nav3,
+.hmemconference .tab-buttons,
+.hmemconference .navigation-level2 {
+  background-color: #b4c1d1;
+}
+.ewricongress .c-NavBar,
+.ewricongress .navigation,
+.ewricongress .nav3,
+.ewricongress .tab-buttons,
+.ewricongress .navigation-level2 {
+  background-color: #dbb92a;
+}
 .c-NavBar__Link,
 .navigation a,
 .nav3 a,
@@ -3191,14 +3248,6 @@ button {
 .pipelinesconference .c-NavBar--main .c-NavBar__Link:hover {
   background-color: #c1d8c5;
 }
-#icsiconference .nav1 a.active,
-#icsiconference .c-NavBar--main a.active,
-#icsiconference .nav1 .c-NavBar__Link.active,
-#icsiconference .c-NavBar--main .c-NavBar__Link.active,
-#icsiconference .nav1 a:hover,
-#icsiconference .c-NavBar--main a:hover,
-#icsiconference .nav1 .c-NavBar__Link:hover,
-#icsiconference .c-NavBar--main .c-NavBar__Link:hover,
 .icsiconference .nav1 a.active,
 .icsiconference .c-NavBar--main a.active,
 .icsiconference .nav1 .c-NavBar__Link.active,
@@ -3363,6 +3412,26 @@ button {
 .asceconvention .c-NavBar--main .c-NavBar__Link:hover {
   background-color: #01b7ff;
 }
+.hmemconference .nav1 a.active,
+.hmemconference .c-NavBar--main a.active,
+.hmemconference .nav1 .c-NavBar__Link.active,
+.hmemconference .c-NavBar--main .c-NavBar__Link.active,
+.hmemconference .nav1 a:hover,
+.hmemconference .c-NavBar--main a:hover,
+.hmemconference .nav1 .c-NavBar__Link:hover,
+.hmemconference .c-NavBar--main .c-NavBar__Link:hover {
+  background-color: #a5904f;
+}
+.ewricongress .nav1 a.active,
+.ewricongress .c-NavBar--main a.active,
+.ewricongress .nav1 .c-NavBar__Link.active,
+.ewricongress .c-NavBar--main .c-NavBar__Link.active,
+.ewricongress .nav1 a:hover,
+.ewricongress .c-NavBar--main a:hover,
+.ewricongress .nav1 .c-NavBar__Link:hover,
+.ewricongress .c-NavBar--main .c-NavBar__Link:hover {
+  background-color: #a26049;
+}
 .nav2,
 .c-NavBar--side,
 .c-NavBar--register {
@@ -3450,8 +3519,6 @@ button {
 .pipelinesconference .c-NavBar--secondary {
   background-color: #c1d8c5;
 }
-#icsiconference .navigation-level2,
-#icsiconference .c-NavBar--secondary,
 .icsiconference .navigation-level2,
 .icsiconference .c-NavBar--secondary {
   background-color: #a3446d;
@@ -3508,6 +3575,14 @@ button {
 .asceconvention .c-NavBar--secondary {
   background-color: #01b7ff;
 }
+.hmemconference .navigation-level2,
+.hmemconference .c-NavBar--secondary {
+  background-color: #a5904f;
+}
+.ewricongress .navigation-level2,
+.ewricongress .c-NavBar--secondary {
+  background-color: #a26049;
+}
 .navigation-level2 ul,
 .c-NavBar--secondary ul {
   display: none;
@@ -3533,8 +3608,6 @@ button {
 .pipelinesconference .c-NavBar--tabs .c-NavBar__Link.current {
   background-color: #c1d8c5;
 }
-#icsiconference .c-NavBar--tabs .c-NavBar__Link:hover,
-#icsiconference .c-NavBar--tabs .c-NavBar__Link.current,
 .icsiconference .c-NavBar--tabs .c-NavBar__Link:hover,
 .icsiconference .c-NavBar--tabs .c-NavBar__Link.current {
   background-color: #a3446d;
@@ -3591,6 +3664,14 @@ button {
 .asceconvention .c-NavBar--tabs .c-NavBar__Link.current {
   background-color: #01b7ff;
 }
+.hmemconference .c-NavBar--tabs .c-NavBar__Link:hover,
+.hmemconference .c-NavBar--tabs .c-NavBar__Link.current {
+  background-color: #a5904f;
+}
+.ewricongress .c-NavBar--tabs .c-NavBar__Link:hover,
+.ewricongress .c-NavBar--tabs .c-NavBar__Link.current {
+  background-color: #a26049;
+}
 .c-NavBar--tabs .c-NavBar__Link.current {
   position: relative;
   cursor: default;
@@ -3637,7 +3718,6 @@ button {
 .pipelinesconference .c-NavBar--tabs .c-NavBar__Link.current::after {
   border-top-color: #c1d8c5;
 }
-#icsiconference .c-NavBar--tabs .c-NavBar__Link.current::after,
 .icsiconference .c-NavBar--tabs .c-NavBar__Link.current::after {
   border-top-color: #a3446d;
 }
@@ -3676,6 +3756,12 @@ button {
 .asceconvention .c-NavBar--tabs .c-NavBar__Link.current::after {
   border-top-color: #01b7ff;
 }
+.hmemconference .c-NavBar--tabs .c-NavBar__Link.current::after {
+  border-top-color: #a5904f;
+}
+.ewricongress .c-NavBar--tabs .c-NavBar__Link.current::after {
+  border-top-color: #a26049;
+}
 .tab-buttons {
   margin-bottom: 0;
   float: right !important;
@@ -3700,8 +3786,6 @@ li.active .tab-button {
 .pipelinesconference li.active .tab-button {
   background-color: #c1d8c5;
 }
-#icsiconference .tab-button:hover,
-#icsiconference li.active .tab-button,
 .icsiconference .tab-button:hover,
 .icsiconference li.active .tab-button {
   background-color: #a3446d;
@@ -3758,6 +3842,14 @@ li.active .tab-button {
 .asceconvention li.active .tab-button {
   background-color: #01b7ff;
 }
+.hmemconference .tab-button:hover,
+.hmemconference li.active .tab-button {
+  background-color: #a5904f;
+}
+.ewricongress .tab-button:hover,
+.ewricongress li.active .tab-button {
+  background-color: #a26049;
+}
 li.active .tab-button {
   position: relative;
   cursor: default;
@@ -3804,7 +3896,6 @@ li.active .tab-button::after {
 .pipelinesconference li.active .tab-button::after {
   border-top-color: #c1d8c5;
 }
-#icsiconference li.active .tab-button::after,
 .icsiconference li.active .tab-button::after {
   border-top-color: #a3446d;
 }
@@ -3842,6 +3933,12 @@ li.active .tab-button::after {
 }
 .asceconvention li.active .tab-button::after {
   border-top-color: #01b7ff;
+}
+.hmemconference li.active .tab-button::after {
+  border-top-color: #a5904f;
+}
+.ewricongress li.active .tab-button::after {
+  border-top-color: #a26049;
 }
 .mobile-nav {
   text-align: right;
@@ -4051,10 +4148,6 @@ a.button--disabled:focus {
 .pipelinesconference .c-SummaryBanner {
   background-color: #006c67;
 }
-#icsiconference .header,
-#icsiconference .footer,
-#icsiconference .summary-banner,
-#icsiconference .c-SummaryBanner,
 .icsiconference .header,
 .icsiconference .footer,
 .icsiconference .summary-banner,
@@ -4146,6 +4239,18 @@ a.button--disabled:focus {
 .asceconvention .summary-banner,
 .asceconvention .c-SummaryBanner {
   background-color: #3fae2a;
+}
+.hmemconference .header,
+.hmemconference .footer,
+.hmemconference .summary-banner,
+.hmemconference .c-SummaryBanner {
+  background-color: #3b421b;
+}
+.ewricongress .header,
+.ewricongress .footer,
+.ewricongress .summary-banner,
+.ewricongress .c-SummaryBanner {
+  background-color: #446c97;
 }
 /*################################*\
     chewie  |  _comp.SiteFooter.less
@@ -4730,7 +4835,6 @@ a.button--disabled:focus {
 .pipelinesconference .a-bc-primary {
   background-color: #006c67 !important;
 }
-#icsiconference .a-bc-primary,
 .icsiconference .a-bc-primary {
   background-color: #0b2f69 !important;
 }
@@ -4769,6 +4873,12 @@ a.button--disabled:focus {
 .asceconvention .a-bc-primary {
   background-color: #3fae2a !important;
 }
+.hmemconference .a-bc-primary {
+  background-color: #3b421b !important;
+}
+.ewricongress .a-bc-primary {
+  background-color: #446c97 !important;
+}
 .a-bc-secondary {
   background-color: #6fc2c4 !important;
 }
@@ -4776,7 +4886,6 @@ a.button--disabled:focus {
 .pipelinesconference .a-bc-secondary {
   background-color: #717073 !important;
 }
-#icsiconference .a-bc-secondary,
 .icsiconference .a-bc-secondary {
   background-color: #a6044d !important;
 }
@@ -4815,6 +4924,12 @@ a.button--disabled:focus {
 .asceconvention .a-bc-secondary {
   background-color: #00a1e1 !important;
 }
+.hmemconference .a-bc-secondary {
+  background-color: #b4c1d1 !important;
+}
+.ewricongress .a-bc-secondary {
+  background-color: #dbb92a !important;
+}
 .a-bc-accent {
   background-color: #714509 !important;
 }
@@ -4822,7 +4937,6 @@ a.button--disabled:focus {
 .pipelinesconference .a-bc-accent {
   background-color: #c1d8c5 !important;
 }
-#icsiconference .a-bc-accent,
 .icsiconference .a-bc-accent {
   background-color: #a3446d !important;
 }
@@ -4861,6 +4975,12 @@ a.button--disabled:focus {
 .asceconvention .a-bc-accent {
   background-color: #01b7ff !important;
 }
+.hmemconference .a-bc-accent {
+  background-color: #a5904f !important;
+}
+.ewricongress .a-bc-accent {
+  background-color: #a26049 !important;
+}
 .a-c-primary {
   color: #6a9556 !important;
 }
@@ -4868,7 +4988,6 @@ a.button--disabled:focus {
 .pipelinesconference .a-c-primary {
   color: #006c67 !important;
 }
-#icsiconference .a-c-primary,
 .icsiconference .a-c-primary {
   color: #0b2f69 !important;
 }
@@ -4907,6 +5026,12 @@ a.button--disabled:focus {
 .asceconvention .a-c-primary {
   color: #3fae2a !important;
 }
+.hmemconference .a-c-primary {
+  color: #3b421b !important;
+}
+.ewricongress .a-c-primary {
+  color: #446c97 !important;
+}
 .a-c-secondary {
   color: #6fc2c4 !important;
 }
@@ -4914,7 +5039,6 @@ a.button--disabled:focus {
 .pipelinesconference .a-c-secondary {
   color: #717073 !important;
 }
-#icsiconference .a-c-secondary,
 .icsiconference .a-c-secondary {
   color: #a6044d !important;
 }
@@ -4953,6 +5077,12 @@ a.button--disabled:focus {
 .asceconvention .a-c-secondary {
   color: #00a1e1 !important;
 }
+.hmemconference .a-c-secondary {
+  color: #b4c1d1 !important;
+}
+.ewricongress .a-c-secondary {
+  color: #dbb92a !important;
+}
 .a-c-accent {
   color: #714509 !important;
 }
@@ -4960,7 +5090,6 @@ a.button--disabled:focus {
 .pipelinesconference .a-c-accent {
   color: #c1d8c5 !important;
 }
-#icsiconference .a-c-accent,
 .icsiconference .a-c-accent {
   color: #a3446d !important;
 }
@@ -4998,6 +5127,12 @@ a.button--disabled:focus {
 }
 .asceconvention .a-c-accent {
   color: #01b7ff !important;
+}
+.hmemconference .a-c-accent {
+  color: #a5904f !important;
+}
+.ewricongress .a-c-accent {
+  color: #a26049 !important;
 }
 /*################################*\
     chewie  |  _trumps.shame.less
@@ -5133,7 +5268,6 @@ a.button--disabled:focus {
   .pipelinesconference .toggleable-nav.in {
     background-color: #006c67;
   }
-  #icsiconference .toggleable-nav.in,
   .icsiconference .toggleable-nav.in {
     background-color: #0b2f69;
   }
@@ -5171,6 +5305,12 @@ a.button--disabled:focus {
   }
   .asceconvention .toggleable-nav.in {
     background-color: #3fae2a;
+  }
+  .hmemconference .toggleable-nav.in {
+    background-color: #3b421b;
+  }
+  .ewricongress .toggleable-nav.in {
+    background-color: #446c97;
   }
   .toggleable-nav.in .close-nav {
     display: block;
