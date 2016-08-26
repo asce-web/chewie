@@ -99,6 +99,12 @@
 @color_ewri_primary:   #446c97;
 @color_ewri_secondary: #dbb92a;
 @color_ewri_accent:    #a26049;
+
+// Pipelines 2017
+// class: .pipelinesconference
+@color_pl_primary:   #571c1f;
+@color_pl_secondary: #9a746a;
+@color_pl_accent:    #d17720;
 //++++ end # CONFERENCE SITE-SPECIFIC COLORS ++++//
 
 
@@ -107,7 +113,7 @@
 //++++++++++++++++++++++++++++++++//
 .mx-bc-primary() {
                                                    background-color: @color_site_primary;
-  #pipelinesconference &, .pipelinesconference & { background-color: @color_pl_primary; }
+                          .pipelinesconference & { background-color: @color_pl_primary; }
                           .icsiconference      & { background-color: @color_icsi_primary; }
   #lidconference       &, .lidconference       & { background-color: @color_lid_primary; }
   #structurescongress  &, .structurescongress  & { background-color: @color_struct_primary; }
@@ -123,7 +129,7 @@
 }
 .mx-bc-secondary() {
                                                    background-color: @color_site_secondary;
-  #pipelinesconference &, .pipelinesconference & { background-color: @color_pl_secondary; }
+                          .pipelinesconference & { background-color: @color_pl_secondary; }
                           .icsiconference      & { background-color: @color_icsi_secondary; }
   #lidconference       &, .lidconference       & { background-color: @color_lid_secondary; }
   #structurescongress  &, .structurescongress  & { background-color: @color_struct_secondary; }
@@ -139,7 +145,7 @@
 }
 .mx-bc-accent() {
                                                    background-color: @color_site_accent;
-  #pipelinesconference &, .pipelinesconference & { background-color: @color_pl_accent; }
+                          .pipelinesconference & { background-color: @color_pl_accent; }
                           .icsiconference      & { background-color: @color_icsi_accent; }
   #lidconference       &, .lidconference       & { background-color: @color_lid_accent; }
   #structurescongress  &, .structurescongress  & { background-color: @color_struct_accent; }
@@ -155,7 +161,7 @@
 }
 .mx-c-primary() {
                                                    color: @color_site_primary;
-  #pipelinesconference &, .pipelinesconference & { color: @color_pl_primary; }
+                          .pipelinesconference & { color: @color_pl_primary; }
                           .icsiconference      & { color: @color_icsi_primary; }
   #lidconference       &, .lidconference       & { color: @color_lid_primary; }
   #structurescongress  &, .structurescongress  & { color: @color_struct_primary; }
@@ -171,7 +177,7 @@
 }
 .mx-c-secondary() {
                                                    color: @color_site_secondary;
-  #pipelinesconference &, .pipelinesconference & { color: @color_pl_secondary; }
+                          .pipelinesconference & { color: @color_pl_secondary; }
                           .icsiconference      & { color: @color_icsi_secondary; }
   #lidconference       &, .lidconference       & { color: @color_lid_secondary; }
   #structurescongress  &, .structurescongress  & { color: @color_struct_secondary; }
@@ -187,7 +193,7 @@
 }
 .mx-c-accent() {
                                                    color: @color_site_accent;
-  #pipelinesconference &, .pipelinesconference & { color: @color_pl_accent; }
+                          .pipelinesconference & { color: @color_pl_accent; }
                           .icsiconference      & { color: @color_icsi_accent; }
   #lidconference       &, .lidconference       & { color: @color_lid_accent; }
   #structurescongress  &, .structurescongress  & { color: @color_struct_accent; }
@@ -203,7 +209,7 @@
 }
 .mx-btc-accent() {
                                                    border-top-color: @color_site_accent;
-  #pipelinesconference &, .pipelinesconference & { border-top-color: @color_pl_accent; }
+                          .pipelinesconference & { border-top-color: @color_pl_accent; }
                           .icsiconference      & { border-top-color: @color_icsi_accent; }
   #lidconference       &, .lidconference       & { border-top-color: @color_lid_accent; }
   #structurescongress  &, .structurescongress  & { border-top-color: @color_struct_accent; }
@@ -219,7 +225,7 @@
 }
 .mx-bc-primary-fade(@height) {
                                                    .bg-grad(@color_site_primary;    @height);
-  #pipelinesconference &, .pipelinesconference & { .bg-grad(@color_pl_primary;      @height); }
+                          .pipelinesconference & { .bg-grad(@color_pl_primary;      @height); }
                           .icsiconference      & { .bg-grad(@color_icsi_primary;    @height); }
   #lidconference       &, .lidconference       & { .bg-grad(@color_lid_primary;     @height); }
   #structurescongress  &, .structurescongress  & { .bg-grad(@color_struct_primary;  @height); }
