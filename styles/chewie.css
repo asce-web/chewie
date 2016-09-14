@@ -1,6 +1,6 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     chewie
-    Version: 1.8.2
+    Version: 1.9.0
     Licence:
     Repo   : https://github.com/asce-web/chewie.git
     Author : ASCE web team (webteam@asce.org)
@@ -1453,16 +1453,6 @@ button {
   text-transform: uppercase;
   color: #6a9556;
 }
-#pipelinesconference .c-H--alpha,
-#pipelinesconference .c-H--beta,
-#pipelinesconference .c-H--gamma,
-#pipelinesconference .c-H--delta,
-#pipelinesconference .content h1,
-#pipelinesconference .content h2,
-#pipelinesconference .content h3,
-#pipelinesconference .content h4,
-#pipelinesconference .content h5,
-#pipelinesconference .content h6,
 .pipelinesconference .c-H--alpha,
 .pipelinesconference .c-H--beta,
 .pipelinesconference .c-H--gamma,
@@ -1473,7 +1463,7 @@ button {
 .pipelinesconference .content h4,
 .pipelinesconference .content h5,
 .pipelinesconference .content h6 {
-  color: #006c67;
+  color: #571c1f;
 }
 .icsiconference .c-H--alpha,
 .icsiconference .c-H--beta,
@@ -1531,16 +1521,6 @@ button {
 .structurescongress .content h6 {
   color: #571c1f;
 }
-#georiskconference .c-H--alpha,
-#georiskconference .c-H--beta,
-#georiskconference .c-H--gamma,
-#georiskconference .c-H--delta,
-#georiskconference .content h1,
-#georiskconference .content h2,
-#georiskconference .content h3,
-#georiskconference .content h4,
-#georiskconference .content h5,
-#georiskconference .content h6,
 .georiskconference .c-H--alpha,
 .georiskconference .c-H--beta,
 .georiskconference .c-H--gamma,
@@ -1553,16 +1533,6 @@ button {
 .georiskconference .content h6 {
   color: #00535e;
 }
-#aei-conference .c-H--alpha,
-#aei-conference .c-H--beta,
-#aei-conference .c-H--gamma,
-#aei-conference .c-H--delta,
-#aei-conference .content h1,
-#aei-conference .content h2,
-#aei-conference .content h3,
-#aei-conference .content h4,
-#aei-conference .content h5,
-#aei-conference .content h6,
 .aei-conference .c-H--alpha,
 .aei-conference .c-H--beta,
 .aei-conference .c-H--gamma,
@@ -1575,16 +1545,6 @@ button {
 .aei-conference .content h6 {
   color: #00548e;
 }
-#pavementsconference .c-H--alpha,
-#pavementsconference .c-H--beta,
-#pavementsconference .c-H--gamma,
-#pavementsconference .c-H--delta,
-#pavementsconference .content h1,
-#pavementsconference .content h2,
-#pavementsconference .content h3,
-#pavementsconference .content h4,
-#pavementsconference .content h5,
-#pavementsconference .content h6,
 .pavementsconference .c-H--alpha,
 .pavementsconference .c-H--beta,
 .pavementsconference .c-H--gamma,
@@ -1597,16 +1557,6 @@ button {
 .pavementsconference .content h6 {
   color: #5e6167;
 }
-#groutingconference .c-H--alpha,
-#groutingconference .c-H--beta,
-#groutingconference .c-H--gamma,
-#groutingconference .c-H--delta,
-#groutingconference .content h1,
-#groutingconference .content h2,
-#groutingconference .content h3,
-#groutingconference .content h4,
-#groutingconference .content h5,
-#groutingconference .content h6,
 .groutingconference .c-H--alpha,
 .groutingconference .c-H--beta,
 .groutingconference .c-H--gamma,
@@ -1619,16 +1569,6 @@ button {
 .groutingconference .content h6 {
   color: #00565b;
 }
-#cisummit .c-H--alpha,
-#cisummit .c-H--beta,
-#cisummit .c-H--gamma,
-#cisummit .c-H--delta,
-#cisummit .content h1,
-#cisummit .content h2,
-#cisummit .content h3,
-#cisummit .content h4,
-#cisummit .content h5,
-#cisummit .content h6,
 .cisummit .c-H--alpha,
 .cisummit .c-H--beta,
 .cisummit .c-H--gamma,
@@ -1641,16 +1581,6 @@ button {
 .cisummit .content h6 {
   color: #d06f1a;
 }
-#aeisdc .c-H--alpha,
-#aeisdc .c-H--beta,
-#aeisdc .c-H--gamma,
-#aeisdc .c-H--delta,
-#aeisdc .content h1,
-#aeisdc .content h2,
-#aeisdc .content h3,
-#aeisdc .content h4,
-#aeisdc .content h5,
-#aeisdc .content h6,
 .aeisdc .c-H--alpha,
 .aeisdc .c-H--beta,
 .aeisdc .c-H--gamma,
@@ -1661,7 +1591,7 @@ button {
 .aeisdc .content h4,
 .aeisdc .content h5,
 .aeisdc .content h6 {
-  color: #020f19;
+  color: #00163e;
 }
 .asceconvention .c-H--alpha,
 .asceconvention .c-H--beta,
@@ -2084,11 +2014,9 @@ button {
   margin-bottom: 20px;
   background-color: #6a9556;
 }
-#pipelinesconference .introduction,
-#pipelinesconference .c-Hero,
 .pipelinesconference .introduction,
 .pipelinesconference .c-Hero {
-  background-color: #006c67;
+  background-color: #571c1f;
 }
 .icsiconference .introduction,
 .icsiconference .c-Hero {
@@ -2106,41 +2034,29 @@ button {
 .structurescongress .c-Hero {
   background-color: #571c1f;
 }
-#georiskconference .introduction,
-#georiskconference .c-Hero,
 .georiskconference .introduction,
 .georiskconference .c-Hero {
   background-color: #00535e;
 }
-#aei-conference .introduction,
-#aei-conference .c-Hero,
 .aei-conference .introduction,
 .aei-conference .c-Hero {
   background-color: #00548e;
 }
-#pavementsconference .introduction,
-#pavementsconference .c-Hero,
 .pavementsconference .introduction,
 .pavementsconference .c-Hero {
   background-color: #5e6167;
 }
-#groutingconference .introduction,
-#groutingconference .c-Hero,
 .groutingconference .introduction,
 .groutingconference .c-Hero {
   background-color: #00565b;
 }
-#cisummit .introduction,
-#cisummit .c-Hero,
 .cisummit .introduction,
 .cisummit .c-Hero {
   background-color: #d06f1a;
 }
-#aeisdc .introduction,
-#aeisdc .c-Hero,
 .aeisdc .introduction,
 .aeisdc .c-Hero {
-  background-color: #020f19;
+  background-color: #00163e;
 }
 .asceconvention .introduction,
 .asceconvention .c-Hero {
@@ -2258,23 +2174,20 @@ button {
   background: linear-gradient(to bottom, transparent 0%, #6a9556 100%);
   /* W3C */
 }
-#pipelinesconference .img-fade,
-#pipelinesconference .introduction h1::before,
-#pipelinesconference .c-Hero__Hn::before,
 .pipelinesconference .img-fade,
 .pipelinesconference .introduction h1::before,
 .pipelinesconference .c-Hero__Hn::before {
-  background: #006c67;
+  background: #571c1f;
   background: transparent;
-  background: -webkit-linear-gradient(top, transparent 0%, #006c67 100%);
+  background: -webkit-linear-gradient(top, transparent 0%, #571c1f 100%);
   /* Chrome10+,Safari5.1+ */
-  background: -moz-linear-gradient(top, transparent 0%, #006c67 100%);
+  background: -moz-linear-gradient(top, transparent 0%, #571c1f 100%);
   /* FF3.6+ */
-  background: -ms-linear-gradient(top, transparent 0%, #006c67 100%);
+  background: -ms-linear-gradient(top, transparent 0%, #571c1f 100%);
   /* IE10+ */
-  background: -o-linear-gradient(top, transparent 0%, #006c67 100%);
+  background: -o-linear-gradient(top, transparent 0%, #571c1f 100%);
   /* Opera 11.10+ */
-  background: linear-gradient(to bottom, transparent 0%, #006c67 100%);
+  background: linear-gradient(to bottom, transparent 0%, #571c1f 100%);
   /* W3C */
 }
 .icsiconference .img-fade,
@@ -2331,9 +2244,6 @@ button {
   background: linear-gradient(to bottom, transparent 0%, #571c1f 100%);
   /* W3C */
 }
-#georiskconference .img-fade,
-#georiskconference .introduction h1::before,
-#georiskconference .c-Hero__Hn::before,
 .georiskconference .img-fade,
 .georiskconference .introduction h1::before,
 .georiskconference .c-Hero__Hn::before {
@@ -2350,9 +2260,6 @@ button {
   background: linear-gradient(to bottom, transparent 0%, #00535e 100%);
   /* W3C */
 }
-#aei-conference .img-fade,
-#aei-conference .introduction h1::before,
-#aei-conference .c-Hero__Hn::before,
 .aei-conference .img-fade,
 .aei-conference .introduction h1::before,
 .aei-conference .c-Hero__Hn::before {
@@ -2369,9 +2276,6 @@ button {
   background: linear-gradient(to bottom, transparent 0%, #00548e 100%);
   /* W3C */
 }
-#pavementsconference .img-fade,
-#pavementsconference .introduction h1::before,
-#pavementsconference .c-Hero__Hn::before,
 .pavementsconference .img-fade,
 .pavementsconference .introduction h1::before,
 .pavementsconference .c-Hero__Hn::before {
@@ -2388,9 +2292,6 @@ button {
   background: linear-gradient(to bottom, transparent 0%, #5e6167 100%);
   /* W3C */
 }
-#groutingconference .img-fade,
-#groutingconference .introduction h1::before,
-#groutingconference .c-Hero__Hn::before,
 .groutingconference .img-fade,
 .groutingconference .introduction h1::before,
 .groutingconference .c-Hero__Hn::before {
@@ -2407,9 +2308,6 @@ button {
   background: linear-gradient(to bottom, transparent 0%, #00565b 100%);
   /* W3C */
 }
-#cisummit .img-fade,
-#cisummit .introduction h1::before,
-#cisummit .c-Hero__Hn::before,
 .cisummit .img-fade,
 .cisummit .introduction h1::before,
 .cisummit .c-Hero__Hn::before {
@@ -2426,23 +2324,20 @@ button {
   background: linear-gradient(to bottom, transparent 0%, #d06f1a 100%);
   /* W3C */
 }
-#aeisdc .img-fade,
-#aeisdc .introduction h1::before,
-#aeisdc .c-Hero__Hn::before,
 .aeisdc .img-fade,
 .aeisdc .introduction h1::before,
 .aeisdc .c-Hero__Hn::before {
-  background: #020f19;
+  background: #00163e;
   background: transparent;
-  background: -webkit-linear-gradient(top, transparent 0%, #020f19 100%);
+  background: -webkit-linear-gradient(top, transparent 0%, #00163e 100%);
   /* Chrome10+,Safari5.1+ */
-  background: -moz-linear-gradient(top, transparent 0%, #020f19 100%);
+  background: -moz-linear-gradient(top, transparent 0%, #00163e 100%);
   /* FF3.6+ */
-  background: -ms-linear-gradient(top, transparent 0%, #020f19 100%);
+  background: -ms-linear-gradient(top, transparent 0%, #00163e 100%);
   /* IE10+ */
-  background: -o-linear-gradient(top, transparent 0%, #020f19 100%);
+  background: -o-linear-gradient(top, transparent 0%, #00163e 100%);
   /* Opera 11.10+ */
-  background: linear-gradient(to bottom, transparent 0%, #020f19 100%);
+  background: linear-gradient(to bottom, transparent 0%, #00163e 100%);
   /* W3C */
 }
 .asceconvention .img-fade,
@@ -2570,9 +2465,8 @@ button {
   text-transform: uppercase;
   color: #6fc2c4;
 }
-#pipelinesconference .date,
 .pipelinesconference .date {
-  color: #717073;
+  color: #9a746a;
 }
 .icsiconference .date {
   color: #a6044d;
@@ -2585,27 +2479,21 @@ button {
 .structurescongress .date {
   color: #14284b;
 }
-#georiskconference .date,
 .georiskconference .date {
   color: #6e6259;
 }
-#aei-conference .date,
 .aei-conference .date {
   color: #7f7f73;
 }
-#pavementsconference .date,
 .pavementsconference .date {
   color: #8a8a8d;
 }
-#groutingconference .date,
 .groutingconference .date {
   color: #82b1ba;
 }
-#cisummit .date,
 .cisummit .date {
   color: #7f7f73;
 }
-#aeisdc .date,
 .aeisdc .date {
   color: #8ca7c2;
 }
@@ -2780,7 +2668,6 @@ button {
   font-weight: 700;
   font-family: 'futura-pt', 'Open Sans', 'Arial', sans-serif;
   text-align: center;
-  letter-spacing: -2px;
   background: #0c5fa8;
   color: #fff;
 }
@@ -2798,7 +2685,6 @@ button {
 .c-YearBadge::before {
   content: '20';
   font-weight: 300;
-  letter-spacing: 1px;
 }
 .year-badge::after,
 .c-YearBadge::after {
@@ -3003,17 +2889,12 @@ button {
     font-size: 13px;
   }
 }
-#pipelinesconference .c-NavBar,
-#pipelinesconference .navigation,
-#pipelinesconference .nav3,
-#pipelinesconference .tab-buttons,
-#pipelinesconference .navigation-level2,
 .pipelinesconference .c-NavBar,
 .pipelinesconference .navigation,
 .pipelinesconference .nav3,
 .pipelinesconference .tab-buttons,
 .pipelinesconference .navigation-level2 {
-  background-color: #717073;
+  background-color: #9a746a;
 }
 .icsiconference .c-NavBar,
 .icsiconference .navigation,
@@ -3046,11 +2927,6 @@ button {
 .structurescongress .navigation-level2 {
   background-color: #14284b;
 }
-#georiskconference .c-NavBar,
-#georiskconference .navigation,
-#georiskconference .nav3,
-#georiskconference .tab-buttons,
-#georiskconference .navigation-level2,
 .georiskconference .c-NavBar,
 .georiskconference .navigation,
 .georiskconference .nav3,
@@ -3058,11 +2934,6 @@ button {
 .georiskconference .navigation-level2 {
   background-color: #6e6259;
 }
-#aei-conference .c-NavBar,
-#aei-conference .navigation,
-#aei-conference .nav3,
-#aei-conference .tab-buttons,
-#aei-conference .navigation-level2,
 .aei-conference .c-NavBar,
 .aei-conference .navigation,
 .aei-conference .nav3,
@@ -3070,11 +2941,6 @@ button {
 .aei-conference .navigation-level2 {
   background-color: #7f7f73;
 }
-#pavementsconference .c-NavBar,
-#pavementsconference .navigation,
-#pavementsconference .nav3,
-#pavementsconference .tab-buttons,
-#pavementsconference .navigation-level2,
 .pavementsconference .c-NavBar,
 .pavementsconference .navigation,
 .pavementsconference .nav3,
@@ -3082,11 +2948,6 @@ button {
 .pavementsconference .navigation-level2 {
   background-color: #8a8a8d;
 }
-#groutingconference .c-NavBar,
-#groutingconference .navigation,
-#groutingconference .nav3,
-#groutingconference .tab-buttons,
-#groutingconference .navigation-level2,
 .groutingconference .c-NavBar,
 .groutingconference .navigation,
 .groutingconference .nav3,
@@ -3094,11 +2955,6 @@ button {
 .groutingconference .navigation-level2 {
   background-color: #82b1ba;
 }
-#cisummit .c-NavBar,
-#cisummit .navigation,
-#cisummit .nav3,
-#cisummit .tab-buttons,
-#cisummit .navigation-level2,
 .cisummit .c-NavBar,
 .cisummit .navigation,
 .cisummit .nav3,
@@ -3106,11 +2962,6 @@ button {
 .cisummit .navigation-level2 {
   background-color: #7f7f73;
 }
-#aeisdc .c-NavBar,
-#aeisdc .navigation,
-#aeisdc .nav3,
-#aeisdc .tab-buttons,
-#aeisdc .navigation-level2,
 .aeisdc .c-NavBar,
 .aeisdc .navigation,
 .aeisdc .nav3,
@@ -3230,14 +3081,6 @@ button {
 .c-NavBar--main .c-NavBar__Link:hover {
   background-color: #714509;
 }
-#pipelinesconference .nav1 a.active,
-#pipelinesconference .c-NavBar--main a.active,
-#pipelinesconference .nav1 .c-NavBar__Link.active,
-#pipelinesconference .c-NavBar--main .c-NavBar__Link.active,
-#pipelinesconference .nav1 a:hover,
-#pipelinesconference .c-NavBar--main a:hover,
-#pipelinesconference .nav1 .c-NavBar__Link:hover,
-#pipelinesconference .c-NavBar--main .c-NavBar__Link:hover,
 .pipelinesconference .nav1 a.active,
 .pipelinesconference .c-NavBar--main a.active,
 .pipelinesconference .nav1 .c-NavBar__Link.active,
@@ -3246,7 +3089,7 @@ button {
 .pipelinesconference .c-NavBar--main a:hover,
 .pipelinesconference .nav1 .c-NavBar__Link:hover,
 .pipelinesconference .c-NavBar--main .c-NavBar__Link:hover {
-  background-color: #c1d8c5;
+  background-color: #d17720;
 }
 .icsiconference .nav1 a.active,
 .icsiconference .c-NavBar--main a.active,
@@ -3294,14 +3137,6 @@ button {
 .structurescongress .c-NavBar--main .c-NavBar__Link:hover {
   background-color: #8b8c8e;
 }
-#georiskconference .nav1 a.active,
-#georiskconference .c-NavBar--main a.active,
-#georiskconference .nav1 .c-NavBar__Link.active,
-#georiskconference .c-NavBar--main .c-NavBar__Link.active,
-#georiskconference .nav1 a:hover,
-#georiskconference .c-NavBar--main a:hover,
-#georiskconference .nav1 .c-NavBar__Link:hover,
-#georiskconference .c-NavBar--main .c-NavBar__Link:hover,
 .georiskconference .nav1 a.active,
 .georiskconference .c-NavBar--main a.active,
 .georiskconference .nav1 .c-NavBar__Link.active,
@@ -3312,14 +3147,6 @@ button {
 .georiskconference .c-NavBar--main .c-NavBar__Link:hover {
   background-color: #82b2ba;
 }
-#aei-conference .nav1 a.active,
-#aei-conference .c-NavBar--main a.active,
-#aei-conference .nav1 .c-NavBar__Link.active,
-#aei-conference .c-NavBar--main .c-NavBar__Link.active,
-#aei-conference .nav1 a:hover,
-#aei-conference .c-NavBar--main a:hover,
-#aei-conference .nav1 .c-NavBar__Link:hover,
-#aei-conference .c-NavBar--main .c-NavBar__Link:hover,
 .aei-conference .nav1 a.active,
 .aei-conference .c-NavBar--main a.active,
 .aei-conference .nav1 .c-NavBar__Link.active,
@@ -3330,14 +3157,6 @@ button {
 .aei-conference .c-NavBar--main .c-NavBar__Link:hover {
   background-color: #aba9a0;
 }
-#pavementsconference .nav1 a.active,
-#pavementsconference .c-NavBar--main a.active,
-#pavementsconference .nav1 .c-NavBar__Link.active,
-#pavementsconference .c-NavBar--main .c-NavBar__Link.active,
-#pavementsconference .nav1 a:hover,
-#pavementsconference .c-NavBar--main a:hover,
-#pavementsconference .nav1 .c-NavBar__Link:hover,
-#pavementsconference .c-NavBar--main .c-NavBar__Link:hover,
 .pavementsconference .nav1 a.active,
 .pavementsconference .c-NavBar--main a.active,
 .pavementsconference .nav1 .c-NavBar__Link.active,
@@ -3348,14 +3167,6 @@ button {
 .pavementsconference .c-NavBar--main .c-NavBar__Link:hover {
   background-color: #e6af00;
 }
-#groutingconference .nav1 a.active,
-#groutingconference .c-NavBar--main a.active,
-#groutingconference .nav1 .c-NavBar__Link.active,
-#groutingconference .c-NavBar--main .c-NavBar__Link.active,
-#groutingconference .nav1 a:hover,
-#groutingconference .c-NavBar--main a:hover,
-#groutingconference .nav1 .c-NavBar__Link:hover,
-#groutingconference .c-NavBar--main .c-NavBar__Link:hover,
 .groutingconference .nav1 a.active,
 .groutingconference .c-NavBar--main a.active,
 .groutingconference .nav1 .c-NavBar__Link.active,
@@ -3366,14 +3177,6 @@ button {
 .groutingconference .c-NavBar--main .c-NavBar__Link:hover {
   background-color: #ff8038;
 }
-#cisummit .nav1 a.active,
-#cisummit .c-NavBar--main a.active,
-#cisummit .nav1 .c-NavBar__Link.active,
-#cisummit .c-NavBar--main .c-NavBar__Link.active,
-#cisummit .nav1 a:hover,
-#cisummit .c-NavBar--main a:hover,
-#cisummit .nav1 .c-NavBar__Link:hover,
-#cisummit .c-NavBar--main .c-NavBar__Link:hover,
 .cisummit .nav1 a.active,
 .cisummit .c-NavBar--main a.active,
 .cisummit .nav1 .c-NavBar__Link.active,
@@ -3384,14 +3187,6 @@ button {
 .cisummit .c-NavBar--main .c-NavBar__Link:hover {
   background-color: #aba9a0;
 }
-#aeisdc .nav1 a.active,
-#aeisdc .c-NavBar--main a.active,
-#aeisdc .nav1 .c-NavBar__Link.active,
-#aeisdc .c-NavBar--main .c-NavBar__Link.active,
-#aeisdc .nav1 a:hover,
-#aeisdc .c-NavBar--main a:hover,
-#aeisdc .nav1 .c-NavBar__Link:hover,
-#aeisdc .c-NavBar--main .c-NavBar__Link:hover,
 .aeisdc .nav1 a.active,
 .aeisdc .c-NavBar--main a.active,
 .aeisdc .nav1 .c-NavBar__Link.active,
@@ -3400,7 +3195,7 @@ button {
 .aeisdc .c-NavBar--main a:hover,
 .aeisdc .nav1 .c-NavBar__Link:hover,
 .aeisdc .c-NavBar--main .c-NavBar__Link:hover {
-  background-color: #7b7761;
+  background-color: #797667;
 }
 .asceconvention .nav1 a.active,
 .asceconvention .c-NavBar--main a.active,
@@ -3513,11 +3308,9 @@ button {
 .c-NavBar--secondary .c-NavBar__Link {
   padding: 14px 10px;
 }
-#pipelinesconference .navigation-level2,
-#pipelinesconference .c-NavBar--secondary,
 .pipelinesconference .navigation-level2,
 .pipelinesconference .c-NavBar--secondary {
-  background-color: #c1d8c5;
+  background-color: #d17720;
 }
 .icsiconference .navigation-level2,
 .icsiconference .c-NavBar--secondary {
@@ -3535,41 +3328,29 @@ button {
 .structurescongress .c-NavBar--secondary {
   background-color: #8b8c8e;
 }
-#georiskconference .navigation-level2,
-#georiskconference .c-NavBar--secondary,
 .georiskconference .navigation-level2,
 .georiskconference .c-NavBar--secondary {
   background-color: #82b2ba;
 }
-#aei-conference .navigation-level2,
-#aei-conference .c-NavBar--secondary,
 .aei-conference .navigation-level2,
 .aei-conference .c-NavBar--secondary {
   background-color: #aba9a0;
 }
-#pavementsconference .navigation-level2,
-#pavementsconference .c-NavBar--secondary,
 .pavementsconference .navigation-level2,
 .pavementsconference .c-NavBar--secondary {
   background-color: #e6af00;
 }
-#groutingconference .navigation-level2,
-#groutingconference .c-NavBar--secondary,
 .groutingconference .navigation-level2,
 .groutingconference .c-NavBar--secondary {
   background-color: #ff8038;
 }
-#cisummit .navigation-level2,
-#cisummit .c-NavBar--secondary,
 .cisummit .navigation-level2,
 .cisummit .c-NavBar--secondary {
   background-color: #aba9a0;
 }
-#aeisdc .navigation-level2,
-#aeisdc .c-NavBar--secondary,
 .aeisdc .navigation-level2,
 .aeisdc .c-NavBar--secondary {
-  background-color: #7b7761;
+  background-color: #797667;
 }
 .asceconvention .navigation-level2,
 .asceconvention .c-NavBar--secondary {
@@ -3602,11 +3383,9 @@ button {
 .c-NavBar--tabs .c-NavBar__Link.current {
   background-color: #714509;
 }
-#pipelinesconference .c-NavBar--tabs .c-NavBar__Link:hover,
-#pipelinesconference .c-NavBar--tabs .c-NavBar__Link.current,
 .pipelinesconference .c-NavBar--tabs .c-NavBar__Link:hover,
 .pipelinesconference .c-NavBar--tabs .c-NavBar__Link.current {
-  background-color: #c1d8c5;
+  background-color: #d17720;
 }
 .icsiconference .c-NavBar--tabs .c-NavBar__Link:hover,
 .icsiconference .c-NavBar--tabs .c-NavBar__Link.current {
@@ -3624,41 +3403,29 @@ button {
 .structurescongress .c-NavBar--tabs .c-NavBar__Link.current {
   background-color: #8b8c8e;
 }
-#georiskconference .c-NavBar--tabs .c-NavBar__Link:hover,
-#georiskconference .c-NavBar--tabs .c-NavBar__Link.current,
 .georiskconference .c-NavBar--tabs .c-NavBar__Link:hover,
 .georiskconference .c-NavBar--tabs .c-NavBar__Link.current {
   background-color: #82b2ba;
 }
-#aei-conference .c-NavBar--tabs .c-NavBar__Link:hover,
-#aei-conference .c-NavBar--tabs .c-NavBar__Link.current,
 .aei-conference .c-NavBar--tabs .c-NavBar__Link:hover,
 .aei-conference .c-NavBar--tabs .c-NavBar__Link.current {
   background-color: #aba9a0;
 }
-#pavementsconference .c-NavBar--tabs .c-NavBar__Link:hover,
-#pavementsconference .c-NavBar--tabs .c-NavBar__Link.current,
 .pavementsconference .c-NavBar--tabs .c-NavBar__Link:hover,
 .pavementsconference .c-NavBar--tabs .c-NavBar__Link.current {
   background-color: #e6af00;
 }
-#groutingconference .c-NavBar--tabs .c-NavBar__Link:hover,
-#groutingconference .c-NavBar--tabs .c-NavBar__Link.current,
 .groutingconference .c-NavBar--tabs .c-NavBar__Link:hover,
 .groutingconference .c-NavBar--tabs .c-NavBar__Link.current {
   background-color: #ff8038;
 }
-#cisummit .c-NavBar--tabs .c-NavBar__Link:hover,
-#cisummit .c-NavBar--tabs .c-NavBar__Link.current,
 .cisummit .c-NavBar--tabs .c-NavBar__Link:hover,
 .cisummit .c-NavBar--tabs .c-NavBar__Link.current {
   background-color: #aba9a0;
 }
-#aeisdc .c-NavBar--tabs .c-NavBar__Link:hover,
-#aeisdc .c-NavBar--tabs .c-NavBar__Link.current,
 .aeisdc .c-NavBar--tabs .c-NavBar__Link:hover,
 .aeisdc .c-NavBar--tabs .c-NavBar__Link.current {
-  background-color: #7b7761;
+  background-color: #797667;
 }
 .asceconvention .c-NavBar--tabs .c-NavBar__Link:hover,
 .asceconvention .c-NavBar--tabs .c-NavBar__Link.current {
@@ -3714,9 +3481,8 @@ button {
     border-width: 15px;
   }
 }
-#pipelinesconference .c-NavBar--tabs .c-NavBar__Link.current::after,
 .pipelinesconference .c-NavBar--tabs .c-NavBar__Link.current::after {
-  border-top-color: #c1d8c5;
+  border-top-color: #d17720;
 }
 .icsiconference .c-NavBar--tabs .c-NavBar__Link.current::after {
   border-top-color: #a3446d;
@@ -3729,29 +3495,23 @@ button {
 .structurescongress .c-NavBar--tabs .c-NavBar__Link.current::after {
   border-top-color: #8b8c8e;
 }
-#georiskconference .c-NavBar--tabs .c-NavBar__Link.current::after,
 .georiskconference .c-NavBar--tabs .c-NavBar__Link.current::after {
   border-top-color: #82b2ba;
 }
-#aei-conference .c-NavBar--tabs .c-NavBar__Link.current::after,
 .aei-conference .c-NavBar--tabs .c-NavBar__Link.current::after {
   border-top-color: #aba9a0;
 }
-#pavementsconference .c-NavBar--tabs .c-NavBar__Link.current::after,
 .pavementsconference .c-NavBar--tabs .c-NavBar__Link.current::after {
   border-top-color: #e6af00;
 }
-#groutingconference .c-NavBar--tabs .c-NavBar__Link.current::after,
 .groutingconference .c-NavBar--tabs .c-NavBar__Link.current::after {
   border-top-color: #ff8038;
 }
-#cisummit .c-NavBar--tabs .c-NavBar__Link.current::after,
 .cisummit .c-NavBar--tabs .c-NavBar__Link.current::after {
   border-top-color: #aba9a0;
 }
-#aeisdc .c-NavBar--tabs .c-NavBar__Link.current::after,
 .aeisdc .c-NavBar--tabs .c-NavBar__Link.current::after {
-  border-top-color: #7b7761;
+  border-top-color: #797667;
 }
 .asceconvention .c-NavBar--tabs .c-NavBar__Link.current::after {
   border-top-color: #01b7ff;
@@ -3780,11 +3540,9 @@ button {
 li.active .tab-button {
   background-color: #714509;
 }
-#pipelinesconference .tab-button:hover,
-#pipelinesconference li.active .tab-button,
 .pipelinesconference .tab-button:hover,
 .pipelinesconference li.active .tab-button {
-  background-color: #c1d8c5;
+  background-color: #d17720;
 }
 .icsiconference .tab-button:hover,
 .icsiconference li.active .tab-button {
@@ -3802,41 +3560,29 @@ li.active .tab-button {
 .structurescongress li.active .tab-button {
   background-color: #8b8c8e;
 }
-#georiskconference .tab-button:hover,
-#georiskconference li.active .tab-button,
 .georiskconference .tab-button:hover,
 .georiskconference li.active .tab-button {
   background-color: #82b2ba;
 }
-#aei-conference .tab-button:hover,
-#aei-conference li.active .tab-button,
 .aei-conference .tab-button:hover,
 .aei-conference li.active .tab-button {
   background-color: #aba9a0;
 }
-#pavementsconference .tab-button:hover,
-#pavementsconference li.active .tab-button,
 .pavementsconference .tab-button:hover,
 .pavementsconference li.active .tab-button {
   background-color: #e6af00;
 }
-#groutingconference .tab-button:hover,
-#groutingconference li.active .tab-button,
 .groutingconference .tab-button:hover,
 .groutingconference li.active .tab-button {
   background-color: #ff8038;
 }
-#cisummit .tab-button:hover,
-#cisummit li.active .tab-button,
 .cisummit .tab-button:hover,
 .cisummit li.active .tab-button {
   background-color: #aba9a0;
 }
-#aeisdc .tab-button:hover,
-#aeisdc li.active .tab-button,
 .aeisdc .tab-button:hover,
 .aeisdc li.active .tab-button {
-  background-color: #7b7761;
+  background-color: #797667;
 }
 .asceconvention .tab-button:hover,
 .asceconvention li.active .tab-button {
@@ -3892,9 +3638,8 @@ li.active .tab-button::after {
     border-width: 15px;
   }
 }
-#pipelinesconference li.active .tab-button::after,
 .pipelinesconference li.active .tab-button::after {
-  border-top-color: #c1d8c5;
+  border-top-color: #d17720;
 }
 .icsiconference li.active .tab-button::after {
   border-top-color: #a3446d;
@@ -3907,29 +3652,23 @@ li.active .tab-button::after {
 .structurescongress li.active .tab-button::after {
   border-top-color: #8b8c8e;
 }
-#georiskconference li.active .tab-button::after,
 .georiskconference li.active .tab-button::after {
   border-top-color: #82b2ba;
 }
-#aei-conference li.active .tab-button::after,
 .aei-conference li.active .tab-button::after {
   border-top-color: #aba9a0;
 }
-#pavementsconference li.active .tab-button::after,
 .pavementsconference li.active .tab-button::after {
   border-top-color: #e6af00;
 }
-#groutingconference li.active .tab-button::after,
 .groutingconference li.active .tab-button::after {
   border-top-color: #ff8038;
 }
-#cisummit li.active .tab-button::after,
 .cisummit li.active .tab-button::after {
   border-top-color: #aba9a0;
 }
-#aeisdc li.active .tab-button::after,
 .aeisdc li.active .tab-button::after {
-  border-top-color: #7b7761;
+  border-top-color: #797667;
 }
 .asceconvention li.active .tab-button::after {
   border-top-color: #01b7ff;
@@ -4138,15 +3877,11 @@ a.button--disabled:focus {
   color: #fff;
   background-color: #6a9556;
 }
-#pipelinesconference .header,
-#pipelinesconference .footer,
-#pipelinesconference .summary-banner,
-#pipelinesconference .c-SummaryBanner,
 .pipelinesconference .header,
 .pipelinesconference .footer,
 .pipelinesconference .summary-banner,
 .pipelinesconference .c-SummaryBanner {
-  background-color: #006c67;
+  background-color: #571c1f;
 }
 .icsiconference .header,
 .icsiconference .footer,
@@ -4174,65 +3909,41 @@ a.button--disabled:focus {
 .structurescongress .c-SummaryBanner {
   background-color: #571c1f;
 }
-#georiskconference .header,
-#georiskconference .footer,
-#georiskconference .summary-banner,
-#georiskconference .c-SummaryBanner,
 .georiskconference .header,
 .georiskconference .footer,
 .georiskconference .summary-banner,
 .georiskconference .c-SummaryBanner {
   background-color: #00535e;
 }
-#aei-conference .header,
-#aei-conference .footer,
-#aei-conference .summary-banner,
-#aei-conference .c-SummaryBanner,
 .aei-conference .header,
 .aei-conference .footer,
 .aei-conference .summary-banner,
 .aei-conference .c-SummaryBanner {
   background-color: #00548e;
 }
-#pavementsconference .header,
-#pavementsconference .footer,
-#pavementsconference .summary-banner,
-#pavementsconference .c-SummaryBanner,
 .pavementsconference .header,
 .pavementsconference .footer,
 .pavementsconference .summary-banner,
 .pavementsconference .c-SummaryBanner {
   background-color: #5e6167;
 }
-#groutingconference .header,
-#groutingconference .footer,
-#groutingconference .summary-banner,
-#groutingconference .c-SummaryBanner,
 .groutingconference .header,
 .groutingconference .footer,
 .groutingconference .summary-banner,
 .groutingconference .c-SummaryBanner {
   background-color: #00565b;
 }
-#cisummit .header,
-#cisummit .footer,
-#cisummit .summary-banner,
-#cisummit .c-SummaryBanner,
 .cisummit .header,
 .cisummit .footer,
 .cisummit .summary-banner,
 .cisummit .c-SummaryBanner {
   background-color: #d06f1a;
 }
-#aeisdc .header,
-#aeisdc .footer,
-#aeisdc .summary-banner,
-#aeisdc .c-SummaryBanner,
 .aeisdc .header,
 .aeisdc .footer,
 .aeisdc .summary-banner,
 .aeisdc .c-SummaryBanner {
-  background-color: #020f19;
+  background-color: #00163e;
 }
 .asceconvention .header,
 .asceconvention .footer,
@@ -4831,9 +4542,8 @@ a.button--disabled:focus {
 .a-bc-primary {
   background-color: #6a9556 !important;
 }
-#pipelinesconference .a-bc-primary,
 .pipelinesconference .a-bc-primary {
-  background-color: #006c67 !important;
+  background-color: #571c1f !important;
 }
 .icsiconference .a-bc-primary {
   background-color: #0b2f69 !important;
@@ -4846,29 +4556,23 @@ a.button--disabled:focus {
 .structurescongress .a-bc-primary {
   background-color: #571c1f !important;
 }
-#georiskconference .a-bc-primary,
 .georiskconference .a-bc-primary {
   background-color: #00535e !important;
 }
-#aei-conference .a-bc-primary,
 .aei-conference .a-bc-primary {
   background-color: #00548e !important;
 }
-#pavementsconference .a-bc-primary,
 .pavementsconference .a-bc-primary {
   background-color: #5e6167 !important;
 }
-#groutingconference .a-bc-primary,
 .groutingconference .a-bc-primary {
   background-color: #00565b !important;
 }
-#cisummit .a-bc-primary,
 .cisummit .a-bc-primary {
   background-color: #d06f1a !important;
 }
-#aeisdc .a-bc-primary,
 .aeisdc .a-bc-primary {
-  background-color: #020f19 !important;
+  background-color: #00163e !important;
 }
 .asceconvention .a-bc-primary {
   background-color: #3fae2a !important;
@@ -4882,9 +4586,8 @@ a.button--disabled:focus {
 .a-bc-secondary {
   background-color: #6fc2c4 !important;
 }
-#pipelinesconference .a-bc-secondary,
 .pipelinesconference .a-bc-secondary {
-  background-color: #717073 !important;
+  background-color: #9a746a !important;
 }
 .icsiconference .a-bc-secondary {
   background-color: #a6044d !important;
@@ -4897,27 +4600,21 @@ a.button--disabled:focus {
 .structurescongress .a-bc-secondary {
   background-color: #14284b !important;
 }
-#georiskconference .a-bc-secondary,
 .georiskconference .a-bc-secondary {
   background-color: #6e6259 !important;
 }
-#aei-conference .a-bc-secondary,
 .aei-conference .a-bc-secondary {
   background-color: #7f7f73 !important;
 }
-#pavementsconference .a-bc-secondary,
 .pavementsconference .a-bc-secondary {
   background-color: #8a8a8d !important;
 }
-#groutingconference .a-bc-secondary,
 .groutingconference .a-bc-secondary {
   background-color: #82b1ba !important;
 }
-#cisummit .a-bc-secondary,
 .cisummit .a-bc-secondary {
   background-color: #7f7f73 !important;
 }
-#aeisdc .a-bc-secondary,
 .aeisdc .a-bc-secondary {
   background-color: #8ca7c2 !important;
 }
@@ -4933,9 +4630,8 @@ a.button--disabled:focus {
 .a-bc-accent {
   background-color: #714509 !important;
 }
-#pipelinesconference .a-bc-accent,
 .pipelinesconference .a-bc-accent {
-  background-color: #c1d8c5 !important;
+  background-color: #d17720 !important;
 }
 .icsiconference .a-bc-accent {
   background-color: #a3446d !important;
@@ -4948,29 +4644,23 @@ a.button--disabled:focus {
 .structurescongress .a-bc-accent {
   background-color: #8b8c8e !important;
 }
-#georiskconference .a-bc-accent,
 .georiskconference .a-bc-accent {
   background-color: #82b2ba !important;
 }
-#aei-conference .a-bc-accent,
 .aei-conference .a-bc-accent {
   background-color: #aba9a0 !important;
 }
-#pavementsconference .a-bc-accent,
 .pavementsconference .a-bc-accent {
   background-color: #e6af00 !important;
 }
-#groutingconference .a-bc-accent,
 .groutingconference .a-bc-accent {
   background-color: #ff8038 !important;
 }
-#cisummit .a-bc-accent,
 .cisummit .a-bc-accent {
   background-color: #aba9a0 !important;
 }
-#aeisdc .a-bc-accent,
 .aeisdc .a-bc-accent {
-  background-color: #7b7761 !important;
+  background-color: #797667 !important;
 }
 .asceconvention .a-bc-accent {
   background-color: #01b7ff !important;
@@ -4984,9 +4674,8 @@ a.button--disabled:focus {
 .a-c-primary {
   color: #6a9556 !important;
 }
-#pipelinesconference .a-c-primary,
 .pipelinesconference .a-c-primary {
-  color: #006c67 !important;
+  color: #571c1f !important;
 }
 .icsiconference .a-c-primary {
   color: #0b2f69 !important;
@@ -4999,29 +4688,23 @@ a.button--disabled:focus {
 .structurescongress .a-c-primary {
   color: #571c1f !important;
 }
-#georiskconference .a-c-primary,
 .georiskconference .a-c-primary {
   color: #00535e !important;
 }
-#aei-conference .a-c-primary,
 .aei-conference .a-c-primary {
   color: #00548e !important;
 }
-#pavementsconference .a-c-primary,
 .pavementsconference .a-c-primary {
   color: #5e6167 !important;
 }
-#groutingconference .a-c-primary,
 .groutingconference .a-c-primary {
   color: #00565b !important;
 }
-#cisummit .a-c-primary,
 .cisummit .a-c-primary {
   color: #d06f1a !important;
 }
-#aeisdc .a-c-primary,
 .aeisdc .a-c-primary {
-  color: #020f19 !important;
+  color: #00163e !important;
 }
 .asceconvention .a-c-primary {
   color: #3fae2a !important;
@@ -5035,9 +4718,8 @@ a.button--disabled:focus {
 .a-c-secondary {
   color: #6fc2c4 !important;
 }
-#pipelinesconference .a-c-secondary,
 .pipelinesconference .a-c-secondary {
-  color: #717073 !important;
+  color: #9a746a !important;
 }
 .icsiconference .a-c-secondary {
   color: #a6044d !important;
@@ -5050,27 +4732,21 @@ a.button--disabled:focus {
 .structurescongress .a-c-secondary {
   color: #14284b !important;
 }
-#georiskconference .a-c-secondary,
 .georiskconference .a-c-secondary {
   color: #6e6259 !important;
 }
-#aei-conference .a-c-secondary,
 .aei-conference .a-c-secondary {
   color: #7f7f73 !important;
 }
-#pavementsconference .a-c-secondary,
 .pavementsconference .a-c-secondary {
   color: #8a8a8d !important;
 }
-#groutingconference .a-c-secondary,
 .groutingconference .a-c-secondary {
   color: #82b1ba !important;
 }
-#cisummit .a-c-secondary,
 .cisummit .a-c-secondary {
   color: #7f7f73 !important;
 }
-#aeisdc .a-c-secondary,
 .aeisdc .a-c-secondary {
   color: #8ca7c2 !important;
 }
@@ -5086,9 +4762,8 @@ a.button--disabled:focus {
 .a-c-accent {
   color: #714509 !important;
 }
-#pipelinesconference .a-c-accent,
 .pipelinesconference .a-c-accent {
-  color: #c1d8c5 !important;
+  color: #d17720 !important;
 }
 .icsiconference .a-c-accent {
   color: #a3446d !important;
@@ -5101,29 +4776,23 @@ a.button--disabled:focus {
 .structurescongress .a-c-accent {
   color: #8b8c8e !important;
 }
-#georiskconference .a-c-accent,
 .georiskconference .a-c-accent {
   color: #82b2ba !important;
 }
-#aei-conference .a-c-accent,
 .aei-conference .a-c-accent {
   color: #aba9a0 !important;
 }
-#pavementsconference .a-c-accent,
 .pavementsconference .a-c-accent {
   color: #e6af00 !important;
 }
-#groutingconference .a-c-accent,
 .groutingconference .a-c-accent {
   color: #ff8038 !important;
 }
-#cisummit .a-c-accent,
 .cisummit .a-c-accent {
   color: #aba9a0 !important;
 }
-#aeisdc .a-c-accent,
 .aeisdc .a-c-accent {
-  color: #7b7761 !important;
+  color: #797667 !important;
 }
 .asceconvention .a-c-accent {
   color: #01b7ff !important;
@@ -5264,9 +4933,8 @@ a.button--disabled:focus {
     max-width: 350px;
     overflow: auto;
   }
-  #pipelinesconference .toggleable-nav.in,
   .pipelinesconference .toggleable-nav.in {
-    background-color: #006c67;
+    background-color: #571c1f;
   }
   .icsiconference .toggleable-nav.in {
     background-color: #0b2f69;
@@ -5279,29 +4947,23 @@ a.button--disabled:focus {
   .structurescongress .toggleable-nav.in {
     background-color: #571c1f;
   }
-  #georiskconference .toggleable-nav.in,
   .georiskconference .toggleable-nav.in {
     background-color: #00535e;
   }
-  #aei-conference .toggleable-nav.in,
   .aei-conference .toggleable-nav.in {
     background-color: #00548e;
   }
-  #pavementsconference .toggleable-nav.in,
   .pavementsconference .toggleable-nav.in {
     background-color: #5e6167;
   }
-  #groutingconference .toggleable-nav.in,
   .groutingconference .toggleable-nav.in {
     background-color: #00565b;
   }
-  #cisummit .toggleable-nav.in,
   .cisummit .toggleable-nav.in {
     background-color: #d06f1a;
   }
-  #aeisdc .toggleable-nav.in,
   .aeisdc .toggleable-nav.in {
-    background-color: #020f19;
+    background-color: #00163e;
   }
   .asceconvention .toggleable-nav.in {
     background-color: #3fae2a;

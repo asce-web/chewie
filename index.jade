@@ -5,6 +5,20 @@ doctype html
 <!--[if gt IE 8]><!-->
 html.no-js
   <!--<![endif]-->
+  block vars
+    -
+      var conference = {
+        name     : 'Sample ASCE Conference'
+      , classname: ''
+      , tagline  : 'Optional Tagline for the Conference Goes Here Lorem Ipsum'
+      , detail   : 'Boston, Massachusetts  |  April 3–5, 2015'
+      , image    : {
+          shield : './img/conf-logo.png'
+        , hero   : './img/fpo-hero.jpg'
+        , banner : './img/fpo-header.jpg'
+        , sidebar: './img/FPO_sidebar_340x135.jpg'
+        }
+      }
   head
     meta(charset="utf-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
@@ -18,7 +32,7 @@ html.no-js
     link(rel="stylesheet", href="./bower_components/bootstrap/dist/css/bootstrap.min.css")
     link(rel="stylesheet", href="./styles/chewie.css")
     <!--[if lt IE 9]> <script src="./js/vendor/html5-3.6-respond-1.1.0.min.js"></script> <![endif]-->
-  body
+  body(class=conference.classname)
     <!--[if lt IE 7]> <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p> <![endif]-->
     div.toggleable-nav.fade
       div.ic.close-nav(tabindex="0") X
@@ -44,10 +58,7 @@ html.no-js
       a.large.uppercase(href="") Exhibitors
     div.header
       div.visible-xs.mobile-nav.navigation
-        div.year-badge-wrapper
-          div.year-badge.text-center
-            h2 #[span.light 20]15
-          div.year-badge-corner
+        span.c-YearBadge 15
         a(href="./") #[span.ic.home]
         a(href="") Register
         a.menu-toggle(href="") Menu #[span.ic.menu]
@@ -56,23 +67,20 @@ html.no-js
           div.col-container
             div.logo-col.text-center
               a(href="./")
-                img.conference-logo(src="./img/conf-logo.png")
+                img.conference-logo(src=conference.image.shield)
             div.auto-col
-              h2: a(href="./", title="Home") Sample ASCE Conference
-              h4.hidden-xs Optional Tagline for the Conference Goes Here Lorem Ipsum
-              h5.hidden-xs Boston, Massachusetts  |  April 3&ndash;5, 2015
-            div.side-nav-col(style="background-image: url('./img/fpo-header.jpg');")
-              div.year-badge-wrapper.hidden-xs
-                div.year-badge.text-center
-                  h2 #[span.light 20]15
-                div.year-badge-corner
+              h2: a(href="./", title="Home")= conference.name
+              h4.hidden-xs= conference.tagline
+              h5.hidden-xs= conference.detail
+            div.side-nav-col(style='background-image: url(\'' + conference.image.banner + '\');')
+              span.c-YearBadge 15
               div.right-header.hidden-xs
                 div.nav3
                   a(href="") For Speakers
                   a(href="./sponsors.html") Sponsors
                   a(href="") Exhibitors
-              h4.visible-xs Optional Tagline for the Conference Goes Here Lorem Ipsum
-            h5.visible-xs Boston, Massachusetts  |  April 3&ndash;5, 2015
+            //-   h4.visible-xs Optional Tagline for the Conference Goes Here Lorem Ipsum
+            //- h5.visible-xs Boston, Massachusetts  |  April 3&ndash;5, 2015
       div.container-fluid.navigation.hidden-xs
         div.container
           div.col-container
@@ -104,10 +112,10 @@ html.no-js
       div.container.content
         div.col-container
           div.auto-col
-            div.share-logos SHARE
+            //- div.share-logos SHARE
               img(src="./img/fpo-share-logos.png")
             div.introduction
-              img(src="./img/fpo-hero.jpg", alt="")
+              img(src=conference.image.hero, alt="")
               div.img-fade
               div
                 h1 New ideas. New practices. New science. New resources. New colleagues. New business procedures.
@@ -153,7 +161,7 @@ html.no-js
             br
           div.side-nav-col
             div.callout.register
-              img(src="./img/FPO_sidebar_340x135.jpg", alt="")
+              img(src=conference.image.sidebar, alt="")
               h4 Sheraton Boston Hotel &amp; Hynes Convention Center
               a.button(href="") REGISTER TODAY
               a(href="") #[span.ic.download] Save to my calendar
@@ -255,15 +263,13 @@ html.no-js
           div.row.title
             div.container
               div.hidden-xs.pull-left
-                div.year-badge.text-center
-                  h2 #[span.light 20]14
-                div.year-badge-corner
+                span.c-YearBadge 15
               h2 Sample ASCE Conference
           div.row.details.year-prev-next
             div.container
               div.col-container
                 div.logo-col.hidden-xs.text-center
-                  img.conference-logo(src="./img/conf-logo.png")
+                  img.conference-logo(src=conference.image.shield)
                 div.auto-col
                   div.col-sm-12.col-xs-10.col4
                     h2 TORONTO, CANADA  |  MAY 2&ndash;4, 2013
@@ -276,15 +282,13 @@ html.no-js
           div.row.title
             div.container
               div.hidden-xs.pull-left
-                div.year-badge.text-center
-                  h2 #[span.light 20]15
-                div.year-badge-corner
+                span.c-YearBadge 15
               h2 Sample ASCE Conference
           div.row.details
             div.container
               div.col-container
                 div.logo-col.hidden-xs.text-center
-                  img.conference-logo(src="./img/conf-logo.png")
+                  img.conference-logo(src=conference.image.shield)
                 div.auto-col
                   div.col-sm-4.hidden-xs
                     div.link-block
@@ -308,7 +312,7 @@ html.no-js
                     a.large(href="") For Speakers
                     a.large(href="./sponsors.html") Sponsors
                     a.large(href="") Exhibitors
-                  div.pull-left.col-xs-2.visible-xs: img.conference-logo(src="./img/conf-logo.png")
+                  div.pull-left.col-xs-2.visible-xs: img.conference-logo(src=conference.image.shield)
                   div.col-sm-4.col-xs-10.col4
                     div.link-block.contact
                       h3 Contact Us
@@ -330,15 +334,13 @@ html.no-js
           div.row.title
             div.container
               div.hidden-xs.pull-left
-                div.year-badge.text-center
-                  h2 #[span.light 20]16
-                div.year-badge-corner
+                span.c-YearBadge 15
               h2 Sample ASCE Conference
           div.row.details.year-prev-next
             div.container
               div.col-container
                 div.logo-col.hidden-xs.text-center
-                  img.conference-logo(src="./img/conf-logo.png")
+                  img.conference-logo(src=conference.image.shield)
                 div.auto-col
                   div.col-sm-12.col-xs-10.col4
                     h2 Mexico City, Mexico  |  April 30 &ndash;  May 2, 2015
