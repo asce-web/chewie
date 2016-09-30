@@ -1,6 +1,6 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     chewie
-    Version: 1.9.0
+    Version: 1.10.0
     Licence:
     Repo   : https://github.com/asce-web/chewie.git
     Author : ASCE web team (webteam@asce.org)
@@ -1020,6 +1020,12 @@ hr {
 /*++++++++++++++++++++++++++++++++*\
     ## GROUPING
 \*++++++++++++++++++++++++++++++++*/
+figcaption {
+  font-style: italic;
+  font-weight: 300;
+  font-size: 0.75em;
+  line-height: 2;
+}
 ul,
 ol {
   margin-bottom: 20px;
@@ -1629,6 +1635,18 @@ button {
 .ewricongress .content h6 {
   color: #446c97;
 }
+.asceconvention2017 .c-H--alpha,
+.asceconvention2017 .c-H--beta,
+.asceconvention2017 .c-H--gamma,
+.asceconvention2017 .c-H--delta,
+.asceconvention2017 .content h1,
+.asceconvention2017 .content h2,
+.asceconvention2017 .content h3,
+.asceconvention2017 .content h4,
+.asceconvention2017 .content h5,
+.asceconvention2017 .content h6 {
+  color: #00737b;
+}
 .c-H--alpha,
 .content h1 {
   font-weight: 500;
@@ -1684,28 +1702,16 @@ button {
   font-size: 0.875rem;
   line-height: 1.42857143;
 }
-.callout h1,
-.summary-banner h1,
 .sponsor-container h1,
 .coop-orgs-block h1,
-.callout h2,
-.summary-banner h2,
 .sponsor-container h2,
 .coop-orgs-block h2,
-.callout h3,
-.summary-banner h3,
 .sponsor-container h3,
 .coop-orgs-block h3,
-.callout h4,
-.summary-banner h4,
 .sponsor-container h4,
 .coop-orgs-block h4,
-.callout h5,
-.summary-banner h5,
 .sponsor-container h5,
 .coop-orgs-block h5,
-.callout h6,
-.summary-banner h6,
 .sponsor-container h6,
 .coop-orgs-block h6 {
   color: inherit;
@@ -2070,6 +2076,10 @@ button {
 .ewricongress .c-Hero {
   background-color: #446c97;
 }
+.asceconvention2017 .introduction,
+.asceconvention2017 .c-Hero {
+  background-color: #00737b;
+}
 .introduction img,
 .c-Hero img {
   display: block;
@@ -2388,6 +2398,22 @@ button {
   background: linear-gradient(to bottom, transparent 0%, #446c97 100%);
   /* W3C */
 }
+.asceconvention2017 .img-fade,
+.asceconvention2017 .introduction h1::before,
+.asceconvention2017 .c-Hero__Hn::before {
+  background: #00737b;
+  background: transparent;
+  background: -webkit-linear-gradient(top, transparent 0%, #00737b 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -moz-linear-gradient(top, transparent 0%, #00737b 100%);
+  /* FF3.6+ */
+  background: -ms-linear-gradient(top, transparent 0%, #00737b 100%);
+  /* IE10+ */
+  background: -o-linear-gradient(top, transparent 0%, #00737b 100%);
+  /* Opera 11.10+ */
+  background: linear-gradient(to bottom, transparent 0%, #00737b 100%);
+  /* W3C */
+}
 .img-fade {
   display: none;
 }
@@ -2505,6 +2531,9 @@ button {
 }
 .ewricongress .date {
   color: #dbb92a;
+}
+.asceconvention2017 .date {
+  color: #694890;
 }
 /*################################*\
     chewie  |  _comp.typo.LinkArrow.less
@@ -2990,6 +3019,13 @@ button {
 .ewricongress .navigation-level2 {
   background-color: #dbb92a;
 }
+.asceconvention2017 .c-NavBar,
+.asceconvention2017 .navigation,
+.asceconvention2017 .nav3,
+.asceconvention2017 .tab-buttons,
+.asceconvention2017 .navigation-level2 {
+  background-color: #694890;
+}
 .c-NavBar__Link,
 .navigation a,
 .nav3 a,
@@ -3227,6 +3263,16 @@ button {
 .ewricongress .c-NavBar--main .c-NavBar__Link:hover {
   background-color: #a26049;
 }
+.asceconvention2017 .nav1 a.active,
+.asceconvention2017 .c-NavBar--main a.active,
+.asceconvention2017 .nav1 .c-NavBar__Link.active,
+.asceconvention2017 .c-NavBar--main .c-NavBar__Link.active,
+.asceconvention2017 .nav1 a:hover,
+.asceconvention2017 .c-NavBar--main a:hover,
+.asceconvention2017 .nav1 .c-NavBar__Link:hover,
+.asceconvention2017 .c-NavBar--main .c-NavBar__Link:hover {
+  background-color: #8e75ac;
+}
 .nav2,
 .c-NavBar--side,
 .c-NavBar--register {
@@ -3364,6 +3410,10 @@ button {
 .ewricongress .c-NavBar--secondary {
   background-color: #a26049;
 }
+.asceconvention2017 .navigation-level2,
+.asceconvention2017 .c-NavBar--secondary {
+  background-color: #8e75ac;
+}
 .navigation-level2 ul,
 .c-NavBar--secondary ul {
   display: none;
@@ -3438,6 +3488,10 @@ button {
 .ewricongress .c-NavBar--tabs .c-NavBar__Link:hover,
 .ewricongress .c-NavBar--tabs .c-NavBar__Link.current {
   background-color: #a26049;
+}
+.asceconvention2017 .c-NavBar--tabs .c-NavBar__Link:hover,
+.asceconvention2017 .c-NavBar--tabs .c-NavBar__Link.current {
+  background-color: #8e75ac;
 }
 .c-NavBar--tabs .c-NavBar__Link.current {
   position: relative;
@@ -3522,6 +3576,9 @@ button {
 .ewricongress .c-NavBar--tabs .c-NavBar__Link.current::after {
   border-top-color: #a26049;
 }
+.asceconvention2017 .c-NavBar--tabs .c-NavBar__Link.current::after {
+  border-top-color: #8e75ac;
+}
 .tab-buttons {
   margin-bottom: 0;
   float: right !important;
@@ -3595,6 +3652,10 @@ li.active .tab-button {
 .ewricongress .tab-button:hover,
 .ewricongress li.active .tab-button {
   background-color: #a26049;
+}
+.asceconvention2017 .tab-button:hover,
+.asceconvention2017 li.active .tab-button {
+  background-color: #8e75ac;
 }
 li.active .tab-button {
   position: relative;
@@ -3678,6 +3739,9 @@ li.active .tab-button::after {
 }
 .ewricongress li.active .tab-button::after {
   border-top-color: #a26049;
+}
+.asceconvention2017 li.active .tab-button::after {
+  border-top-color: #8e75ac;
 }
 .mobile-nav {
   text-align: right;
@@ -3962,6 +4026,12 @@ a.button--disabled:focus {
 .ewricongress .summary-banner,
 .ewricongress .c-SummaryBanner {
   background-color: #446c97;
+}
+.asceconvention2017 .header,
+.asceconvention2017 .footer,
+.asceconvention2017 .summary-banner,
+.asceconvention2017 .c-SummaryBanner {
+  background-color: #00737b;
 }
 /*################################*\
     chewie  |  _comp.SiteFooter.less
@@ -4583,6 +4653,9 @@ a.button--disabled:focus {
 .ewricongress .a-bc-primary {
   background-color: #446c97 !important;
 }
+.asceconvention2017 .a-bc-primary {
+  background-color: #00737b !important;
+}
 .a-bc-secondary {
   background-color: #6fc2c4 !important;
 }
@@ -4626,6 +4699,9 @@ a.button--disabled:focus {
 }
 .ewricongress .a-bc-secondary {
   background-color: #dbb92a !important;
+}
+.asceconvention2017 .a-bc-secondary {
+  background-color: #694890 !important;
 }
 .a-bc-accent {
   background-color: #714509 !important;
@@ -4671,6 +4747,9 @@ a.button--disabled:focus {
 .ewricongress .a-bc-accent {
   background-color: #a26049 !important;
 }
+.asceconvention2017 .a-bc-accent {
+  background-color: #8e75ac !important;
+}
 .a-c-primary {
   color: #6a9556 !important;
 }
@@ -4714,6 +4793,9 @@ a.button--disabled:focus {
 }
 .ewricongress .a-c-primary {
   color: #446c97 !important;
+}
+.asceconvention2017 .a-c-primary {
+  color: #00737b !important;
 }
 .a-c-secondary {
   color: #6fc2c4 !important;
@@ -4759,6 +4841,9 @@ a.button--disabled:focus {
 .ewricongress .a-c-secondary {
   color: #dbb92a !important;
 }
+.asceconvention2017 .a-c-secondary {
+  color: #694890 !important;
+}
 .a-c-accent {
   color: #714509 !important;
 }
@@ -4802,6 +4887,9 @@ a.button--disabled:focus {
 }
 .ewricongress .a-c-accent {
   color: #a26049 !important;
+}
+.asceconvention2017 .a-c-accent {
+  color: #8e75ac !important;
 }
 /*################################*\
     chewie  |  _trumps.shame.less
@@ -4973,6 +5061,9 @@ a.button--disabled:focus {
   }
   .ewricongress .toggleable-nav.in {
     background-color: #446c97;
+  }
+  .asceconvention2017 .toggleable-nav.in {
+    background-color: #00737b;
   }
   .toggleable-nav.in .close-nav {
     display: block;
