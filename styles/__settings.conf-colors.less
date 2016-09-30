@@ -105,6 +105,12 @@
 @color_pl_primary:   #571c1f;
 @color_pl_secondary: #9a746a;
 @color_pl_accent:    #d17720;
+
+// ASCE Convention 2017
+// class: .asceconvention2017
+@color_2017_primary:   #00737b;
+@color_2017_secondary: #694890;
+@color_2017_accent:    #8e75ac;
 //++++ end # CONFERENCE SITE-SPECIFIC COLORS ++++//
 
 
@@ -126,6 +132,7 @@
                           .asceconvention      & { background-color: @color_convention_primary; }
                           .hmemconference      & { background-color: @color_hmem_primary; }
                           .ewricongress        & { background-color: @color_ewri_primary; }
+                          .asceconvention2017  & { background-color: @color_2017_primary; }
 }
 .mx-bc-secondary() {
                                                    background-color: @color_site_secondary;
@@ -142,6 +149,7 @@
                           .asceconvention      & { background-color: @color_convention_secondary; }
                           .hmemconference      & { background-color: @color_hmem_secondary; }
                           .ewricongress        & { background-color: @color_ewri_secondary; }
+                          .asceconvention2017  & { background-color: @color_2017_secondary; }
 }
 .mx-bc-accent() {
                                                    background-color: @color_site_accent;
@@ -158,6 +166,7 @@
                           .asceconvention      & { background-color: @color_convention_accent; }
                           .hmemconference      & { background-color: @color_hmem_accent; }
                           .ewricongress        & { background-color: @color_ewri_accent; }
+                          .asceconvention2017  & { background-color: @color_2017_accent; }
 }
 .mx-c-primary() {
                                                    color: @color_site_primary;
@@ -174,6 +183,7 @@
                           .asceconvention      & { color: @color_convention_primary; }
                           .hmemconference      & { color: @color_hmem_primary; }
                           .ewricongress        & { color: @color_ewri_primary; }
+                          .asceconvention2017  & { color: @color_2017_primary; }
 }
 .mx-c-secondary() {
                                                    color: @color_site_secondary;
@@ -190,6 +200,7 @@
                           .asceconvention      & { color: @color_convention_secondary; }
                           .hmemconference      & { color: @color_hmem_secondary; }
                           .ewricongress        & { color: @color_ewri_secondary; }
+                          .asceconvention2017  & { color: @color_2017_secondary; }
 }
 .mx-c-accent() {
                                                    color: @color_site_accent;
@@ -206,6 +217,7 @@
                           .asceconvention      & { color: @color_convention_accent; }
                           .hmemconference      & { color: @color_hmem_accent; }
                           .ewricongress        & { color: @color_ewri_accent; }
+                          .asceconvention2017  & { color: @color_2017_accent; }
 }
 .mx-btc-accent() {
                                                    border-top-color: @color_site_accent;
@@ -222,6 +234,7 @@
                           .asceconvention      & { border-top-color: @color_convention_accent; }
                           .hmemconference      & { border-top-color: @color_hmem_accent; }
                           .ewricongress        & { border-top-color: @color_ewri_accent; }
+                          .asceconvention2017  & { border-top-color: @color_2017_accent; }
 }
 .mx-bc-primary-fade(@height) {
                                                    .bg-grad(@color_site_primary;    @height);
@@ -238,6 +251,7 @@
                           .asceconvention      & { .bg-grad(@color_convention_primary; @height); }
                           .hmemconference      & { .bg-grad(@color_hmem_primary;       @height); }
                           .ewricongress        & { .bg-grad(@color_ewri_primary;       @height); }
+                          .asceconvention2017  & { .bg-grad(@color_2017_primary;       @height); }
 }
 .bg-grad(@primary, ...) {
   // a mixin for background gradients
