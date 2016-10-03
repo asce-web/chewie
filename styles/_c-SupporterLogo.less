@@ -1,0 +1,28 @@
+
+/*################################*\
+    chewie  |  _c-SupporterLogo.less
+\*################################*/
+
+
+// A logo for a supporter.
+// Could be a sponsor, cooperating, partnering organization, etc.
+// Only specifies image and graphic styles
+// (not structural styles like width/height/margin/padding).
+//
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2016-10-03
+.c-SupporterLogo {
+  // display: block;
+  // line-height: inherit;
+  text-indent: -999999px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  .filter(grayscale(100%));
+  .transitions(-webkit-filter, -moz-filter, -ms-filter, -o-filter, filter; 1000ms);
+  &:hover {
+    .filter(grayscale(0));
+  }
+}
