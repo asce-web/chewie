@@ -1,6 +1,6 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     chewie
-    Version: 1.10.0
+    Version: 1.11.0
     Licence:
     Repo   : https://github.com/asce-web/chewie.git
     Author : ASCE web team (webteam@asce.org)
@@ -979,6 +979,12 @@ img {
     chewie  |  __settings.conf-colors.less
 \*################################*/
 /*################################*\
+    xmeter  |  __fallback.filter.less
+\*################################*/
+/*################################*\
+    xmeter  |  __fallback.transition.less
+\*################################*/
+/*################################*\
     chewie  |  __tools.sprite.less
 \*################################*/
 /*################################*\
@@ -1840,7 +1846,7 @@ button {
   font-size: 18px;
   font-size: 1.125rem;
   line-height: 1.11111111;
-  opacity: .7;
+  color: rgba(255, 255, 255, 0.997);
 }
 @media (max-width: 989px) {
   .c-ConferenceVenue,
@@ -1856,7 +1862,7 @@ button {
 }
 .c-SummaryBanner .c-ConferenceVenue,
 .summary-banner h4 {
-  opacity: .7;
+  color: rgba(255, 255, 255, 0.997);
 }
 @media (max-width: 1199px) {
   .c-SummaryBanner .c-ConferenceVenue,
@@ -4107,7 +4113,7 @@ a.button--disabled:focus {
 .link-block.connect h3,
 .c-LinkBlockHn--title {
   font-weight: 700;
-  opacity: .7;
+  color: rgba(255, 255, 255, 0.997);
 }
 .link-block a,
 .col3 a.large,
@@ -4517,7 +4523,6 @@ a.button--disabled:focus {
 .c-CoopBlock img {
   max-width: 270px;
   max-height: 120px;
-  opacity: .7;
 }
 @media (max-width: 989px) {
   .coop-orgs-block img,
@@ -4552,35 +4557,45 @@ a.button--disabled:focus {
   }
 }
 /*################################*\
-    chewie  |  _c-SponsorCarousel.less
+    chewie  |  _c-SupporterLogo.less
 \*################################*/
-.c-SponsorCarousel {
-  padding-left: 0;
-  text-align: center;
-  list-style: none;
-}
-.c-SponsorCarousel__Item {
-  padding: 0 0.5rem;
-}
-@media screen and (min-width: 45em) {
-  .c-SponsorCarousel__Item {
-    padding: 0 1rem;
-  }
-}
-.c-SponsorCarousel__Logo {
-  display: block;
-  line-height: inherit;
-  width: auto;
-  height: 9rem;
+.c-SupporterLogo {
   text-indent: -999999px;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-transition-property: -webkit-filter, -moz-filter, -ms-filter, -o-filter, filter;
+  -moz-transition-property: -webkit-filter, -moz-filter, -ms-filter, -o-filter, filter;
+  -ms-transition-property: -webkit-filter, -moz-filter, -ms-filter, -o-filter, filter;
+  -o-transition-property: -webkit-filter, -moz-filter, -ms-filter, -o-filter, filter;
+  transition-property: -webkit-filter, -moz-filter, -ms-filter, -o-filter, filter;
+  -webkit-transition-duration: 1000ms;
+  -moz-transition-duration: 1000ms;
+  -ms-transition-duration: 1000ms;
+  -o-transition-duration: 1000ms;
+  transition-duration: 1000ms;
+  -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  -ms-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -webkit-transition-delay: 0ms;
+  -moz-transition-delay: 0ms;
+  -ms-transition-delay: 0ms;
+  -o-transition-delay: 0ms;
+  transition-delay: 0ms;
 }
-.c-SponsorCarousel__Label {
-  font-weight: 800;
-  font-size: 0.75em;
-  color: #aaa;
+.c-SupporterLogo:hover {
+  -webkit-filter: grayscale(0);
+  -moz-filter: grayscale(0);
+  -ms-filter: grayscale(0);
+  -o-filter: grayscale(0);
+  filter: grayscale(0);
 }
 /*################################*\
     chewie  |  _trumps.helpers.less
