@@ -117,6 +117,12 @@
 @color_icce_primary:   #004990;
 @color_icce_secondary: #9b2242;
 @color_icce_accent:    #647cb2;
+
+// Congress on Technical Advancement 2017
+// class: .asce-cta
+@color_cta_primary:   #0033a0;
+@color_cta_secondary: #8c8279;
+@color_cta_accent:    #49a112; // desaturate(darken(#63ff00, 30%, relative), 20%, relative);
 //++++ end # CONFERENCE SITE-SPECIFIC COLORS ++++//
 
 
@@ -140,6 +146,7 @@
                           .ewricongress        & { background-color: @color_ewri_primary; }
                           .asceconvention2017  & { background-color: @color_2017_primary; }
                           .icce2018            & { background-color: @color_icce_primary; }
+                          .asce-cta            & { background-color: @color_cta_primary; }
 }
 .mx-bc-secondary() {
                                                    background-color: @color_site_secondary;
@@ -158,6 +165,7 @@
                           .ewricongress        & { background-color: @color_ewri_secondary; }
                           .asceconvention2017  & { background-color: @color_2017_secondary; }
                           .icce2018            & { background-color: @color_icce_secondary; }
+                          .asce-cta            & { background-color: @color_cta_secondary; }
 }
 .mx-bc-accent() {
                                                    background-color: @color_site_accent;
@@ -176,6 +184,7 @@
                           .ewricongress        & { background-color: @color_ewri_accent; }
                           .asceconvention2017  & { background-color: @color_2017_accent; }
                           .icce2018            & { background-color: @color_icce_accent; }
+                          .asce-cta            & { background-color: @color_cta_accent; }
 }
 .mx-c-primary() {
                                                    color: @color_site_primary;
@@ -194,6 +203,7 @@
                           .ewricongress        & { color: @color_ewri_primary; }
                           .asceconvention2017  & { color: @color_2017_primary; }
                           .icce2018            & { color: @color_icce_primary; }
+                          .asce-cta            & { color: @color_cta_primary; }
 }
 .mx-c-secondary() {
                                                    color: @color_site_secondary;
@@ -212,6 +222,7 @@
                           .ewricongress        & { color: @color_ewri_secondary; }
                           .asceconvention2017  & { color: @color_2017_secondary; }
                           .icce2018            & { color: @color_icce_secondary; }
+                          .asce-cta            & { color: @color_cta_secondary; }
 }
 .mx-c-accent() {
                                                    color: @color_site_accent;
@@ -230,6 +241,7 @@
                           .ewricongress        & { color: @color_ewri_accent; }
                           .asceconvention2017  & { color: @color_2017_accent; }
                           .icce2018            & { color: @color_icce_accent; }
+                          .asce-cta            & { color: @color_cta_accent; }
 }
 .mx-btc-accent() {
                                                    border-top-color: @color_site_accent;
@@ -248,6 +260,7 @@
                           .ewricongress        & { border-top-color: @color_ewri_accent; }
                           .asceconvention2017  & { border-top-color: @color_2017_accent; }
                           .icce2018            & { border-top-color: @color_icce_accent; }
+                          .asce-cta            & { border-top-color: @color_cta_accent; }
 }
 .mx-bc-primary-fade(@height) {
                                                    .bg-grad(@color_site_primary;    @height);
@@ -266,6 +279,7 @@
                           .ewricongress        & { .bg-grad(@color_ewri_primary;       @height); }
                           .asceconvention2017  & { .bg-grad(@color_2017_primary;       @height); }
                           .icce2018            & { .bg-grad(@color_icce_primary;       @height); }
+                          .asce-cta            & { .bg-grad(@color_cta_primary;        @height); }
 }
 .bg-grad(@primary, ...) {
   // a mixin for background gradients
