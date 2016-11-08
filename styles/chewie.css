@@ -1,6 +1,6 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     chewie
-    Version: 1.11.0
+    Version: 1.11.1
     Licence:
     Repo   : https://github.com/asce-web/chewie.git
     Author : ASCE web team (webteam@asce.org)
@@ -1653,6 +1653,30 @@ button {
 .asceconvention2017 .content h6 {
   color: #00737b;
 }
+.icce2018 .c-H--alpha,
+.icce2018 .c-H--beta,
+.icce2018 .c-H--gamma,
+.icce2018 .c-H--delta,
+.icce2018 .content h1,
+.icce2018 .content h2,
+.icce2018 .content h3,
+.icce2018 .content h4,
+.icce2018 .content h5,
+.icce2018 .content h6 {
+  color: #004990;
+}
+.asce-cta .c-H--alpha,
+.asce-cta .c-H--beta,
+.asce-cta .c-H--gamma,
+.asce-cta .c-H--delta,
+.asce-cta .content h1,
+.asce-cta .content h2,
+.asce-cta .content h3,
+.asce-cta .content h4,
+.asce-cta .content h5,
+.asce-cta .content h6 {
+  color: #0033a0;
+}
 .c-H--alpha,
 .content h1 {
   font-weight: 500;
@@ -2086,6 +2110,14 @@ button {
 .asceconvention2017 .c-Hero {
   background-color: #00737b;
 }
+.icce2018 .introduction,
+.icce2018 .c-Hero {
+  background-color: #004990;
+}
+.asce-cta .introduction,
+.asce-cta .c-Hero {
+  background-color: #0033a0;
+}
 .introduction img,
 .c-Hero img {
   display: block;
@@ -2420,6 +2452,38 @@ button {
   background: linear-gradient(to bottom, transparent 0%, #00737b 100%);
   /* W3C */
 }
+.icce2018 .img-fade,
+.icce2018 .introduction h1::before,
+.icce2018 .c-Hero__Hn::before {
+  background: #004990;
+  background: transparent;
+  background: -webkit-linear-gradient(top, transparent 0%, #004990 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -moz-linear-gradient(top, transparent 0%, #004990 100%);
+  /* FF3.6+ */
+  background: -ms-linear-gradient(top, transparent 0%, #004990 100%);
+  /* IE10+ */
+  background: -o-linear-gradient(top, transparent 0%, #004990 100%);
+  /* Opera 11.10+ */
+  background: linear-gradient(to bottom, transparent 0%, #004990 100%);
+  /* W3C */
+}
+.asce-cta .img-fade,
+.asce-cta .introduction h1::before,
+.asce-cta .c-Hero__Hn::before {
+  background: #0033a0;
+  background: transparent;
+  background: -webkit-linear-gradient(top, transparent 0%, #0033a0 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -moz-linear-gradient(top, transparent 0%, #0033a0 100%);
+  /* FF3.6+ */
+  background: -ms-linear-gradient(top, transparent 0%, #0033a0 100%);
+  /* IE10+ */
+  background: -o-linear-gradient(top, transparent 0%, #0033a0 100%);
+  /* Opera 11.10+ */
+  background: linear-gradient(to bottom, transparent 0%, #0033a0 100%);
+  /* W3C */
+}
 .img-fade {
   display: none;
 }
@@ -2540,6 +2604,12 @@ button {
 }
 .asceconvention2017 .date {
   color: #694890;
+}
+.icce2018 .date {
+  color: #9b2242;
+}
+.asce-cta .date {
+  color: #8c8279;
 }
 /*################################*\
     chewie  |  _comp.typo.LinkArrow.less
@@ -3032,6 +3102,20 @@ button {
 .asceconvention2017 .navigation-level2 {
   background-color: #694890;
 }
+.icce2018 .c-NavBar,
+.icce2018 .navigation,
+.icce2018 .nav3,
+.icce2018 .tab-buttons,
+.icce2018 .navigation-level2 {
+  background-color: #9b2242;
+}
+.asce-cta .c-NavBar,
+.asce-cta .navigation,
+.asce-cta .nav3,
+.asce-cta .tab-buttons,
+.asce-cta .navigation-level2 {
+  background-color: #8c8279;
+}
 .c-NavBar__Link,
 .navigation a,
 .nav3 a,
@@ -3279,6 +3363,26 @@ button {
 .asceconvention2017 .c-NavBar--main .c-NavBar__Link:hover {
   background-color: #8e75ac;
 }
+.icce2018 .nav1 a.active,
+.icce2018 .c-NavBar--main a.active,
+.icce2018 .nav1 .c-NavBar__Link.active,
+.icce2018 .c-NavBar--main .c-NavBar__Link.active,
+.icce2018 .nav1 a:hover,
+.icce2018 .c-NavBar--main a:hover,
+.icce2018 .nav1 .c-NavBar__Link:hover,
+.icce2018 .c-NavBar--main .c-NavBar__Link:hover {
+  background-color: #647cb2;
+}
+.asce-cta .nav1 a.active,
+.asce-cta .c-NavBar--main a.active,
+.asce-cta .nav1 .c-NavBar__Link.active,
+.asce-cta .c-NavBar--main .c-NavBar__Link.active,
+.asce-cta .nav1 a:hover,
+.asce-cta .c-NavBar--main a:hover,
+.asce-cta .nav1 .c-NavBar__Link:hover,
+.asce-cta .c-NavBar--main .c-NavBar__Link:hover {
+  background-color: #49a112;
+}
 .nav2,
 .c-NavBar--side,
 .c-NavBar--register {
@@ -3420,6 +3524,14 @@ button {
 .asceconvention2017 .c-NavBar--secondary {
   background-color: #8e75ac;
 }
+.icce2018 .navigation-level2,
+.icce2018 .c-NavBar--secondary {
+  background-color: #647cb2;
+}
+.asce-cta .navigation-level2,
+.asce-cta .c-NavBar--secondary {
+  background-color: #49a112;
+}
 .navigation-level2 ul,
 .c-NavBar--secondary ul {
   display: none;
@@ -3498,6 +3610,14 @@ button {
 .asceconvention2017 .c-NavBar--tabs .c-NavBar__Link:hover,
 .asceconvention2017 .c-NavBar--tabs .c-NavBar__Link.current {
   background-color: #8e75ac;
+}
+.icce2018 .c-NavBar--tabs .c-NavBar__Link:hover,
+.icce2018 .c-NavBar--tabs .c-NavBar__Link.current {
+  background-color: #647cb2;
+}
+.asce-cta .c-NavBar--tabs .c-NavBar__Link:hover,
+.asce-cta .c-NavBar--tabs .c-NavBar__Link.current {
+  background-color: #49a112;
 }
 .c-NavBar--tabs .c-NavBar__Link.current {
   position: relative;
@@ -3585,6 +3705,12 @@ button {
 .asceconvention2017 .c-NavBar--tabs .c-NavBar__Link.current::after {
   border-top-color: #8e75ac;
 }
+.icce2018 .c-NavBar--tabs .c-NavBar__Link.current::after {
+  border-top-color: #647cb2;
+}
+.asce-cta .c-NavBar--tabs .c-NavBar__Link.current::after {
+  border-top-color: #49a112;
+}
 .tab-buttons {
   margin-bottom: 0;
   float: right !important;
@@ -3662,6 +3788,14 @@ li.active .tab-button {
 .asceconvention2017 .tab-button:hover,
 .asceconvention2017 li.active .tab-button {
   background-color: #8e75ac;
+}
+.icce2018 .tab-button:hover,
+.icce2018 li.active .tab-button {
+  background-color: #647cb2;
+}
+.asce-cta .tab-button:hover,
+.asce-cta li.active .tab-button {
+  background-color: #49a112;
 }
 li.active .tab-button {
   position: relative;
@@ -3748,6 +3882,12 @@ li.active .tab-button::after {
 }
 .asceconvention2017 li.active .tab-button::after {
   border-top-color: #8e75ac;
+}
+.icce2018 li.active .tab-button::after {
+  border-top-color: #647cb2;
+}
+.asce-cta li.active .tab-button::after {
+  border-top-color: #49a112;
 }
 .mobile-nav {
   text-align: right;
@@ -4038,6 +4178,18 @@ a.button--disabled:focus {
 .asceconvention2017 .summary-banner,
 .asceconvention2017 .c-SummaryBanner {
   background-color: #00737b;
+}
+.icce2018 .header,
+.icce2018 .footer,
+.icce2018 .summary-banner,
+.icce2018 .c-SummaryBanner {
+  background-color: #004990;
+}
+.asce-cta .header,
+.asce-cta .footer,
+.asce-cta .summary-banner,
+.asce-cta .c-SummaryBanner {
+  background-color: #0033a0;
 }
 /*################################*\
     chewie  |  _comp.SiteFooter.less
@@ -4671,6 +4823,12 @@ a.button--disabled:focus {
 .asceconvention2017 .a-bc-primary {
   background-color: #00737b !important;
 }
+.icce2018 .a-bc-primary {
+  background-color: #004990 !important;
+}
+.asce-cta .a-bc-primary {
+  background-color: #0033a0 !important;
+}
 .a-bc-secondary {
   background-color: #6fc2c4 !important;
 }
@@ -4717,6 +4875,12 @@ a.button--disabled:focus {
 }
 .asceconvention2017 .a-bc-secondary {
   background-color: #694890 !important;
+}
+.icce2018 .a-bc-secondary {
+  background-color: #9b2242 !important;
+}
+.asce-cta .a-bc-secondary {
+  background-color: #8c8279 !important;
 }
 .a-bc-accent {
   background-color: #714509 !important;
@@ -4765,6 +4929,12 @@ a.button--disabled:focus {
 .asceconvention2017 .a-bc-accent {
   background-color: #8e75ac !important;
 }
+.icce2018 .a-bc-accent {
+  background-color: #647cb2 !important;
+}
+.asce-cta .a-bc-accent {
+  background-color: #49a112 !important;
+}
 .a-c-primary {
   color: #6a9556 !important;
 }
@@ -4811,6 +4981,12 @@ a.button--disabled:focus {
 }
 .asceconvention2017 .a-c-primary {
   color: #00737b !important;
+}
+.icce2018 .a-c-primary {
+  color: #004990 !important;
+}
+.asce-cta .a-c-primary {
+  color: #0033a0 !important;
 }
 .a-c-secondary {
   color: #6fc2c4 !important;
@@ -4859,6 +5035,12 @@ a.button--disabled:focus {
 .asceconvention2017 .a-c-secondary {
   color: #694890 !important;
 }
+.icce2018 .a-c-secondary {
+  color: #9b2242 !important;
+}
+.asce-cta .a-c-secondary {
+  color: #8c8279 !important;
+}
 .a-c-accent {
   color: #714509 !important;
 }
@@ -4905,6 +5087,12 @@ a.button--disabled:focus {
 }
 .asceconvention2017 .a-c-accent {
   color: #8e75ac !important;
+}
+.icce2018 .a-c-accent {
+  color: #647cb2 !important;
+}
+.asce-cta .a-c-accent {
+  color: #49a112 !important;
 }
 /*################################*\
     chewie  |  _trumps.shame.less
@@ -5079,6 +5267,12 @@ a.button--disabled:focus {
   }
   .asceconvention2017 .toggleable-nav.in {
     background-color: #00737b;
+  }
+  .icce2018 .toggleable-nav.in {
+    background-color: #004990;
+  }
+  .asce-cta .toggleable-nav.in {
+    background-color: #0033a0;
   }
   .toggleable-nav.in .close-nav {
     display: block;
