@@ -1677,6 +1677,18 @@ button {
 .asce-cta .content h6 {
   color: #0033a0;
 }
+.ascestudentdays .c-H--alpha,
+.ascestudentdays .c-H--beta,
+.ascestudentdays .c-H--gamma,
+.ascestudentdays .c-H--delta,
+.ascestudentdays .content h1,
+.ascestudentdays .content h2,
+.ascestudentdays .content h3,
+.ascestudentdays .content h4,
+.ascestudentdays .content h5,
+.ascestudentdays .content h6 {
+  color: #41434b;
+}
 .c-H--alpha,
 .content h1 {
   font-weight: 500;
@@ -2118,6 +2130,10 @@ button {
 .asce-cta .c-Hero {
   background-color: #0033a0;
 }
+.ascestudentdays .introduction,
+.ascestudentdays .c-Hero {
+  background-color: #41434b;
+}
 .introduction img,
 .c-Hero img {
   display: block;
@@ -2484,6 +2500,22 @@ button {
   background: linear-gradient(to bottom, transparent 0%, #0033a0 100%);
   /* W3C */
 }
+.ascestudentdays .img-fade,
+.ascestudentdays .introduction h1::before,
+.ascestudentdays .c-Hero__Hn::before {
+  background: #41434b;
+  background: transparent;
+  background: -webkit-linear-gradient(top, transparent 0%, #41434b 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -moz-linear-gradient(top, transparent 0%, #41434b 100%);
+  /* FF3.6+ */
+  background: -ms-linear-gradient(top, transparent 0%, #41434b 100%);
+  /* IE10+ */
+  background: -o-linear-gradient(top, transparent 0%, #41434b 100%);
+  /* Opera 11.10+ */
+  background: linear-gradient(to bottom, transparent 0%, #41434b 100%);
+  /* W3C */
+}
 .img-fade {
   display: none;
 }
@@ -2610,6 +2642,9 @@ button {
 }
 .asce-cta .date {
   color: #8c8279;
+}
+.ascestudentdays .date {
+  color: #ffcf01;
 }
 /*################################*\
     chewie  |  _comp.typo.LinkArrow.less
@@ -3116,6 +3151,13 @@ button {
 .asce-cta .navigation-level2 {
   background-color: #8c8279;
 }
+.ascestudentdays .c-NavBar,
+.ascestudentdays .navigation,
+.ascestudentdays .nav3,
+.ascestudentdays .tab-buttons,
+.ascestudentdays .navigation-level2 {
+  background-color: #ffcf01;
+}
 .c-NavBar__Link,
 .navigation a,
 .nav3 a,
@@ -3383,6 +3425,16 @@ button {
 .asce-cta .c-NavBar--main .c-NavBar__Link:hover {
   background-color: #49a112;
 }
+.ascestudentdays .nav1 a.active,
+.ascestudentdays .c-NavBar--main a.active,
+.ascestudentdays .nav1 .c-NavBar__Link.active,
+.ascestudentdays .c-NavBar--main .c-NavBar__Link.active,
+.ascestudentdays .nav1 a:hover,
+.ascestudentdays .c-NavBar--main a:hover,
+.ascestudentdays .nav1 .c-NavBar__Link:hover,
+.ascestudentdays .c-NavBar--main .c-NavBar__Link:hover {
+  background-color: #dac689;
+}
 .nav2,
 .c-NavBar--side,
 .c-NavBar--register {
@@ -3532,6 +3584,10 @@ button {
 .asce-cta .c-NavBar--secondary {
   background-color: #49a112;
 }
+.ascestudentdays .navigation-level2,
+.ascestudentdays .c-NavBar--secondary {
+  background-color: #dac689;
+}
 .navigation-level2 ul,
 .c-NavBar--secondary ul {
   display: none;
@@ -3618,6 +3674,10 @@ button {
 .asce-cta .c-NavBar--tabs .c-NavBar__Link:hover,
 .asce-cta .c-NavBar--tabs .c-NavBar__Link.current {
   background-color: #49a112;
+}
+.ascestudentdays .c-NavBar--tabs .c-NavBar__Link:hover,
+.ascestudentdays .c-NavBar--tabs .c-NavBar__Link.current {
+  background-color: #dac689;
 }
 .c-NavBar--tabs .c-NavBar__Link.current {
   position: relative;
@@ -3711,6 +3771,9 @@ button {
 .asce-cta .c-NavBar--tabs .c-NavBar__Link.current::after {
   border-top-color: #49a112;
 }
+.ascestudentdays .c-NavBar--tabs .c-NavBar__Link.current::after {
+  border-top-color: #dac689;
+}
 .tab-buttons {
   margin-bottom: 0;
   float: right !important;
@@ -3796,6 +3859,10 @@ li.active .tab-button {
 .asce-cta .tab-button:hover,
 .asce-cta li.active .tab-button {
   background-color: #49a112;
+}
+.ascestudentdays .tab-button:hover,
+.ascestudentdays li.active .tab-button {
+  background-color: #dac689;
 }
 li.active .tab-button {
   position: relative;
@@ -3888,6 +3955,9 @@ li.active .tab-button::after {
 }
 .asce-cta li.active .tab-button::after {
   border-top-color: #49a112;
+}
+.ascestudentdays li.active .tab-button::after {
+  border-top-color: #dac689;
 }
 .mobile-nav {
   text-align: right;
@@ -4190,6 +4260,12 @@ a.button--disabled:focus {
 .asce-cta .summary-banner,
 .asce-cta .c-SummaryBanner {
   background-color: #0033a0;
+}
+.ascestudentdays .header,
+.ascestudentdays .footer,
+.ascestudentdays .summary-banner,
+.ascestudentdays .c-SummaryBanner {
+  background-color: #41434b;
 }
 /*################################*\
     chewie  |  _comp.SiteFooter.less
@@ -4829,6 +4905,9 @@ a.button--disabled:focus {
 .asce-cta .a-bc-primary {
   background-color: #0033a0 !important;
 }
+.ascestudentdays .a-bc-primary {
+  background-color: #41434b !important;
+}
 .a-bc-secondary {
   background-color: #6fc2c4 !important;
 }
@@ -4881,6 +4960,9 @@ a.button--disabled:focus {
 }
 .asce-cta .a-bc-secondary {
   background-color: #8c8279 !important;
+}
+.ascestudentdays .a-bc-secondary {
+  background-color: #ffcf01 !important;
 }
 .a-bc-accent {
   background-color: #714509 !important;
@@ -4935,6 +5017,9 @@ a.button--disabled:focus {
 .asce-cta .a-bc-accent {
   background-color: #49a112 !important;
 }
+.ascestudentdays .a-bc-accent {
+  background-color: #dac689 !important;
+}
 .a-c-primary {
   color: #6a9556 !important;
 }
@@ -4987,6 +5072,9 @@ a.button--disabled:focus {
 }
 .asce-cta .a-c-primary {
   color: #0033a0 !important;
+}
+.ascestudentdays .a-c-primary {
+  color: #41434b !important;
 }
 .a-c-secondary {
   color: #6fc2c4 !important;
@@ -5041,6 +5129,9 @@ a.button--disabled:focus {
 .asce-cta .a-c-secondary {
   color: #8c8279 !important;
 }
+.ascestudentdays .a-c-secondary {
+  color: #ffcf01 !important;
+}
 .a-c-accent {
   color: #714509 !important;
 }
@@ -5093,6 +5184,9 @@ a.button--disabled:focus {
 }
 .asce-cta .a-c-accent {
   color: #49a112 !important;
+}
+.ascestudentdays .a-c-accent {
+  color: #dac689 !important;
 }
 /*################################*\
     chewie  |  _trumps.shame.less
@@ -5273,6 +5367,9 @@ a.button--disabled:focus {
   }
   .asce-cta .toggleable-nav.in {
     background-color: #0033a0;
+  }
+  .ascestudentdays .toggleable-nav.in {
+    background-color: #41434b;
   }
   .toggleable-nav.in .close-nav {
     display: block;
