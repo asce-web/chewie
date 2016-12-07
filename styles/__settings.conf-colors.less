@@ -123,6 +123,12 @@
 @color_cta_primary:   #0033a0;
 @color_cta_secondary: #8c8279;
 @color_cta_accent:    #49a112; // desaturate(darken(#63ff00, 30%, relative), 20%, relative);
+
+// CI Student Days
+// class: .ascestudentdays
+@color_cisd_primary:   #41434b;
+@color_cisd_secondary: #ffcf01;
+@color_cisd_accent:    #dac689;
 //++++ end # CONFERENCE SITE-SPECIFIC COLORS ++++//
 
 
@@ -147,6 +153,7 @@
                           .asceconvention2017  & { background-color: @color_2017_primary; }
                           .icce2018            & { background-color: @color_icce_primary; }
                           .asce-cta            & { background-color: @color_cta_primary; }
+                          .ascestudentdays     & { background-color: @color_cisd_primary; }
 }
 .mx-bc-secondary() {
                                                    background-color: @color_site_secondary;
@@ -166,6 +173,7 @@
                           .asceconvention2017  & { background-color: @color_2017_secondary; }
                           .icce2018            & { background-color: @color_icce_secondary; }
                           .asce-cta            & { background-color: @color_cta_secondary; }
+                          .ascestudentdays     & { background-color: @color_cisd_secondary; }
 }
 .mx-bc-accent() {
                                                    background-color: @color_site_accent;
@@ -185,6 +193,7 @@
                           .asceconvention2017  & { background-color: @color_2017_accent; }
                           .icce2018            & { background-color: @color_icce_accent; }
                           .asce-cta            & { background-color: @color_cta_accent; }
+                          .ascestudentdays     & { background-color: @color_cisd_accent; }
 }
 .mx-c-primary() {
                                                    color: @color_site_primary;
@@ -204,6 +213,7 @@
                           .asceconvention2017  & { color: @color_2017_primary; }
                           .icce2018            & { color: @color_icce_primary; }
                           .asce-cta            & { color: @color_cta_primary; }
+                          .ascestudentdays     & { color: @color_cisd_primary; }
 }
 .mx-c-secondary() {
                                                    color: @color_site_secondary;
@@ -223,6 +233,7 @@
                           .asceconvention2017  & { color: @color_2017_secondary; }
                           .icce2018            & { color: @color_icce_secondary; }
                           .asce-cta            & { color: @color_cta_secondary; }
+                          .ascestudentdays     & { color: @color_cisd_secondary; }
 }
 .mx-c-accent() {
                                                    color: @color_site_accent;
@@ -242,6 +253,7 @@
                           .asceconvention2017  & { color: @color_2017_accent; }
                           .icce2018            & { color: @color_icce_accent; }
                           .asce-cta            & { color: @color_cta_accent; }
+                          .ascestudentdays     & { color: @color_cisd_accent; }
 }
 .mx-btc-accent() {
                                                    border-top-color: @color_site_accent;
@@ -261,6 +273,7 @@
                           .asceconvention2017  & { border-top-color: @color_2017_accent; }
                           .icce2018            & { border-top-color: @color_icce_accent; }
                           .asce-cta            & { border-top-color: @color_cta_accent; }
+                          .ascestudentdays     & { border-top-color: @color_cisd_accent; }
 }
 .mx-bc-primary-fade(@height) {
                                                    .bg-grad(@color_site_primary;    @height);
@@ -280,6 +293,7 @@
                           .asceconvention2017  & { .bg-grad(@color_2017_primary;       @height); }
                           .icce2018            & { .bg-grad(@color_icce_primary;       @height); }
                           .asce-cta            & { .bg-grad(@color_cta_primary;        @height); }
+                          .ascestudentdays     & { .bg-grad(@color_cisd_primary;       @height); }
 }
 .bg-grad(@primary, ...) {
   // a mixin for background gradients
