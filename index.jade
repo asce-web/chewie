@@ -73,7 +73,7 @@ html.no-js
               h2: a(href="./", title="Home")= conference.name
               h4.hidden-xs= conference.tagline
               h5.hidden-xs= conference.detail
-            div.side-nav-col(style='background-image: url(\'' + conference.image.banner + '\');')
+            div.side-nav-col(style=`background-image: url('${conference.image.banner}');`)
               span.c-YearBadge 15
               div.right-header.hidden-xs
                 div.nav3

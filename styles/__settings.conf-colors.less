@@ -132,9 +132,15 @@
 
 // EWRI OMSW (stormwater)
 // class: .omswconference
-@color_omsw_primary:   #355d6e; // keep same
-@color_omsw_secondary: #5b8424; // #224215
-@color_omsw_accent:    #c0bba7; // hero img building window
+@color_omsw_primary:   #355d6e;
+@color_omsw_secondary: #5b8424;
+@color_omsw_accent:    #c0bba7;
+
+// T&DI APM Conference
+// class: .apmconference
+@color_apm_primary:   #e37f1c;
+@color_apm_secondary: #eda868;
+@color_apm_accent:    #1561a6;
 //++++ end # CONFERENCE SITE-SPECIFIC COLORS ++++//
 
 
@@ -161,6 +167,7 @@
                           .asce-cta            & { background-color: @color_cta_primary; }
                           .ascestudentdays     & { background-color: @color_cisd_primary; }
                           .omswconference      & { background-color: @color_omsw_primary; }
+                          .apmconference       & { background-color: @color_apm_primary; }
 }
 .mx-bc-secondary() {
                                                    background-color: @color_site_secondary;
@@ -182,6 +189,7 @@
                           .asce-cta            & { background-color: @color_cta_secondary; }
                           .ascestudentdays     & { background-color: @color_cisd_secondary; }
                           .omswconference      & { background-color: @color_omsw_secondary; }
+                          .apmconference       & { background-color: @color_apm_secondary; }
 }
 .mx-bc-accent() {
                                                    background-color: @color_site_accent;
@@ -203,6 +211,7 @@
                           .asce-cta            & { background-color: @color_cta_accent; }
                           .ascestudentdays     & { background-color: @color_cisd_accent; }
                           .omswconference      & { background-color: @color_omsw_accent; }
+                          .apmconference       & { background-color: @color_apm_accent; }
 }
 .mx-c-primary() {
                                                    color: @color_site_primary;
@@ -224,6 +233,7 @@
                           .asce-cta            & { color: @color_cta_primary; }
                           .ascestudentdays     & { color: @color_cisd_primary; }
                           .omswconference      & { color: @color_omsw_primary; }
+                          .apmconference       & { color: @color_apm_primary; }
 }
 .mx-c-secondary() {
                                                    color: @color_site_secondary;
@@ -245,6 +255,7 @@
                           .asce-cta            & { color: @color_cta_secondary; }
                           .ascestudentdays     & { color: @color_cisd_secondary; }
                           .omswconference      & { color: @color_omsw_secondary; }
+                          .apmconference       & { color: @color_apm_secondary; }
 }
 .mx-c-accent() {
                                                    color: @color_site_accent;
@@ -266,6 +277,7 @@
                           .asce-cta            & { color: @color_cta_accent; }
                           .ascestudentdays     & { color: @color_cisd_accent; }
                           .omswconference      & { color: @color_omsw_accent; }
+                          .apmconference       & { color: @color_apm_accent; }
 }
 .mx-btc-accent() {
                                                    border-top-color: @color_site_accent;
@@ -287,6 +299,7 @@
                           .asce-cta            & { border-top-color: @color_cta_accent; }
                           .ascestudentdays     & { border-top-color: @color_cisd_accent; }
                           .omswconference      & { border-top-color: @color_omsw_accent; }
+                          .apmconference       & { border-top-color: @color_apm_accent; }
 }
 .mx-bc-primary-fade(@height) {
                                                    .bg-grad(@color_site_primary;    @height);
@@ -308,6 +321,7 @@
                           .asce-cta            & { .bg-grad(@color_cta_primary;        @height); }
                           .ascestudentdays     & { .bg-grad(@color_cisd_primary;       @height); }
                           .omswconference      & { .bg-grad(@color_omsw_primary;       @height); }
+                          .apmconference       & { .bg-grad(@color_apm_primary;        @height); }
 }
 .bg-grad(@primary, ...) {
   // a mixin for background gradients
