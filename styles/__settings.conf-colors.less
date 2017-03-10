@@ -152,6 +152,12 @@
 @color_unsat_primary:   #00565b;
 @color_unsat_secondary: #b80007;
 @color_unsat_accent:    #82b1ba;
+
+// SEI ETS Conference
+// class: .etsconference
+@color_ets_primary:   #002c73;
+@color_ets_secondary: #7c858c;
+@color_ets_accent:    #5a87d9;
 //++++ end # CONFERENCE SITE-SPECIFIC COLORS ++++//
 
 
@@ -181,6 +187,7 @@
                           .omswconference      & { background-color: @color_omsw_primary; }
                           .apmconference       & { background-color: @color_apm_primary; }
                           .unsatsoilsconf      & { background-color: @color_unsat_primary; }
+                          .etsconference       & { background-color: @color_ets_primary; }
 }
 .mx-bc-secondary() {
                                                    background-color: @color_site_secondary;
@@ -205,6 +212,7 @@
                           .omswconference      & { background-color: @color_omsw_secondary; }
                           .apmconference       & { background-color: @color_apm_secondary; }
                           .unsatsoilsconf      & { background-color: @color_unsat_secondary; }
+                          .etsconference       & { background-color: @color_ets_secondary; }
 }
 .mx-bc-accent() {
                                                    background-color: @color_site_accent;
@@ -229,6 +237,7 @@
                           .omswconference      & { background-color: @color_omsw_accent; }
                           .apmconference       & { background-color: @color_apm_accent; }
                           .unsatsoilsconf      & { background-color: @color_unsat_accent; }
+                          .etsconference       & { background-color: @color_ets_accent; }
 }
 .mx-c-primary() {
                                                    color: @color_site_primary;
@@ -253,6 +262,7 @@
                           .omswconference      & { color: @color_omsw_primary; }
                           .apmconference       & { color: @color_apm_primary; }
                           .unsatsoilsconf      & { color: @color_unsat_primary; }
+                          .etsconference       & { color: @color_ets_primary; }
 }
 .mx-c-secondary() {
                                                    color: @color_site_secondary;
@@ -277,6 +287,7 @@
                           .omswconference      & { color: @color_omsw_secondary; }
                           .apmconference       & { color: @color_apm_secondary; }
                           .unsatsoilsconf      & { color: @color_unsat_secondary; }
+                          .etsconference       & { color: @color_ets_secondary; }
 }
 .mx-c-accent() {
                                                    color: @color_site_accent;
@@ -301,6 +312,7 @@
                           .omswconference      & { color: @color_omsw_accent; }
                           .apmconference       & { color: @color_apm_accent; }
                           .unsatsoilsconf      & { color: @color_unsat_accent; }
+                          .etsconference       & { color: @color_ets_accent; }
 }
 .mx-btc-accent() {
                                                    border-top-color: @color_site_accent;
@@ -325,6 +337,7 @@
                           .omswconference      & { border-top-color: @color_omsw_accent; }
                           .apmconference       & { border-top-color: @color_apm_accent; }
                           .unsatsoilsconf      & { border-top-color: @color_unsat_accent; }
+                          .etsconference       & { border-top-color: @color_ets_accent; }
 }
 .mx-bc-primary-fade(@height) {
                                                    .bg-grad(@color_site_primary;    @height);
@@ -349,6 +362,7 @@
                           .omswconference      & { .bg-grad(@color_omsw_primary;       @height); }
                           .apmconference       & { .bg-grad(@color_apm_primary;        @height); }
                           .unsatsoilsconf      & { .bg-grad(@color_unsat_primary;      @height); }
+                          .etsconference       & { .bg-grad(@color_ets_primary;        @height); }
 }
 .bg-grad(@primary, ...) {
   // a mixin for background gradients
