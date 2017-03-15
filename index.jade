@@ -10,10 +10,12 @@ html.no-js
       var conference = {
         name     : 'Sample ASCE Conference'
       , classname: ''
+      , menuhover: false
       , tagline  : 'Optional Tagline for the Conference Goes Here Lorem Ipsum'
+      , theme    : 'New ideas. New practices. New science. New resources. New colleagues. New business procedures.'
       , detail   : 'Boston, Massachusetts  |  April 3–5, 2015'
       , image    : {
-          shield : './img/conf-logo.png'
+          shield : './img/shield-logo-ewri.png'
         , hero   : './img/fpo-hero.jpg'
         , banner : './img/fpo-header.jpg'
         , sidebar: './img/FPO_sidebar_340x135.jpg'
@@ -72,7 +74,7 @@ html.no-js
               h2: a(href="./", title="Home")= conference.name
               h4.hidden-xs= conference.tagline
               h5.hidden-xs= conference.detail
-            div.side-nav-col(style='background-image: url(\'' + conference.image.banner + '\');')
+            div.side-nav-col(style=`background-image: url('${conference.image.banner}');`)
               span.c-YearBadge 15
               div.right-header.hidden-xs
                 div.nav3
@@ -88,7 +90,7 @@ html.no-js
               div.nav1
                 a.no-hover(href="./")                          #[span.ic.home]
                 a(href="", data-menu-target="#programlevel2")  Program  #[span.ic.chevron-down]
-                a(href="", data-menu-target="#locationlevel2") Location #[span.ic.chevron-down]
+                a(href="", data-menu-target="#locationlevel2" class={'active':conference.menuhover}) Location #[span.ic.chevron-down]
                 a(href="", data-menu-target="#aboutlevel2")    About    #[span.ic.chevron-down]
                 a.no-hover.hidden-md.hidden-lg(href="")        #[span.ic.contact Contact]
                 a.hidden-sm.hidden-xs(href="")                 Contact
@@ -102,7 +104,7 @@ html.no-js
             li: a(href="") Speakers
             li: a(href="") Exhibitor List
             li: a(href="") ASCE Communities &amp; Pavilion
-          ul.list-unstyled#locationlevel2
+          ul.list-unstyled#locationlevel2(class={'active':conference.menuhover})
             li: a(href="") Lodging &amp; Transportation
             li: a(href="") For International Travel
           ul.list-unstyled#aboutlevel2
@@ -118,7 +120,7 @@ html.no-js
               img(src=conference.image.hero, alt="")
               div.img-fade
               div
-                h1 New ideas. New practices. New science. New resources. New colleagues. New business procedures.
+                h1= conference.theme
                 div.intro Exposure to the latest industry advances will help you discover your own #[a cutting-edge solutions]. Gain contacts among colleagues and #[a(href) resource providers]. Ultimately, STRUCTURES CONGRESS 2014 will #[a.c-LinkBanner(href) prepare you and your organization] to tackle greater challenges.
             br
             br
