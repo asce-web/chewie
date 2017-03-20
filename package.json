@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/asce-web/chewie#readme",
   "devDependencies": {
+    "bangs": "^0.10.0",
     "clean-css": "^3.4.9",
     "jade": "^1.11.0",
     "less": "^2.6.0",
