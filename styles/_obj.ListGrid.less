@@ -2,8 +2,7 @@
 /*################################*\
     chewie  |  _obj.ListGrid.less
 \*################################*/
-@import (reference) url('../node_modules/xmeter/src/__tool.fallback.flexbox.less');
-@import (reference) url('../node_modules/xmeter/src/__tool.fallback.box-sizing.less');
+@import (reference) url('../node_modules/xmeter/src/__fallback.flexbox.less');
 
 
 // The ListGrid object is simply a list of items arranged like blocks in a grid.
@@ -18,17 +17,17 @@
 // ^updated
 // : 2016-01-29
 .o-ListGrid {
-  #XMETER .flexbox();
-  #XMETER .flex-direction(row);
-  #XMETER .flex-wrap(wrap);
-  #XMETER .flex-justify-content(flex-start);
+  .flexbox();
+  .flex-direction(row);
+  .flex-wrap(wrap);
+  .flex-justify-content(flex-start);
 }
 
 .o-ListGrid__Item {
   // layout and structure
   display: block;
   float: left; // TODO remove after IE9 support drops
-  #XMETER .box-sizing(border-box);
+  box-sizing: border-box;
   width: 100%;
   padding: 10px;
   .o-ListGrid--halves  > & { width: (1/2) * 100%; }
