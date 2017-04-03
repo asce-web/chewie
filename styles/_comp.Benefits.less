@@ -5,15 +5,6 @@
 @import (reference) url('../node_modules/xmeter/src/__tool.fontsize.less');
 @import (reference) url('../node_modules/xmeter/src/__tool.borders.less');
 @import (reference) url('__settings.less');
-.mx-rr-left(@rr)   { border-radius: @rr 0   0   @rr; }
-.mx-rr-right(@rr)  { border-radius: 0   @rr @rr 0  ; }
-.mx-rr-top(@rr)    { border-radius: @rr @rr 0   0  ; }
-.mx-rr-bottom(@rr) { border-radius: 0   0   @rr @rr; }
-@g-color-gray_dk       : #404040;
-@g-color-primary-shade1: #555555;
-@g-color-primary-tint1 : #aaaaaa;
-@g-color-gray_lt-shade2: #959595;
-@g-color-gray_lt-tint2 : #eaeaea;
 
 // A list of benefits offered to a sponsorship level.
 //
@@ -34,8 +25,7 @@
 .c-Benefits {
   .font-size-mod(0.75);
   .border-vert(all; 1px);
-  border-color: @g-color-gray_dk; // HACK fallback
-  border-color: var(--color-gray_dk);
+  border-color: #222;
   border-radius: 0.5rem;
   background-color: #fff;
   // overflow: hidden; // __Head appears over border-radius // FIXME: enabling this will hide the price
@@ -47,11 +37,9 @@
   position: relative; // containing __Price
   padding-top: calc(~'2 * var(--vru)');
   padding-bottom: var(--vru);
-  .mx-rr-top(0.5rem); // HACK fixes bug from parent overflow: hidden
-  background-color: @g-color-primary-shade1; // HACK fallback
+  border-radius: 0.5rem 0.5rem 0 0; // HACK fixes bug from parent overflow: hidden
+  .mx-bc-primary();
   color: #fff; // HACK fallback
-  background-color: var(--header-color);
-  color: var(--header-text);
 }
 
 .c-Benefits__Hn,
@@ -76,10 +64,8 @@
   font-weight: 900;
   border-width: 1px;
   border-radius: 50%;
-  background-color: #fff; // HACK fallback
-  color: @g-color-primary-shade1; // HACK fallback
-  background-color: var(--header-text);
-  color: var(--header-color);
+  background-color: #fff;
+  .mx-c-primary()
 }
 
 .c-Benefits__List.c-Benefits__List { // HACK specificity override `.c-Benefits__List > ul` (will be fixed with CSS custom property support)
@@ -91,13 +77,11 @@
 .c-Benefits__List__Item {
   padding: calc(~'var(--vru) / 1') 1rem;
   &:nth-of-type(2n) {
-    background-color: @g-color-gray_lt-tint2; // HACK fallback
-    background-color: var(--color-gray_lt-tint2);
+    background-color: #eaeaea;
   }
 }
 .c-Benefits__List__Item--notOffered {
-  color: @g-color-gray_lt-shade2; // HACK fallback
-  color: var(--color-gray_lt-shade2);
+  color: #959595;
 }
 
 .c-Benefits__Icon {
@@ -109,8 +93,6 @@
     padding: 0; // override `.glyphicons::before`
   }
   &.glyphicons-ok {
-    color: @g-color-primary-tint1; // HACK fallback
-    color: var(--color-primary-tint1);
     color: @g-color-asce-green;
   }
 }
