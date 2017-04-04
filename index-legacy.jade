@@ -64,45 +64,45 @@ html.no-js
         a(href="./") #[span.ic.home]
         a(href="") Register
         a.menu-toggle(href="") Menu #[span.ic.menu]
-      div.o-Flex.o-Constrain.c-Mast
-        a.o-Flex__Item.o-Flex.o-MainCol.c-HomeLink(href="./" rel="home")
-          div.o-Flex__Item.c-HomeLink__Logo
-            img.c-ConfLogo(src=conference.image.shield)
-          div.o-Flex__Item.c-HomeLink__Titles
-            h1.c-ConferenceName= conference.name
-            p.c-ConferenceTagline= conference.tagline
-            p.c-ConferenceLocation= conference.detail
-        div.o-Flex__Item.o-SideCol.c-TopImg(style=`background-image: url('${conference.image.banner}');`)
-          span.c-YearBadge 15
-          nav.c-NavBar.c-NavBar--contrib.nav3
-            a(href="") For Speakers
-            a(href="./sponsors.html") Sponsors
-            a(href="") Exhibitors
-      div.container-fluid.navigation.hidden-xs
-        div.container
-          div.col-container
-            div.auto-col
-              div.nav1
-                a.no-hover(href="./")                          #[span.ic.home]
-                a(href="", data-menu-target="#programlevel2")  Program  #[span.ic.chevron-down]
-                a(href="", data-menu-target="#locationlevel2" class={'active':conference.menuhover}) Location #[span.ic.chevron-down]
-                a(href="", data-menu-target="#aboutlevel2")    About    #[span.ic.chevron-down]
-                a.no-hover.hidden-md.hidden-lg(href="")        #[span.ic.contact Contact]
-                a.hidden-sm.hidden-xs(href="")                 Contact
-            div.side-nav-col
-              div.nav2
-                a(href="") Why Attend
-                a(href="") Registration
-      div.container-fluid.navigation-level2
-        div.container
-          ul.list-unstyled#programlevel2
+      div.c-Mast
+        div.o-Flex.o-Constrain
+          a.o-Flex__Item.o-Flex.o-MainCol.c-HomeLink(href="./" rel="home")
+            div.o-Flex__Item.c-HomeLink__Logo
+              img.c-ConfLogo(src=conference.image.shield)
+            div.o-Flex__Item.c-HomeLink__Titles
+              h1.c-ConferenceName= conference.name
+              p.c-ConferenceTagline= conference.tagline
+              p.c-ConferenceLocation= conference.detail
+          div.o-Flex__Item.o-SideCol.c-TopImg(style=`background-image: url('${conference.image.banner}');`)
+            span.c-YearBadge 15
+            div.o-Flex.c-NavBar.c-NavBar--contrib
+              //- change to ul.o-List later
+              a(href="") For Speakers
+              a(href="./sponsors.html") Sponsors
+              a(href="") Exhibitors
+      nav.c-Mast.c-Mast--nav
+        div.o-Flex.o-Constrain
+          div.o-Flex__Item.o-Flex.o-MainCol.c-NavBar.c-NavBar--main
+            //- change div to ul.o-List later
+            a(href="./") #[span.ic.home]
+            a(href="", data-menu-target="#programlevel2")  Program  #[span.ic.chevron-down]
+            a(href="", data-menu-target="#locationlevel2" class={'active':conference.menuhover}) Location #[span.ic.chevron-down]
+            a(href="", data-menu-target="#aboutlevel2")    About    #[span.ic.chevron-down]
+            a(href="", data-menu-target="#contactlevel2")  Contact  #[span.ic.chevron-down]
+          div.o-Flex__Item.o-Flex.o-SideCol.c-NavBar.c-NavBar--register
+            //- change div to ul.o-List later
+            a(href="") Why Attend
+            a(href="") Registration
+      nav.c-Mast.c-Mast--nav.c-Mast--nav--sub
+        div.o-Constrain
+          ul.o-List.o-Flex.c-NavBar.c-NavBar--sub#programlevel2
             li: a(href="") Speakers
             li: a(href="") Exhibitor List
             li: a(href="") ASCE Communities &amp; Pavilion
-          ul.list-unstyled#locationlevel2(class={'active':conference.menuhover})
+          ul.o-List.o-Flex.c-NavBar.c-NavBar--sub#locationlevel2(class={'active':conference.menuhover})
             li: a(href="") Lodging &amp; Transportation
             li: a(href="") For International Travel
-          ul.list-unstyled#aboutlevel2
+          ul.o-List.o-Flex.c-NavBar.c-NavBar--sub#aboutlevel2
             li: a(href="") Cooperating Organizations
             li: a(href="") Volunteer
     div.container-fluid
