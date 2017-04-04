@@ -53,13 +53,13 @@
 // : 2017-04-03
 .o-SideCol {
   @media (min-width: 45em) {
-    .flex(300px); // FIXME magic number!!!
+    .flex(0 1 300px); // FIXME magic number!!!
   }
   @media (min-width: 60em) {
-    .flex(385px); // FIXME magic number!!!
+    .flex(0 1 385px); // FIXME magic number!!!
   }
   @media (min-width: 75em) {
-    .flex(450px); // FIXME magic number!!!
+    .flex(0 1 450px); // FIXME magic number!!!
   }
 }
 
@@ -189,6 +189,54 @@
   background-position: 50% 0;
   @media not all and (min-width: 45em) {
     display: none;
+  }
+}
+
+// The YearBadge component represents the shield-like icon at the top
+// of all pages containing the year (2015).
+// Mixin .year-badge-mx() is a private tool to this component only.
+//
+// ^author
+// : Dae Clarke
+// ^updated
+// : 2015-10-27
+.c-YearBadge {
+  display: none;
+  position: relative;
+  left: calc(~'-1 * var(--year-badge-width) / 2');
+  z-index: 1; // over the contributor menu
+  width: var(--year-badge-width);
+  padding-top: calc(~'var(--year-badge-width) / 2');
+  font-weight: 700;
+  font-family: @font_ui;
+  font-size: calc(~'var(--year-badge-width) / 4');
+  text-align: center;
+  background: @color_asce_primary;
+  color: @color_asce_header_txt;
+  &::before {
+    content: '20';
+    font-weight: 300;
+  }
+  &::after {
+    --year-badge-corner-length: calc(~'var(--year-badge-width) / 4');
+    content: '';
+    display: block;
+    position: relative;
+    top: var(--year-badge-corner-length);
+    width: 0;
+    height: 0;
+    border-width: var(--year-badge-corner-length) calc(~'var(--year-badge-width) / 2') 0;
+    border-color: @color_asce_primary transparent;
+  }
+  @media screen and (min-width: 45em) {
+    --display: block; // HACK lack of @supports
+    display: var(--display);
+    // IDEA maybe use zoom instead of custom property to define size?
+    // zoom: 0.75;
+    // -ms-zoom: 0.75;
+    // -webkit-zoom: 0.75;
+    // -moz-transform: scale(0.75,0.75);
+    // -moz-transform-origin: top center;
   }
 }
 
