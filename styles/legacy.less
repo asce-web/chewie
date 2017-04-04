@@ -273,27 +273,19 @@ main.o-Flex {
   position: absolute;
   top: 0; bottom: 0;
   left: 0; right: 0;
-  // left: 60px; // HACK fallback // maximum possible --year-badge-width
-  // left: calc(~'var(--year-badge-width) / 2');
   .flex-justify-content(flex-end); // undo .o-Flex
   .flex-align-items(flex-start); // undo .o-Flex
+  text-shadow: 0 0 4px black; // IDEA this replaces gradient. enable gradient if people complain
+  // background-image: linear-gradient(to bottom, rgba(0,0,0, 0.5) 0%, transparent 50%);
   @media not all and (min-width: 60em) {
     .flex-direction(column);
     .flex-justify-content(flex-start);
     .flex-align-items(flex-end);
+    // background-image: linear-gradient(to bottom, rgba(0,0,0, 0.5) 0%, transparent 100%);
   }
   @media screen and (min-width: 75em) {
     .font-size-mod(16/16); // undo .c-NavBar
   }
-  background-image: linear-gradient(to bottom,
-    rgba(0,0,0, 0.5) 0%,
-    rgba(0,0,0, 0) 100%);
-  background-image: linear-gradient(to bottom,
-    rgba(0,0,0,(16/32)) 0%,
-    rgba(0,0,0,( 9/32)) 25%,
-    rgba(0,0,0,( 4/32)) 50%,
-    rgba(0,0,0,( 1/32)) 75%,
-    rgba(0,0,0,0) 100%);
   & > :hover {
     background-color: transparent;
     text-decoration: underline;
@@ -414,15 +406,13 @@ main.o-Flex {
     .font-size-el(2.25; 2); // FIXME magic number!!!
   }
   &::before {
-    @height: calc(~'2 * var(--vru)');
     --content: ''; // HACK lack of @supports
     content: var(--content);
     position: absolute;
     left: 0; right: 0;
-    top: calc(~'-1 * '@height);
-    // top: calc((-1 * @height)~' - var(--vru)'); // -(height + padding-top) of Hn
-    height: @height;
-    .mx-bc-primary-fade(@height);
+    top: calc(~'-2 * var(--vru)');
+    height: calc(~'2 * var(--vru)');
+    .mx-bc-primary-fade();
   }
 }
 .c-Hero__Blurb {
@@ -454,5 +444,11 @@ main.o-Flex {
 @media screen and (min-width: 45em) {
   .-ta-l-sM {
     text-align: left;
+  }
+}
+
+@media not all and (min-width: 751px) {
+  .c-NavBar--main > *:first-child {
+    display: none;
   }
 }

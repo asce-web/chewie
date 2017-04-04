@@ -339,43 +339,38 @@
                           .unsatsoilsconf      & { border-top-color: @color_unsat_accent; }
                           .etsconference       & { border-top-color: @color_ets_accent; }
 }
-.mx-bc-primary-fade(@height) {
-                                                   .bg-grad(@color_site_primary;    @height);
-                          .pipelinesconference & { .bg-grad(@color_pl_primary;      @height); }
-                          .icsiconference      & { .bg-grad(@color_icsi_primary;    @height); }
-  #lidconference       &, .lidconference       & { .bg-grad(@color_lid_primary;     @height); }
-  #structurescongress  &                         { .bg-grad(@color_struct_primary;  @height); }
-                          .structurescongress  & { .bg-grad(@color_struct2018_primary;  @height); }
-                          .georiskconference   & { .bg-grad(@color_georisk_primary; @height); }
-                          .aei-conference      & { .bg-grad(@color_aei_primary;     @height); }
-                          .pavementsconference & { .bg-grad(@color_pave_primary;    @height); }
-                          .groutingconference  & { .bg-grad(@color_grout_primary;   @height); }
-                          .cisummit            & { .bg-grad(@color_ci_primary;      @height); }
-                          .aeisdc              & { .bg-grad(@color_aeisdc_primary;  @height); }
-                          .asceconvention      & { .bg-grad(@color_convention_primary; @height); }
-                          .hmemconference      & { .bg-grad(@color_hmem_primary;       @height); }
-                          .ewricongress        & { .bg-grad(@color_ewri_primary;       @height); }
-                          .asceconvention2017  & { .bg-grad(@color_2017_primary;       @height); }
-                          .icce2018            & { .bg-grad(@color_icce_primary;       @height); }
-                          .asce-cta            & { .bg-grad(@color_cta_primary;        @height); }
-                          .ascestudentdays     & { .bg-grad(@color_cisd_primary;       @height); }
-                          .omswconference      & { .bg-grad(@color_omsw_primary;       @height); }
-                          .apmconference       & { .bg-grad(@color_apm_primary;        @height); }
-                          .unsatsoilsconf      & { .bg-grad(@color_unsat_primary;      @height); }
-                          .etsconference       & { .bg-grad(@color_ets_primary;        @height); }
+.mx-bc-primary-fade(...) {
+                                                   .bg-grad(@color_site_primary      );
+                          .pipelinesconference & { .bg-grad(@color_pl_primary        ); }
+                          .icsiconference      & { .bg-grad(@color_icsi_primary      ); }
+  #lidconference       &, .lidconference       & { .bg-grad(@color_lid_primary       ); }
+  #structurescongress  &                         { .bg-grad(@color_struct_primary    ); }
+                          .structurescongress  & { .bg-grad(@color_struct2018_primary); }
+                          .georiskconference   & { .bg-grad(@color_georisk_primary   ); }
+                          .aei-conference      & { .bg-grad(@color_aei_primary       ); }
+                          .pavementsconference & { .bg-grad(@color_pave_primary      ); }
+                          .groutingconference  & { .bg-grad(@color_grout_primary     ); }
+                          .cisummit            & { .bg-grad(@color_ci_primary        ); }
+                          .aeisdc              & { .bg-grad(@color_aeisdc_primary    ); }
+                          .asceconvention      & { .bg-grad(@color_convention_primary); }
+                          .hmemconference      & { .bg-grad(@color_hmem_primary      ); }
+                          .ewricongress        & { .bg-grad(@color_ewri_primary      ); }
+                          .asceconvention2017  & { .bg-grad(@color_2017_primary      ); }
+                          .icce2018            & { .bg-grad(@color_icce_primary      ); }
+                          .asce-cta            & { .bg-grad(@color_cta_primary       ); }
+                          .ascestudentdays     & { .bg-grad(@color_cisd_primary      ); }
+                          .omswconference      & { .bg-grad(@color_omsw_primary      ); }
+                          .apmconference       & { .bg-grad(@color_apm_primary       ); }
+                          .unsatsoilsconf      & { .bg-grad(@color_unsat_primary     ); }
+                          .etsconference       & { .bg-grad(@color_ets_primary       ); }
 }
-.bg-grad(@primary, ...) {
-  // a mixin for background gradients
-  background: @primary;    // fallback for transparent and gradient
-  background: transparent; // fallback for gradient
-  background: -webkit-linear-gradient(      top, transparent 0%, @primary 100%); /* Chrome10+,Safari5.1+ */
-  background:    -moz-linear-gradient(      top, transparent 0%, @primary 100%); /* FF3.6+ */
-  background:     -ms-linear-gradient(      top, transparent 0%, @primary 100%); /* IE10+ */
-  background:      -o-linear-gradient(      top, transparent 0%, @primary 100%); /* Opera 11.10+ */
-  background:         linear-gradient(to bottom, transparent 0%, @primary 100%); /* W3C */
-  // not supporting "old webkit" or IE<10
-  // background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,transparent), color-stop(100%,@primary)); /* Chrome,Safari4+ */
-  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='@{primary}',GradientType=0 ); /* IE6-9 */
+.bg-grad(@primary) {
+  background-image: -webkit-linear-gradient(      top, transparent 0%, @primary 100%); /* Chrome10+,Safari5.1+ */
+  background-image:    -moz-linear-gradient(      top, transparent 0%, @primary 100%); /* FF3.6+ */
+  background-image:     -ms-linear-gradient(      top, transparent 0%, @primary 100%); /* IE10+ */
+  background-image:      -o-linear-gradient(      top, transparent 0%, @primary 100%); /* Opera 11.10+ */
+  background-image:         linear-gradient(to bottom, transparent 0%, @primary 100%); /* W3C */
+  background-image:         linear-gradient(to bottom, transparent 0%, @primary 100%); /* W3C */
 }
 .fade(@primary; @box_h) {
   // syntax reminder:
