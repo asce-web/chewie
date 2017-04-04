@@ -41,6 +41,12 @@ body {
   margin-right: auto;
 }
 
+main.o-Flex {
+  @media not all and (min-width: 45em) {
+    .flex-direction(column);
+  }
+}
+
 // Main column of the site.
 // Contains super relevant info.
 //
@@ -58,14 +64,17 @@ body {
 // ^updated
 // : 2017-04-03
 .o-SideCol {
-  @media (min-width: 45em) {
-    .flex(0 1 300px); // FIXME magic number!!!
+  @media screen and (min-width: 45em) {
+    .flex(0 0 300px); // FIXME magic number!!!
   }
-  @media (min-width: 60em) {
-    .flex(0 1 385px); // FIXME magic number!!!
+  @media screen and (min-width: 60em) {
+    .flex(0 0 385px); // FIXME magic number!!!
   }
-  @media (min-width: 75em) {
-    .flex(0 1 450px); // FIXME magic number!!!
+  @media screen and (min-width: 75em) {
+    .flex(0 0 450px); // FIXME magic number!!!
+  }
+  main & {
+    padding-left: 2rem; padding-right: 2rem;
   }
 }
 
@@ -364,6 +373,79 @@ body {
   }
 }
 
+// Big Hero region of the homepage.
+// Contains image, heading, and blurb.
+//
+// ^subcomponents
+// __Img   - hero image
+// __Hn    - headline / Conference Theme
+// __Blurb - short description/promo of conference
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2017-04-04
+.c-Hero {
+  padding-bottom: 1.5rem; // HACK fallback
+  margin-bottom: 1.5rem; // HACK fallback
+  padding-bottom: var(--vru);
+  margin-bottom: var(--vru);
+  color: @color_asce_header_txt;
+  .mx-bc-primary();
+}
+.c-Hero__Img {
+  display: block;
+  width: 100%; // in case img is smaller than column
+}
+.c-Hero__Hn,
+.c-Hero__Blurb {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.c-Hero__Hn {
+  position: relative; // for the fadeout gradient
+  font-family: @font_ui;
+  color: inherit;
+  // text-transform: uppercase;
+  .font-size-el(1.125); // FIXME magic number!!!
+  @media screen and (min-width: 45em) {
+    .font-size-el(1.375); // FIXME magic number!!!
+  }
+  @media screen and (min-width: 60em) {
+    .font-size-el(2.25; 2); // FIXME magic number!!!
+  }
+  &::before {
+    @height: calc(~'2 * var(--vru)');
+    --content: ''; // HACK lack of @supports
+    content: var(--content);
+    position: absolute;
+    left: 0; right: 0;
+    top: calc(~'-1 * '@height);
+    // top: calc((-1 * @height)~' - var(--vru)'); // -(height + padding-top) of Hn
+    height: @height;
+    .mx-bc-primary-fade(@height);
+  }
+}
+.c-Hero__Blurb {
+  font-weight: 300;
+  margin-bottom: 0; margin-bottom: initial; // HACK fallback
+  margin-bottom: unset; // undo `p`
+  @media not all and (min-width: 45em) {
+    .font-size-el(0.875); // FIXME magic number!!!
+  }
+}
+
+
+// Content area of the site. Contains prose.
+//
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2017-04-04
+.t-Content {
+  @media not all and (min-width: 45em) {
+    margin: 0 1em;
+  }
+}
 
 
 

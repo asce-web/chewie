@@ -59,7 +59,7 @@ html.no-js
       a.large.uppercase(href="") For Speakers
       a.large.uppercase(href="./sponsors.html") Sponsors
       a.large.uppercase(href="") Exhibitors
-    div.header
+    header.header
       div.visible-xs.mobile-nav.navigation
         a(href="./") #[span.ic.home]
         a(href="") Register
@@ -105,20 +105,18 @@ html.no-js
           ul.o-List.o-Flex.c-NavBar.c-NavBar--sub#aboutlevel2
             li: a(href="") Cooperating Organizations
             li: a(href="") Volunteer
-    div.container-fluid
-      div.container.content
-        div.col-container
-          div.auto-col
-            //- div.share-logos SHARE
-              img(src="./img/fpo-share-logos.png")
-            div.introduction
-              img(src=conference.image.hero, alt="")
-              div.img-fade
-              div
-                h1= conference.theme
-                div.intro Exposure to the latest industry advances will help you discover your own #[a cutting-edge solutions]. Gain contacts among colleagues and #[a(href) resource providers]. Ultimately, STRUCTURES CONGRESS 2014 will #[a.c-LinkBanner(href) prepare you and your organization] to tackle greater challenges.
-            br
-            br
+    main.o-Flex.o-Constrain
+        div.o-Flex__Item.o-MainCol
+          header.c-Hero
+            img.c-Hero__Img(src=conference.image.hero alt="")
+            h1.c-Hero__Hn= conference.theme
+            p.c-Hero__Blurb.
+              Exposure to the latest industry advances will help you discover
+              your own #[a cutting-edge solutions]. Gain contacts among colleagues and
+              #[a(href) resource providers]. Ultimately, #[cite Structures Congress 2014]
+              will #[a.c-LinkBanner(href) prepare you and your organization]
+              to tackle greater challenges.
+          section.t-Content
             h2 Keynote Speakers
             div.speaker-profile
               div.session-col
@@ -140,23 +138,19 @@ html.no-js
                 div.person-name Charles Johnson
                 div.person-title Ph.D., P.E., S.E., CVS, F.ASCE Illuminate Foundry, Inc.
                 a.button(href="") Speaker Details
-            br
             h2 Pre-Conference Seminars
             p Sign up to earn additional PDHs at a pre-conference seminar:
             div.session Post Disaster Safety Evaluations
             p 6.0 PDHs - in cooperation with California Office of Emergency Services (CalOES) and Applied Technology Council (ATC)
             div.session Design of Sustainable Thermal Breaks
             p 4.0 PDHs
-            br
             h2 More Highlights
             ul
               li Dynamic technical sessions - choose from more than 120 sessions
               li The Council of American Structural Engineers (CASE) Spring Risk Management Convocation
               li Networking with more than 1,200 colleagues
             a.button(href="") View Program
-            br
-            br
-          div.side-nav-col
+        div.o-Flex__Item.o-SideCol
             div.callout.register
               img(src=conference.image.sidebar, alt="")
               h4 Sheraton Boston Hotel &amp; Hynes Convention Center
