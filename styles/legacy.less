@@ -71,18 +71,6 @@ body {
 }
 
 
-// Tab panels
-//
-// ^author
-// Chris Harvey
-// ^updated
-// : 2017-04-05
-.o-TabPanel:not(:target) {
-  position: absolute;
-  left: -999999px;
-}
-
-
 // Masthead header and footer banners across entire site.
 //
 // ^author
@@ -422,6 +410,31 @@ body {
   margin-bottom: unset; // undo `p`
   @media not all and (min-width: 45em) {
     .font-size-el(0.875); // FIXME magic number!!!
+  }
+}
+
+.c-FooterPanel {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0; margin-bottom: initial; // HACK fallbacks
+  margin-bottom: unset;
+}
+.c-FooterPanel__Item {
+  .mx-bc-primary();
+  background-image: url(../img/pattern-bg.png);
+  position: absolute;
+  &:not(:target) {
+    left: -999999px;
+    right: auto; right: initial; // HACK fallbacks
+    right: unset;
+  }
+  &:target{
+    left: 0; right: 0;
+    top: 0; bottom: 0;
+  }
+  &#panel-current {
+    position: unset;
+    z-index: -1;
   }
 }
 

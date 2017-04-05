@@ -244,30 +244,11 @@ html.no-js
           img.c-SupporterLogo(src="./img/cooplogo_square2.gif"     , alt="")
     footer.footer
       ol.o-List.o-Flex(style="justify-content: flex-end;" role="tablist")
-        li.o-List__Item.o-Flex__Item(style="flex:0 0 auto;")#tab-prev(data-toggle="tab" role="tab"): a(href="#panel-prev") 2013
         li.o-List__Item.o-Flex__Item(style="flex:0 0 auto;")#tab-current(data-toggle="tab" role="tab" aria-selected="true"): a(href="#panel-current") 2014
+        li.o-List__Item.o-Flex__Item.-xo-_1(style="flex:0 0 auto;")#tab-prev(data-toggle="tab" role="tab"): a(href="#panel-prev") 2013
         li.o-List__Item.o-Flex__Item(style="flex:0 0 auto;")#tab-next(data-toggle="tab" role="tab"): a(href="#panel-next") 2015
-      ol.o-List.o-Flex
-        li.o-List__Item.o-Flex__Item.o-TabPanel#panel-prev(aria-labelledby="tab-prev")
-          div.row.title
-            div.container
-              div.hidden-xs.pull-left
-                span.c-YearBadge 13
-              h2 Sample ASCE Conference 2013
-          div.row.details.year-prev-next
-            div.container
-              div.col-container
-                div.logo-col.hidden-xs.text-center
-                  img.conference-logo(src=conference.image.shield)
-                div.auto-col
-                  div.col-sm-12.col-xs-10.col4
-                    h2 TORONTO, CANADA  |  MAY 2&ndash;4, 2013
-                    h3 Baylord Hotel
-                    h4 Lorem Ipsum Optional Tagline for the Conference Goes Here
-                    p: strong lorem ipsum optional theme or a brief description of this conference. dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum.
-                    p: a.c-LinkArrow(href="") Program
-                    p: a.c-LinkArrow(href="") Proceedings
-        li.o-List__Item.o-Flex__Item.o-TabPanel#panel-current(aria-labelledby="tab-current")
+      ol.o-List.c-FooterPanel
+        li.o-List__Item.c-FooterPanel__Item#panel-current(aria-labelledby="tab-current")
           div.row.title
             div.container
               div.hidden-xs.pull-left
@@ -315,7 +296,26 @@ html.no-js
                       a(href=""): span.ic.twitter
                       a(href=""): span.ic.youtube
                       a(href=""): span.ic.google
-        li.o-List__Item.o-Flex__Item.o-TabPanel#panel-next(aria-labelledby="tab-next")
+        li.o-List__Item.c-FooterPanel__Item#panel-prev(aria-labelledby="tab-prev")
+          div.row.title
+            div.container
+              div.hidden-xs.pull-left
+                span.c-YearBadge 13
+              h2 Sample ASCE Conference 2013
+          div.row.details.year-prev-next
+            div.container
+              div.col-container
+                div.logo-col.hidden-xs.text-center
+                  img.conference-logo(src=conference.image.shield)
+                div.auto-col
+                  div.col-sm-12.col-xs-10.col4
+                    h2 TORONTO, CANADA  |  MAY 2&ndash;4, 2013
+                    h3 Baylord Hotel
+                    h4 Lorem Ipsum Optional Tagline for the Conference Goes Here
+                    p: strong lorem ipsum optional theme or a brief description of this conference. dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum.
+                    p: a.c-LinkArrow(href="") Program
+                    p: a.c-LinkArrow(href="") Proceedings
+        li.o-List__Item.c-FooterPanel__Item#panel-next(aria-labelledby="tab-next")
           div.row.title
             div.container
               div.hidden-xs.pull-left
