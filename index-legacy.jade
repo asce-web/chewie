@@ -245,22 +245,21 @@ html.no-js
     footer
       dl.o-Flex.o-Tabs
         //- NOTE: 'current' displayed first for accessibility
-        dt.o-Flex__Item.o-Tabs__Tab#tab-current
-          label.h-Block
-            input.o-Tabs__Check.h-Hidden(type="radio" name="footertabs" value="0" checked="")
-            | 2014
-        dd.o-Flex__Item.o-Tabs__Panel.c-FooterPanel#panel-current
-          div.row.title
-            div.container
-              div.hidden-xs.pull-left
-                span.c-YearBadge 14
-              h2 Sample ASCE Conference 2014
-          div.row.details
-            div.container
-              div.col-container
-                div.logo-col.hidden-xs.text-center
-                  img.conference-logo(src=conference.image.shield)
-                div.auto-col
+        mixin yearTab(year, heading, which)
+          dt.o-Flex__Item.o-Tabs__Tab(class={'js-xo-_1': which==='prev'} id=`tab-${which}`)
+            label.h-Block
+              input.o-Tabs__Check.h-Hidden(type="radio" name="footertabs" value=year)&attributes((which==='current') ? {checked:''} : {})
+              = year
+          dd.o-Flex__Item.o-Tabs__Panel.c-FooterPanel(id=`panel-${which}`)
+            div.o-Flex
+              div.o-Flex__Item: span.c-YearBadge= year.toString().slice(2)
+              div.o-Flex__Item: h1.-ta-c= heading
+            div.o-Flex
+              div.o-Flex__Item.c-HomeLink__Logo
+                img.c-ConfLogo(src=conference.image.shield alt="Home")
+              div.o-Flex__Item
+                block
+        +yearTab(2014, 'Sample ASCE Conference 2014', 'current')
                   div.col-sm-4.hidden-xs
                     div.link-block
                       a.large.uppercase(href="./") Home
@@ -283,7 +282,7 @@ html.no-js
                     a.large(href="") For Speakers
                     a.large(href="./sponsors.html") Sponsors
                     a.large(href="") Exhibitors
-                  div.pull-left.col-xs-2.visible-xs: img.conference-logo(src=conference.image.shield)
+                  div.pull-left.col-xs-2.visible-xs &nbsp;
                   div.col-sm-4.col-xs-10.col4
                     div.link-block.contact
                       h3 Contact Us
@@ -297,46 +296,14 @@ html.no-js
                       a(href=""): span.ic.twitter
                       a(href=""): span.ic.youtube
                       a(href=""): span.ic.google
-        dt.o-Flex__Item.o-Tabs__Tab.js-xo-_1#tab-prev
-          label.h-Block
-            input.o-Tabs__Check.h-Hidden(type="radio" name="footertabs" value="1")
-            | 2013
-        dd.o-Flex__Item.o-Tabs__Panel.c-FooterPanel#panel-prev
-          div.row.title
-            div.container
-              div.hidden-xs.pull-left
-                span.c-YearBadge 13
-              h2 Sample ASCE Conference 2013
-          div.row.details.year-prev-next
-            div.container
-              div.col-container
-                div.logo-col.hidden-xs.text-center
-                  img.conference-logo(src=conference.image.shield)
-                div.auto-col
-                  div.col-sm-12.col-xs-10.col4
+        +yearTab(2013, 'Sample ASCE Conference 2013', 'prev')
                     h2 TORONTO, CANADA  |  MAY 2&ndash;4, 2013
                     h3 Baylord Hotel
                     h4 Lorem Ipsum Optional Tagline for the Conference Goes Here
                     p: strong lorem ipsum optional theme or a brief description of this conference. dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum.
                     p: a.c-LinkArrow(href="") Program
                     p: a.c-LinkArrow(href="") Proceedings
-        dt.o-Flex__Item.o-Tabs__Tab#tab-next
-          label.h-Block
-            input.o-Tabs__Check.h-Hidden(type="radio" name="footertabs" value="2")
-            | 2015
-        dd.o-Flex__Item.o-Tabs__Panel.c-FooterPanel#panel-next
-          div.row.title
-            div.container
-              div.hidden-xs.pull-left
-                span.c-YearBadge 15
-              h2 Sample ASCE Conference 2015
-          div.row.details.year-prev-next
-            div.container
-              div.col-container
-                div.logo-col.hidden-xs.text-center
-                  img.conference-logo(src=conference.image.shield)
-                div.auto-col
-                  div.col-sm-12.col-xs-10.col4
+        +yearTab(2015, 'Sample ASCE Conference 2015', 'next')
                     h2 Mexico City, Mexico  |  April 30 &ndash;  May 2, 2015
                     h3 Fuentes Conference center
                     h4 Lorem Ipsum Optional Tagline for the Conference Goes Here

@@ -123,10 +123,10 @@ body {
     // NOTE: cannot use `flex` to set width if flex-direction is column
   }
   @media (min-width: 45em) and (max-width: 75em) {
-    .flex(0 1 60px); // FIXME magic number!!!
+    .flex(0 0 60px); // FIXME magic number!!!
   }
   @media (min-width: 75em) {
-    .flex(0 1 90px); // FIXME magic number!!!
+    .flex(0 0 90px); // FIXME magic number!!!
   }
 }
 
@@ -318,7 +318,7 @@ body {
   display: none;
   position: relative;
   left: calc(~'-1 * var(--year-badge-width) / 2');
-  z-index: 1; // over the contributor menu
+  z-index: 0; // HACK override chewie.css
   width: var(--year-badge-width);
   padding-top: calc(~'var(--year-badge-width) / 2');
   font-weight: 700;
@@ -426,6 +426,9 @@ body {
 .c-FooterPanel {
   .mx-bc-primary();
   background-image: url(../img/pattern-bg.png);
+  .c-YearBadge {
+    left: calc(~'var(--year-badge-width) / 2');
+  }
 }
 
 
