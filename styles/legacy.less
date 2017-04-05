@@ -413,29 +413,19 @@ body {
   }
 }
 
-.c-FooterPanel {
-  position: relative;
-  overflow: hidden;
+
+@import (less) url('legacy-_o-Tabs.less');
+.o-Tabs {
   margin-bottom: 0; margin-bottom: initial; // HACK fallbacks
   margin-bottom: unset;
 }
-.c-FooterPanel__Item {
+.o-Tabs__Tab label {
+  font: inherit;
+}
+
+.c-FooterPanel {
   .mx-bc-primary();
   background-image: url(../img/pattern-bg.png);
-  position: absolute;
-  &:not(:target) {
-    left: -999999px;
-    right: auto; right: initial; // HACK fallbacks
-    right: unset;
-  }
-  &:target{
-    left: 0; right: 0;
-    top: 0; bottom: 0;
-  }
-  &#panel-current {
-    position: unset;
-    z-index: -1;
-  }
 }
 
 

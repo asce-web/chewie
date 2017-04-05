@@ -242,13 +242,14 @@ html.no-js
           img.c-SupporterLogo(src="./img/cooplogo_square4.gif"     , alt="")
           img.c-SupporterLogo(src="./img/cooplogo_horizontal4.gif" , alt="")
           img.c-SupporterLogo(src="./img/cooplogo_square2.gif"     , alt="")
-    footer.footer
-      ol.o-List.o-Flex(style="justify-content: flex-end;" role="tablist")
-        li.o-List__Item.o-Flex__Item(style="flex:0 0 auto;")#tab-current(data-toggle="tab" role="tab" aria-selected="true"): a(href="#panel-current") 2014
-        li.o-List__Item.o-Flex__Item.-xo-_1(style="flex:0 0 auto;")#tab-prev(data-toggle="tab" role="tab"): a(href="#panel-prev") 2013
-        li.o-List__Item.o-Flex__Item(style="flex:0 0 auto;")#tab-next(data-toggle="tab" role="tab"): a(href="#panel-next") 2015
-      ol.o-List.c-FooterPanel
-        li.o-List__Item.c-FooterPanel__Item#panel-current(aria-labelledby="tab-current")
+    footer
+      dl.o-Flex.o-Tabs
+        //- NOTE: 'current' displayed first for accessibility
+        dt.o-Flex__Item.o-Tabs__Tab#tab-current
+          label.h-Block
+            input.o-Tabs__Check.h-Hidden(type="radio" name="footertabs" value="0" checked="")
+            | 2014
+        dd.o-Flex__Item.o-Tabs__Panel.c-FooterPanel#panel-current
           div.row.title
             div.container
               div.hidden-xs.pull-left
@@ -296,7 +297,11 @@ html.no-js
                       a(href=""): span.ic.twitter
                       a(href=""): span.ic.youtube
                       a(href=""): span.ic.google
-        li.o-List__Item.c-FooterPanel__Item#panel-prev(aria-labelledby="tab-prev")
+        dt.o-Flex__Item.o-Tabs__Tab.js-xo-_1#tab-prev
+          label.h-Block
+            input.o-Tabs__Check.h-Hidden(type="radio" name="footertabs" value="1")
+            | 2013
+        dd.o-Flex__Item.o-Tabs__Panel.c-FooterPanel#panel-prev
           div.row.title
             div.container
               div.hidden-xs.pull-left
@@ -315,7 +320,11 @@ html.no-js
                     p: strong lorem ipsum optional theme or a brief description of this conference. dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum.
                     p: a.c-LinkArrow(href="") Program
                     p: a.c-LinkArrow(href="") Proceedings
-        li.o-List__Item.c-FooterPanel__Item#panel-next(aria-labelledby="tab-next")
+        dt.o-Flex__Item.o-Tabs__Tab#tab-next
+          label.h-Block
+            input.o-Tabs__Check.h-Hidden(type="radio" name="footertabs" value="2")
+            | 2015
+        dd.o-Flex__Item.o-Tabs__Panel.c-FooterPanel#panel-next
           div.row.title
             div.container
               div.hidden-xs.pull-left
@@ -332,9 +341,12 @@ html.no-js
                     h3 Fuentes Conference center
                     h4 Lorem Ipsum Optional Tagline for the Conference Goes Here
                     p: strong lorem ipsum optional theme or a brief description of this conference. dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum.
+                    p: strong lorem ipsum optional theme or a brief description of this conference. dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum.
+                    p: strong lorem ipsum optional theme or a brief description of this conference. dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum.
                     p: a.c-LinkArrow(href="") Call for submissions
                     p: a.c-LinkArrow(href="./sponsors.html") Sponsors
                     p: a.c-LinkArrow(href="") Exhibit
+    div#footer.footer.container-fluid.-mt-0
       div.visible-xs.mobile-nav.navigation
         a(href="") #[span.ic.home]
         a(href="") Register
@@ -350,3 +362,6 @@ html.no-js
     script(src="./js/vendor/jquery.hoverIntent.min.js")
     script(src="./bower_components/jquery-cycle2/build/jquery.cycle2.min.js")
     script(src="./js/main.js")
+    script(src="scripts/o-Tabs.js")
+    script.
+      $('.js-xo-_1').addClass('-xo-_1');
