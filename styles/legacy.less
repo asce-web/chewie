@@ -80,8 +80,6 @@ body {
 }
 
 
-
-
 // Masthead header and footer banners across entire site.
 //
 // ^author
@@ -134,10 +132,10 @@ body {
     // NOTE: cannot use `flex` to set width if flex-direction is column
   }
   @media (min-width: 45em) and (max-width: 75em) {
-    .flex(0 1 60px); // FIXME magic number!!!
+    .flex(0 0 60px); // FIXME magic number!!!
   }
   @media (min-width: 75em) {
-    .flex(0 1 90px); // FIXME magic number!!!
+    .flex(0 0 90px); // FIXME magic number!!!
   }
 }
 
@@ -330,7 +328,7 @@ body {
   display: var(--display);
   position: relative;
   left: calc(~'-1 * var(--year-badge-width) / 2');
-  z-index: 1; // over the contributor menu
+  z-index: 0; // HACK override chewie.css
   width: var(--year-badge-width);
   padding-top: calc(~'var(--year-badge-width) / 2');
   font-weight: 700;
@@ -412,6 +410,24 @@ body {
   margin-bottom: unset; // undo `p`
   @media not all and (min-width: 45em) {
     .font-size-el(0.875); // FIXME magic number!!!
+  }
+}
+
+
+@import (less) url('legacy-_o-Tabs.less');
+.o-Tabs {
+  margin-bottom: 0; margin-bottom: initial; // HACK fallbacks
+  margin-bottom: unset;
+}
+.o-Tabs__Tab label {
+  font: inherit;
+}
+
+.c-FooterPanel {
+  .mx-bc-primary();
+  background-image: url(../img/pattern-bg.png);
+  .c-YearBadge {
+    left: calc(~'var(--year-badge-width) / 2');
   }
 }
 
