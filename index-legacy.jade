@@ -68,7 +68,7 @@ html.no-js
         div.o-Flex.o-Constrain
           a.o-Flex__Item.o-Flex.o-MainCol.c-HomeLink(href="./" rel="home")
             div.o-Flex__Item.c-HomeLink__Logo
-              img.c-ConfLogo(src=conference.image.shield)
+              img.c-ConfLogo(src=conference.image.shield alt="Home")
             div.o-Flex__Item.c-HomeLink__Titles
               h1.c-ConferenceName= conference.name
               p.c-ConferenceTagline= conference.tagline
@@ -242,20 +242,18 @@ html.no-js
           img.c-SupporterLogo(src="./img/cooplogo_square4.gif"     , alt="")
           img.c-SupporterLogo(src="./img/cooplogo_horizontal4.gif" , alt="")
           img.c-SupporterLogo(src="./img/cooplogo_square2.gif"     , alt="")
-    div.footer.container-fluid
-      div.row.year-tabs
-        div.container
-          ul.tab-buttons.pull-right.list-unstyled
-            li:        a.tab-button(data-toggle="tab", href="#yearprev")    2014
-            li.active: a.tab-button(data-toggle="tab", href="#yearpresent") 2015
-            li:        a.tab-button(data-toggle="tab", href="#yearnext")    2016
-      div.tab-content
-        div#yearprev.tab-pane
+    footer.footer
+      ol.o-List.o-Flex(style="justify-content: flex-end;" role="tablist")
+        li.o-List__Item.o-Flex__Item(style="flex:0 0 auto;")#tab-prev(data-toggle="tab" role="tab"): a(href="#panel-prev") 2013
+        li.o-List__Item.o-Flex__Item(style="flex:0 0 auto;")#tab-current(data-toggle="tab" role="tab" aria-selected="true"): a(href="#panel-current") 2014
+        li.o-List__Item.o-Flex__Item(style="flex:0 0 auto;")#tab-next(data-toggle="tab" role="tab"): a(href="#panel-next") 2015
+      ol.o-List.o-Flex
+        li.o-List__Item.o-Flex__Item.o-TabPanel#panel-prev(aria-labelledby="tab-prev")
           div.row.title
             div.container
               div.hidden-xs.pull-left
-                span.c-YearBadge 15
-              h2 Sample ASCE Conference
+                span.c-YearBadge 13
+              h2 Sample ASCE Conference 2013
           div.row.details.year-prev-next
             div.container
               div.col-container
@@ -269,12 +267,12 @@ html.no-js
                     p: strong lorem ipsum optional theme or a brief description of this conference. dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum.
                     p: a.c-LinkArrow(href="") Program
                     p: a.c-LinkArrow(href="") Proceedings
-        div#yearpresent.tab-pane.active
+        li.o-List__Item.o-Flex__Item.o-TabPanel#panel-current(aria-labelledby="tab-current")
           div.row.title
             div.container
               div.hidden-xs.pull-left
-                span.c-YearBadge 15
-              h2 Sample ASCE Conference
+                span.c-YearBadge 14
+              h2 Sample ASCE Conference 2014
           div.row.details
             div.container
               div.col-container
@@ -317,16 +315,12 @@ html.no-js
                       a(href=""): span.ic.twitter
                       a(href=""): span.ic.youtube
                       a(href=""): span.ic.google
-          div.visible-xs.mobile-nav.navigation
-            a(href="") #[span.ic.home]
-            a(href="") Register
-            a.menu-toggle(href="") Menu #[span.ic.menu]
-        div#yearnext.tab-pane
+        li.o-List__Item.o-Flex__Item.o-TabPanel#panel-next(aria-labelledby="tab-next")
           div.row.title
             div.container
               div.hidden-xs.pull-left
                 span.c-YearBadge 15
-              h2 Sample ASCE Conference
+              h2 Sample ASCE Conference 2015
           div.row.details.year-prev-next
             div.container
               div.col-container
@@ -341,6 +335,10 @@ html.no-js
                     p: a.c-LinkArrow(href="") Call for submissions
                     p: a.c-LinkArrow(href="./sponsors.html") Sponsors
                     p: a.c-LinkArrow(href="") Exhibit
+      div.visible-xs.mobile-nav.navigation
+        a(href="") #[span.ic.home]
+        a(href="") Register
+        a.menu-toggle(href="") Menu #[span.ic.menu]
       div.row.copyright.text-center
         div.container
           div.asce-logo
