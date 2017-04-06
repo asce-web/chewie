@@ -24,7 +24,6 @@
 // Chris Harvey
 // ^updated
 // 2017-02-08
-@p-transdura: 500ms;
 .o-Tabs {
   position: relative;
   .flex-wrap(wrap);
@@ -87,13 +86,9 @@
 }
 .o-Tabs__Panel--hiddenBefore,
 .o-Tabs__Panel--hiddenAfter {
-  position: absolute;
-  left: -999999px;
-  right: auto;
+  .transform(translateX(-100%));
 }
 .o-Tabs__Panel--hiddenBefore {
-  // .transform(translateX(-100%) scale(0));
 }
 .o-Tabs__Panel--hiddenAfter {
-  // .transform(translateX(100%) scale(0));
 }
