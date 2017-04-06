@@ -66,10 +66,10 @@ html.no-js
         a.menu-toggle(href="") Menu #[span.ic.menu]
       div.c-Mast
         div.o-Flex.o-Constrain
-          a.o-Flex__Item.o-Flex.o-MainCol.c-HomeLink(href="./" rel="home")
-            div.o-Flex__Item.c-HomeLink__Logo
+          a.o-Flex__Item.o-Flex.o-MainCol.o-HomeLink(href="./" rel="home")
+            div.o-Flex__Item.o-Flex__Item--siteLogo
               img.c-ConfLogo(src=conference.image.shield alt="Home")
-            div.o-Flex__Item.c-HomeLink__Titles
+            div.o-Flex__Item.o-HomeLink__Titles
               h1.c-ConferenceName= conference.name
               p.c-ConferenceTagline= conference.tagline
               p.c-ConferenceLocation= conference.detail
@@ -255,7 +255,7 @@ html.no-js
               div.o-Flex__Item: span.c-YearBadge= year.toString().slice(2)
               div.o-Flex__Item: h1.-ta-c= heading
             div.o-Flex
-              div.o-Flex__Item.c-HomeLink__Logo
+              div.o-Flex__Item.o-Flex__Item--siteLogo
                 img.c-ConfLogo(src=conference.image.shield alt="Home")
               div.o-Flex__Item
                 block

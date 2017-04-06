@@ -28,6 +28,7 @@
   // -webkit-zoom: 0.75;
   // -moz-transform: scale(0.75,0.75);
   // -moz-transform-origin: top center;
+  --site-logo-width: 6rem;
   --year-badge-width: 0;
   @media screen and (min-width: 45em) {
     --year-badge-width: 80px;
@@ -38,11 +39,38 @@
   @media screen and (min-width: 75em) {
     --year-badge-width: 120px;
   }
+  @media (min-width: 45em) and (max-width: 75em) {
+    --site-logo-width: 4rem;
+  }
 }
 
 body {
   font-size: inherit; line-height: inherit; // undo Bootstrap
 }
+footer {
+  @media not all and (min-width: 45em) {
+    --site-logo-width: 0;
+  }
+}
+
+// Extension of `.o-Flex__Item`
+// [1] NOTE: equivalent to .flex(0 0 var(--site-logo-width));
+//     but now works when flex-direction = column
+//     (cannot use `flex` to set width if flex-direction=column)
+//
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2017-04-05
+.o-Flex__Item--siteLogo {
+  .flex(initial); // undo `.o-Flex__Item`
+  width: 4rem; // HACK fallback
+  width: var(--site-logo-width); // [1]
+  @media screen and (min-width: 45em) {
+    margin: 0 1rem;
+  }
+}
+
 
 .o-Constrain {
   max-width: 1400px;
@@ -79,6 +107,41 @@ body {
   }
 }
 
+// Link across entire banner taking you home.
+// Includes site logo(s), conference name, tagline, dates, location.
+//
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2017-04-05
+.o-HomeLink {
+  margin: @g-vru 0; // HACK fallback
+  margin: var(--vru) 0;
+  text-align: center;
+  .flex-align-items(center);
+  @media not all and (min-width: 45em) {
+    .flex-direction(column);
+  }
+}
+
+// Container for headings of conference.
+// (name, tagline, dates, location)
+//
+// ^author
+// Chris Harvey
+// ^updated
+// : 2017-04-03
+.o-HomeLink__Titles {
+  @media screen and (min-width: 45em) {
+    margin-right: 60px; // HACK fallback // maximum possible --year-badge-width
+    margin-right: calc(~'var(--year-badge-width) / 2');
+    text-align: left; // HACK fallback
+    text-align: start; // override `.o-HomeLink`
+  }
+}
+
+
+
 
 // Masthead header and footer banners across entire site.
 //
@@ -104,40 +167,6 @@ body {
 }
 
 
-// Link across entire banner taking you home.
-//
-// ^author
-// : Chris Harvey
-// ^updated
-// : 2017-04-03
-.c-HomeLink {
-  margin: 20px 0; // HACK fallback
-  margin: var(--vru) 0;
-  text-align: center;
-  .flex-align-items(center);
-  @media not all and (min-width: 45em) {
-    .flex-direction(column);
-  }
-}
-
-// Container for the site logo(s)
-//
-// ^author
-// Chris Harvey
-// ^updated
-// : 2017-04-03
-.c-HomeLink__Logo {
-  @media not all and (min-width: 45em) {
-    width: 90px; // FIXME magic number!!!
-    // NOTE: cannot use `flex` to set width if flex-direction is column
-  }
-  @media (min-width: 45em) and (max-width: 75em) {
-    .flex(0 0 60px); // FIXME magic number!!!
-  }
-  @media (min-width: 75em) {
-    .flex(0 0 90px); // FIXME magic number!!!
-  }
-}
 
 // Shield logo of the Institute (or orginaztion)
 // organizing the conference.
@@ -147,22 +176,6 @@ body {
 // ^updated
 // : 2015-08-21
 .c-ConfLogo {
-}
-
-// Container for headings of conference
-// (name, tagline, dates, location)
-//
-// ^author
-// Chris Harvey
-// ^updated
-// : 2017-04-03
-.c-HomeLink__Titles {
-  @media screen and (min-width: 45em) {
-    margin-right: 60px; // HACK fallback // maximum possible --year-badge-width
-    margin-right: calc(~'var(--year-badge-width) / 2');
-    text-align: left; // HACK fallback
-    text-align: start; // override `.o-HomeLink`
-  }
 }
 
 .c-ConferenceName,
@@ -457,7 +470,6 @@ body {
 
 
 // fix flush against window
-.c-HomeLink__Logo,
 .c-NavBar--main > :first-child {
   margin: 0 1rem;
 }
