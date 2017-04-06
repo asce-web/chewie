@@ -67,7 +67,7 @@ footer {
   width: 4rem; // HACK fallback
   width: var(--site-logo-width); // [1]
   @media screen and (min-width: 45em) {
-    margin: 0 1rem;
+    margin: 0 2rem;
   }
 }
 
@@ -261,13 +261,22 @@ footer {
     &:focus {
       background-color: rgba(255,255,255, 0.25);
     }
+    @media not all and (min-width: 767px) {
+      // HACK magic number due to menu text content
+      padding: 0.5rem;
+    }
     @media screen and (min-width: 75em) {
       padding: 1rem;
     }
   }
 }
 .c-NavBar--main {
+  padding-left: 2rem;
   .flex-justify-content(flex-start);
+  @media not all and (min-width: 767px) {
+    // HACK magic number due to menu text content
+    padding-left: 1rem;
+  }
   & > * {
     &:hover,
     &:focus,
@@ -469,13 +478,15 @@ footer {
 }
 
 
-// fix flush against window
-.c-NavBar--main > :first-child {
-  margin: 0 1rem;
-}
 // fix menu sizing
-@media not all and (min-width: 751px) {
+@media not all and (min-width: 767px) {
+  .c-NavBar--main {
+    // padding-left: 0; padding-left: initial; // HACK fallbacks
+    // padding-left: unset;
+  }
+}
+@media not all and (min-width: 735px) {
   .c-NavBar--main > *:first-child {
-    display: none;
+    // display: none;
   }
 }
