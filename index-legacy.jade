@@ -74,7 +74,7 @@ html.no-js
               p.c-ConferenceTagline= conference.tagline
               p.c-ConferenceLocation= conference.detail
           div.o-Flex__Item.o-SideCol.c-TopImg(style=`background-image: url('${conference.image.banner}');`)
-            span.c-YearBadge 15
+            span.c-YearBadge(role="none") 15
             div.o-Flex.c-NavBar.c-NavBar--contrib
               //- change to ul.o-List later
               a(href="") For Speakers
@@ -249,11 +249,12 @@ html.no-js
           dt.o-Flex__Item.o-Tabs__Tab(class={'js-xo-_1': which==='prev'} id=`tab-${which}`)
             label.h-Block
               input.o-Tabs__Check.h-Hidden(type="radio" name="footertabs" value=year)&attributes((which==='current') ? {checked:''} : {})
-              = year
+              time.c-YearBadge.c-YearBadge--tab(datetime=year aria-label=year)= year.toString().slice(2)
           dd.o-Flex__Item.o-Tabs__Panel.c-FooterPanel(id=`panel-${which}`)
-            div.o-Flex
-              div.o-Flex__Item: span.c-YearBadge= year.toString().slice(2)
+            //- div.o-Flex
+              div.o-Flex__Item: span.c-YearBadge(role="none")= year.toString().slice(2)
               div.o-Flex__Item: h1.-ta-c= heading
+            h1.-ta-c= heading
             div.o-Flex
               div.o-Flex__Item.c-HomeLink__Logo
                 img.c-ConfLogo(src=conference.image.shield alt="Home")
