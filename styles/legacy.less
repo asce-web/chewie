@@ -406,9 +406,7 @@ footer {
 // ^updated
 // : 2017-04-04
 .c-Hero {
-  padding-bottom: 1.5rem; // HACK fallback
   margin-bottom: 1.5rem; // HACK fallback
-  padding-bottom: var(--vru);
   margin-bottom: var(--vru);
   color: @color_asce_header_txt;
   .mx-bc-primary();
@@ -419,11 +417,19 @@ footer {
 }
 .c-Hero__Hn,
 .c-Hero__Blurb {
+  position: relative; // for the fadeout gradients
   padding-left: 2rem;
   padding-right: 2rem;
+  &::before,
+  &::after {
+    // gradients
+    --content: ''; // HACK lack of @supports
+    content: var(--content);
+    position: absolute;
+    left: 0; right: 0;
+  }
 }
 .c-Hero__Hn {
-  position: relative; // for the fadeout gradient
   font-family: @font_ui;
   color: inherit;
   // text-transform: uppercase;
@@ -435,10 +441,6 @@ footer {
     .font-size-el(2.25; 2); // FIXME magic number!!!
   }
   &::before {
-    --content: ''; // HACK lack of @supports
-    content: var(--content);
-    position: absolute;
-    left: 0; right: 0;
     top: calc(~'-2 * var(--vru)');
     height: calc(~'2 * var(--vru)');
     .mx-bc-primary-fade();
@@ -448,8 +450,15 @@ footer {
   font-weight: 300;
   margin-bottom: 0; margin-bottom: initial; // HACK fallback
   margin-bottom: unset; // undo `p`
+  padding-bottom: 1.5rem; // HACK fallback
+  padding-bottom: var(--vru);
   @media not all and (min-width: 45em) {
     .font-size-el(0.875); // FIXME magic number!!!
+  }
+  &::after {
+    bottom: calc(~'-1 * var(--vru)');
+    height: calc(~'1 * var(--vru)');
+    .mx-bc-primary-fade-reverse();
   }
 }
 

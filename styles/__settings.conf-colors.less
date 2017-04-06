@@ -364,13 +364,36 @@
                           .unsatsoilsconf      & { .bg-grad(@color_unsat_primary     ); }
                           .etsconference       & { .bg-grad(@color_ets_primary       ); }
 }
+.mx-bc-primary-fade-reverse() {
+                                                   .bg-grad-rev(@color_site_primary      );
+                          .pipelinesconference & { .bg-grad-rev(@color_pl_primary        ); }
+                          .icsiconference      & { .bg-grad-rev(@color_icsi_primary      ); }
+  #lidconference       &, .lidconference       & { .bg-grad-rev(@color_lid_primary       ); }
+  #structurescongress  &                         { .bg-grad-rev(@color_struct_primary    ); }
+                          .structurescongress  & { .bg-grad-rev(@color_struct2018_primary); }
+                          .georiskconference   & { .bg-grad-rev(@color_georisk_primary   ); }
+                          .aei-conference      & { .bg-grad-rev(@color_aei_primary       ); }
+                          .pavementsconference & { .bg-grad-rev(@color_pave_primary      ); }
+                          .groutingconference  & { .bg-grad-rev(@color_grout_primary     ); }
+                          .cisummit            & { .bg-grad-rev(@color_ci_primary        ); }
+                          .aeisdc              & { .bg-grad-rev(@color_aeisdc_primary    ); }
+                          .asceconvention      & { .bg-grad-rev(@color_convention_primary); }
+                          .hmemconference      & { .bg-grad-rev(@color_hmem_primary      ); }
+                          .ewricongress        & { .bg-grad-rev(@color_ewri_primary      ); }
+                          .asceconvention2017  & { .bg-grad-rev(@color_2017_primary      ); }
+                          .icce2018            & { .bg-grad-rev(@color_icce_primary      ); }
+                          .asce-cta            & { .bg-grad-rev(@color_cta_primary       ); }
+                          .ascestudentdays     & { .bg-grad-rev(@color_cisd_primary      ); }
+                          .omswconference      & { .bg-grad-rev(@color_omsw_primary      ); }
+                          .apmconference       & { .bg-grad-rev(@color_apm_primary       ); }
+                          .unsatsoilsconf      & { .bg-grad-rev(@color_unsat_primary     ); }
+                          .etsconference       & { .bg-grad-rev(@color_ets_primary       ); }
+}
 .bg-grad(@primary) {
-  background-image: -webkit-linear-gradient(      top, transparent 0%, @primary 100%); /* Chrome10+,Safari5.1+ */
-  background-image:    -moz-linear-gradient(      top, transparent 0%, @primary 100%); /* FF3.6+ */
-  background-image:     -ms-linear-gradient(      top, transparent 0%, @primary 100%); /* IE10+ */
-  background-image:      -o-linear-gradient(      top, transparent 0%, @primary 100%); /* Opera 11.10+ */
-  background-image:         linear-gradient(to bottom, transparent 0%, @primary 100%); /* W3C */
-  background-image:         linear-gradient(to bottom, transparent 0%, @primary 100%); /* W3C */
+  background-image: linear-gradient(to bottom, transparent 0%, @primary 100%);
+}
+.bg-grad-rev(@primary) {
+  background-image: linear-gradient(to top, transparent 0%, @primary 100%);
 }
 .fade(@primary; @box_h) {
   // syntax reminder:
