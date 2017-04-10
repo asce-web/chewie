@@ -31,33 +31,37 @@ html.no-js
     //- script try{Typekit.load();}catch(e){}
   body(class=conference.classname)
     a.h-Hidden(href="#main") skip to main content
-    div.toggleable-nav.fade
-      div.ic.close-nav(tabindex="0") X
-      div.link-block
-        a.large.uppercase(href="./") Home
-      div.link-block
-        a.large.uppercase(href="") Program
-        a(href="") Speakers
-        a(href="") Exhibitor List
-        a(href="") ASCE Communities &amp; Pavilions
-      div.link-block
-        a.large.uppercase(href="") Location
-        a(href="") Lodging &amp; Transportation
-        a(href="") For International Travel
-      div.link-block
-        a.large.uppercase(href="") About
-        a(href="") Cooperating Organizations
-        a(href="") Volunteer
-      a.large.uppercase(href="") Why Attend
-      a.large.uppercase(href="") Registration
-      a.large.uppercase(href="") For Speakers
-      a.large.uppercase(href="./sponsors.html") Sponsors
-      a.large.uppercase(href="") Exhibitors
     header.header
-      div.visible-xs.mobile-nav.navigation
-        a(href="./") #[span.ic.home]
-        a(href="") Register
-        a.menu-toggle(href="") Menu #[span.ic.menu]
+      nav.o-Flex.o-MobileBar
+        a.o-Flex__Item.o-MobileBar__Item(href="./"): i.ic.home: span.h-Hidden home
+        label.o-Flex__Item.o-MobileBar__Item.c-Toggle(aria-label="toggle main menu")
+          input.c-Toggle__Check.h-Hidden(type="checkbox" value="main menu is open" role="switch")
+          i.c-Toggle__Viz.ic.menu(role="none")
+        div.o-Drawer.c-NavBar.c-NavBar--mobile
+          //- change div to ul.o-List later
+          div
+            a(href="./") Home
+          div
+            a(href="") Program
+            ul
+              li: a(href="") Speakers
+              li: a(href="") Exhibitor List
+              li: a(href="") ASCE Communities &amp; Pavilions
+          div
+            a(href="") Location
+            ul
+              li: a(href="") Lodging &amp; Transportation
+              li: a(href="") For International Travel
+          div
+            a(href="") About
+            ul
+              li: a(href="") Cooperating Organizations
+              li: a(href="") Volunteer
+          div: a(href="") Why Attend
+          div: a(href="") Registration
+          div: a(href="") For Speakers
+          div: a(href="./sponsors.html") Sponsors
+          div: a(href="") Exhibitors
       div.c-Mast
         div.o-Flex.o-Constrain
           a.o-Flex__Item.o-Flex.o-MainCol.o-HomeLink(href="./" rel="home")
@@ -328,3 +332,12 @@ html.no-js
     script(src="scripts/o-Tabs.js")
     script.
       $('.js-xo-_1').addClass('-xo-_1');
+      $('.o-Drawer').find('a').attr('tabindex', -1);
+      $('.c-Toggle__Check').change(function () {
+        $(this).parents('.c-Toggle').siblings('.o-Drawer').toggleClass('o-Drawer--open');
+        $(this).parents('.c-Toggle').siblings('.o-Drawer').find('a').each(function () {
+          if ($(this).attr('tabindex') === '0') $(this).attr('tabindex', -1)
+          else $(this).attr('tabindex', 0)
+        })
+        $(this).siblings('.c-Toggle__Viz').toggleClass('menu').toggleClass('close-nav')
+      })
