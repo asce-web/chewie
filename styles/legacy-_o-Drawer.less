@@ -24,22 +24,18 @@
 .o-Drawer {
   .transitions(@g-prefix_transform, opacity; 250ms);
   .transition-timing-function(ease-in); // animation for *closing* drawer
-  @media not all and (min-width: 45em) {
-    @width: 12rem;
+    @width: 15rem;
     position: fixed;
-    right: -@width; top: 0;
+    top: 0; bottom: 0;
+    right: -@width;
     z-index: 2; // over hero and "jump to top" button
     width: @width;
-    height: 100%; // fallback for vh
-    height: 100vh;
     border-left: 1px solid currentColor;
     opacity: 0;
-  }
+  overflow: auto;
 }
 .o-Drawer--open {
-  @media not all and (min-width: 45em) {
     .transform(translateX(-100%));
     opacity: 1;
     .transition-timing-function(ease-out); // animation for *opening* drawer
-  }
 }

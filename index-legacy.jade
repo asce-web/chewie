@@ -37,28 +37,31 @@ html.no-js
         label.o-Flex__Item.o-MobileBar__Item.c-Toggle(aria-label="toggle main menu")
           input.c-Toggle__Check.h-Hidden(type="checkbox" value="main menu is open" role="switch")
           i.c-Toggle__Viz.ic.menu(role="none")
-        div.o-MobileBar__Item.o-Drawer.c-NavBar.c-NavBar--mobile
+        div.o-Drawer.c-NavBar.c-NavBar--mobile
           //- change div to ul.o-List later
-          div.link-block
-            a.large.uppercase(href="./") Home
-          div.link-block
-            a.large.uppercase(href="") Program
-            a(href="") Speakers
-            a(href="") Exhibitor List
-            a(href="") ASCE Communities &amp; Pavilions
-          div.link-block
-            a.large.uppercase(href="") Location
-            a(href="") Lodging &amp; Transportation
-            a(href="") For International Travel
-          div.link-block
-            a.large.uppercase(href="") About
-            a(href="") Cooperating Organizations
-            a(href="") Volunteer
-          a.large.uppercase(href="") Why Attend
-          a.large.uppercase(href="") Registration
-          a.large.uppercase(href="") For Speakers
-          a.large.uppercase(href="./sponsors.html") Sponsors
-          a.large.uppercase(href="") Exhibitors
+          div
+            a(href="./") Home
+          div
+            a(href="") Program
+            ul
+              li: a(href="") Speakers
+              li: a(href="") Exhibitor List
+              li: a(href="") ASCE Communities &amp; Pavilions
+          div
+            a(href="") Location
+            ul
+              li: a(href="") Lodging &amp; Transportation
+              li: a(href="") For International Travel
+          div
+            a(href="") About
+            ul
+              li: a(href="") Cooperating Organizations
+              li: a(href="") Volunteer
+          div: a(href="") Why Attend
+          div: a(href="") Registration
+          div: a(href="") For Speakers
+          div: a(href="./sponsors.html") Sponsors
+          div: a(href="") Exhibitors
       div.c-Mast
         div.o-Flex.o-Constrain
           a.o-Flex__Item.o-Flex.o-MainCol.o-HomeLink(href="./" rel="home")
