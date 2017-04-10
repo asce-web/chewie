@@ -32,11 +32,12 @@ html.no-js
   body(class=conference.classname)
     a.h-Hidden(href="#main") skip to main content
     header.header
-      nav
-        label.c-Toggle(aria-label="toggle main menu")
+      nav.o-Flex.o-MobileBar
+        a.o-Flex__Item.o-MobileBar__Item(href="./"): i.ic.home: span.h-Hidden home
+        label.o-Flex__Item.o-MobileBar__Item.c-Toggle(aria-label="toggle main menu")
           input.c-Toggle__Check.h-Hidden(type="checkbox" value="main menu is open" role="switch")
-          i.ic.close-nav X
-        div.o-Drawer
+          i.c-Toggle__Viz.ic.menu(role="none")
+        div.o-MobileBar__Item.o-Drawer.c-NavBar.c-NavBar--mobile
           //- change div to ul.o-List later
           div.link-block
             a.large.uppercase(href="./") Home
@@ -58,10 +59,6 @@ html.no-js
           a.large.uppercase(href="") For Speakers
           a.large.uppercase(href="./sponsors.html") Sponsors
           a.large.uppercase(href="") Exhibitors
-      div.visible-xs.mobile-nav.navigation
-        a(href="./") #[span.ic.home]
-        a(href="") Register
-        a.menu-toggle(href="") Menu #[span.ic.menu]
       div.c-Mast
         div.o-Flex.o-Constrain
           a.o-Flex__Item.o-Flex.o-MainCol.o-HomeLink(href="./" rel="home")
@@ -332,6 +329,12 @@ html.no-js
     script(src="scripts/o-Tabs.js")
     script.
       $('.js-xo-_1').addClass('-xo-_1');
+      $('.o-Drawer').find('a').attr('tabindex', -1);
       $('.c-Toggle__Check').change(function () {
         $(this).parents('.c-Toggle').siblings('.o-Drawer').toggleClass('o-Drawer--open');
+        $(this).parents('.c-Toggle').siblings('.o-Drawer').find('a').each(function () {
+          if ($(this).attr('tabindex') === '0') $(this).attr('tabindex', -1)
+          else $(this).attr('tabindex', 0)
+        })
+        $(this).siblings('.c-Toggle__Viz').toggleClass('menu').toggleClass('close-nav')
       })

@@ -52,6 +52,10 @@ footer {
     --site-logo-width: 0;
   }
 }
+label {
+  margin-bottom: 0; margin-bottom: initial; // HACK fallbacks
+  margin-bottom: unset; // unset `label` in chewie base
+}
 
 // Extension of `.o-Flex__Item`
 // [1] NOTE: equivalent to .flex(0 0 var(--site-logo-width));
@@ -140,8 +144,22 @@ footer {
   }
 }
 
-@import (less) url('legacy-_o-Drawer.less');
+.o-MobileBar {
+  .flex-justify-content(flex-end);
+  height: 3rem; // HACK fallback
+  height: calc('2 * var(--vru)'); // FIXME fixing damn icons
+  .mx-bc-secondary();
+  @media screen and (min-width: 45em) {
+    display: none;
+  }
+}
+.o-MobileBar__Item {
+  .flex(0);
+  padding: 0.5rem 1rem;
+  .ic { margin-top: auto; } // FIXME fixing damn icons
+}
 
+@import (less) url('legacy-_o-Drawer.less');
 
 
 // Masthead header and footer banners across entire site.
@@ -243,6 +261,7 @@ footer {
 //                    information for people: for speakers, sponsors, exhibitors, etc.
 // : --sub          - Secondary-level navigation component containing subpages
 //                    of the main directories
+// : --mobile       - Mobile Menu
 // ^author
 // : Chris Harvey
 // ^updated
@@ -308,7 +327,7 @@ footer {
     .font-size-mod(16/16); // undo .c-NavBar
   }
   & > :hover {
-    background-color: transparent;
+    background-color: transparent; // unset `.c-Navbar > *:hover`
     text-decoration: underline;
   }
 }
@@ -335,6 +354,11 @@ footer {
   &:not(.active) {
     .transform(scale(1,0));
   }
+}
+.c-NavBar--mobile {
+  text-transform: none; // HACK fallback
+  text-transform: inherit; // HACK fallback
+  text-transform: unset; // undo .c-NavBar
 }
 
 
@@ -475,8 +499,6 @@ footer {
 .o-Tabs__Tab label {
   // HACK undo base `label` in chewie.css
   font: inherit;
-  margin-bottom: 0; margin-bottom: initial; // HACK fallbacks
-  margin-bottom: unset;
 }
 
 .c-FooterPanel {
