@@ -1,0 +1,38 @@
+
+/*################################*\
+    legacy  |  _dev.less
+\*################################*/
+
+
+// Extension of `.o-Flex__Item`
+// [1] NOTE: equivalent to .flex(0 0 var(--site-logo-width));
+//     but now works when flex-direction = column
+//     (cannot use `flex` to set width if flex-direction=column)
+//
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2017-04-05
+.o-Flex__Item--siteLogo {
+  .flex(0 0 auto);
+  width: 4rem; // HACK fallback
+  width: var(--site-logo-width); // [1]
+  @media screen and (min-width: 45em) {
+    margin: 0 2rem;
+  }
+}
+
+
+
+
+// Extensions to bangs.less
+@media screen and (min-width: 45em) {
+  .-ta-l-sM {
+    text-align: left;
+  }
+}
+@media not all and (min-width: 45em) {
+  .-xd-c-nM {
+    .flex-direction(column);
+  }
+}

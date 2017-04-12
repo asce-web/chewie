@@ -24,12 +24,42 @@
 //++++++++++++++++++++++++++++++++//
 //    # GENERIC
 //++++++++++++++++++++++++++++++++//
+html {
+  // IDEA maybe use zoom instead of custom property to define YearBadge size?
+  // zoom: 0.75;
+  // -ms-zoom: 0.75;
+  // -webkit-zoom: 0.75;
+  // -moz-transform: scale(0.75,0.75);
+  // -moz-transform-origin: top center;
+  --site-logo-width: 6rem;
+  --year-badge-width: 3rem;
+  @media screen and (min-width: 45em) {
+    --year-badge-width: 4rem;
+  }
+  @media screen and (min-width: 60em) {
+    --year-badge-width: 6rem;
+  }
+  @media screen and (min-width: 75em) {
+    --year-badge-width: 8rem;
+  }
+  @media (min-width: 45em) and (max-width: 75em) {
+    --site-logo-width: 4rem;
+  }
+}
+body {
+  font-size: inherit; line-height: inherit; // undo Bootstrap
+}
 //++++ end # GENERIC ++++//
 
 
 //++++++++++++++++++++++++++++++++//
 //    # SECTIONS
 //++++++++++++++++++++++++++++++++//
+footer {
+  @media not all and (min-width: 45em) {
+    --site-logo-width: 0;
+  }
+}
 //++++ end # SECTIONS ++++//
 
 
@@ -59,6 +89,23 @@
   //--------------------------------//
   //    ## Links
   //--------------------------------//
+  a {
+    .c-Mast &,
+    .c-NavBar &,
+    .c-FooterPanel & {
+      color: inherit;
+    }
+    .c-Mast--copyright &:hover,
+    .c-Mast--copyright &:focus,
+    .c-NavBar--contrib &:hover,
+    .c-NavBar--contrib &:focus,
+    .c-NavBar--mobile  &:hover,
+    .c-NavBar--mobile  &:focus,
+    .c-FooterPanel     &:hover,
+    .c-FooterPanel     &:focus {
+      text-decoration: underline;
+    }
+  }
   //---- end ## Links ----//
 
   //--------------------------------//
@@ -81,6 +128,11 @@
 //++++++++++++++++++++++++++++++++//
 //    # FORMS
 //++++++++++++++++++++++++++++++++//
+label {
+  margin-bottom: 0; margin-bottom: initial; // HACK fallbacks
+  margin-bottom: unset; // unset `label` in chewie base
+  font: inherit; // HACK undo base `label` in chewie.css TODO remove
+}
 //++++ end # FORMS ++++//
 
 

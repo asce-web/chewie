@@ -1,0 +1,62 @@
+
+/*################################*\
+    legacy  |  _c-YearBadge.less
+\*################################*/
+
+
+// The YearBadge component represents the shield-like icon
+// in the header and footer.
+//
+// ^subclasses
+// --tab - badge used to select and indicate year in the footer
+// ^author
+// : Dae Clarke
+// : Chris Harvey
+// ^updated
+// : 2015-10-27
+.c-YearBadge {
+  --display: block; // HACK lack of @supports
+  display: var(--display);
+  position: relative;
+  left: calc(~'-1 * var(--year-badge-width) / 2');
+  z-index: 0; // HACK override chewie.css TODO
+  width: var(--year-badge-width);
+  padding-top: calc(~'var(--year-badge-width) / 2');
+  font-weight: 700;
+  font-family: @font_ui;
+  font-size: calc(~'var(--year-badge-width) / 4');
+  text-align: center;
+  background: @color_asce_primary;
+  color: @color_asce_header_txt;
+  &::before {
+    content: '20';
+    font-weight: 300;
+  }
+  &::after {
+    --year-badge-corner-length: calc(~'var(--year-badge-width) / 4');
+    content: '';
+    display: block;
+    position: relative;
+    top: var(--year-badge-corner-length);
+    width: 0;
+    height: 0;
+    border-width: var(--year-badge-corner-length) calc(~'var(--year-badge-width) / 2') 0;
+    border-color: @color_asce_primary transparent;
+  }
+  .c-FooterPanel & {
+    left: calc(~'var(--year-badge-width) / 2');
+  }
+}
+.c-YearBadge--tab {
+  z-index: 1; // over footer panels
+  .mx-bc-secondary();
+  &::after {
+    border-color: transparent;
+  }
+  input:checked + & {
+    .mx-bc-accent();
+    &::after {
+      .mx-btc-accent();
+    }
+  }
+}
