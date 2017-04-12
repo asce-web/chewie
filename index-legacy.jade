@@ -31,9 +31,9 @@ html.no-js
     //- script try{Typekit.load();}catch(e){}
   body(class=conference.classname)
     a.h-Hidden(href="#main") skip to main content
-    header.header
+    header
       nav.o-Flex.o-MobileBar
-        a.o-Flex__Item.o-MobileBar__Item(href="./"): i.ic.home: span.h-Hidden home
+        a.o-Flex__Item.o-MobileBar__Item(href="./"): i.ic.home: span.h-Hidden Home
         label.o-Flex__Item.o-MobileBar__Item.c-Toggle(aria-label="toggle main menu")
           input.c-Toggle__Check.h-Hidden(type="checkbox" value="main menu is open" role="switch")
           i.c-Toggle__Viz.ic.menu(role="none")
@@ -248,7 +248,7 @@ html.no-js
             label.h-Block
               input.o-Tabs__Check.h-Hidden(type="radio" name="footertabs" value=year)&attributes((which==='current') ? {checked:''} : {})
               time.c-YearBadge.c-YearBadge--tab(datetime=year aria-label=year)= year.toString().slice(2)
-          dd.o-Flex__Item.o-Tabs__Panel.c-FooterPanel(id=`panel-${which}`)
+          dd.o-Flex__Item.o-Tabs__Panel.c-FooterPanel(id=`panel-${which}`): div.o-Constrain
             //- div.o-Flex
               div.o-Flex__Item: span.c-YearBadge(role="none")= year.toString().slice(2)
               div.o-Flex__Item: h1.-mb-2.-ta-c= heading
@@ -312,16 +312,12 @@ html.no-js
                     p: a.c-LinkArrow(href="") Call for submissions
                     p: a.c-LinkArrow(href="./sponsors.html") Sponsors
                     p: a.c-LinkArrow(href="") Exhibit
-    div#footer.footer.container-fluid.-mt-0
-      div.visible-xs.mobile-nav.navigation
-        a(href="") #[span.ic.home]
-        a(href="") Register
-        a.menu-toggle(href="") Menu #[span.ic.menu]
-      div.row.copyright.text-center
-        div.container
-          div.asce-logo
-          span Copyright © 1996&ndash;2015, American Society of Civil Engineers | #[a(href="") ASCE.org]
-    // a(href="#top") jump to top
+    footer
+      div.c-Mast.c-Mast--copyright
+        p.-mb-z-sM.-ta-c
+          i.c-AsceLogo(role="none")
+          a(href="http://www.asce.org/" rel="external") &copy; 1996&ndash;2015, American Society of Civil Engineers | ASCE.org
+        p.h-Hidden-sM.-mb-z.-ta-r: a(href="#top") jump to top
     script(src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js")
     script.
       window.jQuery || document.write('<script src="./js/vendor/jquery-1.11.0.min.js"><\/script>')

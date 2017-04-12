@@ -52,10 +52,28 @@ footer {
     --site-logo-width: 0;
   }
 }
+a {
+  .c-Mast &,
+  .c-NavBar &,
+  .c-FooterPanel & {
+    color: inherit;
+  }
+  .c-Mast--copyright &:hover,
+  .c-Mast--copyright &:focus,
+  .c-NavBar--contrib &:hover,
+  .c-NavBar--contrib &:focus,
+  .c-NavBar--mobile  &:hover,
+  .c-NavBar--mobile  &:focus,
+  .c-FooterPanel     &:hover,
+  .c-FooterPanel     &:focus {
+    text-decoration: underline;
+  }
+}
 label {
   margin-bottom: 0; margin-bottom: initial; // HACK fallbacks
   margin-bottom: unset; // unset `label` in chewie base
 }
+
 
 // Extension of `.o-Flex__Item`
 // [1] NOTE: equivalent to .flex(0 0 var(--site-logo-width));
@@ -148,6 +166,7 @@ label {
   .flex-justify-content(flex-end);
   height: 3rem; // HACK fallback
   height: calc('2 * var(--vru)'); // FIXME fixing damn icons
+  color: @color_asce_header_txt;
   .mx-bc-secondary();
   @media screen and (min-width: 45em) {
     display: none;
@@ -183,6 +202,11 @@ label {
 }
 .c-Mast--coop {
   background-color: @color_coop_bg;
+}
+.c-Mast--copyright {
+  padding: @g-vru 1rem; // HACK fallback
+  padding: var(--vru) 1rem;
+  background-color: @g-color-asce-blue;
 }
 
 
@@ -329,7 +353,6 @@ label {
   & > :hover,
   & > :focus {
     background-color: transparent; // unset `.c-Navbar > *:hover`
-    text-decoration: underline;
   }
 }
 .c-Mast--nav--sub ul {
@@ -380,10 +403,6 @@ label {
     display: block;
     line-height: inherit;
     padding: 0.25em;
-    &:hover,
-    &:focus {
-      text-decoration: underline;
-    }
   }
 }
 
@@ -442,6 +461,29 @@ label {
     &::after {
       .mx-btc-accent();
     }
+  }
+}
+
+// ASCE’s logo at bottom of footer.
+// Let’s completely remove this and use an actual <img> element, shall we?
+//
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2017-04-12
+.c-AsceLogo {
+  display: inline-block;
+  line-height: inherit;
+  width: 73px;  // FIXME magic nummmmmmmbers
+  height: 23px; // FIXME magic nummmmmmmbers
+  margin-right: 1em;
+  vertical-align: middle;
+  background-image: url('../img/asce-logo-footer-small.png');
+  background-size: contain;
+  @media screen and (min-width: 75em) {
+    width: 233px; // FIXME magic numberrrrrrrrrs
+    height: 30px; // FIXME magic numberrrrrrrrrs
+    background-image: url('../img/asce-logo-footer.png');
   }
 }
 
@@ -528,6 +570,7 @@ label {
 }
 
 .c-FooterPanel {
+  color: @color_asce_header_txt;
   .mx-bc-primary();
   background-image: url(../img/pattern-bg.png);
 }
