@@ -80,6 +80,11 @@ footer {
   //--------------------------------//
   //    ## Paragraphs
   //--------------------------------//
+  figcaption {
+    font-weight: 300;
+    font-style: italic;
+    .font-size-el(0.75);
+  }
   //---- end ## Paragraphs ----//
 
   //--------------------------------//
@@ -90,6 +95,32 @@ footer {
   //--------------------------------//
   //    ## Tables
   //--------------------------------//
+  thead,
+  tfoot {
+    background-color: @g-color-table-bg;
+    font-weight: 600;
+    font-size: 0.75em; // REVIEW is this necessary?
+  }
+  th,
+  td {
+    padding: 10px;
+    border: 1px solid @color_table_border;
+  }
+  // REVIEW striped & bordered tables
+  table.striped {
+    tbody > tr:nth-child(even) {
+      background-color: @g-color-table-bg;
+    }
+  }
+  tr.striped {
+    background-color: @g-color-table-bg;
+  }
+  table.bordered {
+    th,
+    td {
+      border: 1px solid @g-color-table-br;
+    }
+  }
   //---- end ## Tables ----//
 //++++ end # GROUPING ++++//
 
@@ -101,6 +132,11 @@ footer {
   //    ## Links
   //--------------------------------//
   a {
+    color: @g-color-link-txt;
+    &:hover,
+    &:focus {
+      color: @g-color-link-txt-hover;
+    }
     .c-Mast &,
     .c-NavBar &,
     .c-FooterPanel & {
