@@ -52,6 +52,28 @@ footer {
     --site-logo-width: 0;
   }
 }
+a {
+  .c-Mast &,
+  .c-NavBar &,
+  .c-FooterPanel & {
+    color: inherit;
+  }
+  .c-Mast--copyright &:hover,
+  .c-Mast--copyright &:focus,
+  .c-NavBar--contrib &:hover,
+  .c-NavBar--contrib &:focus,
+  .c-NavBar--mobile  &:hover,
+  .c-NavBar--mobile  &:focus,
+  .c-FooterPanel     &:hover,
+  .c-FooterPanel     &:focus {
+    text-decoration: underline;
+  }
+}
+label {
+  margin-bottom: 0; margin-bottom: initial; // HACK fallbacks
+  margin-bottom: unset; // unset `label` in chewie base
+}
+
 
 // Extension of `.o-Flex__Item`
 // [1] NOTE: equivalent to .flex(0 0 var(--site-logo-width));
@@ -140,7 +162,23 @@ footer {
   }
 }
 
+.o-MobileBar {
+  .flex-justify-content(flex-end);
+  height: 3rem; // HACK fallback
+  height: calc('2 * var(--vru)'); // FIXME fixing damn icons
+  color: @color_asce_header_txt;
+  .mx-bc-secondary();
+  @media screen and (min-width: 45em) {
+    display: none;
+  }
+}
+.o-MobileBar__Item {
+  .flex(0);
+  padding: 0.5rem 1rem;
+  .ic { margin-top: auto; } // FIXME fixing damn icons
+}
 
+@import (less) url('legacy-_o-Drawer.less');
 
 
 // Masthead header and footer banners across entire site.
@@ -164,6 +202,11 @@ footer {
 }
 .c-Mast--coop {
   background-color: @color_coop_bg;
+}
+.c-Mast--copyright {
+  padding: @g-vru 1rem; // HACK fallback
+  padding: var(--vru) 1rem;
+  background-color: @g-color-asce-blue;
 }
 
 
@@ -242,6 +285,7 @@ footer {
 //                    information for people: for speakers, sponsors, exhibitors, etc.
 // : --sub          - Secondary-level navigation component containing subpages
 //                    of the main directories
+// : --mobile       - Mobile Menu
 // ^author
 // : Chris Harvey
 // ^updated
@@ -306,9 +350,9 @@ footer {
   @media screen and (min-width: 75em) {
     .font-size-mod(16/16); // undo .c-NavBar
   }
-  & > :hover {
-    background-color: transparent;
-    text-decoration: underline;
+  & > :hover,
+  & > :focus {
+    background-color: transparent; // unset `.c-Navbar > *:hover`
   }
 }
 .c-Mast--nav--sub ul {
@@ -333,6 +377,32 @@ footer {
   .mx-bc-accent(); // FIXME only here because position absolute
   &:not(.active) {
     .transform(scale(1,0));
+  }
+}
+.c-NavBar--mobile {
+  font-weight: 600; // undo .c-NavBar
+  text-transform: none; // HACK fallback
+  text-transform: inherit; // HACK fallback
+  text-transform: unset; // undo .c-NavBar
+  .mx-bc-secondary();
+  box-shadow: 0 0 1rem 0.5rem rgba(0,0,0,0.25);
+  & > * {
+    &:hover,
+    &:focus {
+      background-color: transparent; // unset `.c-Navbar > *:hover`
+    }
+    & > a {
+      text-transform: uppercase;
+    }
+  }
+  ul {
+    padding: 0; // unset `.c-Navbar > *`
+    list-style: none; // unset base `ul`
+  }
+  a {
+    display: block;
+    line-height: inherit;
+    padding: 0.25em;
   }
 }
 
@@ -391,6 +461,29 @@ footer {
     &::after {
       .mx-btc-accent();
     }
+  }
+}
+
+// ASCE’s logo at bottom of footer.
+// Let’s completely remove this and use an actual <img> element, shall we?
+//
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2017-04-12
+.c-AsceLogo {
+  display: inline-block;
+  line-height: inherit;
+  width: 73px;  // FIXME magic nummmmmmmbers
+  height: 23px; // FIXME magic nummmmmmmbers
+  margin-right: 1em;
+  vertical-align: middle;
+  background-image: url('../img/asce-logo-footer-small.png');
+  background-size: contain;
+  @media screen and (min-width: 75em) {
+    width: 233px; // FIXME magic numberrrrrrrrrs
+    height: 30px; // FIXME magic numberrrrrrrrrs
+    background-image: url('../img/asce-logo-footer.png');
   }
 }
 
@@ -463,6 +556,9 @@ footer {
 }
 
 
+@import (less) url('legacy-_c-Toggle.less');
+
+
 @import (less) url('legacy-_o-Tabs.less');
 .o-Tabs {
   margin-bottom: 0; margin-bottom: initial; // HACK fallbacks
@@ -471,11 +567,10 @@ footer {
 .o-Tabs__Tab label {
   // HACK undo base `label` in chewie.css
   font: inherit;
-  margin-bottom: 0; margin-bottom: initial; // HACK fallbacks
-  margin-bottom: unset;
 }
 
 .c-FooterPanel {
+  color: @color_asce_header_txt;
   .mx-bc-primary();
   background-image: url(../img/pattern-bg.png);
 }
