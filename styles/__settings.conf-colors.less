@@ -340,32 +340,32 @@
   .etsconference       & { border-top-color: @color-ets-accent; }
   .geesdconference     & { border-top-color: @color-geesd-accent; }
 }
-.mx-bc-primary-fade(@height) {
-                           .bg-grad(@color-site-primary;    @height);
-  .pipelinesconference & { .bg-grad(@color-pl-primary;      @height); }
-  .icsiconference      & { .bg-grad(@color-icsi-primary;    @height); }
-  .lidconference       & { .bg-grad(@color-lid-primary;     @height); }
-  .structurescongress  & { .bg-grad(@color-struct-primary;  @height); }
-  .georiskconference   & { .bg-grad(@color-georisk-primary; @height); }
-  .aei-conference      & { .bg-grad(@color-aei-primary;     @height); }
-  .pavementsconference & { .bg-grad(@color-pave-primary;    @height); }
-  .groutingconference  & { .bg-grad(@color-grout-primary;   @height); }
-  .cisummit            & { .bg-grad(@color-ci-primary;      @height); }
-  .aeisdc              & { .bg-grad(@color-aeisdc-primary;  @height); }
-  .asceconvention      & { .bg-grad(@color-convention-primary; @height); }
-  .hmemconference      & { .bg-grad(@color-hmem-primary;       @height); }
-  .ewricongress        & { .bg-grad(@color-ewri-primary;       @height); }
-  .asceconvention2017  & { .bg-grad(@color-2017-primary;       @height); }
-  .icce2018            & { .bg-grad(@color-icce-primary;       @height); }
-  .asce-cta            & { .bg-grad(@color-cta-primary;        @height); }
-  .ascestudentdays     & { .bg-grad(@color-cisd-primary;       @height); }
-  .omswconference      & { .bg-grad(@color-omsw-primary;       @height); }
-  .apmconference       & { .bg-grad(@color-apm-primary;        @height); }
-  .unsatsoilsconf      & { .bg-grad(@color-unsat-primary;      @height); }
-  .etsconference       & { .bg-grad(@color-ets-primary;        @height); }
-  .geesdconference     & { .bg-grad(@color-geesd-primary;      @height); }
+.mx-bc-primary-fade(...) {
+                           .bg-grad(@color-site-primary);
+  .pipelinesconference & { .bg-grad(@color-pl-primary); }
+  .icsiconference      & { .bg-grad(@color-icsi-primary); }
+  .lidconference       & { .bg-grad(@color-lid-primary); }
+  .structurescongress  & { .bg-grad(@color-struct-primary); }
+  .georiskconference   & { .bg-grad(@color-georisk-primary); }
+  .aei-conference      & { .bg-grad(@color-aei-primary); }
+  .pavementsconference & { .bg-grad(@color-pave-primary); }
+  .groutingconference  & { .bg-grad(@color-grout-primary); }
+  .cisummit            & { .bg-grad(@color-ci-primary); }
+  .aeisdc              & { .bg-grad(@color-aeisdc-primary); }
+  .asceconvention      & { .bg-grad(@color-convention-primary); }
+  .hmemconference      & { .bg-grad(@color-hmem-primary); }
+  .ewricongress        & { .bg-grad(@color-ewri-primary); }
+  .asceconvention2017  & { .bg-grad(@color-2017-primary); }
+  .icce2018            & { .bg-grad(@color-icce-primary); }
+  .asce-cta            & { .bg-grad(@color-cta-primary); }
+  .ascestudentdays     & { .bg-grad(@color-cisd-primary); }
+  .omswconference      & { .bg-grad(@color-omsw-primary); }
+  .apmconference       & { .bg-grad(@color-apm-primary); }
+  .unsatsoilsconf      & { .bg-grad(@color-unsat-primary); }
+  .etsconference       & { .bg-grad(@color-ets-primary); }
+  .geesdconference     & { .bg-grad(@color-geesd-primary); }
 }
-.bg-grad(@primary, ...) {
+.bg-grad(@primary) {
   // a mixin for background gradients
   background: @primary;    // fallback for transparent and gradient
   background: transparent; // fallback for gradient
