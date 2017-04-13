@@ -6,11 +6,21 @@
 
 // Masthead header and footer banners across entire site.
 //
+// ^subclasses
+// --head     - masthead in header
+// --nav      - top-level navigation
+// --nav--sub - secondary-level navigation
+// --coop     - cooperating orgs bar
+// --copy     - copyright line footer
 // ^author
 // Chris Harvey
 // ^updated
 // : 2017-04-03
 .c-Mast {
+  color: @g-color-mast-txt;
+}
+.c-Mast--head {
+  .mx-bc-primary();
 }
 .c-Mast--nav {
   .mx-bc-secondary();

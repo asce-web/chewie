@@ -166,7 +166,7 @@
 //    # MIXINS
 //++++++++++++++++++++++++++++++++//
 .mx-bc-primary() {
-                           background-color: @color-site-primary;
+  :root                & { background-color: @color-site-primary; }
   .pipelinesconference & { background-color: @color-pl-primary; }
   .icsiconference      & { background-color: @color-icsi-primary; }
   .lidconference       & { background-color: @color-lid-primary; }
@@ -191,7 +191,7 @@
   .geesdconference     & { background-color: @color-geesd-primary; }
 }
 .mx-bc-secondary() {
-                           background-color: @color-site-secondary;
+  :root                & { background-color: @color-site-secondary; }
   .pipelinesconference & { background-color: @color-pl-secondary; }
   .icsiconference      & { background-color: @color-icsi-secondary; }
   .lidconference       & { background-color: @color-lid-secondary; }
@@ -216,7 +216,7 @@
   .geesdconference     & { background-color: @color-geesd-secondary; }
 }
 .mx-bc-accent() {
-                           background-color: @color-site-accent;
+  :root                & { background-color: @color-site-accent; }
   .pipelinesconference & { background-color: @color-pl-accent; }
   .icsiconference      & { background-color: @color-icsi-accent; }
   .lidconference       & { background-color: @color-lid-accent; }
@@ -241,7 +241,7 @@
   .geesdconference     & { background-color: @color-geesd-accent; }
 }
 .mx-c-primary() {
-                           color: @color-site-primary;
+  :root                & { color: @color-site-primary; }
   .pipelinesconference & { color: @color-pl-primary; }
   .icsiconference      & { color: @color-icsi-primary; }
   .lidconference       & { color: @color-lid-primary; }
@@ -266,7 +266,7 @@
   .geesdconference     & { color: @color-geesd-primary; }
 }
 .mx-c-secondary() {
-                           color: @color-site-secondary;
+  :root                & { color: @color-site-secondary; }
   .pipelinesconference & { color: @color-pl-secondary; }
   .icsiconference      & { color: @color-icsi-secondary; }
   .lidconference       & { color: @color-lid-secondary; }
@@ -291,7 +291,7 @@
   .geesdconference     & { color: @color-geesd-secondary; }
 }
 .mx-c-accent() {
-                           color: @color-site-accent;
+  :root                & { color: @color-site-accent; }
   .pipelinesconference & { color: @color-pl-accent; }
   .icsiconference      & { color: @color-icsi-accent; }
   .lidconference       & { color: @color-lid-accent; }
@@ -316,7 +316,7 @@
   .geesdconference     & { color: @color-geesd-accent; }
 }
 .mx-btc-accent() {
-                           border-top-color: @color-site-accent;
+  :root                & { border-top-color: @color-site-accent; }
   .pipelinesconference & { border-top-color: @color-pl-accent; }
   .icsiconference      & { border-top-color: @color-icsi-accent; }
   .lidconference       & { border-top-color: @color-lid-accent; }
@@ -341,7 +341,7 @@
   .geesdconference     & { border-top-color: @color-geesd-accent; }
 }
 .mx-bc-primary-fade(...) {
-                           .bg-grad(@color-site-primary);
+  :root                & { .bg-grad(@color-site-primary); }
   .pipelinesconference & { .bg-grad(@color-pl-primary); }
   .icsiconference      & { .bg-grad(@color-icsi-primary); }
   .lidconference       & { .bg-grad(@color-lid-primary); }
@@ -366,7 +366,7 @@
   .geesdconference     & { .bg-grad(@color-geesd-primary); }
 }
 .mx-bc-primary-fade-reverse() {
-                           .bg-grad-rev(@color-site-primary);
+  :root                & { .bg-grad-rev(@color-site-primary); }
   .pipelinesconference & { .bg-grad-rev(@color-pl-primary); }
   .icsiconference      & { .bg-grad-rev(@color-icsi-primary); }
   .lidconference       & { .bg-grad-rev(@color-lid-primary); }
@@ -395,11 +395,5 @@
 }
 .bg-grad-rev(@primary) {
   background-image: linear-gradient(to top, transparent 0%, @primary 100%);
-}
-.fade(@primary; @box_h) {
-  // syntax reminder:
-  // box-shadow: <x> <y> <blur> <spread> <color> <inset>;
-  // see https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
-  box-shadow: 0 -(@box_h/2)*1px (@box_h/2)*1px 0 @primary inset;
 }
 //++++ end # MIXINS ++++//

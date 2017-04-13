@@ -181,48 +181,10 @@
 
 
 
+
+
+
 // Tabs for past and future years of conference.
-//
-// ^author
-// : Chris Harvey
-// ^updated
-// : 2015-09-10
-.c-NavBar--tabs {
-  // font-size: 24px; shouldn't be different from normal nav bar
-  .c-NavBar__Link {
-    &:hover,
-    &.current {
-      .mx-bc-accent();
-    }
-    &.current {
-      position: relative;
-      cursor: default;
-      &::after { // little arrow below
-        content: '';
-        display: block;
-        margin: auto;
-        width: 0;
-        height: 0;
-        border:  10px solid transparent;
-        position: absolute;
-        top: 44px; // same as -margin-top for tab-buttons group
-        left: 33%;
-        .transition(border-width 500ms);
-        @media screen and (min-width: 1200px) {
-          top: 54px; // same as -margin-top for tab-buttons group
-          border-width: 15px;
-        }
-        .mx-btc-accent();
-      }
-    }
-  }
-}
-
-
-
-// ----------------------------------------------------------------------------
-// Tabs for past and future years of conference.
-// TODO THIS CLASS IS OLD; DELETE IT ONCE WE CAN CHANGE MARKUP
 //
 // ^author
 // : Dae Clarke

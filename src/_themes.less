@@ -1,0 +1,21 @@
+
+/*################################*\
+    legacy  |  _themes.less
+\*################################*/
+
+
+// Theme styles go here. They override any base and component styles.
+// Theme styles are mostly descendant selectors: they change the style of an element
+// based on where it lives in the DOM. If the element is moved to another parent,
+// its styles could change, depending on its context.
+///////////////////////////////////////////////////////////////////////////////
+
+.c-Mast,
+.c-NavBar,
+.c-FooterPanel {
+  h1, h2, h3, h4, h5, h6,
+  a {
+    // unset base stylesheet
+    color: inherit;
+  }
+}
