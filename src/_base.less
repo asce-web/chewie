@@ -49,9 +49,11 @@ html {
 }
 body {
   font-family: 'Open Sans','Helvetica Neue','Helvetica','Arial',sans-serif;
+  color: @g-color-body-txt;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: 'futura-pt','Open Sans','Helvetica Neue','Helvetica','Arial',sans-serif;
+  .mx-c-primary();
 }
 //++++ end # GENERIC ++++//
 
@@ -129,11 +131,6 @@ footer {
     &:hover,
     &:focus {
       color: @g-color-link-txt-hover;
-    }
-    .c-Mast &,
-    .c-NavBar &,
-    .c-FooterPanel & {
-      color: inherit;
     }
     .c-Mast--copyright &:hover,
     .c-Mast--copyright &:focus,
