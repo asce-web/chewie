@@ -132,15 +132,14 @@ footer {
     &:focus {
       color: @g-color-link-txt-hover;
     }
-    .c-Mast--copyright &:hover,
-    .c-Mast--copyright &:focus,
-    .c-NavBar--contrib &:hover,
-    .c-NavBar--contrib &:focus,
-    .c-NavBar--mobile  &:hover,
-    .c-NavBar--mobile  &:focus,
-    .c-FooterPanel     &:hover,
-    .c-FooterPanel     &:focus {
-      text-decoration: underline;
+    .c-Mast--copyright &,
+    .c-NavBar--contrib &,
+    .c-NavBar--mobile &,
+    .c-FooterPanel & {
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
     }
   }
   //---- end ## Links ----//
