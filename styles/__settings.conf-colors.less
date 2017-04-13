@@ -396,10 +396,4 @@
 .bg-grad-rev(@primary) {
   background-image: linear-gradient(to top, transparent 0%, @primary 100%);
 }
-.fade(@primary; @box_h) {
-  // syntax reminder:
-  // box-shadow: <x> <y> <blur> <spread> <color> <inset>;
-  // see https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
-  box-shadow: 0 -(@box_h/2)*1px (@box_h/2)*1px 0 @primary inset;
-}
 //++++ end # MIXINS ++++//
