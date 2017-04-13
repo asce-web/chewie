@@ -4,21 +4,46 @@
 \*################################*/
 
 
-// Extension of `.o-Flex__Item`
-// [1] NOTE: equivalent to .flex(0 0 var(--site-logo-width));
-//     but now works when flex-direction = column
-//     (cannot use `flex` to set width if flex-direction=column)
+// Extension of `.o-Flex`
 //
 // ^author
 // : Chris Harvey
 // ^updated
-// : 2017-04-05
+// : 2017-04-13
+.o-Flex--siteHead {
+  margin: @g-vru 0; // HACK fallback
+  margin: var(--vru) 0;
+  .flex-align-items(center);
+  @media not all and (min-width: 45em) {
+    .flex-direction(column);
+  }
+}
+
+// Extensions of `.o-Flex__Item`
+// [1] NOTE: equivalent to .flex(0 0 var(--site-logo-width));
+//     but now works when flex-direction = column
+//     (cannot use `flex` to set width if flex-direction=column)
+//
+//--siteLogo - container for the site logo
+//--siteTitles - container for `.c-ConferenceTitles` component
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2017-04-13
 .o-Flex__Item--siteLogo {
   .flex(0 0 auto);
   width: 4rem; // HACK fallback
   width: var(--site-logo-width); // [1]
   @media screen and (min-width: 45em) {
     margin: 0 2rem;
+  }
+}
+.o-Flex__Item--siteTitles {
+  @media screen and (min-width: 45em) {
+    margin-right: 60px; // HACK fallback // maximum possible --year-badge-width
+    margin-right: calc(~'var(--year-badge-width) / 2');
+    text-align: left; // HACK fallback
+    text-align: start; // override `.o-HomeLink`
   }
 }
 
@@ -28,7 +53,7 @@
 // Extensions to bangs.less
 @media screen and (min-width: 45em) {
   .-ta-l-sM {
-    text-align: left;
+    text-align: left !important;
   }
 }
 @media not all and (min-width: 45em) {

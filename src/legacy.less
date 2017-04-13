@@ -25,7 +25,6 @@
  * Constrain...........................keeps content at max width
  * MainCol.............................main column of a site page
  * SideCol.............................side column of a site page
- * HomeLink............................link across banner taking you home
  * MobileBar...........................top bar on mobile devices
  * Tabs................................tabbed panel interface
  * Drawer..............................pull-out container
@@ -33,9 +32,7 @@
  * COMPONENTS--------------------------SPECIFIC STYLE PATTERNS
  * Mast................................full-bleed container with background color
  * ConfLogo............................logo for conference (usually an Institute shield)
- * ConferenceName......................Name of conference in header/footer
- * ConferenceTagline...................Site Slogan (NOT the Conference Theme) in header/footer
- * ConferenceLocation..................Location & dates line in header/footer
+ * ConferenceTitles....................container for name, tagline, detail of conference
  * TopImg..............................top banner image containing
  * NavBar..............................any navigation bar
  * YearBadge...........................badge at top indicating year
@@ -78,7 +75,6 @@
 // : 2017-04-03
 .o-MainCol {}
 @import (less) url('_o-SideCol.less');
-@import (less) url('_o-HomeLink.less');
 @import (less) url('_o-MobileBar.less');
 @import (less) url('_o-Tabs.less');
 @import (less) url('_o-Drawer.less');
@@ -94,41 +90,7 @@
 // : 2015-08-21
 .c-ConfLogo {
 }
-.c-ConferenceName,
-.c-ConferenceTagline {
-  margin-bottom: calc(~'var(--vru) / 2');
-}
-.c-ConferenceTagline,
-.c-ConferenceLocation {
-  font-weight: bold;
-  .font-size-el(0.875);
-  @media (min-width: 75em) {
-    .font-size-el(1.125);
-  }
-}
-.c-ConferenceName {
-  text-transform: uppercase;
-  .font-size-el(1.125);
-  font-weight: 700;
-  @media (min-width: 45em) {
-    padding-top: unset; // undo `h1`
-  }
-  @media (min-width: 60em) {
-    .font-size-el(1.25);
-  }
-  @media (min-width: 75em) {
-    .font-size-el(1.875);
-  }
-}
-.c-ConferenceTagline {
-  font-style: italic;
-  opacity: 0.7;
-}
-.c-ConferenceLocation {
-  margin-bottom: unset; // undo `p`
-  text-transform: uppercase;
-  font-weight: 600;
-}
+@import (less) url('_c-ConferenceTitles.less');
 @import (less) url('_c-TopImg.less');
 @import (less) url('_c-NavBar.less');
 @import (less) url('_c-YearBadge.less');
