@@ -13,7 +13,6 @@
 .o-Flex--siteHead {
   margin: @g-vru 0; // HACK fallback
   margin: var(--vru) 0;
-  text-align: center;
   .flex-align-items(center);
   @media not all and (min-width: 45em) {
     .flex-direction(column);
@@ -54,7 +53,7 @@
 // Extensions to bangs.less
 @media screen and (min-width: 45em) {
   .-ta-l-sM {
-    text-align: left;
+    text-align: left !important;
   }
 }
 @media not all and (min-width: 45em) {

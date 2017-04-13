@@ -69,7 +69,7 @@ html.no-js
           a.o-Flex__Item.o-Flex.o-Flex--siteHead.o-MainCol(href="./" rel="home")
             div.o-Flex__Item.o-Flex__Item--siteLogo
               img.c-ConfLogo(src=conference.image.shield alt="Home")
-            div.o-Flex__Item.o-Flex__Item--siteTitles.c-ConferenceTitles
+            div.o-Flex__Item.o-Flex__Item--siteTitles.c-ConferenceTitles.-ta-l-sM
               h1.c-ConferenceTitles__Name= conference.name
               p.c-ConferenceTitles__Detail= conference.detail
               p.c-ConferenceTitles__Tagline= conference.tagline
@@ -253,14 +253,14 @@ html.no-js
           dd.o-Flex__Item.o-Tabs__Panel.c-FooterPanel(id=`panel-${which}`): div.o-Constrain
             //- div.o-Flex
               div.o-Flex__Item: span.c-YearBadge(role="none")= year.toString().slice(2)
-              div.o-Flex__Item.c-ConferenceTitles.-mb-2.-ta-c
+              div.o-Flex__Item.c-ConferenceTitles.-mb-2.-pt-2
                 if conference_info.name
                   h1.c-ConferenceTitles__Name= conference_info.name
                 if conference_info.detail
                   p.c-ConferenceTitles__Detail= conference_info.detail
                 if conference_info.tagline
                   p.c-ConferenceTitles__Tagline= conference_info.tagline
-            div.c-ConferenceTitles.-mb-2.-pt-2.-ta-c
+            div.c-ConferenceTitles.-mb-2.-pt-2
               if conference_info.name
                 h1.c-ConferenceTitles__Name= conference_info.name
               if conference_info.detail
