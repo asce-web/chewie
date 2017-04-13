@@ -1,0 +1,21 @@
+
+/*################################*\
+    legacy  |  _o-MobileBar.less
+\*################################*/
+
+
+.o-MobileBar {
+  .flex-justify-content(flex-end);
+  height: 3rem; // HACK fallback
+  height: calc('2 * var(--vru)'); // FIXME fixing damn icons
+  color: @g-color-mast-txt;
+  .mx-bc-secondary();
+  @media screen and (min-width: 45em) {
+    display: none;
+  }
+}
+.o-MobileBar__Item {
+  .flex(0);
+  padding: 0.5rem 1rem;
+  .ic { margin-top: auto; } // FIXME fixing damn icons
+}

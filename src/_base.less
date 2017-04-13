@@ -1,0 +1,190 @@
+
+/*################################*\
+    legacy  |  _base.less
+\*################################*/
+
+
+// Table of Contents
+// # GENERIC........................`html` and far-reaching page-wide selectors
+// # SECTIONS.......................sections, articles, headers, footers, headings
+// # GROUPING.......................grouping content
+//   ## Paragraphs......................paragraphs, block-level textual elements
+//   ## Lists...........................ordered, unordered, dictionary
+//   ## Tables..........................tables
+// # TEXT...........................text-level, phrasing (inline) content and links
+//   ## Links...........................inline hyperlinks
+//   ## Stress..........................text outstanding from surrounding prose
+//   ## Doc.............................documentation elements
+//   ## Data............................machine- or human-readable data
+// # FORMS..........................form elements
+// # EMBEDDED.......................images, videos, other media
+// # INTERACTIVE....................user-interactive HTML elements
+
+
+//++++++++++++++++++++++++++++++++//
+//    # GENERIC
+//++++++++++++++++++++++++++++++++//
+html {
+  // IDEA maybe use zoom instead of custom property to define YearBadge size?
+  // zoom: 0.75;
+  // -ms-zoom: 0.75;
+  // -webkit-zoom: 0.75;
+  // -moz-transform: scale(0.75,0.75);
+  // -moz-transform-origin: top center;
+  --line-height: 1.25;
+  --site-logo-width: 6rem;
+  --year-badge-width: 3rem;
+  @media screen and (min-width: 45em) {
+    --year-badge-width: 4rem;
+  }
+  @media screen and (min-width: 60em) {
+    --year-badge-width: 6rem;
+  }
+  @media screen and (min-width: 75em) {
+    --year-badge-width: 8rem;
+  }
+  @media (min-width: 45em) and (max-width: 75em) {
+    --site-logo-width: 4rem;
+  }
+}
+body {
+  font-family: 'Open Sans','Helvetica Neue','Helvetica','Arial',sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'futura-pt','Open Sans','Helvetica Neue','Helvetica','Arial',sans-serif;
+}
+.c-Hero,
+.c-Mast,
+.c-FooterPanel {
+  color: @g-color-mast-txt;
+  .mx-bc-primary();
+}
+.c-Hero,
+//++++ end # GENERIC ++++//
+
+
+//++++++++++++++++++++++++++++++++//
+//    # SECTIONS
+//++++++++++++++++++++++++++++++++//
+footer {
+  @media not all and (min-width: 45em) {
+    --site-logo-width: 0;
+  }
+}
+//++++ end # SECTIONS ++++//
+
+
+//++++++++++++++++++++++++++++++++//
+//    # GROUPING
+//++++++++++++++++++++++++++++++++//
+  //--------------------------------//
+  //    ## Paragraphs
+  //--------------------------------//
+  figcaption {
+    font-weight: 300;
+    font-style: italic;
+    .font-size-el(0.75);
+  }
+  //---- end ## Paragraphs ----//
+
+  //--------------------------------//
+  //    ## Lists
+  //--------------------------------//
+  //---- end ## Lists ----//
+
+  //--------------------------------//
+  //    ## Tables
+  //--------------------------------//
+  thead,
+  tfoot {
+    background-color: @g-color-table-bg;
+    font-weight: 600;
+    font-size: 0.75em; // REVIEW is this necessary?
+  }
+  th,
+  td {
+    padding: 10px;
+    border: 1px solid @g-color-table-br;
+  }
+  // REVIEW striped & bordered tables
+  table.striped {
+    tbody > tr:nth-child(even) {
+      background-color: @g-color-table-bg;
+    }
+  }
+  tr.striped {
+    background-color: @g-color-table-bg;
+  }
+  table.bordered {
+    th,
+    td {
+      border: 1px solid @g-color-table-br;
+    }
+  }
+  //---- end ## Tables ----//
+//++++ end # GROUPING ++++//
+
+
+//++++++++++++++++++++++++++++++++//
+//    # TEXT
+//++++++++++++++++++++++++++++++++//
+  //--------------------------------//
+  //    ## Links
+  //--------------------------------//
+  a {
+    color: @g-color-link-txt;
+    &:hover,
+    &:focus {
+      color: @g-color-link-txt-hover;
+    }
+    .c-Mast &,
+    .c-NavBar &,
+    .c-FooterPanel & {
+      color: inherit;
+    }
+    .c-Mast--copyright &:hover,
+    .c-Mast--copyright &:focus,
+    .c-NavBar--contrib &:hover,
+    .c-NavBar--contrib &:focus,
+    .c-NavBar--mobile  &:hover,
+    .c-NavBar--mobile  &:focus,
+    .c-FooterPanel     &:hover,
+    .c-FooterPanel     &:focus {
+      text-decoration: underline;
+    }
+  }
+  //---- end ## Links ----//
+
+  //--------------------------------//
+  //    ## Stress
+  //--------------------------------//
+  //---- end ## Stress ----//
+
+  //--------------------------------//
+  //    ## Documentation
+  //--------------------------------//
+  //---- end ## Documentation ----//
+
+  //--------------------------------//
+  //    ## Data
+  //--------------------------------//
+  //---- end ## Data ----//
+//++++ end # TEXT ++++//
+
+
+//++++++++++++++++++++++++++++++++//
+//    # FORMS
+//++++++++++++++++++++++++++++++++//
+//++++ end # FORMS ++++//
+
+
+//++++++++++++++++++++++++++++++++//
+//    # EMBEDDED
+//++++++++++++++++++++++++++++++++//
+//++++ end # EMBEDDED ++++//
+
+
+//++++++++++++++++++++++++++++++++//
+//    # INTERACTIVE
+//++++++++++++++++++++++++++++++++//
+//++++ end # INTERACTIVE ++++//
