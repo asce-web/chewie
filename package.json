@@ -11,6 +11,7 @@
     "jade:styleguide": "jade styleguide/{index,base,obj,comp-typo,comp-ui}.jade",
     "jade:all": "npm run jade:index  &&  npm run jade:styleguide",
     "lessc:chewie": "lessc styles/chewie.less styles/chewie.css",
+    "lessc:legacy": "lessc src/legacy.less src/legacy.css",
     "lessc:styleguide": "lessc styleguide/styles/styleguide.less styleguide/styles/styleguide.css",
     "lessc:all": "npm run lessc:chewie  &&  npm run lessc:styleguide",
     "minify": "cleancss styles/chewie.css -o styles/chewie.min.css",
