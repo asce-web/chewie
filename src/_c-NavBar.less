@@ -98,9 +98,7 @@
   .flex-justify-content(flex-start);
   margin-bottom: 0; // override base ul
   font-weight: 600;
-  text-transform: none; // HACK fallback
-  text-transform: inherit; // HACK fallback
-  text-transform: unset; // undo .c-NavBar
+  text-transform: none; // undo .c-NavBar
   .transform-origin(top);
   .transitions(-webkit-transform, -moz-transform, -ms-transform, -o-transform, transform; 100ms);
   .mx-bc-accent(); // FIXME only here because position absolute
@@ -110,9 +108,7 @@
 }
 .c-NavBar--mobile {
   font-weight: 600; // undo .c-NavBar
-  text-transform: none; // HACK fallback
-  text-transform: inherit; // HACK fallback
-  text-transform: unset; // undo .c-NavBar
+  text-transform: none; // undo .c-NavBar
   .mx-bc-secondary();
   box-shadow: 0 0 1rem 0.5rem rgba(0,0,0,0.25);
   & > * {
