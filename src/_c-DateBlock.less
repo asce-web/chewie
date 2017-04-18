@@ -1,0 +1,44 @@
+
+/*################################*\
+    legacy  |  _c-DateBlock.less
+\*################################*/
+
+
+// Container for Important Dates.
+// Usually a child of `.c-Callout__Body`
+//
+// ^subcomponents
+// __Item - container for date-description pair
+// __Date - date
+// __Desc - description
+// __MonthDay - part of the date consisting of "MMM DD"
+// ^author
+// Chris Harvey
+// ^updated
+// 2017-04-18
+.c-DateBlock {
+  .font-size-mod(14/16);
+  font-weight: 600;
+}
+
+.c-DateBlock__Item {
+  margin-bottom: calc(~'0.5 * var(--vru)');
+}
+
+.c-DateBlock__Date {
+  .flex(0 0 90px); // FIXME magic number
+  margin-right: 0.5rem;
+  padding-right: 0.5rem;
+  border-right: 1px solid #ccc; // same as speaker-profile dateline border // FIXME magic color
+  text-align: right;
+}
+
+.c-DateBlock__Desc {
+}
+
+.c-DateBlock__MonthDay {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  .mx-c-secondary();
+}
