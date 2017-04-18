@@ -18,13 +18,13 @@
   --display: block; // HACK lack of @supports
   display: var(--display);
   position: relative;
-  left: calc(~'-1 * var(--year-badge-width) / 2');
+  left: calc(~'-0.5 * var(--year-badge-width)');
   z-index: 0; // HACK override chewie.css TODO
   width: var(--year-badge-width);
-  padding-top: calc(~'var(--year-badge-width) / 2');
+  padding-top: calc(~'0.5 * var(--year-badge-width)');
   font-weight: 700;
   font-family: 'futura-pt','Open Sans','Helvetica Neue','Helvetica','Arial',sans-serif;
-  font-size: calc(~'var(--year-badge-width) / 4');
+  font-size: calc(~'0.25 * var(--year-badge-width)');
   text-align: center;
   background-color: @g-color-asce-blue;
   &::before {
@@ -32,14 +32,14 @@
     font-weight: 300;
   }
   &::after {
-    --year-badge-corner-length: calc(~'var(--year-badge-width) / 4');
+    --year-badge-corner-length: calc(~'0.25 * var(--year-badge-width)');
     content: '';
     display: block;
     position: relative;
     top: var(--year-badge-corner-length);
     width: 0;
     height: 0;
-    border-width: var(--year-badge-corner-length) calc(~'var(--year-badge-width) / 2') 0;
+    border-width: var(--year-badge-corner-length) calc(~'0.5 * var(--year-badge-width)') 0;
     border-color: @g-color-asce-blue transparent;
   }
 }

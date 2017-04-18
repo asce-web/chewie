@@ -4,7 +4,14 @@
 \*################################*/
 
 
+// TYPOGRAPHY
+
+// overrides Xmeter base line height if
+// `_base.less : html{--line-height}` (CSS custom property) is not supported
+@g-vru: 1.25rem; // HACK fallback
+
 // COLORS
+
 @import (reference) url('../styles/__settings.conf-colors.less');
 
 @g-color-asce-blue : #0c5fa8;

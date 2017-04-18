@@ -32,7 +32,7 @@
 // : 2017-04-13
 .o-Flex__Item--siteLogo {
   .flex(0 0 auto);
-  width: 4rem; // HACK fallback
+  width: 6rem; // HACK fallback // maximum possible --site-logo-width
   width: var(--site-logo-width); // [1]
   @media screen and (min-width: 45em) {
     margin: 0 2rem;
@@ -40,8 +40,8 @@
 }
 .o-Flex__Item--siteTitles {
   @media screen and (min-width: 45em) {
-    margin-right: 60px; // HACK fallback // maximum possible --year-badge-width
-    margin-right: calc(~'var(--year-badge-width) / 2');
+    margin-right: 8rem; // HACK fallback // maximum possible --year-badge-width
+    margin-right: calc(~'0.5 * var(--year-badge-width)');
     text-align: left; // HACK fallback
     text-align: start; // override `.o-HomeLink`
   }

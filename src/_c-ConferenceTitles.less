@@ -21,7 +21,8 @@
     .font-size-mod(20/16);
   }
   & > *:nth-child(n) { // HACK using :nth-child(n) to override `.font-size-mod() > [h1,p]` specificity
-    margin-bottom: calc(~'var(--vru) / 2');  // undo `h1` and `p`
+    margin-bottom: 0.5 * @g-vru; // HACK fallback
+    margin-bottom: calc(~'0.5 * var(--vru)');  // undo `h1` and `p`
   }
   & > *:last-child {
     margin-bottom: 0; // undo `p`

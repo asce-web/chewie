@@ -16,7 +16,7 @@
 // ^updated
 // : 2017-04-04
 .c-Hero {
-  margin-bottom: 1.5rem; // HACK fallback
+  margin-bottom: @g-vru; // HACK fallback
   margin-bottom: var(--vru);
   .mx-bc-primary();
   color: @g-color-mast-txt;
@@ -59,7 +59,7 @@
   font-weight: 300;
   margin-bottom: 0; margin-bottom: initial; // HACK fallback
   margin-bottom: unset; // undo `p`
-  padding-bottom: 1.5rem; // HACK fallback
+  padding-bottom: @g-vru; // HACK fallback
   padding-bottom: var(--vru);
   @media not all and (min-width: 45em) {
     .font-size-el(0.875); // FIXME magic number!!!
