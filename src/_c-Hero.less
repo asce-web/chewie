@@ -16,8 +16,8 @@
 // ^updated
 // : 2017-04-04
 .c-Hero {
-  margin-bottom: @g-vru; // HACK fallback
-  margin-bottom: var(--vru);
+  margin-bottom: 2*@g-vru; // HACK fallback
+  margin-bottom: calc('2 * var(--vru)');
   .mx-bc-primary();
   color: @g-color-mast-txt;
 }
