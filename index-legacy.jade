@@ -118,26 +118,32 @@ html.no-js
               to tackle greater challenges.
           section.t-Content
             h2 Keynote Speakers
-            div.speaker-profile
-              div.session-col
-                div.col-sm-6.dateline.text-right THURSDAY #[div.date APR 3]
-                div.col-sm-6.sessiontype         OPENING #[br] PLENARY
-              div.photo-col
-                img(src="./img/FPO_speaker_130x130.jpg", alt="speaker")
-              div.details-col
-                div.person-name Charles Johnson
-                div.person-title Ph.D., P.E., S.E., CVS, F.ASCE Illuminate Foundry, Inc.
-                a.button(href="") Speaker Details
-            div.speaker-profile
-              div.session-col
-                div.col-sm-6.dateline.text-right THURSDAY #[div.date APR 3]
-                div.col-sm-6.sessiontype         OPENING #[br] PLENARY
-              div.photo-col
-                img(src="./img/FPO_speaker_130x130.jpg", alt="speaker")
-              div.details-col
-                div.person-name Charles Johnson
-                div.person-title Ph.D., P.E., S.E., CVS, F.ASCE Illuminate Foundry, Inc.
-                a.button(href="") Speaker Details
+            ul.o-List
+              li.o-Flex.c-KeynoteSpeaker
+                div.o-Flex__Item.o-Flex.c-KeynoteSpeaker__Session.c-DateBlock
+                  div.o-Flex__Item.c-DateBlock__Date: time.h-Block(datetime="2014-04-03")
+                    span.h-Block Thursday
+                    span.h-Block.c-DateBlock__MonthDay Apr 3
+                  div.o-Flex__Item.c-DateBlock__Desc Opening Plenary
+                div.o-Flex__Item.c-KeynoteSpeaker__Headshot: img(src="./img/FPO_speaker_130x130.jpg" alt="Charles Johnson")
+                div.o-Flex__Item.c-KeynoteSpeaker__Details
+                  p.c-Chair
+                    span.h-Block.c-Chair__Name Charles Johnson, Ph.D., P.E., S.E., CVS, F.ASCE
+                    span.h-Block.c-Chair__Affiliation Illuminate Foundry, Inc.
+                  p: a(href="#0") Speaker Details
+              li.o-Flex.c-KeynoteSpeaker
+                div.o-Flex__Item.o-Flex.c-KeynoteSpeaker__Session.c-DateBlock
+                  div.o-Flex__Item.c-DateBlock__Date: time.h-Block(datetime="2014-04-03")
+                    span.h-Block Wednesday
+                    span.h-Block.c-DateBlock__MonthDay Apr 12
+                  div.o-Flex__Item.c-DateBlock__Desc Special Session
+                div.o-Flex__Item.c-KeynoteSpeaker__Headshot: img(src="http://www.aei-conference.org/sites/aei-conference.org/files/louise-comfort.jpg" alt="Louise Comfort")
+                div.o-Flex__Item.c-KeynoteSpeaker__Details
+                  p.c-Chair
+                    span.h-Block.c-Chair__Name Dr. Louise K. Comfort, Ph.D.
+                    span.h-Block.c-Chair__Affiliation Director, Center for Disaster Management
+                    span.h-Block.c-Chair__Affiliation University of Pittsburgh
+                  p: a(href="#0") Speaker Details
             h2 Pre-Conference Seminars
             p Sign up to earn additional PDHs at a pre-conference seminar:
             div.session Post Disaster Safety Evaluations
