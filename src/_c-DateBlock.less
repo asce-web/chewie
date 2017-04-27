@@ -15,30 +15,95 @@
 // ^author
 // Chris Harvey
 // ^updated
-// 2017-04-18
+// 2017-04-27
+
+@datewidth: 90px; // FIXME magic number
+
+// ALL supports (regardless of layout)
 .c-DateBlock {
   .font-size-mod(14/16);
   font-weight: 600;
 }
-
-.c-DateBlock__Item {
-  margin-bottom: calc(~'0.5 * var(--vru)');
-}
-
 .c-DateBlock__Date {
-  .flex(0 0 90px); // FIXME magic number
-  margin-right: 0.5rem;
   padding-right: 0.5rem;
   border-right: 1px solid #ccc; // FIXME magic color
   text-align: right;
 }
-
 .c-DateBlock__Desc {
+  padding-left: 0.5rem;
 }
-
 .c-DateBlock__MonthDay {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
   .mx-c-secondary();
+}
+
+
+// legacy support
+.c-DateBlock {
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+.c-DateBlock__Date,
+.c-DateBlock__Desc {
+  float: left;
+  margin-bottom: 0.5 * @g-vru; // HACK fallback
+  margin-bottom: calc(~'0.5 * var(--vru)');
+}
+.c-DateBlock__Date {
+  width: @datewidth;
+}
+.c-DateBlock__Desc {
+  width: calc(~'100% - '@datewidth);
+  min-height: 2 * @g-vru; // HACK fallback
+  min-height: calc(~'2 * var(--vru)');
+}
+
+// feature query support & flexbox support
+@supports (-webkit-flex-wrap: wrap)
+       or (    -ms-flex-wrap: wrap)
+       or (        flex-wrap: wrap) {
+  @import (reference) url('../node_modules/xmeter/src/__fallback.flexbox.less');
+  .c-DateBlock {
+    .flexbox();
+    .flex-wrap(wrap);
+    &::after { content: none; } // unset
+  }
+  .c-DateBlock__Date,
+  .c-DateBlock__Desc {
+    float: none; // unset
+  }
+  .c-DateBlock__Date {
+    width: auto; // unset
+    .flex(0 0 @datewidth);
+  }
+  .c-DateBlock__Desc {
+    width: auto; // unset
+    min-height: 0; // unset
+    .flex(0 0 calc(~'100% - '@datewidth));
+  }
+}
+
+// feature query support & grid support
+@supports (display: -ms-grid)
+       or (display:     grid) {
+  @import (reference) url('../node_modules/xmeter/src/__fallback.grid.less');
+  .c-DateBlock {
+    .grid();
+    .grid-template-columns(@datewidth auto);
+    .grid-row-gap(0.5 * @g-vru); // HACK fallback
+    .grid-row-gap(calc(~'0.5 * var(--vru)'));
+  }
+  .c-DateBlock__Date,
+  .c-DateBlock__Desc {
+    margin-bottom: 0; // unset
+  }
+  .c-DateBlock__Date {
+  }
+  .c-DateBlock__Desc {
+  }
 }
