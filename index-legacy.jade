@@ -130,7 +130,7 @@ html.no-js
                   p.c-Chair
                     span.h-Block.c-Chair__Name Charles Johnson, Ph.D., P.E., S.E., CVS, F.ASCE
                     span.h-Block.c-Chair__Affiliation Illuminate Foundry, Inc.
-                  p: a(href="#0") Speaker Details
+                  p: a.c-Btn(href="#0") Speaker Details
               li.o-Flex.c-KeynoteSpeaker
                 div.o-Flex__Item.c-KeynoteSpeaker__Session.c-DateBlock
                   div.c-DateBlock__Date: time.h-Block(datetime="2014-04-03")
@@ -143,7 +143,7 @@ html.no-js
                     span.h-Block.c-Chair__Name Dr. Louise K. Comfort, Ph.D.
                     span.h-Block.c-Chair__Affiliation Director, Center for Disaster Management
                     span.h-Block.c-Chair__Affiliation University of Pittsburgh
-                  p: a(href="#0") Speaker Details
+                  p: a.c-Btn(href="#0") Speaker Details
             h2 Pre-Conference Seminars
             p Sign up to earn additional PDHs at a pre-conference seminar:
             div.session Post Disaster Safety Evaluations
@@ -155,7 +155,7 @@ html.no-js
               li Dynamic technical sessions - choose from more than 120 sessions
               li The Council of American Structural Engineers (CASE) Spring Risk Management Convocation
               li Networking with more than 1,200 colleagues
-            a.button(href="") View Program
+            p: a.c-Btn(href="") View Program
         div.o-Flex__Item.o-SideCol.-pt-1.-ph-2
             aside.c-Callout
               h1.c-Callout__Hn: img(src=conference.image.sidebar alt="Boston Skyline")
@@ -166,7 +166,10 @@ html.no-js
                   | 1201 Houston Street
                   br
                   | Fort Worth, TX 76102
-                p: a.button(href="") Register Today
+                p: a.c-Btn(href="#0") link
+                p: a.c-Btn link without href
+                p: button.c-Btn button
+                p: button.c-Btn(disabled="") disabled button
                 p Early Bird Rates - Save up to $200!
                 p.
                   $675 - Members #[br]
