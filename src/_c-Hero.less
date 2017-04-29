@@ -30,17 +30,9 @@
   position: relative; // for the fadeout gradients
   padding-left: 2rem;
   padding-right: 2rem;
-  &::before,
-  &::after {
-    // gradients
-    --content: ''; // HACK lack of @supports
-    content: var(--content);
-    position: absolute;
-    left: 0; right: 0;
-  }
 }
 .c-Hero__Hn {
-  color: inherit;
+  // color: inherit; // keeping here if `color` of `h1` is changed
   // text-transform: uppercase;
   .font-size-el(1.125); // FIXME magic number!!!
   @media screen and (min-width: 45em) {
@@ -48,11 +40,6 @@
   }
   @media screen and (min-width: 60em) {
     .font-size-el(2.25; 2); // FIXME magic number!!!
-  }
-  &::before {
-    top: calc(~'-2 * var(--vru)');
-    height: calc(~'2 * var(--vru)');
-    .mx-bc-primary-fade();
   }
 }
 .c-Hero__Blurb {
@@ -63,9 +50,25 @@
   @media not all and (min-width: 45em) {
     .font-size-el(0.875); // FIXME magic number!!!
   }
-  &::after {
+}
+
+// custom property support & linear-gradient syntax support
+@supports (display: var(--var))
+  and (background-image: linear-gradient(to bottom, transparent 0%, #fff 100%)) {
+  .c-Hero__Hn::before,
+  .c-Hero__Blurb::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0;
+  }
+  .c-Hero__Hn::before {
+    top:    calc(~'-2 * var(--vru)');
+    height: calc(~' 2 * var(--vru)');
+    .mx-bc-primary-fade();
+  }
+  .c-Hero__Blurb::after {
     bottom: calc(~'-1 * var(--vru)');
-    height: calc(~'1 * var(--vru)');
+    height: calc(~' 1 * var(--vru)');
     .mx-bc-primary-fade-reverse();
   }
 }
