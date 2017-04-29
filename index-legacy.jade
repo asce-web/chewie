@@ -221,43 +221,41 @@ html.no-js
     div
       aside: div.o-Constrain.-mh-2
         h2 Top Sponsors
-        mixin supporterLogo(name, url, img, size)
-          li.o-List__Item.o-Flex__Item(itemprop="sponsor" itemscope="" itemtype="http://schema.org/Organization")
-            a.c-SupporterBlock__Logo.h-Block(class=`c-SupporterBlock__Logo--${size}` href=url rel="external nofollow" itemprop="url")
-              img.c-SupporterBlock__Logo__Img(src=img alt=name itemprop="logo")
-              meta.c-SupporterBlock__Logo__Name(content=name itemprop="name")
-        section.c-SupporterBlock.c-SupporterBlock--separate
-          h1.c-SupporterBlock__Hn Platinum
-          ul.o-List.o-Flex
-            +supporterLogo('Espon'   , '#0', './img/sponsor_logo_horizontal2.gif', 'lrg')
-            +supporterLogo('Alliance', '#0', './img/sponsor_logo_horizontal1.gif', 'lrg')
-        section.c-SupporterBlock.c-SupporterBlock--separate
-          h1.c-SupporterBlock__Hn Gold
-          ul.o-List.o-Flex
-            +supporterLogo('Ria'     , '#0', './img/Sponsorlogo_square1.gif'     , 'lrg')
-            +supporterLogo('Geico'   , '#0', './img/sponsor_logo_horizontal3.gif', 'lrg')
-            +supporterLogo('Exponent', '#0', './img/sponsor_logo_horizontal4.gif', 'lrg')
-        section.c-SupporterBlock.c-SupporterBlock--separate
-          h1.c-SupporterBlock__Hn Corporate
-          ul.o-List.o-Flex
-            +supporterLogo('Geico'   , '#0', './img/sponsor_logo_horizontal3.gif', 'med')
-            +supporterLogo('Exponent', '#0', './img/sponsor_logo_horizontal4.gif', 'med')
-        section.c-SupporterBlock.c-SupporterBlock--separate
-          h1.c-SupporterBlock__Hn Silver
-          ul.o-List.o-Flex
-            +supporterLogo('Espon'   , '#0', './img/sponsor_logo_horizontal2.gif', 'med')
-            +supporterLogo('Exponent', '#0', './img/sponsor_logo_horizontal4.gif', 'med')
-        section.c-SupporterBlock.c-SupporterBlock--separate
-          h1.c-SupporterBlock__Hn Bronze
-          ul.o-List.o-Flex
-            +supporterLogo('Ria'     , '#0', './img/Sponsorlogo_square1.gif'     , 'sml')
-            +supporterLogo('Geico'   , '#0', './img/sponsor_logo_horizontal3.gif', 'sml')
-        section.c-SupporterBlock.c-SupporterBlock--separate
-          h1.c-SupporterBlock__Hn Copper
-          ul.o-List.o-Flex
-            +supporterLogo('Alliance', '#0', './img/sponsor_logo_horizontal1.gif', 'sml')
-            +supporterLogo('Geico'   , '#0', './img/sponsor_logo_horizontal3.gif', 'sml')
-            +supporterLogo('Exponent', '#0', './img/sponsor_logo_horizontal4.gif', 'sml')
+        mixin supporterBlock(level, size, list)
+          section.c-SupporterBlock&attributes(attributes)
+            h1.c-SupporterBlock__Hn= level
+            ul.o-List.o-Flex.c-SupporterBlock__List(class=`c-SupporterBlock__List--${size}`)
+              each item in list
+                li.o-List__Item.o-Flex__Item.c-SupporterBlock__List__Item(itemprop="sponsor" itemscope="" itemtype="http://schema.org/Organization")
+                  a(href=item.url rel="external nofollow" itemprop="url")
+                    img.c-SupporterBlock__Logo(src=item.img alt=item.name itemprop="logo")
+                    meta(content=item.name itemprop="name")
+        +supporterBlock('Platinum', 'lrg', [
+          { name: 'Espon'   , url: '#0', img: './img/sponsor_logo_horizontal2.gif' }
+        , { name: 'Alliance', url: '#0', img: './img/sponsor_logo_horizontal1.gif' }
+        ]).c-SupporterBlock--separate
+        +supporterBlock('Gold', 'lrg', [
+          { name: 'Ria'     , url: '#0', img: './img/Sponsorlogo_square1.gif'      }
+        , { name: 'Geico'   , url: '#0', img: './img/sponsor_logo_horizontal3.gif' }
+        , { name: 'Exponent', url: '#0', img: './img/sponsor_logo_horizontal4.gif' }
+        ]).c-SupporterBlock--separate
+        +supporterBlock('Corporate', 'med', [
+          { name: 'Geico'   , url: '#0', img: './img/sponsor_logo_horizontal3.gif' }
+        , { name: 'Exponent', url: '#0', img: './img/sponsor_logo_horizontal4.gif' }
+        ]).c-SupporterBlock--separate
+        +supporterBlock('Silver', 'med', [
+          { name: 'Exponent', url: '#0', img: './img/sponsor_logo_horizontal4.gif' }
+        , { name: 'Espon'   , url: '#0', img: './img/sponsor_logo_horizontal2.gif' }
+        ]).c-SupporterBlock--separate
+        +supporterBlock('Bronze', 'sml', [
+          { name: 'Ria'     , url: '#0', img: './img/Sponsorlogo_square1.gif'      }
+        , { name: 'Geico'   , url: '#0', img: './img/sponsor_logo_horizontal3.gif' }
+        ]).c-SupporterBlock--separate
+        +supporterBlock('Copper', 'sml', [
+          { name: 'Alliance', url: '#0', img: './img/sponsor_logo_horizontal1.gif' }
+        , { name: 'Geico'   , url: '#0', img: './img/sponsor_logo_horizontal3.gif' }
+        , { name: 'Exponent', url: '#0', img: './img/sponsor_logo_horizontal4.gif' }
+        ])
       aside.c-Mast.c-Mast--coop.coop-orgs-block
         div.o-Constrain
           h2 COOPERATING ORGANIZATIONS
