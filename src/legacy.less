@@ -122,3 +122,12 @@
 @import (less) url('_themes.less');
 @import (less) url('_t-Content.less');
 @import (less) url('_h-Spaced.less');
+
+body > a:last-of-type {
+  position: fixed;
+  bottom: var(--vru);
+  right: 999999px;
+  &:focus {
+    right: 1rem;
+  }
+}

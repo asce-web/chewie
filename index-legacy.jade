@@ -31,7 +31,7 @@ html.no-js
     link(rel="stylesheet" href="src/legacy.css")
     //- script(src="//use.typekit.net/imj1jdn.js")
     //- script try{Typekit.load();}catch(e){}
-  body(class=conference.classname)
+  body(class=conference.classname)#top
     a.h-Hidden(href="#main") skip to main content
     header
       nav.o-Flex.o-MobileBar
@@ -365,10 +365,10 @@ html.no-js
                     p: a.c-LinkArrow(href="") Exhibit
     footer
       div.c-Mast.c-Mast--copyright
-        p.-mb-z-sM.-ta-c
+        p.-mb-z.-ta-c
           i.c-AsceLogo(role="none")
           a(href="http://www.asce.org/" rel="external") &copy; 1996&ndash;2015, American Society of Civil Engineers | ASCE.org
-        p.h-Hidden-sM.-mb-z.-ta-r: a(href="#top") jump to top
+    a(href="#top") jump to top
     script(src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js")
     script.
       window.jQuery || document.write('<script src="./js/vendor/jquery-1.11.0.min.js"><\/script>')
