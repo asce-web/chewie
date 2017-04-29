@@ -24,8 +24,9 @@
 //     but now works when flex-direction = column
 //     (cannot use `flex` to set width if flex-direction=column)
 //
-//--siteLogo - container for the site logo
-//--siteTitles - container for `.c-ConferenceTitles` component
+//--siteLogo      - container for the site logo
+//--siteTitles    - container for `.c-ConferenceTitles` component
+//--footerContent - container for content in footer
 // ^author
 // : Chris Harvey
 // ^updated
@@ -42,6 +43,18 @@
   @media screen and (min-width: 45em) {
     margin-right: 8rem; // HACK fallback // maximum possible --year-badge-width
     margin-right: calc(~'0.5 * var(--year-badge-width)');
+  }
+}
+.o-Flex__Item--footerContent {
+  margin: 0 1rem;
+  #panel-current & {
+    // copied from `.o-Flex`
+    .flexbox();
+    .flex-justify-content(space-between);
+    & > * {
+      // copied from `.o-Flex__Item`
+      .flex(auto);
+    }
   }
 }
 

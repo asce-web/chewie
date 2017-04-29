@@ -307,45 +307,55 @@ html.no-js
             div.o-Flex
               div.o-Flex__Item.o-Flex__Item--siteLogo
                 img.c-ConfLogo(src=conference.image.shield alt="EWRI Institute Shield" role="none")
-              div.o-Flex__Item
+              div.o-Flex__Item.o-Flex__Item--footerContent
                 block
         +yearTab(2014, {name:'Sample ASCE Conference 2014'}, 'current')
-                  div.col-sm-4.hidden-xs
-                    div.link-block
-                      a.large.uppercase(href="./") Home
-                    div.link-block
-                      a.large.uppercase(href="") Program
-                      a(href="") Speakers
-                      a(href="") Exhibitor List
-                      a(href="") ASCE Communities &amp; Pavilions
-                    div.link-block
-                      a.large.uppercase(href="") Location
-                      a(href="") Lodging &amp; Transportation
-                      a(href="") For International Travel
-                    div.link-block
-                      a.large.uppercase(href="") About
-                      a(href="") Cooperating Organizations
-                      a(href="") Volunteer
-                  div.col-sm-4.col3.hidden-xs
-                    a.large(href="") Why Attend
-                    a.large(href="") Registration
-                    a.large(href="") For Speakers
-                    a.large(href="./sponsors.html") Sponsors
-                    a.large(href="") Exhibitors
-                  div.pull-left.col-xs-2.visible-xs &nbsp;
-                  div.col-sm-4.col-xs-10.col4
-                    div.link-block.contact
-                      h3 Contact Us
-                      a.large(href="") #[span.ic.mobile-phone] (800) 548-2723
-                      a.large(href="") #[span.ic.twitter] #structures2014
-                      a.large(href="") #[span.ic.contact-large] Other contacts
-                    div.link-block.connect
-                      h3 Connect With ASCE
-                      a(href=""): span.ic.linkedin
-                      a(href=""): span.ic.facebook
-                      a(href=""): span.ic.twitter
-                      a(href=""): span.ic.youtube
-                      a(href=""): span.ic.google
+          nav.c-Sitemap.-d-n-nM
+            h3.h-Hidden Sitemap (part 1 of 2)
+            ul.o-List(role="directory")
+              li.o-List__Item.c-Sitemap__TopItem
+                a.c-Sitemap__TopItem__Link(href="./") Home
+              li.o-List__Item.c-Sitemap__TopItem
+                a.c-Sitemap__TopItem__Link(href="") Program
+                ul.o-List.c-Sitemap__TopItem__List
+                  li.o-List__Item: a(href="") Speakers
+                  li.o-List__Item: a(href="") Exhibitor List
+                  li.o-List__Item: a(href="") ASCE Communities &amp; Pavilions
+              li.o-List__Item.c-Sitemap__TopItem
+                a.c-Sitemap__TopItem__Link(href="") Location
+                ul.o-List.c-Sitemap__TopItem__List
+                  li.o-List__Item: a(href="") Lodging &amp; Transportation
+                  li.o-List__Item: a(href="") For International Travel
+              li.o-List__Item.c-Sitemap__TopItem
+                a.c-Sitemap__TopItem__Link(href="") About
+                ul.o-List.c-Sitemap__TopItem__List
+                  li.o-List__Item: a(href="") Cooperating Organizations
+                  li.o-List__Item: a(href="") Volunteer
+              li.o-List__Item.c-Sitemap__TopItem
+                a.c-Sitemap__TopItem__Link(href="") Contact
+          nav.c-Sitemap.-d-n-nM
+            h3.h-Hidden Sitemap (part 2 of 2)
+            ul.o-List(role="directory")
+              li.o-List__Item.c-Sitemap__TopItem: a.c-Sitemap__TopItem__Link(href="") Why Attend
+              li.o-List__Item.c-Sitemap__TopItem: a.c-Sitemap__TopItem__Link(href="") Registration
+              li.o-List__Item.c-Sitemap__TopItem: a.c-Sitemap__TopItem__Link(href="") For Speakers
+              li.o-List__Item.c-Sitemap__TopItem: a.c-Sitemap__TopItem__Link(href="./sponsors.html") Sponsors
+              li.o-List__Item.c-Sitemap__TopItem: a.c-Sitemap__TopItem__Link(href="") Exhibitors
+          div
+            nav
+              h3 Contact Us
+              ul
+                li: a(href="#0") #[span.ic.mobile-phone] (800) 548-2723
+                li: a(href="#0") #[span.ic.twitter] #structures2014
+                li: a(href="#0") #[span.ic.contact-large] Other contacts
+            nav
+              h3 Connect With ASCE
+              ul
+                li: a(href="#0" aria-label="linkedin"): span.ic.linkedin
+                li: a(href="#0" aria-label="facebook"): span.ic.facebook
+                li: a(href="#0" aria-label="twitter" ): span.ic.twitter
+                li: a(href="#0" aria-label="youtube" ): span.ic.youtube
+                li: a(href="#0" aria-label="google"  ): span.ic.google
         +yearTab(2013, {name:'Sample ASCE Conference 2013', tagline:'Lorem Ipsum Optional Tagline for the Conference Goes Here', detail:'Toronto, Canada | May 2–4, 2013'}, 'prev')
                     p: a.c-LinkArrow(href="") Program
                     p: a.c-LinkArrow(href="") Proceedings
