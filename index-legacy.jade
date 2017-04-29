@@ -222,7 +222,7 @@ html.no-js
       aside: div.o-Constrain.-mh-2
         h2 Top Sponsors
         mixin supporterBlock(level, size, list)
-          section.c-SupporterBlock&attributes(attributes)
+          section.c-SupporterBlock
             h1.c-SupporterBlock__Hn= level
             ul.o-List.o-Flex.c-SupporterBlock__List(class=`c-SupporterBlock__List--${size}`)
               each item in list
@@ -233,24 +233,24 @@ html.no-js
         +supporterBlock('Platinum', 'lrg', [
           { name: 'Espon'   , url: '#0', img: './img/sponsor_logo_horizontal2.gif' }
         , { name: 'Alliance', url: '#0', img: './img/sponsor_logo_horizontal1.gif' }
-        ]).c-SupporterBlock--separate
+        ])
         +supporterBlock('Gold', 'lrg', [
           { name: 'Ria'     , url: '#0', img: './img/Sponsorlogo_square1.gif'      }
         , { name: 'Geico'   , url: '#0', img: './img/sponsor_logo_horizontal3.gif' }
         , { name: 'Exponent', url: '#0', img: './img/sponsor_logo_horizontal4.gif' }
-        ]).c-SupporterBlock--separate
+        ])
         +supporterBlock('Corporate', 'med', [
           { name: 'Geico'   , url: '#0', img: './img/sponsor_logo_horizontal3.gif' }
         , { name: 'Exponent', url: '#0', img: './img/sponsor_logo_horizontal4.gif' }
-        ]).c-SupporterBlock--separate
+        ])
         +supporterBlock('Silver', 'med', [
           { name: 'Exponent', url: '#0', img: './img/sponsor_logo_horizontal4.gif' }
         , { name: 'Espon'   , url: '#0', img: './img/sponsor_logo_horizontal2.gif' }
-        ]).c-SupporterBlock--separate
+        ])
         +supporterBlock('Bronze', 'sml', [
           { name: 'Ria'     , url: '#0', img: './img/Sponsorlogo_square1.gif'      }
         , { name: 'Geico'   , url: '#0', img: './img/sponsor_logo_horizontal3.gif' }
-        ]).c-SupporterBlock--separate
+        ])
         +supporterBlock('Copper', 'sml', [
           { name: 'Alliance', url: '#0', img: './img/sponsor_logo_horizontal1.gif' }
         , { name: 'Geico'   , url: '#0', img: './img/sponsor_logo_horizontal3.gif' }

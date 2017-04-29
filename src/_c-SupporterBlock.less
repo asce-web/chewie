@@ -31,21 +31,25 @@
 // 2017-04-28
 .c-SupporterBlock {
   text-align: center;
-}
-.c-SupporterBlock--separate {
-  .border-vert(bottom; 1px);
-  border-style: solid;
-  border-color: @g-color-sponsor-coop_bg;
+  margin-bottom: 2 * @g-vru; // HACK fallback
+  margin-bottom: ~'calc(2 * var(--vru))';
 }
 
 .c-SupporterBlock__Hn {
-  .font-size-el(@g-font_size_h2);
-  font-family: inherit;
-  margin-bottom: 2 * @g-vru; // HACK fallback
-  margin-bottom: ~'calc(2 * var(--vru))';
-  padding-top: 2 * @g-vru; // HACK fallback
-  padding-top: ~'calc(2 * var(--vru))';
-  .mx-c-primary();
+  .flexbox(); // for viz line. see ::before, ::after
+  .align-items(center);
+  .font-size-el(@g-font_size_kilo);
+  font-family: inherit; // keeping here if `ff` of `h1` is changed
+  font-weight: 900;
+  color: inherit; // keeping here if `color` of `h1` is changed
+  &::before,
+  &::after {
+    content: '';
+    .flex(1);
+    border: 1px solid @g-color-sponsor-coop_bg;
+  }
+  &::before { margin-right: 1rem; }
+  &::after  { margin-left : 1rem; }
 }
 
 .c-SupporterBlock__List__Item {
