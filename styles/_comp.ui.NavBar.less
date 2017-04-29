@@ -2,7 +2,7 @@
 /*################################*\
     chewie  |  _comp.ui.NavBar.less
 \*################################*/
-@import url('../node_modules/xmeter/src/__tool.fallback.transition.less');
+@import (reference) url('../node_modules/xmeter/src/__fallback.transition.less');
 
 // Any navigation bar.
 // This class should be extended by specific types of bars,
@@ -39,6 +39,7 @@
 // ^updated
 // : 2015-09-10
 .c-NavBar__Link,
+.c-NavBar--contrib a,
 .navigation a,
 .nav3 a,
 .tab-button,
@@ -46,7 +47,7 @@
   display: inline-block;
   padding: 17px 24px;
   line-height: 20px; // FIXME due to chevron icons in main nav causing bloated height
-  #XMETER .transition(padding, background-color; 250ms);
+  .transitions(padding, background-color; 250ms);
   @media (max-width: 1199px) {
     padding: 12px 12px;
   }
@@ -216,7 +217,7 @@
         position: absolute;
         top: 44px; // same as -margin-top for tab-buttons group
         left: 33%;
-        #XMETER .transition(border-width; 500ms);
+        .transition(border-width 500ms);
         @media screen and (min-width: 1200px) {
           top: 54px; // same as -margin-top for tab-buttons group
           border-width: 15px;
@@ -270,7 +271,7 @@
       position: absolute;
       top: 44px; // same as -margin-top for tab-buttons group
       left: 33%;
-      #XMETER .transition(border-width; 500ms);
+      .transition(border-width 500ms);
       @media screen and (min-width: 1200px) {
         top: 54px; // same as -margin-top for tab-buttons group
         border-width: 15px;
