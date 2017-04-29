@@ -13,6 +13,18 @@
   }
 }
 
+// sizing variables (copied from `html` custom props)
+@p-supporter-logo-lrg-s-width : 120px; @p-supporter-logo-lrg-s-height : 65px ;
+@p-supporter-logo-med-s-width : 90px ; @p-supporter-logo-med-s-height : 48px ;
+@p-supporter-logo-sml-s-width : 68px ; @p-supporter-logo-sml-s-height : 36px ;
+@p-supporter-logo-lrg-sK-width: 250px; @p-supporter-logo-lrg-sK-height: 110px;
+@p-supporter-logo-med-sK-width: 188px; @p-supporter-logo-med-sK-height: 82px ;
+@p-supporter-logo-sml-sK-width: 140px; @p-supporter-logo-sml-sK-height: 62px ;
+@p-supporter-logo-lrg-sG-width: 360px; @p-supporter-logo-lrg-sG-height: 160px;
+@p-supporter-logo-med-sG-width: 270px; @p-supporter-logo-med-sG-height: 120px;
+@p-supporter-logo-sml-sG-width: 202px; @p-supporter-logo-sml-sG-height: 90px ;
+
+
 // A section containing one level of sponsor.
 //
 // ^subclasses
@@ -69,32 +81,43 @@
   .flex-wrap(wrap);
   .justify-content(center);
   .align-items(center);
+  &.c-SupporterBlock__List { // specificity HACK
+    .p-dimensions(var(--supporter-logo-width), var(--supporter-logo-height));
+  }
 }
-
 .c-SupporterBlock__List--lrg {
-  .p-dimensions(120px; 65px);
+  --supporter-logo-width : var(--supporter-logo-lrg-width );
+  --supporter-logo-height: var(--supporter-logo-lrg-height);
+  // HACK fallbacks below:
+  .p-dimensions(@p-supporter-logo-lrg-s-width; @p-supporter-logo-lrg-s-height);
   @media screen and (min-width: 30em) {
-    .p-dimensions(250px; 110px);
+    .p-dimensions(@p-supporter-logo-lrg-sK-width; @p-supporter-logo-lrg-sK-height);
   }
   @media screen and (min-width: 60em) {
-    .p-dimensions(360px; 160px);
+    .p-dimensions(@p-supporter-logo-lrg-sG-width; @p-supporter-logo-lrg-sG-height);
   }
 }
 .c-SupporterBlock__List--med {
-  .p-dimensions(90px; 48px);
+  --supporter-logo-width : var(--supporter-logo-med-width );
+  --supporter-logo-height: var(--supporter-logo-med-height);
+  // HACK fallbacks below:
+  .p-dimensions(@p-supporter-logo-med-s-width; @p-supporter-logo-med-s-height);
   @media screen and (min-width: 30em) {
-    .p-dimensions(188px; 82px);
+    .p-dimensions(@p-supporter-logo-med-sK-width; @p-supporter-logo-med-sK-height);
   }
   @media screen and (min-width: 60em) {
-    .p-dimensions(270px; 120px);
+    .p-dimensions(@p-supporter-logo-med-sG-width; @p-supporter-logo-med-sG-height);
   }
 }
 .c-SupporterBlock__List--sml {
-  .p-dimensions(68px; 36px);
+  --supporter-logo-width : var(--supporter-logo-sml-width );
+  --supporter-logo-height: var(--supporter-logo-sml-height);
+  // HACK fallbacks below:
+  .p-dimensions(@p-supporter-logo-sml-s-width; @p-supporter-logo-sml-s-height);
   @media screen and (min-width: 30em) {
-    .p-dimensions(140px; 62px);
+    .p-dimensions(@p-supporter-logo-sml-sK-width; @p-supporter-logo-sml-sK-height);
   }
   @media screen and (min-width: 60em) {
-    .p-dimensions(202px; 90px);
+    .p-dimensions(@p-supporter-logo-sml-sG-width; @p-supporter-logo-sml-sG-height);
   }
 }
