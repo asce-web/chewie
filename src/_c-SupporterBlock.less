@@ -55,15 +55,20 @@
   .font-size-el(@g-font_size_kilo);
   font-family: inherit; // keeping here if `ff` of `h1` is changed
   font-weight: 900;
-  color: inherit; // keeping here if `color` of `h1` is changed
+  color: @g-color-body-txt;
   &::before,
   &::after {
     content: '';
     .flex(1);
     border: 1px solid @g-color-sponsor-coop_bg;
+    margin: 0 1rem;
   }
-  &::before { margin-right: 1rem; }
-  &::after  { margin-left : 1rem; }
+  .c-Mast--coop & {
+    &::before,
+    &::after {
+      border-color: currentColor;
+    }
+  }
 }
 
 .c-SupporterBlock__List__Item {
@@ -82,6 +87,9 @@
   .flex-wrap(wrap);
   .justify-content(center);
   .align-items(center);
+  .c-Mast--coop & {
+    .justify-content(space-around);
+  }
 }
 
 .c-SupporterBlock--lrg {

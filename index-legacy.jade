@@ -105,7 +105,7 @@ html.no-js
           ul.o-List.o-Flex.c-NavBar.c-NavBar--sub#aboutlevel2
             li: a(href="") Cooperating Organizations
             li: a(href="") Volunteer
-    main.o-Flex.o-Constrain.-xd-c-nM#main
+    main.o-Flex.o-Constrain.-xd-c-nM.-mb-2#main
         div.o-Flex__Item.o-MainCol
           header.c-Hero
             img.c-Hero__Img(src=conference.image.hero alt="unsaturated soil&mdash;dry cracked earth")
@@ -218,7 +218,7 @@ html.no-js
                 a(href="")            #[span.ic.twitter-large] #structures2014
                 a.pull-right(href="") #[span.ic.facebook-large]
                 a.pull-right(href="") #[span.ic.google-large]
-    div
+    div.-mb-2
       aside: div.o-Constrain.-mh-2
         h2 Top Sponsors
         mixin supporterBlock(level, size, list)
@@ -256,16 +256,26 @@ html.no-js
         , { name: 'Geico'   , url: '#0', img: './img/sponsor_logo_horizontal3.gif' }
         , { name: 'Exponent', url: '#0', img: './img/sponsor_logo_horizontal4.gif' }
         ])
-      aside.c-Mast.c-Mast--coop.coop-orgs-block
-        div.o-Constrain
-          h2 COOPERATING ORGANIZATIONS
-          img.c-SupporterLogo(src="./img/cooplogo_square1.gif"     , alt="")
-          img.c-SupporterLogo(src="./img/cooplogo_horizontal1.gif" , alt="")
-          img.c-SupporterLogo(src="./img/cooplogo_horizontal2.gif" , alt="")
-          img.c-SupporterLogo(src="./img/cooplogo_horizontal3.gif" , alt="")
-          img.c-SupporterLogo(src="./img/cooplogo_square4.gif"     , alt="")
-          img.c-SupporterLogo(src="./img/cooplogo_horizontal4.gif" , alt="")
-          img.c-SupporterLogo(src="./img/cooplogo_square2.gif"     , alt="")
+      aside.c-Mast.c-Mast--coop: div.o-Constrain.-mh-2
+        h2.h-Hidden Top Supporters
+        +supporterBlock('Cooperating Organizations', 'sml', [
+          { name: 'AISC'    , url: '#0', img: './img/cooplogo_square1.gif'     }
+        , { name: 'Correios', url: '#0', img: './img/cooplogo_horizontal1.gif' }
+        , { name: 'T&DI'    , url: '#0', img: './img/cooplogo_horizontal2.gif' }
+        , { name: 'Jacobs'  , url: '#0', img: './img/cooplogo_horizontal3.gif' }
+        , { name: 'CI'      , url: '#0', img: './img/cooplogo_square4.gif'     }
+        , { name: 'EWRI'    , url: '#0', img: './img/cooplogo_horizontal4.gif' }
+        , { name: 'ASCE — Boston Section', url: '#0', img: './img/cooplogo_square2.gif' }
+        ])
+        +supporterBlock('Educational Grant', 'sml', [
+          { name: 'AISC'    , url: '#0', img: './img/cooplogo_square1.gif'     }
+        , { name: 'Correios', url: '#0', img: './img/cooplogo_horizontal1.gif' }
+        , { name: 'T&DI'    , url: '#0', img: './img/cooplogo_horizontal2.gif' }
+        , { name: 'Jacobs'  , url: '#0', img: './img/cooplogo_horizontal3.gif' }
+        , { name: 'CI'      , url: '#0', img: './img/cooplogo_square4.gif'     }
+        , { name: 'EWRI'    , url: '#0', img: './img/cooplogo_horizontal4.gif' }
+        , { name: 'ASCE — Boston Section', url: '#0', img: './img/cooplogo_square2.gif' }
+        ])
     footer
       dl.o-Flex.o-Tabs
         //- NOTE: 'current' displayed first for accessibility
