@@ -222,9 +222,9 @@ html.no-js
       aside: div.o-Constrain.-mh-2
         h2 Top Sponsors
         mixin supporterBlock(level, size, list)
-          section.c-SupporterBlock
+          section.c-SupporterBlock(class=`c-SupporterBlock--${size}`)
             h1.c-SupporterBlock__Hn= level
-            ul.o-List.o-Flex.c-SupporterBlock__List(class=`c-SupporterBlock__List--${size}`)
+            ul.o-List.o-Flex.c-SupporterBlock__List
               each item in list
                 li.o-List__Item.o-Flex__Item.c-SupporterBlock__List__Item(itemprop="sponsor" itemscope="" itemtype="http://schema.org/Organization")
                   a(href=item.url rel="external nofollow" itemprop="url")

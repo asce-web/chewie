@@ -28,13 +28,12 @@
 // A section containing one level of sponsor.
 //
 // ^subclasses
-// --separate - visually separates this block from a subsequent one
+// --sml - contains small logos
+// --med - contains medium logos
+// --lrg - contains large logos
 // ^subcomponents
 // __Hn       - name of sponsor level ("Platinum", etc.)
 // __List     - structural styles of list of logos
-//   --sml      - list of small logos
-//   --med      - list of medium logos
-//   --lrg      - list of large logos
 //   __Item     - structural styles of list item with link and logo
 // __Logo     - <img> element of logo. cosmetic styles
 // ^author
@@ -45,6 +44,9 @@
   text-align: center;
   margin-bottom: 2 * @g-vru; // HACK fallback
   margin-bottom: ~'calc(2 * var(--vru))';
+  &.c-SupporterBlock { // specificity HACK
+    .p-dimensions(var(--supporter-logo-width), var(--supporter-logo-height));
+  }
 }
 
 .c-SupporterBlock__Hn {
@@ -65,7 +67,8 @@
 }
 
 .c-SupporterBlock__List__Item {
-  margin: 0 1rem;
+  margin: 0 1rem @g-vru; // HACK fallback
+  margin: 0 1rem var(--vru);
 }
 
 .c-SupporterBlock__Logo {
@@ -75,17 +78,13 @@
   }
 }
 
-
-// flexbox support
 .c-SupporterBlock__List {
   .flex-wrap(wrap);
   .justify-content(center);
   .align-items(center);
-  &.c-SupporterBlock__List { // specificity HACK
-    .p-dimensions(var(--supporter-logo-width), var(--supporter-logo-height));
-  }
 }
-.c-SupporterBlock__List--lrg {
+
+.c-SupporterBlock--lrg {
   --supporter-logo-width : var(--supporter-logo-lrg-width );
   --supporter-logo-height: var(--supporter-logo-lrg-height);
   // HACK fallbacks below:
@@ -97,7 +96,7 @@
     .p-dimensions(@p-supporter-logo-lrg-sG-width; @p-supporter-logo-lrg-sG-height);
   }
 }
-.c-SupporterBlock__List--med {
+.c-SupporterBlock--med {
   --supporter-logo-width : var(--supporter-logo-med-width );
   --supporter-logo-height: var(--supporter-logo-med-height);
   // HACK fallbacks below:
@@ -109,7 +108,7 @@
     .p-dimensions(@p-supporter-logo-med-sG-width; @p-supporter-logo-med-sG-height);
   }
 }
-.c-SupporterBlock__List--sml {
+.c-SupporterBlock--sml {
   --supporter-logo-width : var(--supporter-logo-sml-width );
   --supporter-logo-height: var(--supporter-logo-sml-height);
   // HACK fallbacks below:
