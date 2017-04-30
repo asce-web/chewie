@@ -329,10 +329,10 @@ html.no-js
             div.o-Flex
               div.o-Flex__Item.o-Flex__Item--siteLogo
                 img.c-ConfLogo(src=conference.image.shield alt="EWRI Institute Shield" role="none")
-              div.o-Flex__Item.o-Flex__Item--footerContent.-xd-c-nM
+              div.o-Flex__Item(class={'o-Flex o-Flex--siteFoot':which==='current'})
                 block
         +yearTab(2014, {name:'Sample ASCE Conference 2014'}, 'current')
-          nav.c-Sitemap#sitemap
+          nav.o-Flex__Item.c-Sitemap#sitemap
             h3.h-Hidden Sitemap (part 1 of 2)
             ul.o-List(role="directory")
               li.o-List__Item.c-Sitemap__TopItem
@@ -355,7 +355,7 @@ html.no-js
                   li.o-List__Item: a(href="") Volunteer
               li.o-List__Item.c-Sitemap__TopItem
                 a.c-Sitemap__TopItem__Link(href="") Contact
-          nav.c-Sitemap
+          nav.o-Flex__Item.c-Sitemap
             h3.h-Hidden Sitemap (part 2 of 2)
             ul.o-List(role="directory")
               li.o-List__Item.c-Sitemap__TopItem: a.c-Sitemap__TopItem__Link(href="") Why Attend
@@ -363,7 +363,7 @@ html.no-js
               li.o-List__Item.c-Sitemap__TopItem: a.c-Sitemap__TopItem__Link(href="") For Speakers
               li.o-List__Item.c-Sitemap__TopItem: a.c-Sitemap__TopItem__Link(href="./sponsors.html") Sponsors
               li.o-List__Item.c-Sitemap__TopItem: a.c-Sitemap__TopItem__Link(href="") Exhibitors
-          div
+          div.o-Flex__Item
             nav
               h3 Contact Us
               ul.o-List.-fz-el-kil
