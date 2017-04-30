@@ -39,7 +39,8 @@ html.no-js
     a.h-Hidden(href="#main") skip to main content
     header
       nav.o-Flex.o-MobileBar
-        a.o-Flex__Item.o-MobileBar__Item(href="./"): i.glyphicons.glyphicons-home: span.h-Hidden Home
+        a.o-Flex__Item.o-MobileBar__Item.-lh-z(href="./")
+          i.glyphicons.glyphicons-home: span.h-Hidden Home
         label.o-Flex__Item.o-MobileBar__Item.c-Toggle(aria-label="toggle main menu")
           input.c-Toggle__Check.h-Hidden(type="checkbox" value="main menu is open" role="switch")
           i.c-Toggle__Viz.glyphicons.glyphicons-menu-hamburger(role="none")
@@ -88,7 +89,8 @@ html.no-js
         div.o-Flex.o-Constrain
           div.o-Flex__Item.o-Flex.o-MainCol.c-NavBar.c-NavBar--main
             //- change div to ul.o-List later
-            a(href="./"): i.glyphicons.glyphicons-home: span.h-Hidden Home
+            a(href="./"): i.glyphicons.glyphicons-home
+              span.h-Hidden Home
             a(href="", data-menu-target="#programlevel2")
               | Program
               i.glyphicons.-fz-norm.glyphicons-chevron-down
@@ -100,7 +102,6 @@ html.no-js
               i.glyphicons.-fz-norm.glyphicons-chevron-down
             a(href="", data-menu-target="#contactlevel2")
               | Contact
-              i.glyphicons.-fz-norm.glyphicons-chevron-down
           div.o-Flex__Item.o-Flex.o-SideCol.c-NavBar.c-NavBar--register
             //- change div to ul.o-List later
             a(href="") Why Attend
@@ -357,32 +358,32 @@ html.no-js
             nav
               h3 Contact Us
               ul.o-List.-fz-el-kil
-                li.o-List__Item: a(href="#0")
-                  i.glyphicons.glyphicons-earphone.-fz-kilo.-va-c(role="none")
+                li.o-List__Item.-mb-1: a(href="#0")
+                  i.glyphicons.-mr-1.glyphicons-earphone(role="none")
                   | (800) 548-2723
-                li.o-List__Item: a(href="#0")
-                  i.glyphicons.social.social-twitter.-fz-kilo.-va-c(role="none")
+                li.o-List__Item.-mb-1: a(href="#0")
+                  i.glyphicons.-mr-1.social.social-twitter(role="none")
                   | #structures2014
-                li.o-List__Item: a(href="#0")
-                  i.glyphicons.glyphicons-envelope.-fz-kilo.-va-c(role="none")
+                li.o-List__Item.-mb-1: a(href="#0")
+                  i.glyphicons.-mr-1.glyphicons-envelope(role="none")
                   | Other contacts
             nav
               h3 Connect With ASCE
               ul.o-List.o-Flex.-xjc-xs.-jc-xs.-jc-s
-                li.o-List__Item.o-Flex__Item.-x-z: a(href="#0")
-                  i.glyphicons.social.-fz-kilo.social-linked-in
+                li.o-List__Item.o-Flex__Item.-x-z.-mr-1: a(href="#0")
+                  i.glyphicons.social.social-linked-in
                     span.h-Hidden linkedin
-                li.o-List__Item.o-Flex__Item.-x-z: a(href="#0")
-                  i.glyphicons.social.-fz-kilo.social-facebook
+                li.o-List__Item.o-Flex__Item.-x-z.-mr-1: a(href="#0")
+                  i.glyphicons.social.social-facebook
                     span.h-Hidden facebook
-                li.o-List__Item.o-Flex__Item.-x-z: a(href="#0")
-                  i.glyphicons.social.-fz-kilo.social-twitter
+                li.o-List__Item.o-Flex__Item.-x-z.-mr-1: a(href="#0")
+                  i.glyphicons.social.social-twitter
                     span.h-Hidden twitter
-                li.o-List__Item.o-Flex__Item.-x-z: a(href="#0")
-                  i.glyphicons.social.-fz-kilo.social-youtube
+                li.o-List__Item.o-Flex__Item.-x-z.-mr-1: a(href="#0")
+                  i.glyphicons.social.social-youtube
                     span.h-Hidden youtube
-                li.o-List__Item.o-Flex__Item.-x-z: a(href="#0")
-                  i.glyphicons.social.-fz-kilo.social-google-plus
+                li.o-List__Item.o-Flex__Item.-x-z.-mr-1: a(href="#0")
+                  i.glyphicons.social.social-google-plus
                     span.h-Hidden google plus
         +yearTab(2013, {name:'Sample ASCE Conference 2013', tagline:'Lorem Ipsum Optional Tagline for the Conference Goes Here', detail:'Toronto, Canada | May 2–4, 2013'}, 'prev')
                     p: a.c-LinkArrow(href="") Program
@@ -414,5 +415,5 @@ html.no-js
           if ($(this).attr('tabindex') === '0') $(this).attr('tabindex', -1)
           else $(this).attr('tabindex', 0)
         })
-        $(this).siblings('.c-Toggle__Viz').toggleClass('glyphicons-menu-hamburger glyphicons-remove-circle -ps-f -r-z')
+        $(this).siblings('.c-Toggle__Viz').toggleClass('glyphicons-menu-hamburger glyphicons-remove-circle -ps-f -r-1')
       })
