@@ -348,18 +348,34 @@ html.no-js
           div
             nav
               h3 Contact Us
-              ul
-                li: a(href="#0") #[span.ic.mobile-phone] (800) 548-2723
-                li: a(href="#0") #[span.ic.twitter] #structures2014
-                li: a(href="#0") #[span.ic.contact-large] Other contacts
+              ul.o-List.-fz-el-kil
+                li.o-List__Item: a(href="#0")
+                  i.glyphicons.glyphicons-earphone.-fz-kilo.-va-c(role="none")
+                  | (800) 548-2723
+                li.o-List__Item: a(href="#0")
+                  i.glyphicons.social.social-twitter.-fz-kilo.-va-c(role="none")
+                  | #structures2014
+                li.o-List__Item: a(href="#0")
+                  i.glyphicons.glyphicons-envelope.-fz-kilo.-va-c(role="none")
+                  | Other contacts
             nav
               h3 Connect With ASCE
-              ul
-                li: a(href="#0" aria-label="linkedin"): span.ic.linkedin
-                li: a(href="#0" aria-label="facebook"): span.ic.facebook
-                li: a(href="#0" aria-label="twitter" ): span.ic.twitter
-                li: a(href="#0" aria-label="youtube" ): span.ic.youtube
-                li: a(href="#0" aria-label="google"  ): span.ic.google
+              ul.o-List.o-Flex.-xjc-xs.-jc-xs.-jc-s
+                li.o-List__Item.o-Flex__Item.-x-z: a(href="#0")
+                  i.glyphicons.social.-fz-kilo.social-linked-in
+                    span.h-Hidden linkedin
+                li.o-List__Item.o-Flex__Item.-x-z: a(href="#0")
+                  i.glyphicons.social.-fz-kilo.social-facebook
+                    span.h-Hidden facebook
+                li.o-List__Item.o-Flex__Item.-x-z: a(href="#0")
+                  i.glyphicons.social.-fz-kilo.social-twitter
+                    span.h-Hidden twitter
+                li.o-List__Item.o-Flex__Item.-x-z: a(href="#0")
+                  i.glyphicons.social.-fz-kilo.social-youtube
+                    span.h-Hidden youtube
+                li.o-List__Item.o-Flex__Item.-x-z: a(href="#0")
+                  i.glyphicons.social.-fz-kilo.social-google-plus
+                    span.h-Hidden google plus
         +yearTab(2013, {name:'Sample ASCE Conference 2013', tagline:'Lorem Ipsum Optional Tagline for the Conference Goes Here', detail:'Toronto, Canada | May 2–4, 2013'}, 'prev')
                     p: a.c-LinkArrow(href="") Program
                     p: a.c-LinkArrow(href="") Proceedings
