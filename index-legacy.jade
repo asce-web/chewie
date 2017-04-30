@@ -39,10 +39,10 @@ html.no-js
     a.h-Hidden(href="#main") skip to main content
     header
       nav.o-Flex.o-MobileBar
-        a.o-Flex__Item.o-MobileBar__Item(href="./"): i.ic.home: span.h-Hidden Home
+        a.o-Flex__Item.o-MobileBar__Item(href="./"): i.glyphicons.glyphicons-home: span.h-Hidden Home
         label.o-Flex__Item.o-MobileBar__Item.c-Toggle(aria-label="toggle main menu")
           input.c-Toggle__Check.h-Hidden(type="checkbox" value="main menu is open" role="switch")
-          i.c-Toggle__Viz.ic.menu(role="none")
+          i.c-Toggle__Viz.glyphicons.glyphicons-menu-hamburger(role="none")
         div.o-Drawer.c-NavBar.c-NavBar--mobile
           //- change div to ul.o-List later
           div
@@ -406,5 +406,5 @@ html.no-js
           if ($(this).attr('tabindex') === '0') $(this).attr('tabindex', -1)
           else $(this).attr('tabindex', 0)
         })
-        $(this).siblings('.c-Toggle__Viz').toggleClass('menu').toggleClass('close-nav')
+        $(this).siblings('.c-Toggle__Viz').toggleClass('glyphicons-menu-hamburger glyphicons-remove-circle -ps-f -r-z')
       })

@@ -6,8 +6,6 @@
 
 .o-MobileBar {
   .flex-justify-content(flex-end);
-  height: 2 * @g-vru; // HACK fallback
-  height: calc('2 * var(--vru)'); // FIXME fixing damn icons
   @media screen and (min-width: 45em) {
     display: none;
   }
@@ -19,6 +17,10 @@
 }
 .o-MobileBar__Item {
   .flex(0);
-  padding: 0.5rem 1rem;
-  .ic { margin-top: auto; } // FIXME fixing damn icons
+  padding: 0.5rem;
+  &,
+  &:hover,
+  &:focus {
+    color: inherit; // unset `a`
+  }
 }
