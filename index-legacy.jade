@@ -88,11 +88,19 @@ html.no-js
         div.o-Flex.o-Constrain
           div.o-Flex__Item.o-Flex.o-MainCol.c-NavBar.c-NavBar--main
             //- change div to ul.o-List later
-            a(href="./") #[span.ic.home]
-            a(href="", data-menu-target="#programlevel2")  Program  #[span.ic.chevron-down]
-            a(href="", data-menu-target="#locationlevel2" class={'active':conference.menuhover}) Location #[span.ic.chevron-down]
-            a(href="", data-menu-target="#aboutlevel2")    About    #[span.ic.chevron-down]
-            a(href="", data-menu-target="#contactlevel2")  Contact  #[span.ic.chevron-down]
+            a(href="./"): i.glyphicons.glyphicons-home: span.h-Hidden Home
+            a(href="", data-menu-target="#programlevel2")
+              | Program
+              i.glyphicons.-fz-norm.glyphicons-chevron-down
+            a(href="", data-menu-target="#locationlevel2" class={'active':conference.menuhover})
+              | Location
+              i.glyphicons.-fz-norm.glyphicons-chevron-down
+            a(href="", data-menu-target="#aboutlevel2")
+              | About
+              i.glyphicons.-fz-norm.glyphicons-chevron-down
+            a(href="", data-menu-target="#contactlevel2")
+              | Contact
+              i.glyphicons.-fz-norm.glyphicons-chevron-down
           div.o-Flex__Item.o-Flex.o-SideCol.c-NavBar.c-NavBar--register
             //- change div to ul.o-List later
             a(href="") Why Attend
