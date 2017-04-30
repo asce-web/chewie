@@ -11,18 +11,28 @@
 // : Chris Harvey
 // ^updated
 // : 2017-04-13
-.o-Flex--siteHead,
-.o-Flex--siteFoot {
-  @media not all and (min-width: 45em) {
-    .flex-direction(column);
-  }
-}
 .o-Flex--siteHead {
   margin: @g-vru 0; // HACK fallback
   margin: var(--vru) 0;
   .align-items(center);
+  @media not all and (min-width: 45em) {
+    .flex-direction(column);
+  }
 }
 .o-Flex--siteFoot {
+  @media not all and (min-width: 30em) {
+    .flex-direction(column);
+  }
+  @media screen and (min-width: 30em) and (max-width: 44.999em) {
+    .flex-wrap(wrap);
+    & > .o-Flex__Item:nth-child(1),
+    & > .o-Flex__Item:nth-child(3) {
+      .flex(50%);
+    }
+    & > .o-Flex__Item:nth-child(2) {
+      .flex-order(1);
+    }
+  }
 }
 
 // Extensions of `.o-Flex__Item`

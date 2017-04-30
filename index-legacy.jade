@@ -321,8 +321,7 @@ html.no-js
                   p.c-ConferenceTitles__Detail= conference_info.detail
                 if conference_info.tagline
                   p.c-ConferenceTitles__Tagline= conference_info.tagline
-            div.o-Flex
-              div.o-Flex__Item(class={'o-Flex o-Flex--siteFoot':which==='current'})
+            div(class={'o-Flex o-Flex--siteFoot':which==='current', 't-Content':which!=='current'})
                 block
         +yearTab(2014, {name:'Sample ASCE Conference 2014'}, 'current')
           nav.o-Flex__Item.c-Sitemap#sitemap
