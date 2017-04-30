@@ -28,17 +28,31 @@ html.no-js
     link(rel="stylesheet" href="styles/chewie.css")
     link(rel="stylesheet" href="node_modules/xmeter/xmeter.min.css")
     link(rel="stylesheet" href="node_modules/bangs/bangs.min.css")
+    link(rel="stylesheet" href="vendor/glyphicons_pro_1_9_2/glyphicons/web/html_css/css/glyphicons.css")
+    link(rel="stylesheet" href="vendor/glyphicons_pro_1_9_2/glyphicons-filetypes/web/html_css/css/glyphicons-filetypes.css")
+    link(rel="stylesheet" href="vendor/glyphicons_pro_1_9_2/glyphicons-halflings/web/html_css/css/glyphicons-halflings.css")
+    link(rel="stylesheet" href="vendor/glyphicons_pro_1_9_2/glyphicons-social/web/html_css/css/glyphicons-social.css")
     link(rel="stylesheet" href="src/legacy.css")
     //- script(src="//use.typekit.net/imj1jdn.js")
     //- script try{Typekit.load();}catch(e){}
+    noscript
+      // remove Toggle menu when JS is disabled
+      style.
+        @media not all and (min-width: 45em) {
+          .c-Toggle,
+          .o-Drawer { display: none; }
+        }
   body(class=conference.classname)#top
     a.h-Hidden(href="#main") skip to main content
     header
       nav.o-Flex.o-MobileBar
-        a.o-Flex__Item.o-MobileBar__Item(href="./"): i.ic.home: span.h-Hidden Home
+        a.o-Flex__Item.o-MobileBar__Item.-lh-z(href="./")
+          i.glyphicons.glyphicons-home: span.h-Hidden Home
         label.o-Flex__Item.o-MobileBar__Item.c-Toggle(aria-label="toggle main menu")
           input.c-Toggle__Check.h-Hidden(type="checkbox" value="main menu is open" role="switch")
-          i.c-Toggle__Viz.ic.menu(role="none")
+          i.c-Toggle__Viz.glyphicons.glyphicons-menu-hamburger(role="none")
+        noscript
+          a(href="#sitemap") Site Map
         div.o-Drawer.c-NavBar.c-NavBar--mobile
           //- change div to ul.o-List later
           div
@@ -84,11 +98,19 @@ html.no-js
         div.o-Flex.o-Constrain
           div.o-Flex__Item.o-Flex.o-MainCol.c-NavBar.c-NavBar--main
             //- change div to ul.o-List later
-            a(href="./") #[span.ic.home]
-            a(href="", data-menu-target="#programlevel2")  Program  #[span.ic.chevron-down]
-            a(href="", data-menu-target="#locationlevel2" class={'active':conference.menuhover}) Location #[span.ic.chevron-down]
-            a(href="", data-menu-target="#aboutlevel2")    About    #[span.ic.chevron-down]
-            a(href="", data-menu-target="#contactlevel2")  Contact  #[span.ic.chevron-down]
+            a(href="./"): i.glyphicons.glyphicons-home
+              span.h-Hidden Home
+            a(href="", data-menu-target="#programlevel2")
+              | Program
+              i.glyphicons.-fz-norm.glyphicons-chevron-down
+            a(href="", data-menu-target="#locationlevel2" class={'active':conference.menuhover})
+              | Location
+              i.glyphicons.-fz-norm.glyphicons-chevron-down
+            a(href="", data-menu-target="#aboutlevel2")
+              | About
+              i.glyphicons.-fz-norm.glyphicons-chevron-down
+            a(href="", data-menu-target="#contactlevel2")
+              | Contact
           div.o-Flex__Item.o-Flex.o-SideCol.c-NavBar.c-NavBar--register
             //- change div to ul.o-List later
             a(href="") Why Attend
@@ -307,10 +329,10 @@ html.no-js
             div.o-Flex
               div.o-Flex__Item.o-Flex__Item--siteLogo
                 img.c-ConfLogo(src=conference.image.shield alt="EWRI Institute Shield" role="none")
-              div.o-Flex__Item.o-Flex__Item--footerContent
+              div.o-Flex__Item.o-Flex__Item--footerContent.-xd-c-nM
                 block
         +yearTab(2014, {name:'Sample ASCE Conference 2014'}, 'current')
-          nav.c-Sitemap.-d-n-nM
+          nav.c-Sitemap#sitemap
             h3.h-Hidden Sitemap (part 1 of 2)
             ul.o-List(role="directory")
               li.o-List__Item.c-Sitemap__TopItem
@@ -333,7 +355,7 @@ html.no-js
                   li.o-List__Item: a(href="") Volunteer
               li.o-List__Item.c-Sitemap__TopItem
                 a.c-Sitemap__TopItem__Link(href="") Contact
-          nav.c-Sitemap.-d-n-nM
+          nav.c-Sitemap
             h3.h-Hidden Sitemap (part 2 of 2)
             ul.o-List(role="directory")
               li.o-List__Item.c-Sitemap__TopItem: a.c-Sitemap__TopItem__Link(href="") Why Attend
@@ -344,18 +366,34 @@ html.no-js
           div
             nav
               h3 Contact Us
-              ul
-                li: a(href="#0") #[span.ic.mobile-phone] (800) 548-2723
-                li: a(href="#0") #[span.ic.twitter] #structures2014
-                li: a(href="#0") #[span.ic.contact-large] Other contacts
+              ul.o-List.-fz-el-kil
+                li.o-List__Item.-mb-1: a(href="#0")
+                  i.glyphicons.-mr-1.glyphicons-earphone(role="none")
+                  | (800) 548-2723
+                li.o-List__Item.-mb-1: a(href="#0")
+                  i.glyphicons.-mr-1.social.social-twitter(role="none")
+                  | #structures2014
+                li.o-List__Item.-mb-1: a(href="#0")
+                  i.glyphicons.-mr-1.glyphicons-envelope(role="none")
+                  | Other contacts
             nav
               h3 Connect With ASCE
-              ul
-                li: a(href="#0" aria-label="linkedin"): span.ic.linkedin
-                li: a(href="#0" aria-label="facebook"): span.ic.facebook
-                li: a(href="#0" aria-label="twitter" ): span.ic.twitter
-                li: a(href="#0" aria-label="youtube" ): span.ic.youtube
-                li: a(href="#0" aria-label="google"  ): span.ic.google
+              ul.o-List.o-Flex.-xjc-xs.-jc-xs.-jc-s
+                li.o-List__Item.o-Flex__Item.-x-z.-mr-1: a(href="#0")
+                  i.glyphicons.social.social-linked-in
+                    span.h-Hidden linkedin
+                li.o-List__Item.o-Flex__Item.-x-z.-mr-1: a(href="#0")
+                  i.glyphicons.social.social-facebook
+                    span.h-Hidden facebook
+                li.o-List__Item.o-Flex__Item.-x-z.-mr-1: a(href="#0")
+                  i.glyphicons.social.social-twitter
+                    span.h-Hidden twitter
+                li.o-List__Item.o-Flex__Item.-x-z.-mr-1: a(href="#0")
+                  i.glyphicons.social.social-youtube
+                    span.h-Hidden youtube
+                li.o-List__Item.o-Flex__Item.-x-z.-mr-1: a(href="#0")
+                  i.glyphicons.social.social-google-plus
+                    span.h-Hidden google plus
         +yearTab(2013, {name:'Sample ASCE Conference 2013', tagline:'Lorem Ipsum Optional Tagline for the Conference Goes Here', detail:'Toronto, Canada | May 2–4, 2013'}, 'prev')
                     p: a.c-LinkArrow(href="") Program
                     p: a.c-LinkArrow(href="") Proceedings
@@ -386,5 +424,5 @@ html.no-js
           if ($(this).attr('tabindex') === '0') $(this).attr('tabindex', -1)
           else $(this).attr('tabindex', 0)
         })
-        $(this).siblings('.c-Toggle__Viz').toggleClass('menu').toggleClass('close-nav')
+        $(this).siblings('.c-Toggle__Viz').toggleClass('glyphicons-menu-hamburger glyphicons-remove-circle -ps-f -r-1')
       })

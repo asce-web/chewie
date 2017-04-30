@@ -62,6 +62,9 @@
 
 
 // Extensions to bangs.less
+.-r-1 {
+  right: 1rem;
+}
 @media screen and (min-width: 45em) {
   .-ta-l-sM {
     text-align: left !important;
@@ -70,5 +73,17 @@
 @media not all and (min-width: 45em) {
   .-xd-c-nM {
     .flex-direction(column);
+  }
+}
+
+
+// fixes to glyphicons
+.glyphicons {
+  vertical-align: middle; // undo -va-t
+  &::before {
+    padding: 0; // unset all padding on all icon characters. use margin/padding on icon itself if you need it.
+  }
+  &:not(.-fz-norm) {
+    font-size: 1.5em;
   }
 }
