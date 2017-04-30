@@ -12,7 +12,7 @@ function resizeTabBlock() {
         + parseInt($jq.css('padding-top'))
         + parseInt($jq.css('margin-bottom'))
     }
-    return totalHeight(current_panel) + (n * totalHeight(current_tab))
+    return totalHeight(current_panel) + (totalHeight(current_tab))
   })
 }
 function updateTabs() {
