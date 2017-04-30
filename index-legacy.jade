@@ -310,29 +310,21 @@ html.no-js
               input.o-Tabs__Check.h-Hidden(type="radio" name="footertabs" value=year)&attributes((which==='current') ? {checked:''} : {})
               time.c-YearBadge.c-YearBadge--tab(datetime=year aria-label=year)= year.toString().slice(2)
           dd.o-Flex__Item.o-Tabs__Panel.c-FooterPanel(id=`panel-${which}`): div.o-Constrain
-            //- div.o-Flex
-              div.o-Flex__Item: span.c-YearBadge(role="none")= year.toString().slice(2)
-              div.o-Flex__Item.c-ConferenceTitles.-mb-2.-pt-2
+            div.o-Flex.o-Flex--siteHead.-mv-2
+              //- div.o-Flex__Item: span.c-YearBadge(role="none")= year.toString().slice(2)
+              div.o-Flex__Item.o-Flex__Item--siteLogo
+                img.c-ConfLogo(src=conference.image.shield alt="EWRI Institute Shield" role="none")
+              div.o-Flex__Item.c-ConferenceTitles
                 if conference_info.name
                   h1.c-ConferenceTitles__Name= conference_info.name
                 if conference_info.detail
                   p.c-ConferenceTitles__Detail= conference_info.detail
                 if conference_info.tagline
                   p.c-ConferenceTitles__Tagline= conference_info.tagline
-            div.c-ConferenceTitles.-mb-2.-pt-2
-              if conference_info.name
-                h1.c-ConferenceTitles__Name= conference_info.name
-              if conference_info.detail
-                p.c-ConferenceTitles__Detail= conference_info.detail
-              if conference_info.tagline
-                p.c-ConferenceTitles__Tagline= conference_info.tagline
-            div.o-Flex
-              div.o-Flex__Item.o-Flex__Item--siteLogo
-                img.c-ConfLogo(src=conference.image.shield alt="EWRI Institute Shield" role="none")
-              div.o-Flex__Item.o-Flex__Item--footerContent.-xd-c-nM
+            div(class={'o-Flex o-Flex--siteFoot':which==='current', 't-Content':which!=='current'})
                 block
         +yearTab(2014, {name:'Sample ASCE Conference 2014'}, 'current')
-          nav.c-Sitemap#sitemap
+          nav.o-Flex__Item.c-Sitemap#sitemap
             h3.h-Hidden Sitemap (part 1 of 2)
             ul.o-List(role="directory")
               li.o-List__Item.c-Sitemap__TopItem
@@ -355,7 +347,7 @@ html.no-js
                   li.o-List__Item: a(href="") Volunteer
               li.o-List__Item.c-Sitemap__TopItem
                 a.c-Sitemap__TopItem__Link(href="") Contact
-          nav.c-Sitemap
+          nav.o-Flex__Item.c-Sitemap
             h3.h-Hidden Sitemap (part 2 of 2)
             ul.o-List(role="directory")
               li.o-List__Item.c-Sitemap__TopItem: a.c-Sitemap__TopItem__Link(href="") Why Attend
@@ -363,7 +355,7 @@ html.no-js
               li.o-List__Item.c-Sitemap__TopItem: a.c-Sitemap__TopItem__Link(href="") For Speakers
               li.o-List__Item.c-Sitemap__TopItem: a.c-Sitemap__TopItem__Link(href="./sponsors.html") Sponsors
               li.o-List__Item.c-Sitemap__TopItem: a.c-Sitemap__TopItem__Link(href="") Exhibitors
-          div
+          div.o-Flex__Item
             nav
               h3 Contact Us
               ul.o-List.-fz-el-kil

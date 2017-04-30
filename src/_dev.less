@@ -4,7 +4,8 @@
 \*################################*/
 
 
-// Extension of `.o-Flex`
+// Extensions of `.o-Flex` used in site header & footer.
+// --siteFoot only appears in the current year footer panel.
 //
 // ^author
 // : Chris Harvey
@@ -13,9 +14,24 @@
 .o-Flex--siteHead {
   margin: @g-vru 0; // HACK fallback
   margin: var(--vru) 0;
-  .flex-align-items(center);
+  .align-items(center);
   @media not all and (min-width: 45em) {
     .flex-direction(column);
+  }
+}
+.o-Flex--siteFoot {
+  @media not all and (min-width: 30em) {
+    .flex-direction(column);
+  }
+  @media screen and (min-width: 30em) and (max-width: 44.999em) {
+    .flex-wrap(wrap);
+    & > .o-Flex__Item:nth-child(1),
+    & > .o-Flex__Item:nth-child(3) {
+      .flex(50%);
+    }
+    & > .o-Flex__Item:nth-child(2) {
+      .flex-order(1);
+    }
   }
 }
 
@@ -45,25 +61,13 @@
     margin-right: calc(~'0.5 * var(--year-badge-width)');
   }
 }
-.o-Flex__Item--footerContent {
-  margin: 0 1rem;
-  #panel-current & {
-    // copied from `.o-Flex`
-    .flexbox();
-    .flex-justify-content(space-between);
-    & > * {
-      // copied from `.o-Flex__Item`
-      .flex(auto);
-    }
-  }
-}
 
 
 
 
-// Extensions to bangs.less
+// Extensions & fixes to bangs.less
 .-r-1 {
-  right: 1rem;
+  right: 1rem !important;
 }
 @media screen and (min-width: 45em) {
   .-ta-l-sM {
@@ -72,7 +76,7 @@
 }
 @media not all and (min-width: 45em) {
   .-xd-c-nM {
-    .flex-direction(column);
+    .flex-direction(column) !important;
   }
 }
 
