@@ -35,6 +35,13 @@ html.no-js
     link(rel="stylesheet" href="src/legacy.css")
     //- script(src="//use.typekit.net/imj1jdn.js")
     //- script try{Typekit.load();}catch(e){}
+    noscript
+      // remove Toggle menu when JS is disabled
+      style.
+        @media not all and (min-width: 45em) {
+          .c-Toggle,
+          .o-Drawer { display: none; }
+        }
   body(class=conference.classname)#top
     a.h-Hidden(href="#main") skip to main content
     header
@@ -44,6 +51,8 @@ html.no-js
         label.o-Flex__Item.o-MobileBar__Item.c-Toggle(aria-label="toggle main menu")
           input.c-Toggle__Check.h-Hidden(type="checkbox" value="main menu is open" role="switch")
           i.c-Toggle__Viz.glyphicons.glyphicons-menu-hamburger(role="none")
+        noscript
+          a(href="#sitemap") Site Map
         div.o-Drawer.c-NavBar.c-NavBar--mobile
           //- change div to ul.o-List later
           div
@@ -320,10 +329,10 @@ html.no-js
             div.o-Flex
               div.o-Flex__Item.o-Flex__Item--siteLogo
                 img.c-ConfLogo(src=conference.image.shield alt="EWRI Institute Shield" role="none")
-              div.o-Flex__Item.o-Flex__Item--footerContent
+              div.o-Flex__Item.o-Flex__Item--footerContent.-xd-c-nM
                 block
         +yearTab(2014, {name:'Sample ASCE Conference 2014'}, 'current')
-          nav.c-Sitemap.-d-n-nM
+          nav.c-Sitemap#sitemap
             h3.h-Hidden Sitemap (part 1 of 2)
             ul.o-List(role="directory")
               li.o-List__Item.c-Sitemap__TopItem
@@ -346,7 +355,7 @@ html.no-js
                   li.o-List__Item: a(href="") Volunteer
               li.o-List__Item.c-Sitemap__TopItem
                 a.c-Sitemap__TopItem__Link(href="") Contact
-          nav.c-Sitemap.-d-n-nM
+          nav.c-Sitemap
             h3.h-Hidden Sitemap (part 2 of 2)
             ul.o-List(role="directory")
               li.o-List__Item.c-Sitemap__TopItem: a.c-Sitemap__TopItem__Link(href="") Why Attend
