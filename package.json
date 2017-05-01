@@ -11,14 +11,16 @@
     "jade:styleguide": "jade styleguide/{index,base,obj,comp-typo,comp-ui}.jade",
     "jade:all": "npm run jade:index  &&  npm run jade:styleguide",
     "lessc:chewie": "lessc styles/chewie.less styles/chewie.css",
-    "lessc:legacy": "lessc src/legacy.less src/legacy.css",
+    "lessc:legacy": "lessc src/legacy.less legacy.css",
     "lessc:styleguide": "lessc styleguide/styles/styleguide.less styleguide/styles/styleguide.css",
-    "lessc:all": "npm run lessc:chewie  &&  npm run lessc:styleguide",
-    "minify": "cleancss styles/chewie.css -o styles/chewie.min.css",
+    "lessc:all": "npm run lessc:chewie  &&  npm run lessc:legacy  &&  npm run lessc:styleguide",
+    "minify:chewie": "cleancss styles/chewie.css -o styles/chewie.min.css",
+    "minify:legacy": "cleancss legacy.css -o legacy.min.css",
+    "minify:all": "npm run minify:chewie  &&  npm run minify:legacy",
     "unbuild:html": "rm {index,sponsors}.html styleguide/{index,base,obj,comp-typo,comp-ui}.html",
-    "unbuild:css": "rm styles/chewie.css styles/chewie.min.css styleguide/styles/styleguide.css",
+    "unbuild:css": "rm styles/chewie.css styles/chewie.min.css legacy.css legacy.min.css styleguide/styles/styleguide.css",
     "unbuild": "npm run unbuild:html  &&  npm run unbuild:css",
-    "build": "npm run jade:all  &&  npm run lessc:all  &&  npm run minify"
+    "build": "npm run jade:all  &&  npm run lessc:all  &&  npm run minify:all"
   },
   "repository": {
     "type": "git",
