@@ -243,64 +243,63 @@ html.no-js
                 p: a(href="#0")
                   i.glyphicons.social.social-twitter.-mr-h(role="none")
                   | #structures2014
-    div.-mb-2
-      aside: div.o-Constrain.-mh-2
-        h2 Top Sponsors
-        mixin supporterBlock(level, size, list)
-          section.c-SupporterBlock(class=`c-SupporterBlock--${size}`)
-            h1.c-SupporterBlock__Hn= level
-            ul.o-List.o-Flex.c-SupporterBlock__List
-              each item in list
-                li.o-List__Item.o-Flex__Item.c-SupporterBlock__List__Item(itemprop="sponsor" itemscope="" itemtype="http://schema.org/Organization")
-                  a(href=item.url rel="external nofollow" itemprop="url")
-                    img.c-SupporterBlock__Logo(src=item.img alt=item.name itemprop="logo")
-                    meta(content=item.name itemprop="name")
-        +supporterBlock('Platinum', 'lrg', [
-          { name: 'Espon'   , url: '#0', img: 'img/sponsor_logo_horizontal2.gif' }
-        , { name: 'Alliance', url: '#0', img: 'img/sponsor_logo_horizontal1.gif' }
-        ])
-        +supporterBlock('Gold', 'lrg', [
-          { name: 'Ria'     , url: '#0', img: 'img/Sponsorlogo_square1.gif'      }
-        , { name: 'Geico'   , url: '#0', img: 'img/sponsor_logo_horizontal3.gif' }
-        , { name: 'Exponent', url: '#0', img: 'img/sponsor_logo_horizontal4.gif' }
-        ])
-        +supporterBlock('Corporate', 'med', [
-          { name: 'Geico'   , url: '#0', img: 'img/sponsor_logo_horizontal3.gif' }
-        , { name: 'Exponent', url: '#0', img: 'img/sponsor_logo_horizontal4.gif' }
-        ])
-        +supporterBlock('Silver', 'med', [
-          { name: 'Exponent', url: '#0', img: 'img/sponsor_logo_horizontal4.gif' }
-        , { name: 'Espon'   , url: '#0', img: 'img/sponsor_logo_horizontal2.gif' }
-        ])
-        +supporterBlock('Bronze', 'sml', [
-          { name: 'Ria'     , url: '#0', img: 'img/Sponsorlogo_square1.gif'      }
-        , { name: 'Geico'   , url: '#0', img: 'img/sponsor_logo_horizontal3.gif' }
-        ])
-        +supporterBlock('Copper', 'sml', [
-          { name: 'Alliance', url: '#0', img: 'img/sponsor_logo_horizontal1.gif' }
-        , { name: 'Geico'   , url: '#0', img: 'img/sponsor_logo_horizontal3.gif' }
-        , { name: 'Exponent', url: '#0', img: 'img/sponsor_logo_horizontal4.gif' }
-        ])
-      aside.c-Mast.c-Mast--coop: div.o-Constrain.-mh-2
-        h2.h-Hidden Top Supporters
-        +supporterBlock('Cooperating Organizations', 'sml', [
-          { name: 'AISC'    , url: '#0', img: 'img/cooplogo_square1.gif'     }
-        , { name: 'Correios', url: '#0', img: 'img/cooplogo_horizontalcolor1.gif' }
-        , { name: 'Jacobs'  , url: '#0', img: 'img/cooplogo_horizontalcolor2.gif' }
-        , { name: 'T&DI'    , url: '#0', img: 'img/cooplogo_horizontal2.gif' }
-        , { name: 'CI'      , url: '#0', img: 'img/cooplogo_square4.gif'     }
-        , { name: 'EWRI'    , url: '#0', img: 'img/cooplogo_horizontal4.gif' }
-        , { name: 'KU'      , url: '#0', img: 'img/Sponsorlogo_square2.gif' }
-        ])
-        +supporterBlock('Educational Grant', 'sml', [
-          { name: 'AISC'    , url: '#0', img: 'img/cooplogo_square1.gif'     }
-        , { name: 'Correios', url: '#0', img: 'img/cooplogo_horizontalcolor1.gif' }
-        , { name: 'Jacobs'  , url: '#0', img: 'img/cooplogo_horizontalcolor2.gif' }
-        , { name: 'T&DI'    , url: '#0', img: 'img/cooplogo_horizontal2.gif' }
-        , { name: 'CI'      , url: '#0', img: 'img/cooplogo_square4.gif'     }
-        , { name: 'EWRI'    , url: '#0', img: 'img/cooplogo_horizontal4.gif' }
-        , { name: 'KU'      , url: '#0', img: 'img/Sponsorlogo_square2.gif' }
-        ])
+    aside: div.o-Constrain
+      h2.h-Hidden Top Sponsors
+      mixin supporterBlock(level, size, list)
+        section.c-SupporterBlock(class=`c-SupporterBlock--${size}`)
+          h1.c-SupporterBlock__Hn= level
+          ul.o-List.o-Flex.c-SupporterBlock__List
+            each item in list
+              li.o-List__Item.o-Flex__Item.c-SupporterBlock__List__Item(itemprop="sponsor" itemscope="" itemtype="http://schema.org/Organization")
+                a(href=item.url rel="external nofollow" itemprop="url")
+                  img.c-SupporterBlock__Logo(src=item.img alt=item.name itemprop="logo")
+                  meta(content=item.name itemprop="name")
+      +supporterBlock('Platinum', 'lrg', [
+        { name: 'Espon'   , url: '#0', img: 'img/sponsor_logo_horizontal2.gif' }
+      , { name: 'Alliance', url: '#0', img: 'img/sponsor_logo_horizontal1.gif' }
+      ])
+      +supporterBlock('Gold', 'lrg', [
+        { name: 'Ria'     , url: '#0', img: 'img/Sponsorlogo_square1.gif'      }
+      , { name: 'Geico'   , url: '#0', img: 'img/sponsor_logo_horizontal3.gif' }
+      , { name: 'Exponent', url: '#0', img: 'img/sponsor_logo_horizontal4.gif' }
+      ])
+      +supporterBlock('Corporate', 'med', [
+        { name: 'Geico'   , url: '#0', img: 'img/sponsor_logo_horizontal3.gif' }
+      , { name: 'Exponent', url: '#0', img: 'img/sponsor_logo_horizontal4.gif' }
+      ])
+      +supporterBlock('Silver', 'med', [
+        { name: 'Exponent', url: '#0', img: 'img/sponsor_logo_horizontal4.gif' }
+      , { name: 'Espon'   , url: '#0', img: 'img/sponsor_logo_horizontal2.gif' }
+      ])
+      +supporterBlock('Bronze', 'sml', [
+        { name: 'Ria'     , url: '#0', img: 'img/Sponsorlogo_square1.gif'      }
+      , { name: 'Geico'   , url: '#0', img: 'img/sponsor_logo_horizontal3.gif' }
+      ])
+      +supporterBlock('Copper', 'sml', [
+        { name: 'Alliance', url: '#0', img: 'img/sponsor_logo_horizontal1.gif' }
+      , { name: 'Geico'   , url: '#0', img: 'img/sponsor_logo_horizontal3.gif' }
+      , { name: 'Exponent', url: '#0', img: 'img/sponsor_logo_horizontal4.gif' }
+      ])
+    aside.c-Mast.c-Mast--coop: div.o-Constrain
+      h2.h-Hidden Supporting Organizations
+      +supporterBlock('Cooperating Organizations', 'sml', [
+        { name: 'AISC'    , url: '#0', img: 'img/cooplogo_square1.gif'     }
+      , { name: 'Correios', url: '#0', img: 'img/cooplogo_horizontalcolor1.gif' }
+      , { name: 'Jacobs'  , url: '#0', img: 'img/cooplogo_horizontalcolor2.gif' }
+      , { name: 'T&DI'    , url: '#0', img: 'img/cooplogo_horizontal2.gif' }
+      , { name: 'CI'      , url: '#0', img: 'img/cooplogo_square4.gif'     }
+      , { name: 'EWRI'    , url: '#0', img: 'img/cooplogo_horizontal4.gif' }
+      , { name: 'KU'      , url: '#0', img: 'img/Sponsorlogo_square2.gif' }
+      ])
+      +supporterBlock('Educational Grant', 'sml', [
+        { name: 'AISC'    , url: '#0', img: 'img/cooplogo_square1.gif'     }
+      , { name: 'Correios', url: '#0', img: 'img/cooplogo_horizontalcolor1.gif' }
+      , { name: 'Jacobs'  , url: '#0', img: 'img/cooplogo_horizontalcolor2.gif' }
+      , { name: 'T&DI'    , url: '#0', img: 'img/cooplogo_horizontal2.gif' }
+      , { name: 'CI'      , url: '#0', img: 'img/cooplogo_square4.gif'     }
+      , { name: 'EWRI'    , url: '#0', img: 'img/cooplogo_horizontal4.gif' }
+      , { name: 'KU'      , url: '#0', img: 'img/Sponsorlogo_square2.gif' }
+      ])
     footer
       dl.o-Flex.o-Tabs
         //- NOTE: 'current' displayed first for accessibility
@@ -393,9 +392,7 @@ html.no-js
                     p: a.c-LinkArrow(href="") Call for submissions
                     p: a.c-LinkArrow(href="./sponsors.html") Sponsors
                     p: a.c-LinkArrow(href="") Exhibit
-    footer
-      div.c-Mast.c-Mast--copyright
-        p.-mb-z.-ta-c
+      p.c-Mast.c-Mast--copyright.-mb-z.-ta-c
           i.c-AsceLogo(role="none")
           a(href="http://www.asce.org/" rel="external") &copy; 1996&ndash;2015, American Society of Civil Engineers | ASCE.org
     a(href="#top") jump to top
