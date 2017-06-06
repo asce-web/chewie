@@ -45,11 +45,13 @@
 }
 .c-Hero__Blurb {
   font-weight: 300;
-  margin-bottom: 0; // undo `p`
   padding-bottom: @g-vru; // HACK fallback
   padding-bottom: var(--vru);
   @media not all and (min-width: 45em) {
     .font-size-el(0.875); // FIXME magic number!!!
+  }
+  & > :last-child {
+    margin-bottom: 0; // unset typographical blocks
   }
 }
 
