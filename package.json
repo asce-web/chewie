@@ -11,13 +11,10 @@
     "jade:all": "npm run jade:styleguide",
     "lessc:styleguide": "lessc styleguide/styles/styleguide.less styleguide/styles/styleguide.css",
     "lessc:all": "npm run lessc:styleguide",
-    "minify:chewie": "cleancss styles/chewie.css -o styles/chewie.min.css",
-    "minify:legacy": "cleancss legacy.css -o legacy.min.css",
-    "minify:all": "npm run minify:chewie  &&  npm run minify:legacy",
     "unbuild:html": "rm index-legacy.html styleguide/{index,base,obj,comp-typo,comp-ui}.html",
     "unbuild:css": "rm styles/chewie.css styles/chewie.min.css legacy.css legacy.min.css styleguide/styles/styleguide.css",
     "unbuild": "npm run unbuild:html  &&  npm run unbuild:css",
-    "build": "npm run jade:all  &&  npm run lessc:all  &&  npm run minify:all"
+    "build": "npm run jade:all  &&  npm run lessc:all"
   },
   "repository": {
     "type": "git",
@@ -31,10 +28,11 @@
   "homepage": "https://github.com/asce-web/chewie#readme",
   "devDependencies": {
     "bangs": "^0.11.0",
-    "clean-css": "^3.4.9",
     "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.4.1",
     "gulp-less": "^3.3.0",
     "gulp-pug": "^3.3.0",
+    "gulp-rename": "^1.2.2",
     "jade": "^1.11.0",
     "less": "^2.6.0",
     "xmeter": "^5.0.0"

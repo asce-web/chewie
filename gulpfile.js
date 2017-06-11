@@ -1,6 +1,8 @@
 var gulp = require('gulp')
+var rename = require('gulp-rename')
 var pug = require('gulp-pug')
 var less = require('gulp-less')
+var clean_css = require('gulp-clean-css')
 
 gulp.task('pug:index', function () {
   return gulp.src('index-legacy.pug')
@@ -15,11 +17,26 @@ gulp.task('pug:index', function () {
 gulp.task('lessc:chewie', function () {
   return gulp.src('styles/chewie.less')
     .pipe(less())
-    .pipe(gulp.dest('./styles'))
+    .pipe(gulp.dest('./styles/'))
 })
+
+gulp.task('minify:chewie', ['lessc:chewie'], function () {
+  return gulp.src('styles/chewie.css')
+    .pipe(clean_css())
+    .pipe(rename('chewie.min.css')) // TODO: use a SourceMap!
+    .pipe(gulp.dest('./styles/'))
+})
+
 
 gulp.task('lessc:legacy', function () {
   return gulp.src('src/legacy.less')
     .pipe(less())
+    .pipe(gulp.dest('./'))
+})
+
+gulp.task('minify:legacy', ['lessc:legacy'], function () {
+  return gulp.src('legacy.css')
+    .pipe(clean_css())
+    .pipe(rename('legacy.min.css')) // TODO: use a SourceMap!
     .pipe(gulp.dest('./'))
 })
