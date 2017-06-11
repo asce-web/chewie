@@ -13,12 +13,7 @@
 // : 2017-06-11
 .o-SideCol {
   @media screen and (min-width: 45em) {
-    flex: 0 0 300px; // FIXME magic number!!!
-  }
-  @media screen and (min-width: 60em) {
-    flex: 0 0 385px; // FIXME magic number!!!
-  }
-  @media screen and (min-width: 75em) {
-    flex: 0 0 450px; // FIXME magic number!!!
+    flex: 0 0 300px; // FIXME magic number!!! // HACK fallback
+    flex: 0 0 var(--sidebar-width);
   }
 }
