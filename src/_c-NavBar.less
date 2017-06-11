@@ -19,7 +19,7 @@
 // ^author
 // : Chris Harvey
 // ^updated
-// : 2017-04-03
+// 2017-06-11
 .c-NavBar {
   .font-size-mod(12/16);
   font-weight: 700;
@@ -30,7 +30,7 @@
   }
   & > * {
     padding: 0.75rem;
-    .transition(background-color 250ms);
+    transition: background-color 250ms;
     &:hover,
     &:focus {
       background-color: rgba(255,255,255, 0.25);
@@ -45,7 +45,7 @@
 }
 .c-NavBar--main {
   padding-left: 2rem;
-  .flex-justify-content(flex-start);
+  justify-content: flex-start;
   @media not all and (min-width: 767px) {
     // HACK magic number due to menu text content
     padding-left: 1rem;
@@ -60,21 +60,21 @@
   .glyphicons-chevron-down { padding-left: 1ch; }
 }
 .c-NavBar--register {
-  .flex-justify-content(center);
+  justify-content: center;
   background-color: @g-color-asce-blue;
 }
 .c-NavBar--contrib {
   position: absolute;
   top: 0; bottom: 0;
   left: 0; right: 0;
-  .flex-justify-content(flex-end); // undo .o-Flex
-  .flex-align-items(flex-start); // undo .o-Flex
+  justify-content: flex-end; // undo .o-Flex
+  align-items: flex-start; // undo .o-Flex
   text-shadow: 0 0 4px black; // IDEA this replaces gradient. enable gradient if people complain
   // background-image: linear-gradient(to bottom, rgba(0,0,0, 0.5) 0%, transparent 50%);
   @media not all and (min-width: 60em) {
-    .flex-direction(column);
-    .flex-justify-content(flex-start);
-    .flex-align-items(flex-end);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
     // background-image: linear-gradient(to bottom, rgba(0,0,0, 0.5) 0%, transparent 100%);
   }
   @media screen and (min-width: 75em) {
@@ -88,7 +88,7 @@
 .c-Mast--nav--sub ul {
   // NOTE this selector is used for when `ul` is entered in blocks by content coordinators
   /*&:extend(.o-List);*/padding-left:0;list-style:none;
-  /*&:extend(.o-Flex);*/.flexbox();
+  /*&:extend(.o-Flex);*/display:flex;
   &:extend(.c-NavBar);
   &:extend(.c-NavBar--sub);
 }
@@ -96,15 +96,15 @@
   position: absolute;
   left: 0; right: 0;
   z-index: 1;
-  .flex-justify-content(flex-start);
+  justify-content: flex-start;
   margin-bottom: 0; // override base ul
   font-weight: 600;
   text-transform: none; // undo .c-NavBar
-  .transform-origin(top);
-  .transitions(-webkit-transform, -moz-transform, -ms-transform, -o-transform, transform; 100ms);
+  transform-origin: top;
+  transition: transform 100ms;
   .mx-bc-accent(); // FIXME only here because position absolute
   &:not(.active) {
-    .transform(scale(1,0));
+    transform: scale(1,0);
   }
 }
 .c-NavBar--mobile {

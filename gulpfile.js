@@ -2,6 +2,7 @@ var gulp = require('gulp')
 var rename = require('gulp-rename')
 var pug = require('gulp-pug')
 var less = require('gulp-less')
+var autoprefixer = require('gulp-autoprefixer')
 var clean_css = require('gulp-clean-css')
 
 gulp.task('pug:index', function () {
@@ -30,6 +31,9 @@ gulp.task('minify:chewie', ['lessc:chewie'], function () {
 gulp.task('lessc:legacy', function () {
   return gulp.src('legacy.less')
     .pipe(less())
+    .pipe(autoprefixer({
+      grid: true
+    }))
     .pipe(gulp.dest('./'))
 })
 

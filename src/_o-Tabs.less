@@ -16,20 +16,20 @@
 // ^author
 // Chris Harvey
 // ^updated
-// 2017-02-08
+// 2017-06-11
 .o-Tabs {
   position: relative;
   margin-bottom: 0; // unset `ul`
-  .flex-wrap(wrap);
-  .justify-content(flex-end); // push items to right
-  .align-content(flex-start); // push flex items to top
-  .align-items(flex-start); // minimize height of flex items
-  // .transition(height @p-transdura); // height changes as panel
+  flex-wrap: wrap;
+  justify-content: flex-end; // push items to right
+  align-content: flex-start; // push flex items to top
+  align-items: flex-start; // minimize height of flex items
+  // transition: height @p-transdura; // height changes as panel
 }
 
 .o-Tabs__Tab,
 .o-Tabs__Panel {
-  // .transitions(@g-prefix_transform; @p-transdura);
+  // transitions: transform @p-transdura;
 }
 
 // A tab. Contains a label or heading of the panel.
@@ -42,12 +42,12 @@
 // 2017-02-08
 .o-Tabs__Tab {
   text-align: center;
-  .flex(0); // minimize "main size" for all tabs
+  flex: 0; // minimize "main size" for all tabs
 }
 // this class should be added via script, NOT manually!
 // .o-Tabs__Tab:has(.o-Tabs__Check:checked), // TODO `:has()` is unsupported
 .o-Tabs__Tab--selected {
-  // .transform(scale(1.2));
+  // transform: scale(1.2);
   // styles for active tab
 }
 
@@ -67,20 +67,20 @@
 // ^updated
 // 2017-02-09
 .o-Tabs__Panel {
-  .flex(100%); // full-width "main size" for all panels
+  flex: 100%; // full-width "main size" for all panels
 }
 // the following classes should be added via script, NOT manually!
 .o-Tabs__Panel--js {
   position: absolute;
   left: 0; right: 0;
   bottom: 0;
-  .flex-order(1);
+  order: 1;
 }
 .o-Tabs__Panel--shown {
 }
 .o-Tabs__Panel--hiddenBefore,
 .o-Tabs__Panel--hiddenAfter {
-  .transform(translateX(-100%));
+  transform: translateX(-100%);
 }
 .o-Tabs__Panel--hiddenBefore {
 }
