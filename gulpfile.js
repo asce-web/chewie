@@ -28,7 +28,7 @@ gulp.task('minify:chewie', ['lessc:chewie'], function () {
 })
 
 gulp.task('lessc:legacy', function () {
-  return gulp.src('src/legacy.less')
+  return gulp.src('legacy.less')
     .pipe(less())
     .pipe(gulp.dest('./'))
 })
