@@ -35,6 +35,7 @@
   "devDependencies": {
     "bangs": "^0.11.0",
     "clean-css": "^3.4.9",
+    "gulp": "^3.9.1",
     "jade": "^1.11.0",
     "less": "^2.6.0",
     "xmeter": "^5.0.0"
