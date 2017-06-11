@@ -7,9 +7,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "xmeter": "cd node_modules/xmeter/  &&  npm install  &&  npm run build  &&  cd -",
-    "jade:index": "jade index-legacy.jade",
     "jade:styleguide": "jade styleguide/{index,base,obj,comp-typo,comp-ui}.jade",
-    "jade:all": "npm run jade:index  &&  npm run jade:styleguide",
+    "jade:all": "npm run jade:styleguide",
     "lessc:chewie": "lessc styles/chewie.less styles/chewie.css",
     "lessc:legacy": "lessc src/legacy.less legacy.css",
     "lessc:styleguide": "lessc styleguide/styles/styleguide.less styleguide/styles/styleguide.css",
@@ -36,6 +35,7 @@
     "bangs": "^0.11.0",
     "clean-css": "^3.4.9",
     "gulp": "^3.9.1",
+    "gulp-pug": "^3.3.0",
     "jade": "^1.11.0",
     "less": "^2.6.0",
     "xmeter": "^5.0.0"
