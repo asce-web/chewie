@@ -1,21 +1,20 @@
 doctype html
-html.no-js
-  block vars
-    -
-      var conference = {
-        name     : 'Sample ASCE Conference'
-      , classname: ''
-      , menuhover: false
-      , tagline  : 'Optional Tagline for the Conference Goes Here Lorem Ipsum'
-      , theme    : 'New ideas. New practices. New science. New resources. New colleagues. New business procedures.'
-      , detail   : 'Boston, Massachusetts  |  April 3–5, 2015'
-      , image    : {
-          shield : './img/shield-logo-ewri.png'
-        , hero   : './img/fpo-hero.jpg'
-        , banner : './img/fpo-header.jpg'
-        , sidebar: './img/FPO_sidebar_340x135.jpg'
-        }
+html(lang="en")
+  -
+    var conference = {
+      name     : 'Sample ASCE Conference'
+    , classname: ''
+    , menuhover: false
+    , tagline  : 'Optional Tagline for the Conference Goes Here Lorem Ipsum'
+    , theme    : 'New ideas. New practices. New science. New resources. New colleagues. New business procedures.'
+    , detail   : 'Boston, Massachusetts  |  April 3–5, 2015'
+    , image    : {
+        shield : './img/shield-logo-ewri.png'
+      , hero   : './img/fpo-hero.jpg'
+      , banner : './img/fpo-header.jpg'
+      , sidebar: './img/FPO_sidebar_340x135.jpg'
       }
+    }
   head
     title Sample ASCE Conference
     meta(charset="utf-8")

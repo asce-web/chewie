@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "xmeter": "cd node_modules/xmeter/  &&  npm install  &&  npm run build  &&  cd -",
-    "jade:index": "jade {index,sponsors,index-legacy}.jade",
+    "jade:index": "jade index-legacy.jade",
     "jade:styleguide": "jade styleguide/{index,base,obj,comp-typo,comp-ui}.jade",
     "jade:all": "npm run jade:index  &&  npm run jade:styleguide",
     "lessc:chewie": "lessc styles/chewie.less styles/chewie.css",
@@ -17,7 +17,7 @@
     "minify:chewie": "cleancss styles/chewie.css -o styles/chewie.min.css",
     "minify:legacy": "cleancss legacy.css -o legacy.min.css",
     "minify:all": "npm run minify:chewie  &&  npm run minify:legacy",
-    "unbuild:html": "rm {index,sponsors,index-legacy}.html styleguide/{index,base,obj,comp-typo,comp-ui}.html",
+    "unbuild:html": "rm index-legacy.html styleguide/{index,base,obj,comp-typo,comp-ui}.html",
     "unbuild:css": "rm styles/chewie.css styles/chewie.min.css legacy.css legacy.min.css styleguide/styles/styleguide.css",
     "unbuild": "npm run unbuild:html  &&  npm run unbuild:css",
     "build": "npm run jade:all  &&  npm run lessc:all  &&  npm run minify:all"
