@@ -10,27 +10,27 @@
 // ^author
 // : Chris Harvey
 // ^updated
-// : 2017-04-13
+// : 2017-06-11
 .o-Flex--siteHead {
   margin: @g-vru 0; // HACK fallback
   margin: var(--vru) 0;
-  .align-items(center);
+  align-items: center;
   @media not all and (min-width: 45em) {
-    .flex-direction(column);
+    flex-direction: column;
   }
 }
 .o-Flex--siteFoot {
   @media not all and (min-width: 30em) {
-    .flex-direction(column);
+    flex-direction: column;
   }
   @media screen and (min-width: 30em) and (max-width: 44.999em) {
-    .flex-wrap(wrap);
+    flex-wrap: wrap;
     & > .o-Flex__Item:nth-child(1),
     & > .o-Flex__Item:nth-child(3) {
-      .flex(50%);
+      flex: 50%;
     }
     & > .o-Flex__Item:nth-child(2) {
-      .flex-order(1);
+      order: 1;
     }
   }
 }
@@ -46,9 +46,9 @@
 // ^author
 // : Chris Harvey
 // ^updated
-// : 2017-04-13
+// 2017-06-11
 .o-Flex__Item--siteLogo {
-  .flex(0 0 auto);
+  flex: 0 0 auto;
   width: 6rem; // HACK fallback // maximum possible --site-logo-width
   width: var(--site-logo-width); // [1]
   @media screen and (min-width: 45em) {
@@ -76,7 +76,7 @@
 }
 @media not all and (min-width: 45em) {
   .-xd-c-nM {
-    .flex-direction(column) !important;
+    flex-direction: column !important;
   }
 }
 

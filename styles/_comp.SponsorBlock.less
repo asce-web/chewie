@@ -23,8 +23,7 @@
 // : Chris Harvey
 // ^updated
 // : 2016-04-03
-.top-sponsor-block,
-.c-SponsorBlock {
+.top-sponsor-block {
   @border_width: 2px;
   margin-bottom: 40px;
   &::before,
@@ -49,8 +48,7 @@
     }
   }
 }
-.premier,
-.c-SponsorBlock--premier {
+.premier {
   &::before,
   .box  {
     border-color: @color_premier;
@@ -58,13 +56,8 @@
   &::before {
     content: 'Premier';
   }
-  img {
-    // TODO remove this selector once we can apply a class
-    .c-SponsorBlock__Logo--premier;
-  }
 }
-.platinum,
-.c-SponsorBlock--platinum {
+.platinum {
   &::before,
   .box  {
     border-color: @color_platinum;
@@ -72,13 +65,8 @@
   &::before {
     content: 'Platinum';
   }
-  img {
-    // TODO remove this selector once we can apply a class
-    .c-SponsorBlock__Logo--platinum;
-  }
 }
-.gold,
-.c-SponsorBlock--gold {
+.gold {
   &::before,
   .box  {
     border-color: @color_gold;
@@ -86,13 +74,8 @@
   &::before {
     content: 'Gold';
   }
-  img {
-    // TODO remove this selector once we can apply a class
-    .c-SponsorBlock__Logo--gold;
-  }
 }
-.corporate,
-.c-SponsorBlock--corporate {
+.corporate {
   &::before,
   .box  {
     border-color: @color_corporate;
@@ -101,8 +84,7 @@
     content: 'Corporate Sponsors';
   }
 }
-.silver,
-.c-SponsorBlock--silver {
+.silver {
   &::before,
   .box  {
     border-color: @color_silver;
@@ -111,8 +93,7 @@
     content: 'Silver';
   }
 }
-.bronze,
-.c-SponsorBlock--bronze {
+.bronze {
   &::before,
   .box  {
     border-color: @color_bronze;
@@ -122,8 +103,7 @@
   }
 }
 .financial,
-.copper,
-.c-SponsorBlock--copper {
+.copper {
   &::before,
   .box  {
     border-color: @color_copper;
@@ -144,38 +124,29 @@
 // ^updated
 // : 2016-04-03
 .top-sponsor-block img,
-.coop-orgs-block img,
-.c-SponsorBlock__Logo {
+.coop-orgs-block img {
   .low-logo();
   margin: 20px;
   @media (max-width: 767px) {
     margin-left: 0;
     margin-right: 0;
   }
-  .premier &,
-  .c-SponsorBlock--premier & {
-    .top-logo();
-  }
-  .platinum &,
-  .c-SponsorBlock--platinum & {
-    .top-logo();
-  }
-  .gold &,
-  .c-SponsorBlock--gold & {
-    .mid-logo();
-  }
 }
-// TODO leaving these here for now for readability but removing later
-// once we can rename classes
-.c-SponsorBlock__Logo--premier {
+
+.premier img {
   .top-logo();
 }
-.c-SponsorBlock__Logo--platinum {
+.platinum img {
   .top-logo();
 }
-.c-SponsorBlock__Logo--gold {
+.gold img {
   .mid-logo();
 }
+.corporate img {
+}
+.silver img {
+}
+
 
 
 // A generic text link (instead of a logo) in a sponsor block

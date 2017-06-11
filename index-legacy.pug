@@ -1,21 +1,20 @@
 doctype html
-html.no-js
-  block vars
-    -
-      var conference = {
-        name     : 'Sample ASCE Conference'
-      , classname: ''
-      , menuhover: false
-      , tagline  : 'Optional Tagline for the Conference Goes Here Lorem Ipsum'
-      , theme    : 'New ideas. New practices. New science. New resources. New colleagues. New business procedures.'
-      , detail   : 'Boston, Massachusetts  |  April 3–5, 2015'
-      , image    : {
-          shield : './img/shield-logo-ewri.png'
-        , hero   : './img/fpo-hero.jpg'
-        , banner : './img/fpo-header.jpg'
-        , sidebar: './img/FPO_sidebar_340x135.jpg'
-        }
+html(lang="en")
+  -
+    var conference = {
+      name     : 'Sample ASCE Conference'
+    , classname: ''
+    , menuhover: false
+    , tagline  : 'Optional Tagline for the Conference Goes Here Lorem Ipsum'
+    , theme    : 'New ideas. New practices. New science. New resources. New colleagues. New business procedures.'
+    , detail   : 'Boston, Massachusetts  |  April 3–5, 2015'
+    , image    : {
+        shield : './img/shield-logo-ewri.png'
+      , hero   : './img/fpo-hero.jpg'
+      , banner : './img/fpo-header.jpg'
+      , sidebar: './img/FPO_sidebar_340x135.jpg'
       }
+    }
   head
     title Sample ASCE Conference
     meta(charset="utf-8")
@@ -132,12 +131,15 @@ html.no-js
           header.c-Hero
             img.c-Hero__Img(src=conference.image.hero alt="unsaturated soil&mdash;dry cracked earth")
             h1.c-Hero__Hn= conference.theme
-            p.c-Hero__Blurb.
-              Exposure to the latest industry advances will help you discover
-              your own #[a cutting-edge solutions]. Gain contacts among colleagues and
-              #[a(href) resource providers]. Ultimately, #[cite Structures Congress 2014]
-              will #[a.c-LinkBanner(href) prepare you and your organization]
-              to tackle greater challenges.
+            div.c-Hero__Blurb
+              p.
+                Exposure to the latest industry advances will help you discover
+                your own #[a cutting-edge solutions]. Gain contacts among colleagues and
+                #[a(href) resource providers].
+              p.
+                Ultimately, #[cite Structures Congress 2014]
+                will #[a.c-LinkBanner(href) prepare you and your organization]
+                to tackle greater challenges.
           section.t-Content
             h2 Keynote Speakers
             ul.o-List
@@ -243,64 +245,63 @@ html.no-js
                 p: a(href="#0")
                   i.glyphicons.social.social-twitter.-mr-h(role="none")
                   | #structures2014
-    div.-mb-2
-      aside: div.o-Constrain.-mh-2
-        h2 Top Sponsors
-        mixin supporterBlock(level, size, list)
-          section.c-SupporterBlock(class=`c-SupporterBlock--${size}`)
-            h1.c-SupporterBlock__Hn= level
-            ul.o-List.o-Flex.c-SupporterBlock__List
-              each item in list
-                li.o-List__Item.o-Flex__Item.c-SupporterBlock__List__Item(itemprop="sponsor" itemscope="" itemtype="http://schema.org/Organization")
-                  a(href=item.url rel="external nofollow" itemprop="url")
-                    img.c-SupporterBlock__Logo(src=item.img alt=item.name itemprop="logo")
-                    meta(content=item.name itemprop="name")
-        +supporterBlock('Platinum', 'lrg', [
-          { name: 'Espon'   , url: '#0', img: 'img/sponsor_logo_horizontal2.gif' }
-        , { name: 'Alliance', url: '#0', img: 'img/sponsor_logo_horizontal1.gif' }
-        ])
-        +supporterBlock('Gold', 'lrg', [
-          { name: 'Ria'     , url: '#0', img: 'img/Sponsorlogo_square1.gif'      }
-        , { name: 'Geico'   , url: '#0', img: 'img/sponsor_logo_horizontal3.gif' }
-        , { name: 'Exponent', url: '#0', img: 'img/sponsor_logo_horizontal4.gif' }
-        ])
-        +supporterBlock('Corporate', 'med', [
-          { name: 'Geico'   , url: '#0', img: 'img/sponsor_logo_horizontal3.gif' }
-        , { name: 'Exponent', url: '#0', img: 'img/sponsor_logo_horizontal4.gif' }
-        ])
-        +supporterBlock('Silver', 'med', [
-          { name: 'Exponent', url: '#0', img: 'img/sponsor_logo_horizontal4.gif' }
-        , { name: 'Espon'   , url: '#0', img: 'img/sponsor_logo_horizontal2.gif' }
-        ])
-        +supporterBlock('Bronze', 'sml', [
-          { name: 'Ria'     , url: '#0', img: 'img/Sponsorlogo_square1.gif'      }
-        , { name: 'Geico'   , url: '#0', img: 'img/sponsor_logo_horizontal3.gif' }
-        ])
-        +supporterBlock('Copper', 'sml', [
-          { name: 'Alliance', url: '#0', img: 'img/sponsor_logo_horizontal1.gif' }
-        , { name: 'Geico'   , url: '#0', img: 'img/sponsor_logo_horizontal3.gif' }
-        , { name: 'Exponent', url: '#0', img: 'img/sponsor_logo_horizontal4.gif' }
-        ])
-      aside.c-Mast.c-Mast--coop: div.o-Constrain.-mh-2
-        h2.h-Hidden Top Supporters
-        +supporterBlock('Cooperating Organizations', 'sml', [
-          { name: 'AISC'    , url: '#0', img: 'img/cooplogo_square1.gif'     }
-        , { name: 'Correios', url: '#0', img: 'img/cooplogo_horizontalcolor1.gif' }
-        , { name: 'Jacobs'  , url: '#0', img: 'img/cooplogo_horizontalcolor2.gif' }
-        , { name: 'T&DI'    , url: '#0', img: 'img/cooplogo_horizontal2.gif' }
-        , { name: 'CI'      , url: '#0', img: 'img/cooplogo_square4.gif'     }
-        , { name: 'EWRI'    , url: '#0', img: 'img/cooplogo_horizontal4.gif' }
-        , { name: 'KU'      , url: '#0', img: 'img/Sponsorlogo_square2.gif' }
-        ])
-        +supporterBlock('Educational Grant', 'sml', [
-          { name: 'AISC'    , url: '#0', img: 'img/cooplogo_square1.gif'     }
-        , { name: 'Correios', url: '#0', img: 'img/cooplogo_horizontalcolor1.gif' }
-        , { name: 'Jacobs'  , url: '#0', img: 'img/cooplogo_horizontalcolor2.gif' }
-        , { name: 'T&DI'    , url: '#0', img: 'img/cooplogo_horizontal2.gif' }
-        , { name: 'CI'      , url: '#0', img: 'img/cooplogo_square4.gif'     }
-        , { name: 'EWRI'    , url: '#0', img: 'img/cooplogo_horizontal4.gif' }
-        , { name: 'KU'      , url: '#0', img: 'img/Sponsorlogo_square2.gif' }
-        ])
+    aside: div.o-Constrain
+      h2.h-Hidden Top Sponsors
+      mixin supporterBlock(level, size, list)
+        section.c-SupporterBlock(class=`c-SupporterBlock--${size}`)
+          h1.c-SupporterBlock__Hn= level
+          ul.o-List.o-Flex.c-SupporterBlock__List
+            each item in list
+              li.o-List__Item.o-Flex__Item.c-SupporterBlock__List__Item(itemprop="sponsor" itemscope="" itemtype="http://schema.org/Organization")
+                a(href=item.url rel="external nofollow" itemprop="url")
+                  img.c-SupporterBlock__Logo(src=item.img alt=item.name itemprop="logo")
+                  meta(content=item.name itemprop="name")
+      +supporterBlock('Platinum', 'lrg', [
+        { name: 'Espon'   , url: '#0', img: 'img/sponsor_logo_horizontal2.gif' }
+      , { name: 'Alliance', url: '#0', img: 'img/sponsor_logo_horizontal1.gif' }
+      ])
+      +supporterBlock('Gold', 'lrg', [
+        { name: 'Ria'     , url: '#0', img: 'img/Sponsorlogo_square1.gif'      }
+      , { name: 'Geico'   , url: '#0', img: 'img/sponsor_logo_horizontal3.gif' }
+      , { name: 'Exponent', url: '#0', img: 'img/sponsor_logo_horizontal4.gif' }
+      ])
+      +supporterBlock('Corporate', 'med', [
+        { name: 'Geico'   , url: '#0', img: 'img/sponsor_logo_horizontal3.gif' }
+      , { name: 'Exponent', url: '#0', img: 'img/sponsor_logo_horizontal4.gif' }
+      ])
+      +supporterBlock('Silver', 'med', [
+        { name: 'Exponent', url: '#0', img: 'img/sponsor_logo_horizontal4.gif' }
+      , { name: 'Espon'   , url: '#0', img: 'img/sponsor_logo_horizontal2.gif' }
+      ])
+      +supporterBlock('Bronze', 'sml', [
+        { name: 'Ria'     , url: '#0', img: 'img/Sponsorlogo_square1.gif'      }
+      , { name: 'Geico'   , url: '#0', img: 'img/sponsor_logo_horizontal3.gif' }
+      ])
+      +supporterBlock('Copper', 'sml', [
+        { name: 'Alliance', url: '#0', img: 'img/sponsor_logo_horizontal1.gif' }
+      , { name: 'Geico'   , url: '#0', img: 'img/sponsor_logo_horizontal3.gif' }
+      , { name: 'Exponent', url: '#0', img: 'img/sponsor_logo_horizontal4.gif' }
+      ])
+    aside.c-Mast.c-Mast--coop: div.o-Constrain
+      h2.h-Hidden Supporting Organizations
+      +supporterBlock('Cooperating Organizations', 'sml', [
+        { name: 'AISC'    , url: '#0', img: 'img/cooplogo_square1.gif'     }
+      , { name: 'Correios', url: '#0', img: 'img/cooplogo_horizontalcolor1.gif' }
+      , { name: 'Jacobs'  , url: '#0', img: 'img/cooplogo_horizontalcolor2.gif' }
+      , { name: 'T&DI'    , url: '#0', img: 'img/cooplogo_horizontal2.gif' }
+      , { name: 'CI'      , url: '#0', img: 'img/cooplogo_square4.gif'     }
+      , { name: 'EWRI'    , url: '#0', img: 'img/cooplogo_horizontal4.gif' }
+      , { name: 'KU'      , url: '#0', img: 'img/Sponsorlogo_square2.gif' }
+      ])
+      +supporterBlock('Educational Grant', 'sml', [
+        { name: 'AISC'    , url: '#0', img: 'img/cooplogo_square1.gif'     }
+      , { name: 'Correios', url: '#0', img: 'img/cooplogo_horizontalcolor1.gif' }
+      , { name: 'Jacobs'  , url: '#0', img: 'img/cooplogo_horizontalcolor2.gif' }
+      , { name: 'T&DI'    , url: '#0', img: 'img/cooplogo_horizontal2.gif' }
+      , { name: 'CI'      , url: '#0', img: 'img/cooplogo_square4.gif'     }
+      , { name: 'EWRI'    , url: '#0', img: 'img/cooplogo_horizontal4.gif' }
+      , { name: 'KU'      , url: '#0', img: 'img/Sponsorlogo_square2.gif' }
+      ])
     footer
       dl.o-Flex.o-Tabs
         //- NOTE: 'current' displayed first for accessibility
@@ -393,9 +394,7 @@ html.no-js
                     p: a.c-LinkArrow(href="") Call for submissions
                     p: a.c-LinkArrow(href="./sponsors.html") Sponsors
                     p: a.c-LinkArrow(href="") Exhibit
-    footer
-      div.c-Mast.c-Mast--copyright
-        p.-mb-z.-ta-c
+      p.c-Mast.c-Mast--copyright.-mb-z.-ta-c
           i.c-AsceLogo(role="none")
           a(href="http://www.asce.org/" rel="external") &copy; 1996&ndash;2015, American Society of Civil Engineers | ASCE.org
     a(href="#top") jump to top

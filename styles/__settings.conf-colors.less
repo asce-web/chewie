@@ -22,11 +22,11 @@
 @color-ci-secondary: #5e6167;
 @color-ci-accent:    #ffc72a;
 
-// Pipelines 2016 // equipped with a local copy of chewie (not cdn)
+// Pipelines 2018
 // class: .pipelinesconference
-@color-pl-primary:   #006c67;
-@color-pl-secondary: #717073;
-@color-pl-accent:    #c1d8c5;
+@color-pl-primary:   #013d4b;
+@color-pl-secondary: #1f8234;
+@color-pl-accent:    #bb3028;
 
 // ICSI 2016 & 2017
 // class: .icsiconference
@@ -100,12 +100,6 @@
 @color-ewri-secondary: #dbb92a;
 @color-ewri-accent:    #a26049;
 
-// Pipelines 2017
-// class: .pipelinesconference
-@color-pl-primary:   #571c1f;
-@color-pl-secondary: #9a746a;
-@color-pl-accent:    #d17720;
-
 // ASCE Convention 2017
 // class: .asceconvention2017
 @color-2017-primary:   #00737b;
@@ -159,6 +153,24 @@
 @color-geesd-primary:   #004e58;
 @color-geesd-secondary: #985f35;
 @color-geesd-accent:    #97a8b0;
+
+// AEI Forum 2018
+// class: .aei-forum
+@color-aeiforum-primary:   #7f7f73;
+@color-aeiforum-secondary: #00548e;
+@color-aeiforum-accent:    #aba9a0;
+
+// ICTD 2018
+// class: .asce-ictd
+@color-ictd-primary:   #1a355e;
+@color-ictd-secondary: #918c13;
+@color-ictd-accent:    #605c06;
+
+// Surveying 2018
+// class: .surveyingconference
+@color-surv-primary:   #547975;
+@color-surv-secondary: #e37f1c;
+@color-surv-accent:    #729d98;
 //++++ end # CONFERENCE SITE-SPECIFIC COLORS ++++//
 
 
@@ -189,6 +201,9 @@
   .unsatsoilsconf      & { background-color: @color-unsat-primary; }
   .etsconference       & { background-color: @color-ets-primary; }
   .geesdconference     & { background-color: @color-geesd-primary; }
+  .aei-forum           & { background-color: @color-aeiforum-primary; }
+  .asce-ictd           & { background-color: @color-ictd-primary; }
+  .surveyingconference & { background-color: @color-surv-primary; }
 }
 .mx-bc-secondary() {
   :root                & { background-color: @color-site-secondary; }
@@ -214,6 +229,9 @@
   .unsatsoilsconf      & { background-color: @color-unsat-secondary; }
   .etsconference       & { background-color: @color-ets-secondary; }
   .geesdconference     & { background-color: @color-geesd-secondary; }
+  .aei-forum           & { background-color: @color-aeiforum-secondary; }
+  .asce-ictd           & { background-color: @color-ictd-secondary; }
+  .surveyingconference & { background-color: @color-surv-secondary; }
 }
 .mx-bc-accent() {
   :root                & { background-color: @color-site-accent; }
@@ -239,6 +257,9 @@
   .unsatsoilsconf      & { background-color: @color-unsat-accent; }
   .etsconference       & { background-color: @color-ets-accent; }
   .geesdconference     & { background-color: @color-geesd-accent; }
+  .aei-forum           & { background-color: @color-aeiforum-accent; }
+  .asce-ictd           & { background-color: @color-ictd-accent; }
+  .surveyingconference & { background-color: @color-surv-accent; }
 }
 .mx-c-primary() {
   :root                & { color: @color-site-primary; }
@@ -264,6 +285,9 @@
   .unsatsoilsconf      & { color: @color-unsat-primary; }
   .etsconference       & { color: @color-ets-primary; }
   .geesdconference     & { color: @color-geesd-primary; }
+  .aei-forum           & { color: @color-aeiforum-primary; }
+  .asce-ictd           & { color: @color-ictd-primary; }
+  .surveyingconference & { color: @color-surv-primary; }
 }
 .mx-c-secondary() {
   :root                & { color: @color-site-secondary; }
@@ -289,6 +313,9 @@
   .unsatsoilsconf      & { color: @color-unsat-secondary; }
   .etsconference       & { color: @color-ets-secondary; }
   .geesdconference     & { color: @color-geesd-secondary; }
+  .aei-forum           & { color: @color-aeiforum-secondary; }
+  .asce-ictd           & { color: @color-ictd-secondary; }
+  .surveyingconference & { color: @color-surv-secondary; }
 }
 .mx-c-accent() {
   :root                & { color: @color-site-accent; }
@@ -314,6 +341,9 @@
   .unsatsoilsconf      & { color: @color-unsat-accent; }
   .etsconference       & { color: @color-ets-accent; }
   .geesdconference     & { color: @color-geesd-accent; }
+  .aei-forum           & { color: @color-aeiforum-accent; }
+  .asce-ictd           & { color: @color-ictd-accent; }
+  .surveyingconference & { color: @color-surv-accent; }
 }
 .mx-btc-accent() {
   :root                & { border-top-color: @color-site-accent; }
@@ -339,6 +369,9 @@
   .unsatsoilsconf      & { border-top-color: @color-unsat-accent; }
   .etsconference       & { border-top-color: @color-ets-accent; }
   .geesdconference     & { border-top-color: @color-geesd-accent; }
+  .aei-forum           & { border-top-color: @color-aeiforum-accent; }
+  .asce-ictd           & { border-top-color: @color-ictd-accent; }
+  .surveyingconference & { border-top-color: @color-surv-accent; }
 }
 .mx-bc-primary-fade(...) {
   :root                & { .bg-grad(@color-site-primary); }
@@ -364,6 +397,9 @@
   .unsatsoilsconf      & { .bg-grad(@color-unsat-primary); }
   .etsconference       & { .bg-grad(@color-ets-primary); }
   .geesdconference     & { .bg-grad(@color-geesd-primary); }
+  .aei-forum           & { .bg-grad(@color-aeiforum-primary); }
+  .asce-ictd           & { .bg-grad(@color-ictd-primary); }
+  .surveyingconference & { .bg-grad(@color-surv-primary); }
 }
 .mx-bc-primary-fade-reverse() {
   :root                & { .bg-grad-rev(@color-site-primary); }

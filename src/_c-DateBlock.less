@@ -15,7 +15,7 @@
 // ^author
 // Chris Harvey
 // ^updated
-// 2017-04-27
+// 2017-06-11
 
 @datewidth: 90px; // FIXME magic number
 
@@ -63,13 +63,10 @@
 }
 
 // feature query support & flexbox support
-@supports (-webkit-flex-wrap: wrap)
-       or (    -ms-flex-wrap: wrap)
-       or (        flex-wrap: wrap) {
-  @import (reference) url('../node_modules/xmeter/src/__fallback.flexbox.less');
+@supports (flex-wrap: wrap) {
   .c-DateBlock {
-    .flexbox();
-    .flex-wrap(wrap);
+    display: flex;
+    flex-wrap: wrap;
     &::after { content: none; } // unset
   }
   .c-DateBlock__Date,
@@ -78,24 +75,22 @@
   }
   .c-DateBlock__Date {
     width: auto; // unset
-    .flex(0 0 @datewidth);
+    flex: 0 0 @datewidth;
   }
   .c-DateBlock__Desc {
     width: auto; // unset
     min-height: 0; // unset
-    .flex(0 0 calc(~'100% - '@datewidth));
+    flex: 0 0 calc(~'100% - '@datewidth);
   }
 }
 
 // feature query support & grid support
-@supports (display: -ms-grid)
-       or (display:     grid) {
-  @import (reference) url('../node_modules/xmeter/src/__fallback.grid.less');
+@supports (display: grid) {
   .c-DateBlock {
-    .grid();
-    .grid-template-columns(@datewidth auto);
-    .grid-row-gap(0.5 * @g-vru); // HACK fallback
-    .grid-row-gap(calc(~'0.5 * var(--vru)'));
+    display: grid;
+    grid-template-columns: @datewidth auto;
+    grid-row-gap: 0.5 * @g-vru; // HACK fallback
+    grid-row-gap: calc(~'0.5 * var(--vru)');
   }
   .c-DateBlock__Date,
   .c-DateBlock__Desc {

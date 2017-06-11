@@ -1,26 +1,18 @@
 {
   "name": "chewie",
-  "version": "1.11.4",
+  "version": "2.0.0",
   "description": "master conferences stylesheet",
   "main": "index.html",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "xmeter": "cd node_modules/xmeter/  &&  npm install  &&  npm run build  &&  cd -",
-    "jade:index": "jade {index,sponsors}.jade",
     "jade:styleguide": "jade styleguide/{index,base,obj,comp-typo,comp-ui}.jade",
-    "jade:all": "npm run jade:index  &&  npm run jade:styleguide",
-    "lessc:chewie": "lessc styles/chewie.less styles/chewie.css",
-    "lessc:legacy": "lessc src/legacy.less legacy.css",
     "lessc:styleguide": "lessc styleguide/styles/styleguide.less styleguide/styles/styleguide.css",
-    "lessc:all": "npm run lessc:chewie  &&  npm run lessc:legacy  &&  npm run lessc:styleguide",
-    "minify:chewie": "cleancss styles/chewie.css -o styles/chewie.min.css",
-    "minify:legacy": "cleancss legacy.css -o legacy.min.css",
-    "minify:all": "npm run minify:chewie  &&  npm run minify:legacy",
-    "unbuild:html": "rm {index,sponsors}.html styleguide/{index,base,obj,comp-typo,comp-ui}.html",
+    "unbuild:html": "rm index-legacy.html styleguide/{index,base,obj,comp-typo,comp-ui}.html",
     "unbuild:css": "rm styles/chewie.css styles/chewie.min.css legacy.css legacy.min.css styleguide/styles/styleguide.css",
     "unbuild": "npm run unbuild:html  &&  npm run unbuild:css",
-    "build": "npm run jade:all  &&  npm run lessc:all  &&  npm run minify:all"
+    "build": "npm run jade:styleguide  &&  npm run lessc:styleguide  &&  gulp build"
   },
   "repository": {
     "type": "git",
@@ -33,8 +25,13 @@
   },
   "homepage": "https://github.com/asce-web/chewie#readme",
   "devDependencies": {
-    "bangs": "^0.10.0",
-    "clean-css": "^3.4.9",
+    "bangs": "^0.11.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean-css": "^3.4.1",
+    "gulp-less": "^3.3.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-rename": "^1.2.2",
     "jade": "^1.11.0",
     "less": "^2.6.0",
     "xmeter": "^5.0.0"
