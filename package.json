@@ -8,13 +8,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "xmeter": "cd node_modules/xmeter/  &&  npm install  &&  npm run build  &&  cd -",
     "jade:styleguide": "jade styleguide/{index,base,obj,comp-typo,comp-ui}.jade",
-    "jade:all": "npm run jade:styleguide",
     "lessc:styleguide": "lessc styleguide/styles/styleguide.less styleguide/styles/styleguide.css",
-    "lessc:all": "npm run lessc:styleguide",
     "unbuild:html": "rm index-legacy.html styleguide/{index,base,obj,comp-typo,comp-ui}.html",
     "unbuild:css": "rm styles/chewie.css styles/chewie.min.css legacy.css legacy.min.css styleguide/styles/styleguide.css",
     "unbuild": "npm run unbuild:html  &&  npm run unbuild:css",
-    "build": "npm run jade:all  &&  npm run lessc:all"
+    "build": "npm run jade:styleguide  &&  npm run lessc:styleguide  &&  gulp build"
   },
   "repository": {
     "type": "git",

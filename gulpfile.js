@@ -27,7 +27,6 @@ gulp.task('minify:chewie', ['lessc:chewie'], function () {
     .pipe(gulp.dest('./styles/'))
 })
 
-
 gulp.task('lessc:legacy', function () {
   return gulp.src('src/legacy.less')
     .pipe(less())
@@ -40,3 +39,5 @@ gulp.task('minify:legacy', ['lessc:legacy'], function () {
     .pipe(rename('legacy.min.css')) // TODO: use a SourceMap!
     .pipe(gulp.dest('./'))
 })
+
+gulp.task('build', ['pug:index', 'minify:chewie', 'minify:legacy'])
