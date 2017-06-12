@@ -322,71 +322,69 @@ html(lang="en")
                   p.c-ConferenceTitles__Detail= conference_info.detail
                 if conference_info.tagline
                   p.c-ConferenceTitles__Tagline= conference_info.tagline
-            div(class={'o-Flex o-Flex--siteFoot':which==='current', 't-Content':which!=='current'})
-                block
+            div(class={'t-Content':which!=='current'})
+              block
         +yearTab(2014, {name:'Sample ASCE Conference 2014'}, 'current')
-          nav.o-Flex__Item.c-Sitemap#sitemap
-            h3.h-Hidden Sitemap (part 1 of 2)
-            ul.o-List(role="directory")
-              li.o-List__Item.c-Sitemap__TopItem
-                a.c-Sitemap__TopItem__Link(href="./") Home
-              li.o-List__Item.c-Sitemap__TopItem
-                a.c-Sitemap__TopItem__Link(href="") Program
-                ul.o-List.c-Sitemap__TopItem__List
+          nav.o-Flex.o-Flex--siteFoot#sitemap
+            h3.h-Hidden Sitemap
+            ul.o-Flex__Item.o-List.c-Sitemap(role="directory")
+              li.o-List__Item.c-Sitemap__Item
+                a(href="./") Home
+              li.o-List__Item.c-Sitemap__Item
+                a(href="") Program
+                ul.o-List.c-Sitemap__Sub
                   li.o-List__Item: a(href="") Speakers
                   li.o-List__Item: a(href="") Exhibitor List
                   li.o-List__Item: a(href="") ASCE Communities &amp; Pavilions
-              li.o-List__Item.c-Sitemap__TopItem
-                a.c-Sitemap__TopItem__Link(href="") Location
-                ul.o-List.c-Sitemap__TopItem__List
+              li.o-List__Item.c-Sitemap__Item
+                a(href="") Location
+                ul.o-List.c-Sitemap__Sub
                   li.o-List__Item: a(href="") Lodging &amp; Transportation
                   li.o-List__Item: a(href="") For International Travel
-              li.o-List__Item.c-Sitemap__TopItem
-                a.c-Sitemap__TopItem__Link(href="") About
-                ul.o-List.c-Sitemap__TopItem__List
+              li.o-List__Item.c-Sitemap__Item
+                a(href="") About
+                ul.o-List.c-Sitemap__Sub
                   li.o-List__Item: a(href="") Cooperating Organizations
                   li.o-List__Item: a(href="") Volunteer
-              li.o-List__Item.c-Sitemap__TopItem
-                a.c-Sitemap__TopItem__Link(href="") Contact
-          nav.o-Flex__Item.c-Sitemap
-            h3.h-Hidden Sitemap (part 2 of 2)
-            ul.o-List(role="directory")
-              li.o-List__Item.c-Sitemap__TopItem: a.c-Sitemap__TopItem__Link(href="") Why Attend
-              li.o-List__Item.c-Sitemap__TopItem: a.c-Sitemap__TopItem__Link(href="") Registration
-              li.o-List__Item.c-Sitemap__TopItem: a.c-Sitemap__TopItem__Link(href="") For Speakers
-              li.o-List__Item.c-Sitemap__TopItem: a.c-Sitemap__TopItem__Link(href="./sponsors.html") Sponsors
-              li.o-List__Item.c-Sitemap__TopItem: a.c-Sitemap__TopItem__Link(href="") Exhibitors
-          div.o-Flex__Item
-            nav
-              h3 Contact Us
-              ul.o-List.-fz-el-kil
-                li.o-List__Item.-mb-1: a(href="#0")
-                  i.glyphicons.-mr-1.glyphicons-iphone(role="none")
-                  | (800) 548-2723
-                li.o-List__Item.-mb-1: a(href="#0")
-                  i.glyphicons.-mr-1.glyphicons-earphone(role="none")
-                  | +1 (703) 295-7300
-                li.o-List__Item.-mb-1: a(href="#0")
-                  i.glyphicons.-mr-1.glyphicons-envelope(role="none")
-                  | Other contacts
-            nav
-              h3 Connect With ASCE
-              ul.o-List.o-Flex.-xjc-xs.-jc-xs.-jc-s
-                li.o-List__Item.o-Flex__Item.-x-z.-mr-1: a(href="#0")
-                  i.glyphicons.social.social-linked-in
-                    span.h-Hidden linkedin
-                li.o-List__Item.o-Flex__Item.-x-z.-mr-1: a(href="#0")
-                  i.glyphicons.social.social-facebook
-                    span.h-Hidden facebook
-                li.o-List__Item.o-Flex__Item.-x-z.-mr-1: a(href="#0")
-                  i.glyphicons.social.social-twitter
-                    span.h-Hidden twitter
-                li.o-List__Item.o-Flex__Item.-x-z.-mr-1: a(href="#0")
-                  i.glyphicons.social.social-youtube
-                    span.h-Hidden youtube
-                li.o-List__Item.o-Flex__Item.-x-z.-mr-1: a(href="#0")
-                  i.glyphicons.social.social-google-plus
-                    span.h-Hidden google plus
+              li.o-List__Item.c-Sitemap__Item
+                a(href="") Contact
+            ul.o-Flex__Item.o-List.c-Sitemap(role="directory")
+              li.o-List__Item.c-Sitemap__Item: a(href="") Why Attend
+              li.o-List__Item.c-Sitemap__Item: a(href="") Registration
+              li.o-List__Item.c-Sitemap__Item: a(href="") For Speakers
+              li.o-List__Item.c-Sitemap__Item: a(href="./sponsors.html") Sponsors
+              li.o-List__Item.c-Sitemap__Item: a(href="") Exhibitors
+            div.o-Flex__Item
+              section
+                h3 Contact Us
+                ul.o-List.-fz-el-kil
+                  li.o-List__Item.-mb-1: a(href="#0")
+                    i.glyphicons.-mr-1.glyphicons-iphone(role="none")
+                    | (800) 548-2723
+                  li.o-List__Item.-mb-1: a(href="#0")
+                    i.glyphicons.-mr-1.glyphicons-earphone(role="none")
+                    | +1 (703) 295-7300
+                  li.o-List__Item.-mb-1: a(href="#0")
+                    i.glyphicons.-mr-1.glyphicons-envelope(role="none")
+                    | Other contacts
+              section
+                h3 Connect With ASCE
+                ul.o-List.o-Flex.-xjc-xs.-jc-xs.-jc-s
+                  li.o-List__Item.o-Flex__Item.-x-z.-mr-1: a(href="#0")
+                    i.glyphicons.social.social-linked-in
+                      span.h-Hidden linkedin
+                  li.o-List__Item.o-Flex__Item.-x-z.-mr-1: a(href="#0")
+                    i.glyphicons.social.social-facebook
+                      span.h-Hidden facebook
+                  li.o-List__Item.o-Flex__Item.-x-z.-mr-1: a(href="#0")
+                    i.glyphicons.social.social-twitter
+                      span.h-Hidden twitter
+                  li.o-List__Item.o-Flex__Item.-x-z.-mr-1: a(href="#0")
+                    i.glyphicons.social.social-youtube
+                      span.h-Hidden youtube
+                  li.o-List__Item.o-Flex__Item.-x-z.-mr-1: a(href="#0")
+                    i.glyphicons.social.social-google-plus
+                      span.h-Hidden google plus
         +yearTab(2013, {name:'Sample ASCE Conference 2013', tagline:'Lorem Ipsum Optional Tagline for the Conference Goes Here', detail:'Toronto, Canada | May 2–4, 2013'}, 'prev')
                     p: a.c-LinkArrow(href="") Program
                     p: a.c-LinkArrow(href="") Proceedings

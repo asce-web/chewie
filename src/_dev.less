@@ -20,18 +20,12 @@
   }
 }
 .o-Flex--siteFoot {
-  @media not all and (min-width: 30em) {
+  @media not all and (min-width: 45em) {
     flex-direction: column;
   }
   @media screen and (min-width: 30em) and (max-width: 44.999em) {
     flex-wrap: wrap;
-    & > .o-Flex__Item:nth-child(1),
-    & > .o-Flex__Item:nth-child(3) {
-      flex: 50%;
-    }
-    & > .o-Flex__Item:nth-child(2) {
-      order: 1;
-    }
+    max-height: calc((3*5 + 7*2) ~'*' var(--vru)); // 3 pages with height 5vru + 7 pages with height 2vru
   }
 }
 
