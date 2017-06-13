@@ -45,6 +45,7 @@ html(lang="en")
     a.h-Hidden(href="#main") skip to main content
     header
       nav.o-Flex.o-MobileBar
+        h1.h-Hidden Mobile Menu
         a.o-Flex__Item.o-MobileBar__Item.-lh-z(href="./")
           i.glyphicons.glyphicons-home: span.h-Hidden Home
         label.o-Flex__Item.o-MobileBar__Item.c-Toggle(aria-label="toggle main menu")
@@ -52,31 +53,31 @@ html(lang="en")
           i.c-Toggle__Viz.glyphicons.glyphicons-menu-hamburger(role="none")
         noscript
           a(href="#sitemap") Site Map
-        div.o-Drawer.c-NavBar.c-NavBar--mobile
-          //- change div to ul.o-List later
-          div
+        ul.o-List.o-Drawer.c-NavBar.c-NavBar--mobile
+          li.o-List__Item
             a(href="./") Home
-          div
+          li.o-List__Item
             a(href="") Program
             ul
               li: a(href="") Speakers
               li: a(href="") Exhibitor List
               li: a(href="") ASCE Communities &amp; Pavilions
-          div
+          li.o-List__Item
             a(href="") Location
             ul
               li: a(href="") Lodging &amp; Transportation
               li: a(href="") For International Travel
-          div
+          li.o-List__Item
             a(href="") About
             ul
               li: a(href="") Cooperating Organizations
               li: a(href="") Volunteer
-          div: a(href="") Why Attend
-          div: a(href="") Registration
-          div: a(href="") For Speakers
-          div: a(href="./sponsors.html") Sponsors
-          div: a(href="") Exhibitors
+          li.o-List__Item: a(href="") Contact
+          li.o-List__Item: a(href="") Why Attend
+          li.o-List__Item: a(href="") Registration
+          li.o-List__Item: a(href="") For Speakers
+          li.o-List__Item: a(href="./sponsors.html") Sponsors
+          li.o-List__Item: a(href="") Exhibitors
       div.c-Banner.c-Banner--head
         div.o-Flex.o-Constrain
           a.o-Flex__Item.o-Flex.o-Flex--siteHead.o-MainCol(href="./" rel="home")
@@ -88,34 +89,33 @@ html(lang="en")
               p.c-ConferenceTitles__Tagline= conference.tagline
           div.o-Flex__Item.o-SideCol.c-TopImg(style=`background-image: url('${conference.image.banner}');`)
             span.c-YearBadge(role="none") 15
-            div.o-Flex.c-NavBar.c-NavBar--contrib
+            ul.o-List.o-Flex.c-NavBar.c-NavBar--contrib
               //- change to ul.o-List later
-              a(href="") For Speakers
-              a(href="./sponsors.html") Sponsors
-              a(href="") Exhibitors
-      nav.c-Banner.c-Banner--nav
-        div.o-Flex.o-Constrain
-          div.o-Flex__Item.o-Flex.o-MainCol.c-NavBar.c-NavBar--main
-            //- change div to ul.o-List later
-            a(href="./"): i.glyphicons.glyphicons-home
-              span.h-Hidden Home
-            a(href="", data-menu-target="#programlevel2")
+              li.o-List__Item: a(href="") For Speakers
+              li.o-List__Item: a(href="./sponsors.html") Sponsors
+              li.o-List__Item: a(href="") Exhibitors
+      nav.c-Banner.c-Banner--nav: div.o-Constrain.o-Flex
+          h1.h-Hidden Main Menus
+          div.o-Flex__Item.o-MainCol: ul.o-List.o-Flex.c-NavBar.c-NavBar--main
+            li.o-List__Item: a(href="./")
+              i.glyphicons.glyphicons-home: span.h-Hidden Home
+            li.o-List__Item(data-menu-target="#programlevel2"): a(href="#0")
               | Program
-              i.glyphicons.-fz-norm.glyphicons-chevron-down
-            a(href="", data-menu-target="#locationlevel2" class={'active':conference.menuhover})
+              i.glyphicons.-fz-norm.glyphicons-chevron-down(aria-label="sub-items")
+            li.o-List__Item(data-menu-target="#locationlevel2"): a(href="#0" class={'active':conference.menuhover})
               | Location
-              i.glyphicons.-fz-norm.glyphicons-chevron-down
-            a(href="", data-menu-target="#aboutlevel2")
+              i.glyphicons.-fz-norm.glyphicons-chevron-down(aria-label="sub-items")
+            li.o-List__Item(data-menu-target="#aboutlevel2"): a(href="#0")
               | About
-              i.glyphicons.-fz-norm.glyphicons-chevron-down
-            a(href="", data-menu-target="#contactlevel2")
+              i.glyphicons.-fz-norm.glyphicons-chevron-down(aria-label="sub-items")
+            li.o-List__Item(data-menu-target="#contactlevel2"): a(href="#0")
               | Contact
-          div.o-Flex__Item.o-Flex.o-SideCol.c-NavBar.c-NavBar--register
+          div.o-Flex__Item.o-SideCol: ul.o-List.o-Flex.c-NavBar.c-NavBar--register
             //- change div to ul.o-List later
             a(href="") Why Attend
             a(href="") Registration
-      nav.c-Banner.c-Banner--nav.c-Banner--nav--sub
-        div.o-Constrain
+      nav.c-Banner.c-Banner--nav.c-Banner--nav--sub: div.o-Constrain
+          h1.h-Hidden Sub Menus
           ul.o-List.o-Flex.c-NavBar.c-NavBar--sub#programlevel2
             li: a(href="") Speakers
             li: a(href="") Exhibitor List
@@ -126,7 +126,7 @@ html(lang="en")
           ul.o-List.o-Flex.c-NavBar.c-NavBar--sub#aboutlevel2
             li: a(href="") Cooperating Organizations
             li: a(href="") Volunteer
-    main.o-Flex.o-Constrain.-xd-c-nM.-mb-2#main
+    main#main: div.o-Constrain.o-Flex.-xd-c-nM.-mb-2
         div.o-Flex__Item.o-MainCol
           header.c-Hero
             img.c-Hero__Img(src=conference.image.hero alt="unsaturated soil&mdash;dry cracked earth")

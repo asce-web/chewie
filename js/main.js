@@ -1,3 +1,5 @@
+(function () {
+var $ = jQuery
 $.fn.menuify = function() {
     var activeNavEl = null;
     var activeTargetEl = null;
@@ -79,15 +81,6 @@ $.fn.menuify = function() {
         });
     });
 };
- 
-$( "a[data-menu-target]").menuify(); // Makes all the links green.
 
-var toggleableNav = $('.toggleable-nav');
-$(".menu-toggle").click(function (e) {
-    e.preventDefault();
-    toggleableNav.addClass('in');
-});
-toggleableNav.find('.close-nav').click(function (e) {
-    e.preventDefault();
-    toggleableNav.removeClass('in');
-}); 
+$( "[data-menu-target]").menuify(); // Makes all the links green.
+})()
