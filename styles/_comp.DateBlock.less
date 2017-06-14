@@ -15,32 +15,27 @@
 // : Chris Harvey
 // ^updated
 // : 2015-08-28
-.date-block,
-.o-DateBlock {
+.date-block {
   .flexbox();
   .flex-wrap(wrap);
   font-weight: 600;          // opinionated
   font-size: 12px;           // opinionated
   text-transform: uppercase; // opinionated
   letter-spacing: 1px;       // opinionated
-  .date-col,
-  .description-col,
-  .o-DateBlock__Date,
-  .o-DateBlock__Desc {
-    margin-bottom: 10px;
-  }
-  @date_w: 90px;
-  @date_mr: 10px;
-  .date-col,
-  .o-DateBlock__Date {
-    text-align: right;
-    width: @date_w;
-    padding-right: @date_mr;
-    border-right: 1px solid #ccc; // same as speaker-profile dateline border
-  }
-  .description-col,
-  .o-DateBlock__Desc {
-    width: calc(~'100% - ' @date_w);
-    padding-left: @date_mr;
-  }
+}
+.date-col,
+.description-col {
+  margin-bottom: 10px;
+}
+@date_w: 90px;
+@date_mr: 10px;
+.date-col {
+  text-align: right;
+  width: @date_w;
+  padding-right: @date_mr;
+  border-right: 1px solid #ccc; // same as speaker-profile dateline border
+}
+.description-col {
+  width: calc(~'100% - ' @date_w);
+  padding-left: @date_mr;
 }
