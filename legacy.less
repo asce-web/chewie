@@ -1,0 +1,128 @@
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
+    chewie (legacy design)
+    Version: 2.0.0
+\*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+// @import (inline) url('../node_modules/xmeter/xmeter.min.css');
+// @import (inline) url('../node_modules/bangs/bangs.min.css');
+
+
+/*================================*\
+    legacy.less
+\*================================*/
+
+/**
+ * ////////////////    CONTENTS    ////////////////
+ * SETTINGS & TOOLS--------------------PROJECT SETTINGS & MIXINS
+ * __settings.less.....................variables
+ * __tool.buttonText.less..............mixin for button text styles (used on many things)
+ *
+ * BASE--------------------------------BARE UNCLASSED ELEMENTS
+ * _dev.css............................fixes for imported 3rd party
+ * _base.css...........................unclassed html elements
+ *
+ * OBJECTS-----------------------------REUSABLE STRUCTURAL PATTERNS
+ * Constrain...........................keeps content at max width
+ * MainCol.............................main column of a site page
+ * SideCol.............................side column of a site page
+ * MobileBar...........................top bar on mobile devices
+ * Tabs................................tabbed panel interface
+ * Drawer..............................pull-out container
+ *
+ * COMPONENTS--------------------------SPECIFIC STYLE PATTERNS
+ * Banner..............................full-bleed container with background color
+ * ConfLogo............................logo for conference (usually an Institute shield)
+ * ConferenceTitles....................container for name, tagline, detail of conference
+ * TopImg..............................top banner image containing
+ * NavBar..............................any navigation bar
+ * YearBadge...........................badge at top indicating year
+ * AsceLogo............................company logo in copyright line
+ * Hero................................hero section on homepage
+ * Toggle..............................toggle button for Drawer Object
+ * FooterPanel.........................panel in tabbed footer
+ * Sitemap.............................footer navigation
+ * Callout.............................aside section, in sidebar
+ * DateBlock...........................container for important dates
+ * Chair...............................conference chair
+ * KeynoteSpeaker......................keynote speaker promoted on homepage
+ * SupporterBlock......................block of supporters in one level
+ * Btn.................................standard link button
+ *
+ * THEMES & HELPERS--------------------LOCATION-DEPENDENT STYLES
+ * _theme.less.........................overrides for any Base, Object, or Component styles
+ * Content.............................main page content (CMS-editable)
+ * Spaced..............................add horizontal space, preventing full-bleed
+ *
+ * ATOMS-------------------------------FUNCTIONAL CSS
+ */
+
+
+@import (reference) url('node_modules/xmeter/src/__settings.less');
+@import (reference) url('node_modules/xmeter/src/__fallback.transition.less'); // for transitions() mixin // TODO rename to __tool.transitions.less on xmeter v5.7.0+
+@import (reference) url('node_modules/xmeter/src/__tool.fontsize.less');
+@import (reference) url('node_modules/xmeter/src/__tool.borders.less');
+
+@import (reference) url('src/__settings.less');
+@import (reference) url('src/__tool.buttonText.less');
+
+@import (less) url('src/_dev.less');
+@import (less) url('src/_base.less');
+
+
+@import (less) url('src/_o-Constrain.less');
+// Main column of the site.
+// Contains super relevant info.
+//
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2017-04-03
+.o-MainCol {}
+@import (less) url('src/_o-SideCol.less');
+@import (less) url('src/_o-MobileBar.less');
+@import (less) url('src/_o-Tabs.less');
+@import (less) url('src/_o-Drawer.less');
+
+
+@import (less) url('src/_c-Banner.less');
+// Shield logo of the Institute (or orginaztion)
+// organizing the conference.
+//
+// ^author
+// : Dae Clarke
+// ^updated
+// : 2015-08-21
+.c-ConfLogo {
+}
+@import (less) url('src/_c-ConferenceTitles.less');
+@import (less) url('src/_c-TopImg.less');
+@import (less) url('src/_c-NavBar.less');
+@import (less) url('src/_c-YearBadge.less');
+@import (less) url('src/_c-AsceLogo.less');
+@import (less) url('src/_c-Hero.less');
+@import (less) url('src/_c-Toggle.less');
+@import (less) url('src/_c-FooterPanel.less');
+@import (less) url('src/_c-Sitemap.less'); // TODO import from Neo
+@import (less) url('src/_c-Callout.less');
+@import (less) url('src/_c-DateBlock.less');
+@import (less) url('src/_c-Chair.less');
+@import (less) url('src/_c-KeynoteSpeaker.less');
+@import (less) url('src/_c-SupporterBlock.less');
+@import (less) url('src/_c-Btn.less');
+
+
+@import (less) url('src/_themes.less');
+@import (less) url('src/_t-Content.less');
+@import (less) url('src/_h-Spaced.less');
+@import (less) url('src/_drupal.less');
+
+body > a:last-of-type {
+  position: fixed;
+  bottom: var(--vru);
+  right: 999999px;
+  &:focus {
+    right: 1rem;
+  }
+}
