@@ -33,6 +33,7 @@ html {
   // -moz-transform-origin: top center;
   --line-height: 1.25;
   --site-logo-width: 6rem;
+  --copyright-logo-height: var(--vru);
   --supporter-logo-lrg-width: 120px; --supporter-logo-lrg-height: 65px ;
   --supporter-logo-med-width: 90px ; --supporter-logo-med-height: 48px ;
   --supporter-logo-sml-width: 68px ; --supporter-logo-sml-height: 36px ;
@@ -46,6 +47,7 @@ html {
   }
   @media screen and (min-width: 60em) {
     --sidebar-width: 385px; // FIXME magic number!!!
+    --copyright-logo-height: calc(~'2 * var(--vru)');
     --supporter-logo-lrg-width: 360px; --supporter-logo-lrg-height: 160px;
     --supporter-logo-med-width: 270px; --supporter-logo-med-height: 120px;
     --supporter-logo-sml-width: 202px; --supporter-logo-sml-height: 90px ;
