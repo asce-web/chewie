@@ -17,22 +17,16 @@
 // ^updated
 // : 2017-06-12
 .c-Banner {
-  color: @g-color-mast-txt;
+  color: @g-color-banner-txt;
 }
 .c-Banner--head {
   .mx-bc-primary();
 }
 .c-Banner--nav {
   .mx-bc-secondary();
-  @media not all and (min-width: 45em) {
-    display: none;
-  }
 }
 .c-Banner--nav--sub {
   .mx-bc-accent();
-}
-.c-Banner--coop {
-  background-color: @g-color-sponsor-coop_bg;
 }
 .c-Banner--copyright {
   padding: @g-vru 1rem; // HACK fallback

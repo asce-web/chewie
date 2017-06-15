@@ -44,7 +44,7 @@ html(lang="en")
   body(class=conference.classname)#top
     a.h-Hidden(href="#main") skip to main content
     header
-      nav.o-Flex.o-MobileBar
+      nav.o-Flex.o-MobileBar.c-Banner.c-Banner--nav.-d-n-sM
         h1.h-Hidden Mobile Menu
         a.o-Flex__Item.o-MobileBar__Item.h-Block(href="./")
           i.glyphicons.glyphicons-home: span.h-Hidden Home
@@ -94,7 +94,7 @@ html(lang="en")
               li.o-List__Item: a(href="") For Speakers
               li.o-List__Item: a(href="./sponsors.html") Sponsors
               li.o-List__Item: a(href="") Exhibitors
-      nav.c-Banner.c-Banner--nav: div.o-Constrain.o-Flex
+      nav.c-Banner.c-Banner--nav.-d-n-nM: div.o-Constrain.o-Flex
           h1.h-Hidden Main Menus
           div.o-Flex__Item.o-MainCol: ul.o-List.o-Flex.c-NavBar.c-NavBar--main
             li.o-List__Item: a(href="./")
@@ -224,10 +224,10 @@ html(lang="en")
               h1.c-Callout__Hn Conference Chairs
               div.c-Callout__Body
                 ul.o-List
-                  li.c-Chair
+                  li.o-List__Item.c-Chair
                     span.h-Block.c-Chair__Name Glenn Bell, P.E., F.SEI, M.ASCE
                     span.h-Block.c-Chair__Affiliation Simpson Gumpertz &amp; Heger Inc.
-                  li.c-Chair
+                  li.o-List__Item.c-Chair
                     span.h-Block.c-Chair__Name Matt Card, P.E., Aff.M.ASCE
                     span.h-Block.c-Chair__Affiliation Alfred Benesch &amp; Co.
                 p: a(href="") Message from the Chairs
@@ -246,7 +246,7 @@ html(lang="en")
                   i.glyphicons.social.social-twitter.-mr-h(role="none")
                   | #structures2014
     aside: div.o-Constrain
-      h2.h-Hidden Top Sponsors
+      h2.h-Hidden Supporters
       mixin supporterBlock(level, size, list)
         section.c-SupporterBlock(class=`c-SupporterBlock--${size}`)
           h1.c-SupporterBlock__Hn= level
@@ -282,8 +282,6 @@ html(lang="en")
       , { name: 'Geico'   , url: '#0', img: 'img/sponsor_logo_horizontal3.gif' }
       , { name: 'Exponent', url: '#0', img: 'img/sponsor_logo_horizontal4.gif' }
       ])
-    aside.c-Banner.c-Banner--coop: div.o-Constrain
-      h2.h-Hidden Supporting Organizations
       +supporterBlock('Cooperating Organizations', 'sml', [
         { name: 'AISC'    , url: '#0', img: 'img/cooplogo_square1.gif'     }
       , { name: 'Correios', url: '#0', img: 'img/cooplogo_horizontalcolor1.gif' }
@@ -310,7 +308,7 @@ html(lang="en")
             label.h-Block
               input.o-Tabs__Check.h-Hidden(type="radio" name="footertabs" value=year)&attributes((which==='current') ? {checked:''} : {})
               time.c-YearBadge.c-YearBadge--tab(datetime=year aria-label=year)= year.toString().slice(2)
-          dd.o-Flex__Item.o-Tabs__Panel.c-FooterPanel(id=`panel-${which}`): div.o-Constrain
+          dd.o-Flex__Item.o-Tabs__Panel.c-Banner.c-Banner--head.c-FooterPanel(id=`panel-${which}`): div.o-Constrain
             div.o-Flex.o-Flex--siteHead.-mv-2
               //- div.o-Flex__Item: span.c-YearBadge(role="none")= year.toString().slice(2)
               div.o-Flex__Item.o-Flex__Item--siteLogo
@@ -357,7 +355,7 @@ html(lang="en")
             div.o-Flex__Item
               section
                 h3 Contact Us
-                ul.o-List.-fz-el-kil
+                ul.o-List
                   li.o-List__Item.-mb-1: a(href="#0")
                     i.glyphicons.-mr-1.glyphicons-iphone(role="none")
                     | (800) 548-2723
