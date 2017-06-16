@@ -13,38 +13,45 @@
 // : Dae Clarke
 // : Chris Harvey
 // ^updated
-// : 2017-06-12
+// : 2017-06-16
+
+// overwritten below if var() is supported
 .c-YearBadge {
-  @year-badge-width: 10vw;
+  display: none;
+}
+.c-YearBadge--tab {
+  display: inline;
+  font-size: 3rem;
+}
+
+@supports (width: var(--width)) {
+.c-YearBadge {
   display: block;
   position: relative;
-  left: (-0.5 * @year-badge-width);
-  width: @year-badge-width;
-  padding-top: (0.5 * @year-badge-width);
+  left: calc(~'-0.5 * var(--year-badge-width)');
+  width: var(--year-badge-width);
+  padding-top: calc(~'0.5 * var(--year-badge-width)');
   font-weight: 700;
   font-family: 'futura-pt','Open Sans','Helvetica Neue','Helvetica','Arial',sans-serif;
-  font-size: (0.25 * @year-badge-width);
+  font-size: calc(~'0.25 * var(--year-badge-width)');
   text-align: center;
   background-color: @g-color-asce-blue;
-  transform-origin: center top;
-  @media screen and (min-width: 90em) {
-    transform: scale(0.75);
-  }
   &::before {
     content: '20';
     font-weight: 300;
   }
   &::after {
-    @year-badge-corner-height: 0.25 * @year-badge-width;
+    --year-badge-corner-height: calc(~'0.25 * var(--year-badge-width)');
     content: '';
     display: block;
     position: relative;
-    top: @year-badge-corner-height;
+    top: var(--year-badge-corner-height);
     width: 0;
     height: 0;
-    border-width: @year-badge-corner-height (0.5 * @year-badge-width) 0;
+    border-width: var(--year-badge-corner-height) calc(~'0.5 * var(--year-badge-width)') 0;
     border-color: @g-color-asce-blue transparent;
   }
+}
 }
 
 .c-YearBadge--tab {
