@@ -1,6 +1,6 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     chewie (legacy design)
-    Version: 2.0.1
+    Version: 2.0.2
 \*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*================================*\
     legacy.less
@@ -88,6 +88,7 @@
           flex: 0 0 auto;
   width: 6rem;
   width: var(--site-logo-width);
+  text-align: center;
 }
 @media screen and (min-width: 45em) {
   .o-Flex__Item--siteLogo {
@@ -998,9 +999,9 @@ a:focus {
   bottom: 0;
   left: 0;
   right: 0;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -1281,6 +1282,14 @@ a:focus {
   font-size: 2.5vw;
   text-align: center;
   background-color: #0c5fa8;
+  -webkit-transform-origin: center top;
+          transform-origin: center top;
+}
+@media screen and (min-width: 90em) {
+  .c-YearBadge {
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+  }
 }
 .c-YearBadge::before {
   content: '20';
