@@ -26,6 +26,10 @@
   font-size: (0.25 * @year-badge-width);
   text-align: center;
   background-color: @g-color-asce-blue;
+  transform-origin: center top;
+  @media screen and (min-width: 90em) {
+    transform: scale(0.75);
+  }
   &::before {
     content: '20';
     font-weight: 300;
