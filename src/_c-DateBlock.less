@@ -8,14 +8,15 @@
 // Usually a child of `.c-Callout__Body`
 //
 // ^subcomponents
-// __Item - container for date-description pair
-// __Date - date
-// __Desc - description
+// __Item     - container for date-description pair
+// __Date     - date
+// __Desc     - description
+// __Expired  - part of an expired date. should only go on Year and Name (not MonthDay)
 // __MonthDay - part of the date consisting of "MMM DD"
 // ^author
 // Chris Harvey
 // ^updated
-// 2017-06-11
+// 2017-06-19
 
 @datewidth: 90px; // FIXME magic number
 
@@ -24,14 +25,21 @@
   .font-size-mod(14/16);
   font-weight: 600;
 }
+
 .c-DateBlock__Date {
   padding-right: 0.5rem;
   border-right: 1px solid #ccc; // FIXME magic color
   text-align: right;
 }
+
 .c-DateBlock__Desc {
   padding-left: 0.5rem;
 }
+
+.c-DateBlock__Expired {
+  opacity: 0.25; // fadeout(@g-color-body-txt, 75%) equivalent to #ccc (Date border)
+}
+
 .c-DateBlock__MonthDay {
   .buttonText();
   .mx-c-secondary();
@@ -42,6 +50,7 @@
 // legacy support
 .c-DateBlock {
   &::after {
+    // clearfix
     content: '';
     display: block;
     clear: both;
