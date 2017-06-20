@@ -48,9 +48,10 @@ html(lang="en")
         h1.h-Hidden Mobile Menu
         a.o-Flex__Item.o-MobileBar__Item.h-Block(href="./")
           i.glyphicons.glyphicons-home: span.h-Hidden Home
-        label.o-Flex__Item.o-MobileBar__Item.c-Toggle.h-Block(aria-label="toggle main menu")
+        label.o-Flex__Item.o-MobileBar__Item.c-Toggle.h-Block
           input.c-Toggle__Check.h-Hidden(type="checkbox" value="main menu is open" role="switch")
-          i.c-Toggle__Viz.glyphicons.glyphicons-menu-hamburger(role="none")
+          i.c-Toggle__Viz.glyphicons.glyphicons-menu-hamburger
+            span.h-Hidden toggle main menu
         noscript
           a(href="#sitemap") Site Map
         ul.o-List.o-Drawer.c-NavBar.c-NavBar--mobile
@@ -326,7 +327,7 @@ html(lang="en")
               block
         +yearTab(2014, {name:'Sample ASCE Conference 2014'}, 'current')
           nav.o-Flex.o-Flex--siteFoot#sitemap
-            h3.h-Hidden Sitemap
+            h2.h-Hidden Sitemap
             ul.o-Flex__Item.o-List.c-Sitemap(role="directory")
               li.o-List__Item.c-Sitemap__Item
                 a(href="./") Home
@@ -359,13 +360,13 @@ html(lang="en")
                 h3 Contact Us
                 ul.o-List
                   li.o-List__Item.-mb-1: a(href="#0")
-                    i.glyphicons.-mr-1.glyphicons-iphone(role="none")
+                    i.-mr-1.glyphicons.glyphicons-iphone(role="none")
                     | (800) 548-2723
                   li.o-List__Item.-mb-1: a(href="#0")
-                    i.glyphicons.-mr-1.glyphicons-earphone(role="none")
+                    i.-mr-1.glyphicons.glyphicons-earphone(role="none")
                     | +1 (703) 295-7300
                   li.o-List__Item.-mb-1: a(href="#0")
-                    i.glyphicons.-mr-1.glyphicons-envelope(role="none")
+                    i.-mr-1.glyphicons.glyphicons-envelope(role="none")
                     | Other contacts
               section
                 h3 Connect With ASCE
