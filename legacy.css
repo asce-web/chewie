@@ -231,8 +231,27 @@ a:focus {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 300px;
             flex: 0 0 300px;
-    -ms-flex: 0 0 var(--sidebar-width);
-        flex: 0 0 var(--sidebar-width);
+  }
+}
+@media screen and (min-width: 60em) {
+  .o-SideCol {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 385px;
+            flex: 0 0 385px;
+  }
+}
+@media screen and (min-width: 75em) {
+  .o-SideCol {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 450px;
+            flex: 0 0 450px;
+  }
+}
+@media screen and (min-width: 45em) {
+  .o-SideCol {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 var(--sidebar-width);
+            flex: 0 0 var(--sidebar-width);
   }
 }
 /*################################*\
