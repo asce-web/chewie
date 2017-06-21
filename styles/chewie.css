@@ -2035,7 +2035,7 @@ a:focus {
 .pipelinesconference .nav1 .c-NavBar__Link.active,
 .pipelinesconference .nav1 a:hover,
 .pipelinesconference .nav1 .c-NavBar__Link:hover {
-  background-color: #bb3028;
+  background-color: #974800;
 }
 .icsiconference .nav1 a.active,
 .icsiconference .nav1 .c-NavBar__Link.active,
@@ -2244,7 +2244,7 @@ a:focus {
   background-color: #714509;
 }
 .pipelinesconference .navigation-level2 {
-  background-color: #bb3028;
+  background-color: #974800;
 }
 .icsiconference .navigation-level2 {
   background-color: #a3446d;
@@ -2350,7 +2350,7 @@ a:focus {
 }
 .pipelinesconference .tab-button:hover,
 .pipelinesconference li.active .tab-button {
-  background-color: #bb3028;
+  background-color: #974800;
 }
 .icsiconference .tab-button:hover,
 .icsiconference li.active .tab-button {
@@ -2478,7 +2478,7 @@ li.active .tab-button::after {
   border-top-color: #714509;
 }
 .pipelinesconference li.active .tab-button::after {
-  border-top-color: #bb3028;
+  border-top-color: #974800;
 }
 .icsiconference li.active .tab-button::after {
   border-top-color: #a3446d;
@@ -3729,7 +3729,7 @@ a.button--disabled:focus {
   background-color: #714509 !important;
 }
 .pipelinesconference .a-bc-accent {
-  background-color: #bb3028 !important;
+  background-color: #974800 !important;
 }
 .icsiconference .a-bc-accent {
   background-color: #a3446d !important;
@@ -3963,7 +3963,7 @@ a.button--disabled:focus {
   color: #714509 !important;
 }
 .pipelinesconference .a-c-accent {
-  color: #bb3028 !important;
+  color: #974800 !important;
 }
 .icsiconference .a-c-accent {
   color: #a3446d !important;

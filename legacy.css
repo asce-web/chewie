@@ -88,6 +88,7 @@
           flex: 0 0 auto;
   width: 6rem;
   width: var(--site-logo-width);
+  text-align: center;
 }
 @media screen and (min-width: 45em) {
   .o-Flex__Item--siteLogo {
@@ -119,6 +120,7 @@
 html {
   --line-height: 1.25;
   --site-logo-width: 6rem;
+  --year-badge-width: 10vw;
   --copyright-logo-height: var(--vru);
   --supporter-logo-lrg-width: 120px;
   --supporter-logo-lrg-height: 65px ;
@@ -159,9 +161,14 @@ html {
     --sidebar-width: 450px;
   }
 }
-@media (min-width: 45em) and (max-width: 75em) {
+@media screen and (min-width: 45em) and (max-width: 75em) {
   html {
     --site-logo-width: 4rem;
+  }
+}
+@media screen and (min-width: 90em) {
+  html {
+    --year-badge-width: 9rem;
   }
 }
 body {
@@ -496,7 +503,7 @@ a:focus {
   background-color: #714509;
 }
 .pipelinesconference .c-Banner--nav--sub {
-  background-color: #bb3028;
+  background-color: #974800;
 }
 .icsiconference .c-Banner--nav--sub {
   background-color: #a3446d;
@@ -647,7 +654,7 @@ a:focus {
 .c-TopImg {
   position: relative;
   background-size: cover;
-  background-position: 50% 0;
+  background-position: center;
 }
 @media not all and (min-width: 45em) {
   .c-TopImg {
@@ -767,7 +774,7 @@ a:focus {
 .pipelinesconference .c-NavBar--main > *:hover,
 .pipelinesconference .c-NavBar--main > *:focus,
 .pipelinesconference .c-NavBar--main > *.active {
-  background-color: #bb3028;
+  background-color: #974800;
 }
 .icsiconference .c-NavBar--main > *:hover,
 .icsiconference .c-NavBar--main > *:focus,
@@ -904,9 +911,9 @@ a:focus {
   bottom: 0;
   left: 0;
   right: 0;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -995,7 +1002,7 @@ a:focus {
   background-color: #714509;
 }
 .pipelinesconference .c-NavBar--sub {
-  background-color: #bb3028;
+  background-color: #974800;
 }
 .icsiconference .c-NavBar--sub {
   background-color: #a3446d;
@@ -1177,30 +1184,40 @@ a:focus {
     legacy  |  _c-YearBadge.less
 \*################################*/
 .c-YearBadge {
-  display: block;
-  position: relative;
-  left: -5vw;
-  width: 10vw;
-  padding-top: 5vw;
-  font-weight: 700;
-  font-family: 'futura-pt', 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-  font-size: 2.5vw;
-  text-align: center;
-  background-color: #0c5fa8;
+  display: none;
 }
-.c-YearBadge::before {
-  content: '20';
-  font-weight: 300;
+.c-YearBadge--tab {
+  display: inline;
+  font-size: 3rem;
 }
-.c-YearBadge::after {
-  content: '';
-  display: block;
-  position: relative;
-  top: 2.5vw;
-  width: 0;
-  height: 0;
-  border-width: 2.5vw 5vw 0;
-  border-color: #0c5fa8 transparent;
+@supports (width: var(--width)) {
+  .c-YearBadge {
+    display: block;
+    position: relative;
+    left: calc(-0.5 * var(--year-badge-width));
+    width: var(--year-badge-width);
+    padding-top: calc(0.5 * var(--year-badge-width));
+    font-weight: 700;
+    font-family: 'futura-pt', 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-size: calc(0.25 * var(--year-badge-width));
+    text-align: center;
+    background-color: #0c5fa8;
+  }
+  .c-YearBadge::before {
+    content: '20';
+    font-weight: 300;
+  }
+  .c-YearBadge::after {
+    --year-badge-corner-height: calc(0.25 * var(--year-badge-width));
+    content: '';
+    display: block;
+    position: relative;
+    top: var(--year-badge-corner-height);
+    width: 0;
+    height: 0;
+    border-width: var(--year-badge-corner-height) calc(0.5 * var(--year-badge-width)) 0;
+    border-color: #0c5fa8 transparent;
+  }
 }
 .c-YearBadge--tab {
   z-index: 1;
@@ -1291,7 +1308,7 @@ a:focus {
   background-color: #714509;
 }
 .pipelinesconference input:checked + .c-YearBadge--tab {
-  background-color: #bb3028;
+  background-color: #974800;
 }
 .icsiconference input:checked + .c-YearBadge--tab {
   background-color: #a3446d;
@@ -1369,7 +1386,7 @@ a:focus {
   border-top-color: #714509;
 }
 .pipelinesconference input:checked + .c-YearBadge--tab::after {
-  border-top-color: #bb3028;
+  border-top-color: #974800;
 }
 .icsiconference input:checked + .c-YearBadge--tab::after {
   border-top-color: #a3446d;
