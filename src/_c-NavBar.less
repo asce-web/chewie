@@ -36,21 +36,14 @@
     &:focus {
       background-color: rgba(255,255,255, 0.25);
     }
-    @media not all and (min-width: 767px) { // HACK magic number due to menu text content
-      padding: 0.5rem;
-    }
     @media screen and (min-width: 75em) {
       padding: 1rem;
     }
   }
 }
 .c-NavBar--main {
-  padding-left: 2rem;
+  padding-left: 1rem;
   justify-content: flex-start;
-  @media not all and (min-width: 767px) {
-    // HACK magic number due to menu text content
-    padding-left: 1rem;
-  }
   & > * {
     &:hover,
     &:focus,
