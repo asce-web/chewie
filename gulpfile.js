@@ -15,18 +15,18 @@ gulp.task('pug:index', function () {
     .pipe(gulp.dest('./'))
 })
 
-gulp.task('lessc:chewie', function () {
-  return gulp.src('styles/chewie.less')
-    .pipe(less())
-    .pipe(gulp.dest('./styles/'))
-})
+// gulp.task('lessc:chewie', function () {
+//   return gulp.src('styles/chewie.less')
+//     .pipe(less())
+//     .pipe(gulp.dest('./styles/'))
+// })
 
-gulp.task('minify:chewie', ['lessc:chewie'], function () {
-  return gulp.src('styles/chewie.css')
-    .pipe(clean_css())
-    .pipe(rename('chewie.min.css')) // TODO: use a SourceMap!
-    .pipe(gulp.dest('./styles/'))
-})
+// gulp.task('minify:chewie', ['lessc:chewie'], function () {
+//   return gulp.src('styles/chewie.css')
+//     .pipe(clean_css())
+//     .pipe(rename('chewie.min.css')) // TODO: use a SourceMap!
+//     .pipe(gulp.dest('./styles/'))
+// })
 
 gulp.task('lessc:legacy', function () {
   return gulp.src('legacy.less')
@@ -44,4 +44,4 @@ gulp.task('minify:legacy', ['lessc:legacy'], function () {
     .pipe(gulp.dest('./'))
 })
 
-gulp.task('build', ['pug:index', 'minify:chewie', 'minify:legacy'])
+gulp.task('build', ['pug:index'/*, 'minify:chewie'*/, 'minify:legacy'])
