@@ -10,7 +10,7 @@
     "jade:styleguide": "jade styleguide/{index,base,obj,comp-typo,comp-ui}.jade",
     "lessc:styleguide": "lessc styleguide/styles/styleguide.less styleguide/styles/styleguide.css",
     "unbuild:html": "rm index-legacy.html styleguide/{index,base,obj,comp-typo,comp-ui}.html",
-    "unbuild:css": "rm styles/chewie.css styles/chewie.min.css legacy.css legacy.min.css styleguide/styles/styleguide.css",
+    "unbuild:css": "rm legacy.css legacy.min.css styleguide/styles/styleguide.css",
     "unbuild": "npm run unbuild:html  &&  npm run unbuild:css",
     "build": "npm run jade:styleguide  &&  npm run lessc:styleguide  &&  gulp build"
   },
