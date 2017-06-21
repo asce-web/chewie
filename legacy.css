@@ -53,7 +53,7 @@
     legacy  |  _dev.less
 \*################################*/
 .o-Flex--siteHead {
-  margin: 1.25rem 0;
+  margin: 1.5rem 0;
   margin: var(--vru) 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -118,7 +118,6 @@
     legacy  |  _base.less
 \*################################*/
 html {
-  --line-height: 1.25;
   --site-logo-width: 6rem;
   --year-badge-width: 10vw;
   --copyright-logo-height: var(--vru);
@@ -266,7 +265,7 @@ a:focus {
   -webkit-box-flex: 0;
       -ms-flex: 0;
           flex: 0;
-  padding: 0.625rem 1rem;
+  padding: 0.75rem 1rem;
   padding: calc(0.5 * var(--vru)) 1rem;
 }
 .o-MobileBar__Item,
@@ -597,7 +596,7 @@ a:focus {
   background-color: #729d98;
 }
 .c-Banner--copyright {
-  padding: 1.25rem 1rem;
+  padding: 1.5rem 1rem;
   padding: var(--vru) 1rem;
   background-color: #0c5fa8;
 }
@@ -634,16 +633,16 @@ a:focus {
   .c-ConferenceTitles fieldset,
   .c-ConferenceTitles textarea,
   .c-ConferenceTitles details {
-    margin-bottom: 1.5625rem;
+    margin-bottom: 1.875rem;
     margin-bottom: var(--vru);
   }
   .c-ConferenceTitles h1 {
-    padding-top: 1.5625rem;
+    padding-top: 1.875rem;
     padding-top: var(--vru);
   }
 }
 .c-ConferenceTitles > *:nth-child(n) {
-  margin-bottom: 0.625rem;
+  margin-bottom: 0.75rem;
   margin-bottom: calc(0.5 * var(--vru));
 }
 .c-ConferenceTitles > *:last-child {
@@ -713,11 +712,11 @@ a:focus {
 .c-NavBar fieldset,
 .c-NavBar textarea,
 .c-NavBar details {
-  margin-bottom: 0.9375rem;
+  margin-bottom: 1.125rem;
   margin-bottom: var(--vru);
 }
 .c-NavBar h1 {
-  padding-top: 0.9375rem;
+  padding-top: 1.125rem;
   padding-top: var(--vru);
 }
 @media screen and (min-width: 75em) {
@@ -747,11 +746,11 @@ a:focus {
   .c-NavBar fieldset,
   .c-NavBar textarea,
   .c-NavBar details {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
     margin-bottom: var(--vru);
   }
   .c-NavBar h1 {
-    padding-top: 1.25rem;
+    padding-top: 1.5rem;
     padding-top: var(--vru);
   }
 }
@@ -764,26 +763,16 @@ a:focus {
 .c-NavBar > *:focus {
   background-color: rgba(255, 255, 255, 0.25);
 }
-@media not all and (min-width: 767px) {
-  .c-NavBar > * {
-    padding: 0.5rem;
-  }
-}
 @media screen and (min-width: 75em) {
   .c-NavBar > * {
     padding: 1rem;
   }
 }
 .c-NavBar--main {
-  padding-left: 2rem;
+  padding-left: 1rem;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-}
-@media not all and (min-width: 767px) {
-  .c-NavBar--main {
-    padding-left: 1rem;
-  }
 }
 :root .c-NavBar--main > *:hover,
 :root .c-NavBar--main > *:focus,
@@ -978,11 +967,11 @@ a:focus {
   .c-NavBar--contrib fieldset,
   .c-NavBar--contrib textarea,
   .c-NavBar--contrib details {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
     margin-bottom: var(--vru);
   }
   .c-NavBar--contrib h1 {
-    padding-top: 1.25rem;
+    padding-top: 1.5rem;
     padding-top: var(--vru);
   }
 }
@@ -1486,14 +1475,14 @@ a:focus {
   display: inline-block;
   line-height: inherit;
   width: auto;
-  height: 1.25rem;
+  height: 1.5rem;
   height: var(--copyright-logo-height);
   margin-right: 1rem;
   vertical-align: middle;
 }
 @media screen and (min-width: 60em) {
   .c-AsceLogo {
-    height: 2.5rem;
+    height: 3rem;
   }
 }
 .c-AsceLogo path {
@@ -1503,7 +1492,7 @@ a:focus {
     legacy  |  _c-Hero.less
 \*################################*/
 .c-Hero {
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
   margin-bottom: calc('2 * var(--vru)');
   color: #fff;
 }
@@ -1617,7 +1606,7 @@ a:focus {
 }
 .c-Hero__Blurb {
   font-weight: 300;
-  padding-bottom: 1.25rem;
+  padding-bottom: 1.5rem;
   padding-bottom: var(--vru);
 }
 @media not all and (min-width: 45em) {
@@ -1888,7 +1877,7 @@ a:focus {
   text-transform: uppercase;
 }
 .c-Sitemap__Item {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
   margin-bottom: var(--vru);
 }
 .c-Sitemap__Sub {
@@ -1902,7 +1891,7 @@ a:focus {
     legacy  |  _c-Callout.less
 \*################################*/
 .c-Callout {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
   margin-bottom: var(--vru);
 }
 .c-Callout__Hn {
@@ -1915,7 +1904,7 @@ a:focus {
 .c-Callout__Body {
   background-image: url('img/pattern-bg-fade.png');
   background-repeat: repeat-x;
-  padding: 1.25rem 1rem 0;
+  padding: 1.5rem 1rem 0;
   padding: var(--vru) 1rem 0;
 }
 /*################################*\
@@ -1947,11 +1936,11 @@ a:focus {
 .c-DateBlock fieldset,
 .c-DateBlock textarea,
 .c-DateBlock details {
-  margin-bottom: 1.09375rem;
+  margin-bottom: 1.3125rem;
   margin-bottom: var(--vru);
 }
 .c-DateBlock h1 {
-  padding-top: 1.09375rem;
+  padding-top: 1.3125rem;
   padding-top: var(--vru);
 }
 .c-DateBlock__Date {
@@ -2056,7 +2045,7 @@ a:focus {
 .c-DateBlock__Date,
 .c-DateBlock__Desc {
   float: left;
-  margin-bottom: 0.625rem;
+  margin-bottom: 0.75rem;
   margin-bottom: calc(0.5 * var(--vru));
 }
 .c-DateBlock__Date {
@@ -2064,7 +2053,7 @@ a:focus {
 }
 .c-DateBlock__Desc {
   width: calc(100% -  90px);
-  min-height: 2.5rem;
+  min-height: 3rem;
   min-height: calc(2 * var(--vru));
 }
 @supports (flex-wrap: wrap) {
@@ -2102,7 +2091,7 @@ a:focus {
     display: grid;
     -ms-grid-columns: 90px auto;
         grid-template-columns: 90px auto;
-    grid-row-gap: 0.625rem;
+    grid-row-gap: 0.75rem;
     grid-row-gap: calc(0.5 * var(--vru));
   }
   .c-DateBlock__Date,
@@ -2114,7 +2103,7 @@ a:focus {
     legacy  |  _c-Chair.less
 \*################################*/
 .c-Chair {
-  margin-bottom: 0.625rem;
+  margin-bottom: 0.75rem;
   margin-bottom: calc(0.5 * var(--vru));
 }
 .c-Chair__Name {
@@ -2135,7 +2124,7 @@ a:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
   margin-bottom: var(--vru);
 }
 .c-KeynoteSpeaker__Session,
@@ -2159,7 +2148,7 @@ a:focus {
 \*################################*/
 .c-SupporterBlock {
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
   margin-bottom: calc(2 * var(--vru));
 }
 .c-SupporterBlock.c-SupporterBlock .c-SupporterBlock__List__Item {
@@ -2194,7 +2183,7 @@ a:focus {
   margin: 0 1rem;
 }
 .c-SupporterBlock__List__Item {
-  margin: 0 1rem 1.25rem;
+  margin: 0 1rem 1.5rem;
   margin: 0 1rem var(--vru);
 }
 .c-SupporterBlock__Logo {
@@ -2327,7 +2316,7 @@ a:focus {
   word-spacing: 1px;
   letter-spacing: 1px;
   display: inline-block;
-  padding: 0.625rem 1rem;
+  padding: 0.75rem 1rem;
   padding: calc(0.5 * var(--vru)) 1rem;
   font-size: 0.875em;
   white-space: nowrap;
