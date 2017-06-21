@@ -47,54 +47,27 @@
 }
 
 
-// legacy support
-.c-DateBlock {
-  &::after {
-    // clearfix
-    content: '';
-    display: block;
-    clear: both;
-  }
-}
-.c-DateBlock__Date,
-.c-DateBlock__Desc {
-  float: left;
-  margin-bottom: 0.5 * @g-vru; // HACK fallback
-  margin-bottom: calc(~'0.5 * var(--vru)');
-}
-.c-DateBlock__Date {
-  width: @datewidth;
-}
-.c-DateBlock__Desc {
-  width: calc(~'100% - '@datewidth);
-  min-height: 2 * @g-vru; // HACK fallback
-  min-height: calc(~'2 * var(--vru)');
-}
-
-// feature query support & flexbox support
-@supports (flex-wrap: wrap) {
+// flexbox support
+// REVIEW indentation
   .c-DateBlock {
     display: flex;
     flex-wrap: wrap;
-    &::after { content: none; } // unset
   }
-  .c-DateBlock__Date,
-  .c-DateBlock__Desc {
-    float: none; // unset
-  }
+.c-DateBlock__Date,
+.c-DateBlock__Desc {
+  margin-bottom: 0.5 * @g-vru; // HACK fallback
+  margin-bottom: calc(~'0.5 * var(--vru)');
+}
   .c-DateBlock__Date {
-    width: auto; // unset
     flex: 0 0 @datewidth;
   }
   .c-DateBlock__Desc {
-    width: auto; // unset
-    min-height: 0; // unset
     flex: 0 0 calc(~'100% - '@datewidth);
   }
-}
+
 
 // feature query support & grid support
-@supports (display: grid) {
+@supports (display: gridd) {
   .c-DateBlock {
     display: grid;
     grid-template-columns: @datewidth auto;
