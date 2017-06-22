@@ -1,7 +1,7 @@
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     chewie (legacy design)
-    Version: 2.0.1
+    Version: 2.1.0
 \*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 
@@ -48,7 +48,7 @@
  * Chair...............................conference chair
  * KeynoteSpeaker......................keynote speaker promoted on homepage
  * SupporterBlock......................block of supporters in one level
- * Btn.................................standard link button
+ * Button..............................standard link button
  *
  * THEMES & HELPERS--------------------LOCATION-DEPENDENT STYLES
  * _theme.less.........................overrides for any Base, Object, or Component styles
@@ -60,7 +60,7 @@
 
 
 @import (reference) url('node_modules/xmeter/src/__settings.less');
-@import (reference) url('node_modules/xmeter/src/__fallback.transition.less'); // for transitions() mixin // TODO rename to __tool.transitions.less on xmeter v5.7.0+
+@import (reference) url('node_modules/xmeter/src/__tool.transitions.less'); // for transitions() mixin
 @import (reference) url('node_modules/xmeter/src/__tool.fontsize.less');
 @import (reference) url('node_modules/xmeter/src/__tool.borders.less');
 
@@ -110,7 +110,8 @@
 @import (less) url('src/_c-Chair.less');
 @import (less) url('src/_c-KeynoteSpeaker.less');
 @import (less) url('src/_c-SupporterBlock.less');
-@import (less) url('src/_c-Btn.less');
+
+@import (less) url('src/_c-Button.less');
 
 
 @import (less) url('src/_themes.less');

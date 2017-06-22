@@ -25,8 +25,8 @@ html(lang="en")
     //- link(rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css")
     link(rel="stylesheet" href="css/futura.css")
     //- link(rel="stylesheet" href="styles/chewie.css")
-    link(rel="stylesheet" href="node_modules/xmeter/xmeter.min.css")
-    link(rel="stylesheet" href="node_modules/bangs/bangs.min.css")
+    link(rel="stylesheet" href="https://cdn.rawgit.com/chharvey/xmeter/v5.7.0/xmeter.min.css")
+    link(rel="stylesheet" href="https://cdn.rawgit.com/chharvey/bangs/v0.13.0/bangs.min.css")
     link(rel="stylesheet" href="vendor/glyphicons_pro_1_9_2/glyphicons/web/html_css/css/glyphicons.css")
     link(rel="stylesheet" href="vendor/glyphicons_pro_1_9_2/glyphicons-filetypes/web/html_css/css/glyphicons-filetypes.css")
     link(rel="stylesheet" href="vendor/glyphicons_pro_1_9_2/glyphicons-halflings/web/html_css/css/glyphicons-halflings.css")
@@ -44,13 +44,14 @@ html(lang="en")
   body(class=conference.classname)#top
     a.h-Hidden(href="#main") skip to main content
     header
-      nav.o-Flex.o-MobileBar
+      nav.o-Flex.o-MobileBar.c-Banner.c-Banner--nav.-d-n-sM
         h1.h-Hidden Mobile Menu
         a.o-Flex__Item.o-MobileBar__Item.h-Block(href="./")
           i.glyphicons.glyphicons-home: span.h-Hidden Home
-        label.o-Flex__Item.o-MobileBar__Item.c-Toggle.h-Block(aria-label="toggle main menu")
+        label.o-Flex__Item.o-MobileBar__Item.c-Toggle.h-Block
           input.c-Toggle__Check.h-Hidden(type="checkbox" value="main menu is open" role="switch")
-          i.c-Toggle__Viz.glyphicons.glyphicons-menu-hamburger(role="none")
+          i.c-Toggle__Viz.glyphicons.glyphicons-menu-hamburger
+            span.h-Hidden toggle main menu
         noscript
           a(href="#sitemap") Site Map
         ul.o-List.o-Drawer.c-NavBar.c-NavBar--mobile
@@ -94,7 +95,7 @@ html(lang="en")
               li.o-List__Item: a(href="") For Speakers
               li.o-List__Item: a(href="./sponsors.html") Sponsors
               li.o-List__Item: a(href="") Exhibitors
-      nav.c-Banner.c-Banner--nav: div.o-Constrain.o-Flex
+      nav.c-Banner.c-Banner--nav.-d-n-nM: div.o-Constrain.o-Flex
           h1.h-Hidden Main Menus
           div.o-Flex__Item.o-MainCol: ul.o-List.o-Flex.c-NavBar.c-NavBar--main
             li.o-List__Item: a(href="./")
@@ -154,7 +155,7 @@ html(lang="en")
                   p.c-Chair
                     span.h-Block.c-Chair__Name Charles Johnson, Ph.D., P.E., S.E., CVS, F.ASCE
                     span.h-Block.c-Chair__Affiliation Illuminate Foundry, Inc.
-                  p: a.c-Btn(href="#0") Speaker Details
+                  p: a.c-Button(href="#0") Speaker Details
               li.o-Flex.c-KeynoteSpeaker
                 div.o-Flex__Item.c-KeynoteSpeaker__Session.c-DateBlock
                   div.c-DateBlock__Date: time.h-Block(datetime="2014-04-03")
@@ -167,7 +168,7 @@ html(lang="en")
                     span.h-Block.c-Chair__Name Dr. Louise K. Comfort, Ph.D.
                     span.h-Block.c-Chair__Affiliation Director, Center for Disaster Management
                     span.h-Block.c-Chair__Affiliation University of Pittsburgh
-                  p: a.c-Btn(href="#0") Speaker Details
+                  p: a.c-Button(href="#0") Speaker Details
             h2 Pre-Conference Seminars
             p Sign up to earn additional PDHs at a pre-conference seminar:
             div.session Post Disaster Safety Evaluations
@@ -179,7 +180,7 @@ html(lang="en")
               li Dynamic technical sessions - choose from more than 120 sessions
               li The Council of American Structural Engineers (CASE) Spring Risk Management Convocation
               li Networking with more than 1,200 colleagues
-            p: a.c-Btn(href="") View Program
+            p: a.c-Button(href="") View Program
         div.o-Flex__Item.o-SideCol.-pt-1.-ph-2
             aside.c-Callout
               h1.c-Callout__Hn: img(src=conference.image.sidebar alt="Boston Skyline")
@@ -190,10 +191,10 @@ html(lang="en")
                   | 1201 Houston Street
                   br
                   | Fort Worth, TX 76102
-                p: a.c-Btn(href="#0") link
-                p: a.c-Btn link without href
-                p: button.c-Btn button
-                p: button.c-Btn(disabled="") disabled button
+                p: a.c-Button(href="#0") link
+                p: a.c-Button link without href
+                p: button.c-Button button
+                p: button.c-Button(disabled="") disabled button
                 p Early Bird Rates - Save up to $200!
                 p.
                   $675 - Members #[br]
@@ -246,7 +247,7 @@ html(lang="en")
                   i.glyphicons.social.social-twitter.-mr-h(role="none")
                   | #structures2014
     aside: div.o-Constrain
-      h2.h-Hidden Top Sponsors
+      h2.h-Hidden Supporters
       mixin supporterBlock(level, size, list)
         section.c-SupporterBlock(class=`c-SupporterBlock--${size}`)
           h1.c-SupporterBlock__Hn= level
@@ -282,8 +283,6 @@ html(lang="en")
       , { name: 'Geico'   , url: '#0', img: 'img/sponsor_logo_horizontal3.gif' }
       , { name: 'Exponent', url: '#0', img: 'img/sponsor_logo_horizontal4.gif' }
       ])
-    aside.c-Banner.c-Banner--coop: div.o-Constrain
-      h2.h-Hidden Supporting Organizations
       +supporterBlock('Cooperating Organizations', 'sml', [
         { name: 'AISC'    , url: '#0', img: 'img/cooplogo_square1.gif'     }
       , { name: 'Correios', url: '#0', img: 'img/cooplogo_horizontalcolor1.gif' }
@@ -310,7 +309,7 @@ html(lang="en")
             label.h-Block
               input.o-Tabs__Check.h-Hidden(type="radio" name="footertabs" value=year)&attributes((which==='current') ? {checked:''} : {})
               time.c-YearBadge.c-YearBadge--tab(datetime=year aria-label=year)= year.toString().slice(2)
-          dd.o-Flex__Item.o-Tabs__Panel.c-FooterPanel(id=`panel-${which}`): div.o-Constrain
+          dd.o-Flex__Item.o-Tabs__Panel.c-Banner.c-Banner--head.c-FooterPanel(id=`panel-${which}`): div.o-Constrain
             div.o-Flex.o-Flex--siteHead.-mv-2
               //- div.o-Flex__Item: span.c-YearBadge(role="none")= year.toString().slice(2)
               div.o-Flex__Item.o-Flex__Item--siteLogo
@@ -326,7 +325,7 @@ html(lang="en")
               block
         +yearTab(2014, {name:'Sample ASCE Conference 2014'}, 'current')
           nav.o-Flex.o-Flex--siteFoot#sitemap
-            h3.h-Hidden Sitemap
+            h2.h-Hidden Sitemap
             ul.o-Flex__Item.o-List.c-Sitemap(role="directory")
               li.o-List__Item.c-Sitemap__Item
                 a(href="./") Home
@@ -359,13 +358,13 @@ html(lang="en")
                 h3 Contact Us
                 ul.o-List
                   li.o-List__Item.-mb-1: a(href="#0")
-                    i.glyphicons.-mr-1.glyphicons-iphone(role="none")
+                    i.-mr-1.glyphicons.glyphicons-iphone(role="none")
                     | (800) 548-2723
                   li.o-List__Item.-mb-1: a(href="#0")
-                    i.glyphicons.-mr-1.glyphicons-earphone(role="none")
+                    i.-mr-1.glyphicons.glyphicons-earphone(role="none")
                     | +1 (703) 295-7300
                   li.o-List__Item.-mb-1: a(href="#0")
-                    i.glyphicons.-mr-1.glyphicons-envelope(role="none")
+                    i.-mr-1.glyphicons.glyphicons-envelope(role="none")
                     | Other contacts
               section
                 h3 Connect With ASCE

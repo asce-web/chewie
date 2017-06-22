@@ -1,6 +1,6 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     chewie (legacy design)
-    Version: 2.0.1
+    Version: 2.1.0
 \*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*================================*\
     legacy.less
@@ -40,7 +40,7 @@
  * Chair...............................conference chair
  * KeynoteSpeaker......................keynote speaker promoted on homepage
  * SupporterBlock......................block of supporters in one level
- * Btn.................................standard link button
+ * Button..............................standard link button
  *
  * THEMES & HELPERS--------------------LOCATION-DEPENDENT STYLES
  * _theme.less.........................overrides for any Base, Object, or Component styles
@@ -53,7 +53,7 @@
     legacy  |  _dev.less
 \*################################*/
 .o-Flex--siteHead {
-  margin: 1.25rem 0;
+  margin: 1.5rem 0;
   margin: var(--vru) 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -88,6 +88,7 @@
           flex: 0 0 auto;
   width: 6rem;
   width: var(--site-logo-width);
+  text-align: center;
 }
 @media screen and (min-width: 45em) {
   .o-Flex__Item--siteLogo {
@@ -117,8 +118,8 @@
     legacy  |  _base.less
 \*################################*/
 html {
-  --line-height: 1.25;
   --site-logo-width: 6rem;
+  --year-badge-width: 10vw;
   --copyright-logo-height: var(--vru);
   --supporter-logo-lrg-width: 120px;
   --supporter-logo-lrg-height: 65px ;
@@ -159,9 +160,14 @@ html {
     --sidebar-width: 450px;
   }
 }
-@media (min-width: 45em) and (max-width: 75em) {
+@media screen and (min-width: 45em) and (max-width: 75em) {
   html {
     --site-logo-width: 4rem;
+  }
+}
+@media screen and (min-width: 90em) {
+  html {
+    --year-badge-width: 9rem;
   }
 }
 body {
@@ -224,8 +230,27 @@ a:focus {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 300px;
             flex: 0 0 300px;
-    -ms-flex: 0 0 var(--sidebar-width);
-        flex: 0 0 var(--sidebar-width);
+  }
+}
+@media screen and (min-width: 60em) {
+  .o-SideCol {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 385px;
+            flex: 0 0 385px;
+  }
+}
+@media screen and (min-width: 75em) {
+  .o-SideCol {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 450px;
+            flex: 0 0 450px;
+  }
+}
+@media screen and (min-width: 45em) {
+  .o-SideCol {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 var(--sidebar-width);
+            flex: 0 0 var(--sidebar-width);
   }
 }
 /*################################*\
@@ -236,97 +261,11 @@ a:focus {
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
-@media screen and (min-width: 45em) {
-  .o-MobileBar {
-    display: none;
-  }
-}
-.o-MobileBar {
-  color: #fff;
-}
-:root .o-MobileBar {
-  background-color: #6fc2c4;
-}
-.pipelinesconference .o-MobileBar {
-  background-color: #1f8234;
-}
-.icsiconference .o-MobileBar {
-  background-color: #a6044d;
-}
-.lidconference .o-MobileBar {
-  background-color: #841f27;
-}
-.structurescongress .o-MobileBar {
-  background-color: #76ad7b;
-}
-.georiskconference .o-MobileBar {
-  background-color: #6e6259;
-}
-.aei-conference .o-MobileBar {
-  background-color: #7f7f73;
-}
-.pavementsconference .o-MobileBar {
-  background-color: #8a8a8d;
-}
-.groutingconference .o-MobileBar {
-  background-color: #82b1ba;
-}
-.cisummit .o-MobileBar {
-  background-color: #7f7f73;
-}
-.aeisdc .o-MobileBar {
-  background-color: #8ca7c2;
-}
-.asceconvention .o-MobileBar {
-  background-color: #00a1e1;
-}
-.hmemconference .o-MobileBar {
-  background-color: #b4c1d1;
-}
-.ewricongress .o-MobileBar {
-  background-color: #dbb92a;
-}
-.asceconvention2017 .o-MobileBar {
-  background-color: #694890;
-}
-.icce2018 .o-MobileBar {
-  background-color: #9b2242;
-}
-.asce-cta .o-MobileBar {
-  background-color: #8c8279;
-}
-.ascestudentdays .o-MobileBar {
-  background-color: #ffcf01;
-}
-.omswconference .o-MobileBar {
-  background-color: #5b8424;
-}
-.apmconference .o-MobileBar {
-  background-color: #eda868;
-}
-.unsatsoilsconf .o-MobileBar {
-  background-color: #b80007;
-}
-.etsconference .o-MobileBar {
-  background-color: #7c858c;
-}
-.geesdconference .o-MobileBar {
-  background-color: #985f35;
-}
-.aei-forum .o-MobileBar {
-  background-color: #00548e;
-}
-.asce-ictd .o-MobileBar {
-  background-color: #918c13;
-}
-.surveyingconference .o-MobileBar {
-  background-color: #e37f1c;
-}
 .o-MobileBar__Item {
   -webkit-box-flex: 0;
       -ms-flex: 0;
           flex: 0;
-  padding: 0.625rem 1rem;
+  padding: 0.75rem 1rem;
   padding: calc(0.5 * var(--vru)) 1rem;
 }
 .o-MobileBar__Item,
@@ -578,16 +517,11 @@ a:focus {
 .surveyingconference .c-Banner--nav {
   background-color: #e37f1c;
 }
-@media not all and (min-width: 45em) {
-  .c-Banner--nav {
-    display: none;
-  }
-}
 :root .c-Banner--nav--sub {
   background-color: #714509;
 }
 .pipelinesconference .c-Banner--nav--sub {
-  background-color: #bb3028;
+  background-color: #974800;
 }
 .icsiconference .c-Banner--nav--sub {
   background-color: #a3446d;
@@ -661,11 +595,8 @@ a:focus {
 .surveyingconference .c-Banner--nav--sub {
   background-color: #729d98;
 }
-.c-Banner--coop {
-  background-color: #e8eaeb;
-}
 .c-Banner--copyright {
-  padding: 1.25rem 1rem;
+  padding: 1.5rem 1rem;
   padding: var(--vru) 1rem;
   background-color: #0c5fa8;
 }
@@ -702,16 +633,16 @@ a:focus {
   .c-ConferenceTitles fieldset,
   .c-ConferenceTitles textarea,
   .c-ConferenceTitles details {
-    margin-bottom: 1.5625rem;
+    margin-bottom: 1.875rem;
     margin-bottom: var(--vru);
   }
   .c-ConferenceTitles h1 {
-    padding-top: 1.5625rem;
+    padding-top: 1.875rem;
     padding-top: var(--vru);
   }
 }
 .c-ConferenceTitles > *:nth-child(n) {
-  margin-bottom: 0.625rem;
+  margin-bottom: 0.75rem;
   margin-bottom: calc(0.5 * var(--vru));
 }
 .c-ConferenceTitles > *:last-child {
@@ -741,7 +672,7 @@ a:focus {
 .c-TopImg {
   position: relative;
   background-size: cover;
-  background-position: 50% 0;
+  background-position: center;
 }
 @media not all and (min-width: 45em) {
   .c-TopImg {
@@ -781,11 +712,11 @@ a:focus {
 .c-NavBar fieldset,
 .c-NavBar textarea,
 .c-NavBar details {
-  margin-bottom: 0.9375rem;
+  margin-bottom: 1.125rem;
   margin-bottom: var(--vru);
 }
 .c-NavBar h1 {
-  padding-top: 0.9375rem;
+  padding-top: 1.125rem;
   padding-top: var(--vru);
 }
 @media screen and (min-width: 75em) {
@@ -815,11 +746,11 @@ a:focus {
   .c-NavBar fieldset,
   .c-NavBar textarea,
   .c-NavBar details {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
     margin-bottom: var(--vru);
   }
   .c-NavBar h1 {
-    padding-top: 1.25rem;
+    padding-top: 1.5rem;
     padding-top: var(--vru);
   }
 }
@@ -832,26 +763,16 @@ a:focus {
 .c-NavBar > *:focus {
   background-color: rgba(255, 255, 255, 0.25);
 }
-@media not all and (min-width: 767px) {
-  .c-NavBar > * {
-    padding: 0.5rem;
-  }
-}
 @media screen and (min-width: 75em) {
   .c-NavBar > * {
     padding: 1rem;
   }
 }
 .c-NavBar--main {
-  padding-left: 2rem;
+  padding-left: 1rem;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-}
-@media not all and (min-width: 767px) {
-  .c-NavBar--main {
-    padding-left: 1rem;
-  }
 }
 :root .c-NavBar--main > *:hover,
 :root .c-NavBar--main > *:focus,
@@ -861,7 +782,7 @@ a:focus {
 .pipelinesconference .c-NavBar--main > *:hover,
 .pipelinesconference .c-NavBar--main > *:focus,
 .pipelinesconference .c-NavBar--main > *.active {
-  background-color: #bb3028;
+  background-color: #974800;
 }
 .icsiconference .c-NavBar--main > *:hover,
 .icsiconference .c-NavBar--main > *:focus,
@@ -998,9 +919,9 @@ a:focus {
   bottom: 0;
   left: 0;
   right: 0;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -1046,11 +967,11 @@ a:focus {
   .c-NavBar--contrib fieldset,
   .c-NavBar--contrib textarea,
   .c-NavBar--contrib details {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
     margin-bottom: var(--vru);
   }
   .c-NavBar--contrib h1 {
-    padding-top: 1.25rem;
+    padding-top: 1.5rem;
     padding-top: var(--vru);
   }
 }
@@ -1089,7 +1010,7 @@ a:focus {
   background-color: #714509;
 }
 .pipelinesconference .c-NavBar--sub {
-  background-color: #bb3028;
+  background-color: #974800;
 }
 .icsiconference .c-NavBar--sub {
   background-color: #a3446d;
@@ -1271,30 +1192,40 @@ a:focus {
     legacy  |  _c-YearBadge.less
 \*################################*/
 .c-YearBadge {
-  display: block;
-  position: relative;
-  left: -5vw;
-  width: 10vw;
-  padding-top: 5vw;
-  font-weight: 700;
-  font-family: 'futura-pt', 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-  font-size: 2.5vw;
-  text-align: center;
-  background-color: #0c5fa8;
+  display: none;
 }
-.c-YearBadge::before {
-  content: '20';
-  font-weight: 300;
+.c-YearBadge--tab {
+  display: inline;
+  font-size: 3rem;
 }
-.c-YearBadge::after {
-  content: '';
-  display: block;
-  position: relative;
-  top: 2.5vw;
-  width: 0;
-  height: 0;
-  border-width: 2.5vw 5vw 0;
-  border-color: #0c5fa8 transparent;
+@supports (width: var(--width)) {
+  .c-YearBadge {
+    display: block;
+    position: relative;
+    left: calc(-0.5 * var(--year-badge-width));
+    width: var(--year-badge-width);
+    padding-top: calc(0.5 * var(--year-badge-width));
+    font-weight: 700;
+    font-family: 'futura-pt', 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-size: calc(0.25 * var(--year-badge-width));
+    text-align: center;
+    background-color: #0c5fa8;
+  }
+  .c-YearBadge::before {
+    content: '20';
+    font-weight: 300;
+  }
+  .c-YearBadge::after {
+    --year-badge-corner-height: calc(0.25 * var(--year-badge-width));
+    content: '';
+    display: block;
+    position: relative;
+    top: var(--year-badge-corner-height);
+    width: 0;
+    height: 0;
+    border-width: var(--year-badge-corner-height) calc(0.5 * var(--year-badge-width)) 0;
+    border-color: #0c5fa8 transparent;
+  }
 }
 .c-YearBadge--tab {
   z-index: 1;
@@ -1385,7 +1316,7 @@ a:focus {
   background-color: #714509;
 }
 .pipelinesconference input:checked + .c-YearBadge--tab {
-  background-color: #bb3028;
+  background-color: #974800;
 }
 .icsiconference input:checked + .c-YearBadge--tab {
   background-color: #a3446d;
@@ -1463,7 +1394,7 @@ a:focus {
   border-top-color: #714509;
 }
 .pipelinesconference input:checked + .c-YearBadge--tab::after {
-  border-top-color: #bb3028;
+  border-top-color: #974800;
 }
 .icsiconference input:checked + .c-YearBadge--tab::after {
   border-top-color: #a3446d;
@@ -1544,14 +1475,14 @@ a:focus {
   display: inline-block;
   line-height: inherit;
   width: auto;
-  height: 1.25rem;
+  height: 1.5rem;
   height: var(--copyright-logo-height);
   margin-right: 1rem;
   vertical-align: middle;
 }
 @media screen and (min-width: 60em) {
   .c-AsceLogo {
-    height: 2.5rem;
+    height: 3rem;
   }
 }
 .c-AsceLogo path {
@@ -1561,7 +1492,7 @@ a:focus {
     legacy  |  _c-Hero.less
 \*################################*/
 .c-Hero {
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
   margin-bottom: calc('2 * var(--vru)');
   color: #fff;
 }
@@ -1675,7 +1606,7 @@ a:focus {
 }
 .c-Hero__Blurb {
   font-weight: 300;
-  padding-bottom: 1.25rem;
+  padding-bottom: 1.5rem;
   padding-bottom: var(--vru);
 }
 @media not all and (min-width: 45em) {
@@ -1934,88 +1865,9 @@ a:focus {
     legacy  |  _c-FooterPanel.less
 \*################################*/
 .c-FooterPanel {
-  color: #fff;
   background-image: url('img/pattern-bg.png');
   padding-left: 1rem;
   padding-right: 1rem;
-}
-:root .c-FooterPanel {
-  background-color: #6a9556;
-}
-.pipelinesconference .c-FooterPanel {
-  background-color: #013d4b;
-}
-.icsiconference .c-FooterPanel {
-  background-color: #0b2f69;
-}
-.lidconference .c-FooterPanel {
-  background-color: #354e71;
-}
-.structurescongress .c-FooterPanel {
-  background-color: #005a9c;
-}
-.georiskconference .c-FooterPanel {
-  background-color: #00535e;
-}
-.aei-conference .c-FooterPanel {
-  background-color: #00548e;
-}
-.pavementsconference .c-FooterPanel {
-  background-color: #5e6167;
-}
-.groutingconference .c-FooterPanel {
-  background-color: #00565b;
-}
-.cisummit .c-FooterPanel {
-  background-color: #d06f1a;
-}
-.aeisdc .c-FooterPanel {
-  background-color: #00163e;
-}
-.asceconvention .c-FooterPanel {
-  background-color: #3fae2a;
-}
-.hmemconference .c-FooterPanel {
-  background-color: #3b421b;
-}
-.ewricongress .c-FooterPanel {
-  background-color: #446c97;
-}
-.asceconvention2017 .c-FooterPanel {
-  background-color: #00737b;
-}
-.icce2018 .c-FooterPanel {
-  background-color: #004990;
-}
-.asce-cta .c-FooterPanel {
-  background-color: #0033a0;
-}
-.ascestudentdays .c-FooterPanel {
-  background-color: #41434b;
-}
-.omswconference .c-FooterPanel {
-  background-color: #355d6e;
-}
-.apmconference .c-FooterPanel {
-  background-color: #e37f1c;
-}
-.unsatsoilsconf .c-FooterPanel {
-  background-color: #00565b;
-}
-.etsconference .c-FooterPanel {
-  background-color: #002c73;
-}
-.geesdconference .c-FooterPanel {
-  background-color: #004e58;
-}
-.aei-forum .c-FooterPanel {
-  background-color: #7f7f73;
-}
-.asce-ictd .c-FooterPanel {
-  background-color: #1a355e;
-}
-.surveyingconference .c-FooterPanel {
-  background-color: #547975;
 }
 /*################################*\
     legacy  |  _c-Sitemap.less
@@ -2025,7 +1877,7 @@ a:focus {
   text-transform: uppercase;
 }
 .c-Sitemap__Item {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
   margin-bottom: var(--vru);
 }
 .c-Sitemap__Sub {
@@ -2039,7 +1891,7 @@ a:focus {
     legacy  |  _c-Callout.less
 \*################################*/
 .c-Callout {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
   margin-bottom: var(--vru);
 }
 .c-Callout__Hn {
@@ -2052,7 +1904,7 @@ a:focus {
 .c-Callout__Body {
   background-image: url('img/pattern-bg-fade.png');
   background-repeat: repeat-x;
-  padding: 1.25rem 1rem 0;
+  padding: 1.5rem 1rem 0;
   padding: var(--vru) 1rem 0;
 }
 /*################################*\
@@ -2084,11 +1936,11 @@ a:focus {
 .c-DateBlock fieldset,
 .c-DateBlock textarea,
 .c-DateBlock details {
-  margin-bottom: 1.09375rem;
+  margin-bottom: 1.3125rem;
   margin-bottom: var(--vru);
 }
 .c-DateBlock h1 {
-  padding-top: 1.09375rem;
+  padding-top: 1.3125rem;
   padding-top: var(--vru);
 }
 .c-DateBlock__Date {
@@ -2193,7 +2045,7 @@ a:focus {
 .c-DateBlock__Date,
 .c-DateBlock__Desc {
   float: left;
-  margin-bottom: 0.625rem;
+  margin-bottom: 0.75rem;
   margin-bottom: calc(0.5 * var(--vru));
 }
 .c-DateBlock__Date {
@@ -2201,7 +2053,7 @@ a:focus {
 }
 .c-DateBlock__Desc {
   width: calc(100% -  90px);
-  min-height: 2.5rem;
+  min-height: 3rem;
   min-height: calc(2 * var(--vru));
 }
 @supports (flex-wrap: wrap) {
@@ -2239,7 +2091,7 @@ a:focus {
     display: grid;
     -ms-grid-columns: 90px auto;
         grid-template-columns: 90px auto;
-    grid-row-gap: 0.625rem;
+    grid-row-gap: 0.75rem;
     grid-row-gap: calc(0.5 * var(--vru));
   }
   .c-DateBlock__Date,
@@ -2251,7 +2103,7 @@ a:focus {
     legacy  |  _c-Chair.less
 \*################################*/
 .c-Chair {
-  margin-bottom: 0.625rem;
+  margin-bottom: 0.75rem;
   margin-bottom: calc(0.5 * var(--vru));
 }
 .c-Chair__Name {
@@ -2272,7 +2124,7 @@ a:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
   margin-bottom: var(--vru);
 }
 .c-KeynoteSpeaker__Session,
@@ -2296,7 +2148,7 @@ a:focus {
 \*################################*/
 .c-SupporterBlock {
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
   margin-bottom: calc(2 * var(--vru));
 }
 .c-SupporterBlock.c-SupporterBlock .c-SupporterBlock__List__Item {
@@ -2330,12 +2182,8 @@ a:focus {
   border: 1px solid #e8eaeb;
   margin: 0 1rem;
 }
-.c-Mast--coop .c-SupporterBlock__Hn::before,
-.c-Mast--coop .c-SupporterBlock__Hn::after {
-  border-color: #fff;
-}
 .c-SupporterBlock__List__Item {
-  margin: 0 1rem 1.25rem;
+  margin: 0 1rem 1.5rem;
   margin: 0 1rem var(--vru);
 }
 .c-SupporterBlock__Logo {
@@ -2459,16 +2307,16 @@ a:focus {
   }
 }
 /*################################*\
-    legacy  |  _c-Btn.less
+    legacy  |  _c-Button.less
 \*################################*/
-.c-Btn {
+.c-Button {
   font-family: 'futura-pt', 'Open Sans', 'Helvetica Neue', 'Helvetica', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   word-spacing: 1px;
   letter-spacing: 1px;
   display: inline-block;
-  padding: 0.625rem 1rem;
+  padding: 0.75rem 1rem;
   padding: calc(0.5 * var(--vru)) 1rem;
   font-size: 0.875em;
   white-space: nowrap;
@@ -2480,21 +2328,21 @@ a:focus {
   color: #fff;
   cursor: pointer;
 }
-.c-Btn.c-Btn {
+.c-Button.c-Btn {
   text-decoration: none;
 }
-.c-Btn:hover,
-.c-Btn:focus {
+.c-Button:hover,
+.c-Button:focus {
   background-color: #0e6cc0;
   color: #fff;
 }
-.c-Btn:active {
+.c-Button:active {
   background-color: #0a5290;
   -webkit-box-shadow: 0 0.125em 0 0 #cdcdcd inset;
           box-shadow: 0 0.125em 0 0 #cdcdcd inset;
 }
-a.c-Btn:not([href]),
-button.c-Btn:disabled {
+a.c-Button:not([href]),
+button.c-Button:disabled {
   opacity: 0.25;
   cursor: not-allowed;
   -webkit-filter: grayscale(100%);
@@ -2740,7 +2588,7 @@ button.c-Btn:disabled {
 .surveyingconference .t-Content h6 {
   color: #547975;
 }
-.t-Content a {
+.t-Content a:not(.c-Button) {
   text-decoration: underline;
 }
 .t-Content time {

@@ -1,8 +1,8 @@
 {
   "name": "chewie",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "master conferences stylesheet",
-  "main": "index.html",
+  "main": "legacy.css",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,7 +10,7 @@
     "jade:styleguide": "jade styleguide/{index,base,obj,comp-typo,comp-ui}.jade",
     "lessc:styleguide": "lessc styleguide/styles/styleguide.less styleguide/styles/styleguide.css",
     "unbuild:html": "rm index-legacy.html styleguide/{index,base,obj,comp-typo,comp-ui}.html",
-    "unbuild:css": "rm styles/chewie.css styles/chewie.min.css legacy.css legacy.min.css styleguide/styles/styleguide.css",
+    "unbuild:css": "rm legacy.css legacy.min.css styleguide/styles/styleguide.css",
     "unbuild": "npm run unbuild:html  &&  npm run unbuild:css",
     "build": "npm run jade:styleguide  &&  npm run lessc:styleguide  &&  gulp build"
   },
