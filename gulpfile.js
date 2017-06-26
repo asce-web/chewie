@@ -4,6 +4,7 @@ var pug = require('gulp-pug')
 var less = require('gulp-less')
 var autoprefixer = require('gulp-autoprefixer')
 var clean_css = require('gulp-clean-css')
+var sourcemaps = require('gulp-sourcemaps')
 
 gulp.task('pug:index', function () {
   return gulp.src('index-legacy.pug')
@@ -39,8 +40,10 @@ gulp.task('lessc:legacy', function () {
 
 gulp.task('minify:legacy', ['lessc:legacy'], function () {
   return gulp.src('legacy.css')
+    .pipe(sourcemaps.init())
     .pipe(clean_css())
-    .pipe(rename('legacy.min.css')) // TODO: use a SourceMap!
+    .pipe(rename('legacy.min.css'))
+    .pipe(sourcemaps.write('./')) // write to an external .map file
     .pipe(gulp.dest('./'))
 })
 
