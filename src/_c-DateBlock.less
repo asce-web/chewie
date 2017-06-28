@@ -48,26 +48,25 @@
 
 
 // flexbox support
-// REVIEW indentation
-  .c-DateBlock {
-    display: flex;
-    flex-wrap: wrap;
-  }
+.c-DateBlock {
+  display: flex;
+  flex-wrap: wrap;
+}
 .c-DateBlock__Date,
 .c-DateBlock__Desc {
   margin-bottom: 0.5 * @g-vru; // HACK fallback
   margin-bottom: calc(~'0.5 * var(--vru)');
 }
-  .c-DateBlock__Date {
-    flex: 0 0 @datewidth;
-  }
-  .c-DateBlock__Desc {
-    flex: 0 0 calc(~'100% - '@datewidth);
-  }
+.c-DateBlock__Date {
+  flex: 0 0 @datewidth;
+}
+.c-DateBlock__Desc {
+  flex: 0 0 calc(~'100% - '@datewidth);
+}
 
 
 // feature query support & grid support
-@supports (display: gridd) {
+@supports (display: grid) {
   .c-DateBlock {
     display: grid;
     grid-template-columns: @datewidth auto;
