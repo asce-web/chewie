@@ -32,8 +32,8 @@
   font-weight: 700;
   .font-size-el(1.25);
   @media screen and (min-width: 45em) {
-    :root & { // HACK using :root to override `.font-size-mod() > [h1,p]` specificity
-      padding-top: 0; // undo `h1` // already margin-top on the o-HomeLink
+    :root & { // HACK using :root to override `.font-size-mod() > [h1,p]` specificity // TODO remove this hack on xmeter@v6+
+      padding-top: 0; // undo `h1` // already margin-top on the `.o-Flex--siteHead`
     }
   }
 }

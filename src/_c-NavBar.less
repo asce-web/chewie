@@ -9,7 +9,7 @@
 // ^subclasses
 // : --main         - A main navigation component containing
 //                    the main directories: program, location, about, and contact.
-// : --registration - A side navigation component containing call-to-actions:
+// : --register     - A side navigation component containing call-to-actions:
 //                    why attend, registration, etc.
 // : --contrib      - The navigation component on the top of the page containing
 //                    information for people: for speakers, sponsors, exhibitors, etc.
@@ -41,6 +41,7 @@
     }
   }
 }
+
 .c-NavBar--main {
   padding-left: 1rem;
   justify-content: flex-start;
@@ -53,10 +54,12 @@
   }
   .glyphicons-chevron-down { padding-left: 1ch; }
 }
+
 .c-NavBar--register {
   justify-content: center;
   background-color: @g-color-asce-blue;
 }
+
 .c-NavBar--contrib {
   position: absolute;
   top: 0; bottom: 0;
@@ -71,21 +74,12 @@
     align-items: flex-end;
     // background-image: linear-gradient(to bottom, rgba(0,0,0, 0.5) 0%, transparent 100%);
   }
-  @media screen and (min-width: 75em) {
-    .font-size-mod(16/16); // undo .c-NavBar
-  }
   & > :hover,
   & > :focus {
     background-color: transparent; // unset `.c-Navbar > *:hover`
   }
 }
-.c-Mast--nav--sub ul {
-  // NOTE this selector is used for when `ul` is entered in blocks by content coordinators
-  /*&:extend(.o-List);*/padding-left:0;list-style:none;
-  /*&:extend(.o-Flex);*/display:flex;
-  &:extend(.c-NavBar);
-  &:extend(.c-NavBar--sub);
-}
+
 .c-NavBar--sub {
   position: absolute;
   left: 0; right: 0;
@@ -100,6 +94,7 @@
     transform: scale(1,0);
   }
 }
+
 .c-NavBar--mobile {
   font-weight: 600; // undo .c-NavBar
   text-transform: none; // undo .c-NavBar
