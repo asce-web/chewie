@@ -9,8 +9,8 @@ var sourcemaps = require('gulp-sourcemaps')
 gulp.task('pug:index', function () {
   return gulp.src('index-legacy.pug')
     .pipe(pug({
-      basedir: './'
-    , locals: {
+      basedir: './',
+      locals: {
       }
     }))
     .pipe(gulp.dest('./'))
