@@ -26,7 +26,7 @@ html(lang="en")
     link(rel="stylesheet" href="css/futura.css")
     //- link(rel="stylesheet" href="styles/chewie.css")
     link(rel="stylesheet" href="https://cdn.rawgit.com/chharvey/xmeter/v5.7.0/xmeter.min.css")
-    link(rel="stylesheet" href="https://cdn.rawgit.com/chharvey/bangs/v0.13.0/bangs.min.css")
+    link(rel="stylesheet" href="https://cdn.rawgit.com/chharvey/bangs/v0.14.0/bangs.min.css")
     link(rel="stylesheet" href="vendor/glyphicons_pro_1_9_2/glyphicons/web/html_css/css/glyphicons.css")
     link(rel="stylesheet" href="vendor/glyphicons_pro_1_9_2/glyphicons-filetypes/web/html_css/css/glyphicons-filetypes.css")
     link(rel="stylesheet" href="vendor/glyphicons_pro_1_9_2/glyphicons-halflings/web/html_css/css/glyphicons-halflings.css")
@@ -88,7 +88,7 @@ html(lang="en")
               h1.c-ConferenceTitles__Name= conference.name
               p.c-ConferenceTitles__Detail= conference.detail
               p.c-ConferenceTitles__Tagline= conference.tagline
-          div.o-Flex__Item.o-SideCol.c-TopImg(style=`background-image: url('${conference.image.banner}');`)
+          div.o-Flex__Item.o-SideCol.c-TopImg.-d-n-nM(style=`background-image: url('${conference.image.banner}');`)
             span.c-YearBadge(role="none") 15
             ul.o-List.o-Flex.c-NavBar.c-NavBar--contrib
               //- change to ul.o-List later
@@ -207,20 +207,20 @@ html(lang="en")
                 dl.c-DateBlock
                   dt.c-DateBlock__Date: time.h-Block(datetime="2013-12-18")
                     span.h-Block.c-DateBlock__MonthDay Dec 18
-                    span.h-Block 2013
-                  dd.c-DateBlock__Desc Final Papers Due
-                  dt.c-DateBlock__Date: time.h-Block(datetime="2014-02-12")
-                    span.h-Block.c-DateBlock__MonthDay Feb 12
-                    span.h-Block 2014
-                  dd.c-DateBlock__Desc Early Registration Deadline
+                    span.h-Block.c-DateBlock__Expired 2013
+                  dd.c-DateBlock__Desc.c-DateBlock__Expired Final Papers Due
                   dt.c-DateBlock__Date: time.h-Block(datetime="2014-03-13")
+                    span.h-Block.c-DateBlock__MonthDay Feb 12
+                    span.h-Block.c-DateBlock__Expired 2014
+                  dd.c-DateBlock__Desc.c-DateBlock__Expired: a(href="#0") Advance Registration Deadline
+                  dt.c-DateBlock__Date: time.h-Block(datetime="2014-02-12")
                     span.h-Block.c-DateBlock__MonthDay Mar 13
                     span.h-Block 2014
-                  dd.c-DateBlock__Desc Advance Registration Deadline
+                  dd.c-DateBlock__Desc Early Registration Deadline
                   dt.c-DateBlock__Date: time.h-Block(datetime="2014-04-21")
                     span.h-Block.c-DateBlock__MonthDay Apr 21
                     span.h-Block 2014
-                  dd.c-DateBlock__Desc Cancellation Deadline (minus $65)
+                  dd.c-DateBlock__Desc: a(href="#0") Cancellation Deadline (minus $65)
             aside.c-Callout
               h1.c-Callout__Hn Conference Chairs
               div.c-Callout__Body
@@ -321,8 +321,7 @@ html(lang="en")
                   p.c-ConferenceTitles__Detail= conference_info.detail
                 if conference_info.tagline
                   p.c-ConferenceTitles__Tagline= conference_info.tagline
-            div(class={'t-Content':which!=='current'})
-              block
+            block
         +yearTab(2014, {name:'Sample ASCE Conference 2014'}, 'current')
           nav.o-Flex.o-Flex--siteFoot#sitemap
             h2.h-Hidden Sitemap
@@ -385,9 +384,11 @@ html(lang="en")
                     i.glyphicons.social.social-google-plus
                       span.h-Hidden google plus
         +yearTab(2013, {name:'Sample ASCE Conference 2013', tagline:'Lorem Ipsum Optional Tagline for the Conference Goes Here', detail:'Toronto, Canada | May 2–4, 2013'}, 'prev')
+          div.t-Content
                     p: a.c-LinkArrow(href="") Program
                     p: a.c-LinkArrow(href="") Proceedings
         +yearTab(2015, {name:'Sample ASCE Conference 2015', tagline:'Lorem Ipsum Optional Tagline for the Conference Goes Here', detail:'Mexico City, Mexico | April 30–May 2, 2015'}, 'next')
+          div.t-Content
                     p: a.c-LinkArrow(href="") Call for submissions
                     p: a.c-LinkArrow(href="./sponsors.html") Sponsors
                     p: a.c-LinkArrow(href="") Exhibit

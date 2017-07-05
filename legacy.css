@@ -1,6 +1,6 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     chewie (legacy design)
-    Version: 2.1.0
+    Version: 2.2.0
 \*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*================================*\
     legacy.less
@@ -218,7 +218,7 @@ a:focus {
     legacy  |  _o-Constrain.less
 \*################################*/
 .o-Constrain {
-  max-width: 1400px;
+  max-width: 90rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -674,16 +674,10 @@ a:focus {
   background-size: cover;
   background-position: center;
 }
-@media not all and (min-width: 45em) {
-  .c-TopImg {
-    display: none;
-  }
-}
 /*################################*\
     legacy  |  _c-NavBar.less
 \*################################*/
-.c-NavBar,
-.c-Mast--nav--sub ul {
+.c-NavBar {
   margin-bottom: 0;
   font-size: 12px;
   font-size: 0.75rem;
@@ -720,8 +714,7 @@ a:focus {
   padding-top: var(--vru);
 }
 @media screen and (min-width: 75em) {
-  .c-NavBar,
-  .c-Mast--nav--sub ul {
+  .c-NavBar {
     font-size: 16px;
     font-size: 1rem;
   }
@@ -941,55 +934,11 @@ a:focus {
             align-items: flex-end;
   }
 }
-@media screen and (min-width: 75em) {
-  .c-NavBar--contrib {
-    font-size: 16px;
-    font-size: 1rem;
-  }
-  .c-NavBar--contrib > * {
-    --vru: calc(1  * var(--line-height) * 1rem);
-  }
-  .c-NavBar--contrib h1,
-  .c-NavBar--contrib h2,
-  .c-NavBar--contrib h3,
-  .c-NavBar--contrib h4,
-  .c-NavBar--contrib h5,
-  .c-NavBar--contrib h6,
-  .c-NavBar--contrib p,
-  .c-NavBar--contrib pre,
-  .c-NavBar--contrib figure,
-  .c-NavBar--contrib blockquote,
-  .c-NavBar--contrib ol,
-  .c-NavBar--contrib ul,
-  .c-NavBar--contrib dl,
-  .c-NavBar--contrib table,
-  .c-NavBar--contrib form,
-  .c-NavBar--contrib fieldset,
-  .c-NavBar--contrib textarea,
-  .c-NavBar--contrib details {
-    margin-bottom: 1.5rem;
-    margin-bottom: var(--vru);
-  }
-  .c-NavBar--contrib h1 {
-    padding-top: 1.5rem;
-    padding-top: var(--vru);
-  }
-}
 .c-NavBar--contrib > :hover,
 .c-NavBar--contrib > :focus {
   background-color: transparent;
 }
-.c-Mast--nav--sub ul {
-  /*&:extend(.o-List);*/
-  padding-left: 0;
-  list-style: none;
-  /*&:extend(.o-Flex);*/
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.c-NavBar--sub,
-.c-Mast--nav--sub ul {
+.c-NavBar--sub {
   position: absolute;
   left: 0;
   right: 0;
@@ -1848,13 +1797,6 @@ a:focus {
 /*################################*\
     legacy  |  _c-Toggle.less
 \*################################*/
-.c-Toggle noscript a {
-  position: absolute;
-  top: 13.5px;
-  right: 0.5rem;
-  line-height: 1.5;
-  line-height: var(--line-height);
-}
 .c-Toggle__Check:focus {
   position: absolute;
 }
@@ -1951,6 +1893,9 @@ a:focus {
 .c-DateBlock__Desc {
   padding-left: 0.5rem;
 }
+.c-DateBlock__Expired {
+  opacity: 0.25;
+}
 .c-DateBlock__MonthDay {
   font-family: 'futura-pt', 'Open Sans', 'Helvetica Neue', 'Helvetica', sans-serif;
   font-weight: 700;
@@ -2037,53 +1982,27 @@ a:focus {
 .surveyingconference .c-DateBlock__MonthDay {
   color: #e37f1c;
 }
-.c-DateBlock::after {
-  content: '';
-  display: block;
-  clear: both;
+.c-DateBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .c-DateBlock__Date,
 .c-DateBlock__Desc {
-  float: left;
   margin-bottom: 0.75rem;
   margin-bottom: calc(0.5 * var(--vru));
 }
 .c-DateBlock__Date {
-  width: 90px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 90px;
+          flex: 0 0 90px;
 }
 .c-DateBlock__Desc {
-  width: calc(100% -  90px);
-  min-height: 3rem;
-  min-height: calc(2 * var(--vru));
-}
-@supports (flex-wrap: wrap) {
-  .c-DateBlock {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .c-DateBlock::after {
-    content: none;
-  }
-  .c-DateBlock__Date,
-  .c-DateBlock__Desc {
-    float: none;
-  }
-  .c-DateBlock__Date {
-    width: auto;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 90px;
-            flex: 0 0 90px;
-  }
-  .c-DateBlock__Desc {
-    width: auto;
-    min-height: 0;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 calc(100% -  90px);
-            flex: 0 0 calc(100% -  90px);
-  }
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% -  90px);
+          flex: 0 0 calc(100% -  90px);
 }
 @supports ((display: -ms-grid) or (display: grid)) {
   .c-DateBlock {
@@ -2615,4 +2534,9 @@ body > a:last-of-type {
 }
 body > a:last-of-type:focus {
   right: 1rem;
+}
+header noscript a {
+  position: relative;
+  top: 1rem;
+  right: 0.5rem;
 }
