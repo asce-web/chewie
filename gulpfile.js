@@ -25,7 +25,7 @@ gulp.task('pug:index', function () {
 // gulp.task('minify:chewie', ['lessc:chewie'], function () {
 //   return gulp.src('styles/chewie.css')
 //     .pipe(clean_css())
-//     .pipe(rename('chewie.min.css')) // TODO: use a SourceMap!
+//     .pipe(rename('chewie.min.css'))
 //     .pipe(gulp.dest('./styles/'))
 // })
 

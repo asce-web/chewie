@@ -33,6 +33,7 @@
 // [1] NOTE: equivalent to .flex(0 0 var(--site-logo-width));
 //     but now works when flex-direction = column
 //     (cannot use `flex` to set width if flex-direction=column)
+// [2] HACK fallback : maximum possible --site-logo-width
 //
 //--siteLogo      - container for the site logo
 //--siteTitles    - container for `.c-ConferenceTitles` component
@@ -43,7 +44,7 @@
 // 2017-06-11
 .o-Flex__Item--siteLogo {
   flex: 0 0 auto;
-  width: 6rem; // HACK fallback // maximum possible --site-logo-width
+  width: 6rem; // [2]
   width: var(--site-logo-width); // [1]
   text-align: center; // for when <img> width is smaller than this width
   @media screen and (min-width: 45em) {
@@ -52,7 +53,7 @@
 }
 .o-Flex__Item--siteTitles {
   @media screen and (min-width: 45em) {
-    margin-right: 8rem; // HACK fallback // maximum possible --year-badge-width
+    margin-right: 8rem; // [2]
     margin-right: calc(~'0.5 * var(--year-badge-width)');
   }
 }
