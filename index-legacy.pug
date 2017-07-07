@@ -183,24 +183,32 @@ html(lang="en")
             p: a.c-Button(href="") View Program
         div.o-Flex__Item.o-SideCol.-pt-1.-ph-2
             aside.c-Callout
-              h1.c-Callout__Hn: img(src=conference.image.sidebar alt="Boston Skyline")
+              h1.c-Callout__Hn Location
               div.c-Callout__Body
-                p.-fw-b
-                  a(href="/location/hotel-travel") Sheraton Boston Hotel &amp; Hynes Convention Center
-                  br
-                  | 1201 Houston Street
-                  br
-                  | Fort Worth, TX 76102
-                p: a.c-Button(href="#0") link
-                p: a.c-Button link without href
-                p: button.c-Button button
-                p: button.c-Button(disabled="") disabled button
-                p Early Bird Rates - Save up to $200!
-                p.
-                  $675 - Members #[br]
-                  $875 - Non-Members #[br]
-                  #[a(href="") More options &amp; rates available]#[br]
-                  Prices go up February 12, 2014
+                section(itemprop="location" itemscope="" itemtype="https://schema.org/Accommodation")
+                  img.h-Block.-mb-1(src=conference.image.sidebar alt="Boston Skyline" itemprop="photo")
+                  h2.-fz-el-kilo(itemprop="description") Official Conference Venue
+                  p
+                    a(href="/location/hotel-travel" itemprop="url")
+                      b(itemprop="name") Sheraton Boston Hotel &amp; Hynes Convention Center
+                    br
+                    span(itemprop="address" itemscope="" itemtype="https://schema.org/PostalAddress")
+                      span(itemprop="streetAddress") 1201 Houston Street
+                      br
+                      | #[span(itemprop="addressLocality") Fort Worth], #[span(itemprop="addressRegion") TX] #[span(itemprop="postalCode") 76102]
+                      span(itemprop="addressCountry") United States
+                      br
+                      a(href="tel:+1-800-555-5555" itemprop="telephone") +1-800-555-5555
+                  p: a.c-Button(href="#0") link
+                  p: a.c-Button link without href
+                  p: button.c-Button button
+                  p: button.c-Button(disabled="") disabled button
+                  p Early Bird Rates - Save up to $200!
+                  p.
+                    $675 - Members #[br]
+                    $875 - Non-Members #[br]
+                    #[a(href="") More options &amp; rates available]#[br]
+                    Prices go up February 12, 2014
             aside.c-Callout
               h1.c-Callout__Hn Important Dates
               div.c-Callout__Body
