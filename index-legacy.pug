@@ -88,7 +88,7 @@ html(lang="en")
             if conference.secondary_logo
               div.o-Flex__Item.c-SiteLogo.c-SiteLogo--secondary
                 img(src=conference.image.shield alt="Home")
-            div.o-Flex__Item.o-Flex__Item--siteTitles.c-ConferenceTitles.-ta-l-sM
+            div.o-Flex__Item.c-ConferenceTitles.-ta-l-sM
               h1.c-ConferenceTitles__Name= conference.name
               p.c-ConferenceTitles__Detail= conference.detail
               p.c-ConferenceTitles__Tagline= conference.tagline
@@ -330,12 +330,9 @@ html(lang="en")
                 div.o-Flex__Item.c-SiteLogo.c-SiteLogo--secondary
                   img(src=conference.image.shield alt="Home")
               div.o-Flex__Item.c-ConferenceTitles
-                if conference_info.name
-                  h1.c-ConferenceTitles__Name= conference_info.name
-                if conference_info.detail
-                  p.c-ConferenceTitles__Detail= conference_info.detail
-                if conference_info.tagline
-                  p.c-ConferenceTitles__Tagline= conference_info.tagline
+                h1.c-ConferenceTitles__Name= conference_info.name
+                p.c-ConferenceTitles__Detail= conference_info.detail
+                p.c-ConferenceTitles__Tagline= conference_info.tagline
             block
         +yearTab(2014, {name:'Sample ASCE Conference 2014'}, 'current')
           nav.o-Flex.o-Flex--siteFoot#sitemap
