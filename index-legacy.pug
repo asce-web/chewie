@@ -2,18 +2,19 @@ doctype html
 html(lang="en")
   -
     var conference = {
-      name     : 'Sample ASCE Conference'
-    , classname: ''
-    , menuhover: false
-    , tagline  : 'Optional Tagline for the Conference Goes Here Lorem Ipsum'
-    , theme    : 'New ideas. New practices. New science. New resources. New colleagues. New business procedures.'
-    , detail   : 'Boston, Massachusetts  |  April 3–5, 2015'
-    , image    : {
-        shield : './img/shield-logo-ewri.png'
-      , hero   : './img/fpo-hero.jpg'
-      , banner : './img/fpo-header.jpg'
-      , sidebar: './img/FPO_sidebar_340x135.jpg'
-      }
+      name     : 'Sample ASCE Conference',
+      classname: '',
+      menuhover: false,
+      secondary_logo: false,
+      tagline  : 'Optional Tagline for the Conference Goes Here Lorem Ipsum',
+      theme    : 'New ideas. New practices. New science. New resources. New colleagues. New business procedures.',
+      detail   : 'Boston, Massachusetts  |  April 3–5, 2015',
+      image    : {
+        shield : './img/shield-logo-ewri.png',
+        hero   : './img/fpo-hero.jpg',
+        banner : './img/fpo-header.jpg',
+        sidebar: './img/FPO_sidebar_340x135.jpg',
+    },
     }
   head
     title Sample ASCE Conference
@@ -84,6 +85,9 @@ html(lang="en")
           a.o-Flex__Item.o-Flex.o-Flex--siteHead.o-MainCol(href="./" rel="home")
             div.o-Flex__Item.o-Flex__Item--siteLogo
               img.c-ConfLogo(src=conference.image.shield alt="Home")
+            if conference.secondary_logo
+              div.o-Flex__Item.o-Flex__Item--siteLogo.o-Flex__Item--siteLogo--secondary
+                img.c-ConfLogo(src=conference.image.shield alt="Home")
             div.o-Flex__Item.o-Flex__Item--siteTitles.c-ConferenceTitles.-ta-l-sM
               h1.c-ConferenceTitles__Name= conference.name
               p.c-ConferenceTitles__Detail= conference.detail
@@ -322,6 +326,9 @@ html(lang="en")
               //- div.o-Flex__Item: span.c-YearBadge(role="none")= year.toString().slice(2)
               div.o-Flex__Item.o-Flex__Item--siteLogo
                 img.c-ConfLogo(src=conference.image.shield alt="EWRI Institute Shield" role="none")
+              if conference.secondary_logo
+                div.o-Flex__Item.o-Flex__Item--siteLogo.o-Flex__Item--siteLogo--secondary
+                  img.c-ConfLogo(src=conference.image.shield alt="Home")
               div.o-Flex__Item.c-ConferenceTitles
                 if conference_info.name
                   h1.c-ConferenceTitles__Name= conference_info.name
