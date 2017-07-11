@@ -83,11 +83,11 @@ html(lang="en")
       div.c-Banner.c-Banner--head
         div.o-Flex.o-Constrain
           a.o-Flex__Item.o-Flex.o-Flex--siteHead.o-MainCol(href="./" rel="home")
-            div.o-Flex__Item.o-Flex__Item--siteLogo
-              img.c-ConfLogo(src=conference.image.shield alt="Home")
+            div.o-Flex__Item.c-SiteLogo
+              img(src=conference.image.shield alt="Home")
             if conference.secondary_logo
-              div.o-Flex__Item.o-Flex__Item--siteLogo.o-Flex__Item--siteLogo--secondary
-                img.c-ConfLogo(src=conference.image.shield alt="Home")
+              div.o-Flex__Item.c-SiteLogo.c-SiteLogo--secondary
+                img(src=conference.image.shield alt="Home")
             div.o-Flex__Item.o-Flex__Item--siteTitles.c-ConferenceTitles.-ta-l-sM
               h1.c-ConferenceTitles__Name= conference.name
               p.c-ConferenceTitles__Detail= conference.detail
@@ -324,11 +324,11 @@ html(lang="en")
           dd.o-Flex__Item.o-Tabs__Panel.c-Banner.c-Banner--head.c-FooterPanel(id=`panel-${which}`): div.o-Constrain
             div.o-Flex.o-Flex--siteHead.-mv-2
               //- div.o-Flex__Item: span.c-YearBadge(role="none")= year.toString().slice(2)
-              div.o-Flex__Item.o-Flex__Item--siteLogo
-                img.c-ConfLogo(src=conference.image.shield alt="EWRI Institute Shield" role="none")
+              div.o-Flex__Item.c-SiteLogo
+                img(src=conference.image.shield alt="EWRI Institute Shield" role="none")
               if conference.secondary_logo
-                div.o-Flex__Item.o-Flex__Item--siteLogo.o-Flex__Item--siteLogo--secondary
-                  img.c-ConfLogo(src=conference.image.shield alt="Home")
+                div.o-Flex__Item.c-SiteLogo.c-SiteLogo--secondary
+                  img(src=conference.image.shield alt="Home")
               div.o-Flex__Item.c-ConferenceTitles
                 if conference_info.name
                   h1.c-ConferenceTitles__Name= conference_info.name
