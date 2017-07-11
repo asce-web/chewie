@@ -325,10 +325,10 @@ html(lang="en")
             div.o-Flex.o-Flex--siteHead.-mv-2
               //- div.o-Flex__Item: span.c-YearBadge(role="none")= year.toString().slice(2)
               div.o-Flex__Item.c-SiteLogo
-                img(src=conference.image.shield alt="EWRI Institute Shield" role="none")
+                img(src=conference.image.shield alt="" role="none")
               if conference.secondary_logo
                 div.o-Flex__Item.c-SiteLogo.c-SiteLogo--secondary
-                  img(src=conference.image.shield alt="Home")
+                  img(src=conference.image.shield alt="" role="none")
               div.o-Flex__Item.c-ConferenceTitles
                 h1.c-ConferenceTitles__Name= conference_info.name
                 p.c-ConferenceTitles__Detail= conference_info.detail
