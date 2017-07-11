@@ -33,7 +33,8 @@ gulp.task('lessc:legacy', function () {
   return gulp.src('legacy.less')
     .pipe(less())
     .pipe(autoprefixer({
-      grid: true
+      grid: true,
+      cascade: false,
     }))
     .pipe(gulp.dest('./'))
 })
