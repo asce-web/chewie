@@ -1,6 +1,6 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     chewie (legacy design)
-    Version: 2.2.0
+    Version: 2.3.0
 \*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*================================*\
     legacy.less
@@ -25,7 +25,7 @@
  *
  * COMPONENTS--------------------------SPECIFIC STYLE PATTERNS
  * Banner..............................full-bleed container with background color
- * ConfLogo............................logo for conference (usually an Institute shield)
+ * SiteLogo............................logo for conference site (usually an Institute shield)
  * ConferenceTitles....................container for name, tagline, detail of conference
  * TopImg..............................top banner image containing
  * NavBar..............................any navigation bar
@@ -56,49 +56,36 @@
   margin: 1.5rem 0;
   margin: var(--vru) 0;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 @media not all and (min-width: 45em) {
   .o-Flex--siteHead {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 45em) {
+  header .o-Flex--siteHead {
+    margin-right: 4.5rem;
+    margin-right: calc(0.5 * var(--year-badge-width));
   }
 }
 @media not all and (min-width: 45em) {
   .o-Flex--siteFoot {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 }
 @media screen and (min-width: 30em) and (max-width: 44.999em) {
   .o-Flex--siteFoot {
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     max-height: calc(29 * var(--vru));
-  }
-}
-.o-Flex__Item--siteLogo {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
-  width: 6rem;
-  width: var(--site-logo-width);
-  text-align: center;
-}
-@media screen and (min-width: 45em) {
-  .o-Flex__Item--siteLogo {
-    margin: 0 2rem;
-  }
-}
-@media screen and (min-width: 45em) {
-  .o-Flex__Item--siteTitles {
-    margin-right: 8rem;
-    margin-right: calc(0.5 * var(--year-badge-width));
   }
 }
 .-r-1 {
@@ -118,7 +105,6 @@
     legacy  |  _base.less
 \*################################*/
 html {
-  --site-logo-width: 6rem;
   --year-badge-width: 10vw;
   --copyright-logo-height: var(--vru);
   --supporter-logo-lrg-width: 120px;
@@ -158,11 +144,6 @@ html {
 @media screen and (min-width: 75em) {
   html {
     --sidebar-width: 450px;
-  }
-}
-@media screen and (min-width: 45em) and (max-width: 75em) {
-  html {
-    --site-logo-width: 4rem;
   }
 }
 @media screen and (min-width: 90em) {
@@ -228,29 +209,29 @@ a:focus {
 @media screen and (min-width: 45em) {
   .o-SideCol {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 300px;
-            flex: 0 0 300px;
+    -ms-flex: 0 0 300px;
+    flex: 0 0 300px;
   }
 }
 @media screen and (min-width: 60em) {
   .o-SideCol {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 385px;
-            flex: 0 0 385px;
+    -ms-flex: 0 0 385px;
+    flex: 0 0 385px;
   }
 }
 @media screen and (min-width: 75em) {
   .o-SideCol {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 450px;
-            flex: 0 0 450px;
+    -ms-flex: 0 0 450px;
+    flex: 0 0 450px;
   }
 }
 @media screen and (min-width: 45em) {
   .o-SideCol {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 var(--sidebar-width);
-            flex: 0 0 var(--sidebar-width);
+    -ms-flex: 0 0 var(--sidebar-width);
+    flex: 0 0 var(--sidebar-width);
   }
 }
 /*################################*\
@@ -258,13 +239,13 @@ a:focus {
 \*################################*/
 .o-MobileBar {
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 .o-MobileBar__Item {
   -webkit-box-flex: 0;
-      -ms-flex: 0;
-          flex: 0;
+  -ms-flex: 0;
+  flex: 0;
   padding: 0.75rem 1rem;
   padding: calc(0.5 * var(--vru)) 1rem;
 }
@@ -283,29 +264,29 @@ a:focus {
   position: relative;
   margin-bottom: 0;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   -ms-flex-line-pack: start;
-      align-content: flex-start;
+  align-content: flex-start;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 .o-Tabs__Tab {
   text-align: center;
   -webkit-box-flex: 0;
-      -ms-flex: 0;
-          flex: 0;
+  -ms-flex: 0;
+  flex: 0;
 }
 .o-Tabs__Check {
   position: absolute;
 }
 .o-Tabs__Panel {
   -webkit-box-flex: 100%;
-      -ms-flex: 100%;
-          flex: 100%;
+  -ms-flex: 100%;
+  flex: 100%;
 }
 .o-Tabs__Panel--js {
   position: absolute;
@@ -313,13 +294,13 @@ a:focus {
   right: 0;
   bottom: 0;
   -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
+  -ms-flex-order: 1;
+  order: 1;
 }
 .o-Tabs__Panel--hiddenBefore,
 .o-Tabs__Panel--hiddenAfter {
   -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  transform: translateX(-100%);
 }
 /*################################*\
     legacy  |  _o-Drawer.less
@@ -337,7 +318,7 @@ a:focus {
   -webkit-transition-delay: 0ms;
   transition-delay: 0ms;
   -webkit-transition-timing-function: ease-in;
-          transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -350,10 +331,10 @@ a:focus {
 }
 .o-Drawer--open {
   -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  transform: translateX(-100%);
   opacity: 1;
   -webkit-transition-timing-function: ease-out;
-          transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
 }
 /*################################*\
     legacy  |  _c-Banner.less
@@ -601,6 +582,40 @@ a:focus {
   background-color: #0c5fa8;
 }
 /*################################*\
+    legacy  |  _c-SiteLogo.less
+\*################################*/
+.c-SiteLogo {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 6rem;
+  text-align: center;
+}
+@media screen and (min-width: 45em) and (max-width: 74.999em) {
+  .c-SiteLogo {
+    width: 4rem;
+  }
+}
+@media screen and (min-width: 45em) {
+  .c-SiteLogo {
+    margin: 0 1rem;
+  }
+}
+@media screen and (min-width: 75em) {
+  .c-SiteLogo {
+    margin: 0 2rem;
+  }
+}
+.c-SiteLogo--secondary {
+  margin-left: 0;
+}
+@media not all and (min-width: 45em) {
+  .c-SiteLogo--secondary {
+    padding-top: 1.5rem;
+    padding-top: var(--vru);
+  }
+}
+/*################################*\
     legacy  |  _c-ConferenceTitles.less
 \*################################*/
 .c-ConferenceTitles {
@@ -764,8 +779,8 @@ a:focus {
 .c-NavBar--main {
   padding-left: 1rem;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
 }
 :root .c-NavBar--main > *:hover,
 :root .c-NavBar--main > *:focus,
@@ -902,8 +917,8 @@ a:focus {
 }
 .c-NavBar--register {
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   background-color: #0c5fa8;
 }
 .c-NavBar--contrib {
@@ -913,25 +928,25 @@ a:focus {
   left: 0;
   right: 0;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   text-shadow: 0 0 4px black;
 }
 @media not all and (min-width: 60em) {
   .c-NavBar--contrib {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
     -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
   }
 }
 .c-NavBar--contrib > :hover,
@@ -944,12 +959,12 @@ a:focus {
   right: 0;
   z-index: 1;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   font-weight: 600;
   text-transform: none;
   -webkit-transform-origin: top;
-          transform-origin: top;
+  transform-origin: top;
   -webkit-transition: -webkit-transform 100ms;
   transition: -webkit-transform 100ms;
   transition: transform 100ms;
@@ -1035,13 +1050,13 @@ a:focus {
 }
 .c-NavBar--sub:not(.active) {
   -webkit-transform: scale(1, 0);
-          transform: scale(1, 0);
+  transform: scale(1, 0);
 }
 .c-NavBar--mobile {
   font-weight: 600;
   text-transform: none;
   -webkit-box-shadow: 0 0 1rem 0.5rem rgba(0, 0, 0, 0.25);
-          box-shadow: 0 0 1rem 0.5rem rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 1rem 0.5rem rgba(0, 0, 0, 0.25);
 }
 :root .c-NavBar--mobile {
   background-color: #6fc2c4;
@@ -1987,7 +2002,7 @@ a:focus {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 .c-DateBlock__Date,
 .c-DateBlock__Desc {
@@ -1996,20 +2011,20 @@ a:focus {
 }
 .c-DateBlock__Date {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 90px;
-          flex: 0 0 90px;
+  -ms-flex: 0 0 90px;
+  flex: 0 0 90px;
 }
 .c-DateBlock__Desc {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 calc(100% -  90px);
-          flex: 0 0 calc(100% -  90px);
+  -ms-flex: 0 0 calc(100% -  90px);
+  flex: 0 0 calc(100% -  90px);
 }
 @supports ((display: -ms-grid) or (display: grid)) {
   .c-DateBlock {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 90px auto;
-        grid-template-columns: 90px auto;
+    grid-template-columns: 90px auto;
     grid-row-gap: 0.75rem;
     grid-row-gap: calc(0.5 * var(--vru));
   }
@@ -2041,21 +2056,21 @@ a:focus {
 \*################################*/
 .c-KeynoteSpeaker {
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-bottom: 1.5rem;
   margin-bottom: var(--vru);
 }
 .c-KeynoteSpeaker__Session,
 .c-KeynoteSpeaker__Details {
   -webkit-box-flex: 40%;
-      -ms-flex: 40%;
-          flex: 40%;
+  -ms-flex: 40%;
+  flex: 40%;
 }
 .c-KeynoteSpeaker__Headshot {
   -webkit-box-flex: 20%;
-      -ms-flex: 20%;
-          flex: 20%;
+  -ms-flex: 20%;
+  flex: 20%;
   margin-left: 1rem;
   margin-right: 1rem;
 }
@@ -2072,8 +2087,8 @@ a:focus {
 }
 .c-SupporterBlock.c-SupporterBlock .c-SupporterBlock__List__Item {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 var(--supporter-logo-width);
-          flex: 0 1 var(--supporter-logo-width);
+  -ms-flex: 0 1 var(--supporter-logo-width);
+  flex: 0 1 var(--supporter-logo-width);
 }
 .c-SupporterBlock.c-SupporterBlock .c-SupporterBlock__Logo {
   max-height: var(--supporter-logo-height);
@@ -2083,8 +2098,8 @@ a:focus {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-size: 1.5em;
   line-height: 1;
   line-height: calc(var(--line-height) /  1.5);
@@ -2096,8 +2111,8 @@ a:focus {
 .c-SupporterBlock__Hn::after {
   content: '';
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   border: 1px solid #e8eaeb;
   margin: 0 1rem;
 }
@@ -2113,21 +2128,21 @@ a:focus {
 }
 .c-SupporterBlock__Logo:not(:hover):not(:focus) {
   -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 .c-SupporterBlock__List {
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .c-Mast--coop .c-SupporterBlock__List {
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
 .c-SupporterBlock--lrg {
   --supporter-logo-width: var(--supporter-logo-lrg-width);
@@ -2135,8 +2150,8 @@ a:focus {
 }
 .c-SupporterBlock--lrg .c-SupporterBlock__List__Item {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 120px;
-          flex: 0 1 120px;
+  -ms-flex: 0 1 120px;
+  flex: 0 1 120px;
 }
 .c-SupporterBlock--lrg .c-SupporterBlock__Logo {
   max-height: 65px;
@@ -2144,8 +2159,8 @@ a:focus {
 @media screen and (min-width: 30em) {
   .c-SupporterBlock--lrg .c-SupporterBlock__List__Item {
     -webkit-box-flex: 0;
-        -ms-flex: 0 1 250px;
-            flex: 0 1 250px;
+    -ms-flex: 0 1 250px;
+    flex: 0 1 250px;
   }
   .c-SupporterBlock--lrg .c-SupporterBlock__Logo {
     max-height: 110px;
@@ -2154,8 +2169,8 @@ a:focus {
 @media screen and (min-width: 60em) {
   .c-SupporterBlock--lrg .c-SupporterBlock__List__Item {
     -webkit-box-flex: 0;
-        -ms-flex: 0 1 360px;
-            flex: 0 1 360px;
+    -ms-flex: 0 1 360px;
+    flex: 0 1 360px;
   }
   .c-SupporterBlock--lrg .c-SupporterBlock__Logo {
     max-height: 160px;
@@ -2167,8 +2182,8 @@ a:focus {
 }
 .c-SupporterBlock--med .c-SupporterBlock__List__Item {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 90px;
-          flex: 0 1 90px;
+  -ms-flex: 0 1 90px;
+  flex: 0 1 90px;
 }
 .c-SupporterBlock--med .c-SupporterBlock__Logo {
   max-height: 48px;
@@ -2176,8 +2191,8 @@ a:focus {
 @media screen and (min-width: 30em) {
   .c-SupporterBlock--med .c-SupporterBlock__List__Item {
     -webkit-box-flex: 0;
-        -ms-flex: 0 1 188px;
-            flex: 0 1 188px;
+    -ms-flex: 0 1 188px;
+    flex: 0 1 188px;
   }
   .c-SupporterBlock--med .c-SupporterBlock__Logo {
     max-height: 82px;
@@ -2186,8 +2201,8 @@ a:focus {
 @media screen and (min-width: 60em) {
   .c-SupporterBlock--med .c-SupporterBlock__List__Item {
     -webkit-box-flex: 0;
-        -ms-flex: 0 1 270px;
-            flex: 0 1 270px;
+    -ms-flex: 0 1 270px;
+    flex: 0 1 270px;
   }
   .c-SupporterBlock--med .c-SupporterBlock__Logo {
     max-height: 120px;
@@ -2199,8 +2214,8 @@ a:focus {
 }
 .c-SupporterBlock--sml .c-SupporterBlock__List__Item {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 68px;
-          flex: 0 1 68px;
+  -ms-flex: 0 1 68px;
+  flex: 0 1 68px;
 }
 .c-SupporterBlock--sml .c-SupporterBlock__Logo {
   max-height: 36px;
@@ -2208,8 +2223,8 @@ a:focus {
 @media screen and (min-width: 30em) {
   .c-SupporterBlock--sml .c-SupporterBlock__List__Item {
     -webkit-box-flex: 0;
-        -ms-flex: 0 1 140px;
-            flex: 0 1 140px;
+    -ms-flex: 0 1 140px;
+    flex: 0 1 140px;
   }
   .c-SupporterBlock--sml .c-SupporterBlock__Logo {
     max-height: 62px;
@@ -2218,8 +2233,8 @@ a:focus {
 @media screen and (min-width: 60em) {
   .c-SupporterBlock--sml .c-SupporterBlock__List__Item {
     -webkit-box-flex: 0;
-        -ms-flex: 0 1 202px;
-            flex: 0 1 202px;
+    -ms-flex: 0 1 202px;
+    flex: 0 1 202px;
   }
   .c-SupporterBlock--sml .c-SupporterBlock__Logo {
     max-height: 90px;
@@ -2243,7 +2258,7 @@ a:focus {
   background-color: #0c5fa8;
   border-radius: 0.25rem;
   -webkit-box-shadow: 0 0.125em 0 0 #cdcdcd;
-          box-shadow: 0 0.125em 0 0 #cdcdcd;
+  box-shadow: 0 0.125em 0 0 #cdcdcd;
   color: #fff;
   cursor: pointer;
 }
@@ -2258,14 +2273,14 @@ a:focus {
 .c-Button:active {
   background-color: #0a5290;
   -webkit-box-shadow: 0 0.125em 0 0 #cdcdcd inset;
-          box-shadow: 0 0.125em 0 0 #cdcdcd inset;
+  box-shadow: 0 0.125em 0 0 #cdcdcd inset;
 }
 a.c-Button:not([href]),
 button.c-Button:disabled {
   opacity: 0.25;
   cursor: not-allowed;
   -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 /*################################*\
     legacy  |  _themes.less
@@ -2521,11 +2536,11 @@ button.c-Button:disabled {
 \*################################*/
 .toolbar-icon-admin-toolbar-tools-help::before {
   -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-box-sizing: unset;
-          box-sizing: unset;
+  box-sizing: unset;
 }
 body > a:last-of-type {
   position: fixed;

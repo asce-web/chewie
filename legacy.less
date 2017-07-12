@@ -1,7 +1,7 @@
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     chewie (legacy design)
-    Version: 2.2.0
+    Version: 2.3.0
 \*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 
@@ -33,7 +33,7 @@
  *
  * COMPONENTS--------------------------SPECIFIC STYLE PATTERNS
  * Banner..............................full-bleed container with background color
- * ConfLogo............................logo for conference (usually an Institute shield)
+ * SiteLogo............................logo for conference site (usually an Institute shield)
  * ConferenceTitles....................container for name, tagline, detail of conference
  * TopImg..............................top banner image containing
  * NavBar..............................any navigation bar
@@ -87,15 +87,7 @@
 
 
 @import (less) url('src/_c-Banner.less');
-// Shield logo of the Institute (or orginaztion)
-// organizing the conference.
-//
-// ^author
-// : Dae Clarke
-// ^updated
-// : 2015-08-21
-.c-ConfLogo {
-}
+@import (less) url('src/_c-SiteLogo.less');
 @import (less) url('src/_c-ConferenceTitles.less');
 @import (less) url('src/_c-TopImg.less');
 @import (less) url('src/_c-NavBar.less');
